@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description App component.
  */
 
@@ -15,7 +15,7 @@ import './App.css';
 // import chordsIndex from './configs/chords-index.json';
 
 import songConfigRaw from './configs/songs/without-you.json';
-import { Song, type ISongProps } from './components/Song';
+import { Song, type ISongProps } from './components/SongRenderer/Song';
 
 export const App = () => {
   const songConfig = songConfigRaw as unknown as ISongProps;
