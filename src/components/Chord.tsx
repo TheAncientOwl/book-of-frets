@@ -6,7 +6,7 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Render chrod based on given config.
  */
 
@@ -14,11 +14,14 @@ import { Box, Divider, Heading } from '@chakra-ui/react';
 import { Fret } from './Fret';
 import React from 'react';
 
-type FingerToString = Record<string, number | undefined>;
+interface IFingerToString {
+  finger: number;
+  string: number;
+}
 
 interface IChordProps {
   name: string;
-  frets: FingerToString[];
+  frets: IFingerToString[][];
 }
 
 export const Chord = (props: IChordProps) => {
@@ -31,7 +34,7 @@ export const Chord = (props: IChordProps) => {
         <Divider borderColor='gray.200' borderWidth='thin' />
         {props.frets.map((fret, idx) => {
           const map = new Map<number, number>(
-            Object.entries(fret).map(([finger, string]) => [Number(string), Number(finger)])
+            fret.map(fretConfig => [fretConfig.string, fretConfig.finger])
           );
 
           return (

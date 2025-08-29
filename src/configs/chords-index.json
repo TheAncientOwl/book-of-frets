@@ -1,0 +1,172 @@
+{
+  "version": "0.1.0",
+  "index": {
+    "E": {
+      "name": "E",
+      "frets": [
+        [{ "finger": 1, "string": 5 }],
+        [
+          { "finger": 2, "string": 2 },
+          { "finger": 3, "string": 3 }
+        ],
+        []
+      ]
+    },
+    "A": {
+      "name": "A",
+      "frets": [
+        [{ "finger": -1, "string": -1 }],
+        [
+          { "finger": 2, "string": 4 },
+          { "finger": 3, "string": 5 },
+          { "finger": 4, "string": 6 }
+        ],
+        []
+      ]
+    },
+    "D": {
+      "name": "D",
+      "frets": [
+        [
+          { "finger": -1, "string": -1 },
+          { "finger": -2, "string": -2 }
+        ],
+        [
+          { "finger": 1, "string": 4 },
+          { "finger": 2, "string": 6 }
+        ],
+        [{ "finger": 3, "string": 5 }]
+      ]
+    },
+    "G": {
+      "name": "G",
+      "frets": [
+        [],
+        [{ "finger": 1, "string": 2 }],
+        [
+          { "finger": 2, "string": 1 },
+          { "finger": 3, "string": 5 },
+          { "finger": 4, "string": 5 }
+        ]
+      ]
+    },
+    "Em": {
+      "name": "Em",
+      "frets": [
+        [],
+        [
+          { "finger": 1, "string": 2 },
+          { "finger": 2, "string": 3 }
+        ],
+        []
+      ]
+    },
+    "C": {
+      "name": "C",
+      "frets": [
+        [
+          { "finger": -1, "string": -1 },
+          { "finger": 1, "string": 5 }
+        ],
+        [{ "finger": 2, "string": 3 }],
+        [{ "finger": 3, "string": 2 }]
+      ]
+    },
+    "Am": {
+      "name": "Am",
+      "frets": [
+        [
+          { "finger": -1, "string": -1 },
+          { "finger": 1, "string": 5 }
+        ],
+        [
+          { "finger": 2, "string": 3 },
+          { "finger": 3, "string": 4 }
+        ],
+        []
+      ]
+    },
+    "Csus2": {
+      "name": "Csus2",
+      "frets": [
+        [
+          { "finger": -1, "string": -1 },
+          { "finger": -3, "string": -3 },
+          { "finger": -6, "string": -6 }
+        ],
+        [],
+        [
+          { "finger": 2, "string": 2 },
+          { "finger": 3, "string": 5 }
+        ]
+      ]
+    },
+    "G/B": {
+      "name": "G / B",
+      "frets": [
+        [{ "finger": -1, "string": -1 }],
+        [{ "finger": 1, "string": 2 }],
+        [{ "finger": 3, "string": 5 }]
+      ]
+    },
+    "Em7": {
+      "name": "Em7",
+      "frets": [
+        [],
+        [
+          { "finger": 1, "string": 2 },
+          { "finger": 2, "string": 3 }
+        ],
+        [
+          { "finger": 3, "string": 5 },
+          { "finger": 4, "string": 6 }
+        ]
+      ]
+    },
+    "Cadd9": {
+      "name": "Cadd9",
+      "frets": [
+        [{ "finger": -1, "string": -1 }],
+        [{ "finger": 1, "string": 3 }],
+        [
+          { "finger": 2, "string": 2 },
+          { "finger": 3, "string": 5 },
+          { "finger": 4, "string": 6 }
+        ]
+      ]
+    },
+    "Fmaj7": {
+      "name": "Fmaj7",
+      "frets": [
+        [
+          { "finger": 7, "string": 1 },
+          { "finger": 1, "string": 5 }
+        ],
+        [{ "finger": 2, "string": 4 }],
+        [
+          { "finger": 3, "string": 2 },
+          { "finger": 4, "string": 3 }
+        ]
+      ]
+    },
+    "C/G": {
+      "name": "C / G",
+      "frets": [
+        [{ "finger": 1, "string": 5 }],
+        [{ "finger": 2, "string": 3 }],
+        [
+          { "finger": 3, "string": 1 },
+          { "finger": 4, "string": 2 }
+        ]
+      ]
+    },
+    "Dm": {
+      "name": "Dm",
+      "frets": [
+        [{ "finger": 1, "string": 6 }],
+        [{ "finger": 2, "string": 4 }],
+        [{ "finger": 3, "string": 5 }]
+      ]
+    }
+  }
+}
