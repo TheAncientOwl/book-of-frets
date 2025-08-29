@@ -1,0 +1,16 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["src/configs/songs/*.json"],
+      "url": "./src/configs/schemas/song.schema.json"
+    },
+    {
+      "fileMatch": ["src/configs/songs-index.json"],
+      "url": "./src/configs/schemas/songs-index.schema.json"
+    },
+    {
+      "fileMatch": ["src/configs/chords-index.json"],
+      "url": "./src/configs/schemas/chords-index.schema.json"
+    }
+  ]
+}
