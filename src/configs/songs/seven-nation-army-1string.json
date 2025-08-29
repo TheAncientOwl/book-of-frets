@@ -1,0 +1,126 @@
+{
+  "version": "0.1.0",
+  "contributors": ["TheAncientOwl"],
+  "title": "Seven Nation Army | 1 String",
+  "artists": ["The White Stripes"],
+  "type": ["acoustic", "electric"],
+  "notes": [],
+  "capo": 0,
+  "chordIDs": ["-"],
+  "songSegments": {
+    "main": {
+      "name": "main",
+      "type": "strings",
+      "patterns": [
+        {
+          "times": 3,
+          "segments": [
+            [
+              {
+                "string": 1,
+                "fret": 7
+              }
+            ],
+            [
+              {
+                "string": 1,
+                "fret": 7
+              }
+            ],
+            [
+              {
+                "string": 1,
+                "fret": 10
+              }
+            ],
+            [
+              {
+                "string": 1,
+                "fret": 7
+              }
+            ],
+            [
+              {
+                "string": 1,
+                "fret": 5
+              }
+            ],
+            [
+              {
+                "string": 1,
+                "fret": 3
+              }
+            ],
+            [
+              {
+                "string": 1,
+                "fret": 2
+              }
+            ]
+          ]
+        },
+        {
+          "times": 1,
+          "segments": [
+            [
+              {
+                "string": 1,
+                "fret": 7
+              }
+            ],
+            [
+              {
+                "string": 1,
+                "fret": 7
+              }
+            ],
+            [
+              {
+                "string": 1,
+                "fret": 10
+              }
+            ],
+            [
+              {
+                "string": 1,
+                "fret": 7
+              }
+            ],
+            [
+              {
+                "string": 1,
+                "fret": 5
+              }
+            ],
+            [
+              {
+                "string": 1,
+                "fret": 3
+              }
+            ],
+            [
+              {
+                "string": 1,
+                "fret": 5
+              }
+            ],
+            [
+              {
+                "string": 1,
+                "fret": 3
+              }
+            ],
+            [
+              {
+                "string": 1,
+                "fret": 2
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "songSegmentsOrder": ["main"],
+  "resources": []
+}

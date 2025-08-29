@@ -1,0 +1,47 @@
+{
+  "version": "0.1.0",
+  "contributors": ["TheAncientOwl"],
+  "title": "Flowers Need Rain",
+  "artists": ["Preston Pablo"],
+  "type": ["acoustic", "electric"],
+  "notes": [],
+  "capo": 0,
+  "chordIDs": ["-"],
+  "songSegments": {
+    "main": {
+      "name": "main",
+      "type": "strings",
+      "patterns": [
+        {
+          "times": 404,
+          "segments": [
+            [
+              { "string": 1, "fret": 9 },
+              { "string": 2, "fret": 9 }
+            ],
+            [
+              { "string": 1, "fret": 5 },
+              { "string": 2, "fret": 6 }
+            ],
+            [
+              { "string": 1, "fret": 12 },
+              { "string": 2, "fret": 13 }
+            ],
+            [
+              { "string": 1, "fret": 7 },
+              { "string": 2, "fret": 8 }
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "songSegmentsOrder": ["main"],
+  "resources": [
+    {
+      "alias": "How to play Flowers Need Rain by Preston Pablo",
+      "author": "Elijah Plays ~ YouTube",
+      "link": "https://youtu.be/Bl4FiG65g1A"
+    }
+  ]
+}

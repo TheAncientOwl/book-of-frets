@@ -1,0 +1,57 @@
+{
+  "version": "0.1.0",
+  "contributors": ["TheAncientOwl"],
+  "title": "Radioactive",
+  "artists": ["Imagine Dragons"],
+  "type": ["acoustic"],
+  "notes": [],
+  "capo": 2,
+  "chordIDs": ["Am", "C", "G", "D"],
+  "songSegments": {
+    "intro": {
+      "name": "intro",
+      "type": "chords",
+      "patterns": [
+        {
+          "times": 3,
+          "segments": [
+            {
+              "chordIDs": ["Am", "C", "G", "D"],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "verse": {
+      "name": "verse",
+      "type": "chords",
+      "patterns": [
+        {
+          "times": 3,
+          "segments": [
+            {
+              "chordIDs": ["Am", "C", "G", "D"],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "U", "D", "U", "D", "-", "D", "U"]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "songSegmentsOrder": ["intro", "verse"],
+  "resources": [
+    {
+      "alias": "Radioactive Guitar Tutorial - Imagine Dragons Guitar Lesson |Easy Chords + Guitar Cover|",
+      "author": "GuitarZero2Hero ~ YouTube",
+      "link": "https://www.youtube.com/watch?v=l2KR3vvgqB0"
+    },
+    {
+      "alias": "Radioactive Guitar Cover Acoustic - Imagine Dragons 🎸 |Guitar Chords|",
+      "author": "GuitarZero2Hero Express ~ YouTube",
+      "link": "https://youtu.be/wQKXwxXvMMA"
+    }
+  ]
+}

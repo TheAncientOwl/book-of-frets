@@ -1,0 +1,158 @@
+{
+  "version": "0.1.0",
+  "contributors": ["TheAncientOwl"],
+  "title": "Nice to Meet You",
+  "artists": ["Myles Smith"],
+  "type": ["acoustic"],
+  "notes": [],
+  "capo": 1,
+  "chordIDs": ["Em", "C", "G", "D"],
+  "songSegments": {
+    "verse": {
+      "name": "verse",
+      "type": "chords",
+      "patterns": [
+        {
+          "times": 2,
+          "segments": [
+            {
+              "chordIDs": ["Em", "C"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
+            },
+            {
+              "chordIDs": ["G"],
+              "chordTimes": 4,
+              "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "pre-chorus": {
+      "name": "pre-chorus",
+      "type": "chords",
+      "patterns": [
+        {
+          "times": 1,
+          "segments": [
+            {
+              "chordIDs": ["Em", "C"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "segments": [
+            {
+              "chordIDs": ["G", "D"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "segments": [
+            {
+              "chordIDs": ["Em"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "segments": [
+            {
+              "chordIDs": ["C"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "segments": [
+            {
+              "chordIDs": ["G"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
+            },
+            {
+              "chordIDs": ["D"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            }
+          ]
+        }
+      ]
+    },
+    "chorus": {
+      "name": "chorus",
+      "type": "chords",
+      "patterns": [
+        {
+          "times": 4,
+          "segments": [
+            {
+              "chordIDs": ["Em", "C", "G", "D"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "post-chorus": {
+      "name": "post-chorus",
+      "type": "chords",
+      "patterns": [
+        {
+          "times": 1,
+          "segments": [
+            {
+              "chordIDs": ["Em", "C", "G", "D"],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "outro": {
+      "name": "outro",
+      "type": "chords",
+      "patterns": [
+        {
+          "times": 1,
+          "segments": [
+            {
+              "chordIDs": ["Em", "C", "G", "D"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "songSegmentsOrder": [
+    "verse",
+    "pre-chorus",
+    "chorus",
+    "verse",
+    "pre-chorus",
+    "chorus",
+    "post-chorus"
+  ],
+  "resources": [
+    {
+      "alias": "Myles Smith - Nice To Meet You EASY Guitar Tutorial With Chords / Lyrics",
+      "author": "Easy 2 Play Music ~ YouTube",
+      "link": "https://youtu.be/kh2a-4aH5J8"
+    }
+  ]
+}
