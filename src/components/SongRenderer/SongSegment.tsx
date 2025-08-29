@@ -6,16 +6,18 @@
  *
  * @file SongSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Render song segment.
  */
 
 import { Box, Flex, Heading } from '@chakra-ui/react';
 import { Pattern } from './Pattern';
 import type { ISongSegment } from '../../configs/types/song.types.ts';
+import type { TChordsIndex } from '../../configs/types/chord.types.ts';
 
 interface ISongSegmentProps extends ISongSegment {
   showChordTimes: boolean;
+  chordsIndex: TChordsIndex;
 }
 
 export const SongSegment = (props: ISongSegmentProps) => {
@@ -29,7 +31,12 @@ export const SongSegment = (props: ISongSegmentProps) => {
 
       <Flex direction='column' alignItems='center' gap='1em'>
         {props.patterns.map((pattern, patternIndex) => (
-          <Pattern key={patternIndex} {...pattern} showChordTimes={props.showChordTimes} />
+          <Pattern
+            key={patternIndex}
+            {...pattern}
+            chordsIndex={props.chordsIndex}
+            showChordTimes={props.showChordTimes}
+          />
         ))}
       </Flex>
     </Box>

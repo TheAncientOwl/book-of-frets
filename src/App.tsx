@@ -6,25 +6,29 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description App component.
  */
 
-import { Box, ChakraProvider } from '@chakra-ui/react';
-import './App.css';
-// import chordsIndex from './configs/chords-index.json';
-
-import { Song } from './components/SongRenderer/Song';
+import chordsIndexRaw from './configs/chords-index.json';
 import songConfigRaw from './configs/songs/nice-to-meet-you.json';
+
+import { Box, ChakraProvider, SimpleGrid } from '@chakra-ui/react';
+
+import { Chord } from './components/ChordRenderer/Chord.tsx';
+import { Song } from './components/SongRenderer/Song';
+import type { TChordsIndex } from './configs/types/chord.types.ts';
 import type { ISong } from './configs/types/song.types.ts';
 
 export const App = () => {
   const songConfig = songConfigRaw as unknown as ISong;
+  const chordsIndex = chordsIndexRaw.index as unknown as TChordsIndex;
 
   return (
     <ChakraProvider>
       <Box width='100vw' minHeight='100vh' background='blackAlpha.900' padding='2em'>
         <Song
+          chordsIndex={chordsIndex}
           title={songConfig.title}
           artists={songConfig.artists}
           capo={songConfig.capo}
@@ -32,11 +36,11 @@ export const App = () => {
           songSegmentsOrder={songConfig.songSegmentsOrder}
           resources={songConfig.resources}
         />
-        {/* <SimpleGrid columns={{ base: 1, sm: 2, md: 4, lg: 8 }} spacing='1em'>
-          {Object.entries(chordsIndex.index).map(([chordKeyName, chordConfig]) => (
+        <SimpleGrid columns={{ base: 1, sm: 2, md: 4, lg: 8 }} spacing='1em'>
+          {Object.entries(chordsIndex).map(([chordKeyName, chordConfig]) => (
             <Chord key={chordKeyName} name={chordConfig.name} frets={chordConfig.frets} />
           ))}
-        </SimpleGrid> */}
+        </SimpleGrid>
       </Box>
     </ChakraProvider>
   );

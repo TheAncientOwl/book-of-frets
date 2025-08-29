@@ -6,15 +6,17 @@
  *
  * @file Segment.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Render song pattern segment.
  */
 
 import { Box, Flex, Tag, Text } from '@chakra-ui/react';
 import type { IPatternSegment } from '../../configs/types/song.types.ts';
+import type { TChordsIndex } from '../../configs/types/chord.types.ts';
 
 interface IPatternSegmentProps extends IPatternSegment {
   showChordTimes: boolean;
+  chordsIndex: TChordsIndex;
 }
 
 export const PatternSegment = (props: IPatternSegmentProps) => {
@@ -22,10 +24,14 @@ export const PatternSegment = (props: IPatternSegmentProps) => {
     <Flex direction='column' alignItems='center'>
       <Flex direction='row' gap='1em' mb='0.6em'>
         {props.chordIDs.map((chordId, index) => {
+          const chordConfig = props.chordsIndex[chordId];
+
+          console.assert(chordConfig !== undefined, `Missing chord index for ID ${chordId}`);
+
           return (
             <Box as='span' key={index}>
               <Tag backgroundColor='blue.200' fontWeight='bold'>
-                {chordId}
+                {chordConfig.name}
               </Tag>
             </Box>
           );

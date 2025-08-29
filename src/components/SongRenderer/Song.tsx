@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Render song based on given config.
  */
 
@@ -14,8 +14,11 @@ import { Box, Divider, Heading } from '@chakra-ui/react';
 import React from 'react';
 import type { ISong } from '../../configs/types/song.types.ts';
 import { SongSegment } from './SongSegment';
+import type { TChordsIndex } from '../../configs/types/chord.types.ts';
 
-type ISongProps = ISong;
+interface ISongProps extends ISong {
+  chordsIndex: TChordsIndex;
+}
 
 export const Song = (props: ISongProps) => {
   console.log(props);
@@ -45,6 +48,7 @@ export const Song = (props: ISongProps) => {
             <React.Fragment key={`${songSegmentName}-${index}`}>
               <SongSegment
                 {...songSegmentData}
+                chordsIndex={props.chordsIndex}
                 // eslint-disable-next-line @typescript-eslint/no-unused-vars
                 showChordTimes={Object.entries(props.songSegments).some(([_, value]) => {
                   return value.patterns.some(pattern =>

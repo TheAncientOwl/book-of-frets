@@ -6,22 +6,18 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Render chrod based on given config.
  */
 
 import { Box, Divider, Heading } from '@chakra-ui/react';
 import { Fret } from './Fret';
 import React from 'react';
-
-interface IFingerToString {
-  finger: number;
-  string: number;
-}
+import type { TFret } from '../../configs/types/chord.types';
 
 interface IChordProps {
   name: string;
-  frets: IFingerToString[][];
+  frets: TFret[];
 }
 
 export const Chord = (props: IChordProps) => {
