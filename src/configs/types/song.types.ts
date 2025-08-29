@@ -6,7 +6,7 @@
  *
  * @file song.types.ts
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Song types for json mapping.
  */
 
@@ -23,10 +23,22 @@ export type TChordsPattern = {
   segments: TChordsPatternSegment[];
 };
 
+export type TStringFret = {
+  string: number;
+  fret: number;
+};
+
+export type TStringsPatternSegment = TStringFret[];
+
+export type TStringsPattern = {
+  times: number;
+  segments: TStringsPatternSegment[];
+};
+
 export type TSongSegment = {
   name: string;
   type: 'chords' | 'strings';
-  patterns: TChordsPattern[];
+  patterns: TChordsPattern[] | TStringsPattern[];
 };
 
 export type TResource = {

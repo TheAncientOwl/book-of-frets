@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Song Schema | v0.1.0",
+  "title": "Song Schema | v0.1.1",
   "type": "object",
   "properties": {
     "version": {
@@ -99,7 +99,12 @@
                           "type": "object",
                           "properties": {
                             "string": { "type": "integer", "minimum": 1, "maximum": 6 },
-                            "fret": { "type": "integer", "minimum": 0, "maximum": 22 }
+                            "fret": {
+                              "anyOf": [
+                                { "type": "integer", "minimum": 0, "maximum": 22 },
+                                { "type": "string", "enum": ["-"] }
+                              ]
+                            }
                           },
                           "required": ["string", "fret"]
                         }

@@ -6,14 +6,19 @@
  *
  * @file SongSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Render song segment.
  */
 
 import { Box, Flex, Heading } from '@chakra-ui/react';
 import type { TChordsIndex } from '../../configs/types/chord.types.ts';
-import type { TSongSegment } from '../../configs/types/song.types.ts';
+import type {
+  TChordsPattern,
+  TSongSegment,
+  TStringsPattern,
+} from '../../configs/types/song.types.ts';
 import { ChordsPattern } from './ChordsPattern.tsx';
+import { StringsPattern } from './StringsPattern.tsx';
 
 type ISongSegmentProps = TSongSegment & {
   showChordTimes: boolean;
@@ -21,8 +26,6 @@ type ISongSegmentProps = TSongSegment & {
 };
 
 export const SongSegment = (props: ISongSegmentProps) => {
-  console.log(props);
-
   return (
     <Box alignItems='center' mb='1em'>
       <Heading
@@ -42,13 +45,19 @@ export const SongSegment = (props: ISongSegmentProps) => {
             return (
               <ChordsPattern
                 key={patternIndex}
-                {...pattern}
+                {...(pattern as TChordsPattern)}
                 chordsIndex={props.chordsIndex}
                 showChordTimes={props.showChordTimes}
               />
             );
           } else if (props.type === 'strings') {
-            return <></>;
+            return (
+              <StringsPattern
+                key={patternIndex}
+                {...(pattern as TStringsPattern)}
+                showChordTimes={props.showChordTimes}
+              />
+            );
           } else {
             console.warn(`Unimplemented pattern type "${props.type}`);
             return <></>;

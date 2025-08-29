@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "contributors": ["TheAncientOwl"],
   "title": "Seven Nation Army",
   "artists": ["The White Stripes"],
@@ -16,12 +16,20 @@
           "times": 3,
           "segments": [
             [{ "string": 1, "fret": 7 }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }],
             [{ "string": 1, "fret": 7 }],
+            [{ "string": 1, "fret": "-" }],
             [{ "string": 1, "fret": 10 }],
+            [{ "string": 1, "fret": "-" }],
             [{ "string": 1, "fret": 7 }],
+            [{ "string": 1, "fret": "-" }],
             [{ "string": 1, "fret": 5 }],
+            [{ "string": 1, "fret": "-" }],
             [{ "string": 1, "fret": 3 }],
-            [{ "string": 1, "fret": 2 }]
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": 2 }],
+            [{ "string": 1, "fret": "-" }]
           ]
         }
       ]
@@ -37,58 +45,73 @@
               { "string": 1, "fret": 3 },
               { "string": 2, "fret": 5 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 1, "fret": 3 },
               { "string": 2, "fret": 5 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 1, "fret": 3 },
               { "string": 2, "fret": 5 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 1, "fret": 3 },
               { "string": 2, "fret": 5 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 1, "fret": 3 },
               { "string": 2, "fret": 5 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 1, "fret": 3 },
               { "string": 2, "fret": 5 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 1, "fret": 3 },
               { "string": 2, "fret": 5 }
             ],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 1, "fret": 5 },
               { "string": 2, "fret": 7 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 1, "fret": 5 },
               { "string": 2, "fret": 7 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 1, "fret": 5 },
               { "string": 2, "fret": 7 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 1, "fret": 5 },
               { "string": 2, "fret": 7 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 1, "fret": 5 },
               { "string": 2, "fret": 7 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 1, "fret": 5 },
               { "string": 2, "fret": 7 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 1, "fret": 5 },
               { "string": 2, "fret": 7 }
-            ]
+            ],
+            [{ "string": 1, "fret": "-" }]
           ]
         }
       ]
@@ -104,30 +127,42 @@
               { "string": 2, "fret": 7 },
               { "string": 3, "fret": 9 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 2, "fret": 7 },
               { "string": 3, "fret": 9 }
             ],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 2, "fret": 10 },
               { "string": 3, "fret": 12 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 2, "fret": 7 },
               { "string": 3, "fret": 9 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 2, "fret": 5 },
               { "string": 3, "fret": 7 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 2, "fret": 3 },
               { "string": 3, "fret": 5 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 2, "fret": 2 },
               { "string": 3, "fret": 4 }
-            ]
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }]
           ]
         },
         {
@@ -137,38 +172,48 @@
               { "string": 2, "fret": 7 },
               { "string": 3, "fret": 9 }
             ],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 2, "fret": 7 },
               { "string": 3, "fret": 9 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 2, "fret": 10 },
               { "string": 3, "fret": 12 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 2, "fret": 7 },
               { "string": 3, "fret": 9 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 2, "fret": 5 },
               { "string": 3, "fret": 7 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 2, "fret": 3 },
               { "string": 3, "fret": 5 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 2, "fret": 5 },
               { "string": 3, "fret": 7 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 2, "fret": 3 },
               { "string": 3, "fret": 5 }
             ],
+            [{ "string": 1, "fret": "-" }],
             [
               { "string": 2, "fret": 2 },
               { "string": 3, "fret": 4 }
-            ]
+            ],
+            [{ "string": 1, "fret": "-" }]
           ]
         }
       ]
@@ -181,12 +226,20 @@
           "times": 1,
           "segments": [
             [{ "string": 2, "fret": 7 }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }],
             [{ "string": 2, "fret": 7 }],
+            [{ "string": 1, "fret": "-" }],
             [{ "string": 2, "fret": 10 }],
+            [{ "string": 1, "fret": "-" }],
             [{ "string": 2, "fret": 7 }],
+            [{ "string": 1, "fret": "-" }],
             [{ "string": 2, "fret": 5 }],
+            [{ "string": 1, "fret": "-" }],
             [{ "string": 2, "fret": 3 }],
-            [{ "string": 2, "fret": 2 }]
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 2, "fret": 2 }],
+            [{ "string": 1, "fret": "-" }]
           ]
         }
       ]

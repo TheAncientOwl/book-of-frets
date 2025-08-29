@@ -6,14 +6,14 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Render song based on given config.
  */
 
 import { Box, Divider, Heading } from '@chakra-ui/react';
 import React from 'react';
 import type { TChordsIndex } from '../../configs/types/chord.types.ts';
-import type { TSong } from '../../configs/types/song.types.ts';
+import type { TChordsPattern, TSong } from '../../configs/types/song.types.ts';
 import { SongSegment } from './SongSegment';
 
 type TSongProps = TSong & {
@@ -21,8 +21,6 @@ type TSongProps = TSong & {
 };
 
 export const Song = (props: TSongProps) => {
-  console.log(props);
-
   return (
     <Box bgColor='blue.300' padding='2em 1em'>
       <Heading as='h1' size='lg' mb='0.5em' textAlign='center'>
@@ -49,12 +47,14 @@ export const Song = (props: TSongProps) => {
               <SongSegment
                 {...songSegmentData}
                 chordsIndex={props.chordsIndex}
-                // eslint-disable-next-line @typescript-eslint/no-unused-vars
-                showChordTimes={Object.entries(props.songSegments).some(([_, value]) => {
-                  return value.patterns.some(pattern =>
-                    pattern.segments.some(segment => segment.chordTimes > 1)
-                  );
-                })}
+                showChordTimes={Object.entries(props.songSegments).some(
+                  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                  ([_, value]) =>
+                    value.type === 'chords' &&
+                    (value.patterns as TChordsPattern[]).some(pattern =>
+                      pattern.segments.some(segment => segment.chordTimes > 1)
+                    )
+                )}
               />
               <Divider mb='1em' />
             </React.Fragment>

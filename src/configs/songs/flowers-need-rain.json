@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "contributors": ["TheAncientOwl"],
   "title": "Flowers Need Rain",
   "artists": ["Preston Pablo"],
@@ -20,17 +20,69 @@
               { "string": 2, "fret": 9 }
             ],
             [
+              { "string": 1, "fret": 9 },
+              { "string": 2, "fret": 9 }
+            ],
+            [
+              { "string": 1, "fret": 9 },
+              { "string": 2, "fret": 9 }
+            ],
+            [
+              { "string": 1, "fret": 9 },
+              { "string": 2, "fret": 9 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
               { "string": 1, "fret": 5 },
               { "string": 2, "fret": 6 }
+            ],
+            [
+              { "string": 1, "fret": 5 },
+              { "string": 2, "fret": 6 }
+            ],
+            [
+              { "string": 1, "fret": 5 },
+              { "string": 2, "fret": 6 }
+            ],
+            [
+              { "string": 1, "fret": 5 },
+              { "string": 2, "fret": 6 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 1, "fret": 12 },
+              { "string": 2, "fret": 13 }
             ],
             [
               { "string": 1, "fret": 12 },
               { "string": 2, "fret": 13 }
             ],
             [
+              { "string": 1, "fret": 12 },
+              { "string": 2, "fret": 13 }
+            ],
+            [
+              { "string": 1, "fret": 12 },
+              { "string": 2, "fret": 13 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
               { "string": 1, "fret": 7 },
               { "string": 2, "fret": 8 }
-            ]
+            ],
+            [
+              { "string": 1, "fret": 7 },
+              { "string": 2, "fret": 8 }
+            ],
+            [
+              { "string": 1, "fret": 7 },
+              { "string": 2, "fret": 8 }
+            ],
+            [
+              { "string": 1, "fret": 7 },
+              { "string": 2, "fret": 8 }
+            ],
+            [{ "string": 1, "fret": "-" }]
           ]
         }
       ]

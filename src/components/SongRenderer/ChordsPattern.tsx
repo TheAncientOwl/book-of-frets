@@ -6,7 +6,7 @@
  *
  * @file ChordsPattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Render song chords pattern.
  */
 
@@ -16,12 +16,12 @@ import { ChordsPatternSegment } from './ChordsPatternSegment.tsx';
 import type { TChordsPattern } from '../../configs/types/song.types.ts';
 import type { TChordsIndex } from '../../configs/types/chord.types.ts';
 
-type TPatternProps = TChordsPattern & {
+type TChordsPatternProps = TChordsPattern & {
   showChordTimes: boolean;
   chordsIndex: TChordsIndex;
 };
 
-export const ChordsPattern = (props: TPatternProps) => {
+export const ChordsPattern = (props: TChordsPatternProps) => {
   return (
     <Flex direction='row' gap='1em' alignItems='center'>
       <Divider orientation='vertical' height='80px' borderColor='gray.200' borderWidth='thin' />
