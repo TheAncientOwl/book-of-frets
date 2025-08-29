@@ -6,11 +6,11 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Render song based on given config.
  */
 
-import { Box, Divider, Heading } from '@chakra-ui/react';
+import { Box, Circle, Divider, Flex, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
 import type { TChordsIndex } from '../../configs/types/chord.types.ts';
 import type { TChordsPattern, TSong } from '../../configs/types/song.types.ts';
@@ -24,8 +24,30 @@ export const Song = (props: TSongProps) => {
   return (
     <Box bgColor='blue.300' padding='2em 1em'>
       <Heading as='h1' size='lg' mb='0.5em' textAlign='center'>
-        {props.title}
+        <Box as='span' position='relative'>
+          {props.title}
+
+          <Circle
+            position='absolute'
+            right='0'
+            top='-5px'
+            transform='translateX(120%)'
+            size='1em'
+            padding='15px'
+            bg='blue.300'
+            color='blue.900'
+            fontWeight='bold'
+            borderColor='blue.900'
+            borderWidth='thin'
+          >
+            <Flex alignItems='end'>
+              <Text fontSize='sm'>C</Text>
+              <Text fontSize='xs'>{props.capo}</Text>
+            </Flex>
+          </Circle>
+        </Box>
       </Heading>
+
       <Heading as='h2' size='sm' mb='0.5em' textAlign='center'>
         {props.artists.map((artist, index) => (
           <React.Fragment key={index}>

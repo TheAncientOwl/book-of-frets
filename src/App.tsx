@@ -6,12 +6,12 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description App component.
  */
 
 import chordsIndexRaw from './configs/chords-index.json';
-import songConfigRaw from './configs/songs/flowers-need-rain.json';
+import songConfigRaw from './configs/songs/sweater-weather.json';
 
 import { Box, ChakraProvider, SimpleGrid } from '@chakra-ui/react';
 
