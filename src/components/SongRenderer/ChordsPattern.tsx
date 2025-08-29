@@ -6,7 +6,7 @@
  *
  * @file ChordsPattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description Render song chords pattern.
  */
 
@@ -23,7 +23,7 @@ type TChordsPatternProps = TChordsPattern & {
 
 export const ChordsPattern = (props: TChordsPatternProps) => {
   return (
-    <Flex direction='row' gap='1em' alignItems='center'>
+    <Flex direction='row' gap='1em' alignItems='center' position='relative'>
       <Divider orientation='vertical' height='80px' borderColor='gray.200' borderWidth='thin' />
       {props.segments.map((segment, segmentIndex) => (
         <React.Fragment key={segmentIndex}>
@@ -36,7 +36,15 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
           <Divider orientation='vertical' height='80px' borderColor='gray.200' borderWidth='thin' />
         </React.Fragment>
       ))}
-      <Tag size='sm' fontWeight='bold' backgroundColor='blue.200'>
+      <Tag
+        size='sm'
+        fontWeight='bold'
+        backgroundColor='blue.200'
+        position='absolute'
+        top='50%'
+        right='0'
+        transform='translate(140%, -50%)'
+      >
         x{props.times}
       </Tag>
     </Flex>
