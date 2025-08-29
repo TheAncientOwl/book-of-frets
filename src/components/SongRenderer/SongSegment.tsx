@@ -6,7 +6,7 @@
  *
  * @file SongSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Render song segment.
  */
 
@@ -25,7 +25,14 @@ export const SongSegment = (props: ISongSegmentProps) => {
 
   return (
     <Box alignItems='center' mb='1em'>
-      <Heading as='h3' size='md' mb='1em' textAlign='center' textTransform='capitalize'>
+      <Heading
+        as='h3'
+        size='md'
+        mb='1em'
+        textAlign='center'
+        textDecoration='underline'
+        textTransform='capitalize'
+      >
         {props.name}
       </Heading>
 
