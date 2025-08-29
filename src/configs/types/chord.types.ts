@@ -6,20 +6,20 @@
  *
  * @file song.types.ts
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Chords types for json mapping.
  */
 
-export interface IFingerAndString {
+export type TFingerAndString = {
   finger: number;
   string: number;
-}
+};
 
-export type TFret = IFingerAndString[];
+export type TFret = TFingerAndString[];
 
-export interface IChord {
+export type TChord = {
   name: string;
   frets: TFret[];
-}
+};
 
-export type TChordsIndex = Record<string, IChord>;
+export type TChordsIndex = Record<string, TChord>;

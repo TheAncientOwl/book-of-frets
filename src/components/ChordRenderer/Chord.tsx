@@ -6,7 +6,7 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Render chrod based on given config.
  */
 
@@ -15,12 +15,12 @@ import { Fret } from './Fret';
 import React from 'react';
 import type { TFret } from '../../configs/types/chord.types';
 
-interface IChordProps {
+type TChordProps = {
   name: string;
   frets: TFret[];
-}
+};
 
-export const Chord = (props: IChordProps) => {
+export const Chord = (props: TChordProps) => {
   return (
     <Box width='12em' backgroundColor='blue.600' padding='1em 0.5em' borderRadius='1em'>
       <Heading size='xl' textAlign='center' mb='0.25em'>

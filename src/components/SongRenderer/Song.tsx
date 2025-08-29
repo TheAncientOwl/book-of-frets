@@ -6,21 +6,21 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Render song based on given config.
  */
 
 import { Box, Divider, Heading } from '@chakra-ui/react';
 import React from 'react';
-import type { ISong } from '../../configs/types/song.types.ts';
-import { SongSegment } from './SongSegment';
 import type { TChordsIndex } from '../../configs/types/chord.types.ts';
+import type { TSong } from '../../configs/types/song.types.ts';
+import { SongSegment } from './SongSegment';
 
-interface ISongProps extends ISong {
+type TSongProps = TSong & {
   chordsIndex: TChordsIndex;
-}
+};
 
-export const Song = (props: ISongProps) => {
+export const Song = (props: TSongProps) => {
   console.log(props);
 
   return (

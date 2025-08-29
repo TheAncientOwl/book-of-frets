@@ -6,19 +6,19 @@
  *
  * @file SongSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Render song segment.
  */
 
 import { Box, Flex, Heading } from '@chakra-ui/react';
-import { Pattern } from './Pattern';
-import type { ISongSegment } from '../../configs/types/song.types.ts';
 import type { TChordsIndex } from '../../configs/types/chord.types.ts';
+import type { TSongSegment } from '../../configs/types/song.types.ts';
+import { Pattern } from './Pattern';
 
-interface ISongSegmentProps extends ISongSegment {
+type ISongSegmentProps = TSongSegment & {
   showChordTimes: boolean;
   chordsIndex: TChordsIndex;
-}
+};
 
 export const SongSegment = (props: ISongSegmentProps) => {
   console.log(props);

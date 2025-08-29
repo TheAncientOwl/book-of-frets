@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description App component.
  */
 
@@ -18,10 +18,10 @@ import { Box, ChakraProvider, SimpleGrid } from '@chakra-ui/react';
 import { Chord } from './components/ChordRenderer/Chord.tsx';
 import { Song } from './components/SongRenderer/Song';
 import type { TChordsIndex } from './configs/types/chord.types.ts';
-import type { ISong } from './configs/types/song.types.ts';
+import type { TSong } from './configs/types/song.types.ts';
 
 export const App = () => {
-  const songConfig = songConfigRaw as unknown as ISong;
+  const songConfig = songConfigRaw as unknown as TSong;
   const chordsIndex = chordsIndexRaw.index as unknown as TChordsIndex;
 
   return (

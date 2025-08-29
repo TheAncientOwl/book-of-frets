@@ -6,40 +6,40 @@
  *
  * @file song.types.ts
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Song types for json mapping.
  */
 
 export type TStrummingMove = '-' | 'D' | 'U' | 'Dx' | 'Ux';
 
-export interface IPatternSegment {
+export type TPatternSegment = {
   chordIDs: string[];
   chordTimes: number;
   strummingPattern: TStrummingMove[];
-}
+};
 
-export interface IPattern {
+export type TPattern = {
   times: number;
-  segments: IPatternSegment[];
-}
+  segments: TPatternSegment[];
+};
 
-export interface ISongSegment {
+export type TSongSegment = {
   name: string;
   type: 'chords' | 'strings';
-  patterns: IPattern[];
-}
+  patterns: TPattern[];
+};
 
-export interface IResource {
+export type TResource = {
   alias: string;
   author: string;
   link: string;
-}
+};
 
-export interface ISong {
+export type TSong = {
   title: string;
   artists: string[];
   capo: number;
-  songSegments: Record<string, ISongSegment>;
+  songSegments: Record<string, TSongSegment>;
   songSegmentsOrder: string[];
-  resources: IResource[];
-}
+  resources: TResource[];
+};

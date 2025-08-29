@@ -6,7 +6,7 @@
  *
  * @file Fret.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Render chrod based on given config.
  */
 
@@ -14,11 +14,11 @@ import { Circle, Divider, Flex, Icon, Spacer } from '@chakra-ui/react';
 import React from 'react';
 import { IoCloseSharp } from 'react-icons/io5';
 
-interface IFretProps {
+type TFretProps = {
   stringsToFingers: Map<number, number>;
-}
+};
 
-export const Fret = (props: IFretProps) => {
+export const Fret = (props: TFretProps) => {
   return (
     <Flex direction='row' backgroundColor='blue.800' height='5em' position='relative'>
       {[1, 2, 3, 4, 5, 6].map(stringIdx => {

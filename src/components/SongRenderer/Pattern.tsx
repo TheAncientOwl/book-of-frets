@@ -6,22 +6,22 @@
  *
  * @file Pattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Render song chords pattern.
  */
 
 import { Divider, Flex, Tag } from '@chakra-ui/react';
 import React from 'react';
 import { PatternSegment } from './PatternSegment';
-import type { IPattern } from '../../configs/types/song.types.ts';
+import type { TPattern } from '../../configs/types/song.types.ts';
 import type { TChordsIndex } from '../../configs/types/chord.types.ts';
 
-interface IPatternProps extends IPattern {
+type TPatternProps = TPattern & {
   showChordTimes: boolean;
   chordsIndex: TChordsIndex;
-}
+};
 
-export const Pattern = (props: IPatternProps) => {
+export const Pattern = (props: TPatternProps) => {
   return (
     <Flex direction='row' gap='1em' alignItems='center'>
       <Divider orientation='vertical' height='80px' borderColor='gray.200' borderWidth='thin' />
