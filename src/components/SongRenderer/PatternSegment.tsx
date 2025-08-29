@@ -6,7 +6,7 @@
  *
  * @file Segment.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Render song pattern segment.
  */
 
@@ -19,6 +19,8 @@ type TPatternSegmentProps = TPatternSegment & {
   chordsIndex: TChordsIndex;
 };
 
+const NO_CHORD_ID = '-';
+
 export const PatternSegment = (props: TPatternSegmentProps) => {
   return (
     <Flex direction='column' alignItems='center'>
@@ -26,12 +28,15 @@ export const PatternSegment = (props: TPatternSegmentProps) => {
         {props.chordIDs.map((chordId, index) => {
           const chordConfig = props.chordsIndex[chordId];
 
-          console.assert(chordConfig !== undefined, `Missing chord index for ID ${chordId}`);
+          console.assert(
+            chordId !== NO_CHORD_ID && chordConfig !== undefined,
+            `Missing chord index for ID ${chordId}`
+          );
 
           return (
             <Box as='span' key={index}>
               <Tag backgroundColor='blue.200' fontWeight='bold'>
-                {chordConfig.name}
+                {chordId !== NO_CHORD_ID ? chordConfig.name : '-'}
               </Tag>
             </Box>
           );
