@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Chords Index Schema | v0.1.0",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "index": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "frets": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "finger": { "type": "number", "maximum": 7, "minimum": -6 },
+                  "string": { "type": "number", "maximum": 6, "minimum": -6 }
+                },
+                "required": ["finger", "string"]
+              }
+            }
+          }
+        },
+        "required": ["name", "frets"]
+      }
+    }
+  },
+  "required": ["version", "index"]
+}

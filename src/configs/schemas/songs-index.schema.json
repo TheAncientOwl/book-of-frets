@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Songs Index Schema | v0.1.0",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "index": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "artists": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+          },
+          "file": { "type": "string", "pattern": ".*\\.json" },
+          "type": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["acoustic", "electric"]
+            }
+          },
+          "chordIDs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          }
+        },
+        "required": ["title", "artists", "file", "type", "chordIDs"]
+      }
+    }
+  },
+  "required": ["version", "index"]
+}

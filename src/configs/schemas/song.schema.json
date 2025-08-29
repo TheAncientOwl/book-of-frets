@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Song Schema | v0.1.0",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "default": "0.1.0"
+    },
+    "contributors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "title": {
+      "type": "string"
+    },
+    "artists": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["acoustic", "electric"]
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "capo": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "chordIDs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "songSegments": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "type": { "type": "string", "enum": ["chords", "strings"] },
+          "patterns": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "times": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "segments": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "chordIDs": {
+                            "type": "array",
+                            "items": { "type": "string" },
+                            "minItems": 1
+                          },
+                          "chordTimes": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "default": 1
+                          },
+                          "strummingPattern": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "enum": ["D", "U", "-", "Dx", "Ux"]
+                            },
+                            "minItems": 1
+                          }
+                        },
+                        "required": ["chordIDs", "chordTimes", "strummingPattern"]
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "string": { "type": "integer", "minimum": 1, "maximum": 6 },
+                            "fret": { "type": "integer", "minimum": 0, "maximum": 22 }
+                          },
+                          "required": ["string", "fret"]
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "required": ["times", "segments"]
+            }
+          }
+        },
+        "required": ["name", "type", "patterns"]
+      }
+    },
+    "songSegmentsOrder": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "alias": {
+            "type": "string",
+            "pattern": ".+"
+          },
+          "author": {
+            "type": "string",
+            "pattern": ".+"
+          },
+          "link": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": ["alias", "author", "link"]
+      }
+    }
+  },
+  "required": [
+    "version",
+    "contributors",
+    "title",
+    "artists",
+    "type",
+    "notes",
+    "capo",
+    "chordIDs",
+    "songSegments",
+    "songSegmentsOrder",
+    "resources"
+  ]
+}
