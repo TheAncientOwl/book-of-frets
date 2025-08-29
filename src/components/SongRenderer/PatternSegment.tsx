@@ -11,43 +11,44 @@
  */
 
 import { Box, Flex, Tag, Text } from '@chakra-ui/react';
+import type { IPatternSegment } from '../../configs/types/song.types.ts';
 
-export type TStrummingMove = '-' | 'D' | 'U' | 'Dx' | 'Ux';
-
-export interface IPatternSegmentProps {
-  chordIDs: string[];
-  chordTimes: number;
-  strummingPattern: TStrummingMove[];
+interface IPatternSegmentProps extends IPatternSegment {
+  showChordTimes: boolean;
 }
 
 export const PatternSegment = (props: IPatternSegmentProps) => {
   return (
-    <Flex alignItems='center' gap='1em'>
-      <Flex direction='column' alignItems='center' gap='1em'>
-        <Flex direction='row' gap='1em'>
-          {props.chordIDs.map((chordId, index) => {
+    <Flex direction='column' alignItems='center'>
+      <Flex direction='row' gap='1em' mb='0.6em'>
+        {props.chordIDs.map((chordId, index) => {
+          return (
+            <Box as='span' key={index}>
+              <Tag backgroundColor='blue.200' fontWeight='bold'>
+                {chordId}
+              </Tag>
+            </Box>
+          );
+        })}
+      </Flex>
+
+      {props.showChordTimes && (
+        <Text fontSize='xs' fontWeight='bold'>
+          x{props.chordTimes}
+        </Text>
+      )}
+
+      <Box position='relative' mt='0.4em'>
+        <Flex direction='row' gap='0.5em' alignItems='end'>
+          {props.strummingPattern.map((pattern, index) => {
             return (
-              <Box as='span' key={index}>
-                <Tag backgroundColor='blue.200' fontWeight='bold'>
-                  {chordId}
-                </Tag>
-              </Box>
+              <Text key={index} fontWeight='bold'>
+                {pattern}
+              </Text>
             );
           })}
         </Flex>
-
-        <Box position='relative'>
-          <Flex direction='row' gap='0.5em' alignItems='end'>
-            {props.strummingPattern.map((pattern, index) => {
-              return (
-                <Text key={index} fontWeight='bold'>
-                  {pattern}
-                </Text>
-              );
-            })}
-          </Flex>
-        </Box>
-      </Flex>
+      </Box>
     </Flex>
   );
 };

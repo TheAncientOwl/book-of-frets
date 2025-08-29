@@ -12,11 +12,11 @@
 
 import { Divider, Flex, Tag } from '@chakra-ui/react';
 import React from 'react';
-import { PatternSegment, type IPatternSegmentProps } from './PatternSegment';
+import { PatternSegment } from './PatternSegment';
+import type { IPattern } from '../../configs/types/song.types.ts';
 
-export interface IPatternProps {
-  times: number;
-  segments: IPatternSegmentProps[];
+interface IPatternProps extends IPattern {
+  showChordTimes: boolean;
 }
 
 export const Pattern = (props: IPatternProps) => {
@@ -25,7 +25,7 @@ export const Pattern = (props: IPatternProps) => {
       <Divider orientation='vertical' height='80px' borderColor='gray.200' borderWidth='thin' />
       {props.segments.map((segment, segmentIndex) => (
         <React.Fragment key={segmentIndex}>
-          <PatternSegment {...segment} />
+          <PatternSegment {...segment} showChordTimes={props.showChordTimes} />
 
           <Divider orientation='vertical' height='80px' borderColor='gray.200' borderWidth='thin' />
         </React.Fragment>

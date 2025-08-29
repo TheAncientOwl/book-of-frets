@@ -11,15 +11,14 @@
  */
 
 import { Box, Flex, Heading } from '@chakra-ui/react';
-import { Pattern, type IPatternProps } from './Pattern';
+import { Pattern } from './Pattern';
+import type { ISongSegment } from '../../configs/types/song.types.ts';
 
-export interface ISegmentProps {
-  name: string;
-  type: 'chords' | 'strings';
-  patterns: IPatternProps[];
+interface ISongSegmentProps extends ISongSegment {
+  showChordTimes: boolean;
 }
 
-export const SongSegment = (props: ISegmentProps) => {
+export const SongSegment = (props: ISongSegmentProps) => {
   console.log(props);
 
   return (
@@ -30,7 +29,7 @@ export const SongSegment = (props: ISegmentProps) => {
 
       <Flex direction='column' alignItems='center' gap='1em'>
         {props.patterns.map((pattern, patternIndex) => (
-          <Pattern key={patternIndex} {...pattern} />
+          <Pattern key={patternIndex} {...pattern} showChordTimes={props.showChordTimes} />
         ))}
       </Flex>
     </Box>

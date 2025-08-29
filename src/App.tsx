@@ -14,11 +14,12 @@ import { Box, ChakraProvider } from '@chakra-ui/react';
 import './App.css';
 // import chordsIndex from './configs/chords-index.json';
 
-import songConfigRaw from './configs/songs/without-you.json';
-import { Song, type ISongProps } from './components/SongRenderer/Song';
+import { Song } from './components/SongRenderer/Song';
+import songConfigRaw from './configs/songs/nice-to-meet-you.json';
+import type { ISong } from './configs/types/song.types.ts';
 
 export const App = () => {
-  const songConfig = songConfigRaw as unknown as ISongProps;
+  const songConfig = songConfigRaw as unknown as ISong;
 
   return (
     <ChakraProvider>

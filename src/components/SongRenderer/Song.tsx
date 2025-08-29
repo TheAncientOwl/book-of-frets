@@ -12,22 +12,10 @@
 
 import { Box, Divider, Heading } from '@chakra-ui/react';
 import React from 'react';
-import { SongSegment, type ISegmentProps } from './SongSegment';
+import type { ISong } from '../../configs/types/song.types.ts';
+import { SongSegment } from './SongSegment';
 
-interface IResource {
-  alias: string;
-  author: string;
-  link: string;
-}
-
-export interface ISongProps {
-  title: string;
-  artists: string[];
-  capo: number;
-  songSegments: Record<string, ISegmentProps>;
-  songSegmentsOrder: string[];
-  resources: IResource[];
-}
+type ISongProps = ISong;
 
 export const Song = (props: ISongProps) => {
   console.log(props);
@@ -55,7 +43,15 @@ export const Song = (props: ISongProps) => {
           );
           return (
             <React.Fragment key={`${songSegmentName}-${index}`}>
-              <SongSegment {...songSegmentData} />
+              <SongSegment
+                {...songSegmentData}
+                // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                showChordTimes={Object.entries(props.songSegments).some(([_, value]) => {
+                  return value.patterns.some(pattern =>
+                    pattern.segments.some(segment => segment.chordTimes > 1)
+                  );
+                })}
+              />
               <Divider mb='1em' />
             </React.Fragment>
           );
