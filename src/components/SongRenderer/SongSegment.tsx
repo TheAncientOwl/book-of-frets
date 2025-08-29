@@ -13,7 +13,7 @@
 import { Box, Flex, Heading } from '@chakra-ui/react';
 import type { TChordsIndex } from '../../configs/types/chord.types.ts';
 import type { TSongSegment } from '../../configs/types/song.types.ts';
-import { Pattern } from './Pattern';
+import { ChordsPattern } from './ChordsPattern.tsx';
 
 type ISongSegmentProps = TSongSegment & {
   showChordTimes: boolean;
@@ -37,14 +37,23 @@ export const SongSegment = (props: ISongSegmentProps) => {
       </Heading>
 
       <Flex direction='column' alignItems='center' gap='1em'>
-        {props.patterns.map((pattern, patternIndex) => (
-          <Pattern
-            key={patternIndex}
-            {...pattern}
-            chordsIndex={props.chordsIndex}
-            showChordTimes={props.showChordTimes}
-          />
-        ))}
+        {props.patterns.map((pattern, patternIndex) => {
+          if (props.type === 'chords') {
+            return (
+              <ChordsPattern
+                key={patternIndex}
+                {...pattern}
+                chordsIndex={props.chordsIndex}
+                showChordTimes={props.showChordTimes}
+              />
+            );
+          } else if (props.type === 'strings') {
+            return <></>;
+          } else {
+            console.warn(`Unimplemented pattern type "${props.type}`);
+            return <></>;
+          }
+        })}
       </Flex>
     </Box>
   );

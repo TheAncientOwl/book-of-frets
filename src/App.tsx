@@ -6,12 +6,12 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description App component.
  */
 
 import chordsIndexRaw from './configs/chords-index.json';
-import songConfigRaw from './configs/songs/nice-to-meet-you.json';
+import songConfigRaw from './configs/songs/flowers-need-rain.json';
 
 import { Box, ChakraProvider, SimpleGrid } from '@chakra-ui/react';
 
@@ -36,7 +36,7 @@ export const App = () => {
           songSegmentsOrder={songConfig.songSegmentsOrder}
           resources={songConfig.resources}
         />
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 4, lg: 8 }} spacing='1em'>
+        <SimpleGrid columns={{ base: 1, sm: 2, md: 4, lg: 8 }} mt='1em' spacing='1em'>
           {Object.entries(chordsIndex).map(([chordKeyName, chordConfig]) => (
             <Chord key={chordKeyName} name={chordConfig.name} frets={chordConfig.frets} />
           ))}

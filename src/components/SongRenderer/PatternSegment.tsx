@@ -11,17 +11,17 @@
  */
 
 import { Box, Flex, Tag, Text } from '@chakra-ui/react';
-import type { TPatternSegment } from '../../configs/types/song.types.ts';
+import type { TChordsPatternSegment } from '../../configs/types/song.types.ts';
 import type { TChordsIndex } from '../../configs/types/chord.types.ts';
 
-type TPatternSegmentProps = TPatternSegment & {
+type TChordsPatternSegmentProps = TChordsPatternSegment & {
   showChordTimes: boolean;
   chordsIndex: TChordsIndex;
 };
 
 const NO_CHORD_ID = '-';
 
-export const PatternSegment = (props: TPatternSegmentProps) => {
+export const ChordsPatternSegment = (props: TChordsPatternSegmentProps) => {
   return (
     <Flex direction='column' alignItems='center'>
       <Flex direction='row' gap='1em' mb='0.6em'>

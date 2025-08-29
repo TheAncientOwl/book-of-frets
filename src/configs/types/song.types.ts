@@ -12,21 +12,21 @@
 
 export type TStrummingMove = '-' | 'D' | 'U' | 'Dx' | 'Ux';
 
-export type TPatternSegment = {
+export type TChordsPatternSegment = {
   chordIDs: string[];
   chordTimes: number;
   strummingPattern: TStrummingMove[];
 };
 
-export type TPattern = {
+export type TChordsPattern = {
   times: number;
-  segments: TPatternSegment[];
+  segments: TChordsPatternSegment[];
 };
 
 export type TSongSegment = {
   name: string;
   type: 'chords' | 'strings';
-  patterns: TPattern[];
+  patterns: TChordsPattern[];
 };
 
 export type TResource = {

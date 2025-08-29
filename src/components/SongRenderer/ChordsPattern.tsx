@@ -4,30 +4,30 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
- * @file Pattern.tsx
+ * @file ChordsPattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Render song chords pattern.
  */
 
 import { Divider, Flex, Tag } from '@chakra-ui/react';
 import React from 'react';
-import { PatternSegment } from './PatternSegment';
-import type { TPattern } from '../../configs/types/song.types.ts';
+import { ChordsPatternSegment } from './PatternSegment.tsx';
+import type { TChordsPattern } from '../../configs/types/song.types.ts';
 import type { TChordsIndex } from '../../configs/types/chord.types.ts';
 
-type TPatternProps = TPattern & {
+type TPatternProps = TChordsPattern & {
   showChordTimes: boolean;
   chordsIndex: TChordsIndex;
 };
 
-export const Pattern = (props: TPatternProps) => {
+export const ChordsPattern = (props: TPatternProps) => {
   return (
     <Flex direction='row' gap='1em' alignItems='center'>
       <Divider orientation='vertical' height='80px' borderColor='gray.200' borderWidth='thin' />
       {props.segments.map((segment, segmentIndex) => (
         <React.Fragment key={segmentIndex}>
-          <PatternSegment
+          <ChordsPatternSegment
             {...segment}
             chordsIndex={props.chordsIndex}
             showChordTimes={props.showChordTimes}
