@@ -12,7 +12,7 @@
 
 import { Divider, Flex, Tag } from '@chakra-ui/react';
 import React from 'react';
-import { ChordsPatternSegment } from './PatternSegment.tsx';
+import { ChordsPatternSegment } from './ChordsPatternSegment.tsx';
 import type { TChordsPattern } from '../../configs/types/song.types.ts';
 import type { TChordsIndex } from '../../configs/types/chord.types.ts';
 

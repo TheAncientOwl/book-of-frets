@@ -4,7 +4,7 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
- * @file Segment.tsx
+ * @file ChordsPatternSegment.tsx
  * @author Alexandru Delegeanu
  * @version 0.4
  * @description Render song pattern segment.
