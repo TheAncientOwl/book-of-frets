@@ -25,13 +25,13 @@ export const App = () => {
         <Flex gap='1em' color='white'>
           <Link to='/'>Home</Link>
           <Link to='/chords-index'>ChordIndex</Link>
-          <Link to='/song/sweater-weather'>Song</Link>
+          <Link to='/sweater-weather'>Song</Link>
         </Flex>
 
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/chords-index' element={<ChordsIndex />} />
-          <Route path='/song/:id' element={<Song />} />
+          <Route path='/:id' element={<Song />} />
         </Routes>
       </Box>
     </ChakraProvider>
