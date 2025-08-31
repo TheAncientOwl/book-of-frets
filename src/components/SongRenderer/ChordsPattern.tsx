@@ -50,7 +50,6 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
 
       <Tag
         size='sm'
-        width='30px'
         fontWeight='bold'
         backgroundColor='blue.200'
         position='absolute'
