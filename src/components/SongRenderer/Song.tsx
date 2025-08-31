@@ -6,13 +6,13 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description Render song based on given config.
  */
 
 import { Fragment } from 'react';
 
-import { Box, Circle, Divider, Flex, Heading, Text } from '@chakra-ui/react';
+import { Box, Circle, Container, Divider, Flex, Heading, Text } from '@chakra-ui/react';
 
 import type { TChordsIndex } from '@/configs/types/chord.types.ts';
 import type { TChordsPattern, TSong } from '@/configs/types/song.types.ts';
@@ -25,7 +25,7 @@ type TSongProps = TSong & {
 
 export const Song = (props: TSongProps) => {
   return (
-    <Box bgColor='blue.300' padding='2em 1em'>
+    <Container bgColor='blue.300' padding='2em 1em' borderRadius='1rem'>
       <Heading as='h1' size='lg' mb='0.5em' textAlign='center'>
         <Box as='span' position='relative'>
           {props.title}
@@ -51,7 +51,7 @@ export const Song = (props: TSongProps) => {
         </Box>
       </Heading>
 
-      <Heading as='h2' size='sm' mb='0.5em' textAlign='center'>
+      <Heading as='h2' size='sm' mb='0.75em' textAlign='center' fontStyle='italic'>
         {props.artists.map((artist, index) => (
           <Fragment key={index}>
             {artist}
@@ -60,7 +60,7 @@ export const Song = (props: TSongProps) => {
         ))}
       </Heading>
 
-      <Box bgColor='blue.400' padding='1.5em 1em'>
+      <Box bgColor='blue.400' padding='1.5em 1em' borderRadius='1rem'>
         {props.songSegmentsOrder.map((songSegmentName, index) => {
           const songSegmentData = props.songSegments[songSegmentName];
           console.assert(
@@ -86,6 +86,6 @@ export const Song = (props: TSongProps) => {
           );
         })}
       </Box>
-    </Box>
+    </Container>
   );
 };
