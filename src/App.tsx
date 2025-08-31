@@ -6,29 +6,25 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description App component.
  */
 
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
-import { Box, ChakraProvider, Flex } from '@chakra-ui/react';
+import { Box, ChakraProvider } from '@chakra-ui/react';
 
 import { ChordsIndex } from '@/pages/ChordsIndex.tsx';
 import { Home } from '@/pages/Home.tsx';
 import { Song } from '@/pages/Song.tsx';
 import { SongsIndex } from '@/pages/SongsIndex';
+import { AppMenu } from '@/components/AppMenu/AppMenu';
 
 export const App = () => {
   return (
     <ChakraProvider>
       <Box width='100vw' minHeight='100vh' background='blackAlpha.900' padding='2em'>
-        <Flex gap='1em' color='white' mb='1em'>
-          <Link to='/'>Home</Link>
-          <Link to='/sweater-weather'>Song</Link>
-          <Link to='/index/chords'>Chords Index</Link>
-          <Link to='/index/songs'>Songs Index</Link>
-        </Flex>
+        <AppMenu />
 
         <Routes>
           <Route path='/' element={<Home />} />
