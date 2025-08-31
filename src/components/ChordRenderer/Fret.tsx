@@ -6,13 +6,14 @@
  *
  * @file Fret.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Render chrod based on given config.
  */
 
-import { Circle, Divider, Flex, Icon, Spacer } from '@chakra-ui/react';
-import React from 'react';
+import { Fragment } from 'react';
 import { IoCloseSharp } from 'react-icons/io5';
+
+import { Circle, Divider, Flex, Icon, Spacer } from '@chakra-ui/react';
 
 type TFretProps = {
   stringsToFingers: Map<number, number>;
@@ -30,7 +31,7 @@ export const Fret = (props: TFretProps) => {
         const leftPercent = (stringIdx - 1) * 20;
 
         return (
-          <React.Fragment key={stringIdx}>
+          <Fragment key={stringIdx}>
             {muted && (
               <Circle
                 size='1.5em'
@@ -69,7 +70,7 @@ export const Fret = (props: TFretProps) => {
                 {finger === 7 ? 'T' : finger}
               </Circle>
             )}
-          </React.Fragment>
+          </Fragment>
         );
       })}
     </Flex>

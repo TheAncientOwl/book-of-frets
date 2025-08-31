@@ -6,15 +6,18 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description Render song based on given config.
  */
 
+import { Fragment } from 'react';
+
 import { Box, Circle, Divider, Flex, Heading, Text } from '@chakra-ui/react';
-import React from 'react';
-import type { TChordsIndex } from '../../configs/types/chord.types.ts';
-import type { TChordsPattern, TSong } from '../../configs/types/song.types.ts';
-import { SongSegment } from './SongSegment';
+
+import type { TChordsIndex } from '@/configs/types/chord.types.ts';
+import type { TChordsPattern, TSong } from '@/configs/types/song.types.ts';
+
+import { SongSegment } from '@/components/SongRenderer/SongSegment';
 
 type TSongProps = TSong & {
   chordsIndex: TChordsIndex;
@@ -50,10 +53,10 @@ export const Song = (props: TSongProps) => {
 
       <Heading as='h2' size='sm' mb='0.5em' textAlign='center'>
         {props.artists.map((artist, index) => (
-          <React.Fragment key={index}>
+          <Fragment key={index}>
             {artist}
             {index < props.artists.length - 1 && ', '}
-          </React.Fragment>
+          </Fragment>
         ))}
       </Heading>
 
@@ -65,7 +68,7 @@ export const Song = (props: TSongProps) => {
             `Failed to find song segment data for "${songSegmentName}"`
           );
           return (
-            <React.Fragment key={`${songSegmentName}-${index}`}>
+            <Fragment key={`${songSegmentName}-${index}`}>
               <SongSegment
                 {...songSegmentData}
                 chordsIndex={props.chordsIndex}
@@ -79,7 +82,7 @@ export const Song = (props: TSongProps) => {
                 )}
               />
               <Divider mb='1em' />
-            </React.Fragment>
+            </Fragment>
           );
         })}
       </Box>

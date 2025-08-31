@@ -6,14 +6,17 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Render chrod based on given config.
  */
 
+import { Fragment } from 'react';
+
 import { Box, Divider, Heading } from '@chakra-ui/react';
-import { Fret } from './Fret';
-import React from 'react';
-import type { TFret } from '../../configs/types/chord.types';
+
+import type { TFret } from '@/configs/types/chord.types';
+
+import { Fret } from '@/components/ChordRenderer/Fret';
 
 type TChordProps = {
   name: string;
@@ -34,10 +37,10 @@ export const Chord = (props: TChordProps) => {
           );
 
           return (
-            <React.Fragment key={idx}>
+            <Fragment key={idx}>
               <Fret stringsToFingers={map} />
               {idx < props.frets.length && <Divider borderColor='gray.100' borderWidth='thin' />}
-            </React.Fragment>
+            </Fragment>
           );
         })}
       </Box>

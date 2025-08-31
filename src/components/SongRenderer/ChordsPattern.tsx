@@ -6,15 +6,18 @@
  *
  * @file ChordsPattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description Render song chords pattern.
  */
 
+import { Fragment } from 'react';
+
 import { Divider, Flex, Tag } from '@chakra-ui/react';
-import React from 'react';
-import { ChordsPatternSegment } from './ChordsPatternSegment.tsx';
-import type { TChordsPattern } from '../../configs/types/song.types.ts';
-import type { TChordsIndex } from '../../configs/types/chord.types.ts';
+
+import type { TChordsIndex } from '@/configs/types/chord.types.ts';
+import type { TChordsPattern } from '@/configs/types/song.types.ts';
+
+import { ChordsPatternSegment } from '@/components/SongRenderer/ChordsPatternSegment.tsx';
 
 type TChordsPatternProps = TChordsPattern & {
   showChordTimes: boolean;
@@ -26,7 +29,7 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
     <Flex direction='row' gap='1em' alignItems='center' position='relative'>
       <Divider orientation='vertical' height='80px' borderColor='gray.200' borderWidth='thin' />
       {props.segments.map((segment, segmentIndex) => (
-        <React.Fragment key={segmentIndex}>
+        <Fragment key={segmentIndex}>
           <ChordsPatternSegment
             {...segment}
             chordsIndex={props.chordsIndex}
@@ -34,7 +37,7 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
           />
 
           <Divider orientation='vertical' height='80px' borderColor='gray.200' borderWidth='thin' />
-        </React.Fragment>
+        </Fragment>
       ))}
       <Tag
         size='sm'
