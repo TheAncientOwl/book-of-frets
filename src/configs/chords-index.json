@@ -1,6 +1,10 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "index": {
+    "-": {
+      "name": "0",
+      "frets": []
+    },
     "E": {
       "name": "E",
       "frets": [

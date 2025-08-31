@@ -6,7 +6,7 @@
  *
  * @file ChordsIndex.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Handle chords rendering.
  */
 
@@ -15,6 +15,7 @@ import { SimpleGrid } from '@chakra-ui/react';
 import { Chord } from '@/components/ChordRenderer/Chord';
 import chordsIndexRaw from '@/configs/chords-index.json';
 import type { TChordsIndex } from '@/configs/types/chord.types';
+import { Fragment } from 'react/jsx-runtime';
 
 export const ChordsIndex = () => {
   const chordsIndex = chordsIndexRaw.index as unknown as TChordsIndex;
@@ -23,7 +24,11 @@ export const ChordsIndex = () => {
     <>
       <SimpleGrid columns={{ base: 1, sm: 2, md: 4, lg: 8 }} mt='1em' spacing='1em'>
         {Object.entries(chordsIndex).map(([chordKeyName, chordConfig]) => (
-          <Chord key={chordKeyName} name={chordConfig.name} frets={chordConfig.frets} />
+          <Fragment>
+            {chordKeyName !== '-' && (
+              <Chord key={chordKeyName} name={chordConfig.name} frets={chordConfig.frets} />
+            )}
+          </Fragment>
         ))}
       </SimpleGrid>
     </>

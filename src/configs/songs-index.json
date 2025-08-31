@@ -1,5 +1,5 @@
 {
-  "version": "0.1.1",
+  "version": "0.1.2",
   "index": [
     {
       "title": "Flowers Need Rain",
@@ -30,14 +30,14 @@
       "chordIDs": ["Am", "C", "G", "D"]
     },
     {
-      "title": "Seven Nation Army | 1 String",
+      "title": "Seven Nation Army",
       "artists": ["The White Stripes"],
       "file": "seven-nation-army.json",
       "type": ["acoustic", "electric"],
       "chordIDs": ["-"]
     },
     {
-      "title": "Seven Nation Army",
+      "title": "Seven Nation Army | 1 String",
       "artists": ["The White Stripes"],
       "file": "seven-nation-army-1string.json",
       "type": ["acoustic", "electric"],
