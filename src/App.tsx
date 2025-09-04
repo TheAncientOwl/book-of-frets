@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.13
+ * @version 0.14
  * @description App component.
  */
 
@@ -47,10 +47,10 @@ export const App = () => {
           <AppMenu />
 
           <Routes>
-            <Route path={`${import.meta.env.BASE_URL}`} element={<Home />} />
-            <Route path={`${import.meta.env.BASE_URL}:directory`} element={<Song />} />
-            <Route path={`${import.meta.env.BASE_URL}index/chords`} element={<ChordsIndex />} />
-            <Route path={`${import.meta.env.BASE_URL}index/songs`} element={<SongsIndex />} />
+            <Route path={`/`} element={<Home />} />
+            <Route path={`/:directory`} element={<Song />} />
+            <Route path={`/index/chords`} element={<ChordsIndex />} />
+            <Route path={`/index/songs`} element={<SongsIndex />} />
           </Routes>
         </Box>
       </AppState.Provider>
