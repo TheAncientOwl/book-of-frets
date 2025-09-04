@@ -6,7 +6,7 @@
  *
  * @file ChordsPatternSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description Render song pattern segment.
  */
 
@@ -30,14 +30,11 @@ export const ChordsPatternSegment = (props: TChordsPatternSegmentProps) => {
         {props.chordIDs.map((chordId, index) => {
           const chordConfig = chordsIndex[chordId];
 
-          console.assert(
-            chordId !== NO_CHORD_ID && chordConfig !== undefined,
-            `Missing chord index for ID ${chordId}`
-          );
+          console.assert(chordConfig !== undefined, `Missing chord index for ID '${chordId}'`);
 
           return (
             <Box as='span' key={index}>
-              <Tag backgroundColor='blue.200' fontWeight='bold'>
+              <Tag backgroundColor='green.200' fontWeight='bold'>
                 {chordId !== NO_CHORD_ID ? chordConfig.name : '-'}
               </Tag>
             </Box>

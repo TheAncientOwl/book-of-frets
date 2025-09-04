@@ -6,7 +6,7 @@
  *
  * @file ChordsPattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description Render song chords pattern.
  */
 
@@ -45,7 +45,7 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
       <Tag
         size='sm'
         fontWeight='bold'
-        backgroundColor='blue.200'
+        backgroundColor='green.200'
         position='absolute'
         top='50%'
         right='0'

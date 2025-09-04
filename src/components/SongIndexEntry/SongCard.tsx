@@ -6,7 +6,7 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description List all available songs.
  */
 
@@ -76,6 +76,7 @@ export const SongCard = (props: SongProps) => {
       >
         <Image
           src={`/songs/${props.directory}/cover.png`}
+          alt={`${props.title} cover`}
           width='100%'
           height='100%'
           objectFit='cover'
