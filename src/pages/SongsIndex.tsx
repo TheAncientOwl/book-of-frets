@@ -6,7 +6,7 @@
  *
  * @file SongsIndex.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description List all available songs.
  */
 
@@ -44,3 +44,5 @@ export const SongsIndex = () => {
     </Container>
   );
 };
+
+export default SongsIndex;

@@ -6,7 +6,7 @@
  *
  * @file ChordsIndex.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Handle chords rendering.
  */
 
@@ -35,3 +35,5 @@ export const ChordsIndex = () => {
     </>
   );
 };
+
+export default ChordsIndex;

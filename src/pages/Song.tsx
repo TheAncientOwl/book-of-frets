@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description Handle song rendering based on url.
  */
 
@@ -54,3 +54,5 @@ export const Song = () => {
     />
   );
 };
+
+export default Song;

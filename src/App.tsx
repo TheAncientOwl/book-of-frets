@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.14
+ * @version 0.15
  * @description App component.
  */
 
@@ -16,12 +16,13 @@ import { Box, ChakraProvider } from '@chakra-ui/react';
 
 import { AppMenu } from '@/components/AppMenu/AppMenu';
 import { AppState, type AppStateType } from '@/context/AppState';
-import { ChordsIndex } from '@/pages/ChordsIndex.tsx';
 import { Home } from '@/pages/Home.tsx';
-import { Song } from '@/pages/Song.tsx';
-import { SongsIndex } from '@/pages/SongsIndex';
 import type { TChordsIndex } from '@/types/chord.types';
-import { useEffect, useState } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
+
+const Song = lazy(() => import('@/pages/Song.tsx'));
+const ChordsIndex = lazy(() => import('@/pages/ChordsIndex.tsx'));
+const SongsIndex = lazy(() => import('@/pages/SongsIndex'));
 
 export const App = () => {
   const [chordsIndex, setChordsIndex] = useState<TChordsIndex>({});
@@ -47,10 +48,31 @@ export const App = () => {
           <AppMenu />
 
           <Routes>
-            <Route path={`/`} element={<Home />} />
-            <Route path={`/:directory`} element={<Song />} />
-            <Route path={`/index/chords`} element={<ChordsIndex />} />
-            <Route path={`/index/songs`} element={<SongsIndex />} />
+            <Route path='/' element={<Home />} />
+            <Route
+              path='/:directory'
+              element={
+                <Suspense fallback={<div>Loading...</div>}>
+                  <Song />
+                </Suspense>
+              }
+            />
+            <Route
+              path='/index/chords'
+              element={
+                <Suspense fallback={<div>Loading...</div>}>
+                  <ChordsIndex />
+                </Suspense>
+              }
+            />
+            <Route
+              path='/index/songs'
+              element={
+                <Suspense fallback={<div>Loading...</div>}>
+                  <SongsIndex />
+                </Suspense>
+              }
+            />
           </Routes>
         </Box>
       </AppState.Provider>

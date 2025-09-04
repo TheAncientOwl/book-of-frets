@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description App menu component.
  */
 
@@ -14,6 +14,8 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import {
+  Box,
+  Link as ChakraLink,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -21,20 +23,17 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
+  Flex,
   Icon,
   IconButton,
+  Image,
   List,
   ListItem,
   Text,
-  Image,
   useDisclosure,
-  Flex,
-  Box,
-  Link as ChakraLink,
 } from '@chakra-ui/react';
 
-import { MdMenu } from 'react-icons/md';
-import { MdCopyright } from 'react-icons/md';
+import { MdCopyright, MdMenu } from 'react-icons/md';
 
 // TODO: Implement songs history
 export const AppMenu = () => {
