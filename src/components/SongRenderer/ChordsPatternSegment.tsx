@@ -6,14 +6,14 @@
  *
  * @file ChordsPatternSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description Render song pattern segment.
  */
 
 import { Box, Flex, Tag, Text } from '@chakra-ui/react';
 
-import type { TChordsIndex } from '@/configs/types/chord.types.ts';
-import type { TChordsPatternSegment } from '@/configs/types/song.types.ts';
+import type { TChordsIndex } from '@/types/chord.types';
+import type { TChordsPatternSegment } from '@/types/song.types';
 
 type TChordsPatternSegmentProps = TChordsPatternSegment & {
   showChordTimes: boolean;

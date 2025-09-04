@@ -6,17 +6,30 @@
  *
  * @file SongsIndex.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description List all available songs.
  */
 
-import { Song } from '@/components/SongIndexEntry/Song';
-import songsIndexRaw from '@/configs/songs-index.json';
-import type { TSongsIndexEntry } from '@/configs/types/song.types';
+import { useEffect, useState } from 'react';
+
 import { Container, Flex } from '@chakra-ui/react';
 
+import type { TSongsIndexEntry } from '@/types/song.types';
+
+import { Song } from '@/components/SongIndexEntry/Song';
+
 export const SongsIndex = () => {
-  const songsIndex = songsIndexRaw.index as unknown as TSongsIndexEntry[];
+  const [songsIndex, setSongsIndex] = useState<TSongsIndexEntry[]>([]);
+
+  useEffect(() => {
+    fetch('/songs/index.json')
+      .then(response => response.json())
+      .then(data => setSongsIndex(data.index as TSongsIndexEntry[]))
+      .catch(error => {
+        // TODO: redirect to 404 or something
+        console.error('Failed to fetch songs index:', error);
+      });
+  }, []);
 
   return (
     <Container backgroundColor='blue.200' padding='1em 1.5em' borderRadius='0.5em'>

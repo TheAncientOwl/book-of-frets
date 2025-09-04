@@ -6,25 +6,33 @@
  *
  * @file SongsIndex.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description List all available songs.
  */
 
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Box, Flex, Heading, Tag } from '@chakra-ui/react';
 
-import chordsIndexRaw from '@/configs/chords-index.json';
-import type { TChordsIndex } from '@/configs/types/chord.types';
-import type { TSongsIndexEntry } from '@/configs/types/song.types';
+import type { TChordsIndex } from '@/types/chord.types';
+import type { TSongsIndexEntry } from '@/types/song.types';
 
 type SongProps = TSongsIndexEntry & {
   index: number;
 };
 
-const chordsIndex = chordsIndexRaw.index as unknown as TChordsIndex;
-
 export const Song = (props: SongProps) => {
+  const [chordsIndex, setChordsIndex] = useState<TChordsIndex | null>(null);
+
+  useEffect(() => {
+    fetch('/chords/index.json')
+      .then(response => response.json())
+      .then(data => {
+        setChordsIndex(data.index as TChordsIndex);
+      });
+  }, []);
+
   return (
     <Flex
       direction='column'
@@ -39,7 +47,7 @@ export const Song = (props: SongProps) => {
       <Heading size='sm'>
         {props.index}.
         <Box as='span' ml='3px' textDecor='underline'>
-          <Link to={`/${props.file.replace('.json', '')}`}>{props.title}</Link>
+          <Link to={`/${props.directory}`}>{props.title}</Link>
         </Box>
       </Heading>
 
@@ -65,23 +73,24 @@ export const Song = (props: SongProps) => {
           </Tag>
         ))}
 
-        {props.chordIDs.map(chordId => {
-          const chordConfig = chordsIndex[chordId];
+        {chordsIndex &&
+          props.chordIDs.map(chordId => {
+            const chordConfig = chordsIndex[chordId];
 
-          console.assert(chordConfig !== undefined, `Could not find chord config for ${chordId}`);
+            console.assert(chordConfig !== undefined, `Could not find chord config for ${chordId}`);
 
-          return (
-            <Tag
-              bgColor='blue.200'
-              borderColor='blue.500'
-              borderStyle='solid'
-              borderWidth='thin'
-              key={chordId}
-            >
-              {chordsIndex[chordId].name}
-            </Tag>
-          );
-        })}
+            return (
+              <Tag
+                bgColor='blue.200'
+                borderColor='blue.500'
+                borderStyle='solid'
+                borderWidth='thin'
+                key={chordId}
+              >
+                {chordsIndex[chordId].name}
+              </Tag>
+            );
+          })}
       </Flex>
 
       <Flex gap='0.5em'></Flex>

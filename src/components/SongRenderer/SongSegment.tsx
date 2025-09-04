@@ -6,14 +6,14 @@
  *
  * @file SongSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description Render song segment.
  */
 
 import { Box, Flex, Heading } from '@chakra-ui/react';
 
-import type { TChordsIndex } from '@/configs/types/chord.types.ts';
-import type { TChordsPattern, TSongSegment, TStringsPattern } from '@/configs/types/song.types.ts';
+import type { TChordsIndex } from '@/types/chord.types';
+import type { TChordsPattern, TSongSegment, TStringsPattern } from '@/types/song.types';
 
 import { ChordsPattern } from '@/components/SongRenderer/ChordsPattern.tsx';
 import { StringsPattern } from '@/components/SongRenderer/StringsPattern.tsx';

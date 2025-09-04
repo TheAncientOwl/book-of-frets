@@ -1,73 +1,73 @@
 {
-  "version": "0.1.2",
+  "version": "0.1.3",
   "index": [
     {
       "title": "Flowers Need Rain",
       "artists": ["Preston Pablo"],
-      "file": "flowers-need-rain.json",
+      "directory": "flowers-need-rain",
       "chordIDs": ["-"],
       "type": ["acoustic", "electric"]
     },
     {
       "title": "Nice to Meet You",
       "artists": ["Myles Smith"],
-      "file": "nice-to-meet-you.json",
+      "directory": "nice-to-meet-you",
       "type": ["acoustic"],
       "chordIDs": ["Em", "C", "G", "D"]
     },
     {
       "title": "O stea",
       "artists": ["Deepcentral"],
-      "file": "o-stea.json",
+      "directory": "o-stea",
       "type": ["acoustic"],
       "chordIDs": ["Em7", "Cadd9", "G", "D"]
     },
     {
       "title": "Radioactive",
       "artists": ["Imagine Dragons"],
-      "file": "radioactive.json",
+      "directory": "radioactive",
       "type": ["acoustic"],
       "chordIDs": ["Am", "C", "G", "D"]
     },
     {
       "title": "Seven Nation Army",
       "artists": ["The White Stripes"],
-      "file": "seven-nation-army.json",
+      "directory": "seven-nation-army",
       "type": ["acoustic", "electric"],
       "chordIDs": ["-"]
     },
     {
       "title": "Seven Nation Army | 1 String",
       "artists": ["The White Stripes"],
-      "file": "seven-nation-army-1string.json",
+      "directory": "seven-nation-army-1string",
       "type": ["acoustic", "electric"],
       "chordIDs": ["-"]
     },
     {
       "title": "Sweater Weather",
       "artists": ["The Neighbourhood"],
-      "file": "sweater-weather.json",
+      "directory": "sweater-weather",
       "type": ["acoustic"],
       "chordIDs": ["C", "Am", "Em", "G", "D"]
     },
     {
       "title": "Wake Me Up",
       "artists": ["Avicii"],
-      "file": "wake-me-up.json",
+      "directory": "wake-me-up",
       "type": ["acoustic"],
       "chordIDs": ["Am", "Fmaj7", "G", "C/G", "E"]
     },
     {
       "title": "Watermelon Sugar",
       "artists": ["Harry Style"],
-      "file": "watermelon-sugar.json",
+      "directory": "watermelon-sugar",
       "type": ["acoustic"],
       "chordIDs": ["Dm", "Am", "C", "G"]
     },
     {
       "title": "Without You",
       "artists": ["The Kid LAROI"],
-      "file": "without-you.json",
+      "directory": "without-you",
       "type": ["acoustic"],
       "chordIDs": ["Am", "Fmaj7", "C", "G", "E"]
     }

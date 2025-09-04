@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description Render song based on given config.
  */
 
@@ -14,8 +14,8 @@ import { Fragment } from 'react';
 
 import { Box, Circle, Container, Divider, Flex, Heading, Text } from '@chakra-ui/react';
 
-import type { TChordsIndex } from '@/configs/types/chord.types.ts';
-import type { TChordsPattern, TSong } from '@/configs/types/song.types.ts';
+import type { TChordsIndex } from '@/types/chord.types';
+import type { TChordsPattern, TSong } from '@/types/song.types';
 
 import { SongSegment } from '@/components/SongRenderer/SongSegment';
 

@@ -6,43 +6,56 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Handle song rendering based on url.
  */
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import chordsIndexRaw from '@/configs/chords-index.json';
-import type { TChordsIndex } from '@/configs/types/chord.types';
-import type { TSong } from '@/configs/types/song.types';
+import type { TChordsIndex } from '@/types/chord.types';
+import type { TSong } from '@/types/song.types';
 
 import { Song as SongRenderer } from '@/components/SongRenderer/Song';
 
-const songs = import.meta.glob<TSong>('/src/configs/songs/*.json');
-
 export const Song = () => {
-  const { id } = useParams();
-  const chordsIndex = chordsIndexRaw.index as unknown as TChordsIndex;
+  const { directory } = useParams();
 
   const [songConfig, setSongConfig] = useState<TSong | null>(null);
+  // TODO: move chords index to global app state
+  const [chordsIndex, setChordsIndex] = useState<TChordsIndex | null>(null);
 
   useEffect(() => {
-    if (!id) return;
+    if (!directory) return;
 
-    const path = `/src/configs/songs/${id}.json`;
-    const loader = songs[path];
+    fetch(`/songs/${directory}/config.json`)
+      .then(response => {
+        if (!response.ok) {
+          // TODO: Redirect to 404 song not found
+          console.error(`Song ${directory} not found`);
+          return null;
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (data) setSongConfig(data);
+      });
 
-    if (!loader) {
-      // TODO: Redirect to 404 song not found
-      console.error(`Song ${id} not found`);
-      return;
-    }
+    fetch('/chords/index.json')
+      .then(response => {
+        if (!response.ok) {
+          // TODO: Redirect to 404 song not found or something
+          console.error('Songs index not found');
+          return null;
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (data) setChordsIndex(data.index as TChordsIndex);
+      });
+  }, [directory]);
 
-    loader().then(module => setSongConfig(module));
-  }, [id]);
-
-  if (!songConfig) return <div>Loading song...</div>;
+  if (!songConfig || !chordsIndex) return <div>Loading song...</div>;
 
   return (
     <SongRenderer

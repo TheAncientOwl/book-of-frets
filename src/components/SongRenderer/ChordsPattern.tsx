@@ -6,7 +6,7 @@
  *
  * @file ChordsPattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description Render song chords pattern.
  */
 
@@ -14,8 +14,8 @@ import { Fragment } from 'react';
 
 import { Divider, Flex, Tag } from '@chakra-ui/react';
 
-import type { TChordsIndex } from '@/configs/types/chord.types.ts';
-import type { TChordsPattern } from '@/configs/types/song.types.ts';
+import type { TChordsIndex } from '@/types/chord.types';
+import type { TChordsPattern } from '@/types/song.types';
 
 import { ChordsPatternSegment } from '@/components/SongRenderer/ChordsPatternSegment.tsx';
 

@@ -6,13 +6,13 @@
  *
  * @file StringsPattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description Render song strings pattern.
  */
 
 import { Box, Circle, Divider, Flex, Heading } from '@chakra-ui/react';
 
-import type { TStringsPattern } from '@/configs/types/song.types.ts';
+import type { TStringsPattern } from '@/types/song.types';
 
 type TStringsPatternProps = TStringsPattern & {
   showChordTimes: boolean;

@@ -66,7 +66,7 @@ export const AppMenu = () => {
           <DrawerCloseButton />
           <DrawerHeader>
             <Flex direction='row' gap='5px'>
-              <Image src='/public/book-of-frets.svg' alt='Book of Frets Logo' maxW='25px' />
+              <Image src='/book-of-frets.svg' alt='Book of Frets Logo' maxW='25px' />
               <Box as='span'>Book Of Frets</Box>
             </Flex>
           </DrawerHeader>
