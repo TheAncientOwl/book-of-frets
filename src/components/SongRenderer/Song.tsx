@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description Render song based on given config.
  */
 
@@ -49,7 +49,7 @@ export const Song = (props: TSongProps) => {
       <Flex direction='column' alignItems='center' mb='15px'>
         <Box position='relative' width={['70px', '80px']} height={['70px', '80px']} mb={['5px']}>
           <Image
-            src={`/songs/${props.directory}/cover.png`}
+            src={`${import.meta.env.BASE_URL}songs/${props.directory}/cover.png`}
             alt={`${props.title} cover`}
             width='100%'
             height='100%'

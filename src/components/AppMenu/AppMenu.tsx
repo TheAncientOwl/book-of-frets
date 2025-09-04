@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description App menu component.
  */
 
@@ -67,7 +67,11 @@ export const AppMenu = () => {
           <DrawerCloseButton />
           <DrawerHeader>
             <Flex direction='row' gap='5px'>
-              <Image src='/book-of-frets.svg' alt='Book of Frets Logo' maxW='25px' />
+              <Image
+                src={`${import.meta.env.BASE_URL}book-of-frets.svg`}
+                alt='Book of Frets Logo'
+                maxW='25px'
+              />
               <Box as='span'>Book Of Frets</Box>
             </Flex>
           </DrawerHeader>
@@ -75,13 +79,13 @@ export const AppMenu = () => {
           <DrawerBody>
             <List display='flex' flexDirection='column' gap='0.5em' fontWeight='bold'>
               <ListItem onClick={onClose}>
-                <Link to='/'>» Home</Link>
+                <Link to={`${import.meta.env.BASE_URL}`}>» Home</Link>
               </ListItem>
               <ListItem onClick={onClose}>
-                <Link to='/index/chords'>» Chords</Link>
+                <Link to={`${import.meta.env.BASE_URL}index/chords`}>» Chords</Link>
               </ListItem>
               <ListItem onClick={onClose}>
-                <Link to='/index/songs'>» Songs</Link>
+                <Link to={`${import.meta.env.BASE_URL}index/songs`}>» Songs</Link>
               </ListItem>
             </List>
           </DrawerBody>

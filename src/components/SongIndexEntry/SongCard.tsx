@@ -6,7 +6,7 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description List all available songs.
  */
 
@@ -59,7 +59,7 @@ export const SongCard = (props: SongProps) => {
       backgroundColor='blackAlpha.300'
       _hover={{ bgColor: 'blackAlpha.400' }}
       position='relative'
-      onClick={() => navigate(`/${props.directory}`)}
+      onClick={() => navigate(`${import.meta.env.BASE_URL}${props.directory}`)}
     >
       <Text fontWeight='bold' fontSize={['md']} alignContent='center' textAlign='right'>
         {props.index}
@@ -75,7 +75,7 @@ export const SongCard = (props: SongProps) => {
         cursor='pointer'
       >
         <Image
-          src={`/songs/${props.directory}/cover.png`}
+          src={`${import.meta.env.BASE_URL}songs/${props.directory}/cover.png`}
           alt={`${props.title} cover`}
           width='100%'
           height='100%'

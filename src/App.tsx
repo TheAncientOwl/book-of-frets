@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.12
+ * @version 0.13
  * @description App component.
  */
 
@@ -27,7 +27,7 @@ export const App = () => {
   const [chordsIndex, setChordsIndex] = useState<TChordsIndex>({});
 
   useEffect(() => {
-    fetch('/chords/index.json')
+    fetch(`${import.meta.env.BASE_URL}chords/index.json`)
       .then(res => res.json())
       .then(data => setChordsIndex(data.index as TChordsIndex))
       .catch(() => setChordsIndex({}));
@@ -47,10 +47,10 @@ export const App = () => {
           <AppMenu />
 
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/:directory' element={<Song />} />
-            <Route path='/index/chords' element={<ChordsIndex />} />
-            <Route path='/index/songs' element={<SongsIndex />} />
+            <Route path={`${import.meta.env.BASE_URL}`} element={<Home />} />
+            <Route path={`${import.meta.env.BASE_URL}:directory`} element={<Song />} />
+            <Route path={`${import.meta.env.BASE_URL}index/chords`} element={<ChordsIndex />} />
+            <Route path={`${import.meta.env.BASE_URL}index/songs`} element={<SongsIndex />} />
           </Routes>
         </Box>
       </AppState.Provider>
