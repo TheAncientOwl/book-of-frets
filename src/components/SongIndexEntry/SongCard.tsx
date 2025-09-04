@@ -6,14 +6,13 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description List all available songs.
  */
 
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { MdMoreHoriz } from 'react-icons/md';
 import {
   Box,
   Flex,
@@ -21,10 +20,16 @@ import {
   Icon,
   IconButton,
   Image,
+  Popover,
+  PopoverArrow,
+  PopoverBody,
+  PopoverContent,
+  PopoverTrigger,
   SimpleGrid,
   Tag,
   Text,
 } from '@chakra-ui/react';
+import { MdMoreHoriz } from 'react-icons/md';
 
 import type { TChordsIndex } from '@/types/chord.types';
 import type { TSongsIndexEntry } from '@/types/song.types';
@@ -132,69 +137,65 @@ export const SongCard = (props: SongProps) => {
             </Box>
           ))}
         </Heading>
-
-        {/* <Flex gap='2px' wrap='wrap'>
-          {props.type.map((type, index) => (
-            <Tag
-              key={index}
-              size={['sm', 'md']}
-              bgColor='green.200'
-              borderColor='green.500'
-              borderStyle='solid'
-              borderWidth='thin'
-            >
-              {type}
-            </Tag>
-          ))}
-        </Flex> */}
       </Box>
 
       <Flex direction='column' justifyContent='center' alignItems='center'>
-        <IconButton
-          zIndex={2}
-          aria-label='More about the song'
-          icon={<Icon as={MdMoreHoriz} boxSize={5} />} // 👈 properly centers + resizes
-          size='lg'
-          variant='unstyled'
-          onClick={e => e.stopPropagation()}
-        />
+        <Popover>
+          <PopoverTrigger>
+            <IconButton
+              zIndex={2}
+              aria-label='More about the song'
+              icon={<Icon as={MdMoreHoriz} boxSize={5} />} // 👈 properly centers + resizes
+              size='lg'
+              variant='unstyled'
+              onClick={e => e.stopPropagation()}
+            />
+          </PopoverTrigger>
+          <PopoverContent>
+            <PopoverArrow />
+            <PopoverBody>
+              <Flex gap='5px' wrap='wrap'>
+                {props.type.map((type, index) => (
+                  <Tag
+                    key={index}
+                    size={['sm', 'md']}
+                    bgColor='green.200'
+                    borderColor='green.500'
+                    borderStyle='solid'
+                    borderWidth='thin'
+                  >
+                    {type}
+                  </Tag>
+                ))}
+
+                {chordsIndex &&
+                  props.chordIDs.map(chordId => {
+                    const chordConfig = chordsIndex[chordId];
+
+                    console.assert(
+                      chordConfig !== undefined,
+                      `Could not find chord config for ${chordId}`
+                    );
+
+                    return (
+                      <Tag
+                        size={['sm', 'md']}
+                        bgColor='green.200'
+                        borderColor='green.500'
+                        borderStyle='solid'
+                        borderWidth='thin'
+                        key={chordId}
+                        justifyContent='center'
+                      >
+                        {chordsIndex[chordId].name}
+                      </Tag>
+                    );
+                  })}
+              </Flex>
+            </PopoverBody>
+          </PopoverContent>
+        </Popover>
       </Flex>
-
-      {/* <SimpleGrid columns={{ base: 2, sm: 2, md: 3 }} spacing='2px' style={{ direction: 'rtl' }}>
-        {chordsIndex &&
-          props.chordIDs.map(chordId => {
-            const chordConfig = chordsIndex[chordId];
-
-            console.assert(chordConfig !== undefined, `Could not find chord config for ${chordId}`);
-
-            return (
-              <Tag
-                size={['sm', 'md']}
-                bgColor='green.200'
-                borderColor='green.500'
-                borderStyle='solid'
-                borderWidth='thin'
-                key={chordId}
-                justifyContent='center'
-              >
-                {chordsIndex[chordId].name}
-              </Tag>
-            );
-          })}
-      </SimpleGrid> */}
-
-      {/* <Box
-        position='absolute'
-        top={0}
-        left={0}
-        width='100%'
-        height='100%'
-        backgroundColor='red.200'
-        opacity={0}
-        // transition='opacity 0.2s'
-        _hover={{ opacity: 1 }}
-        pointerEvents='none'
-      /> */}
     </SimpleGrid>
   );
 };
