@@ -10,15 +10,13 @@
  * @description List all available songs.
  */
 
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import {
   Box,
   Flex,
   Heading,
-  Icon,
-  IconButton,
   Image,
   Popover,
   PopoverArrow,
@@ -28,14 +26,21 @@ import {
   SimpleGrid,
   Tag,
   Text,
+  Tooltip,
 } from '@chakra-ui/react';
-import { MdMoreHoriz } from 'react-icons/md';
+import { GiGuitarBassHead, GiGuitarHead } from 'react-icons/gi';
 
 import type { TChordsIndex } from '@/types/chord.types';
 import type { TSongsIndexEntry } from '@/types/song.types';
+import { TbGuitarPickFilled } from 'react-icons/tb';
 
 type SongProps = TSongsIndexEntry & {
   index: number;
+};
+
+const typeToIcon = {
+  acoustic: <GiGuitarHead />,
+  electric: <GiGuitarBassHead />,
 };
 
 export const SongCard = (props: SongProps) => {
@@ -52,7 +57,7 @@ export const SongCard = (props: SongProps) => {
 
   return (
     <SimpleGrid
-      gridTemplateColumns={['22px 90px 1000fr 1fr']}
+      gridTemplateColumns={['22px 90px 1000fr 1fr', '22px 100px 1000fr 1fr']}
       columns={{ base: 3 }}
       cursor='pointer'
       borderStyle='solid'
@@ -71,8 +76,8 @@ export const SongCard = (props: SongProps) => {
       <Box
         justifySelf='center'
         position='relative'
-        width={['70px']}
-        height={['70px']}
+        width={['70px', '80px']}
+        height={['70px', '80px']}
         borderRadius='10px'
         overflow='hidden'
         cursor='pointer'
@@ -126,48 +131,45 @@ export const SongCard = (props: SongProps) => {
       </Box>
 
       <Box pt='5px'>
-        <Heading noOfLines={1} as='h1' size={['sm', 'md']} mb={['5px']} textDecor='underline'>
+        <Heading noOfLines={1} as='h1' size={['sm', 'md']} mb={['5px']} color='CaptionText'>
           {props.title}
         </Heading>
 
-        <Heading noOfLines={1} as='h2' size={['xs', 'sm']} fontStyle='italic' color='CaptionText'>
+        <Heading noOfLines={1} as='h2' size={['xs', 'sm']} mb={['5px']} fontStyle='italic'>
           {props.artists.map((artist, index) => (
             <Box key={index} as='span'>
               {artist} {index < props.artists.length - 1 && ', '}
             </Box>
           ))}
         </Heading>
+
+        <Flex>
+          {props.type.map((item, index) => (
+            <Fragment key={index}>
+              <Tooltip label={item}>{typeToIcon[item as keyof typeof typeToIcon]}</Tooltip>
+            </Fragment>
+          ))}
+        </Flex>
       </Box>
 
       <Flex direction='column' justifyContent='center' alignItems='center'>
         <Popover>
           <PopoverTrigger>
-            <IconButton
+            <Box
+              mr={['10px']}
               zIndex={2}
               aria-label='More about the song'
-              icon={<Icon as={MdMoreHoriz} boxSize={5} />} // 👈 properly centers + resizes
-              size='lg'
-              variant='unstyled'
               onClick={e => e.stopPropagation()}
-            />
+              fontSize='20px'
+              padding='5px'
+            >
+              <TbGuitarPickFilled />
+            </Box>
           </PopoverTrigger>
           <PopoverContent>
             <PopoverArrow />
             <PopoverBody>
               <Flex gap='5px' wrap='wrap'>
-                {props.type.map((type, index) => (
-                  <Tag
-                    key={index}
-                    size={['sm', 'md']}
-                    bgColor='green.200'
-                    borderColor='green.500'
-                    borderStyle='solid'
-                    borderWidth='thin'
-                  >
-                    {type}
-                  </Tag>
-                ))}
-
                 {chordsIndex &&
                   props.chordIDs.map(chordId => {
                     const chordConfig = chordsIndex[chordId];
