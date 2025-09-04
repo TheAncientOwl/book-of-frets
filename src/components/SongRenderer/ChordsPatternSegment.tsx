@@ -6,28 +6,29 @@
  *
  * @file ChordsPatternSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description Render song pattern segment.
  */
 
 import { Box, Flex, Tag, Text } from '@chakra-ui/react';
 
-import type { TChordsIndex } from '@/types/chord.types';
+import { useAppStateContext } from '@/context/AppState';
 import type { TChordsPatternSegment } from '@/types/song.types';
 
 type TChordsPatternSegmentProps = TChordsPatternSegment & {
   showChordTimes: boolean;
-  chordsIndex: TChordsIndex;
 };
 
 const NO_CHORD_ID = '-';
 
 export const ChordsPatternSegment = (props: TChordsPatternSegmentProps) => {
+  const { chordsIndex } = useAppStateContext();
+
   return (
     <Flex direction='column' alignItems='center'>
       <Flex direction='row' gap='1em' mb='0.6em'>
         {props.chordIDs.map((chordId, index) => {
-          const chordConfig = props.chordsIndex[chordId];
+          const chordConfig = chordsIndex[chordId];
 
           console.assert(
             chordId !== NO_CHORD_ID && chordConfig !== undefined,

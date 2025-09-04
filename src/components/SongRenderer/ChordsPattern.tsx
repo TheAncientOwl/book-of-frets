@@ -6,7 +6,7 @@
  *
  * @file ChordsPattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description Render song chords pattern.
  */
 
@@ -14,14 +14,12 @@ import { Fragment } from 'react';
 
 import { Divider, Flex, Tag } from '@chakra-ui/react';
 
-import type { TChordsIndex } from '@/types/chord.types';
 import type { TChordsPattern } from '@/types/song.types';
 
 import { ChordsPatternSegment } from '@/components/SongRenderer/ChordsPatternSegment.tsx';
 
 type TChordsPatternProps = TChordsPattern & {
   showChordTimes: boolean;
-  chordsIndex: TChordsIndex;
 };
 
 export const ChordsPattern = (props: TChordsPatternProps) => {
@@ -38,11 +36,7 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
 
       {props.segments.map((segment, segmentIndex) => (
         <Fragment key={segmentIndex}>
-          <ChordsPatternSegment
-            {...segment}
-            chordsIndex={props.chordsIndex}
-            showChordTimes={props.showChordTimes}
-          />
+          <ChordsPatternSegment {...segment} showChordTimes={props.showChordTimes} />
 
           <Divider orientation='vertical' height='80px' borderColor='gray.200' borderWidth='thin' />
         </Fragment>

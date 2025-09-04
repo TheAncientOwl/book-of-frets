@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 0.12
  * @description App component.
  */
 
@@ -14,30 +14,46 @@ import { Route, Routes } from 'react-router-dom';
 
 import { Box, ChakraProvider } from '@chakra-ui/react';
 
+import { AppMenu } from '@/components/AppMenu/AppMenu';
+import { AppState, type AppStateType } from '@/context/AppState';
 import { ChordsIndex } from '@/pages/ChordsIndex.tsx';
 import { Home } from '@/pages/Home.tsx';
 import { Song } from '@/pages/Song.tsx';
 import { SongsIndex } from '@/pages/SongsIndex';
-import { AppMenu } from '@/components/AppMenu/AppMenu';
+import type { TChordsIndex } from '@/types/chord.types';
+import { useEffect, useState } from 'react';
 
 export const App = () => {
+  const [chordsIndex, setChordsIndex] = useState<TChordsIndex>({});
+
+  useEffect(() => {
+    fetch('/chords/index.json')
+      .then(res => res.json())
+      .then(data => setChordsIndex(data.index as TChordsIndex))
+      .catch(() => setChordsIndex({}));
+  }, []);
+
+  const appStateValue: AppStateType = { chordsIndex };
+
   return (
     <ChakraProvider>
-      <Box
-        width='100vw'
-        minHeight='100vh'
-        background='gray.900'
-        padding={['0em', '0em', '1em', '2em']}
-      >
-        <AppMenu />
+      <AppState.Provider value={appStateValue}>
+        <Box
+          width='100vw'
+          minHeight='100vh'
+          background='gray.900'
+          padding={['0em', '0em', '1em', '2em']}
+        >
+          <AppMenu />
 
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/:directory' element={<Song />} />
-          <Route path='/index/chords' element={<ChordsIndex />} />
-          <Route path='/index/songs' element={<SongsIndex />} />
-        </Routes>
-      </Box>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/:directory' element={<Song />} />
+            <Route path='/index/chords' element={<ChordsIndex />} />
+            <Route path='/index/songs' element={<SongsIndex />} />
+          </Routes>
+        </Box>
+      </AppState.Provider>
     </ChakraProvider>
   );
 };

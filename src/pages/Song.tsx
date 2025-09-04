@@ -6,14 +6,13 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Handle song rendering based on url.
  */
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import type { TChordsIndex } from '@/types/chord.types';
 import type { TSong } from '@/types/song.types';
 
 import { Song as SongRenderer } from '@/components/SongRenderer/Song';
@@ -22,8 +21,6 @@ export const Song = () => {
   const { directory } = useParams();
 
   const [songConfig, setSongConfig] = useState<TSong | null>(null);
-  // TODO: move chords index to global app state
-  const [chordsIndex, setChordsIndex] = useState<TChordsIndex | null>(null);
 
   useEffect(() => {
     if (!directory) return;
@@ -40,26 +37,12 @@ export const Song = () => {
       .then(data => {
         if (data) setSongConfig(data);
       });
-
-    fetch('/chords/index.json')
-      .then(response => {
-        if (!response.ok) {
-          // TODO: Redirect to 404 song not found or something
-          console.error('Songs index not found');
-          return null;
-        }
-        return response.json();
-      })
-      .then(data => {
-        if (data) setChordsIndex(data.index as TChordsIndex);
-      });
   }, [directory]);
 
-  if (!songConfig || !chordsIndex) return <div>Loading song...</div>;
+  if (!songConfig) return <div>Loading song...</div>;
 
   return (
     <SongRenderer
-      chordsIndex={chordsIndex}
       title={songConfig.title}
       artists={songConfig.artists}
       capo={songConfig.capo}

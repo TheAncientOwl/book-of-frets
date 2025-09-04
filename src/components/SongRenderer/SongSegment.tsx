@@ -6,13 +6,12 @@
  *
  * @file SongSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description Render song segment.
  */
 
 import { Box, Flex, Heading } from '@chakra-ui/react';
 
-import type { TChordsIndex } from '@/types/chord.types';
 import type { TChordsPattern, TSongSegment, TStringsPattern } from '@/types/song.types';
 
 import { ChordsPattern } from '@/components/SongRenderer/ChordsPattern.tsx';
@@ -20,7 +19,6 @@ import { StringsPattern } from '@/components/SongRenderer/StringsPattern.tsx';
 
 type ISongSegmentProps = TSongSegment & {
   showChordTimes: boolean;
-  chordsIndex: TChordsIndex;
 };
 
 export const SongSegment = (props: ISongSegmentProps) => {
@@ -44,7 +42,6 @@ export const SongSegment = (props: ISongSegmentProps) => {
               <ChordsPattern
                 key={patternIndex}
                 {...(pattern as TChordsPattern)}
-                chordsIndex={props.chordsIndex}
                 showChordTimes={props.showChordTimes}
               />
             );

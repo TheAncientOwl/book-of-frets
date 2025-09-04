@@ -6,25 +6,18 @@
  *
  * @file ChordsIndex.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Handle chords rendering.
  */
 
 import { SimpleGrid } from '@chakra-ui/react';
 
 import { Chord } from '@/components/ChordRenderer/Chord';
-import { Fragment, useEffect, useState } from 'react';
-import type { TChordsIndex } from '@/types/chord.types';
+import { useAppStateContext } from '@/context/AppState';
+import { Fragment } from 'react';
 
 export const ChordsIndex = () => {
-  const [chordsIndex, setChordsIndex] = useState<TChordsIndex | null>(null);
-
-  useEffect(() => {
-    fetch('/chords/index.json')
-      .then(res => res.json())
-      .then(data => setChordsIndex(data.index as TChordsIndex))
-      .catch(() => setChordsIndex(null));
-  }, []);
+  const { chordsIndex } = useAppStateContext();
 
   return (
     <>

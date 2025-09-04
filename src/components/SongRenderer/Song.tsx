@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description Render song based on given config.
  */
 
@@ -14,14 +14,11 @@ import { Fragment } from 'react';
 
 import { Box, Circle, Container, Divider, Flex, Heading, Text } from '@chakra-ui/react';
 
-import type { TChordsIndex } from '@/types/chord.types';
 import type { TChordsPattern, TSong } from '@/types/song.types';
 
 import { SongSegment } from '@/components/SongRenderer/SongSegment';
 
-type TSongProps = TSong & {
-  chordsIndex: TChordsIndex;
-};
+type TSongProps = TSong;
 
 export const Song = (props: TSongProps) => {
   return (
@@ -71,7 +68,6 @@ export const Song = (props: TSongProps) => {
             <Fragment key={`${songSegmentName}-${index}`}>
               <SongSegment
                 {...songSegmentData}
-                chordsIndex={props.chordsIndex}
                 showChordTimes={Object.entries(props.songSegments).some(
                   // eslint-disable-next-line @typescript-eslint/no-unused-vars
                   ([_, value]) =>

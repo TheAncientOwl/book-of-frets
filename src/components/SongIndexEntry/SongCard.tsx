@@ -6,11 +6,11 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description List all available songs.
  */
 
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import {
@@ -30,7 +30,7 @@ import {
 } from '@chakra-ui/react';
 import { GiGuitarBassHead, GiGuitarHead } from 'react-icons/gi';
 
-import type { TChordsIndex } from '@/types/chord.types';
+import { useAppStateContext } from '@/context/AppState';
 import type { TSongsIndexEntry } from '@/types/song.types';
 import { TbGuitarPickFilled } from 'react-icons/tb';
 
@@ -44,16 +44,8 @@ const typeToIcon = {
 };
 
 export const SongCard = (props: SongProps) => {
-  const [chordsIndex, setChordsIndex] = useState<TChordsIndex | null>(null);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    fetch('/chords/index.json')
-      .then(response => response.json())
-      .then(data => {
-        setChordsIndex(data.index as TChordsIndex);
-      });
-  }, []);
+  const { chordsIndex } = useAppStateContext();
 
   return (
     <SimpleGrid
@@ -170,29 +162,28 @@ export const SongCard = (props: SongProps) => {
             <PopoverArrow />
             <PopoverBody>
               <Flex gap='5px' wrap='wrap'>
-                {chordsIndex &&
-                  props.chordIDs.map(chordId => {
-                    const chordConfig = chordsIndex[chordId];
+                {props.chordIDs.map(chordId => {
+                  const chordConfig = chordsIndex[chordId];
 
-                    console.assert(
-                      chordConfig !== undefined,
-                      `Could not find chord config for ${chordId}`
-                    );
+                  console.assert(
+                    chordConfig !== undefined,
+                    `Could not find chord config for ${chordId}`
+                  );
 
-                    return (
-                      <Tag
-                        size={['sm', 'md']}
-                        bgColor='green.200'
-                        borderColor='green.500'
-                        borderStyle='solid'
-                        borderWidth='thin'
-                        key={chordId}
-                        justifyContent='center'
-                      >
-                        {chordsIndex[chordId].name}
-                      </Tag>
-                    );
-                  })}
+                  return (
+                    <Tag
+                      size={['sm', 'md']}
+                      bgColor='green.200'
+                      borderColor='green.500'
+                      borderStyle='solid'
+                      borderWidth='thin'
+                      key={chordId}
+                      justifyContent='center'
+                    >
+                      {chordsIndex[chordId].name}
+                    </Tag>
+                  );
+                })}
               </Flex>
             </PopoverBody>
           </PopoverContent>
