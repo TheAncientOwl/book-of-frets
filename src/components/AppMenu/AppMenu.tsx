@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description App menu component.
  */
 
@@ -51,18 +51,19 @@ export const AppMenu = () => {
         onClick={onOpen}
         ref={btnRef}
         icon={<MdMenu />}
-        colorScheme='blue'
+        colorScheme='green'
         variant='solid'
-        color='blue.900'
+        color='green.900'
         isRound={true}
         borderStyle='solid'
-        borderColor='blue.900'
+        borderColor='green.900'
         borderWidth='thin'
+        zIndex={10}
       />
 
       <Drawer isOpen={isOpen} placement='left' onClose={onClose} finalFocusRef={btnRef}>
         <DrawerOverlay />
-        <DrawerContent bgColor='blue.300'>
+        <DrawerContent backgroundColor='#237738ff'>
           <DrawerCloseButton />
           <DrawerHeader>
             <Flex direction='row' gap='5px'>
@@ -85,11 +86,9 @@ export const AppMenu = () => {
             </List>
           </DrawerBody>
 
-          <DrawerFooter>
+          <DrawerFooter display='flex' justifyContent='center'>
             <ChakraLink
               href='https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE'
-              borderBottom='1px solid'
-              borderColor='blue.900'
               isExternal
               _hover={{ textDecor: 'none' }}
             >
@@ -97,8 +96,8 @@ export const AppMenu = () => {
                 display='flex'
                 alignItems='center'
                 gap='5px'
-                color='blue.900'
-                _hover={{ color: 'blue.100' }}
+                color='green.900'
+                _hover={{ color: 'green.100' }}
               >
                 Copyright <Icon as={MdCopyright} /> 2025 BookOfFrets
               </Text>
