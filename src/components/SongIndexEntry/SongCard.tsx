@@ -6,17 +6,28 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description List all available songs.
  */
 
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import { Box, Flex, Heading, Image, SimpleGrid, Tag } from '@chakra-ui/react';
+import { MdMoreHoriz } from 'react-icons/md';
+import {
+  Box,
+  Flex,
+  Heading,
+  Icon,
+  IconButton,
+  Image,
+  SimpleGrid,
+  Tag,
+  Text,
+} from '@chakra-ui/react';
 
 import type { TChordsIndex } from '@/types/chord.types';
 import type { TSongsIndexEntry } from '@/types/song.types';
-import { Link } from 'react-router-dom';
 
 type SongProps = TSongsIndexEntry & {
   index: number;
@@ -24,6 +35,7 @@ type SongProps = TSongsIndexEntry & {
 
 export const SongCard = (props: SongProps) => {
   const [chordsIndex, setChordsIndex] = useState<TChordsIndex | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch('/chords/index.json')
@@ -34,81 +46,86 @@ export const SongCard = (props: SongProps) => {
   }, []);
 
   return (
-    <Flex
+    <SimpleGrid
+      gridTemplateColumns={['22px 90px 1000fr 1fr']}
+      columns={{ base: 3 }}
+      cursor='pointer'
       borderStyle='solid'
-      borderWidth='3px'
-      borderColor='green.600'
-      borderRadius='10px'
-      padding={['0.5em', '1em', '1em 1.5em']}
-      backgroundColor='blackAlpha.400'
-      direction='row'
-      align='center'
-      alignItems='start'
+      borderWidth='1px'
+      borderColor='green.800'
+      padding={['8px']}
+      backgroundColor='blackAlpha.300'
+      _hover={{ bgColor: 'blackAlpha.400' }}
+      position='relative'
+      onClick={() => navigate(`/${props.directory}`)}
     >
-      <Link to={`/${props.directory}`}>
-        <Box
-          position='relative'
-          width={['70px', '80px', '110px']}
-          height={['70px', '80px', '110px']}
-          borderRadius='10px'
-          overflow='hidden'
-          cursor='pointer'
-        >
-          <Image
-            src={`/songs/${props.directory}/cover.png`}
-            width='100%'
-            height='100%'
-            objectFit='cover'
-            borderRadius='10px'
-            borderStyle='solid'
-            borderWidth='3px'
-            borderColor='green.600'
-          />
+      <Text fontWeight='bold' fontSize={['md']} alignContent='center' textAlign='right'>
+        {props.index}
+      </Text>
 
-          {/* Overlay */}
-          <Flex
-            position='absolute'
-            top={0}
-            left={0}
-            width='100%'
-            height='100%'
-            backgroundColor='rgba(0,0,0,0.6)'
+      <Box
+        justifySelf='center'
+        position='relative'
+        width={['70px']}
+        height={['70px']}
+        borderRadius='10px'
+        overflow='hidden'
+        cursor='pointer'
+      >
+        <Image
+          src={`/songs/${props.directory}/cover.png`}
+          width='100%'
+          height='100%'
+          objectFit='cover'
+          borderRadius='10px'
+          borderStyle='solid'
+          borderWidth='3px'
+          borderColor='green.600'
+        />
+
+        {/* Overlay */}
+        <Flex
+          position='absolute'
+          top={0}
+          left={0}
+          width='100%'
+          height='100%'
+          backgroundColor='rgba(0,0,0,0.6)'
+          justifyContent='center'
+          alignItems='center'
+          opacity={0}
+          transition='opacity 0.2s'
+          _hover={{ opacity: 1 }}
+        >
+          {/* Play Button */}
+          <Box
+            width={['30px']}
+            height={['30px']}
+            borderRadius='50%'
+            backgroundColor='green.500'
+            display='flex'
             justifyContent='center'
             alignItems='center'
-            opacity={0}
-            transition='opacity 0.2s'
-            _hover={{ opacity: 1 }}
           >
-            {/* Play Button */}
             <Box
-              width={['24px', '30px', '40px']}
-              height={['24px', '30px', '40px']}
-              borderRadius='50%'
-              backgroundColor='green.500'
-              display='flex'
-              justifyContent='center'
-              alignItems='center'
-            >
-              <Box
-                as='span'
-                ml='2px'
-                width={0}
-                height={0}
-                borderLeft='10px solid white'
-                borderTop='6px solid transparent'
-                borderBottom='6px solid transparent'
-              />
-            </Box>
-          </Flex>
-        </Box>
-      </Link>
+              as='span'
+              ml='2px'
+              width={0}
+              height={0}
+              borderLeft='10px solid white'
+              borderTop='6px solid transparent'
+              borderBottom='6px solid transparent'
+            />
+          </Box>
+        </Flex>
+      </Box>
 
-      <Box ml={['0.4em', '1em']} mr={['3px', '10px']} flex='1'>
-        <Heading as='h1' size={['sm', 'md', 'lg']} mb={['3px', '4px', '5px']} textDecor='underline'>
-          <Link to={`/${props.directory}`}>{props.title}</Link>
+      <Box pt='5px'>
+        <Heading noOfLines={1} as='h1' size={['sm', 'md']} mb={['5px']} textDecor='underline'>
+          {props.title}
         </Heading>
 
-        <Heading as='h2' size={['xs', 'sm', 'md']} mb={['5px', '10px']} fontStyle='italic'>
+        <Heading noOfLines={1} as='h2' size={['xs', 'sm']} fontStyle='italic' color='CaptionText'>
           {props.artists.map((artist, index) => (
             <Box key={index} as='span'>
               {artist} {index < props.artists.length - 1 && ', '}
@@ -116,7 +133,7 @@ export const SongCard = (props: SongProps) => {
           ))}
         </Heading>
 
-        <Flex gap='2px' wrap='wrap'>
+        {/* <Flex gap='2px' wrap='wrap'>
           {props.type.map((type, index) => (
             <Tag
               key={index}
@@ -129,10 +146,21 @@ export const SongCard = (props: SongProps) => {
               {type}
             </Tag>
           ))}
-        </Flex>
+        </Flex> */}
       </Box>
 
-      <SimpleGrid columns={{ base: 2, sm: 2, md: 3 }} spacing='2px' style={{ direction: 'rtl' }}>
+      <Flex direction='column' justifyContent='center' alignItems='center'>
+        <IconButton
+          zIndex={2}
+          aria-label='More about the song'
+          icon={<Icon as={MdMoreHoriz} boxSize={5} />} // 👈 properly centers + resizes
+          size='lg'
+          variant='unstyled'
+          onClick={e => e.stopPropagation()}
+        />
+      </Flex>
+
+      {/* <SimpleGrid columns={{ base: 2, sm: 2, md: 3 }} spacing='2px' style={{ direction: 'rtl' }}>
         {chordsIndex &&
           props.chordIDs.map(chordId => {
             const chordConfig = chordsIndex[chordId];
@@ -153,7 +181,20 @@ export const SongCard = (props: SongProps) => {
               </Tag>
             );
           })}
-      </SimpleGrid>
-    </Flex>
+      </SimpleGrid> */}
+
+      {/* <Box
+        position='absolute'
+        top={0}
+        left={0}
+        width='100%'
+        height='100%'
+        backgroundColor='red.200'
+        opacity={0}
+        // transition='opacity 0.2s'
+        _hover={{ opacity: 1 }}
+        pointerEvents='none'
+      /> */}
+    </SimpleGrid>
   );
 };

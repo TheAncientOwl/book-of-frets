@@ -6,13 +6,13 @@
  *
  * @file SongsIndex.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description List all available songs.
  */
 
 import { useEffect, useState } from 'react';
 
-import { Container, Flex } from '@chakra-ui/react';
+import { Container } from '@chakra-ui/react';
 
 import type { TSongsIndexEntry } from '@/types/song.types';
 
@@ -33,16 +33,14 @@ export const SongsIndex = () => {
 
   return (
     <Container
-      maxW={['100vw', '2xl']}
-      backgroundColor='green.300'
-      padding='1em'
+      maxW={['100vw', 'xl']}
+      backgroundColor='#2B8C44'
+      padding={['0em', '1em']}
       borderRadius='0.5em'
     >
-      <Flex direction='column' gap='1em'>
-        {songsIndex.map((song, index) => (
-          <SongCard key={index} index={index + 1} {...song} />
-        ))}
-      </Flex>
+      {songsIndex.map((song, index) => (
+        <SongCard key={index} index={index + 1} {...song} />
+      ))}
     </Container>
   );
 };
