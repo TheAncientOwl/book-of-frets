@@ -1,0 +1,53 @@
+{
+  "version": "0.1.0",
+  "contributors": ["TheAncientOwl"],
+  "title": "Watermelon Sugar",
+  "artists": ["Harry Styles"],
+  "type": ["acoustic"],
+  "notes": [],
+  "capo": 0,
+  "chordIDs": ["Dm", "Am", "C", "G"],
+  "songSegments": {
+    "main": {
+      "name": "main",
+      "type": "chords",
+      "patterns": [
+        {
+          "times": 404,
+          "segments": [
+            {
+              "chordIDs": ["Dm", "Am", "C", "G"],
+              "chordTimes": 1,
+              "strummingPattern": [
+                "D",
+                "-",
+                "-",
+                "-",
+                "D",
+                "-",
+                "D",
+                "U",
+                "-",
+                "U",
+                "D",
+                "U",
+                "-",
+                "U",
+                "D",
+                "U"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "songSegmentsOrder": ["main"],
+  "resources": [
+    {
+      "alias": "Watermelon Sugar Guitar Tutorial 🍉 Harry Styles Guitar Lesson |Easy Chords + No Capo|",
+      "author": "GuitarZero2Hero ~ YouTube",
+      "link": "https://youtu.be/l9gEAU3Mzp8"
+    }
+  ]
+}

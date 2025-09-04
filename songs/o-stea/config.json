@@ -1,0 +1,36 @@
+{
+  "version": "0.1.0",
+  "contributors": ["TheAncientOwl"],
+  "title": "O Stea",
+  "artists": ["Deepcentral"],
+  "type": ["acoustic"],
+  "notes": ["Drop D"],
+  "capo": 0,
+  "chordIDs": ["Em7", "Cadd9", "G", "D"],
+  "songSegments": {
+    "main": {
+      "name": "main",
+      "type": "chords",
+      "patterns": [
+        {
+          "times": 404,
+          "segments": [
+            {
+              "chordIDs": ["Em7", "Cadd9", "G", "D"],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "D", "-", "U", "U", "-", "D", "-", "U", "-", "D", "U"]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "songSegmentsOrder": ["main"],
+  "resources": [
+    {
+      "alias": "CUM SĂ CÂNȚI \"O STEA\" LA CHITARA!? (DEEPCENTRAL)",
+      "author": "Cantam La Chitara ~ YouTube",
+      "link": "https://youtu.be/kuhMWv4uNCk"
+    }
+  ]
+}

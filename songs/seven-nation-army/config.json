@@ -1,0 +1,256 @@
+{
+  "version": "0.1.1",
+  "contributors": ["TheAncientOwl"],
+  "title": "Seven Nation Army",
+  "artists": ["The White Stripes"],
+  "type": ["acoustic", "electric"],
+  "notes": [],
+  "capo": 0,
+  "chordIDs": ["-"],
+  "songSegments": {
+    "main1": {
+      "name": "main 1",
+      "type": "strings",
+      "patterns": [
+        {
+          "times": 3,
+          "segments": [
+            [{ "string": 1, "fret": 7 }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": 7 }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": 10 }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": 7 }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": 5 }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": 3 }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": 2 }],
+            [{ "string": 1, "fret": "-" }]
+          ]
+        }
+      ]
+    },
+    "main2": {
+      "name": "main 2",
+      "type": "strings",
+      "patterns": [
+        {
+          "times": 1,
+          "segments": [
+            [
+              { "string": 1, "fret": 3 },
+              { "string": 2, "fret": 5 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 1, "fret": 3 },
+              { "string": 2, "fret": 5 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 1, "fret": 3 },
+              { "string": 2, "fret": 5 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 1, "fret": 3 },
+              { "string": 2, "fret": 5 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 1, "fret": 3 },
+              { "string": 2, "fret": 5 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 1, "fret": 3 },
+              { "string": 2, "fret": 5 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 1, "fret": 3 },
+              { "string": 2, "fret": 5 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 1, "fret": 5 },
+              { "string": 2, "fret": 7 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 1, "fret": 5 },
+              { "string": 2, "fret": 7 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 1, "fret": 5 },
+              { "string": 2, "fret": 7 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 1, "fret": 5 },
+              { "string": 2, "fret": 7 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 1, "fret": 5 },
+              { "string": 2, "fret": 7 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 1, "fret": 5 },
+              { "string": 2, "fret": 7 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 1, "fret": 5 },
+              { "string": 2, "fret": 7 }
+            ],
+            [{ "string": 1, "fret": "-" }]
+          ]
+        }
+      ]
+    },
+    "main3": {
+      "name": "main 3",
+      "type": "strings",
+      "patterns": [
+        {
+          "times": 1,
+          "segments": [
+            [
+              { "string": 2, "fret": 7 },
+              { "string": 3, "fret": 9 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 2, "fret": 7 },
+              { "string": 3, "fret": 9 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 2, "fret": 10 },
+              { "string": 3, "fret": 12 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 2, "fret": 7 },
+              { "string": 3, "fret": 9 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 2, "fret": 5 },
+              { "string": 3, "fret": 7 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 2, "fret": 3 },
+              { "string": 3, "fret": 5 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 2, "fret": 2 },
+              { "string": 3, "fret": 4 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }]
+          ]
+        },
+        {
+          "times": 1,
+          "segments": [
+            [
+              { "string": 2, "fret": 7 },
+              { "string": 3, "fret": 9 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 2, "fret": 7 },
+              { "string": 3, "fret": 9 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 2, "fret": 10 },
+              { "string": 3, "fret": 12 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 2, "fret": 7 },
+              { "string": 3, "fret": 9 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 2, "fret": 5 },
+              { "string": 3, "fret": 7 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 2, "fret": 3 },
+              { "string": 3, "fret": 5 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 2, "fret": 5 },
+              { "string": 3, "fret": 7 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 2, "fret": 3 },
+              { "string": 3, "fret": 5 }
+            ],
+            [{ "string": 1, "fret": "-" }],
+            [
+              { "string": 2, "fret": 2 },
+              { "string": 3, "fret": 4 }
+            ],
+            [{ "string": 1, "fret": "-" }]
+          ]
+        }
+      ]
+    },
+    "outro": {
+      "name": "outro",
+      "type": "strings",
+      "patterns": [
+        {
+          "times": 1,
+          "segments": [
+            [{ "string": 2, "fret": 7 }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 2, "fret": 7 }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 2, "fret": 10 }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 2, "fret": 7 }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 2, "fret": 5 }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 2, "fret": 3 }],
+            [{ "string": 1, "fret": "-" }],
+            [{ "string": 2, "fret": 2 }],
+            [{ "string": 1, "fret": "-" }]
+          ]
+        }
+      ]
+    }
+  },
+  "songSegmentsOrder": ["main1", "main2", "main3", "main3", "main2", "outro"],
+  "resources": [
+    {
+      "alias": "The White Stripes - Seven Nation Army | Riff Tabs | Guitar Lesson/Tutorial | Acoustic Riff: 12",
+      "author": "Acoustic Version ~ YouTube",
+      "link": "https://youtu.be/eTY4FLGObHo"
+    }
+  ]
+}
