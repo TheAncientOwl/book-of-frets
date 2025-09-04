@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description App component.
  */
 
@@ -23,7 +23,12 @@ import { AppMenu } from '@/components/AppMenu/AppMenu';
 export const App = () => {
   return (
     <ChakraProvider>
-      <Box width='100vw' minHeight='100vh' background='blackAlpha.900' padding='2em'>
+      <Box
+        width='100vw'
+        minHeight='100vh'
+        background='gray.900'
+        padding={['0em', '0em', '1em', '2em']}
+      >
         <AppMenu />
 
         <Routes>
