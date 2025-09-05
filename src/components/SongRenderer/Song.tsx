@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 0.12
  * @description Render song based on given config.
  */
 
@@ -139,7 +139,7 @@ export const Song = (props: TSongProps) => {
                     )
                 )}
               />
-              <Divider borderColor='gray.900' mb='1em' />
+              <Divider borderColor='gray.600' mb='1em' />
             </Fragment>
           );
         })}

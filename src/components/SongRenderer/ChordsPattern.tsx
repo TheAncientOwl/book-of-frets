@@ -6,13 +6,13 @@
  *
  * @file ChordsPattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 0.12
  * @description Render song chords pattern.
  */
 
 import { Fragment } from 'react';
 
-import { Divider, Flex, Tag } from '@chakra-ui/react';
+import { Box, Divider, Tag } from '@chakra-ui/react';
 
 import type { TChordsPattern } from '@/types/song.types';
 
@@ -22,23 +22,35 @@ type TChordsPatternProps = TChordsPattern & {
   showChordTimes: boolean;
 };
 
+const ChordsPatternDivider = () => (
+  <Divider
+    orientation='vertical'
+    height={['0px', '80px']}
+    borderColor='gray.600'
+    borderWidth='thin'
+    borderStyle={['dashed', 'solid']}
+    mt={['15px', '0px']}
+    mb={['15px', '0px']}
+  />
+);
+
 export const ChordsPattern = (props: TChordsPatternProps) => {
   return (
-    <Flex
-      direction='row'
+    <Box
+      width='100%'
+      position='relative'
+      display={['box', 'flex']}
       gap='1em'
       alignItems='center'
       justifyContent='center'
-      position='relative'
-      width='100%'
     >
-      <Divider orientation='vertical' height='80px' borderColor='gray.200' borderWidth='thin' />
+      <ChordsPatternDivider />
 
       {props.segments.map((segment, segmentIndex) => (
         <Fragment key={segmentIndex}>
           <ChordsPatternSegment {...segment} showChordTimes={props.showChordTimes} />
 
-          <Divider orientation='vertical' height='80px' borderColor='gray.200' borderWidth='thin' />
+          <ChordsPatternDivider />
         </Fragment>
       ))}
 
@@ -54,6 +66,6 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
       >
         x{props.times}
       </Tag>
-    </Flex>
+    </Box>
   );
 };
