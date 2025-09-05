@@ -6,13 +6,13 @@
  *
  * @file SongResources.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Render song resources data.
  */
 
 import { Fragment } from 'react';
 
-import { Box, Divider, Flex, Heading, Icon, List } from '@chakra-ui/react';
+import { Box, Divider, Flex, Heading, Icon, List, Text } from '@chakra-ui/react';
 
 import { MdLibraryMusic } from 'react-icons/md';
 
@@ -32,6 +32,8 @@ export const SongResources = (props: TSongResourcesProps) => {
           <Icon as={MdLibraryMusic} />
         </Flex>
       </Heading>
+
+      {props.resources.length === 0 && <Text textAlign='center'>Nothing here yet</Text>}
 
       <List>
         {props.resources.map((resource, index) => (
