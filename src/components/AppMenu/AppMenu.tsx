@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description App menu component.
  */
 
@@ -33,7 +33,8 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 
-import { MdCopyright, MdMenu } from 'react-icons/md';
+import { IoMdMusicalNote } from 'react-icons/io';
+import { MdCopyright } from 'react-icons/md';
 
 // TODO: Implement songs history
 export const AppMenu = () => {
@@ -49,14 +50,14 @@ export const AppMenu = () => {
         aria-label='App Menu'
         onClick={onOpen}
         ref={btnRef}
-        icon={<MdMenu />}
+        icon={<IoMdMusicalNote />}
         colorScheme='green'
         variant='solid'
-        color='green.900'
         isRound={true}
         borderStyle='solid'
-        borderColor='green.900'
+        borderColor='green.500'
         borderWidth='thin'
+        backgroundColor='#237738ff'
         zIndex={10}
       />
 

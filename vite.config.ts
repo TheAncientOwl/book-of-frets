@@ -6,7 +6,7 @@
  *
  * @file vite.config.ts
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Vite configuration.
  */
 
@@ -23,7 +23,13 @@ export default defineConfig({
         manualChunks: {
           react: ['react', 'react-dom', 'react-router-dom'],
           chakra: ['@chakra-ui/react', '@emotion/react', '@emotion/styled', 'framer-motion'],
-          'react-icons': ['react-icons/md', 'react-icons/io5', 'react-icons/gi', 'react-icons/tb'],
+          'react-icons': [
+            'react-icons/md',
+            'react-icons/io5',
+            'react-icons/io',
+            'react-icons/gi',
+            'react-icons/tb',
+          ],
         },
       },
     },
