@@ -4,9 +4,9 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
- * @file SongsIndex.tsx
+ * @file SongsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.8
  * @description List all available songs.
  */
 
@@ -18,7 +18,7 @@ import type { TSongsIndexEntry } from '@/types/song.types';
 
 import { SongCard } from '@/components/SongIndexEntry/SongCard';
 
-export const SongsIndex = () => {
+export const SongsIndexPage = () => {
   const [songsIndex, setSongsIndex] = useState<TSongsIndexEntry[]>([]);
 
   useEffect(() => {
@@ -45,4 +45,4 @@ export const SongsIndex = () => {
   );
 };
 
-export default SongsIndex;
+export default SongsIndexPage;

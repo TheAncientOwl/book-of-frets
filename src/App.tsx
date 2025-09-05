@@ -6,23 +6,24 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.15
+ * @version 0.16
  * @description App component.
  */
 
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { Box, ChakraProvider } from '@chakra-ui/react';
 
 import { AppMenu } from '@/components/AppMenu/AppMenu';
-import { AppState, type AppStateType } from '@/context/AppState';
-import { Home } from '@/pages/Home.tsx';
-import type { TChordsIndex } from '@/types/chord.types';
-import { lazy, Suspense, useEffect, useState } from 'react';
+import { HomePage } from '@/pages/HomePage';
 
-const Song = lazy(() => import('@/pages/Song.tsx'));
-const ChordsIndex = lazy(() => import('@/pages/ChordsIndex.tsx'));
-const SongsIndex = lazy(() => import('@/pages/SongsIndex'));
+import { AppState, type TAppState } from '@/context/AppState';
+import type { TChordsIndex } from '@/types/chord.types';
+
+const SongPage = lazy(() => import('@/pages/SongPagePage'));
+const ChordsIndexPage = lazy(() => import('@/pages/ChordsIndexPage'));
+const SongsIndexPage = lazy(() => import('@/pages/SongsIndexPage'));
 
 export const App = () => {
   const [chordsIndex, setChordsIndex] = useState<TChordsIndex>({});
@@ -34,7 +35,7 @@ export const App = () => {
       .catch(() => setChordsIndex({}));
   }, []);
 
-  const appStateValue: AppStateType = { chordsIndex };
+  const appStateValue: TAppState = useMemo(() => ({ chordsIndex }), [chordsIndex]);
 
   return (
     <ChakraProvider>
@@ -48,12 +49,12 @@ export const App = () => {
           <AppMenu />
 
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route path='/' element={<HomePage />} />
             <Route
               path='/:directory'
               element={
                 <Suspense fallback={<div>Loading...</div>}>
-                  <Song />
+                  <SongPage />
                 </Suspense>
               }
             />
@@ -61,7 +62,7 @@ export const App = () => {
               path='/index/chords'
               element={
                 <Suspense fallback={<div>Loading...</div>}>
-                  <ChordsIndex />
+                  <ChordsIndexPage />
                 </Suspense>
               }
             />
@@ -69,7 +70,7 @@ export const App = () => {
               path='/index/songs'
               element={
                 <Suspense fallback={<div>Loading...</div>}>
-                  <SongsIndex />
+                  <SongsIndexPage />
                 </Suspense>
               }
             />

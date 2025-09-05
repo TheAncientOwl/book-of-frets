@@ -4,9 +4,9 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
- * @file Song.tsx
+ * @file SongPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description Handle song rendering based on url.
  */
 
@@ -17,7 +17,7 @@ import type { TSong } from '@/types/song.types';
 
 import { Song as SongRenderer } from '@/components/SongRenderer/Song';
 
-export const Song = () => {
+export const SongPage = () => {
   const { directory } = useParams();
 
   const [songConfig, setSongConfig] = useState<TSong | null>(null);
@@ -55,4 +55,4 @@ export const Song = () => {
   );
 };
 
-export default Song;
+export default SongPage;

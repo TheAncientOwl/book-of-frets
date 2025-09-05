@@ -4,9 +4,9 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
- * @file ChordsIndex.tsx
+ * @file ChordsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description Handle chords rendering.
  */
 
@@ -16,7 +16,7 @@ import { Chord } from '@/components/ChordRenderer/Chord';
 import { useAppStateContext } from '@/context/AppState';
 import { Fragment } from 'react';
 
-export const ChordsIndex = () => {
+export const ChordsIndexPage = () => {
   const { chordsIndex } = useAppStateContext();
 
   return (
@@ -36,4 +36,4 @@ export const ChordsIndex = () => {
   );
 };
 
-export default ChordsIndex;
+export default ChordsIndexPage;

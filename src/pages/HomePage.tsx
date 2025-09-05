@@ -4,12 +4,24 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
- * @file Home.tsx
+ * @file HomePage.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description App homepage.
  */
 
-export const Home = () => {
-  return <>Home</>;
+import { Container, Heading } from '@chakra-ui/react';
+
+export const HomePage = () => {
+  return (
+    <Container pt='3rem'>
+      <Heading as='h1' textAlign='center' mb='5rem'>
+        Book Of Frets
+      </Heading>
+
+      <Heading as='h3' textAlign='center' size='md'>
+        To be continued...
+      </Heading>
+    </Container>
+  );
 };
