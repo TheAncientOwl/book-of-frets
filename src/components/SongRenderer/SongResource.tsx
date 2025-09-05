@@ -6,7 +6,7 @@
  *
  * @file SongResource.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Display song resource data.
  */
 
@@ -57,7 +57,7 @@ export const SongResource = (props: TSongResourceProps) => {
         </Text>
 
         {videoId ? (
-          <Box width='100%' maxW='400px' my={2}>
+          <Box width='100%' maxW='400px' my={2} overflow='hidden' borderRadius='10px'>
             <AspectRatio ratio={16 / 9}>
               <Skeleton isLoaded={isLoaded} height='100%' width='100%'>
                 <iframe
