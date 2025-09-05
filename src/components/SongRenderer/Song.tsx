@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.13
+ * @version 0.14
  * @description Render song based on given config.
  */
 
@@ -19,15 +19,20 @@ import {
   Divider,
   Flex,
   Heading,
+  Icon,
   Image,
+  List,
   Text,
   Tooltip,
 } from '@chakra-ui/react';
 
 import type { TChordsPattern, TSong } from '@/types/song.types';
 
+import { SongResource } from '@/components/SongRenderer/SongResource';
 import { SongSegment } from '@/components/SongRenderer/SongSegment';
+
 import { GiGuitarBassHead, GiGuitarHead } from 'react-icons/gi';
+import { MdLibraryMusic } from 'react-icons/md';
 
 type TSongProps = TSong & {
   directory: string;
@@ -144,6 +149,25 @@ export const Song = (props: TSongProps) => {
           );
         })}
       </Flex>
+
+      <Box mt='1em' padding='1em 1.25em'>
+        <Heading as='h1' size='md' mb='1em' textAlign='center'>
+          <Flex justifyContent='center' alignItems='center' gap='0.25em'>
+            <Icon as={MdLibraryMusic} />
+            Resources
+            <Icon as={MdLibraryMusic} />
+          </Flex>
+        </Heading>
+
+        <List>
+          {props.resources.map((resource, index) => (
+            <Fragment key={index}>
+              <SongResource {...resource} />
+              {index < props.resources.length - 1 && <Divider mt='1em' mb='1em' color='gray.600' />}
+            </Fragment>
+          ))}
+        </List>
+      </Box>
     </Container>
   );
 };
