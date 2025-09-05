@@ -1,6 +1,13 @@
 {
-  "version": "0.1.3",
+  "version": "0.1.4",
   "index": [
+    {
+      "title": "Run Away To Mars",
+      "artists": ["TALK"],
+      "directory": "run-away-to-mars",
+      "chordIDs": ["G", "D/F#", "Em7", "Cadd9", "Am7", "D", "Dsus4"],
+      "type": ["acoustic"]
+    },
     {
       "title": "Flowers Need Rain",
       "artists": ["Preston Pablo"],
