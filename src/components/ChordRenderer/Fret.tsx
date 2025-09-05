@@ -6,7 +6,7 @@
  *
  * @file Fret.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Render chrod based on given config.
  */
 
@@ -21,7 +21,7 @@ type TFretProps = {
 
 export const Fret = (props: TFretProps) => {
   return (
-    <Flex direction='row' backgroundColor='green.800' height='5em' position='relative'>
+    <Flex direction='row' backgroundColor='blackAlpha.300' height='5em' position='relative'>
       {[1, 2, 3, 4, 5, 6].map(stringIdx => {
         const hasFinger = props.stringsToFingers.has(stringIdx);
         const finger = props.stringsToFingers.get(stringIdx);
@@ -36,7 +36,7 @@ export const Fret = (props: TFretProps) => {
               <Circle
                 size='1.5em'
                 bg='red.600'
-                color='red.900'
+                color='red.100'
                 fontWeight='bold'
                 borderColor='green.900'
                 borderWidth='thin'

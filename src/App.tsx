@@ -21,7 +21,7 @@ import { HomePage } from '@/pages/HomePage';
 import { AppState, type TAppState } from '@/context/AppState';
 import type { TChordsIndex } from '@/types/chord.types';
 
-const SongPage = lazy(() => import('@/pages/SongPagePage'));
+const SongPage = lazy(() => import('@/pages/SongPage'));
 const ChordsIndexPage = lazy(() => import('@/pages/ChordsIndexPage'));
 const SongsIndexPage = lazy(() => import('@/pages/SongsIndexPage'));
 
