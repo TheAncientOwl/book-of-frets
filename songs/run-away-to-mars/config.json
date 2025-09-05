@@ -1,0 +1,161 @@
+{
+  "version": "0.1.0",
+  "contributors": ["TheAncientOwl"],
+  "title": "Run Away To Mars",
+  "artists": ["TALK"],
+  "type": ["acoustic"],
+  "notes": [],
+  "capo": 2,
+  "chordIDs": ["G", "D/F#", "Em7", "Cadd9", "Am7", "D", "Dsus4"],
+  "songSegments": {
+    "intro": {
+      "name": "intro",
+      "type": "chords",
+      "patterns": [
+        {
+          "times": 1,
+          "segments": [
+            {
+              "chordIDs": ["G", "D/F#", "Em7", "Cadd9"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "verse": {
+      "name": "verse",
+      "type": "chords",
+      "patterns": [
+        {
+          "times": 2,
+          "segments": [
+            {
+              "chordIDs": ["G", "D/F#", "Em7", "Cadd9"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "pre-chorus": {
+      "name": "pre-chorus",
+      "type": "chords",
+      "patterns": [
+        {
+          "times": 1,
+          "segments": [
+            {
+              "chordIDs": ["Am7", "D"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "chorus": {
+      "name": "chorus",
+      "type": "chords",
+      "patterns": [
+        {
+          "times": 4,
+          "segments": [
+            {
+              "chordIDs": ["Em", "C"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+            },
+            {
+              "chordIDs": ["G"],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+            },
+            {
+              "chordIDs": ["G"],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "-", "D"]
+            },
+            {
+              "chordIDs": ["D/F#"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "U", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "bridge": {
+      "name": "bridge",
+      "type": "chords",
+      "patterns": [
+        {
+          "times": 2,
+          "segments": [
+            {
+              "chordIDs": ["Am7", "Dsus4", "D"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "outro": {
+      "name": "outro",
+      "type": "chords",
+      "patterns": [
+        {
+          "times": 3,
+          "segments": [
+            {
+              "chordIDs": ["Em", "C", "G"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "segments": [
+            {
+              "chordIDs": ["D/F#"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "segments": [
+            {
+              "chordIDs": ["Em", "C", "G"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "songSegmentsOrder": [
+    "intro",
+    "verse",
+    "pre-chorus",
+    "chorus",
+    "verse",
+    "pre-chorus",
+    "chorus",
+    "bridge",
+    "outro"
+  ],
+  "resources": [
+    {
+      "alias": "Run Away to Mars by TALK - Beginner Guitar Lesson & Play Along",
+      "author": "Mechanics Of Music",
+      "link": "https://youtu.be/tagR628ZDMY"
+    }
+  ]
+}
