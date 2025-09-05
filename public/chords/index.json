@@ -1,5 +1,5 @@
 {
-  "version": "0.1.1",
+  "version": "0.1.2",
   "index": {
     "-": {
       "name": "0",
@@ -50,7 +50,7 @@
         [
           { "finger": 2, "string": 1 },
           { "finger": 3, "string": 5 },
-          { "finger": 4, "string": 5 }
+          { "finger": 4, "string": 6 }
         ]
       ]
     },
@@ -170,6 +170,42 @@
         [{ "finger": 1, "string": 6 }],
         [{ "finger": 2, "string": 4 }],
         [{ "finger": 3, "string": 5 }]
+      ]
+    },
+    "D/F#": {
+      "name": "D / F#",
+      "frets": [
+        [],
+        [
+          { "finger": 1, "string": 1 },
+          { "finger": 2, "string": 4 }
+        ],
+        [
+          { "finger": 3, "string": 5 },
+          { "finger": 4, "string": 6 }
+        ]
+      ]
+    },
+    "Am7": {
+      "name": "Am7",
+      "frets": [
+        [
+          { "finger": -1, "string": -1 },
+          { "finger": 1, "string": 5 }
+        ],
+        [{ "finger": 2, "string": 3 }],
+        []
+      ]
+    },
+    "Dsus4": {
+      "name": "Dsus4",
+      "frets": [
+        [{ "finger": -1, "string": -1 }],
+        [{ "finger": 1, "string": 4 }],
+        [
+          { "finger": 3, "string": 5 },
+          { "finger": 4, "string": 6 }
+        ]
       ]
     }
   }
