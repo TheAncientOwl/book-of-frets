@@ -6,13 +6,14 @@
  *
  * @file SongResource.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Display song resource data.
  */
 
 import type { TResource } from '@/types/song.types';
-import { AspectRatio, Box, Flex, Icon, Link, ListItem, Text } from '@chakra-ui/react';
+import { AspectRatio, Box, Flex, Icon, Link, ListItem, Skeleton, Text } from '@chakra-ui/react';
 import { IoMdMusicalNote } from 'react-icons/io';
+import { useState } from 'react';
 
 type TSongResourceProps = TResource;
 
@@ -40,6 +41,7 @@ const getYouTubeVideoId = (url: string): string | null => {
 
 export const SongResource = (props: TSongResourceProps) => {
   const videoId = getYouTubeVideoId(props.link);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   return (
     <ListItem>
@@ -57,12 +59,16 @@ export const SongResource = (props: TSongResourceProps) => {
         {videoId ? (
           <Box width='100%' maxW='400px' my={2}>
             <AspectRatio ratio={16 / 9}>
-              <iframe
-                src={`https://www.youtube.com/embed/${videoId}`}
-                title={props.alias}
-                allow='accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                allowFullScreen
-              />
+              <Skeleton isLoaded={isLoaded} height='100%' width='100%'>
+                <iframe
+                  src={`https://www.youtube.com/embed/${videoId}`}
+                  title={props.alias}
+                  allow='accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                  allowFullScreen
+                  onLoad={() => setIsLoaded(true)}
+                  style={{ width: '100%', height: '100%', border: 'none' }}
+                />
+              </Skeleton>
             </AspectRatio>
           </Box>
         ) : null}

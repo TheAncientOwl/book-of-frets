@@ -6,11 +6,11 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description List all available songs.
  */
 
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import {
@@ -27,6 +27,7 @@ import {
   Tag,
   Text,
   Tooltip,
+  Skeleton,
 } from '@chakra-ui/react';
 import { GiGuitarBassHead, GiGuitarHead } from 'react-icons/gi';
 
@@ -46,6 +47,7 @@ const typeToIcon = {
 export const SongCard = (props: SongProps) => {
   const navigate = useNavigate();
   const { chordsIndex } = useAppStateContext();
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   return (
     <SimpleGrid
@@ -74,17 +76,20 @@ export const SongCard = (props: SongProps) => {
         overflow='hidden'
         cursor='pointer'
       >
-        <Image
-          src={`${import.meta.env.BASE_URL}songs/${props.directory}/cover.jpeg`}
-          alt={`${props.title} cover`}
-          width='100%'
-          height='100%'
-          objectFit='cover'
-          borderRadius='10px'
-          borderStyle='solid'
-          borderWidth='3px'
-          borderColor='green.600'
-        />
+        <Skeleton isLoaded={isImageLoaded} width='100%' height='100%' borderRadius='10px'>
+          <Image
+            src={`${import.meta.env.BASE_URL}songs/${props.directory}/cover.jpeg`}
+            alt={`${props.title} cover`}
+            width='100%'
+            height='100%'
+            objectFit='cover'
+            borderRadius='10px'
+            borderStyle='solid'
+            borderWidth='3px'
+            borderColor='green.600'
+            onLoad={() => setIsImageLoaded(true)}
+          />
+        </Skeleton>
 
         {/* Overlay */}
         <Flex

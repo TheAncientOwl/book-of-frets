@@ -6,11 +6,11 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.14
+ * @version 0.15
  * @description Render song based on given config.
  */
 
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 
 import {
   Box,
@@ -22,6 +22,7 @@ import {
   Icon,
   Image,
   List,
+  Skeleton,
   Text,
   Tooltip,
 } from '@chakra-ui/react';
@@ -44,6 +45,8 @@ const typeToIcon = {
 };
 
 export const Song = (props: TSongProps) => {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
   return (
     <Container
       maxW={['100vw', '5xl']}
@@ -53,15 +56,18 @@ export const Song = (props: TSongProps) => {
     >
       <Flex direction='column' alignItems='center' mb='15px'>
         <Box position='relative' width={['70px', '80px']} height={['70px', '80px']} mb={['5px']}>
-          <Image
-            src={`${import.meta.env.BASE_URL}songs/${props.directory}/cover.jpeg`}
-            alt={`${props.title} cover`}
-            width='100%'
-            height='100%'
-            objectFit='cover'
-            borderRadius='10px'
-            borderStyle='solid'
-          />
+          <Skeleton isLoaded={isImageLoaded} width='100%' height='100%' borderRadius='10px'>
+            <Image
+              src={`${import.meta.env.BASE_URL}songs/${props.directory}/cover.jpeg`}
+              alt={`${props.title} cover`}
+              width='100%'
+              height='100%'
+              objectFit='cover'
+              borderRadius='10px'
+              borderStyle='solid'
+              onLoad={() => setIsImageLoaded(true)}
+            />
+          </Skeleton>
 
           <Circle
             position='absolute'
