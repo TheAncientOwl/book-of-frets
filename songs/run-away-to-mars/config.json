@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "contributors": ["TheAncientOwl"],
   "title": "Run Away To Mars",
   "artists": ["TALK"],
@@ -121,17 +121,7 @@
           "times": 1,
           "segments": [
             {
-              "chordIDs": ["D/F#"],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
-            }
-          ]
-        },
-        {
-          "times": 1,
-          "segments": [
-            {
-              "chordIDs": ["Em", "C", "G"],
+              "chordIDs": ["D/F#", "Em", "C", "G"],
               "chordTimes": 1,
               "strummingPattern": ["D"]
             }
