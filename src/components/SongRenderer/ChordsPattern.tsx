@@ -6,13 +6,13 @@
  *
  * @file ChordsPattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.12
+ * @version 0.13
  * @description Render song chords pattern.
  */
 
 import { Fragment } from 'react';
 
-import { Box, Divider, Tag } from '@chakra-ui/react';
+import { Box, Divider, Tag, Tooltip } from '@chakra-ui/react';
 
 import type { TChordsPattern } from '@/types/song.types';
 
@@ -54,18 +54,20 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
         </Fragment>
       ))}
 
-      <Tag
-        size='sm'
-        fontWeight='bold'
-        backgroundColor='green.200'
-        position='absolute'
-        top='50%'
-        right='0'
-        transform='translate(0%, -50%)'
-        zIndex={1}
-      >
-        x{props.times}
-      </Tag>
+      <Tooltip label={`Repeat ${props.times} times`}>
+        <Tag
+          size='sm'
+          fontWeight='bold'
+          backgroundColor='green.200'
+          position='absolute'
+          top='50%'
+          right='0'
+          transform='translate(0%, -50%)'
+          zIndex={1}
+        >
+          x{props.times}
+        </Tag>
+      </Tooltip>
     </Box>
   );
 };

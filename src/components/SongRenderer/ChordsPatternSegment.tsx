@@ -6,14 +6,26 @@
  *
  * @file ChordsPatternSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description Render song pattern segment.
  */
 
-import { Box, Flex, Tag, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Tag,
+  Text,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverCloseButton,
+  PopoverArrow,
+  Tooltip,
+} from '@chakra-ui/react';
 
 import { useAppStateContext } from '@/context/AppState';
 import type { TChordsPatternSegment } from '@/types/song.types';
+import { Chord } from '@/components/ChordRenderer/Chord';
 
 type TChordsPatternSegmentProps = TChordsPatternSegment & {
   showChordTimes: boolean;
@@ -34,18 +46,32 @@ export const ChordsPatternSegment = (props: TChordsPatternSegmentProps) => {
 
           return (
             <Box as='span' key={index}>
-              <Tag backgroundColor='green.200' fontWeight='bold'>
-                {chordId !== NO_CHORD_ID ? chordConfig.name : '-'}
-              </Tag>
+              <Popover>
+                <PopoverTrigger>
+                  <Tag backgroundColor='green.200' fontWeight='bold' cursor='pointer'>
+                    {chordId !== NO_CHORD_ID ? chordConfig.name : '-'}
+                  </Tag>
+                </PopoverTrigger>
+
+                <PopoverContent>
+                  <PopoverArrow />
+                  <PopoverCloseButton />
+                  <Flex justifyContent='center' padding='25px'>
+                    <Chord name={chordConfig.name} frets={chordConfig.frets} />
+                  </Flex>
+                </PopoverContent>
+              </Popover>
             </Box>
           );
         })}
       </Flex>
 
       {props.showChordTimes && (
-        <Text fontSize='xs' fontWeight='bold'>
-          x{props.chordTimes}
-        </Text>
+        <Tooltip label={`Strum ${props.chordTimes} times`}>
+          <Text fontSize='xs' fontWeight='bold'>
+            x{props.chordTimes}
+          </Text>
+        </Tooltip>
       )}
 
       <Box position='relative' mt='0.4em'>
