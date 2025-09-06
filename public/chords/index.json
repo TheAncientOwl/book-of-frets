@@ -1,5 +1,5 @@
 {
-  "version": "0.1.2",
+  "version": "0.1.3",
   "index": {
     "-": {
       "name": "0",
@@ -205,6 +205,40 @@
         [
           { "finger": 3, "string": 5 },
           { "finger": 4, "string": 6 }
+        ]
+      ]
+    },
+    "Bb": {
+      "name": "Bb",
+      "frets": [
+        [
+          { "finger": -1, "string": -1 },
+          { "finger": -5, "string": -5 },
+          { "finger": -6, "string": -6 },
+          { "finger": 1, "string": 2 }
+        ],
+        [
+          { "finger": 3, "string": 3 },
+          { "finger": 4, "string": 4 }
+        ],
+        []
+      ]
+    },
+    "F": {
+      "name": "F",
+      "frets": [
+        [
+          { "finger": 1, "string": 1 },
+          { "finger": 1, "string": 2 },
+          { "finger": 1, "string": 3 },
+          { "finger": 1, "string": 4 },
+          { "finger": 1, "string": 5 },
+          { "finger": 1, "string": 6 }
+        ],
+        [{ "finger": 2, "string": 4 }],
+        [
+          { "finger": 3, "string": 2 },
+          { "finger": 4, "string": 3 }
         ]
       ]
     }
