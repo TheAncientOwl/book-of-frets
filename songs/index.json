@@ -1,5 +1,5 @@
 {
-  "version": "0.1.5",
+  "version": "0.1.6",
   "index": [
     {
       "title": "Run Away To Mars",
@@ -12,7 +12,7 @@
       "title": "Little Thing Called Love",
       "artists": ["Queen"],
       "directory": "crazy-little-thing-called-love",
-      "chordIDs": ["D", "Dsus4", "G", "C", "Bb"],
+      "chordIDs": ["D", "Dsus4", "G", "C", "Bb", "E", "A"],
       "type": ["acoustic"]
     },
     {
