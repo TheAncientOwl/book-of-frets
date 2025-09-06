@@ -6,7 +6,7 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 0.12
  * @description List all available songs.
  */
 
@@ -56,10 +56,8 @@ export const SongCard = (props: SongProps) => {
       cursor='pointer'
       borderStyle='solid'
       borderWidth='1px'
-      borderColor='green.800'
       padding={['8px']}
-      backgroundColor='blackAlpha.300'
-      _hover={{ bgColor: 'blackAlpha.400' }}
+      // _hover={{ bgColor: 'TODO' }}
       position='relative'
       onClick={() => navigate(`/${props.directory}`)}
     >
@@ -86,7 +84,7 @@ export const SongCard = (props: SongProps) => {
             borderRadius='10px'
             borderStyle='solid'
             borderWidth='3px'
-            borderColor='green.600'
+            // borderColor='green.600'
             onLoad={() => setIsImageLoaded(true)}
           />
         </Skeleton>
@@ -98,7 +96,7 @@ export const SongCard = (props: SongProps) => {
           left={0}
           width='100%'
           height='100%'
-          backgroundColor='rgba(0,0,0,0.6)'
+          // backgroundColor='rgba(0,0,0,0.6)'
           justifyContent='center'
           alignItems='center'
           opacity={0}
@@ -110,7 +108,7 @@ export const SongCard = (props: SongProps) => {
             width={['30px']}
             height={['30px']}
             borderRadius='50%'
-            backgroundColor='green.500'
+            // backgroundColor='green.500'
             display='flex'
             justifyContent='center'
             alignItems='center'
@@ -129,7 +127,13 @@ export const SongCard = (props: SongProps) => {
       </Box>
 
       <Box pt='5px'>
-        <Heading noOfLines={1} as='h1' size={['sm', 'md']} mb={['5px']} color='CaptionText'>
+        <Heading
+          noOfLines={1}
+          as='h1'
+          size={['sm', 'md']}
+          mb={['5px']}
+          // color='CaptionText'
+        >
           {props.title}
         </Heading>
 
@@ -179,8 +183,8 @@ export const SongCard = (props: SongProps) => {
                   return (
                     <Tag
                       size={['sm', 'md']}
-                      bgColor='green.200'
-                      borderColor='green.500'
+                      // bgColor='green.200'
+                      // borderColor='green.500'
                       borderStyle='solid'
                       borderWidth='thin'
                       key={chordId}

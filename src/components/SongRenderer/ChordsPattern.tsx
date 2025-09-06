@@ -6,7 +6,7 @@
  *
  * @file ChordsPattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.13
+ * @version 0.14
  * @description Render song chords pattern.
  */
 
@@ -26,7 +26,6 @@ const ChordsPatternDivider = () => (
   <Divider
     orientation='vertical'
     height={['0px', '80px']}
-    borderColor='gray.600'
     borderWidth='thin'
     borderStyle={['dashed', 'solid']}
     mt={['15px', '0px']}
@@ -58,7 +57,6 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
         <Tag
           size='sm'
           fontWeight='bold'
-          backgroundColor='green.200'
           position='absolute'
           top='50%'
           right='0'

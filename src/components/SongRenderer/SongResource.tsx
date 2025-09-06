@@ -6,7 +6,7 @@
  *
  * @file SongResource.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Display song resource data.
  */
 
@@ -48,7 +48,7 @@ export const SongResource = (props: TSongResourceProps) => {
       <Flex direction='column' alignItems='center' textAlign='center'>
         <Icon as={IoMdMusicalNote} />
 
-        <Link isExternal href={props.link} size={['xs', 'sm']} textColor='CaptionText'>
+        <Link isExternal href={props.link} size={['xs', 'sm']}>
           {props.alias}
         </Link>
 

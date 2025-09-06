@@ -6,7 +6,7 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description Render chrod based on given config.
  */
 
@@ -25,18 +25,12 @@ type TChordProps = {
 
 export const Chord = (props: TChordProps) => {
   return (
-    <Box
-      width='12em'
-      backgroundColor='#237738ff'
-      padding='1em 0.5em'
-      borderRadius='1em'
-      fontSize='15px'
-    >
+    <Box width='12em' padding='1em 0.5em' borderRadius='1em' fontSize='15px'>
       <Heading size='xl' textAlign='center' mb='0.25em'>
         {props.name}
       </Heading>
       <Box width='11em'>
-        <Divider borderColor='gray.200' borderWidth='thin' />
+        <Divider borderWidth='thin' />
         {props.frets.map((fret, idx) => {
           const map = new Map<number, number>(
             fret.map(fretConfig => [fretConfig.string, fretConfig.finger])

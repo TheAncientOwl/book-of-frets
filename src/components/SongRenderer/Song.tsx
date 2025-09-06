@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.16
+ * @version 0.17
  * @description Render song based on given config.
  */
 
@@ -27,12 +27,7 @@ type TSongProps = TSong & {
 
 export const Song = (props: TSongProps) => {
   return (
-    <Container
-      maxW={['100vw', '5xl']}
-      backgroundColor='#237738ff'
-      padding={['25px 10px', '2em 1em']}
-      borderRadius='1rem'
-    >
+    <Container maxW={['100vw', '5xl']} padding={['25px 10px', '2em 1em']} borderRadius='1rem'>
       <SongHeader
         directory={props.directory}
         title={props.title}
@@ -44,7 +39,7 @@ export const Song = (props: TSongProps) => {
       <Flex
         direction='column'
         gap='5px'
-        bgColor='blackAlpha.400'
+        // bgColor='blackAlpha.400'
         padding='1.5em 1em'
         borderRadius='1rem'
       >
@@ -67,7 +62,10 @@ export const Song = (props: TSongProps) => {
                     )
                 )}
               />
-              <Divider borderColor='gray.600' mb='1em' />
+              <Divider
+                // borderColor='gray.600'
+                mb='1em'
+              />
             </Fragment>
           );
         })}

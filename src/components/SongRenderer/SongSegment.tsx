@@ -6,7 +6,7 @@
  *
  * @file SongSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description Render song segment.
  */
 
@@ -37,7 +37,6 @@ export const SongSegment = (props: ISongSegmentProps) => {
           {props.times > 1 && (
             <Tag
               size='sm'
-              backgroundColor='green.300'
               position='absolute'
               bottom={0}
               right={0}

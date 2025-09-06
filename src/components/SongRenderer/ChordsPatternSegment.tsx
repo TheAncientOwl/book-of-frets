@@ -6,7 +6,7 @@
  *
  * @file ChordsPatternSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description Render song pattern segment.
  */
 
@@ -48,7 +48,7 @@ export const ChordsPatternSegment = (props: TChordsPatternSegmentProps) => {
             <Box as='span' key={index}>
               <Popover>
                 <PopoverTrigger>
-                  <Tag backgroundColor='green.200' fontWeight='bold' cursor='pointer'>
+                  <Tag fontWeight='bold' cursor='pointer'>
                     {chordId !== NO_CHORD_ID ? chordConfig.name : '-'}
                   </Tag>
                 </PopoverTrigger>

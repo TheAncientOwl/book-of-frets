@@ -6,7 +6,7 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Render song header data.
  */
 
@@ -51,10 +51,7 @@ export const SongHeader = (props: TSongHeaderProps) => {
           transform='translate(50%, -50%)'
           size='1em'
           padding='15px'
-          bg='green.300'
-          color='green.900'
           fontWeight='bold'
-          borderColor='green.400'
           borderWidth='thin'
         >
           <Flex alignItems='end'>
@@ -69,7 +66,7 @@ export const SongHeader = (props: TSongHeaderProps) => {
         as='h1'
         size={['sm', 'md']}
         mb={['5px']}
-        color='CaptionText'
+        // color='CaptionText'
         textAlign='center'
       >
         {props.title}

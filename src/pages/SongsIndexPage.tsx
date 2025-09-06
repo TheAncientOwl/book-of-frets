@@ -6,7 +6,7 @@
  *
  * @file SongsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description List all available songs.
  */
 
@@ -32,12 +32,7 @@ export const SongsIndexPage = () => {
   }, []);
 
   return (
-    <Container
-      maxW={['100vw', 'xl']}
-      backgroundColor='#2B8C44'
-      padding={['0em', '1em']}
-      borderRadius='0.5em'
-    >
+    <Container maxW={['100vw', 'xl']} padding={['0em', '1em']} borderRadius='0.5em'>
       {songsIndex.map((song, index) => (
         <SongCard key={index} index={index + 1} {...song} />
       ))}

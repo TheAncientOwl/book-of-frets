@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description App menu component.
  */
 
@@ -51,19 +51,16 @@ export const AppMenu = () => {
         onClick={onOpen}
         ref={btnRef}
         icon={<IoMdMusicalNote />}
-        colorScheme='green'
         variant='solid'
         isRound={true}
         borderStyle='solid'
-        borderColor='green.500'
         borderWidth='thin'
-        backgroundColor='#237738ff'
         zIndex={10}
       />
 
       <Drawer isOpen={isOpen} placement='left' onClose={onClose} finalFocusRef={btnRef}>
         <DrawerOverlay />
-        <DrawerContent backgroundColor='#237738ff'>
+        <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader>
             <Flex direction='row' gap='5px'>
@@ -100,8 +97,7 @@ export const AppMenu = () => {
                 display='flex'
                 alignItems='center'
                 gap='5px'
-                color='green.900'
-                _hover={{ color: 'green.100' }}
+                // _hover={{ color: 'TODO' }}
               >
                 Copyright <Icon as={MdCopyright} /> 2025 BookOfFrets
               </Text>

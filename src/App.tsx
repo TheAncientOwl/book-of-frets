@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.18
+ * @version 0.19
  * @description App component.
  */
 
@@ -40,14 +40,7 @@ export const App = () => {
   return (
     <ChakraProvider>
       <AppState.Provider value={appStateValue}>
-        <Box
-          textColor='white'
-          display='flex'
-          width='100vw'
-          minHeight='100vh'
-          background='gray.900'
-          padding={['0em', '0em', '1em', '2em']}
-        >
+        <Box display='flex' width='100vw' minHeight='100vh' padding={['0em', '0em', '1em', '2em']}>
           <AppMenu />
 
           <Routes>

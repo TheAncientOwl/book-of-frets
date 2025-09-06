@@ -6,7 +6,7 @@
  *
  * @file StringsPattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description Render song strings pattern.
  */
 
@@ -34,7 +34,7 @@ const String = (props: TStringProps) => {
           if (fret === '-') {
             return (
               <Box width='1.4em'>
-                <Divider borderColor='black' borderWidth='thin' />
+                <Divider borderWidth='thin' />
               </Box>
             );
           } else if (fret === '|') {
@@ -45,10 +45,10 @@ const String = (props: TStringProps) => {
                 <Circle
                   key={index}
                   size='1.4em'
-                  bg='green.300'
-                  color='green.900'
+                  // bg='green.300'
+                  // color='green.900'
                   fontWeight='bold'
-                  borderColor='green.900'
+                  // borderColor='green.900'
                   borderWidth='thin'
                 >
                   {fret}
@@ -87,7 +87,9 @@ export const StringsPattern = (props: TStringsPatternProps) => {
       <String name='D' frets={stringsToFrets[3]} />
       <String name='A' frets={stringsToFrets[2]} />
       <String name='E' frets={stringsToFrets[1]} />
-      <Divider borderColor='green.900' />
+      <Divider
+      // borderColor='green.900'
+      />
     </Flex>
   );
 };
