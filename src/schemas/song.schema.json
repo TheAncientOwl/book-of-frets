@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Song Schema | v0.1.1",
+  "title": "Song Schema | v0.2.0",
   "type": "object",
   "properties": {
     "version": {
@@ -56,6 +56,7 @@
         "properties": {
           "name": { "type": "string" },
           "type": { "type": "string", "enum": ["chords", "strings"] },
+          "times": { "type": "number", "default": 1, "minimum": 1 },
           "patterns": {
             "type": "array",
             "items": {
@@ -102,7 +103,7 @@
                             "fret": {
                               "anyOf": [
                                 { "type": "integer", "minimum": 0, "maximum": 22 },
-                                { "type": "string", "enum": ["-"] }
+                                { "type": "string", "enum": ["-", "|"] }
                               ]
                             }
                           },
@@ -117,7 +118,7 @@
             }
           }
         },
-        "required": ["name", "type", "patterns"]
+        "required": ["name", "type", "times", "patterns"]
       }
     },
     "songSegmentsOrder": {

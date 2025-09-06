@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "Watermelon Sugar",
   "artists": ["Harry Styles"],
@@ -11,6 +11,7 @@
     "main": {
       "name": "main",
       "type": "chords",
+      "times": 1,
       "patterns": [
         {
           "times": 404,

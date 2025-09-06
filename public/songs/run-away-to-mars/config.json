@@ -1,5 +1,5 @@
 {
-  "version": "0.1.1",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "Run Away To Mars",
   "artists": ["TALK"],
@@ -11,6 +11,7 @@
     "intro": {
       "name": "intro",
       "type": "chords",
+      "times": 1,
       "patterns": [
         {
           "times": 1,
@@ -27,6 +28,7 @@
     "verse": {
       "name": "verse",
       "type": "chords",
+      "times": 1,
       "patterns": [
         {
           "times": 2,
@@ -43,6 +45,7 @@
     "pre-chorus": {
       "name": "pre-chorus",
       "type": "chords",
+      "times": 1,
       "patterns": [
         {
           "times": 1,
@@ -59,6 +62,7 @@
     "chorus": {
       "name": "chorus",
       "type": "chords",
+      "times": 1,
       "patterns": [
         {
           "times": 4,
@@ -90,6 +94,7 @@
     "bridge": {
       "name": "bridge",
       "type": "chords",
+      "times": 1,
       "patterns": [
         {
           "times": 2,
@@ -106,6 +111,7 @@
     "outro": {
       "name": "outro",
       "type": "chords",
+      "times": 1,
       "patterns": [
         {
           "times": 3,

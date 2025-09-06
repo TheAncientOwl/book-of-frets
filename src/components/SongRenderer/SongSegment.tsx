@@ -6,11 +6,11 @@
  *
  * @file SongSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description Render song segment.
  */
 
-import { Box, Flex, Heading } from '@chakra-ui/react';
+import { Box, Flex, Heading, Tag } from '@chakra-ui/react';
 
 import type { TChordsPattern, TSongSegment, TStringsPattern } from '@/types/song.types';
 
@@ -32,7 +32,21 @@ export const SongSegment = (props: ISongSegmentProps) => {
         textDecoration='underline'
         textTransform='capitalize'
       >
-        {props.name}
+        <Box as='span' position='relative'>
+          {props.name}
+          {props.times > 1 && (
+            <Tag
+              size='sm'
+              backgroundColor='green.300'
+              position='absolute'
+              bottom={0}
+              right={0}
+              transform='translate(120%, 20%)'
+            >
+              x{props.times}
+            </Tag>
+          )}
+        </Box>
       </Heading>
 
       <Flex direction='column' alignItems='center' gap='1em'>

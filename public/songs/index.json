@@ -1,11 +1,18 @@
 {
-  "version": "0.1.4",
+  "version": "0.1.5",
   "index": [
     {
       "title": "Run Away To Mars",
       "artists": ["TALK"],
       "directory": "run-away-to-mars",
       "chordIDs": ["G", "D/F#", "Em7", "Cadd9", "Am7", "D", "Dsus4"],
+      "type": ["acoustic"]
+    },
+    {
+      "title": "Little Thing Called Love",
+      "artists": ["Queen"],
+      "directory": "crazy-little-thing-called-love",
+      "chordIDs": ["D", "Dsus4", "G", "C", "Bb"],
       "type": ["acoustic"]
     },
     {

@@ -1,5 +1,5 @@
 {
-  "version": "0.1.1",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "Seven Nation Army",
   "artists": ["The White Stripes"],
@@ -11,6 +11,7 @@
     "main1": {
       "name": "main 1",
       "type": "strings",
+      "times": 1,
       "patterns": [
         {
           "times": 3,
@@ -37,6 +38,7 @@
     "main2": {
       "name": "main 2",
       "type": "strings",
+      "times": 1,
       "patterns": [
         {
           "times": 1,
@@ -119,6 +121,7 @@
     "main3": {
       "name": "main 3",
       "type": "strings",
+      "times": 1,
       "patterns": [
         {
           "times": 1,
@@ -221,6 +224,7 @@
     "outro": {
       "name": "outro",
       "type": "strings",
+      "times": 1,
       "patterns": [
         {
           "times": 1,
