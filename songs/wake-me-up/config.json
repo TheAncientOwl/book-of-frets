@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "Wake Me Up",
   "artists": ["Avicii"],
@@ -11,6 +11,7 @@
     "intro": {
       "name": "intro",
       "type": "chords",
+      "times": 1,
       "patterns": [
         {
           "times": 1,
@@ -47,6 +48,7 @@
     "chorus": {
       "name": "chorus",
       "type": "chords",
+      "times": 1,
       "patterns": [
         {
           "times": 1,
@@ -83,6 +85,7 @@
     "dance": {
       "name": "dance",
       "type": "chords",
+      "times": 1,
       "patterns": [
         {
           "times": 1,
@@ -119,6 +122,7 @@
     "verse": {
       "name": "verse",
       "type": "chords",
+      "times": 1,
       "patterns": [
         {
           "times": 1,

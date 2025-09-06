@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "Seven Nation Army | 1 String",
   "artists": ["The White Stripes"],
@@ -11,6 +11,7 @@
     "main": {
       "name": "main",
       "type": "strings",
+      "times": 1,
       "patterns": [
         {
           "times": 3,
