@@ -17,6 +17,11 @@
       "mainColor": "#fbec5d"
     },
     {
+      "title": "Crimson",
+      "directory": "crimson",
+      "mainColor": "#aa0022"
+    },
+    {
       "title": "Bright Sky",
       "directory": "bright-sky",
       "mainColor": "#00b4d8"
