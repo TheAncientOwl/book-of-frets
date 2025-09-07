@@ -3,32 +3,32 @@
   "index": [
     {
       "title": "Nature",
-      "file": "book-of-frets-nature.json",
+      "directory": "nature",
       "mainColor": "#2B8C44"
     },
     {
       "title": "Lavander",
-      "file": "book-of-frets-lavander.json",
+      "directory": "lavander",
       "mainColor": "#575799"
     },
     {
       "title": "Banananana",
-      "file": "book-of-frets-banana.json",
+      "directory": "banana",
       "mainColor": "#fbec5d"
     },
     {
       "title": "Bright Sky",
-      "file": "book-of-frets-bright-sky.json",
+      "directory": "bright-sky",
       "mainColor": "#00b4d8"
     },
     {
       "title": "Bubble Gum",
-      "file": "book-of-frets-bubble-gum.json",
+      "directory": "bubble-gum",
       "mainColor": "#ff77bc"
     },
     {
       "title": "Peach",
-      "file": "book-of-frets-peach.json",
+      "directory": "peach",
       "mainColor": "#ff9248"
     }
   ]
