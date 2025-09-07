@@ -6,7 +6,7 @@
  *
  * @file ThemePicker.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Display app themes and handles theme setting.
  */
 
@@ -48,7 +48,14 @@ export const ThemePicker = () => {
       // [*] theme colors
       backgroundColor={theme.themePicker.background}
     >
-      <Heading as='h1' size={['md', 'lg', 'xl']} mb='0.5em' textAlign='center'>
+      <Heading
+        as='h1'
+        size={['md', 'lg', 'xl']}
+        mb='0.5em'
+        textAlign='center'
+        // [*] theme colors
+        color={theme.themePicker.title}
+      >
         Theme
       </Heading>
 

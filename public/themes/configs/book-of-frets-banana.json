@@ -149,12 +149,13 @@
     "background": "#fbec5d"
   },
   "settings": {
+    "title": "#6b3e26",
     "themePicker": {
       "background": "#fbec5d",
-      "title": "",
+      "title": "#6b3e26",
       "item": {
-        "background": "blackAlpha.400",
-        "hoverBackground": "blackAlpha.500",
+        "background": "blackAlpha.300",
+        "hoverBackground": "blackAlpha.400",
         "border": "yellow.800",
         "indexColor": "#6b3e26",
         "colorBoxBorder": "gray.900",

@@ -6,7 +6,7 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description App theme types
  */
 
@@ -166,6 +166,7 @@ export type TGeneralAppTheme = {
 };
 
 export type TAppSettingsTheme = {
+  title: string;
   themePicker: {
     background: string;
     title: string;

@@ -6,7 +6,7 @@
  *
  * @file default.ts
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Default app theme
  */
 
@@ -178,9 +178,10 @@ const DefaultSongsIndexPageTheme: TSongsIndexPageTheme = {
 };
 
 const DefaultSettingsTheme: TAppSettingsTheme = {
+  title: 'white',
   themePicker: {
     background: '#2B8C44',
-    title: '',
+    title: 'white',
     item: {
       background: 'blackAlpha.400',
       hoverBackground: 'blackAlpha.500',

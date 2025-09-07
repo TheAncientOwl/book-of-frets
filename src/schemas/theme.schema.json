@@ -297,6 +297,7 @@
     "settings": {
       "type": "object",
       "properties": {
+        "title": { "type": "string" },
         "themePicker": {
           "type": "object",
           "properties": {
@@ -325,7 +326,7 @@
           "required": ["background", "title", "item"]
         }
       },
-      "required": ["themePicker"]
+      "required": ["title", "themePicker"]
     }
   },
   "required": [
