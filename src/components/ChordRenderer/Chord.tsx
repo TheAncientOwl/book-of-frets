@@ -6,7 +6,7 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description Render chrod based on given config.
  */
 
@@ -18,6 +18,18 @@ import type { TFret } from '@/types/chord.types';
 
 import { Fret } from '@/components/ChordRenderer/Fret';
 
+export type TChordTheme = {
+  background: string;
+  dividers: string;
+  title: string;
+};
+
+const DefaultChordTheme: TChordTheme = {
+  background: '#2B8C44',
+  dividers: 'white',
+  title: 'white',
+};
+
 type TChordProps = {
   name: string;
   frets: TFret[];
@@ -25,12 +37,29 @@ type TChordProps = {
 
 export const Chord = (props: TChordProps) => {
   return (
-    <Box width='12em' padding='1em 0.5em' borderRadius='1em' fontSize='15px'>
-      <Heading size='xl' textAlign='center' mb='0.25em'>
+    <Box
+      width='12em'
+      padding='1em 0.5em'
+      borderRadius='1em'
+      fontSize='15px'
+      // [*] theme colors
+      background={DefaultChordTheme.background}
+    >
+      <Heading
+        size='xl'
+        textAlign='center'
+        mb='0.25em'
+        // [*] theme colors
+        color={DefaultChordTheme.title}
+      >
         {props.name}
       </Heading>
       <Box width='11em'>
-        <Divider borderWidth='thin' />
+        <Divider
+          borderWidth='thin'
+          // [*] theme colors
+          borderColor={DefaultChordTheme.dividers}
+        />
         {props.frets.map((fret, idx) => {
           const map = new Map<number, number>(
             fret.map(fretConfig => [fretConfig.string, fretConfig.finger])
@@ -39,7 +68,13 @@ export const Chord = (props: TChordProps) => {
           return (
             <Fragment key={idx}>
               <Fret stringsToFingers={map} />
-              {idx < props.frets.length && <Divider borderColor='gray.100' borderWidth='thin' />}
+              {idx < props.frets.length && (
+                <Divider
+                  borderWidth='thin'
+                  // [*] theme colors
+                  borderColor={DefaultChordTheme.dividers}
+                />
+              )}
             </Fragment>
           );
         })}

@@ -6,7 +6,7 @@
  *
  * @file ChordsPattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.14
+ * @version 0.15
  * @description Render song chords pattern.
  */
 
@@ -17,6 +17,7 @@ import { Box, Divider, Tag, Tooltip } from '@chakra-ui/react';
 import type { TChordsPattern } from '@/types/song.types';
 
 import { ChordsPatternSegment } from '@/components/SongRenderer/ChordsPatternSegment.tsx';
+import { DefaultSongTheme } from '@/components/SongRenderer/Song';
 
 type TChordsPatternProps = TChordsPattern & {
   showChordTimes: boolean;
@@ -30,6 +31,8 @@ const ChordsPatternDivider = () => (
     borderStyle={['dashed', 'solid']}
     mt={['15px', '0px']}
     mb={['15px', '0px']}
+    // [*] theme colors
+    borderColor={DefaultSongTheme.segments.item.chordsPattern.divider}
   />
 );
 
@@ -53,7 +56,11 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
         </Fragment>
       ))}
 
-      <Tooltip label={`Repeat ${props.times} times`}>
+      <Tooltip
+        label={`Repeat ${props.times} times`}
+        // [*] theme colors
+        borderColor={DefaultSongTheme.segments.item.chordsPattern.divider}
+      >
         <Tag
           size='sm'
           fontWeight='bold'
@@ -62,6 +69,9 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
           right='0'
           transform='translate(0%, -50%)'
           zIndex={1}
+          // [*] theme colors
+          backgroundColor={DefaultSongTheme.segments.item.chordsPattern.chord.times.background}
+          color={DefaultSongTheme.segments.item.chordsPattern.chord.times.color}
         >
           x{props.times}
         </Tag>

@@ -6,10 +6,11 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Render song header data.
  */
 
+import { DefaultSongTheme } from '@/components/SongRenderer/Song';
 import type { TSong } from '@/types/song.types';
 import { Box, Circle, Flex, Heading, Image, Skeleton, Text, Tooltip } from '@chakra-ui/react';
 import { Fragment, useState } from 'react';
@@ -40,7 +41,10 @@ export const SongHeader = (props: TSongHeaderProps) => {
             objectFit='cover'
             borderRadius='10px'
             borderStyle='solid'
+            borderWidth='thin'
             onLoad={() => setIsImageLoaded(true)}
+            // [*] theme colors
+            borderColor={DefaultSongTheme.header.coverBorder}
           />
         </Skeleton>
 
@@ -53,6 +57,10 @@ export const SongHeader = (props: TSongHeaderProps) => {
           padding='15px'
           fontWeight='bold'
           borderWidth='thin'
+          // [*] theme colors
+          backgroundColor={DefaultSongTheme.capo.background}
+          borderColor={DefaultSongTheme.capo.border}
+          color={DefaultSongTheme.capo.text}
         >
           <Flex alignItems='end'>
             <Text fontSize='sm'>C</Text>
@@ -66,8 +74,9 @@ export const SongHeader = (props: TSongHeaderProps) => {
         as='h1'
         size={['sm', 'md']}
         mb={['5px']}
-        // color='CaptionText'
         textAlign='center'
+        // [*] theme colors
+        color={DefaultSongTheme.header.title}
       >
         {props.title}
       </Heading>
@@ -79,6 +88,8 @@ export const SongHeader = (props: TSongHeaderProps) => {
         mb={['5px']}
         fontStyle='italic'
         textAlign='center'
+        // [*] theme colors
+        color={DefaultSongTheme.header.artists}
       >
         {props.artists.map((artist, index) => (
           <Box key={index} as='span'>
@@ -87,7 +98,11 @@ export const SongHeader = (props: TSongHeaderProps) => {
         ))}
       </Heading>
 
-      <Flex justifyContent='center'>
+      <Flex
+        justifyContent='center'
+        // [*] theme colors
+        color={DefaultSongTheme.header.typeTags}
+      >
         {props.type.map((item, index) => (
           <Fragment key={index}>
             <Tooltip label={item}>{typeToIcon[item as keyof typeof typeToIcon]}</Tooltip>

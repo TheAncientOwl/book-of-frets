@@ -6,7 +6,7 @@
  *
  * @file SongSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description Render song segment.
  */
 
@@ -16,6 +16,7 @@ import type { TChordsPattern, TSongSegment, TStringsPattern } from '@/types/song
 
 import { ChordsPattern } from '@/components/SongRenderer/ChordsPattern.tsx';
 import { StringsPattern } from '@/components/SongRenderer/StringsPattern.tsx';
+import { DefaultSongTheme } from '@/components/SongRenderer/Song';
 
 type ISongSegmentProps = TSongSegment & {
   showChordTimes: boolean;
@@ -31,6 +32,8 @@ export const SongSegment = (props: ISongSegmentProps) => {
         textAlign='center'
         textDecoration='underline'
         textTransform='capitalize'
+        // [*] theme colors
+        color={DefaultSongTheme.segments.item.title}
       >
         <Box as='span' position='relative'>
           {props.name}
@@ -41,6 +44,9 @@ export const SongSegment = (props: ISongSegmentProps) => {
               bottom={0}
               right={0}
               transform='translate(120%, 20%)'
+              // [*] theme colors
+              backgroundColor={DefaultSongTheme.segments.item.times.background}
+              color={DefaultSongTheme.segments.item.times.color}
             >
               x{props.times}
             </Tag>

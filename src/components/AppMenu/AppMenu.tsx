@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description App menu component.
  */
 
@@ -36,6 +36,48 @@ import {
 import { IoMdMusicalNote } from 'react-icons/io';
 import { MdCopyright } from 'react-icons/md';
 
+export type TAppMenuTheme = {
+  menuButton: {
+    background: string;
+    hover: string;
+    border: string;
+    text: string;
+  };
+  closeButton: {
+    color: string;
+  };
+  drawer: {
+    background: string;
+    appText: string;
+    routeLink: string;
+  };
+  copyright: {
+    color: string;
+    hoverColor: string;
+  };
+};
+
+const DefaultAppMenuTheme: TAppMenuTheme = {
+  menuButton: {
+    background: '#2B8C44',
+    hover: 'green.600',
+    border: 'green.500',
+    text: 'white',
+  },
+  closeButton: {
+    color: 'white',
+  },
+  drawer: {
+    background: '#2B8C44',
+    appText: 'white',
+    routeLink: 'white',
+  },
+  copyright: {
+    color: 'white',
+    hoverColor: 'green.100',
+  },
+};
+
 // TODO: Implement songs history
 export const AppMenu = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -56,12 +98,23 @@ export const AppMenu = () => {
         borderStyle='solid'
         borderWidth='thin'
         zIndex={10}
+        // [*] theme colors
+        backgroundColor={DefaultAppMenuTheme.menuButton.background}
+        borderColor={DefaultAppMenuTheme.menuButton.border}
+        color={DefaultAppMenuTheme.menuButton.text}
+        _hover={{ backgroundColor: DefaultAppMenuTheme.menuButton.hover }}
       />
 
       <Drawer isOpen={isOpen} placement='left' onClose={onClose} finalFocusRef={btnRef}>
         <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
+        <DrawerContent
+          // [*] theme colors
+          backgroundColor={DefaultAppMenuTheme.drawer.background}
+        >
+          <DrawerCloseButton
+            // [*] theme colors
+            color={DefaultAppMenuTheme.closeButton.color}
+          />
           <DrawerHeader>
             <Flex direction='row' gap='5px'>
               <Image
@@ -69,12 +122,25 @@ export const AppMenu = () => {
                 alt='Book of Frets Logo'
                 maxW='25px'
               />
-              <Box as='span'>Book Of Frets</Box>
+              <Box
+                as='span'
+                // [*] theme colors
+                color={DefaultAppMenuTheme.drawer.appText}
+              >
+                Book Of Frets
+              </Box>
             </Flex>
           </DrawerHeader>
 
           <DrawerBody>
-            <List display='flex' flexDirection='column' gap='0.5em' fontWeight='bold'>
+            <List
+              display='flex'
+              flexDirection='column'
+              gap='0.5em'
+              fontWeight='bold'
+              // [*] theme colors
+              color={DefaultAppMenuTheme.drawer.routeLink}
+            >
               <ListItem onClick={onClose}>
                 <Link to={`/`}>» Home</Link>
               </ListItem>
@@ -97,7 +163,9 @@ export const AppMenu = () => {
                 display='flex'
                 alignItems='center'
                 gap='5px'
-                // _hover={{ color: 'TODO' }}
+                // [*] theme colors
+                color={DefaultAppMenuTheme.copyright.color}
+                _hover={{ color: DefaultAppMenuTheme.copyright.hoverColor }}
               >
                 Copyright <Icon as={MdCopyright} /> 2025 BookOfFrets
               </Text>

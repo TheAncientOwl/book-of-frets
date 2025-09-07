@@ -6,7 +6,7 @@
  *
  * @file SongResource.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description Display song resource data.
  */
 
@@ -14,6 +14,7 @@ import type { TResource } from '@/types/song.types';
 import { AspectRatio, Box, Flex, Icon, Link, ListItem, Skeleton, Text } from '@chakra-ui/react';
 import { IoMdMusicalNote } from 'react-icons/io';
 import { useState } from 'react';
+import { DefaultSongTheme } from '@/components/SongRenderer/Song';
 
 type TSongResourceProps = TResource;
 
@@ -46,13 +47,29 @@ export const SongResource = (props: TSongResourceProps) => {
   return (
     <ListItem>
       <Flex direction='column' alignItems='center' textAlign='center'>
-        <Icon as={IoMdMusicalNote} />
+        <Icon
+          as={IoMdMusicalNote}
+          // [*] theme colors
+          color={DefaultSongTheme.resources.item.note}
+        />
 
-        <Link isExternal href={props.link} size={['xs', 'sm']}>
+        <Link
+          isExternal
+          href={props.link}
+          size={['xs', 'sm']}
+          // [*] theme colors
+          color={DefaultSongTheme.resources.item.alias}
+        >
           {props.alias}
         </Link>
 
-        <Text fontStyle='italic' textAlign='center' fontSize={['small', 'sm']}>
+        <Text
+          fontStyle='italic'
+          textAlign='center'
+          fontSize={['small', 'sm']}
+          // [*] theme colors
+          color={DefaultSongTheme.resources.item.author}
+        >
           by {props.author}
         </Text>
 

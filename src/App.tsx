@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.19
+ * @version 0.20
  * @description App component.
  */
 
@@ -25,6 +25,14 @@ const SongPage = lazy(() => import('@/pages/SongPage'));
 const ChordsIndexPage = lazy(() => import('@/pages/ChordsIndexPage'));
 const SongsIndexPage = lazy(() => import('@/pages/SongsIndexPage'));
 
+export type TGeneralAppTheme = {
+  background: string;
+};
+
+const DefaultGeneralAppTheme: TGeneralAppTheme = {
+  background: 'gray.900',
+};
+
 export const App = () => {
   const [chordsIndex, setChordsIndex] = useState<TChordsIndex>({});
 
@@ -40,7 +48,13 @@ export const App = () => {
   return (
     <ChakraProvider>
       <AppState.Provider value={appStateValue}>
-        <Box display='flex' width='100vw' minHeight='100vh' padding={['0em', '0em', '1em', '2em']}>
+        <Box
+          display='flex'
+          width='100vw'
+          minHeight='100vh'
+          padding={['0em', '0em', '1em', '2em']}
+          background={DefaultGeneralAppTheme.background}
+        >
           <AppMenu />
 
           <Routes>

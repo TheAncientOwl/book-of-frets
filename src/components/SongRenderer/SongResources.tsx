@@ -6,7 +6,7 @@
  *
  * @file SongResources.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Render song resources data.
  */
 
@@ -19,6 +19,7 @@ import { MdLibraryMusic } from 'react-icons/md';
 import type { TSong } from '@/types/song.types';
 
 import { SongResource } from '@/components/SongRenderer/SongResource';
+import { DefaultSongTheme } from '@/components/SongRenderer/Song';
 
 type TSongResourcesProps = Pick<TSong, 'resources'>;
 
@@ -26,7 +27,13 @@ export const SongResources = (props: TSongResourcesProps) => {
   return (
     <Box mt='1em' padding='1em 1.25em'>
       <Heading as='h1' size='md' mb='1em' textAlign='center'>
-        <Flex justifyContent='center' alignItems='center' gap='0.25em'>
+        <Flex
+          justifyContent='center'
+          alignItems='center'
+          gap='0.25em'
+          // [*] theme colors
+          color={DefaultSongTheme.resources.title}
+        >
           <Icon as={MdLibraryMusic} />
           Resources
           <Icon as={MdLibraryMusic} />
