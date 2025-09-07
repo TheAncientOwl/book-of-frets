@@ -17,7 +17,7 @@
       "url": "./src/schemas/themes-index.schema.json"
     },
     {
-      "fileMatch": ["public/themes/configs/*.json"],
+      "fileMatch": ["public/themes/*/*.json"],
       "url": "./src/schemas/theme.schema.json"
     }
   ],
