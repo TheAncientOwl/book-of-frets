@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 0.12
  * @description App menu component.
  */
 
@@ -25,7 +25,6 @@ import {
   DrawerOverlay,
   Flex,
   Icon,
-  IconButton,
   Image,
   List,
   ListItem,
@@ -34,7 +33,6 @@ import {
 } from '@chakra-ui/react';
 
 import { useAppStateContext, useAppTheme } from '@/context/AppState';
-import { IoMdMusicalNote } from 'react-icons/io';
 import { MdCopyright } from 'react-icons/md';
 
 // TODO: Implement songs history
@@ -47,25 +45,35 @@ export const AppMenu = () => {
 
   return (
     <>
-      <IconButton
+      <Box
+        cursor='pointer'
         position='fixed'
         top='1rem'
         left='1rem'
         aria-label='App Menu'
         onClick={onOpen}
         ref={btnRef}
-        icon={<IoMdMusicalNote />}
-        variant='solid'
-        isRound={true}
         borderStyle='solid'
         borderWidth='thin'
         zIndex={10}
+        width='45px'
+        height='45px'
+        padding={['3px']}
+        borderRadius='10px'
         // [*] theme colors
         backgroundColor={theme.menuButton.background}
         borderColor={theme.menuButton.border}
         color={theme.menuButton.text}
         _hover={{ backgroundColor: theme.menuButton.hover }}
-      />
+      >
+        <Image
+          src={appLogoURL}
+          alt={`Book of Frets theme logo`}
+          width='100%'
+          height='100%'
+          objectFit='cover'
+        />
+      </Box>
 
       <Drawer isOpen={isOpen} placement='left' onClose={onClose} finalFocusRef={btnRef}>
         <DrawerOverlay />

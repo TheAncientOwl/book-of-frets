@@ -6,13 +6,13 @@
  *
  * @file ThemePicker.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Display app themes and handles theme setting.
  */
 
 import { useAppStateContext, useAppTheme } from '@/context/AppState';
 import type { TAppTheme, TThemeIndexEntry } from '@/theme/types';
-import { Box, Flex, Heading } from '@chakra-ui/react';
+import { Box, Flex, Heading, Image } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 
 export const ThemePicker = () => {
@@ -96,9 +96,18 @@ export const ThemePicker = () => {
               borderRadius='10px'
               borderStyle='solid'
               borderWidth='thin'
+              padding={['5px']}
               // [*] theme colors
               borderColor={theme.themePicker.item.colorBoxBorder}
-            />
+            >
+              <Image
+                src={`${import.meta.env.BASE_URL}themes/${themeEntry.directory}/logo.svg`}
+                alt={`Book of Frets theme logo`}
+                width='100%'
+                height='100%'
+                objectFit='cover'
+              />
+            </Box>
             <Heading
               as='h5'
               size={['sm', 'md']}
