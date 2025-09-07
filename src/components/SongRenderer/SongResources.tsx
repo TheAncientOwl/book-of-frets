@@ -6,7 +6,7 @@
  *
  * @file SongResources.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.5
  * @description Render song resources data.
  */
 
@@ -19,14 +19,23 @@ import { MdLibraryMusic } from 'react-icons/md';
 import type { TSong } from '@/types/song.types';
 
 import { SongResource } from '@/components/SongRenderer/SongResource';
+import { useAppTheme } from '@/context/AppState';
 
 type TSongResourcesProps = Pick<TSong, 'resources'>;
 
 export const SongResources = (props: TSongResourcesProps) => {
+  const { song: theme } = useAppTheme();
+
   return (
     <Box mt='1em' padding='1em 1.25em'>
       <Heading as='h1' size='md' mb='1em' textAlign='center'>
-        <Flex justifyContent='center' alignItems='center' gap='0.25em'>
+        <Flex
+          justifyContent='center'
+          alignItems='center'
+          gap='0.25em'
+          // [*] theme colors
+          color={theme.resources.title}
+        >
           <Icon as={MdLibraryMusic} />
           Resources
           <Icon as={MdLibraryMusic} />
@@ -39,7 +48,7 @@ export const SongResources = (props: TSongResourcesProps) => {
         {props.resources.map((resource, index) => (
           <Fragment key={index}>
             <SongResource {...resource} />
-            {index < props.resources.length - 1 && <Divider mt='1em' mb='1em' color='gray.600' />}
+            {index < props.resources.length - 1 && <Divider mt='1em' mb='1em' />}
           </Fragment>
         ))}
       </List>

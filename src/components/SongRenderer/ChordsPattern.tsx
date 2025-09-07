@@ -6,7 +6,7 @@
  *
  * @file ChordsPattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.13
+ * @version 0.16
  * @description Render song chords pattern.
  */
 
@@ -14,27 +14,34 @@ import { Fragment } from 'react';
 
 import { Box, Divider, Tag, Tooltip } from '@chakra-ui/react';
 
-import type { TChordsPattern } from '@/types/song.types';
-
 import { ChordsPatternSegment } from '@/components/SongRenderer/ChordsPatternSegment.tsx';
+import { useAppTheme } from '@/context/AppState';
+import type { TChordsPattern } from '@/types/song.types';
 
 type TChordsPatternProps = TChordsPattern & {
   showChordTimes: boolean;
 };
 
-const ChordsPatternDivider = () => (
-  <Divider
-    orientation='vertical'
-    height={['0px', '80px']}
-    borderColor='gray.600'
-    borderWidth='thin'
-    borderStyle={['dashed', 'solid']}
-    mt={['15px', '0px']}
-    mb={['15px', '0px']}
-  />
-);
+const ChordsPatternDivider = () => {
+  const { song: theme } = useAppTheme();
+
+  return (
+    <Divider
+      orientation='vertical'
+      height={['0px', '80px']}
+      borderWidth='thin'
+      borderStyle={['dashed', 'solid']}
+      mt={['15px', '0px']}
+      mb={['15px', '0px']}
+      // [*] theme colors
+      borderColor={theme.segments.item.chordsPattern.divider}
+    />
+  );
+};
 
 export const ChordsPattern = (props: TChordsPatternProps) => {
+  const { song: theme } = useAppTheme();
+
   return (
     <Box
       width='100%'
@@ -54,16 +61,22 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
         </Fragment>
       ))}
 
-      <Tooltip label={`Repeat ${props.times} times`}>
+      <Tooltip
+        label={`Repeat ${props.times} times`}
+        // [*] theme colors
+        borderColor={theme.segments.item.chordsPattern.divider}
+      >
         <Tag
           size='sm'
           fontWeight='bold'
-          backgroundColor='green.200'
           position='absolute'
           top='50%'
           right='0'
           transform='translate(0%, -50%)'
           zIndex={1}
+          // [*] theme colors
+          backgroundColor={theme.segments.item.chordsPattern.chord.times.background}
+          color={theme.segments.item.chordsPattern.chord.times.color}
         >
           x{props.times}
         </Tag>

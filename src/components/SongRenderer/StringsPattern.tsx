@@ -6,13 +6,14 @@
  *
  * @file StringsPattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.11
  * @description Render song strings pattern.
  */
 
 import { Box, Circle, Divider, Flex, Heading } from '@chakra-ui/react';
 
 import type { TStringsPattern } from '@/types/song.types';
+import { useAppTheme } from '@/context/AppState';
 
 type TStringsPatternProps = TStringsPattern & {
   showChordTimes: boolean;
@@ -26,30 +27,50 @@ type TStringProps = {
 };
 
 const String = (props: TStringProps) => {
+  const { song: theme } = useAppTheme();
+
   return (
     <Flex direction='row' alignItems='center' gap='1em' position='relative'>
-      <Heading size='md'>{props.name}</Heading>
+      <Heading
+        size='md'
+        // [*] theme colors
+        color={theme.segments.item.stringsPattern.stringNames}
+      >
+        {props.name}
+      </Heading>
       <Flex direction='row' position='absolute' left='30px' alignItems='center' gap='5px'>
         {props.frets.map((fret, index) => {
           if (fret === '-') {
             return (
               <Box width='1.4em'>
-                <Divider borderColor='black' borderWidth='thin' />
+                <Divider
+                  borderWidth='thin'
+                  // [*] theme colors
+                  borderColor={theme.segments.item.stringsPattern.filler}
+                />
               </Box>
             );
           } else if (fret === '|') {
-            return <Box>|</Box>;
+            return (
+              <Box
+                // [*] theme colors
+                color={theme.segments.item.stringsPattern.filler}
+              >
+                |
+              </Box>
+            );
           } else {
             return (
               <Box width='1.4em'>
                 <Circle
                   key={index}
                   size='1.4em'
-                  bg='green.300'
-                  color='green.900'
                   fontWeight='bold'
-                  borderColor='green.900'
                   borderWidth='thin'
+                  // [*] theme colors
+                  backgroundColor={theme.segments.item.stringsPattern.fret.background}
+                  borderColor={theme.segments.item.stringsPattern.fret.border}
+                  color={theme.segments.item.stringsPattern.fret.text}
                 >
                   {fret}
                 </Circle>
@@ -63,6 +84,7 @@ const String = (props: TStringProps) => {
 };
 
 export const StringsPattern = (props: TStringsPatternProps) => {
+  const { song: theme } = useAppTheme();
   const stringsToFrets = [['-'], ['-'], ['-'], ['-'], ['-'], ['-'], ['-']] as TFretNumber[][];
 
   props.segments.forEach(segment => {
@@ -87,7 +109,10 @@ export const StringsPattern = (props: TStringsPatternProps) => {
       <String name='D' frets={stringsToFrets[3]} />
       <String name='A' frets={stringsToFrets[2]} />
       <String name='E' frets={stringsToFrets[1]} />
-      <Divider borderColor='green.900' />
+      <Divider
+        // [*] theme colors
+        borderColor={theme.segments.item.stringsPattern.divider}
+      />
     </Flex>
   );
 };

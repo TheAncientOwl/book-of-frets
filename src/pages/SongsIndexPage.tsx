@@ -6,7 +6,7 @@
  *
  * @file SongsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.11
  * @description List all available songs.
  */
 
@@ -17,8 +17,11 @@ import { Container } from '@chakra-ui/react';
 import type { TSongsIndexEntry } from '@/types/song.types';
 
 import { SongCard } from '@/components/SongIndexEntry/SongCard';
+import { useAppTheme } from '@/context/AppState';
 
 export const SongsIndexPage = () => {
+  const { songsIndexPage: theme } = useAppTheme();
+
   const [songsIndex, setSongsIndex] = useState<TSongsIndexEntry[]>([]);
 
   useEffect(() => {
@@ -34,9 +37,10 @@ export const SongsIndexPage = () => {
   return (
     <Container
       maxW={['100vw', 'xl']}
-      backgroundColor='#2B8C44'
       padding={['0em', '1em']}
       borderRadius='0.5em'
+      // [*] theme colors
+      background={theme.background}
     >
       {songsIndex.map((song, index) => (
         <SongCard key={index} index={index + 1} {...song} />

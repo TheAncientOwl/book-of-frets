@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.9
  * @description App menu component.
  */
 
@@ -33,11 +33,14 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 
+import { useAppTheme } from '@/context/AppState';
 import { IoMdMusicalNote } from 'react-icons/io';
 import { MdCopyright } from 'react-icons/md';
 
 // TODO: Implement songs history
 export const AppMenu = () => {
+  const { appMenu: theme } = useAppTheme();
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef(null);
 
@@ -51,20 +54,28 @@ export const AppMenu = () => {
         onClick={onOpen}
         ref={btnRef}
         icon={<IoMdMusicalNote />}
-        colorScheme='green'
         variant='solid'
         isRound={true}
         borderStyle='solid'
-        borderColor='green.500'
         borderWidth='thin'
-        backgroundColor='#237738ff'
         zIndex={10}
+        // [*] theme colors
+        backgroundColor={theme.menuButton.background}
+        borderColor={theme.menuButton.border}
+        color={theme.menuButton.text}
+        _hover={{ backgroundColor: theme.menuButton.hover }}
       />
 
       <Drawer isOpen={isOpen} placement='left' onClose={onClose} finalFocusRef={btnRef}>
         <DrawerOverlay />
-        <DrawerContent backgroundColor='#237738ff'>
-          <DrawerCloseButton />
+        <DrawerContent
+          // [*] theme colors
+          backgroundColor={theme.drawer.background}
+        >
+          <DrawerCloseButton
+            // [*] theme colors
+            color={theme.closeButton.color}
+          />
           <DrawerHeader>
             <Flex direction='row' gap='5px'>
               <Image
@@ -72,12 +83,25 @@ export const AppMenu = () => {
                 alt='Book of Frets Logo'
                 maxW='25px'
               />
-              <Box as='span'>Book Of Frets</Box>
+              <Box
+                as='span'
+                // [*] theme colors
+                color={theme.drawer.appText}
+              >
+                Book Of Frets
+              </Box>
             </Flex>
           </DrawerHeader>
 
           <DrawerBody>
-            <List display='flex' flexDirection='column' gap='0.5em' fontWeight='bold'>
+            <List
+              display='flex'
+              flexDirection='column'
+              gap='0.5em'
+              fontWeight='bold'
+              // [*] theme colors
+              color={theme.drawer.routeLink}
+            >
               <ListItem onClick={onClose}>
                 <Link to={`/`}>» Home</Link>
               </ListItem>
@@ -100,8 +124,9 @@ export const AppMenu = () => {
                 display='flex'
                 alignItems='center'
                 gap='5px'
-                color='green.900'
-                _hover={{ color: 'green.100' }}
+                // [*] theme colors
+                color={theme.copyright.color}
+                _hover={{ color: theme.copyright.hoverColor }}
               >
                 Copyright <Icon as={MdCopyright} /> 2025 BookOfFrets
               </Text>

@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.16
+ * @version 0.19
  * @description Render song based on given config.
  */
 
@@ -16,22 +16,25 @@ import { Container, Divider, Flex } from '@chakra-ui/react';
 
 import type { TChordsPattern, TSong } from '@/types/song.types';
 
-import { SongSegment } from '@/components/SongRenderer/SongSegment';
-
 import { SongHeader } from '@/components/SongRenderer/SongHeader';
 import { SongResources } from '@/components/SongRenderer/SongResources';
+import { SongSegment } from '@/components/SongRenderer/SongSegment';
+import { useAppTheme } from '@/context/AppState';
 
 type TSongProps = TSong & {
   directory: string;
 };
 
 export const Song = (props: TSongProps) => {
+  const { song: theme } = useAppTheme();
+
   return (
     <Container
       maxW={['100vw', '5xl']}
-      backgroundColor='#237738ff'
       padding={['25px 10px', '2em 1em']}
       borderRadius='1rem'
+      // [*] theme colors
+      backgroundColor={theme.background}
     >
       <SongHeader
         directory={props.directory}
@@ -44,9 +47,10 @@ export const Song = (props: TSongProps) => {
       <Flex
         direction='column'
         gap='5px'
-        bgColor='blackAlpha.400'
         padding='1.5em 1em'
         borderRadius='1rem'
+        // [*] theme colors
+        backgroundColor={theme.segments.background}
       >
         {props.songSegmentsOrder.map((songSegmentName, index) => {
           const songSegmentData = props.songSegments[songSegmentName];
@@ -67,7 +71,10 @@ export const Song = (props: TSongProps) => {
                     )
                 )}
               />
-              <Divider borderColor='gray.600' mb='1em' />
+              <Divider
+                // borderColor='gray.600'
+                mb='1em'
+              />
             </Fragment>
           );
         })}

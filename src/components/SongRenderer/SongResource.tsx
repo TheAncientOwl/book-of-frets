@@ -6,14 +6,15 @@
  *
  * @file SongResource.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.7
  * @description Display song resource data.
  */
 
+import { useAppTheme } from '@/context/AppState';
 import type { TResource } from '@/types/song.types';
 import { AspectRatio, Box, Flex, Icon, Link, ListItem, Skeleton, Text } from '@chakra-ui/react';
-import { IoMdMusicalNote } from 'react-icons/io';
 import { useState } from 'react';
+import { IoMdMusicalNote } from 'react-icons/io';
 
 type TSongResourceProps = TResource;
 
@@ -40,19 +41,36 @@ const getYouTubeVideoId = (url: string): string | null => {
 };
 
 export const SongResource = (props: TSongResourceProps) => {
+  const { song: theme } = useAppTheme();
   const videoId = getYouTubeVideoId(props.link);
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
     <ListItem>
       <Flex direction='column' alignItems='center' textAlign='center'>
-        <Icon as={IoMdMusicalNote} />
+        <Icon
+          as={IoMdMusicalNote}
+          // [*] theme colors
+          color={theme.resources.item.note}
+        />
 
-        <Link isExternal href={props.link} size={['xs', 'sm']} textColor='CaptionText'>
+        <Link
+          isExternal
+          href={props.link}
+          size={['xs', 'sm']}
+          // [*] theme colors
+          color={theme.resources.item.alias}
+        >
           {props.alias}
         </Link>
 
-        <Text fontStyle='italic' textAlign='center' fontSize={['small', 'sm']}>
+        <Text
+          fontStyle='italic'
+          textAlign='center'
+          fontSize={['small', 'sm']}
+          // [*] theme colors
+          color={theme.resources.item.author}
+        >
           by {props.author}
         </Text>
 
