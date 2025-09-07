@@ -12,6 +12,11 @@
       "mainColor": "#575799"
     },
     {
+      "title": "Banananana",
+      "file": "book-of-frets-banana.json",
+      "mainColor": "#fbec5d"
+    },
+    {
       "title": "Bright Sky",
       "file": "book-of-frets-bright-sky.json",
       "mainColor": "#00b4d8"

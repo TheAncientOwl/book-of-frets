@@ -1,0 +1,165 @@
+{
+  "name": "Banananana",
+  "appMenu": {
+    "menuButton": {
+      "background": "#fbec5d",
+      "hover": "yellow.500",
+      "border": "yellow.500",
+      "text": "#6b3e26"
+    },
+    "closeButton": {
+      "color": "#6b3e26"
+    },
+    "drawer": {
+      "background": "#fbec5d",
+      "appText": "#6b3e26",
+      "routeLink": "#6b3e26"
+    },
+    "copyright": {
+      "color": "#6b3e26",
+      "hoverColor": "yellow.100"
+    }
+  },
+  "general": {
+    "background": "gray.900"
+  },
+  "chord": {
+    "background": "#fbec5d",
+    "dividers": "#6b3e26",
+    "title": "#6b3e26"
+  },
+  "fret": {
+    "background": "blackAlpha.300",
+    "dividers": "#6b3e26",
+    "muted": {
+      "background": "red.500",
+      "border": "red.600",
+      "color": "#6b3e26"
+    },
+    "finger": {
+      "background": "yellow.500",
+      "border": "yellow.500",
+      "color": "#6b3e26"
+    }
+  },
+  "songCard": {
+    "background": "blackAlpha.300",
+    "border": "yellow.500",
+    "hover": {
+      "background": "blackAlpha.400"
+    },
+    "cover": {
+      "border": "yellow.500",
+      "hover": {
+        "background": "rgba(0,0,0,0.6)",
+        "play": {
+          "background": "yellow.500",
+          "text": "#6b3e26"
+        }
+      }
+    },
+    "text": {
+      "number": "#6b3e26",
+      "title": "#6b3e26",
+      "authors": "#6b3e26",
+      "typeTags": "#6b3e26"
+    },
+    "chords": {
+      "pick": "#6b3e26",
+      "popover": {
+        "border": "#6b3e26",
+        "background": "gray.900",
+        "arrow": "#6b3e26",
+        "tag": {
+          "background": "yellow.500",
+          "border": "yellow.400",
+          "text": "#6b3e26"
+        }
+      }
+    }
+  },
+  "song": {
+    "background": "#fbec5d",
+    "header": {
+      "title": "#6b3e26",
+      "artists": "#6b3e26",
+      "typeTags": "#6b3e26",
+      "coverBorder": "yellow.500"
+    },
+    "capo": {
+      "background": "yellow.500",
+      "border": "yellow.500",
+      "text": "#6b3e26"
+    },
+    "segments": {
+      "background": "blackAlpha.100",
+      "divider": "#6b3e26",
+      "item": {
+        "title": "#6b3e26",
+        "times": {
+          "background": "yellow.500",
+          "color": "#6b3e26"
+        },
+        "chordsPattern": {
+          "background": "yellow.500",
+          "color": "#6b3e26",
+          "divider": "#6b3e26",
+          "times": "#6b3e26",
+          "chord": {
+            "background": "yellow.500",
+            "color": "#6b3e26",
+            "segment": {
+              "popover": {
+                "background": "gray.900",
+                "arrow": "#6b3e26",
+                "border": "#6b3e26",
+                "closeButton": "#6b3e26"
+              },
+              "times": "#6b3e26",
+              "pattern": "#6b3e26"
+            },
+            "times": {
+              "background": "yellow.500",
+              "color": "#6b3e26"
+            }
+          }
+        },
+        "stringsPattern": {
+          "divider": "#6b3e26",
+          "stringNames": "#6b3e26",
+          "fret": {
+            "background": "yellow.500",
+            "border": "yellow.900",
+            "text": "#6b3e26"
+          },
+          "filler": "#6b3e26"
+        }
+      }
+    },
+    "resources": {
+      "title": "#6b3e26",
+      "item": {
+        "note": "#6b3e26",
+        "alias": "#6b3e26",
+        "author": "#6b3e26"
+      }
+    }
+  },
+  "songsIndexPage": {
+    "background": "#fbec5d"
+  },
+  "settings": {
+    "themePicker": {
+      "background": "#fbec5d",
+      "title": "",
+      "item": {
+        "background": "blackAlpha.400",
+        "hoverBackground": "blackAlpha.500",
+        "border": "yellow.800",
+        "indexColor": "#6b3e26",
+        "colorBoxBorder": "gray.900",
+        "title": "#6b3e26"
+      }
+    }
+  }
+}
