@@ -6,7 +6,7 @@
  *
  * @file ThemePicker.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Display app themes and handles theme setting.
  */
 
@@ -30,12 +30,12 @@ export const ThemePicker = () => {
       });
   }, []);
 
-  const setAppThemeValue = (file: string) => {
-    fetch(`${import.meta.env.BASE_URL}themes/configs/${file}`)
+  const setAppThemeValue = (directory: string) => {
+    fetch(`${import.meta.env.BASE_URL}themes/${directory}/config.json`)
       .then(response => response.json())
       .then(data => setAppTheme !== undefined && setAppTheme(data as TAppTheme))
       .catch(error => {
-        console.error(`Failed to fetch theme data of file ${file}`, error);
+        console.error(`Failed to fetch theme data of file ${directory}`, error);
       });
   };
 
@@ -69,7 +69,7 @@ export const ThemePicker = () => {
             borderStyle='solid'
             borderWidth='thin'
             cursor='pointer'
-            onClick={() => setAppThemeValue(themeEntry.file)}
+            onClick={() => setAppThemeValue(themeEntry.directory)}
             // [*] theme colors
             backgroundColor={theme.themePicker.item.background}
             borderColor={theme.themePicker.item.border}

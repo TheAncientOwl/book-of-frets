@@ -6,7 +6,7 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description App theme types
  */
 
@@ -195,6 +195,6 @@ export type TAppTheme = {
 
 export type TThemeIndexEntry = {
   title: string;
-  file: string;
+  directory: string;
   mainColor: string;
 };
