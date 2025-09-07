@@ -6,7 +6,7 @@
  *
  * @file default.ts
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Default app theme
  */
 
@@ -147,6 +147,16 @@ const DefaultSongTheme: TSongTheme = {
             color: 'white',
           },
         },
+      },
+      stringsPattern: {
+        divider: 'white',
+        stringNames: 'white',
+        fret: {
+          background: 'green.600',
+          border: 'green.900',
+          text: 'white',
+        },
+        filler: 'white',
       },
     },
   },
