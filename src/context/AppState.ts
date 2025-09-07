@@ -6,25 +6,29 @@
  *
  * @file AppState.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description App component.
  */
 
 import { DefaultAppTheme } from '@/theme/default';
 import type { TAppTheme } from '@/theme/types';
 import type { TChordsIndex } from '@/types/chord.types';
-import { createContext, useContext, type Dispatch } from 'react';
+import { createContext, useContext, type Dispatch, type SetStateAction } from 'react';
 
 export type TAppState = {
   chordsIndex: TChordsIndex;
   appTheme: TAppTheme;
-  setAppTheme: Dispatch<React.SetStateAction<TAppTheme>> | undefined;
+  setAppTheme: Dispatch<SetStateAction<TAppTheme>> | undefined;
+  appLogoURL: string;
+  setAppLogoURL: Dispatch<SetStateAction<string>> | undefined;
 };
 
 export const AppState = createContext<TAppState>({
   chordsIndex: {},
   appTheme: DefaultAppTheme,
   setAppTheme: undefined,
+  appLogoURL: `${import.meta.env.BASE_URL}book-of-frets.svg`,
+  setAppLogoURL: undefined,
 });
 
 export const useAppStateContext = () => {

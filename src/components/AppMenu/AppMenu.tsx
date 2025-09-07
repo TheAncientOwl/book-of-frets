@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description App menu component.
  */
 
@@ -33,13 +33,14 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 
-import { useAppTheme } from '@/context/AppState';
+import { useAppStateContext, useAppTheme } from '@/context/AppState';
 import { IoMdMusicalNote } from 'react-icons/io';
 import { MdCopyright } from 'react-icons/md';
 
 // TODO: Implement songs history
 export const AppMenu = () => {
   const { appMenu: theme } = useAppTheme();
+  const { appLogoURL } = useAppStateContext();
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef(null);
@@ -78,11 +79,7 @@ export const AppMenu = () => {
           />
           <DrawerHeader>
             <Flex direction='row' gap='5px'>
-              <Image
-                src={`${import.meta.env.BASE_URL}book-of-frets.svg`}
-                alt='Book of Frets Logo'
-                maxW='25px'
-              />
+              <Image src={appLogoURL} alt='Book of Frets Logo' maxW='25px' />
               <Box
                 as='span'
                 // [*] theme colors
