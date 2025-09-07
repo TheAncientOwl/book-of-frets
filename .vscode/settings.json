@@ -11,6 +11,14 @@
     {
       "fileMatch": ["public/chords/index.json"],
       "url": "./src/schemas/chords-index.schema.json"
+    },
+    {
+      "fileMatch": ["public/themes/index.json"],
+      "url": "./src/schemas/themes-index.schema.json"
+    },
+    {
+      "fileMatch": ["public/themes/configs/*.json"],
+      "url": "./src/schemas/theme.schema.json"
     }
   ],
   "typescript.preferences.importModuleSpecifier": "non-relative",

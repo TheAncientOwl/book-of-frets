@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Themes Index Schema | v0.1.0",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "index": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "file": { "type": "string" },
+          "mainColor": { "type": "string" }
+        },
+        "required": ["title", "file", "mainColor"]
+      }
+    }
+  },
+  "required": ["version", "index"]
+}

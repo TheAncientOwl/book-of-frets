@@ -6,12 +6,14 @@
  *
  * @file default.ts
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Default app theme
  */
 
 import type {
   TAppMenuTheme,
+  TAppSettingsTheme,
+  TAppTheme,
   TChordTheme,
   TFretTheme,
   TGeneralAppTheme,
@@ -174,7 +176,23 @@ const DefaultSongsIndexPageTheme: TSongsIndexPageTheme = {
   background: '#2B8C44',
 };
 
-export const DefaultAppTheme = {
+const DefaultSettingsTheme: TAppSettingsTheme = {
+  themePicker: {
+    background: '#2B8C44',
+    title: '',
+    item: {
+      background: 'blackAlpha.400',
+      hoverBackground: 'blackAlpha.500',
+      border: 'green.800',
+      indexColor: 'white',
+      colorBoxBorder: 'gray.900',
+      title: 'white',
+    },
+  },
+};
+
+export const DefaultAppTheme: TAppTheme = {
+  name: 'BookOfFrets ~ Nature',
   appMenu: DefaultAppMenuTheme,
   general: DefaultGeneralAppTheme,
   chord: DefaultChordTheme,
@@ -182,4 +200,5 @@ export const DefaultAppTheme = {
   songCard: DefaultSongCardTheme,
   song: DefaultSongTheme,
   songsIndexPage: DefaultSongsIndexPageTheme,
+  settings: DefaultSettingsTheme,
 };

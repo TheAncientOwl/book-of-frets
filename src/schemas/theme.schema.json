@@ -1,0 +1,342 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "App Theme Schema",
+  "description": "JSON schema for BookOfFrets theme configuration | v0.1.0",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "appMenu": {
+      "type": "object",
+      "properties": {
+        "menuButton": {
+          "type": "object",
+          "properties": {
+            "background": { "type": "string" },
+            "hover": { "type": "string" },
+            "border": { "type": "string" },
+            "text": { "type": "string" }
+          },
+          "required": ["background", "hover", "border", "text"]
+        },
+        "closeButton": {
+          "type": "object",
+          "properties": {
+            "color": { "type": "string" }
+          },
+          "required": ["color"]
+        },
+        "drawer": {
+          "type": "object",
+          "properties": {
+            "background": { "type": "string" },
+            "appText": { "type": "string" },
+            "routeLink": { "type": "string" }
+          },
+          "required": ["background", "appText", "routeLink"]
+        },
+        "copyright": {
+          "type": "object",
+          "properties": {
+            "color": { "type": "string" },
+            "hoverColor": { "type": "string" }
+          },
+          "required": ["color", "hoverColor"]
+        }
+      },
+      "required": ["menuButton", "closeButton", "drawer", "copyright"]
+    },
+    "general": {
+      "type": "object",
+      "properties": {
+        "background": { "type": "string" }
+      },
+      "required": ["background"]
+    },
+    "chord": {
+      "type": "object",
+      "properties": {
+        "background": { "type": "string" },
+        "dividers": { "type": "string" },
+        "title": { "type": "string" }
+      },
+      "required": ["background", "dividers", "title"]
+    },
+    "fret": {
+      "type": "object",
+      "properties": {
+        "background": { "type": "string" },
+        "dividers": { "type": "string" },
+        "muted": {
+          "type": "object",
+          "properties": {
+            "background": { "type": "string" },
+            "border": { "type": "string" },
+            "color": { "type": "string" }
+          },
+          "required": ["background", "border", "color"]
+        },
+        "finger": {
+          "type": "object",
+          "properties": {
+            "background": { "type": "string" },
+            "border": { "type": "string" },
+            "color": { "type": "string" }
+          },
+          "required": ["background", "border", "color"]
+        }
+      },
+      "required": ["background", "dividers", "muted", "finger"]
+    },
+    "songCard": {
+      "type": "object",
+      "properties": {
+        "background": { "type": "string" },
+        "border": { "type": "string" },
+        "hover": {
+          "type": "object",
+          "properties": {
+            "background": { "type": "string" }
+          },
+          "required": ["background"]
+        },
+        "cover": {
+          "type": "object",
+          "properties": {
+            "border": { "type": "string" },
+            "hover": {
+              "type": "object",
+              "properties": {
+                "background": { "type": "string" },
+                "play": {
+                  "type": "object",
+                  "properties": {
+                    "background": { "type": "string" },
+                    "text": { "type": "string" }
+                  },
+                  "required": ["background", "text"]
+                }
+              },
+              "required": ["background", "play"]
+            }
+          },
+          "required": ["border", "hover"]
+        },
+        "text": {
+          "type": "object",
+          "properties": {
+            "number": { "type": "string" },
+            "title": { "type": "string" },
+            "authors": { "type": "string" },
+            "typeTags": { "type": "string" }
+          },
+          "required": ["number", "title", "authors", "typeTags"]
+        },
+        "chords": {
+          "type": "object",
+          "properties": {
+            "pick": { "type": "string" },
+            "popover": {
+              "type": "object",
+              "properties": {
+                "background": { "type": "string" },
+                "border": { "type": "string" },
+                "arrow": { "type": "string" },
+                "tag": {
+                  "type": "object",
+                  "properties": {
+                    "background": { "type": "string" },
+                    "border": { "type": "string" },
+                    "text": { "type": "string" }
+                  },
+                  "required": ["background", "border", "text"]
+                }
+              },
+              "required": ["background", "border", "arrow", "tag"]
+            }
+          },
+          "required": ["pick", "popover"]
+        }
+      },
+      "required": ["background", "border", "hover", "cover", "text", "chords"]
+    },
+    "song": {
+      "type": "object",
+      "properties": {
+        "background": { "type": "string" },
+        "header": {
+          "type": "object",
+          "properties": {
+            "title": { "type": "string" },
+            "artists": { "type": "string" },
+            "typeTags": { "type": "string" },
+            "coverBorder": { "type": "string" }
+          },
+          "required": ["title", "artists", "typeTags", "coverBorder"]
+        },
+        "capo": {
+          "type": "object",
+          "properties": {
+            "background": { "type": "string" },
+            "border": { "type": "string" },
+            "text": { "type": "string" }
+          },
+          "required": ["background", "border", "text"]
+        },
+        "segments": {
+          "type": "object",
+          "properties": {
+            "background": { "type": "string" },
+            "item": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string" },
+                "times": {
+                  "type": "object",
+                  "properties": {
+                    "background": { "type": "string" },
+                    "color": { "type": "string" }
+                  },
+                  "required": ["background", "color"]
+                },
+                "chordsPattern": {
+                  "type": "object",
+                  "properties": {
+                    "background": { "type": "string" },
+                    "color": { "type": "string" },
+                    "divider": { "type": "string" },
+                    "times": { "type": "string" },
+                    "chord": {
+                      "type": "object",
+                      "properties": {
+                        "background": { "type": "string" },
+                        "color": { "type": "string" },
+                        "segment": {
+                          "type": "object",
+                          "properties": {
+                            "popover": {
+                              "type": "object",
+                              "properties": {
+                                "background": { "type": "string" },
+                                "arrow": { "type": "string" },
+                                "border": { "type": "string" },
+                                "closeButton": { "type": "string" }
+                              },
+                              "required": ["background", "arrow", "border", "closeButton"]
+                            },
+                            "times": { "type": "string" },
+                            "pattern": { "type": "string" }
+                          },
+                          "required": ["popover", "times", "pattern"]
+                        },
+                        "times": {
+                          "type": "object",
+                          "properties": {
+                            "background": { "type": "string" },
+                            "color": { "type": "string" }
+                          },
+                          "required": ["background", "color"]
+                        }
+                      },
+                      "required": ["background", "color", "segment", "times"]
+                    }
+                  },
+                  "required": ["background", "color", "divider", "times", "chord"]
+                },
+                "stringsPattern": {
+                  "type": "object",
+                  "properties": {
+                    "divider": { "type": "string" },
+                    "stringNames": { "type": "string" },
+                    "fret": {
+                      "type": "object",
+                      "properties": {
+                        "background": { "type": "string" },
+                        "border": { "type": "string" },
+                        "text": { "type": "string" }
+                      },
+                      "required": ["background", "border", "text"]
+                    },
+                    "filler": { "type": "string" }
+                  },
+                  "required": ["divider", "stringNames", "fret", "filler"]
+                }
+              },
+              "required": ["title", "times", "chordsPattern", "stringsPattern"]
+            }
+          },
+          "required": ["background", "item"]
+        },
+        "resources": {
+          "type": "object",
+          "properties": {
+            "title": { "type": "string" },
+            "item": {
+              "type": "object",
+              "properties": {
+                "note": { "type": "string" },
+                "alias": { "type": "string" },
+                "author": { "type": "string" }
+              },
+              "required": ["note", "alias", "author"]
+            }
+          },
+          "required": ["title", "item"]
+        }
+      },
+      "required": ["background", "header", "capo", "segments", "resources"]
+    },
+    "songsIndexPage": {
+      "type": "object",
+      "properties": {
+        "background": { "type": "string" }
+      },
+      "required": ["background"]
+    },
+    "settings": {
+      "type": "object",
+      "properties": {
+        "themePicker": {
+          "type": "object",
+          "properties": {
+            "background": { "type": "string" },
+            "title": { "type": "string" },
+            "item": {
+              "type": "object",
+              "properties": {
+                "background": { "type": "string" },
+                "border": { "type": "string" },
+                "hoverBackground": { "type": "string" },
+                "indexColor": { "type": "string" },
+                "colorBoxBorder": { "type": "string" },
+                "title": { "type": "string" }
+              },
+              "required": [
+                "background",
+                "border",
+                "hoverBackground",
+                "indexColor",
+                "colorBoxBorder",
+                "title"
+              ]
+            }
+          },
+          "required": ["background", "title", "item"]
+        }
+      },
+      "required": ["themePicker"]
+    }
+  },
+  "required": [
+    "name",
+    "appMenu",
+    "general",
+    "chord",
+    "fret",
+    "songCard",
+    "song",
+    "songsIndexPage",
+    "settings"
+  ]
+}

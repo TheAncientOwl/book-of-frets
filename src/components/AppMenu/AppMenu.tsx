@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description App menu component.
  */
 
@@ -110,6 +110,9 @@ export const AppMenu = () => {
               </ListItem>
               <ListItem onClick={onClose}>
                 <Link to={`/index/songs`}>» Songs</Link>
+              </ListItem>
+              <ListItem onClick={onClose}>
+                <Link to={`/settings`}>» Settings</Link>
               </ListItem>
             </List>
           </DrawerBody>

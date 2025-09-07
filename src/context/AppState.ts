@@ -6,21 +6,26 @@
  *
  * @file AppState.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description App component.
  */
 
 import { DefaultAppTheme } from '@/theme/default';
 import type { TAppTheme } from '@/theme/types';
 import type { TChordsIndex } from '@/types/chord.types';
-import { createContext, useContext } from 'react';
+import { createContext, useContext, type Dispatch } from 'react';
 
 export type TAppState = {
   chordsIndex: TChordsIndex;
   appTheme: TAppTheme;
+  setAppTheme: Dispatch<React.SetStateAction<TAppTheme>> | undefined;
 };
 
-export const AppState = createContext<TAppState>({ chordsIndex: {}, appTheme: DefaultAppTheme });
+export const AppState = createContext<TAppState>({
+  chordsIndex: {},
+  appTheme: DefaultAppTheme,
+  setAppTheme: undefined,
+});
 
 export const useAppStateContext = () => {
   const context = useContext(AppState);

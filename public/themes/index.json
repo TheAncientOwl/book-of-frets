@@ -1,0 +1,30 @@
+{
+  "version": "0.1.0",
+  "index": [
+    {
+      "title": "Nature",
+      "file": "book-of-frets-nature.json",
+      "mainColor": "#2B8C44"
+    },
+    {
+      "title": "Lavander",
+      "file": "book-of-frets-lavander.json",
+      "mainColor": "#575799"
+    },
+    {
+      "title": "Bright Sky",
+      "file": "book-of-frets-bright-sky.json",
+      "mainColor": "#00b4d8"
+    },
+    {
+      "title": "Bubble Gum",
+      "file": "book-of-frets-bubble-gum.json",
+      "mainColor": "#ff77bc"
+    },
+    {
+      "title": "Peach",
+      "file": "book-of-frets-peach.json",
+      "mainColor": "#ff9248"
+    }
+  ]
+}

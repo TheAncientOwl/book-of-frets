@@ -6,7 +6,7 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description App theme types
  */
 
@@ -164,7 +164,23 @@ export type TGeneralAppTheme = {
   background: string;
 };
 
+export type TAppSettingsTheme = {
+  themePicker: {
+    background: string;
+    title: string;
+    item: {
+      background: string;
+      border: string;
+      hoverBackground: string;
+      indexColor: string;
+      colorBoxBorder: string;
+      title: string;
+    };
+  };
+};
+
 export type TAppTheme = {
+  name: string;
   appMenu: TAppMenuTheme;
   general: TGeneralAppTheme;
   chord: TChordTheme;
@@ -172,4 +188,11 @@ export type TAppTheme = {
   songCard: TSongCardTheme;
   song: TSongTheme;
   songsIndexPage: TSongsIndexPageTheme;
+  settings: TAppSettingsTheme;
+};
+
+export type TThemeIndexEntry = {
+  title: string;
+  file: string;
+  mainColor: string;
 };

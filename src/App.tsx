@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.21
+ * @version 0.22
  * @description App component.
  */
 
@@ -19,26 +19,30 @@ import { AppMenu } from '@/components/AppMenu/AppMenu';
 import { HomePage } from '@/pages/HomePage';
 
 import { AppState, type TAppState } from '@/context/AppState';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { DefaultAppTheme } from '@/theme/default';
+import type { TAppTheme } from '@/theme/types';
 import type { TChordsIndex } from '@/types/chord.types';
 
 const SongPage = lazy(() => import('@/pages/SongPage'));
 const ChordsIndexPage = lazy(() => import('@/pages/ChordsIndexPage'));
 const SongsIndexPage = lazy(() => import('@/pages/SongsIndexPage'));
+const SettingsPage = lazy(() => import('@/pages/SettingsPage'));
 
 export const App = () => {
   const [chordsIndex, setChordsIndex] = useState<TChordsIndex>({});
+  const [appTheme, setAppTheme] = useLocalStorage<TAppTheme>('app-theme', DefaultAppTheme);
 
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}chords/index.json`)
       .then(res => res.json())
       .then(data => setChordsIndex(data.index as TChordsIndex))
       .catch(() => setChordsIndex({}));
-  }, []);
+  }, [setChordsIndex, setAppTheme]);
 
   const appStateValue: TAppState = useMemo(
-    () => ({ chordsIndex, appTheme: DefaultAppTheme }),
-    [chordsIndex]
+    () => ({ chordsIndex, appTheme, setAppTheme }),
+    [chordsIndex, appTheme, setAppTheme]
   );
 
   return (
@@ -76,6 +80,14 @@ export const App = () => {
               element={
                 <Suspense fallback={<div>Loading...</div>}>
                   <SongsIndexPage />
+                </Suspense>
+              }
+            />
+            <Route
+              path='/settings'
+              element={
+                <Suspense fallback={<div>Loading...</div>}>
+                  <SettingsPage />
                 </Suspense>
               }
             />
