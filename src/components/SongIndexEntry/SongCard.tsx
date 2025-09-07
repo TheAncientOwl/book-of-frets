@@ -6,7 +6,7 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.13
+ * @version 0.14
  * @description List all available songs.
  */
 
@@ -24,14 +24,14 @@ import {
   PopoverContent,
   PopoverTrigger,
   SimpleGrid,
+  Skeleton,
   Tag,
   Text,
   Tooltip,
-  Skeleton,
 } from '@chakra-ui/react';
 import { GiGuitarBassHead, GiGuitarHead } from 'react-icons/gi';
 
-import { useAppStateContext } from '@/context/AppState';
+import { useAppStateContext, useAppTheme } from '@/context/AppState';
 import type { TSongsIndexEntry } from '@/types/song.types';
 import { TbGuitarPickFilled } from 'react-icons/tb';
 
@@ -44,81 +44,9 @@ const typeToIcon = {
   electric: <GiGuitarBassHead />,
 };
 
-export type TSongCardTheme = {
-  background: string;
-  border: string;
-  hover: {
-    background: string;
-  };
-  cover: {
-    border: string;
-    hover: {
-      background: string;
-      play: {
-        background: string;
-        text: string;
-      };
-    };
-  };
-  text: {
-    number: string;
-    title: string;
-    authors: string;
-    typeTags: string;
-  };
-  chords: {
-    pick: string;
-    popover: {
-      background: string;
-      border: string;
-      arrow: string;
-      tag: {
-        background: string;
-        border: string;
-        text: string;
-      };
-    };
-  };
-};
-
-const DefaultSongCardTheme: TSongCardTheme = {
-  background: 'blackAlpha.400',
-  border: 'green.600',
-  hover: {
-    background: 'blackAlpha.500',
-  },
-  cover: {
-    border: 'green.500',
-    hover: {
-      background: 'rgba(0,0,0,0.6)',
-      play: {
-        background: 'green.600',
-        text: 'white',
-      },
-    },
-  },
-  text: {
-    number: 'white',
-    title: 'white',
-    authors: 'white',
-    typeTags: 'white',
-  },
-  chords: {
-    pick: 'white',
-    popover: {
-      border: 'white',
-      background: 'gray.900',
-      arrow: 'white',
-      tag: {
-        background: 'green.600',
-        border: 'green.400',
-        text: 'white',
-      },
-    },
-  },
-};
-
 export const SongCard = (props: SongProps) => {
+  const { songCard: theme } = useAppTheme();
+
   const navigate = useNavigate();
   const { chordsIndex } = useAppStateContext();
   const [isImageLoaded, setIsImageLoaded] = useState(false);
@@ -134,9 +62,9 @@ export const SongCard = (props: SongProps) => {
       position='relative'
       onClick={() => navigate(`/${props.directory}`)}
       // [*] theme colors
-      backgroundColor={DefaultSongCardTheme.background}
-      borderColor={DefaultSongCardTheme.border}
-      _hover={{ backgroundColor: DefaultSongCardTheme.hover.background }}
+      backgroundColor={theme.background}
+      borderColor={theme.border}
+      _hover={{ backgroundColor: theme.hover.background }}
     >
       <Text
         fontWeight='bold'
@@ -144,7 +72,7 @@ export const SongCard = (props: SongProps) => {
         alignContent='center'
         textAlign='right'
         // [*] theme colors
-        color={DefaultSongCardTheme.text.number}
+        color={theme.text.number}
       >
         {props.index}
       </Text>
@@ -170,7 +98,7 @@ export const SongCard = (props: SongProps) => {
             borderWidth='3px'
             onLoad={() => setIsImageLoaded(true)}
             // [*] theme colors
-            borderColor={DefaultSongCardTheme.cover.border}
+            borderColor={theme.cover.border}
           />
         </Skeleton>
 
@@ -197,7 +125,7 @@ export const SongCard = (props: SongProps) => {
             justifyContent='center'
             alignItems='center'
             // [*] theme colors
-            backgroundColor={DefaultSongCardTheme.cover.hover.play.background}
+            backgroundColor={theme.cover.hover.play.background}
           >
             <Box
               as='span'
@@ -207,7 +135,7 @@ export const SongCard = (props: SongProps) => {
               borderTop='6px solid transparent'
               borderBottom='6px solid transparent'
               // [*] theme colors
-              borderLeft={`10px solid ${DefaultSongCardTheme.cover.hover.play.text}`}
+              borderLeft={`10px solid ${theme.cover.hover.play.text}`}
             />
           </Box>
         </Flex>
@@ -220,7 +148,7 @@ export const SongCard = (props: SongProps) => {
           size={['sm', 'md']}
           mb={['5px']}
           // [*] theme colors
-          color={DefaultSongCardTheme.text.title}
+          color={theme.text.title}
         >
           {props.title}
         </Heading>
@@ -232,7 +160,7 @@ export const SongCard = (props: SongProps) => {
           mb={['5px']}
           fontStyle='italic'
           // [*] theme colors
-          color={DefaultSongCardTheme.text.authors}
+          color={theme.text.authors}
         >
           {props.artists.map((artist, index) => (
             <Box key={index} as='span'>
@@ -243,7 +171,7 @@ export const SongCard = (props: SongProps) => {
 
         <Flex
           // [*] theme colors
-          color={DefaultSongCardTheme.text.typeTags}
+          color={theme.text.typeTags}
         >
           {props.type.map((item, index) => (
             <Fragment key={index}>
@@ -264,19 +192,19 @@ export const SongCard = (props: SongProps) => {
               fontSize='20px'
               padding='5px'
               // [*] theme colors
-              color={DefaultSongCardTheme.chords.pick}
+              color={theme.chords.pick}
             >
               <TbGuitarPickFilled />
             </Box>
           </PopoverTrigger>
           <PopoverContent
             // [*] theme colors
-            backgroundColor={DefaultSongCardTheme.chords.popover.background}
-            borderColor={DefaultSongCardTheme.chords.popover.border}
+            backgroundColor={theme.chords.popover.background}
+            borderColor={theme.chords.popover.border}
           >
             <PopoverArrow
               // [*] theme colors
-              backgroundColor={DefaultSongCardTheme.chords.popover.arrow}
+              backgroundColor={theme.chords.popover.arrow}
             />
             <PopoverBody>
               <Flex gap='5px' wrap='wrap'>
@@ -296,9 +224,9 @@ export const SongCard = (props: SongProps) => {
                       key={chordId}
                       justifyContent='center'
                       // [*] theme colors
-                      backgroundColor={DefaultSongCardTheme.chords.popover.tag.background}
-                      borderColor={DefaultSongCardTheme.chords.popover.tag.border}
-                      color={DefaultSongCardTheme.chords.popover.tag.text}
+                      backgroundColor={theme.chords.popover.tag.background}
+                      borderColor={theme.chords.popover.tag.border}
+                      color={theme.chords.popover.tag.text}
                     >
                       {chordsIndex[chordId].name}
                     </Tag>

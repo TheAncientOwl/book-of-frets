@@ -6,7 +6,7 @@
  *
  * @file ChordsPattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.15
+ * @version 0.16
  * @description Render song chords pattern.
  */
 
@@ -14,29 +14,34 @@ import { Fragment } from 'react';
 
 import { Box, Divider, Tag, Tooltip } from '@chakra-ui/react';
 
-import type { TChordsPattern } from '@/types/song.types';
-
 import { ChordsPatternSegment } from '@/components/SongRenderer/ChordsPatternSegment.tsx';
-import { DefaultSongTheme } from '@/components/SongRenderer/Song';
+import { useAppTheme } from '@/context/AppState';
+import type { TChordsPattern } from '@/types/song.types';
 
 type TChordsPatternProps = TChordsPattern & {
   showChordTimes: boolean;
 };
 
-const ChordsPatternDivider = () => (
-  <Divider
-    orientation='vertical'
-    height={['0px', '80px']}
-    borderWidth='thin'
-    borderStyle={['dashed', 'solid']}
-    mt={['15px', '0px']}
-    mb={['15px', '0px']}
-    // [*] theme colors
-    borderColor={DefaultSongTheme.segments.item.chordsPattern.divider}
-  />
-);
+const ChordsPatternDivider = () => {
+  const { song: theme } = useAppTheme();
+
+  return (
+    <Divider
+      orientation='vertical'
+      height={['0px', '80px']}
+      borderWidth='thin'
+      borderStyle={['dashed', 'solid']}
+      mt={['15px', '0px']}
+      mb={['15px', '0px']}
+      // [*] theme colors
+      borderColor={theme.segments.item.chordsPattern.divider}
+    />
+  );
+};
 
 export const ChordsPattern = (props: TChordsPatternProps) => {
+  const { song: theme } = useAppTheme();
+
   return (
     <Box
       width='100%'
@@ -59,7 +64,7 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
       <Tooltip
         label={`Repeat ${props.times} times`}
         // [*] theme colors
-        borderColor={DefaultSongTheme.segments.item.chordsPattern.divider}
+        borderColor={theme.segments.item.chordsPattern.divider}
       >
         <Tag
           size='sm'
@@ -70,8 +75,8 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
           transform='translate(0%, -50%)'
           zIndex={1}
           // [*] theme colors
-          backgroundColor={DefaultSongTheme.segments.item.chordsPattern.chord.times.background}
-          color={DefaultSongTheme.segments.item.chordsPattern.chord.times.color}
+          backgroundColor={theme.segments.item.chordsPattern.chord.times.background}
+          color={theme.segments.item.chordsPattern.chord.times.color}
         >
           x{props.times}
         </Tag>

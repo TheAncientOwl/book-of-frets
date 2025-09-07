@@ -6,57 +6,30 @@
  *
  * @file Fret.tsx
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description Render chrod based on given config.
  */
 
 import { Fragment } from 'react';
 import { IoCloseSharp } from 'react-icons/io5';
 
+import { useAppTheme } from '@/context/AppState';
 import { Circle, Divider, Flex, Icon, Spacer } from '@chakra-ui/react';
-
-export type TFretTheme = {
-  background: string;
-  dividers: string;
-  muted: {
-    background: string;
-    border: string;
-    color: string;
-  };
-  finger: {
-    background: string;
-    border: string;
-    color: string;
-  };
-};
-
-const DefaultFretTheme: TFretTheme = {
-  background: 'blackAlpha.300',
-  dividers: 'white',
-  muted: {
-    background: 'red.500',
-    border: 'red.600',
-    color: 'white',
-  },
-  finger: {
-    background: 'green.500',
-    border: 'green.600',
-    color: 'white',
-  },
-};
 
 type TFretProps = {
   stringsToFingers: Map<number, number>;
 };
 
 export const Fret = (props: TFretProps) => {
+  const { fret: theme } = useAppTheme();
+
   return (
     <Flex
       direction='row'
       height='5em'
       position='relative'
       // [*] theme colors
-      backgroundColor={DefaultFretTheme.background}
+      backgroundColor={theme.background}
     >
       {[1, 2, 3, 4, 5, 6].map(stringIdx => {
         const hasFinger = props.stringsToFingers.has(stringIdx);
@@ -80,9 +53,9 @@ export const Fret = (props: TFretProps) => {
                 padding='0.75em'
                 zIndex='1'
                 // [*] theme colors
-                backgroundColor={DefaultFretTheme.muted.background}
-                borderColor={DefaultFretTheme.muted.border}
-                color={DefaultFretTheme.muted.color}
+                backgroundColor={theme.muted.background}
+                borderColor={theme.muted.border}
+                color={theme.muted.color}
               >
                 <Icon as={IoCloseSharp} />
               </Circle>
@@ -91,7 +64,7 @@ export const Fret = (props: TFretProps) => {
               orientation='vertical'
               borderWidth='thin'
               // [*] theme colors
-              borderColor={DefaultFretTheme.dividers}
+              borderColor={theme.dividers}
             />
             {stringIdx < 6 && <Spacer />}
             {hasFinger && (
@@ -106,9 +79,9 @@ export const Fret = (props: TFretProps) => {
                 padding='0.75em'
                 zIndex='1'
                 // [*] theme colors
-                backgroundColor={DefaultFretTheme.finger.background}
-                borderColor={DefaultFretTheme.finger.border}
-                color={DefaultFretTheme.finger.color}
+                backgroundColor={theme.finger.background}
+                borderColor={theme.finger.border}
+                color={theme.finger.color}
               >
                 {finger === 7 ? 'T' : finger}
               </Circle>

@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.20
+ * @version 0.21
  * @description App component.
  */
 
@@ -19,19 +19,12 @@ import { AppMenu } from '@/components/AppMenu/AppMenu';
 import { HomePage } from '@/pages/HomePage';
 
 import { AppState, type TAppState } from '@/context/AppState';
+import { DefaultAppTheme } from '@/theme/default';
 import type { TChordsIndex } from '@/types/chord.types';
 
 const SongPage = lazy(() => import('@/pages/SongPage'));
 const ChordsIndexPage = lazy(() => import('@/pages/ChordsIndexPage'));
 const SongsIndexPage = lazy(() => import('@/pages/SongsIndexPage'));
-
-export type TGeneralAppTheme = {
-  background: string;
-};
-
-const DefaultGeneralAppTheme: TGeneralAppTheme = {
-  background: 'gray.900',
-};
 
 export const App = () => {
   const [chordsIndex, setChordsIndex] = useState<TChordsIndex>({});
@@ -43,7 +36,10 @@ export const App = () => {
       .catch(() => setChordsIndex({}));
   }, []);
 
-  const appStateValue: TAppState = useMemo(() => ({ chordsIndex }), [chordsIndex]);
+  const appStateValue: TAppState = useMemo(
+    () => ({ chordsIndex, appTheme: DefaultAppTheme }),
+    [chordsIndex]
+  );
 
   return (
     <ChakraProvider>
@@ -53,7 +49,7 @@ export const App = () => {
           width='100vw'
           minHeight='100vh'
           padding={['0em', '0em', '1em', '2em']}
-          background={DefaultGeneralAppTheme.background}
+          background={appStateValue.appTheme.general.background}
         >
           <AppMenu />
 

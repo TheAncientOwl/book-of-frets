@@ -6,15 +6,15 @@
  *
  * @file SongResource.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description Display song resource data.
  */
 
+import { useAppTheme } from '@/context/AppState';
 import type { TResource } from '@/types/song.types';
 import { AspectRatio, Box, Flex, Icon, Link, ListItem, Skeleton, Text } from '@chakra-ui/react';
-import { IoMdMusicalNote } from 'react-icons/io';
 import { useState } from 'react';
-import { DefaultSongTheme } from '@/components/SongRenderer/Song';
+import { IoMdMusicalNote } from 'react-icons/io';
 
 type TSongResourceProps = TResource;
 
@@ -41,6 +41,7 @@ const getYouTubeVideoId = (url: string): string | null => {
 };
 
 export const SongResource = (props: TSongResourceProps) => {
+  const { song: theme } = useAppTheme();
   const videoId = getYouTubeVideoId(props.link);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -50,7 +51,7 @@ export const SongResource = (props: TSongResourceProps) => {
         <Icon
           as={IoMdMusicalNote}
           // [*] theme colors
-          color={DefaultSongTheme.resources.item.note}
+          color={theme.resources.item.note}
         />
 
         <Link
@@ -58,7 +59,7 @@ export const SongResource = (props: TSongResourceProps) => {
           href={props.link}
           size={['xs', 'sm']}
           // [*] theme colors
-          color={DefaultSongTheme.resources.item.alias}
+          color={theme.resources.item.alias}
         >
           {props.alias}
         </Link>
@@ -68,7 +69,7 @@ export const SongResource = (props: TSongResourceProps) => {
           textAlign='center'
           fontSize={['small', 'sm']}
           // [*] theme colors
-          color={DefaultSongTheme.resources.item.author}
+          color={theme.resources.item.author}
         >
           by {props.author}
         </Text>

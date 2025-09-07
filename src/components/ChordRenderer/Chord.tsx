@@ -6,7 +6,7 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description Render chrod based on given config.
  */
 
@@ -14,21 +14,9 @@ import { Fragment } from 'react';
 
 import { Box, Divider, Heading } from '@chakra-ui/react';
 
-import type { TFret } from '@/types/chord.types';
-
 import { Fret } from '@/components/ChordRenderer/Fret';
-
-export type TChordTheme = {
-  background: string;
-  dividers: string;
-  title: string;
-};
-
-const DefaultChordTheme: TChordTheme = {
-  background: '#2B8C44',
-  dividers: 'white',
-  title: 'white',
-};
+import { useAppTheme } from '@/context/AppState';
+import type { TFret } from '@/types/chord.types';
 
 type TChordProps = {
   name: string;
@@ -36,6 +24,8 @@ type TChordProps = {
 };
 
 export const Chord = (props: TChordProps) => {
+  const { chord: theme } = useAppTheme();
+
   return (
     <Box
       width='12em'
@@ -43,14 +33,14 @@ export const Chord = (props: TChordProps) => {
       borderRadius='1em'
       fontSize='15px'
       // [*] theme colors
-      background={DefaultChordTheme.background}
+      background={theme.background}
     >
       <Heading
         size='xl'
         textAlign='center'
         mb='0.25em'
         // [*] theme colors
-        color={DefaultChordTheme.title}
+        color={theme.title}
       >
         {props.name}
       </Heading>
@@ -58,7 +48,7 @@ export const Chord = (props: TChordProps) => {
         <Divider
           borderWidth='thin'
           // [*] theme colors
-          borderColor={DefaultChordTheme.dividers}
+          borderColor={theme.dividers}
         />
         {props.frets.map((fret, idx) => {
           const map = new Map<number, number>(
@@ -72,7 +62,7 @@ export const Chord = (props: TChordProps) => {
                 <Divider
                   borderWidth='thin'
                   // [*] theme colors
-                  borderColor={DefaultChordTheme.dividers}
+                  borderColor={theme.dividers}
                 />
               )}
             </Fragment>

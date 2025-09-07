@@ -6,27 +6,26 @@
  *
  * @file ChordsPatternSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 0.12
  * @description Render song pattern segment.
  */
 
 import {
   Box,
   Flex,
+  Popover,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverTrigger,
   Tag,
   Text,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverCloseButton,
-  PopoverArrow,
   Tooltip,
 } from '@chakra-ui/react';
 
-import { useAppStateContext } from '@/context/AppState';
-import type { TChordsPatternSegment } from '@/types/song.types';
 import { Chord } from '@/components/ChordRenderer/Chord';
-import { DefaultSongTheme } from '@/components/SongRenderer/Song';
+import { useAppStateContext, useAppTheme } from '@/context/AppState';
+import type { TChordsPatternSegment } from '@/types/song.types';
 
 type TChordsPatternSegmentProps = TChordsPatternSegment & {
   showChordTimes: boolean;
@@ -35,6 +34,7 @@ type TChordsPatternSegmentProps = TChordsPatternSegment & {
 const NO_CHORD_ID = '-';
 
 export const ChordsPatternSegment = (props: TChordsPatternSegmentProps) => {
+  const { song: theme } = useAppTheme();
   const { chordsIndex } = useAppStateContext();
 
   return (
@@ -53,8 +53,8 @@ export const ChordsPatternSegment = (props: TChordsPatternSegmentProps) => {
                     fontWeight='bold'
                     cursor='pointer'
                     // [*] theme colors
-                    backgroundColor={DefaultSongTheme.segments.item.chordsPattern.chord.background}
-                    color={DefaultSongTheme.segments.item.chordsPattern.chord.color}
+                    backgroundColor={theme.segments.item.chordsPattern.chord.background}
+                    color={theme.segments.item.chordsPattern.chord.color}
                   >
                     {chordId !== NO_CHORD_ID ? chordConfig.name : '-'}
                   </Tag>
@@ -63,23 +63,17 @@ export const ChordsPatternSegment = (props: TChordsPatternSegmentProps) => {
                 <PopoverContent
                   // [*] theme colors
                   backgroundColor={
-                    DefaultSongTheme.segments.item.chordsPattern.chord.segment.popover.background
+                    theme.segments.item.chordsPattern.chord.segment.popover.background
                   }
-                  borderColor={
-                    DefaultSongTheme.segments.item.chordsPattern.chord.segment.popover.border
-                  }
+                  borderColor={theme.segments.item.chordsPattern.chord.segment.popover.border}
                 >
                   <PopoverArrow
                     // [*] theme colors
-                    backgroundColor={
-                      DefaultSongTheme.segments.item.chordsPattern.chord.segment.popover.arrow
-                    }
+                    backgroundColor={theme.segments.item.chordsPattern.chord.segment.popover.arrow}
                   />
                   <PopoverCloseButton
                     // [*] theme colors
-                    color={
-                      DefaultSongTheme.segments.item.chordsPattern.chord.segment.popover.closeButton
-                    }
+                    color={theme.segments.item.chordsPattern.chord.segment.popover.closeButton}
                   />
                   <Flex justifyContent='center' padding='25px'>
                     <Chord name={chordConfig.name} frets={chordConfig.frets} />
@@ -97,7 +91,7 @@ export const ChordsPatternSegment = (props: TChordsPatternSegmentProps) => {
             fontSize='xs'
             fontWeight='bold'
             // [*] theme colors
-            color={DefaultSongTheme.segments.item.chordsPattern.chord.segment.times}
+            color={theme.segments.item.chordsPattern.chord.segment.times}
           >
             x{props.chordTimes}
           </Text>
@@ -110,7 +104,7 @@ export const ChordsPatternSegment = (props: TChordsPatternSegmentProps) => {
           gap='0.5em'
           alignItems='end'
           // [*] theme colors
-          color={DefaultSongTheme.segments.item.chordsPattern.chord.segment.pattern}
+          color={theme.segments.item.chordsPattern.chord.segment.pattern}
         >
           {props.strummingPattern.map((pattern, index) => {
             return (
