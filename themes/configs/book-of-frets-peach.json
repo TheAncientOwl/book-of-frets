@@ -149,9 +149,10 @@
     "background": "#ff9248"
   },
   "settings": {
+    "title": "white",
     "themePicker": {
       "background": "#ff9248",
-      "title": "",
+      "title": "white",
       "item": {
         "background": "blackAlpha.400",
         "hoverBackground": "blackAlpha.500",
