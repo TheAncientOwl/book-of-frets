@@ -9,11 +9,11 @@
       "type": ["acoustic"]
     },
     {
-      "title": "Little Thing Called Love",
-      "artists": ["Queen"],
-      "directory": "crazy-little-thing-called-love",
-      "chordIDs": ["D", "Dsus4", "G", "C", "Bb", "E", "A"],
-      "type": ["acoustic"]
+      "title": "Without You",
+      "artists": ["The Kid LAROI"],
+      "directory": "without-you",
+      "type": ["acoustic"],
+      "chordIDs": ["Am", "Fmaj7", "C", "G", "E"]
     },
     {
       "title": "Flowers Need Rain",
@@ -23,46 +23,25 @@
       "type": ["acoustic", "electric"]
     },
     {
-      "title": "Nice to Meet You",
-      "artists": ["Myles Smith"],
-      "directory": "nice-to-meet-you",
-      "type": ["acoustic"],
-      "chordIDs": ["Em", "C", "G", "D"]
-    },
-    {
-      "title": "O stea",
-      "artists": ["Deepcentral"],
-      "directory": "o-stea",
-      "type": ["acoustic"],
-      "chordIDs": ["Em7", "Cadd9", "G", "D"]
-    },
-    {
-      "title": "Radioactive",
-      "artists": ["Imagine Dragons"],
-      "directory": "radioactive",
-      "type": ["acoustic"],
-      "chordIDs": ["Am", "C", "G", "D"]
-    },
-    {
-      "title": "Seven Nation Army",
-      "artists": ["The White Stripes"],
-      "directory": "seven-nation-army",
-      "type": ["acoustic", "electric"],
-      "chordIDs": ["-"]
-    },
-    {
-      "title": "Seven Nation Army | 1 String",
-      "artists": ["The White Stripes"],
-      "directory": "seven-nation-army-1string",
-      "type": ["acoustic", "electric"],
-      "chordIDs": ["-"]
-    },
-    {
       "title": "Sweater Weather",
       "artists": ["The Neighbourhood"],
       "directory": "sweater-weather",
       "type": ["acoustic"],
       "chordIDs": ["C", "Am", "Em", "G", "D"]
+    },
+    {
+      "title": "Little Thing Called Love",
+      "artists": ["Queen"],
+      "directory": "crazy-little-thing-called-love",
+      "chordIDs": ["D", "Dsus4", "G", "C", "Bb", "E", "A"],
+      "type": ["acoustic"]
+    },
+    {
+      "title": "Nice to Meet You",
+      "artists": ["Myles Smith"],
+      "directory": "nice-to-meet-you",
+      "type": ["acoustic"],
+      "chordIDs": ["Em", "C", "G", "D"]
     },
     {
       "title": "Wake Me Up",
@@ -79,11 +58,32 @@
       "chordIDs": ["Dm", "Am", "C", "G"]
     },
     {
-      "title": "Without You",
-      "artists": ["The Kid LAROI"],
-      "directory": "without-you",
+      "title": "Radioactive",
+      "artists": ["Imagine Dragons"],
+      "directory": "radioactive",
       "type": ["acoustic"],
-      "chordIDs": ["Am", "Fmaj7", "C", "G", "E"]
+      "chordIDs": ["Am", "C", "G", "D"]
+    },
+    {
+      "title": "O stea",
+      "artists": ["Deepcentral"],
+      "directory": "o-stea",
+      "type": ["acoustic"],
+      "chordIDs": ["Em7", "Cadd9", "G", "D"]
+    },
+    {
+      "title": "Seven Nation Army",
+      "artists": ["The White Stripes"],
+      "directory": "seven-nation-army",
+      "type": ["acoustic", "electric"],
+      "chordIDs": ["-"]
+    },
+    {
+      "title": "Seven Nation Army | 1 String",
+      "artists": ["The White Stripes"],
+      "directory": "seven-nation-army-1string",
+      "type": ["acoustic", "electric"],
+      "chordIDs": ["-"]
     }
   ]
 }
