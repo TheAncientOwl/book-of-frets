@@ -93,6 +93,7 @@
     },
     "segments": {
       "background": "blackAlpha.400",
+      "divider": "white",
       "item": {
         "title": "white",
         "times": {

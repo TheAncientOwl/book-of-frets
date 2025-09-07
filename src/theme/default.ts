@@ -6,7 +6,7 @@
  *
  * @file default.ts
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Default app theme
  */
 
@@ -120,6 +120,7 @@ const DefaultSongTheme: TSongTheme = {
   },
   segments: {
     background: 'blackAlpha.400',
+    divider: 'white',
     item: {
       title: 'white',
       times: {
