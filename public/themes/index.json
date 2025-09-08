@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "index": [
     {
       "title": "Nature",
@@ -17,8 +17,8 @@
       "mainColor": "#fbec5d"
     },
     {
-      "title": "Crimson",
-      "directory": "crimson",
+      "title": "Cherry",
+      "directory": "cherry",
       "mainColor": "#aa0022"
     },
     {
