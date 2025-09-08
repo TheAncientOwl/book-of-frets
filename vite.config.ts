@@ -6,7 +6,7 @@
  *
  * @file vite.config.ts
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Vite configuration.
  */
 
@@ -16,7 +16,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
-  base: '/book-of-frets/',
+  base: '/',
   build: {
     rollupOptions: {
       output: {
