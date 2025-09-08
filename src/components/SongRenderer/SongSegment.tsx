@@ -6,7 +6,7 @@
  *
  * @file SongSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.12
+ * @version 0.13
  * @description Render song segment.
  */
 
@@ -22,64 +22,65 @@ type ISongSegmentProps = TSongSegment & {
   showChordTimes: boolean;
 };
 
-export const SongSegment = (props: ISongSegmentProps) => {
+export const SongSegmentHeading = (props: ISongSegmentProps) => {
   const { song: theme } = useAppTheme();
 
   return (
-    <Box alignItems='center' mb='1em'>
-      <Heading
-        as='h3'
-        size='md'
-        mb='1em'
-        textAlign='center'
-        textDecoration='underline'
-        textTransform='capitalize'
-        // [*] theme colors
-        color={theme.segments.item.title}
-      >
-        <Box as='span' position='relative'>
-          {props.name}
-          {props.times > 1 && (
-            <Tag
-              size='sm'
-              position='absolute'
-              bottom={0}
-              right={0}
-              transform='translate(120%, 20%)'
-              // [*] theme colors
-              backgroundColor={theme.segments.item.times.background}
-              color={theme.segments.item.times.color}
-            >
-              x{props.times}
-            </Tag>
-          )}
-        </Box>
-      </Heading>
+    <Heading
+      as='h3'
+      size='md'
+      textAlign='center'
+      textDecoration='underline'
+      textTransform='capitalize'
+      // [*] theme colors
+      color={theme.segments.item.title}
+    >
+      <Box as='span' position='relative'>
+        {props.name}
+        {props.times > 1 && (
+          <Tag
+            size='sm'
+            position='absolute'
+            bottom={0}
+            right={0}
+            transform='translate(120%, 20%)'
+            // [*] theme colors
+            backgroundColor={theme.segments.item.times.background}
+            color={theme.segments.item.times.color}
+          >
+            x{props.times}
+          </Tag>
+        )}
+      </Box>
+    </Heading>
+  );
+};
 
-      <Flex direction='column' alignItems='center' gap='1em'>
-        {props.patterns.map((pattern, patternIndex) => {
-          if (props.type === 'chords') {
-            return (
-              <ChordsPattern
-                key={patternIndex}
-                {...(pattern as TChordsPattern)}
-                showChordTimes={props.showChordTimes}
-              />
-            );
-          } else if (props.type === 'strings') {
-            return (
-              <StringsPattern
-                key={patternIndex}
-                {...(pattern as TStringsPattern)}
-                showChordTimes={props.showChordTimes}
-              />
-            );
-          } else {
-            console.warn(`Unimplemented pattern type "${props.type}`);
-            return <></>;
-          }
-        })}
-      </Flex>
-    </Box>
+export const SongSegmentBody = (props: ISongSegmentProps) => {
+  return (
+    <Flex direction='column' alignItems='center' gap='1em'>
+      {props.patterns.map((pattern, patternIndex) => {
+        if (props.type === 'chords') {
+          return (
+            <ChordsPattern
+              key={patternIndex}
+              {...(pattern as TChordsPattern)}
+              showChordTimes={props.showChordTimes}
+            />
+          );
+        } else if (props.type === 'strings') {
+          return (
+            <StringsPattern
+              key={patternIndex}
+              {...(pattern as TStringsPattern)}
+              showChordTimes={props.showChordTimes}
+            />
+          );
+        } else {
+          console.warn(`Unimplemented pattern type "${props.type}`);
+          return <></>;
+        }
+      })}
+    </Flex>
   );
 };
