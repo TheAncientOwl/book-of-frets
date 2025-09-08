@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://TheAncientOwl.github.io/book-of-frets",
+  "homepage": "https://book-of-frets.com",
   "scripts": {
     "dev": "vite",
     "host-dev": "vite --host",
