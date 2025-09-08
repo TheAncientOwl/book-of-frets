@@ -6,7 +6,7 @@
  *
  * @file SongSegments.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Render song segments data.
  */
 
@@ -16,6 +16,7 @@ import {
   AccordionIcon,
   AccordionItem,
   AccordionPanel,
+  Box,
 } from '@chakra-ui/react';
 
 import type { TChordsPattern, TSongSegment } from '@/types/song.types';
@@ -64,20 +65,16 @@ export const SongSegments = (props: TSongSegmentsProps) => {
           >
             <AccordionButton
               display='flex'
-              flexDirection='row'
-              justifyContent='center'
+              justifyContent='flex-end'
               alignItems='center'
               position='relative'
-              backgroundColor='blackAlpha.100'
-              borderRadius='0px 0px 7px 7px'
+              pt={['5px', '15px']}
+              pb={['5px', '15px']}
             >
-              <SongSegmentHeading {...songSegmentData} showChordTimes={showChordTimes} />
-              <AccordionIcon
-                position='absolute'
-                right='0'
-                top='50%'
-                transform='translate(-50%, -50%)'
-              />
+              <Box position='absolute' left='50%' transform='translateX(-50%)' textAlign='center'>
+                <SongSegmentHeading {...songSegmentData} showChordTimes={showChordTimes} />
+              </Box>
+              <AccordionIcon color={theme.segments.item.title} />
             </AccordionButton>
             <AccordionPanel>
               <SongSegmentBody {...songSegmentData} showChordTimes={showChordTimes} />
