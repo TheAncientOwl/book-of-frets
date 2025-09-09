@@ -6,7 +6,7 @@
  *
  * @file SongSegments.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Render song segments data.
  */
 
@@ -68,12 +68,18 @@ export const SongSegments = (props: TSongSegmentsProps) => {
               justifyContent='flex-end'
               alignItems='center'
               position='relative'
-              pt={['5px', '15px']}
-              pb={['5px', '15px']}
+              pt={['10px', '15px']}
+              pb={['10px', '15px']}
               backgroundColor='blackAlpha.100'
               _hover={{ backgroundColor: 'blackAlpha.100' }}
             >
-              <Box position='absolute' left='50%' transform='translateX(-50%)' textAlign='center'>
+              <Box
+                position='absolute'
+                left='50%'
+                transform='translateX(-50%)'
+                textAlign='center'
+                width='100%'
+              >
                 <SongSegmentHeading {...songSegmentData} showChordTimes={showChordTimes} />
               </Box>
               <AccordionIcon color={theme.segments.item.title} />
