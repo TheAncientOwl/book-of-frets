@@ -6,11 +6,11 @@
  *
  * @file AppState.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description App component.
  */
 
-import { DefaultAppTheme } from '@/theme/default';
+import DefaultAppTheme from '@/theme/default.json';
 import type { TAppTheme } from '@/theme/types';
 import type { TChordsIndex } from '@/types/chord.types';
 import { createContext, useContext, type Dispatch, type SetStateAction } from 'react';
