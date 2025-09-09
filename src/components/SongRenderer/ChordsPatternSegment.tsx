@@ -6,7 +6,7 @@
  *
  * @file ChordsPatternSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.12
+ * @version 0.13
  * @description Render song pattern segment.
  */
 
@@ -18,6 +18,7 @@ import {
   PopoverCloseButton,
   PopoverContent,
   PopoverTrigger,
+  Portal,
   Tag,
   Text,
   Tooltip,
@@ -60,25 +61,30 @@ export const ChordsPatternSegment = (props: TChordsPatternSegmentProps) => {
                   </Tag>
                 </PopoverTrigger>
 
-                <PopoverContent
-                  // [*] theme colors
-                  backgroundColor={
-                    theme.segments.item.chordsPattern.chord.segment.popover.background
-                  }
-                  borderColor={theme.segments.item.chordsPattern.chord.segment.popover.border}
-                >
-                  <PopoverArrow
+                <Portal>
+                  <PopoverContent
                     // [*] theme colors
-                    backgroundColor={theme.segments.item.chordsPattern.chord.segment.popover.arrow}
-                  />
-                  <PopoverCloseButton
-                    // [*] theme colors
-                    color={theme.segments.item.chordsPattern.chord.segment.popover.closeButton}
-                  />
-                  <Flex justifyContent='center' padding='25px'>
-                    <Chord name={chordConfig.name} frets={chordConfig.frets} />
-                  </Flex>
-                </PopoverContent>
+                    zIndex={1}
+                    backgroundColor={
+                      theme.segments.item.chordsPattern.chord.segment.popover.background
+                    }
+                    borderColor={theme.segments.item.chordsPattern.chord.segment.popover.border}
+                  >
+                    <PopoverArrow
+                      // [*] theme colors
+                      backgroundColor={
+                        theme.segments.item.chordsPattern.chord.segment.popover.arrow
+                      }
+                    />
+                    <PopoverCloseButton
+                      // [*] theme colors
+                      color={theme.segments.item.chordsPattern.chord.segment.popover.closeButton}
+                    />
+                    <Flex justifyContent='center' padding='25px'>
+                      <Chord name={chordConfig.name} frets={chordConfig.frets} />
+                    </Flex>
+                  </PopoverContent>
+                </Portal>
               </Popover>
             </Box>
           );
