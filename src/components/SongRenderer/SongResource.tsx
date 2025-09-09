@@ -56,7 +56,7 @@ export const SongResource = (props: TSongResourceProps) => {
 
         <Link
           isExternal
-          href={props.link}
+          href={props.link.replaceAll('{book-of-frets}', import.meta.env.BASE_URL)}
           size={['xs', 'sm']}
           // [*] theme colors
           color={theme.resources.item.alias}
@@ -64,17 +64,19 @@ export const SongResource = (props: TSongResourceProps) => {
           {props.alias}
         </Link>
 
-        <Text
-          fontStyle='italic'
-          textAlign='center'
-          fontSize={['small', 'sm']}
-          // [*] theme colors
-          color={theme.resources.item.author}
-        >
-          by {props.author}
-        </Text>
+        {props.author !== '-' && (
+          <Text
+            fontStyle='italic'
+            textAlign='center'
+            fontSize={['small', 'sm']}
+            // [*] theme colors
+            color={theme.resources.item.author}
+          >
+            by {props.author}
+          </Text>
+        )}
 
-        {videoId ? (
+        {videoId && (
           <Box width='100%' maxW='400px' my={2} overflow='hidden' borderRadius='10px'>
             <AspectRatio ratio={16 / 9}>
               <Skeleton isLoaded={isLoaded} height='100%' width='100%'>
@@ -89,7 +91,7 @@ export const SongResource = (props: TSongResourceProps) => {
               </Skeleton>
             </AspectRatio>
           </Box>
-        ) : null}
+        )}
       </Flex>
     </ListItem>
   );
