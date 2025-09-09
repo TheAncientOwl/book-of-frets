@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.23
+ * @version 0.24
  * @description App component.
  */
 
@@ -43,6 +43,18 @@ export const App = () => {
       .then(data => setChordsIndex(data.index as TChordsIndex))
       .catch(() => setChordsIndex({}));
   }, [setChordsIndex, setAppTheme]);
+
+  useEffect(() => {
+    let link: HTMLLinkElement | null = document.querySelector("link[rel~='icon']");
+
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'icon';
+      document.head.appendChild(link);
+    }
+
+    link.href = appLogoURL;
+  }, [appLogoURL]);
 
   const appStateValue: TAppState = useMemo(
     () => ({ chordsIndex, appTheme, setAppTheme, appLogoURL, setAppLogoURL }),
