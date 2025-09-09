@@ -6,13 +6,13 @@
  *
  * @file ChordsPattern.tsx
  * @author Alexandru Delegeanu
- * @version 0.16
+ * @version 0.17
  * @description Render song chords pattern.
  */
 
 import { Fragment } from 'react';
 
-import { Box, Divider, Tag, Tooltip } from '@chakra-ui/react';
+import { Box, Divider, Tag, Tooltip, type DividerProps } from '@chakra-ui/react';
 
 import { ChordsPatternSegment } from '@/components/SongRenderer/ChordsPatternSegment.tsx';
 import { useAppTheme } from '@/context/AppState';
@@ -22,7 +22,7 @@ type TChordsPatternProps = TChordsPattern & {
   showChordTimes: boolean;
 };
 
-const ChordsPatternDivider = () => {
+const ChordsPatternDivider = (props: DividerProps) => {
   const { song: theme } = useAppTheme();
 
   return (
@@ -30,11 +30,11 @@ const ChordsPatternDivider = () => {
       orientation='vertical'
       height={['0px', '80px']}
       borderWidth='thin'
-      borderStyle={['dashed', 'solid']}
       mt={['15px', '0px']}
       mb={['15px', '0px']}
       // [*] theme colors
       borderColor={theme.segments.item.chordsPattern.divider}
+      {...props}
     />
   );
 };
@@ -51,13 +51,16 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
       alignItems='center'
       justifyContent='center'
     >
-      <ChordsPatternDivider />
+      <ChordsPatternDivider borderStyle={['solid']} />
 
       {props.segments.map((segment, segmentIndex) => (
         <Fragment key={segmentIndex}>
           <ChordsPatternSegment {...segment} showChordTimes={props.showChordTimes} />
 
-          <ChordsPatternDivider />
+          <ChordsPatternDivider
+            borderStyle={['dashed', 'solid']}
+            display={[segmentIndex < props.segments.length - 1 ? 'block' : 'none', 'block']}
+          />
         </Fragment>
       ))}
 
