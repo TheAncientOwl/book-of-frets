@@ -6,7 +6,7 @@
  *
  * @file ChordsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description Handle chords rendering.
  */
 
@@ -22,13 +22,15 @@ export const ChordsIndexPage = () => {
   return (
     <Container maxW={['100vw', '5xl']} pt='1em' pb='1em' justifyItems='center'>
       <SimpleGrid columns={[1, 2, 3, 4, 5, 5]} spacing='1em' justifyItems='center'>
-        {Object.entries(chordsIndex).map(([chordKeyName, chordConfig]) => (
-          <Fragment key={chordKeyName}>
-            {chordKeyName !== '-' && (
-              <Chord key={chordKeyName} name={chordConfig.name} frets={chordConfig.frets} />
-            )}
-          </Fragment>
-        ))}
+        {Object.entries(chordsIndex)
+          .sort((c1, c2) => (c1[0] > c2[0] ? 1 : -1))
+          .map(([chordKeyName, chordConfig]) => (
+            <Fragment key={chordKeyName}>
+              {chordKeyName !== '-' && (
+                <Chord key={chordKeyName} name={chordConfig.name} frets={chordConfig.frets} />
+              )}
+            </Fragment>
+          ))}
       </SimpleGrid>
     </Container>
   );
