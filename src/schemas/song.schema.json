@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Song Schema | v0.2.0",
+  "title": "Song Schema | v0.2.1",
   "type": "object",
   "properties": {
     "version": {
@@ -143,7 +143,7 @@
           },
           "link": {
             "type": "string",
-            "format": "uri"
+            "anyOf": [{ "format": "uri" }, { "pattern": "^\\{book-of-frets\\}#/.*" }]
           }
         },
         "required": ["alias", "author", "link"]
