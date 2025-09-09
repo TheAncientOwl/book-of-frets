@@ -1,5 +1,5 @@
 {
-  "version": "0.1.3",
+  "version": "0.1.4",
   "index": {
     "-": {
       "name": "-",
@@ -251,6 +251,117 @@
           { "finger": 3, "string": 2 },
           { "finger": 4, "string": 3 }
         ]
+      ]
+    },
+    "CM7": {
+      "name": "CM7",
+      "frets": [
+        [{ "finger": -1, "string": -1 }],
+        [{ "finger": 2, "string": 3 }],
+        [{ "finger": 3, "string": 2 }]
+      ]
+    },
+    "B7": {
+      "name": "B7",
+      "frets": [
+        [{ "finger": 1, "string": 3 }],
+        [
+          { "finger": 2, "string": 2 },
+          { "finger": 3, "string": 4 },
+          { "finger": 4, "string": 6 }
+        ],
+        []
+      ]
+    },
+    "Dm7": {
+      "name": "Dm7",
+      "frets": [
+        [
+          { "finger": 1, "string": 5 },
+          { "finger": 1, "string": 6 }
+        ],
+        [{ "finger": 2, "string": 4 }],
+        []
+      ]
+    },
+    "G7": {
+      "name": "G7",
+      "frets": [
+        [{ "finger": 1, "string": 6 }],
+        [{ "finger": 2, "string": 2 }],
+        [{ "finger": 3, "string": 1 }]
+      ]
+    },
+    "Ebm7": {
+      "name": "Ebm7",
+      "frets": [
+        [
+          { "finger": 1, "string": 2 },
+          { "finger": 1, "string": 3 },
+          { "finger": 1, "string": 4 },
+          { "finger": 1, "string": 5 },
+          { "finger": 1, "string": 6 }
+        ],
+        [{ "finger": 2, "string": 5 }],
+        [{ "finger": 3, "string": 3 }]
+      ]
+    },
+    "BbM7": {
+      "name": "BbM7",
+      "frets": [
+        [
+          { "finger": -1, "string": -1 },
+          { "finger": 1, "string": 2 },
+          { "finger": 1, "string": 3 },
+          { "finger": 1, "string": 4 },
+          { "finger": 1, "string": 5 },
+          { "finger": 1, "string": 6 }
+        ],
+        [{ "finger": 2, "string": 4 }],
+        [
+          { "finger": 3, "string": 3 },
+          { "finger": 4, "string": 4 }
+        ]
+      ]
+    },
+    "A7": {
+      "name": "A7",
+      "frets": [
+        [{ "finger": -1, "string": -1 }],
+        [
+          { "finger": 3, "string": 3 },
+          { "finger": 4, "string": 5 }
+        ],
+        []
+      ]
+    },
+    "AbM7": {
+      "name": "AbM7",
+      "frets": [
+        [
+          { "finger": -2, "string": -2 },
+          { "finger": -6, "string": -6 },
+          { "finger": 1, "string": 1 },
+          { "finger": 2, "string": 5 }
+        ],
+        [
+          { "finger": 3, "string": 3 },
+          { "finger": 4, "string": 4 }
+        ],
+        []
+      ]
+    },
+    "F13": {
+      "name": "F13",
+      "frets": [
+        [
+          { "finger": -2, "string": -2 },
+          { "finger": -6, "string": -6 },
+          { "finger": 7, "string": 1 },
+          { "finger": 1, "string": 3 }
+        ],
+        [{ "finger": 2, "string": 4 }],
+        [{ "finger": 4, "string": 5 }]
       ]
     }
   }

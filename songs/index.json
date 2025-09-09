@@ -1,5 +1,5 @@
 {
-  "version": "0.1.6",
+  "version": "0.1.7",
   "index": [
     {
       "title": "Run Away To Mars",
@@ -30,18 +30,33 @@
       "chordIDs": ["C", "Am", "Em", "G", "D"]
     },
     {
-      "title": "Little Thing Called Love",
-      "artists": ["Queen"],
-      "directory": "crazy-little-thing-called-love",
-      "chordIDs": ["D", "Dsus4", "G", "C", "Bb", "E", "A"],
-      "type": ["acoustic"]
-    },
-    {
       "title": "Nice to Meet You",
       "artists": ["Myles Smith"],
       "directory": "nice-to-meet-you",
       "type": ["acoustic"],
       "chordIDs": ["Em", "C", "G", "D"]
+    },
+    {
+      "title": "Just the Two of Us | Lvl 1",
+      "artists": ["Grover Washington Jr."],
+      "directory": "just-the-two-of-us-lvl1",
+      "type": ["acoustic"],
+      "chordIDs": ["CM7", "B7", "Em", "Dm7", "G7"]
+    },
+    {
+      "title": "Just the Two of Us | Lvl 2",
+      "artists": ["Grover Washington Jr."],
+      "directory": "just-the-two-of-us-lvl2",
+      "type": ["acoustic"],
+      "chordIDs": ["CM7", "B7", "Em", "Dm7", "G7", "Ebm7", "A7", "AbM7"]
+    },
+
+    {
+      "title": "Little Thing Called Love",
+      "artists": ["Queen"],
+      "directory": "crazy-little-thing-called-love",
+      "chordIDs": ["D", "Dsus4", "G", "C", "Bb", "E", "A"],
+      "type": ["acoustic"]
     },
     {
       "title": "Wake Me Up",
