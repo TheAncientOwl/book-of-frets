@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.24
+ * @version 0.25
  * @description App component.
  */
 
@@ -20,7 +20,6 @@ import { HomePage } from '@/pages/HomePage';
 
 import { AppState, type TAppState } from '@/context/AppState';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
-import { DefaultAppTheme } from '@/theme/default';
 import type { TAppTheme } from '@/theme/types';
 import type { TChordsIndex } from '@/types/chord.types';
 
@@ -29,12 +28,14 @@ const ChordsIndexPage = lazy(() => import('@/pages/ChordsIndexPage'));
 const SongsIndexPage = lazy(() => import('@/pages/SongsIndexPage'));
 const SettingsPage = lazy(() => import('@/pages/SettingsPage'));
 
+import DefaultAppTheme from '@/theme/default.json';
+
 export const App = () => {
   const [chordsIndex, setChordsIndex] = useState<TChordsIndex>({});
   const [appTheme, setAppTheme] = useLocalStorage<TAppTheme>('app-theme', DefaultAppTheme);
   const [appLogoURL, setAppLogoURL] = useLocalStorage<string>(
     'app-logo-url',
-    `${import.meta.env.BASE_URL}book-of-frets.svg`
+    `${import.meta.env.BASE_URL}logo.svg`
   );
 
   useEffect(() => {

@@ -1,0 +1,166 @@
+{
+  "name": "Lavander",
+  "appMenu": {
+    "menuButton": {
+      "background": "#575799",
+      "hover": "purple.600",
+      "border": "purple.500",
+      "text": "white"
+    },
+    "closeButton": {
+      "color": "white"
+    },
+    "drawer": {
+      "background": "#575799",
+      "appText": "white",
+      "routeLink": "white"
+    },
+    "copyright": {
+      "color": "white",
+      "hoverColor": "purple.100"
+    }
+  },
+  "general": {
+    "background": "gray.900"
+  },
+  "chord": {
+    "background": "#575799",
+    "dividers": "white",
+    "title": "white"
+  },
+  "fret": {
+    "background": "blackAlpha.300",
+    "dividers": "white",
+    "muted": {
+      "background": "red.500",
+      "border": "red.600",
+      "color": "white"
+    },
+    "finger": {
+      "background": "purple.500",
+      "border": "purple.600",
+      "color": "white"
+    }
+  },
+  "songCard": {
+    "background": "blackAlpha.400",
+    "border": "purple.600",
+    "hover": {
+      "background": "blackAlpha.500"
+    },
+    "cover": {
+      "border": "purple.500",
+      "hover": {
+        "background": "rgba(0,0,0,0.6)",
+        "play": {
+          "background": "purple.600",
+          "text": "white"
+        }
+      }
+    },
+    "text": {
+      "number": "white",
+      "title": "white",
+      "authors": "white",
+      "typeTags": "white"
+    },
+    "chords": {
+      "pick": "white",
+      "popover": {
+        "border": "white",
+        "background": "gray.900",
+        "arrow": "white",
+        "tag": {
+          "background": "purple.600",
+          "border": "purple.400",
+          "text": "white"
+        }
+      }
+    }
+  },
+  "song": {
+    "background": "#575799",
+    "header": {
+      "title": "white",
+      "artists": "white",
+      "typeTags": "white",
+      "coverBorder": "purple.500"
+    },
+    "capo": {
+      "background": "purple.600",
+      "border": "purple.500",
+      "text": "white"
+    },
+    "segments": {
+      "background": "blackAlpha.400",
+      "divider": "white",
+      "item": {
+        "title": "white",
+        "times": {
+          "background": "purple.600",
+          "color": "white"
+        },
+        "chordsPattern": {
+          "background": "purple.600",
+          "color": "white",
+          "divider": "white",
+          "times": "white",
+          "chord": {
+            "background": "purple.600",
+            "color": "white",
+            "segment": {
+              "popover": {
+                "background": "gray.900",
+                "arrow": "white",
+                "border": "white",
+                "closeButton": "white"
+              },
+              "times": "white",
+              "pattern": "white"
+            },
+            "times": {
+              "background": "purple.500",
+              "color": "white"
+            }
+          }
+        },
+        "stringsPattern": {
+          "divider": "white",
+          "stringNames": "white",
+          "fret": {
+            "background": "purple.600",
+            "border": "purple.900",
+            "text": "white"
+          },
+          "filler": "white"
+        }
+      }
+    },
+    "resources": {
+      "title": "white",
+      "item": {
+        "note": "white",
+        "alias": "white",
+        "author": "white"
+      }
+    }
+  },
+  "songsIndexPage": {
+    "background": "#575799"
+  },
+  "settings": {
+    "title": "white",
+    "themePicker": {
+      "background": "#575799",
+      "title": "white",
+      "item": {
+        "background": "blackAlpha.400",
+        "hoverBackground": "blackAlpha.500",
+        "border": "purple.800",
+        "indexColor": "white",
+        "colorBoxBorder": "gray.900",
+        "title": "white"
+      }
+    }
+  }
+}
