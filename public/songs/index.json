@@ -37,6 +37,13 @@
       "chordIDs": ["Em", "C", "G", "D"]
     },
     {
+      "title": "Adore You",
+      "artists": ["Harry Styles"],
+      "directory": "adore-you",
+      "type": ["acoustic"],
+      "chordIDs": ["Am7", "C", "Fmaj7", "G"]
+    },
+    {
       "title": "Just the Two of Us | Lvl 1",
       "artists": ["Grover Washington Jr."],
       "directory": "just-the-two-of-us-lvl1",
@@ -67,7 +74,7 @@
     },
     {
       "title": "Watermelon Sugar",
-      "artists": ["Harry Style"],
+      "artists": ["Harry Styles"],
       "directory": "watermelon-sugar",
       "type": ["acoustic"],
       "chordIDs": ["Dm", "Am", "C", "G"]
