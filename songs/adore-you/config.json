@@ -1,0 +1,156 @@
+{
+  "version": "0.1.0",
+  "contributors": ["TheAncientOwl"],
+  "title": "Adore You",
+  "artists": ["Harry Styles"],
+  "type": ["acoustic"],
+  "notes": [],
+  "capo": 3,
+  "chordIDs": ["Am7", "C", "Fmaj7", "G"],
+  "songSegments": {
+    "intro": {
+      "name": "intro",
+      "type": "chords",
+      "times": 1,
+      "patterns": [
+        {
+          "times": 1,
+          "segments": [
+            {
+              "chordIDs": ["Am7", "-", "C", "-"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            },
+            {
+              "chordIDs": ["Fmaj7", "-", "-", "G"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            }
+          ]
+        }
+      ]
+    },
+    "main-progression-1": {
+      "name": "main progression",
+      "type": "chords",
+      "times": 1,
+      "patterns": [
+        {
+          "times": 6,
+          "segments": [
+            {
+              "chordIDs": ["Am7", "C"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
+            },
+            {
+              "chordIDs": ["Fmaj7"],
+              "chordTimes": 3,
+              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
+            },
+            {
+              "chordIDs": ["G"],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "post-chorus-1": {
+      "name": "post chorus 1",
+      "type": "strings",
+      "times": 1,
+      "patterns": []
+    },
+    "main-progression-2": {
+      "name": "main progression",
+      "type": "chords",
+      "times": 1,
+      "patterns": [
+        {
+          "times": 5,
+          "segments": [
+            {
+              "chordIDs": ["Am7", "C"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
+            },
+            {
+              "chordIDs": ["Fmaj7"],
+              "chordTimes": 3,
+              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
+            },
+            {
+              "chordIDs": ["G"],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "post-chorus-2": {
+      "name": "post chorus 2",
+      "type": "strings",
+      "times": 1,
+      "patterns": []
+    },
+    "solo": {
+      "name": "solo",
+      "type": "strings",
+      "times": 1,
+      "patterns": []
+    },
+    "main-progression-3": {
+      "name": "main progression",
+      "type": "chords",
+      "times": 1,
+      "patterns": [
+        {
+          "times": 4,
+          "segments": [
+            {
+              "chordIDs": ["Am7", "C"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
+            },
+            {
+              "chordIDs": ["Fmaj7"],
+              "chordTimes": 3,
+              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
+            },
+            {
+              "chordIDs": ["G"],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "post-chorus-3": {
+      "name": "post chorus 2",
+      "type": "strings",
+      "times": 1,
+      "patterns": []
+    }
+  },
+  "songSegmentsOrder": [
+    "intro",
+    "main-progression-1",
+    "post-chorus-1",
+    "main-progression-2",
+    "post-chorus-2",
+    "solo",
+    "main-progression-3",
+    "post-chorus-3"
+  ],
+  "resources": [
+    {
+      "alias": "Adore You Guitar Cover Harry Styles 🎸|Tabs + Chords|",
+      "author": "GuitarZero2Hero Express ~ YouTube",
+      "link": "https://youtu.be/qkmwTHcuoig"
+    }
+  ]
+}

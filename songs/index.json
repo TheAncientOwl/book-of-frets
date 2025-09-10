@@ -1,6 +1,13 @@
 {
-  "version": "0.1.7",
+  "version": "0.1.8",
   "index": [
+    {
+      "title": "Never Gonna Give You Up",
+      "artists": ["Rick Astley"],
+      "directory": "never-gonna-give-you-up",
+      "type": ["acoustic"],
+      "chordIDs": ["Fmaj7", "G", "Em", "Am"]
+    },
     {
       "title": "Run Away To Mars",
       "artists": ["TALK"],
@@ -37,6 +44,13 @@
       "chordIDs": ["Em", "C", "G", "D"]
     },
     {
+      "title": "Adore You",
+      "artists": ["Harry Styles"],
+      "directory": "adore-you",
+      "type": ["acoustic"],
+      "chordIDs": ["Am7", "C", "Fmaj7", "G"]
+    },
+    {
       "title": "Just the Two of Us | Lvl 1",
       "artists": ["Grover Washington Jr."],
       "directory": "just-the-two-of-us-lvl1",
@@ -67,7 +81,7 @@
     },
     {
       "title": "Watermelon Sugar",
-      "artists": ["Harry Style"],
+      "artists": ["Harry Styles"],
       "directory": "watermelon-sugar",
       "type": ["acoustic"],
       "chordIDs": ["Dm", "Am", "C", "G"]
