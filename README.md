@@ -11,6 +11,7 @@ BookOfFrets is a web-based application designed to help guitar enthusiasts learn
 - **📖 Chord List:** Browse and search through a curated list of chords.
 - **📂 Song List:** Easily navigate through a growing collection of songs.
 - **🎨 Themes:** Customize the look and feel of the app with various themes.
+- **📺 Video Resources:** Learn how to play songs with helpful video tutorials.
 
 ## 🛠️ Main Feature
 
