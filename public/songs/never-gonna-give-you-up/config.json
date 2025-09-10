@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "contributors": ["TheAncientOwl"],
   "title": "Never Gonna Give You Up",
   "artists": ["Rick Astley"],
@@ -9,7 +9,7 @@
   "chordIDs": ["Fmaj7", "G", "Em", "Am"],
   "songSegments": {
     "intro": {
-      "name": "main progression",
+      "name": "intro",
       "type": "chords",
       "times": 4,
       "patterns": [
