@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1",
   "contributors": ["TheAncientOwl"],
   "title": "Run Away To Mars",
   "artists": ["TALK"],
@@ -152,6 +152,11 @@
       "alias": "Run Away to Mars by TALK - Beginner Guitar Lesson & Play Along",
       "author": "Mechanics Of Music",
       "link": "https://youtu.be/tagR628ZDMY"
+    },
+    {
+      "alias": "Run Away To Mars by Talk Guitar Tutorial Lesson!",
+      "author": "Chevans Music ~ YouTube",
+      "link": "https://youtu.be/q23IKunA78g"
     }
   ]
 }
