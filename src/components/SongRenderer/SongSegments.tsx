@@ -6,7 +6,7 @@
  *
  * @file SongSegments.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Render song segments data.
  */
 
@@ -70,6 +70,7 @@ export const SongSegments = (props: TSongSegmentsProps) => {
               position='relative'
               pt={['10px', '15px']}
               pb={['10px', '15px']}
+              mb={['0px', '5px']}
               backgroundColor='blackAlpha.100'
               _hover={{ backgroundColor: 'blackAlpha.100' }}
             >
