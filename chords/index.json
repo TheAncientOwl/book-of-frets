@@ -363,6 +363,24 @@
         [{ "finger": 2, "string": 4 }],
         [{ "finger": 4, "string": 5 }]
       ]
+    },
+    "Bm": {
+      "name": "Bm",
+      "frets": [
+        [
+          { "finger": -1, "string": -1 },
+          { "finger": 1, "string": 2 },
+          { "finger": 1, "string": 3 },
+          { "finger": 1, "string": 4 },
+          { "finger": 1, "string": 5 },
+          { "finger": 1, "string": 6 }
+        ],
+        [{ "finger": 2, "string": 5 }],
+        [
+          { "finger": 3, "string": 3 },
+          { "finger": 4, "string": 4 }
+        ]
+      ]
     }
   }
 }

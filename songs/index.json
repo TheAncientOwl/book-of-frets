@@ -1,5 +1,5 @@
 {
-  "version": "0.1.8",
+  "version": "0.1.9",
   "index": [
     {
       "title": "Never Gonna Give You Up",
@@ -21,6 +21,13 @@
       "directory": "without-you",
       "type": ["acoustic"],
       "chordIDs": ["Am", "Fmaj7", "C", "G", "E"]
+    },
+    {
+      "title": "Golden",
+      "artists": ["HUNTR/X"],
+      "directory": "golden-acoustic-v1",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "G", "D", "Em"]
     },
     {
       "title": "Flowers Need Rain",
