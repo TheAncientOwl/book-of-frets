@@ -6,7 +6,7 @@
  *
  * @file ChordsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 0.12
  * @description Handle chords rendering.
  */
 
@@ -62,7 +62,7 @@ export const ChordsIndexPage = () => {
             useContext={ChordsList.context.use}
             as={SimpleGrid}
             asProps={{
-              columns: [1, 2, 3, 4, 5, 5],
+              columns: [1, 2, 3, 4],
               spacing: '1em',
               justifyItems: 'center',
             }}
