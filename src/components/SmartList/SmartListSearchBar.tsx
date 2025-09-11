@@ -6,8 +6,8 @@
  *
  * @file SmartListSearchBar.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
- * @description TODO.
+ * @version 0.2
+ * @description Filter items of SmartList.
  */
 
 import type { TSmartListContextUse } from '@/components/SmartList/index';

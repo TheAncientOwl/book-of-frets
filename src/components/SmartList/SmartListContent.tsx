@@ -6,8 +6,8 @@
  *
  * @file SmartListContent.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
- * @description TODO.
+ * @version 0.3
+ * @description Render filtered, virtualized items of the SmartList.
  */
 
 import type { TSmartListContextUse } from '@/components/SmartList/index';

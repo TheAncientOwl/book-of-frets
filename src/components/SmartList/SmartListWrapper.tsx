@@ -6,8 +6,8 @@
  *
  * @file SmartListWrapper.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
- * @description TODO.
+ * @version 0.2
+ * @description Provide context for SmartList.
  */
 
 import type { TSmartListContext, TSmartListContextData } from '@/components/SmartList/index';

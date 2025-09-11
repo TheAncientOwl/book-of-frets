@@ -6,8 +6,8 @@
  *
  * @file index.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
- * @description TODO.
+ * @version 0.2
+ * @description SmartList index file.
  */
 
 import {
