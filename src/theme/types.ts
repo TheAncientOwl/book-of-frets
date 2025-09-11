@@ -6,7 +6,7 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description App theme types
  */
 
@@ -32,6 +32,7 @@ export type TAppMenuTheme = {
 };
 
 export type TChordTheme = {
+  border: string;
   background: string;
   dividers: string;
   title: string;
@@ -157,8 +158,21 @@ export type TSongTheme = {
   };
 };
 
+type TSearchBarTheme = {
+  background: string;
+  color: string;
+  border: string;
+  focusBorder: string;
+};
+
+export type TChordsIndexPageTheme = {
+  background: string;
+  searchBar: TSearchBarTheme;
+};
+
 export type TSongsIndexPageTheme = {
   background: string;
+  searchBar: TSearchBarTheme;
 };
 
 export type TGeneralAppTheme = {
@@ -185,6 +199,7 @@ export type TAppTheme = {
   name: string;
   appMenu: TAppMenuTheme;
   general: TGeneralAppTheme;
+  chordsIndexPage: TChordsIndexPageTheme;
   chord: TChordTheme;
   fret: TFretTheme;
   songCard: TSongCardTheme;

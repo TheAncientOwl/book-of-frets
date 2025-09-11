@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.25
+ * @version 0.26
  * @description App component.
  */
 
@@ -68,7 +68,7 @@ export const App = () => {
         <Box
           display='flex'
           width='100vw'
-          minHeight='100vh'
+          height='100dvh'
           padding={['0em', '0em', '1em', '2em']}
           background={appStateValue.appTheme.general.background}
         >

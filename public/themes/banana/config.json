@@ -23,7 +23,17 @@
   "general": {
     "background": "gray.900"
   },
+  "chordsIndexPage": {
+    "background": "#fbec5d",
+    "searchBar": {
+      "background": "blackAlpha.100",
+      "color": "#6b3e26",
+      "border": "#6b3e26",
+      "focusBorder": "yellow.500"
+    }
+  },
   "chord": {
+    "border": "#6b3e26",
     "background": "#fbec5d",
     "dividers": "#6b3e26",
     "title": "#6b3e26"
@@ -146,7 +156,13 @@
     }
   },
   "songsIndexPage": {
-    "background": "#fbec5d"
+    "background": "#fbec5d",
+    "searchBar": {
+      "background": "blackAlpha.100",
+      "color": "#6b3e26",
+      "border": "#6b3e26",
+      "focusBorder": "yellow.500"
+    }
   },
   "settings": {
     "title": "#6b3e26",

@@ -6,18 +6,21 @@
  *
  * @file SongsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 0.14
  * @description List all available songs.
  */
 
 import { useEffect, useState } from 'react';
 
-import { Container } from '@chakra-ui/react';
+import { Box, Container, Flex } from '@chakra-ui/react';
 
 import type { TSongsIndexEntry } from '@/types/song.types';
 
+import { createSmartList } from '@/components/SmartList/index';
 import { SongCard } from '@/components/SongIndexEntry/SongCard';
 import { useAppTheme } from '@/context/AppState';
+
+const SongsList = createSmartList<TSongsIndexEntry>();
 
 export const SongsIndexPage = () => {
   const { songsIndexPage: theme } = useAppTheme();
@@ -37,14 +40,42 @@ export const SongsIndexPage = () => {
   return (
     <Container
       maxW={['100vw', 'xl']}
+      height='100%'
+      display='flex'
+      flexDirection='column'
       padding={['0em', '1em']}
       borderRadius='0.5em'
       // [*] theme colors
       background={theme.background}
     >
-      {songsIndex.map((song, index) => (
-        <SongCard key={index} index={index + 1} {...song} />
-      ))}
+      <SongsList.Wrapper
+        context={SongsList.context}
+        setup={{
+          data: songsIndex,
+          getKey: song => song.title + ' ' + song.artists.join(' '),
+        }}
+      >
+        <Flex justifyContent='center' mt={['20px', '0px']} mb='20px' ml='45px' mr='45px'>
+          <SongsList.SearchBar
+            useContext={SongsList.context.use}
+            // [*] theme colors
+            backgroundColor={theme.searchBar.background}
+            color={theme.searchBar.color}
+            borderColor={theme.searchBar.border}
+            _focus={{
+              borderColor: theme.searchBar.focusBorder,
+            }}
+          />
+        </Flex>
+
+        <Box flex='1' overflowY='scroll'>
+          <SongsList.Content
+            virtualized
+            useContext={SongsList.context.use}
+            render={(song, index) => <SongCard key={index} index={index + 1} {...song} />}
+          />
+        </Box>
+      </SongsList.Wrapper>
     </Container>
   );
 };
