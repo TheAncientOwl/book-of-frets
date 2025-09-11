@@ -6,7 +6,7 @@
  *
  * @file ChordsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description Handle chords rendering.
  */
 
@@ -44,10 +44,9 @@ export const ChordsIndexPage = () => {
           cmp: (c1, c2) => (c1[0] > c2[0] ? 1 : -1),
         }}
       >
-        <Flex justifyContent='center' mb='20px'>
+        <Flex mx='auto' justifyContent='center' width='fit-content' mb='20px'>
           <ChordsList.SearchBar
             useContext={ChordsList.context.use}
-            width='250px'
             // [*] theme colors
             backgroundColor={theme.searchBar.background}
             color={theme.searchBar.color}
