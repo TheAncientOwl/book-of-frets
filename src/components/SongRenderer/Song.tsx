@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.21
+ * @version 0.22
  * @description Render song based on given config.
  */
 
@@ -31,6 +31,8 @@ export const Song = (props: TSongProps) => {
       maxW={['100vw', '5xl']}
       padding={['25px 10px', '2em 1em']}
       borderRadius='1rem'
+      height='100%'
+      overflowY='scroll'
       // [*] theme colors
       backgroundColor={theme.background}
     >
