@@ -11,8 +11,9 @@
  */
 
 import type { TSmartListContextUse } from '@/components/SmartList/index';
-import { Input, type InputProps } from '@chakra-ui/react';
+import { Icon, Input, InputGroup, InputRightElement, type InputProps } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
+import { FaSearch } from 'react-icons/fa';
 
 export type TSmartListSearchBarProps<T> = InputProps & {
   useContext: TSmartListContextUse<T>;
@@ -36,5 +37,12 @@ export const SmartListSearchBar = <T,>(props: TSmartListSearchBarProps<T>) => {
     setData(filtered);
   }, [search, getKey, setData, resetData, originalData]);
 
-  return <Input {...inputProps} value={search} onChange={e => setSearch(e.target.value)} />;
+  return (
+    <InputGroup color={inputProps?.color}>
+      <Input {...inputProps} value={search} onChange={e => setSearch(e.target.value)} />
+      <InputRightElement>
+        <Icon as={FaSearch} />
+      </InputRightElement>
+    </InputGroup>
+  );
 };

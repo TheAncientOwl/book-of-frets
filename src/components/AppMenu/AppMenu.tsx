@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.12
+ * @version 0.13
  * @description App menu component.
  */
 
@@ -55,7 +55,7 @@ export const AppMenu = () => {
         ref={btnRef}
         borderStyle='solid'
         borderWidth='thin'
-        zIndex={10}
+        zIndex={100}
         width='45px'
         height='45px'
         padding={['3px']}

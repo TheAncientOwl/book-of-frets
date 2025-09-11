@@ -6,13 +6,13 @@
  *
  * @file SongsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.12
+ * @version 0.13
  * @description List all available songs.
  */
 
 import { useEffect, useState } from 'react';
 
-import { Container } from '@chakra-ui/react';
+import { Box, Container, Flex } from '@chakra-ui/react';
 
 import type { TSongsIndexEntry } from '@/types/song.types';
 
@@ -40,6 +40,9 @@ export const SongsIndexPage = () => {
   return (
     <Container
       maxW={['100vw', 'xl']}
+      height='100%'
+      display='flex'
+      flexDirection='column'
       padding={['0em', '1em']}
       borderRadius='0.5em'
       // [*] theme colors
@@ -52,12 +55,25 @@ export const SongsIndexPage = () => {
           getKey: song => song.title + ' ' + song.artists.join(' '),
         }}
       >
-        <SongsList.SearchBar useContext={SongsList.context.use} color='white' mb='20px' />
+        <Flex justifyContent='center' mt={['20px', '0px']} mb='20px' ml='45px' mr='45px'>
+          <SongsList.SearchBar
+            useContext={SongsList.context.use}
+            // [*] theme colors
+            backgroundColor={theme.searchBar.background}
+            color={theme.searchBar.color}
+            borderColor={theme.searchBar.border}
+            _focus={{
+              borderColor: theme.searchBar.focusBorder,
+            }}
+          />
+        </Flex>
 
-        <SongsList.Content
-          useContext={SongsList.context.use}
-          render={(song, index) => <SongCard key={index} index={index + 1} {...song} />}
-        />
+        <Box flex='1' overflowY='scroll'>
+          <SongsList.Content
+            useContext={SongsList.context.use}
+            render={(song, index) => <SongCard key={index} index={index + 1} {...song} />}
+          />
+        </Box>
       </SongsList.Wrapper>
     </Container>
   );

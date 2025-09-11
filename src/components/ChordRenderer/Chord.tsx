@@ -6,7 +6,7 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 0.12
  * @description Render chrod based on given config.
  */
 
@@ -28,12 +28,17 @@ export const Chord = (props: TChordProps) => {
 
   return (
     <Box
-      width='12em'
-      padding='1em 0.5em'
+      width='13em'
+      padding='1em 1em'
       borderRadius='1em'
       fontSize='15px'
+      borderWidth='thin'
+      display='flex'
+      flexDirection='column'
+      alignItems='center'
       // [*] theme colors
       background={theme.background}
+      borderColor={theme.border}
     >
       <Heading
         size='xl'
@@ -44,6 +49,7 @@ export const Chord = (props: TChordProps) => {
       >
         {props.name}
       </Heading>
+
       <Box width='11em'>
         <Divider
           borderWidth='thin'

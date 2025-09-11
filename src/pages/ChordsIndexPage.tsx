@@ -6,15 +6,15 @@
  *
  * @file ChordsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description Handle chords rendering.
  */
 
-import { Container, SimpleGrid } from '@chakra-ui/react';
+import { Box, Container, Flex, SimpleGrid } from '@chakra-ui/react';
 
 import { Chord } from '@/components/ChordRenderer/Chord';
 import { createSmartList } from '@/components/SmartList/index';
-import { useAppStateContext } from '@/context/AppState';
+import { useAppStateContext, useAppTheme } from '@/context/AppState';
 import type { TChord } from '@/types/chord.types';
 import { Fragment } from 'react';
 
@@ -22,9 +22,19 @@ const ChordsList = createSmartList<[string, TChord]>();
 
 export const ChordsIndexPage = () => {
   const { chordsIndex } = useAppStateContext();
+  const { chordsIndexPage: theme } = useAppTheme();
 
   return (
-    <Container maxW={['100vw', '5xl']} pt='1em' pb='1em' justifyItems='center'>
+    <Container
+      maxW={['100vw', '5xl']}
+      height='100%'
+      display='flex'
+      flexDirection='column'
+      padding={['1em 0em', '1em']}
+      borderRadius='0.5em'
+      // [*] theme colors
+      backgroundColor={theme.background}
+    >
       <ChordsList.Wrapper
         context={ChordsList.context}
         setup={{
@@ -34,24 +44,38 @@ export const ChordsIndexPage = () => {
           cmp: (c1, c2) => (c1[0] > c2[0] ? 1 : -1),
         }}
       >
-        <ChordsList.SearchBar useContext={ChordsList.context.use} color='white' mb='20px' />
+        <Flex justifyContent='center' mb='20px'>
+          <ChordsList.SearchBar
+            useContext={ChordsList.context.use}
+            width='250px'
+            // [*] theme colors
+            backgroundColor={theme.searchBar.background}
+            color={theme.searchBar.color}
+            borderColor={theme.searchBar.border}
+            _focus={{
+              borderColor: theme.searchBar.focusBorder,
+            }}
+          />
+        </Flex>
 
-        <ChordsList.Content
-          useContext={ChordsList.context.use}
-          as={SimpleGrid}
-          asProps={{
-            columns: [1, 2, 3, 4, 5, 5],
-            spacing: '1em',
-            justifyItems: 'center',
-          }}
-          render={([chordKeyName, chordConfig]) => (
-            <Fragment key={chordKeyName}>
-              {chordKeyName !== '-' && (
-                <Chord key={chordKeyName} name={chordConfig.name} frets={chordConfig.frets} />
-              )}
-            </Fragment>
-          )}
-        />
+        <Box flex='1' overflowY='scroll'>
+          <ChordsList.Content
+            useContext={ChordsList.context.use}
+            as={SimpleGrid}
+            asProps={{
+              columns: [1, 2, 3, 4, 5, 5],
+              spacing: '1em',
+              justifyItems: 'center',
+            }}
+            render={([chordKeyName, chordConfig]) => (
+              <Fragment key={chordKeyName}>
+                {chordKeyName !== '-' && (
+                  <Chord key={chordKeyName} name={chordConfig.name} frets={chordConfig.frets} />
+                )}
+              </Fragment>
+            )}
+          />
+        </Box>
       </ChordsList.Wrapper>
     </Container>
   );

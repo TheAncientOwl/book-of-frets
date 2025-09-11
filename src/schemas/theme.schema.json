@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "App Theme Schema",
-  "description": "JSON schema for BookOfFrets theme configuration | v0.1.0",
+  "description": "JSON schema for BookOfFrets theme configuration",
   "type": "object",
   "properties": {
     "name": {
@@ -54,14 +54,32 @@
       },
       "required": ["background"]
     },
+    "chordsIndexPage": {
+      "type": "object",
+      "properties": {
+        "background": { "type": "string" },
+        "searchBar": {
+          "type": "object",
+          "properties": {
+            "background": { "type": "string" },
+            "color": { "type": "string" },
+            "border": { "type": "string" },
+            "focusBorder": { "type": "string" }
+          },
+          "required": ["background", "color", "border", "focusBorder"]
+        }
+      },
+      "required": ["background", "searchBar"]
+    },
     "chord": {
       "type": "object",
       "properties": {
+        "border": { "type": "string" },
         "background": { "type": "string" },
         "dividers": { "type": "string" },
         "title": { "type": "string" }
       },
-      "required": ["background", "dividers", "title"]
+      "required": ["border", "background", "dividers", "title"]
     },
     "fret": {
       "type": "object",
@@ -290,9 +308,19 @@
     "songsIndexPage": {
       "type": "object",
       "properties": {
-        "background": { "type": "string" }
+        "background": { "type": "string" },
+        "searchBar": {
+          "type": "object",
+          "properties": {
+            "background": { "type": "string" },
+            "color": { "type": "string" },
+            "border": { "type": "string" },
+            "focusBorder": { "type": "string" }
+          },
+          "required": ["background", "color", "border", "focusBorder"]
+        }
       },
-      "required": ["background"]
+      "required": ["background", "searchBar"]
     },
     "settings": {
       "type": "object",
@@ -333,6 +361,7 @@
     "name",
     "appMenu",
     "general",
+    "chordsIndexPage",
     "chord",
     "fret",
     "songCard",
