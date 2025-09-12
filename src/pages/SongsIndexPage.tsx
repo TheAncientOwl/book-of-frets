@@ -6,7 +6,7 @@
  *
  * @file SongsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.14
+ * @version 0.15
  * @description List all available songs.
  */
 
@@ -55,7 +55,14 @@ export const SongsIndexPage = () => {
           getKey: song => song.title + ' ' + song.artists.join(' '),
         }}
       >
-        <Flex justifyContent='center' mt={['20px', '0px']} mb='20px' ml='45px' mr='45px'>
+        <Flex
+          justifyContent='center'
+          mt={['20px', '0px']}
+          mb='20px'
+          ml='auto'
+          mr='auto'
+          width={['250px', '300px', '400px']}
+        >
           <SongsList.SearchBar
             useContext={SongsList.context.use}
             // [*] theme colors
