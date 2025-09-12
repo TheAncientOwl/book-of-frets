@@ -6,7 +6,7 @@
  *
  * @file ChordsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.13
+ * @version 0.14
  * @description Handle chords rendering.
  */
 
@@ -39,7 +39,7 @@ export const ChordsIndexPage = () => {
         context={ChordsList.context}
         setup={{
           data: Object.entries(chordsIndex),
-          getKey: val => val[0],
+          getKey: val => val[1].name,
           defaultSorted: true,
           cmp: (c1, c2) => (c1[0] > c2[0] ? 1 : -1),
         }}
