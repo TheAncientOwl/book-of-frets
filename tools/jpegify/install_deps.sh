@@ -23,6 +23,8 @@ if [ ! -d ".venv" ]; then
   python3 -m venv "$home/.venv"
 fi
 
-pip install -r requirements.txt
+source "$home/.venv/bin/activate"
+
+pip3 install -r requirements.txt
 
 cd -
