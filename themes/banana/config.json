@@ -101,7 +101,7 @@
       "border": "yellow.500",
       "text": "#6b3e26"
     },
-    "segments": {
+    "chunks": {
       "background": "blackAlpha.100",
       "divider": "#6b3e26",
       "item": {

@@ -1,5 +1,5 @@
 {
-  "version": "0.1.1",
+  "version": "0.2.1",
   "contributors": ["TheAncientOwl"],
   "title": "Never Gonna Give You Up",
   "artists": ["Rick Astley"],
@@ -12,10 +12,10 @@
       "name": "intro",
       "type": "chords",
       "times": 4,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Fmaj7"],
               "chordTimes": 1,
@@ -30,7 +30,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Em"],
               "chordTimes": 1,
@@ -49,10 +49,10 @@
       "name": "verse",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 4,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Fmaj7", "G"],
               "chordTimes": 1,
@@ -66,10 +66,10 @@
       "name": "pre-chorus",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Fmaj7", "G"],
               "chordTimes": 1,
@@ -83,10 +83,10 @@
       "name": "chorus",
       "type": "chords",
       "times": 4,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Fmaj7"],
               "chordTimes": 1,
@@ -101,7 +101,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Em"],
               "chordTimes": 1,

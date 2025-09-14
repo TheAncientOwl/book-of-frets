@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "contributors": ["TheAncientOwl"],
   "title": "Seven Nation Army",
   "artists": ["The White Stripes"],
@@ -12,10 +12,10 @@
       "name": "main 1",
       "type": "strings",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 3,
-          "segments": [
+          "items": [
             [{ "string": 1, "fret": 7 }],
             [{ "string": 1, "fret": "-" }],
             [{ "string": 1, "fret": "-" }],
@@ -39,10 +39,10 @@
       "name": "main 2",
       "type": "strings",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             [
               { "string": 1, "fret": 3 },
               { "string": 2, "fret": 5 }
@@ -122,10 +122,10 @@
       "name": "main 3",
       "type": "strings",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             [
               { "string": 2, "fret": 7 },
               { "string": 3, "fret": 9 }
@@ -170,7 +170,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             [
               { "string": 2, "fret": 7 },
               { "string": 3, "fret": 9 }
@@ -225,10 +225,10 @@
       "name": "outro",
       "type": "strings",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             [{ "string": 2, "fret": 7 }],
             [{ "string": 1, "fret": "-" }],
             [{ "string": 1, "fret": "-" }],

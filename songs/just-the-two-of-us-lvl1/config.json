@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "Just the Two of Us | Lvl 1",
   "artists": ["Grover Washington Jr."],
@@ -12,10 +12,10 @@
       "name": "main progression",
       "type": "chords",
       "times": 404,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["CM7"],
               "chordTimes": 1,
@@ -40,7 +40,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["CM7"],
               "chordTimes": 1,

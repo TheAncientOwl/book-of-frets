@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "contributors": ["TheAncientOwl"],
   "title": "O Stea",
   "artists": ["Deepcentral"],
@@ -12,10 +12,10 @@
       "name": "main",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 404,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Em7", "Cadd9", "G", "D"],
               "chordTimes": 1,
