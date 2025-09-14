@@ -7,7 +7,7 @@
 # @file install_deps.sh
 # @author Alexandru Delegeanu
 # @version 0.1
-# @description Install dependencies for jpegify tool
+# @description Install dependencies for webpify tool
 #
 
 if [ -z "$BOOK_OF_FRETS_ROOT" ]; then
@@ -15,7 +15,7 @@ if [ -z "$BOOK_OF_FRETS_ROOT" ]; then
   exit 1
 fi
 
-home=$BOOK_OF_FRETS_ROOT/tools/jpegify
+home=$BOOK_OF_FRETS_ROOT/tools/webpify
 
 cd $home
 
