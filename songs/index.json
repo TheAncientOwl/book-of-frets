@@ -71,6 +71,13 @@
       "chordIDs": ["Am7", "C", "Fmaj7", "G"]
     },
     {
+      "title": "As It Was",
+      "artists": ["Harry Styles"],
+      "directory": "as-it-was",
+      "type": ["acoustic"],
+      "chordIDs": ["Dsus2", "Bm7", "E", "A"]
+    },
+    {
       "title": "Just the Two of Us | Lvl 1",
       "artists": ["Grover Washington Jr."],
       "directory": "just-the-two-of-us-lvl1",
