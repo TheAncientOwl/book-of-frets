@@ -1,12 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Chords Index Schema | v0.1.0",
+  "title": "Chords Index Schema",
   "type": "object",
   "properties": {
-    "version": {
-      "type": "string",
-      "pattern": "^\\d+\\.\\d+\\.\\d+$"
-    },
     "index": {
       "type": "object",
       "additionalProperties": {
@@ -32,5 +28,5 @@
       }
     }
   },
-  "required": ["version", "index"]
+  "required": ["index"]
 }

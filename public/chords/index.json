@@ -1,5 +1,4 @@
 {
-  "version": "0.1.4",
   "index": {
     "-": {
       "name": "-",
@@ -19,7 +18,7 @@
     "E": {
       "name": "E",
       "frets": [
-        [{ "finger": 1, "string": 5 }],
+        [{ "finger": 1, "string": 4 }],
         [
           { "finger": 2, "string": 2 },
           { "finger": 3, "string": 3 }
@@ -32,9 +31,9 @@
       "frets": [
         [{ "finger": -1, "string": -1 }],
         [
+          { "finger": 1, "string": 3 },
           { "finger": 2, "string": 4 },
-          { "finger": 3, "string": 5 },
-          { "finger": 4, "string": 6 }
+          { "finger": 3, "string": 5 }
         ],
         []
       ]
@@ -380,6 +379,28 @@
           { "finger": 3, "string": 3 },
           { "finger": 4, "string": 4 }
         ]
+      ]
+    },
+    "Dsus2": {
+      "name": "Dsus2",
+      "frets": [
+        [
+          { "finger": -1, "string": -1 },
+          { "finger": -2, "string": -2 }
+        ],
+        [{ "finger": 1, "string": 4 }],
+        [{ "finger": 3, "string": 5 }]
+      ]
+    },
+    "Bm7": {
+      "name": "Bm7",
+      "frets": [
+        [{ "finger": -1, "string": -1 }],
+        [
+          { "finger": 1, "string": 2 },
+          { "finger": 2, "string": 4 }
+        ],
+        [{ "finger": 3, "string": 5 }]
       ]
     }
   }
