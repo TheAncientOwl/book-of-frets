@@ -10,7 +10,7 @@
  * @description Song types for json mapping.
  */
 
-export type TStrummingMove = '-' | 'D' | 'U' | 'Dx' | 'Ux' | 'X';
+export type TStrummingMove = '-' | 'D' | 'U' | 'Dx' | 'Ux' | 'X' | 'De' | 'Dx';
 
 export type TChordsChunkItem = {
   chordIDs: string[];
