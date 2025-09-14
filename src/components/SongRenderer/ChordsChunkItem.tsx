@@ -6,7 +6,7 @@
  *
  * @file ChordsChunkItem.tsx
  * @author Alexandru Delegeanu
- * @version 0.14
+ * @version 0.15
  * @description Render song pattern segment.
  */
 
@@ -31,6 +31,9 @@ import type { TChordsChunkItem } from '@/types/song.types';
 type TChordsChunkItemProps = TChordsChunkItem & {
   showChordTimes: boolean;
 };
+
+const EMPHASIZE_STRUMS = ['De', 'Ue'];
+const EMPHASIZE_STRUM_CHAR = 'e';
 
 const NO_CHORD_ID = '-';
 
@@ -112,8 +115,12 @@ export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
         >
           {props.strummingPattern.map((pattern, index) => {
             return (
-              <Text key={index} fontWeight='bold'>
-                {pattern}
+              <Text
+                key={index}
+                fontWeight='bold'
+                textDecoration={EMPHASIZE_STRUMS.includes(pattern) ? 'underline' : 'none'}
+              >
+                {pattern.replace(EMPHASIZE_STRUM_CHAR, '')}
               </Text>
             );
           })}
