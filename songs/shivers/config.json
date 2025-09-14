@@ -1,0 +1,167 @@
+{
+  "version": "0.1.0",
+  "contributors": ["TheAncientOwl"],
+  "title": "Shivers",
+  "artists": ["Ed Sheeran"],
+  "type": ["acoustic"],
+  "notes": [],
+  "capo": 0,
+  "chordIDs": ["Bm", "G", "D", "A"],
+  "songSegments": {
+    "verse": {
+      "name": "verse",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 3,
+          "items": [
+            {
+              "chordIDs": ["Bm", "G", "D", "A"],
+              "chordTimes": 1,
+              "strummingPattern": [
+                "D",
+                "-",
+                "D",
+                "Ue",
+                "-",
+                "U",
+                "D",
+                "Ue",
+                "-",
+                "U",
+                "D",
+                "Ue",
+                "-",
+                "U",
+                "D",
+                "U"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "chorus-1": {
+      "name": "chorus 1",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 2,
+          "items": [
+            {
+              "chordIDs": ["Bm", "G", "D"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+            },
+            {
+              "chordIDs": ["A"],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+            }
+          ]
+        }
+      ]
+    },
+    "bridge": {
+      "name": "bridge",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": ["Bm", "G", "D", "A"],
+              "chordTimes": 1,
+              "strummingPattern": [
+                "D",
+                "U",
+                "D",
+                "U",
+                "-",
+                "U",
+                "D",
+                "U",
+                "-",
+                "U",
+                "D",
+                "U",
+                "-",
+                "U",
+                "D",
+                "U"
+              ]
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": ["Bm", "G", "D", "A"],
+              "chordTimes": 4,
+              "strummingPattern": ["D", "U", "Dx", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "chorus-2": {
+      "name": "chorus 2",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": ["Bm"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            },
+            {
+              "chordIDs": ["G", "D"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+            },
+            {
+              "chordIDs": ["A"],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": ["Bm", "G", "D"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+            },
+            {
+              "chordIDs": ["A"],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "songSegmentsOrder": ["verse", "chorus-1", "verse", "chorus-2"],
+  "resources": [
+    {
+      "alias": "Shivers Guitar Tutorial Ed Sheeran Guitar Lesson |No Capo + Easy Chords|",
+      "author": "GuitarZero2Hero ~ YouTube",
+      "link": "https://youtu.be/fxP2CM4QoiU"
+    },
+    {
+      "alias": "Shivers Guitar Cover Ed Sheeran 🎸|Tabs + Chords|",
+      "author": "GuitarZero2Hero Express ~ YouTube",
+      "link": "https://youtu.be/jUo76Aawb3c"
+    }
+  ]
+}

@@ -1,5 +1,4 @@
 {
-  "version": "0.1.9",
   "index": [
     {
       "title": "Never Gonna Give You Up",
@@ -56,6 +55,13 @@
       "directory": "nice-to-meet-you",
       "type": ["acoustic"],
       "chordIDs": ["Em", "C", "G", "D"]
+    },
+    {
+      "title": "Shivers",
+      "artists": ["Ed Sheeran"],
+      "directory": "shivers",
+      "type": ["acoustic"],
+      "chordIDs": ["Bm", "G", "D", "A"]
     },
     {
       "title": "Adore You",
