@@ -6,7 +6,7 @@
  *
  * @file SongsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.15
+ * @version 0.16
  * @description List all available songs.
  */
 
@@ -75,7 +75,15 @@ export const SongsIndexPage = () => {
           />
         </Flex>
 
-        <Box flex='1' overflowY='scroll'>
+        <Box
+          flex='1'
+          overflowY='scroll'
+          sx={{
+            '&::-webkit-scrollbar': { display: 'none' }, // Chrome, Safari
+            msOverflowStyle: 'none', // IE, Edge
+            scrollbarWidth: 'none', // Firefox
+          }}
+        >
           <SongsList.Content
             virtualized
             useContext={SongsList.context.use}
