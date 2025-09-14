@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Song Schema | v0.2.1",
+  "title": "Song Schema",
   "type": "object",
   "properties": {
     "version": {
@@ -87,7 +87,7 @@
                             "type": "array",
                             "items": {
                               "type": "string",
-                              "enum": ["D", "U", "-", "Dx", "Ux"]
+                              "enum": ["D", "U", "-", "Dx", "Ux", "X"]
                             },
                             "minItems": 1
                           }
