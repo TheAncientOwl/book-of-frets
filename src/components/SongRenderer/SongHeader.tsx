@@ -6,7 +6,7 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Render song header data.
  */
 
@@ -35,7 +35,7 @@ export const SongHeader = (props: TSongHeaderProps) => {
       <Box position='relative' width={['70px', '80px']} height={['70px', '80px']} mb={['5px']}>
         <Skeleton isLoaded={isImageLoaded} width='100%' height='100%' borderRadius='10px'>
           <Image
-            src={`${import.meta.env.BASE_URL}songs/${props.directory}/cover.jpeg`}
+            src={`${import.meta.env.BASE_URL}songs/${props.directory}/cover.webp`}
             alt={`${props.title} cover`}
             width='100%'
             height='100%'

@@ -7,7 +7,7 @@
  @file webpify.py
  @author Alexandru Delegeanu
  @version 0.1
- @description Convert source image to jpeg
+ @description Convert source image to webp
 """
 
 from PIL import Image

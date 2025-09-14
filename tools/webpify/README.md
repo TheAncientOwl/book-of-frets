@@ -1,6 +1,6 @@
 # 🛠️ 🏞️ Webpify
 
-`webpify` is a command-line tool that converts images to JPEG format. It is designed to help optimize images for web use by reducing file size while maintaining acceptable visual quality.
+`webpify` is a command-line tool that converts images to WEBP format. It is designed to help optimize images for web use by reducing file size while maintaining acceptable visual quality.
 
 ## Usage
 

@@ -6,7 +6,7 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.14
+ * @version 0.15
  * @description List all available songs.
  */
 
@@ -88,7 +88,7 @@ export const SongCard = (props: SongProps) => {
       >
         <Skeleton isLoaded={isImageLoaded} width='100%' height='100%' borderRadius='10px'>
           <Image
-            src={`${import.meta.env.BASE_URL}songs/${props.directory}/cover.jpeg`}
+            src={`${import.meta.env.BASE_URL}songs/${props.directory}/cover.webp`}
             alt={`${props.title} cover`}
             width='100%'
             height='100%'
