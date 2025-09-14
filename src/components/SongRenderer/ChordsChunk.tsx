@@ -4,9 +4,9 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
- * @file ChordsPattern.tsx
+ * @file ChordsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.17
+ * @version 0.18
  * @description Render song chords pattern.
  */
 
@@ -14,15 +14,15 @@ import { Fragment } from 'react';
 
 import { Box, Divider, Tag, Tooltip, type DividerProps } from '@chakra-ui/react';
 
-import { ChordsPatternSegment } from '@/components/SongRenderer/ChordsPatternSegment.tsx';
+import { ChordsChunkItem } from '@/components/SongRenderer/ChordsChunkItem';
 import { useAppTheme } from '@/context/AppState';
-import type { TChordsPattern } from '@/types/song.types';
+import type { TChordsChunk } from '@/types/song.types';
 
-type TChordsPatternProps = TChordsPattern & {
+type TChordsChunkProps = TChordsChunk & {
   showChordTimes: boolean;
 };
 
-const ChordsPatternDivider = (props: DividerProps) => {
+const ChordsChunkDivider = (props: DividerProps) => {
   const { song: theme } = useAppTheme();
 
   return (
@@ -33,13 +33,13 @@ const ChordsPatternDivider = (props: DividerProps) => {
       mt={['15px', '0px']}
       mb={['15px', '0px']}
       // [*] theme colors
-      borderColor={theme.segments.item.chordsPattern.divider}
+      borderColor={theme.chunks.item.chordsPattern.divider}
       {...props}
     />
   );
 };
 
-export const ChordsPattern = (props: TChordsPatternProps) => {
+export const ChordsChunk = (props: TChordsChunkProps) => {
   const { song: theme } = useAppTheme();
 
   return (
@@ -51,15 +51,15 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
       alignItems='center'
       justifyContent='center'
     >
-      <ChordsPatternDivider borderStyle={['solid']} />
+      <ChordsChunkDivider borderStyle={['solid']} />
 
-      {props.segments.map((segment, segmentIndex) => (
+      {props.items.map((segment, segmentIndex) => (
         <Fragment key={segmentIndex}>
-          <ChordsPatternSegment {...segment} showChordTimes={props.showChordTimes} />
+          <ChordsChunkItem {...segment} showChordTimes={props.showChordTimes} />
 
-          <ChordsPatternDivider
+          <ChordsChunkDivider
             borderStyle={['dashed', 'solid']}
-            display={[segmentIndex < props.segments.length - 1 ? 'block' : 'none', 'block']}
+            display={[segmentIndex < props.items.length - 1 ? 'block' : 'none', 'block']}
           />
         </Fragment>
       ))}
@@ -67,7 +67,7 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
       <Tooltip
         label={`Repeat ${props.times} times`}
         // [*] theme colors
-        borderColor={theme.segments.item.chordsPattern.divider}
+        borderColor={theme.chunks.item.chordsPattern.divider}
       >
         <Tag
           size='sm'
@@ -78,8 +78,8 @@ export const ChordsPattern = (props: TChordsPatternProps) => {
           transform='translate(0%, -50%)'
           zIndex={1}
           // [*] theme colors
-          backgroundColor={theme.segments.item.chordsPattern.chord.times.background}
-          color={theme.segments.item.chordsPattern.chord.times.color}
+          backgroundColor={theme.chunks.item.chordsPattern.chord.times.background}
+          color={theme.chunks.item.chordsPattern.chord.times.color}
         >
           x{props.times}
         </Tag>

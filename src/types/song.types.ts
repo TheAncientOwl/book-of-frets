@@ -6,21 +6,21 @@
  *
  * @file song.types.ts
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description Song types for json mapping.
  */
 
-export type TStrummingMove = '-' | 'D' | 'U' | 'Dx' | 'Ux';
+export type TStrummingMove = '-' | 'D' | 'U' | 'Dx' | 'Ux' | 'X';
 
-export type TChordsPatternSegment = {
+export type TChordsChunkItem = {
   chordIDs: string[];
   chordTimes: number;
   strummingPattern: TStrummingMove[];
 };
 
-export type TChordsPattern = {
+export type TChordsChunk = {
   times: number;
-  segments: TChordsPatternSegment[];
+  items: TChordsChunkItem[];
 };
 
 export type TStringFret = {
@@ -28,18 +28,18 @@ export type TStringFret = {
   fret: number;
 };
 
-export type TStringsPatternSegment = TStringFret[];
+export type TStringsChunkItem = TStringFret[];
 
-export type TStringsPattern = {
+export type TStringsChunk = {
   times: number;
-  segments: TStringsPatternSegment[];
+  items: TStringsChunkItem[];
 };
 
 export type TSongSegment = {
   name: string;
   type: 'chords' | 'strings';
   times: number;
-  patterns: TChordsPattern[] | TStringsPattern[];
+  chunks: TChordsChunk[] | TStringsChunk[];
 };
 
 export type TResource = {

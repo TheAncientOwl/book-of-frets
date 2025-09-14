@@ -6,7 +6,7 @@
  *
  * @file SongSegments.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description Render song segments data.
  */
 
@@ -19,7 +19,7 @@ import {
   Box,
 } from '@chakra-ui/react';
 
-import type { TChordsPattern, TSongSegment } from '@/types/song.types';
+import type { TChordsChunk, TSongSegment } from '@/types/song.types';
 
 import { SongSegmentBody, SongSegmentHeading } from '@/components/SongRenderer/SongSegment';
 import { useAppTheme } from '@/context/AppState';
@@ -39,7 +39,7 @@ export const SongSegments = (props: TSongSegmentsProps) => {
       borderRadius='1rem'
       defaultIndex={props.songSegmentsOrder.map((_, i) => i)}
       // [*] theme colors
-      backgroundColor={theme.segments.background}
+      backgroundColor={theme.chunks.background}
     >
       {props.songSegmentsOrder.map((songSegmentName, index) => {
         const songSegmentData = props.songSegments[songSegmentName];
@@ -52,8 +52,8 @@ export const SongSegments = (props: TSongSegmentsProps) => {
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
           ([_, value]) =>
             value.type === 'chords' &&
-            (value.patterns as TChordsPattern[]).some(pattern =>
-              pattern.segments.some(segment => segment.chordTimes > 1)
+            (value.chunks as TChordsChunk[]).some(pattern =>
+              pattern.items.some(segment => segment.chordTimes > 1)
             )
         );
 
@@ -61,7 +61,7 @@ export const SongSegments = (props: TSongSegmentsProps) => {
           <AccordionItem
             key={`${songSegmentName}-${index}`}
             // [*] theme colors
-            borderColor={theme.segments.divider}
+            borderColor={theme.chunks.divider}
           >
             <AccordionButton
               display='flex'
@@ -83,7 +83,7 @@ export const SongSegments = (props: TSongSegmentsProps) => {
               >
                 <SongSegmentHeading {...songSegmentData} showChordTimes={showChordTimes} />
               </Box>
-              <AccordionIcon color={theme.segments.item.title} />
+              <AccordionIcon color={theme.chunks.item.title} />
             </AccordionButton>
             <AccordionPanel>
               <SongSegmentBody {...songSegmentData} showChordTimes={showChordTimes} />

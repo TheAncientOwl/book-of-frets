@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "contributors": ["TheAncientOwl"],
   "title": "Flowers Need Rain",
   "artists": ["Preston Pablo"],
@@ -12,10 +12,10 @@
       "name": "main",
       "type": "strings",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 404,
-          "segments": [
+          "items": [
             [
               { "string": 1, "fret": 9 },
               { "string": 2, "fret": 9 }

@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "Just the Two of Us | Lvl 2",
   "artists": ["Grover Washington Jr."],
@@ -12,10 +12,10 @@
       "name": "verse",
       "type": "chords",
       "times": 2,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["CM7"],
               "chordTimes": 1,
@@ -40,7 +40,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["CM7"],
               "chordTimes": 1,
@@ -81,10 +81,10 @@
       "name": "chorus",
       "type": "chords",
       "times": 2,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["CM7", "B7"],
               "chordTimes": 1,
@@ -99,7 +99,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["CM7", "B7"],
               "chordTimes": 1,
@@ -135,10 +135,10 @@
       "name": "bridge 1",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["CM7"],
               "chordTimes": 1,
@@ -153,7 +153,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["BbM7"],
               "chordTimes": 1,
@@ -168,7 +168,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["AbM7"],
               "chordTimes": 1,
@@ -183,7 +183,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["CM7"],
               "chordTimes": 1,
@@ -202,10 +202,10 @@
       "name": "bridge 2",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["CM7"],
               "chordTimes": 1,
@@ -220,7 +220,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["BbM7"],
               "chordTimes": 1,
@@ -235,7 +235,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["AbM7"],
               "chordTimes": 1,
@@ -250,7 +250,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["CM7"],
               "chordTimes": 1,

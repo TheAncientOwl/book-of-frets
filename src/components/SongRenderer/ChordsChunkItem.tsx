@@ -4,9 +4,9 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
- * @file ChordsPatternSegment.tsx
+ * @file ChordsChunkItem.tsx
  * @author Alexandru Delegeanu
- * @version 0.13
+ * @version 0.14
  * @description Render song pattern segment.
  */
 
@@ -26,15 +26,15 @@ import {
 
 import { Chord } from '@/components/ChordRenderer/Chord';
 import { useAppStateContext, useAppTheme } from '@/context/AppState';
-import type { TChordsPatternSegment } from '@/types/song.types';
+import type { TChordsChunkItem } from '@/types/song.types';
 
-type TChordsPatternSegmentProps = TChordsPatternSegment & {
+type TChordsChunkItemProps = TChordsChunkItem & {
   showChordTimes: boolean;
 };
 
 const NO_CHORD_ID = '-';
 
-export const ChordsPatternSegment = (props: TChordsPatternSegmentProps) => {
+export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
   const { song: theme } = useAppTheme();
   const { chordsIndex } = useAppStateContext();
 
@@ -54,8 +54,8 @@ export const ChordsPatternSegment = (props: TChordsPatternSegmentProps) => {
                     fontWeight='bold'
                     cursor='pointer'
                     // [*] theme colors
-                    backgroundColor={theme.segments.item.chordsPattern.chord.background}
-                    color={theme.segments.item.chordsPattern.chord.color}
+                    backgroundColor={theme.chunks.item.chordsPattern.chord.background}
+                    color={theme.chunks.item.chordsPattern.chord.color}
                   >
                     {chordId !== NO_CHORD_ID ? chordConfig.name : '-'}
                   </Tag>
@@ -66,19 +66,17 @@ export const ChordsPatternSegment = (props: TChordsPatternSegmentProps) => {
                     // [*] theme colors
                     zIndex={1}
                     backgroundColor={
-                      theme.segments.item.chordsPattern.chord.segment.popover.background
+                      theme.chunks.item.chordsPattern.chord.segment.popover.background
                     }
-                    borderColor={theme.segments.item.chordsPattern.chord.segment.popover.border}
+                    borderColor={theme.chunks.item.chordsPattern.chord.segment.popover.border}
                   >
                     <PopoverArrow
                       // [*] theme colors
-                      backgroundColor={
-                        theme.segments.item.chordsPattern.chord.segment.popover.arrow
-                      }
+                      backgroundColor={theme.chunks.item.chordsPattern.chord.segment.popover.arrow}
                     />
                     <PopoverCloseButton
                       // [*] theme colors
-                      color={theme.segments.item.chordsPattern.chord.segment.popover.closeButton}
+                      color={theme.chunks.item.chordsPattern.chord.segment.popover.closeButton}
                     />
                     <Flex justifyContent='center' padding='25px'>
                       <Chord name={chordConfig.name} frets={chordConfig.frets} />
@@ -97,7 +95,7 @@ export const ChordsPatternSegment = (props: TChordsPatternSegmentProps) => {
             fontSize='xs'
             fontWeight='bold'
             // [*] theme colors
-            color={theme.segments.item.chordsPattern.chord.segment.times}
+            color={theme.chunks.item.chordsPattern.chord.segment.times}
           >
             x{props.chordTimes}
           </Text>
@@ -110,7 +108,7 @@ export const ChordsPatternSegment = (props: TChordsPatternSegmentProps) => {
           gap='0.5em'
           alignItems='end'
           // [*] theme colors
-          color={theme.segments.item.chordsPattern.chord.segment.pattern}
+          color={theme.chunks.item.chordsPattern.chord.segment.pattern}
         >
           {props.strummingPattern.map((pattern, index) => {
             return (

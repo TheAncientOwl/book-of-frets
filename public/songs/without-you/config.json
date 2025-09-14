@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "contributors": ["TheAncientOwl"],
   "title": "Without You",
   "artists": ["The Kid LAROI"],
@@ -12,10 +12,10 @@
       "name": "intro",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["-"],
               "chordTimes": 1,
@@ -25,7 +25,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Am", "Fmaj7", "C", "G"],
               "chordTimes": 1,
@@ -56,10 +56,10 @@
       "name": "chorus",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 2,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Am", "Fmaj7", "C", "G"],
               "chordTimes": 1,
@@ -90,10 +90,10 @@
       "name": "verse",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 2,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Am", "Fmaj7", "C", "G"],
               "chordTimes": 1,
@@ -124,10 +124,10 @@
       "name": "pre-chorus 1",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Am", "Fmaj7", "C"],
               "chordTimes": 1,
@@ -154,7 +154,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["E"],
               "chordTimes": 1,
@@ -185,10 +185,10 @@
       "name": "chorus",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 4,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Am", "Fmaj7", "C", "G"],
               "chordTimes": 1,
@@ -219,10 +219,10 @@
       "name": "bridge",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Am", "Fmaj7", "C"],
               "chordTimes": 1,
@@ -232,7 +232,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["G"],
               "chordTimes": 1,
@@ -263,10 +263,10 @@
       "name": "pre-chorus 2",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Am", "Fmaj7", "C"],
               "chordTimes": 1,
@@ -293,7 +293,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["-"],
               "chordTimes": 1,
@@ -324,10 +324,10 @@
       "name": "outro",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Am", "Fmaj7", "C", "G"],
               "chordTimes": 1,

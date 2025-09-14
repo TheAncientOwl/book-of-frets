@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "Adore You",
   "artists": ["Harry Styles"],
@@ -12,10 +12,10 @@
       "name": "intro",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Am7", "-", "C", "-"],
               "chordTimes": 1,
@@ -34,10 +34,10 @@
       "name": "main progression",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 6,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Am7", "C"],
               "chordTimes": 2,
@@ -61,16 +61,16 @@
       "name": "post chorus 1",
       "type": "strings",
       "times": 1,
-      "patterns": []
+      "chunks": []
     },
     "main-progression-2": {
       "name": "main progression",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 5,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Am7", "C"],
               "chordTimes": 2,
@@ -94,22 +94,22 @@
       "name": "post chorus 2",
       "type": "strings",
       "times": 1,
-      "patterns": []
+      "chunks": []
     },
     "solo": {
       "name": "solo",
       "type": "strings",
       "times": 1,
-      "patterns": []
+      "chunks": []
     },
     "main-progression-3": {
       "name": "main progression",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 4,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Am7", "C"],
               "chordTimes": 2,
@@ -133,7 +133,7 @@
       "name": "post chorus 2",
       "type": "strings",
       "times": 1,
-      "patterns": []
+      "chunks": []
     }
   },
   "songSegmentsOrder": [

@@ -6,16 +6,16 @@
  *
  * @file SongSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.14
+ * @version 0.15
  * @description Render song segment.
  */
 
 import { Flex, Heading, Tag, Text } from '@chakra-ui/react';
 
-import type { TChordsPattern, TSongSegment, TStringsPattern } from '@/types/song.types';
+import type { TChordsChunk, TSongSegment, TStringsChunk } from '@/types/song.types';
 
-import { ChordsPattern } from '@/components/SongRenderer/ChordsPattern.tsx';
-import { StringsPattern } from '@/components/SongRenderer/StringsPattern.tsx';
+import { ChordsChunk } from '@/components/SongRenderer/ChordsChunk';
+import { StringsChunk } from '@/components/SongRenderer/StringsChunk';
 import { useAppTheme } from '@/context/AppState';
 
 type ISongSegmentProps = TSongSegment & {
@@ -33,7 +33,7 @@ export const SongSegmentHeading = (props: ISongSegmentProps) => {
       textDecoration='underline'
       textTransform='capitalize'
       // [*] theme colors
-      color={theme.segments.item.title}
+      color={theme.chunks.item.title}
     >
       <Text as='span' position='relative' fontSize={['lg', 'xl']}>
         {props.name}
@@ -45,8 +45,8 @@ export const SongSegmentHeading = (props: ISongSegmentProps) => {
             right={0}
             transform='translate(120%, 20%)'
             // [*] theme colors
-            backgroundColor={theme.segments.item.times.background}
-            color={theme.segments.item.times.color}
+            backgroundColor={theme.chunks.item.times.background}
+            color={theme.chunks.item.times.color}
           >
             x{props.times}
           </Tag>
@@ -59,20 +59,20 @@ export const SongSegmentHeading = (props: ISongSegmentProps) => {
 export const SongSegmentBody = (props: ISongSegmentProps) => {
   return (
     <Flex direction='column' alignItems='center' gap='1em'>
-      {props.patterns.map((pattern, patternIndex) => {
+      {props.chunks.map((chunk, chunkIdx) => {
         if (props.type === 'chords') {
           return (
-            <ChordsPattern
-              key={patternIndex}
-              {...(pattern as TChordsPattern)}
+            <ChordsChunk
+              key={chunkIdx}
+              {...(chunk as TChordsChunk)}
               showChordTimes={props.showChordTimes}
             />
           );
         } else if (props.type === 'strings') {
           return (
-            <StringsPattern
-              key={patternIndex}
-              {...(pattern as TStringsPattern)}
+            <StringsChunk
+              key={chunkIdx}
+              {...(chunk as TStringsChunk)}
               showChordTimes={props.showChordTimes}
             />
           );

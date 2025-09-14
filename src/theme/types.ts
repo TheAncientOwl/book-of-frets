@@ -6,7 +6,7 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description App theme types
  */
 
@@ -103,7 +103,7 @@ export type TSongTheme = {
     border: string;
     text: string;
   };
-  segments: {
+  chunks: {
     background: string;
     divider: string;
     item: {

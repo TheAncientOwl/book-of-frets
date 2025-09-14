@@ -4,18 +4,18 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
- * @file StringsPattern.tsx
+ * @file StringsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 0.12
  * @description Render song strings pattern.
  */
 
 import { Box, Circle, Divider, Flex, Heading } from '@chakra-ui/react';
 
-import type { TStringsPattern } from '@/types/song.types';
+import type { TStringsChunk } from '@/types/song.types';
 import { useAppTheme } from '@/context/AppState';
 
-type TStringsPatternProps = TStringsPattern & {
+type TStringsPatternProps = TStringsChunk & {
   showChordTimes: boolean;
 };
 
@@ -34,7 +34,7 @@ const String = (props: TStringProps) => {
       <Heading
         size='md'
         // [*] theme colors
-        color={theme.segments.item.stringsPattern.stringNames}
+        color={theme.chunks.item.stringsPattern.stringNames}
       >
         {props.name}
       </Heading>
@@ -46,7 +46,7 @@ const String = (props: TStringProps) => {
                 <Divider
                   borderWidth='thin'
                   // [*] theme colors
-                  borderColor={theme.segments.item.stringsPattern.filler}
+                  borderColor={theme.chunks.item.stringsPattern.filler}
                 />
               </Box>
             );
@@ -54,7 +54,7 @@ const String = (props: TStringProps) => {
             return (
               <Box
                 // [*] theme colors
-                color={theme.segments.item.stringsPattern.filler}
+                color={theme.chunks.item.stringsPattern.filler}
               >
                 |
               </Box>
@@ -68,9 +68,9 @@ const String = (props: TStringProps) => {
                   fontWeight='bold'
                   borderWidth='thin'
                   // [*] theme colors
-                  backgroundColor={theme.segments.item.stringsPattern.fret.background}
-                  borderColor={theme.segments.item.stringsPattern.fret.border}
-                  color={theme.segments.item.stringsPattern.fret.text}
+                  backgroundColor={theme.chunks.item.stringsPattern.fret.background}
+                  borderColor={theme.chunks.item.stringsPattern.fret.border}
+                  color={theme.chunks.item.stringsPattern.fret.text}
                 >
                   {fret}
                 </Circle>
@@ -83,11 +83,11 @@ const String = (props: TStringProps) => {
   );
 };
 
-export const StringsPattern = (props: TStringsPatternProps) => {
+export const StringsChunk = (props: TStringsPatternProps) => {
   const { song: theme } = useAppTheme();
   const stringsToFrets = [['-'], ['-'], ['-'], ['-'], ['-'], ['-'], ['-']] as TFretNumber[][];
 
-  props.segments.forEach(segment => {
+  props.items.forEach(segment => {
     segment.forEach(stringFret => {
       const { string, fret } = stringFret;
       stringsToFrets[string].push(fret);
@@ -103,7 +103,7 @@ export const StringsPattern = (props: TStringsPatternProps) => {
 
   return (
     <Flex direction='column' gap='0.5em' width='100%' overflow='scroll'>
-      <String name='E' frets={stringsToFrets[6]} />
+      <String name='e' frets={stringsToFrets[6]} />
       <String name='B' frets={stringsToFrets[5]} />
       <String name='G' frets={stringsToFrets[4]} />
       <String name='D' frets={stringsToFrets[3]} />
@@ -111,7 +111,7 @@ export const StringsPattern = (props: TStringsPatternProps) => {
       <String name='E' frets={stringsToFrets[1]} />
       <Divider
         // [*] theme colors
-        borderColor={theme.segments.item.stringsPattern.divider}
+        borderColor={theme.chunks.item.stringsPattern.divider}
       />
     </Flex>
   );

@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "Little Thing Called Love",
   "artists": ["Queen"],
@@ -12,10 +12,10 @@
       "name": "intro",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["D", "D", "D", "D"],
               "chordTimes": 1,
@@ -29,10 +29,10 @@
       "name": "verse",
       "type": "chords",
       "times": 2,
-      "patterns": [
+      "chunks": [
         {
           "times": 2,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["D", "D", "G"],
               "chordTimes": 1,
@@ -47,7 +47,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["D"],
               "chordTimes": 1,
@@ -71,10 +71,10 @@
       "name": "chorus 1",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["G", "G"],
               "chordTimes": 1,
@@ -94,7 +94,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Bb", "Bb"],
               "chordTimes": 1,
@@ -118,10 +118,10 @@
       "name": "chorus 2",
       "type": "strings",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             [{ "string": 1, "fret": "-" }],
             [{ "string": 1, "fret": "-" }],
             [{ "string": 1, "fret": "-" }],
@@ -242,10 +242,10 @@
       "name": "solo 1",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Bb", "Bb"],
               "chordTimes": 1,
@@ -270,7 +270,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Bb", "Bb"],
               "chordTimes": 1,
@@ -299,10 +299,10 @@
       "name": "solo 2",
       "type": "strings",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 1,
-          "segments": [
+          "items": [
             [{ "string": 1, "fret": "-" }],
             [{ "string": 1, "fret": "-" }],
             [{ "string": 1, "fret": "-" }],
@@ -420,10 +420,10 @@
       "name": "outro",
       "type": "chords",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 2,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["D", "D", "G"],
               "chordTimes": 1,
@@ -438,7 +438,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["D"],
               "chordTimes": 1,
@@ -448,7 +448,7 @@
         },
         {
           "times": 404,
-          "segments": [
+          "items": [
             {
               "chordIDs": ["Bb", "C"],
               "chordTimes": 1,

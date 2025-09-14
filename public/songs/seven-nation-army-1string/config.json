@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "contributors": ["TheAncientOwl"],
   "title": "Seven Nation Army | 1 String",
   "artists": ["The White Stripes"],
@@ -12,10 +12,10 @@
       "name": "main",
       "type": "strings",
       "times": 1,
-      "patterns": [
+      "chunks": [
         {
           "times": 3,
-          "segments": [
+          "items": [
             [
               {
                 "string": 1,
@@ -62,7 +62,7 @@
         },
         {
           "times": 1,
-          "segments": [
+          "items": [
             [
               {
                 "string": 1,

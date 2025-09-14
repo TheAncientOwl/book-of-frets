@@ -202,7 +202,7 @@
           },
           "required": ["background", "border", "text"]
         },
-        "segments": {
+        "chunks": {
           "type": "object",
           "properties": {
             "background": { "type": "string" },
@@ -303,7 +303,7 @@
           "required": ["title", "item"]
         }
       },
-      "required": ["background", "header", "capo", "segments", "resources"]
+      "required": ["background", "header", "capo", "chunks", "resources"]
     },
     "songsIndexPage": {
       "type": "object",
