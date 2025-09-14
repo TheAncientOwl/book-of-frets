@@ -30,6 +30,13 @@
       "chordIDs": ["C", "G", "D", "Em"]
     },
     {
+      "title": "Let Me Love You",
+      "artists": ["DJ Snake", "Justin Bieber"],
+      "directory": "let-me-love-you",
+      "type": ["acoustic"],
+      "chordIDs": ["Am", "C", "Em", "F", "G", "Dm"]
+    },
+    {
       "title": "Flowers Need Rain",
       "artists": ["Preston Pablo"],
       "directory": "flowers-need-rain",
