@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.26
+ * @version 0.27
  * @description App component.
  */
 
@@ -46,15 +46,14 @@ export const App = () => {
   }, [setChordsIndex, setAppTheme]);
 
   useEffect(() => {
-    let link: HTMLLinkElement | null = document.querySelector("link[rel~='icon']");
-
-    if (!link) {
-      link = document.createElement('link');
-      link.rel = 'icon';
-      document.head.appendChild(link);
+    const ids = ['dynamic-1', 'dynamic-2', 'dynamic-3', 'dynamic-4'];
+    for (const id of ids) {
+      const link = document.getElementById(id) as HTMLLinkElement;
+      if (link) {
+        console.log('Found');
+        link.href = appLogoURL;
+      }
     }
-
-    link.href = appLogoURL;
   }, [appLogoURL]);
 
   const appStateValue: TAppState = useMemo(
