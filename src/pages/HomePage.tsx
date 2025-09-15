@@ -6,10 +6,11 @@
  *
  * @file HomePage.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description App homepage.
  */
 
+import { Link as RouteLink } from 'react-router-dom';
 import { Container, Heading, Text, UnorderedList, ListItem, Link, Box } from '@chakra-ui/react';
 
 export const HomePage = () => {
@@ -22,9 +23,20 @@ export const HomePage = () => {
       <Box mb='2rem'>
         <Text>
           BookOfFrets is a web-based application designed to help guitar enthusiasts learn and
-          explore songs through an interactive fretboard interface. It features a comprehensive
-          collection of songs with detailed fret information, chords, a chord list, a song list, and
-          customizable themes.
+          explore songs through an interactive fretboard. It features a comprehensive collection of
+          songs with detailed frets, strumming patterns, chords,{' '}
+          <Link as={RouteLink} color='cyan.400' to='/index/chords'>
+            chords list
+          </Link>
+          ,{' '}
+          <Link as={RouteLink} color='cyan.400' to='/index/songs'>
+            songs list
+          </Link>
+          , and customizable{' '}
+          <Link as={RouteLink} color='cyan.400' to='/settings'>
+            themes
+          </Link>
+          .
         </Text>
       </Box>
 
@@ -38,8 +50,8 @@ export const HomePage = () => {
             finger placements.
           </ListItem>
           <ListItem>🎼 Chords: Access a rich library of chords with clear diagrams.</ListItem>
-          <ListItem>📖 Chord List: Browse and search through a curated list of chords.</ListItem>
-          <ListItem>📂 Song List: Easily navigate through a growing collection of songs.</ListItem>
+          <ListItem>📖 Chords List: Browse and search through a curated list of chords.</ListItem>
+          <ListItem>📂 Songs List: Easily navigate through a growing collection of songs.</ListItem>
           <ListItem>
             🎨 Themes: Customize the look and feel of the app with various themes.
           </ListItem>
