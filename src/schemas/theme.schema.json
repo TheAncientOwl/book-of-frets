@@ -189,9 +189,20 @@
             "title": { "type": "string" },
             "artists": { "type": "string" },
             "typeTags": { "type": "string" },
-            "coverBorder": { "type": "string" }
+            "coverBorder": { "type": "string" },
+            "contributors": {
+              "type": "object",
+              "properties": {
+                "heading": { "type": "string" },
+                "content": { "type": "string" },
+                "border": { "type": "string" },
+                "title": { "type": "string" },
+                "contributor": { "type": "string" }
+              },
+              "required": ["heading", "content", "border", "title", "contributor"]
+            }
           },
-          "required": ["title", "artists", "typeTags", "coverBorder"]
+          "required": ["title", "artists", "typeTags", "coverBorder", "contributors"]
         },
         "capo": {
           "type": "object",
@@ -286,6 +297,14 @@
           },
           "required": ["background", "item"]
         },
+        "notes": {
+          "type": "object",
+          "properties": {
+            "title": { "type": "string" },
+            "note": { "type": "string" }
+          },
+          "required": ["title", "note"]
+        },
         "resources": {
           "type": "object",
           "properties": {
@@ -303,7 +322,7 @@
           "required": ["title", "item"]
         }
       },
-      "required": ["background", "header", "capo", "chunks", "resources"]
+      "required": ["background", "header", "capo", "chunks", "notes", "resources"]
     },
     "songsIndexPage": {
       "type": "object",
