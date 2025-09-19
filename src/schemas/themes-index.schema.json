@@ -3,10 +3,6 @@
   "title": "Themes Index Schema",
   "type": "object",
   "properties": {
-    "version": {
-      "type": "string",
-      "pattern": "^\\d+\\.\\d+\\.\\d+$"
-    },
     "index": {
       "type": "array",
       "items": {
@@ -20,5 +16,5 @@
       }
     }
   },
-  "required": ["version", "index"]
+  "required": ["index"]
 }

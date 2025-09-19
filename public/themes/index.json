@@ -1,5 +1,4 @@
 {
-  "version": "0.1.1",
   "index": [
     {
       "title": "Nature",
@@ -19,7 +18,7 @@
     {
       "title": "Cherry",
       "directory": "cherry",
-      "mainColor": "#aa0022"
+      "mainColor": "#9e1313"
     },
     {
       "title": "Bright Sky",

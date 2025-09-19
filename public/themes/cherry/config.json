@@ -2,7 +2,7 @@
   "name": "Cherry",
   "appMenu": {
     "menuButton": {
-      "background": "#aa0022",
+      "background": "#9e1313",
       "hover": "red.600",
       "border": "red.500",
       "text": "white"
@@ -11,7 +11,7 @@
       "color": "white"
     },
     "drawer": {
-      "background": "#aa0022",
+      "background": "#9e1313",
       "appText": "white",
       "routeLink": "white"
     },
@@ -24,7 +24,7 @@
     "background": "gray.900"
   },
   "chordsIndexPage": {
-    "background": "#aa0022",
+    "background": "#9e1313",
     "searchBar": {
       "background": "blackAlpha.100",
       "color": "white",
@@ -34,7 +34,7 @@
   },
   "chord": {
     "border": "white",
-    "background": "#aa0022",
+    "background": "#640505",
     "dividers": "white",
     "title": "white"
   },
@@ -89,7 +89,7 @@
     }
   },
   "song": {
-    "background": "#aa0022",
+    "background": "#9e1313",
     "header": {
       "title": "white",
       "artists": "white",
@@ -156,7 +156,7 @@
     }
   },
   "songsIndexPage": {
-    "background": "#aa0022",
+    "background": "#9e1313",
     "searchBar": {
       "background": "blackAlpha.100",
       "color": "white",
@@ -167,7 +167,7 @@
   "settings": {
     "title": "white",
     "themePicker": {
-      "background": "#aa0022",
+      "background": "#9e1313",
       "title": "white",
       "item": {
         "background": "blackAlpha.400",
