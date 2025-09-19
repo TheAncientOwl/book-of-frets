@@ -6,11 +6,11 @@
  *
  * @file SongsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.16
+ * @version 0.17
  * @description List all available songs.
  */
 
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 import { Box, Container, Flex } from '@chakra-ui/react';
 
@@ -19,11 +19,14 @@ import type { TSongsIndexEntry } from '@/types/song.types';
 import { createSmartList } from '@/components/SmartList/index';
 import { SongCard } from '@/components/SongIndexEntry/SongCard';
 import { useAppTheme } from '@/context/AppState';
+import { setDocumentThemeColor } from '@/theme/setDocumentThemeColor';
 
 const SongsList = createSmartList<TSongsIndexEntry>();
 
 export const SongsIndexPage = () => {
   const { songsIndexPage: theme } = useAppTheme();
+
+  useLayoutEffect(() => setDocumentThemeColor(theme.background), [theme.background]);
 
   const [songsIndex, setSongsIndex] = useState<TSongsIndexEntry[]>([]);
 
@@ -43,8 +46,8 @@ export const SongsIndexPage = () => {
       height='100%'
       display='flex'
       flexDirection='column'
-      padding={['0em', '1em']}
-      borderRadius='0.5em'
+      padding={['1em 0em 0.2em 0em', '1em']}
+      borderRadius={['0em', '0.5em']}
       // [*] theme colors
       background={theme.background}
     >
@@ -55,14 +58,7 @@ export const SongsIndexPage = () => {
           getKey: song => song.title + ' ' + song.artists.join(' '),
         }}
       >
-        <Flex
-          justifyContent='center'
-          mt={['20px', '0px']}
-          mb='20px'
-          ml='auto'
-          mr='auto'
-          width={['250px', '300px', '400px']}
-        >
+        <Flex justifyContent='center' mx='auto' mb='20px' width={['250px', '300px', '400px']}>
           <SongsList.SearchBar
             useContext={SongsList.context.use}
             // [*] theme colors

@@ -6,10 +6,11 @@
  *
  * @file main.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description React entry point.
  */
 
+import './index.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';

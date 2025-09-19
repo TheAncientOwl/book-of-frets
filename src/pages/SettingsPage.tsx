@@ -6,16 +6,20 @@
  *
  * @file SettingsPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description App settings page.
  */
 
 import { ThemePicker } from '@/components/Settings/Theme/ThemePicker';
 import { useAppTheme } from '@/context/AppState';
+import { setDocumentThemeColor } from '@/theme/setDocumentThemeColor';
 import { Container, Heading } from '@chakra-ui/react';
+import { useLayoutEffect } from 'react';
 
 export const SettingsPage = () => {
-  const { settings: theme } = useAppTheme();
+  const { settings: theme, general } = useAppTheme();
+
+  useLayoutEffect(() => setDocumentThemeColor(general.background), [general.background]);
 
   return (
     <Container pt='3rem' color='white'>

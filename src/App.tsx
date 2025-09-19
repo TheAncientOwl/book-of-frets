@@ -50,7 +50,6 @@ export const App = () => {
     for (const id of ids) {
       const link = document.getElementById(id) as HTMLLinkElement;
       if (link) {
-        console.log('Found');
         link.href = appLogoURL;
       }
     }

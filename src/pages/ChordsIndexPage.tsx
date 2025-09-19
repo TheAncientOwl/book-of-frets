@@ -6,7 +6,7 @@
  *
  * @file ChordsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.14
+ * @version 0.15
  * @description Handle chords rendering.
  */
 
@@ -16,7 +16,8 @@ import { Chord } from '@/components/ChordRenderer/Chord';
 import { createSmartList } from '@/components/SmartList/index';
 import { useAppStateContext, useAppTheme } from '@/context/AppState';
 import type { TChord } from '@/types/chord.types';
-import { Fragment } from 'react';
+import { Fragment, useLayoutEffect } from 'react';
+import { setDocumentThemeColor } from '@/theme/setDocumentThemeColor';
 
 const ChordsList = createSmartList<[string, TChord]>();
 
@@ -24,14 +25,16 @@ export const ChordsIndexPage = () => {
   const { chordsIndex } = useAppStateContext();
   const { chordsIndexPage: theme } = useAppTheme();
 
+  useLayoutEffect(() => setDocumentThemeColor(theme.background), [theme.background]);
+
   return (
     <Container
       maxW={['100vw', '5xl']}
       height='100%'
       display='flex'
       flexDirection='column'
-      padding={['1em 0em', '1em']}
-      borderRadius='0.5em'
+      padding={['1em 0em 0.2em 0em', '1em']}
+      borderRadius={['0em', '0.5em']}
       // [*] theme colors
       backgroundColor={theme.background}
     >
