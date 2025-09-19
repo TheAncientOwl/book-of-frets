@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.23
+ * @version 0.24
  * @description Render song based on given config.
  */
 
@@ -42,6 +42,7 @@ export const Song = (props: TSongProps) => {
         artists={props.artists}
         capo={props.capo}
         type={props.type}
+        contributors={props.contributors}
       />
 
       <SongSegments songSegments={props.songSegments} songSegmentsOrder={props.songSegmentsOrder} />

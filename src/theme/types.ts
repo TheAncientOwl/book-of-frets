@@ -6,7 +6,7 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description App theme types
  */
 
@@ -97,6 +97,13 @@ export type TSongTheme = {
     artists: string;
     typeTags: string;
     coverBorder: string;
+    contributors: {
+      heading: string;
+      content: string;
+      border: string;
+      title: string;
+      contributor: string;
+    };
   };
   capo: {
     background: string;
