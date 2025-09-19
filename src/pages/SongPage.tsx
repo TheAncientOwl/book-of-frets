@@ -6,7 +6,7 @@
  *
  * @file SongPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description Handle song rendering based on url.
  */
 
@@ -56,6 +56,7 @@ export const SongPage = () => {
       songSegmentsOrder={songConfig.songSegmentsOrder}
       resources={songConfig.resources}
       type={songConfig.type}
+      contributors={songConfig.contributors}
     />
   );
 };

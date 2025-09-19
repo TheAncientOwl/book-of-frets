@@ -6,18 +6,34 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description Render song header data.
  */
 
 import { useAppTheme } from '@/context/AppState';
 import type { TSong } from '@/types/song.types';
-import { Box, Circle, Flex, Heading, Image, Skeleton, Text, Tooltip } from '@chakra-ui/react';
+import {
+  Box,
+  Circle,
+  Flex,
+  Heading,
+  Image,
+  Popover,
+  PopoverArrow,
+  PopoverBody,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverHeader,
+  PopoverTrigger,
+  Skeleton,
+  Text,
+  Tooltip,
+} from '@chakra-ui/react';
 import { Fragment, useState } from 'react';
 
 import { GiGuitarBassHead, GiGuitarHead } from 'react-icons/gi';
 
-type TSongHeaderProps = Pick<TSong, 'title' | 'artists' | 'capo' | 'type'> & {
+type TSongHeaderProps = Pick<TSong, 'title' | 'artists' | 'capo' | 'type' | 'contributors'> & {
   directory: string;
 };
 
@@ -98,6 +114,64 @@ export const SongHeader = (props: TSongHeaderProps) => {
           </Box>
         ))}
       </Heading>
+
+      <Popover>
+        <PopoverTrigger>
+          <Text
+            as='button'
+            fontSize='sm'
+            mb='10px'
+            color={theme.header.artists}
+            _hover={{ textDecoration: 'underline', cursor: 'pointer' }}
+          >
+            Contributors
+          </Text>
+        </PopoverTrigger>
+        <PopoverContent
+          textAlign='center'
+          // [*] theme colors
+          borderColor={theme.header.contributors.border}
+        >
+          <PopoverArrow
+            // [*] theme colors
+            backgroundColor={theme.header.contributors.heading}
+          />
+          <PopoverCloseButton
+            // [*] theme colors
+            color={theme.header.contributors.title}
+          />
+          <PopoverHeader
+            fontWeight='bold'
+            borderBottom='1px solid'
+            // [*] theme colors
+            backgroundColor={theme.header.contributors.heading}
+            color={theme.header.contributors.title}
+          >
+            Song contributed by
+          </PopoverHeader>
+          <PopoverBody
+            // [*] theme colors
+            backgroundColor={theme.header.contributors.content}
+            color={theme.header.contributors.contributor}
+          >
+            {props.contributors.length > 0 ? (
+              props.contributors.map((contributor, index) => (
+                <Text
+                  key={index}
+                  fontSize='sm'
+                  mb={index < props.contributors.length - 1 ? '2px' : '0'}
+                >
+                  {contributor}
+                </Text>
+              ))
+            ) : (
+              <Text fontSize='sm' fontStyle='italic'>
+                No contributors
+              </Text>
+            )}
+          </PopoverBody>
+        </PopoverContent>
+      </Popover>
 
       <Flex
         justifyContent='center'

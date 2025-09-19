@@ -94,7 +94,14 @@
       "title": "#6b3e26",
       "artists": "#6b3e26",
       "typeTags": "#6b3e26",
-      "coverBorder": "yellow.500"
+      "coverBorder": "yellow.500",
+      "contributors": {
+        "heading": "#6b3e26",
+        "content": "yellow.500",
+        "border": "#6b3e26",
+        "title": "#6b3e26",
+        "contributor": "#6b3e26"
+      }
     },
     "capo": {
       "background": "yellow.500",
