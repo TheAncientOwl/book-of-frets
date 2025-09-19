@@ -18,6 +18,7 @@ import { SongHeader } from '@/components/SongRenderer/SongHeader';
 import { SongResources } from '@/components/SongRenderer/SongResources';
 import { SongSegments } from '@/components/SongRenderer/SongSegments';
 import { useAppTheme } from '@/context/AppState';
+import { SongNotes } from '@/components/SongRenderer/SongNotes';
 
 type TSongProps = TSong & {
   directory: string;
@@ -46,6 +47,8 @@ export const Song = (props: TSongProps) => {
       />
 
       <SongSegments songSegments={props.songSegments} songSegmentsOrder={props.songSegmentsOrder} />
+
+      <SongNotes notes={props.notes} />
 
       <SongResources resources={props.resources} />
     </Container>

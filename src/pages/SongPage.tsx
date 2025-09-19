@@ -57,6 +57,7 @@ export const SongPage = () => {
       resources={songConfig.resources}
       type={songConfig.type}
       contributors={songConfig.contributors}
+      notes={songConfig.notes}
     />
   );
 };

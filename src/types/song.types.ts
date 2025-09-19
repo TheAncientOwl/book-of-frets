@@ -57,6 +57,7 @@ export type TSong = {
   resources: TResource[];
   type: string[];
   contributors: string[];
+  notes: string[];
 };
 
 export type TSongsIndexEntry = {

@@ -155,6 +155,10 @@ export type TSongTheme = {
       };
     };
   };
+  notes: {
+    title: string;
+    note: string;
+  };
   resources: {
     title: string;
     item: {

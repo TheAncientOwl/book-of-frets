@@ -153,6 +153,10 @@
         }
       }
     },
+    "notes": {
+      "title": "white",
+      "note": "white"
+    },
     "resources": {
       "title": "white",
       "item": {
