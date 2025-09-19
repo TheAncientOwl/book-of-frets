@@ -94,7 +94,14 @@
       "title": "white",
       "artists": "white",
       "typeTags": "white",
-      "coverBorder": "orange.500"
+      "coverBorder": "orange.500",
+      "contributors": {
+        "heading": "#ff9248",
+        "content": "orange.500",
+        "border": "white",
+        "title": "white",
+        "contributor": "white"
+      }
     },
     "capo": {
       "background": "orange.600",
