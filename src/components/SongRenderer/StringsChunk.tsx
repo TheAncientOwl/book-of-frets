@@ -6,14 +6,15 @@
  *
  * @file StringsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.13
+ * @version 0.14
  * @description Render song strings pattern.
  */
 
 import { Box, Circle, Divider, Flex, Heading } from '@chakra-ui/react';
 
-import type { TGuitarString, TGuitarStringDelimiter, TStringsChunk } from '@/types/song.types';
 import { useAppTheme } from '@/context/AppState';
+import type { TGuitarString } from '@/types/common.types';
+import type { TGuitarStringDelimiter, TStringsChunk } from '@/types/song.types';
 
 type TStringsPatternProps = TStringsChunk & {
   showChordTimes: boolean;

@@ -4,19 +4,10 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
- * @file song.types.ts
+ * @file common.types.ts
  * @author Alexandru Delegeanu
- * @version 0.3
- * @description Chords types for json mapping.
+ * @version 0.1
+ * @description Common types for json mapping.
  */
 
-import type { TGuitarString } from '@/types/common.types';
-
-export type TFret = Partial<Record<TGuitarString, number>>;
-
-export type TChord = {
-  name: string;
-  frets: TFret[];
-};
-
-export type TChordsIndex = Record<string, TChord>;
+export type TGuitarString = 'E' | 'A' | 'D' | 'G' | 'B' | 'e';

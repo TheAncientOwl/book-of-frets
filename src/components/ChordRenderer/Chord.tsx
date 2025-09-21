@@ -6,7 +6,7 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 0.12
+ * @version 0.13
  * @description Render chrod based on given config.
  */
 
@@ -17,6 +17,7 @@ import { Box, Divider, Heading } from '@chakra-ui/react';
 import { Fret } from '@/components/ChordRenderer/Fret';
 import { useAppTheme } from '@/context/AppState';
 import type { TFret } from '@/types/chord.types';
+import type { TGuitarString } from '@/types/common.types';
 
 type TChordProps = {
   name: string;
@@ -57,8 +58,8 @@ export const Chord = (props: TChordProps) => {
           borderColor={theme.dividers}
         />
         {props.frets.map((fret, idx) => {
-          const map = new Map<number, number>(
-            fret.map(fretConfig => [fretConfig.string, fretConfig.finger])
+          const map = new Map<TGuitarString, number>(
+            Object.entries(fret).map(([key, value]) => [key as TGuitarString, value])
           );
 
           return (
