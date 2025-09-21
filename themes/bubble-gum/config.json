@@ -149,7 +149,8 @@
             "border": "pink.900",
             "text": "white"
           },
-          "filler": "white"
+          "filler": "white",
+          "chordBackground": "blackAlpha.600"
         }
       }
     },
