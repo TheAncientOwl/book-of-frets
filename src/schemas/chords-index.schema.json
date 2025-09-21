@@ -12,15 +12,16 @@
           "frets": {
             "type": "array",
             "items": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "finger": { "type": "number", "maximum": 7, "minimum": -6 },
-                  "string": { "type": "number", "maximum": 6, "minimum": -6 }
-                },
-                "required": ["finger", "string"]
-              }
+              "type": "object",
+              "properties": {
+                "E": { "type": "integer", "minimum": -1, "maximum": 7, "default": 1 },
+                "A": { "type": "integer", "minimum": -1, "maximum": 7, "default": 1 },
+                "D": { "type": "integer", "minimum": -1, "maximum": 7, "default": 1 },
+                "G": { "type": "integer", "minimum": -1, "maximum": 7, "default": 1 },
+                "B": { "type": "integer", "minimum": -1, "maximum": 7, "default": 1 },
+                "e": { "type": "integer", "minimum": -1, "maximum": 7, "default": 1 }
+              },
+              "additionalProperties": false
             }
           }
         },

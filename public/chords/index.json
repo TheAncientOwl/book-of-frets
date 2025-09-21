@@ -2,406 +2,131 @@
   "index": {
     "-": {
       "name": "-",
-      "frets": [
-        [
-          { "finger": -1, "string": -1 },
-          { "finger": -2, "string": -2 },
-          { "finger": -3, "string": -3 },
-          { "finger": -4, "string": -4 },
-          { "finger": -5, "string": -5 },
-          { "finger": -6, "string": -6 }
-        ],
-        [],
-        []
-      ]
+      "frets": [{}, {}, {}]
     },
     "E": {
       "name": "E",
-      "frets": [
-        [{ "finger": 1, "string": 4 }],
-        [
-          { "finger": 2, "string": 2 },
-          { "finger": 3, "string": 3 }
-        ],
-        []
-      ]
+      "frets": [{ "G": 1 }, { "A": 2, "D": 3 }, {}]
     },
     "A": {
       "name": "A",
-      "frets": [
-        [{ "finger": -1, "string": -1 }],
-        [
-          { "finger": 1, "string": 3 },
-          { "finger": 2, "string": 4 },
-          { "finger": 3, "string": 5 }
-        ],
-        []
-      ]
+      "frets": [{ "E": -1 }, { "D": 1, "G": 2, "B": 3 }, {}]
     },
     "D": {
       "name": "D",
-      "frets": [
-        [
-          { "finger": -1, "string": -1 },
-          { "finger": -2, "string": -2 }
-        ],
-        [
-          { "finger": 1, "string": 4 },
-          { "finger": 2, "string": 6 }
-        ],
-        [{ "finger": 3, "string": 5 }]
-      ]
+      "frets": [{ "E": -1, "A": -1 }, { "G": 1, "e": 2 }, { "B": 3 }]
     },
     "G": {
       "name": "G",
-      "frets": [
-        [],
-        [{ "finger": 1, "string": 2 }],
-        [
-          { "finger": 2, "string": 1 },
-          { "finger": 3, "string": 5 },
-          { "finger": 4, "string": 6 }
-        ]
-      ]
+      "frets": [{}, { "A": 1 }, { "E": 2, "B": 3, "e": 4 }]
     },
     "Em": {
       "name": "Em",
-      "frets": [
-        [],
-        [
-          { "finger": 1, "string": 2 },
-          { "finger": 2, "string": 3 }
-        ],
-        []
-      ]
+      "frets": [{}, { "A": 1, "D": 2 }, {}]
     },
     "C": {
       "name": "C",
-      "frets": [
-        [
-          { "finger": -1, "string": -1 },
-          { "finger": 1, "string": 5 }
-        ],
-        [{ "finger": 2, "string": 3 }],
-        [{ "finger": 3, "string": 2 }]
-      ]
+      "frets": [{ "E": -1, "B": 1 }, { "D": 2 }, { "A": 3 }]
     },
     "Am": {
       "name": "Am",
-      "frets": [
-        [
-          { "finger": -1, "string": -1 },
-          { "finger": 1, "string": 5 }
-        ],
-        [
-          { "finger": 2, "string": 3 },
-          { "finger": 3, "string": 4 }
-        ],
-        []
-      ]
+      "frets": [{ "E": -1 }, { "B": 1 }, { "D": 2, "G": 3 }]
     },
     "Csus2": {
       "name": "Csus2",
-      "frets": [
-        [
-          { "finger": -1, "string": -1 },
-          { "finger": -3, "string": -3 },
-          { "finger": -6, "string": -6 }
-        ],
-        [],
-        [
-          { "finger": 2, "string": 2 },
-          { "finger": 3, "string": 5 }
-        ]
-      ]
+      "frets": [{ "E": -1, "D": -1, "e": -1 }, {}, { "A": 2, "B": 3 }]
     },
     "G/B": {
       "name": "G / B",
-      "frets": [
-        [{ "finger": -1, "string": -1 }],
-        [{ "finger": 1, "string": 2 }],
-        [{ "finger": 3, "string": 5 }]
-      ]
+      "frets": [{ "E": -1 }, { "A": 1 }, { "B": 3 }]
     },
     "Em7": {
       "name": "Em7",
-      "frets": [
-        [],
-        [
-          { "finger": 1, "string": 2 },
-          { "finger": 2, "string": 3 }
-        ],
-        [
-          { "finger": 3, "string": 5 },
-          { "finger": 4, "string": 6 }
-        ]
-      ]
+      "frets": [{}, { "A": 1, "D": 2 }, { "B": 3, "e": 4 }]
     },
     "Cadd9": {
       "name": "Cadd9",
-      "frets": [
-        [{ "finger": -1, "string": -1 }],
-        [{ "finger": 1, "string": 3 }],
-        [
-          { "finger": 2, "string": 2 },
-          { "finger": 3, "string": 5 },
-          { "finger": 4, "string": 6 }
-        ]
-      ]
+      "frets": [{ "E": -1 }, { "D": 1 }, { "A": 2, "B": 3, "e": 4 }]
     },
     "Fmaj7": {
       "name": "Fmaj7",
-      "frets": [
-        [
-          { "finger": 7, "string": 1 },
-          { "finger": 1, "string": 5 }
-        ],
-        [{ "finger": 2, "string": 4 }],
-        [
-          { "finger": 3, "string": 2 },
-          { "finger": 4, "string": 3 }
-        ]
-      ]
+      "frets": [{ "E": 7, "B": 1 }, { "G": 2 }, { "A": 3, "D": 4 }]
     },
     "C/G": {
       "name": "C / G",
-      "frets": [
-        [{ "finger": 1, "string": 5 }],
-        [{ "finger": 2, "string": 3 }],
-        [
-          { "finger": 3, "string": 1 },
-          { "finger": 4, "string": 2 }
-        ]
-      ]
+      "frets": [{ "B": 1 }, { "D": 2 }, { "E": 3, "A": 4 }]
     },
     "Dm": {
       "name": "Dm",
-      "frets": [
-        [{ "finger": 1, "string": 6 }],
-        [{ "finger": 2, "string": 4 }],
-        [{ "finger": 3, "string": 5 }]
-      ]
+      "frets": [{ "e": 1 }, { "G": 2 }, { "B": 3 }]
     },
     "D/F#": {
       "name": "D / F#",
-      "frets": [
-        [],
-        [
-          { "finger": 1, "string": 1 },
-          { "finger": 2, "string": 4 }
-        ],
-        [
-          { "finger": 3, "string": 5 },
-          { "finger": 4, "string": 6 }
-        ]
-      ]
+      "frets": [{}, { "E": 1, "G": 2 }, { "B": 3, "e": 4 }]
     },
     "Am7": {
       "name": "Am7",
-      "frets": [
-        [
-          { "finger": -1, "string": -1 },
-          { "finger": 1, "string": 5 }
-        ],
-        [{ "finger": 2, "string": 3 }],
-        []
-      ]
+      "frets": [{ "E": -1, "B": 1 }, { "D": 1 }, {}]
     },
     "Dsus4": {
       "name": "Dsus4",
-      "frets": [
-        [{ "finger": -1, "string": -1 }],
-        [{ "finger": 1, "string": 4 }],
-        [
-          { "finger": 3, "string": 5 },
-          { "finger": 4, "string": 6 }
-        ]
-      ]
+      "frets": [{ "E": -1 }, { "G": 1 }, { "B": 3, "e": 4 }]
     },
     "Bb": {
       "name": "Bb",
-      "frets": [
-        [
-          { "finger": -1, "string": -1 },
-          { "finger": -5, "string": -5 },
-          { "finger": -6, "string": -6 },
-          { "finger": 1, "string": 2 }
-        ],
-        [
-          { "finger": 3, "string": 3 },
-          { "finger": 4, "string": 4 }
-        ],
-        []
-      ]
+      "frets": [{ "E": -1, "A": 1, "B": -1, "e": -1 }, { "D": 3, "G": 4 }, {}]
     },
     "F": {
       "name": "F",
-      "frets": [
-        [
-          { "finger": 1, "string": 1 },
-          { "finger": 1, "string": 2 },
-          { "finger": 1, "string": 3 },
-          { "finger": 1, "string": 4 },
-          { "finger": 1, "string": 5 },
-          { "finger": 1, "string": 6 }
-        ],
-        [{ "finger": 2, "string": 4 }],
-        [
-          { "finger": 3, "string": 2 },
-          { "finger": 4, "string": 3 }
-        ]
-      ]
+      "frets": [{ "E": 1, "A": 1, "D": 1, "G": 1, "B": 1, "e": 1 }, { "G": 2 }, { "A": 3, "D": 4 }]
     },
     "CM7": {
       "name": "CM7",
-      "frets": [
-        [{ "finger": -1, "string": -1 }],
-        [{ "finger": 2, "string": 3 }],
-        [{ "finger": 3, "string": 2 }]
-      ]
+      "frets": [{ "E": -1 }, { "D": 2 }, { "A": 3 }]
     },
     "B7": {
       "name": "B7",
-      "frets": [
-        [{ "finger": 1, "string": 3 }],
-        [
-          { "finger": 2, "string": 2 },
-          { "finger": 3, "string": 4 },
-          { "finger": 4, "string": 6 }
-        ],
-        []
-      ]
+      "frets": [{ "E": -1, "D": 1 }, { "A": 2, "G": 3, "e": 4 }, {}]
     },
     "Dm7": {
       "name": "Dm7",
-      "frets": [
-        [
-          { "finger": 1, "string": 5 },
-          { "finger": 1, "string": 6 }
-        ],
-        [{ "finger": 2, "string": 4 }],
-        []
-      ]
+      "frets": [{ "B": 1, "e": 1 }, { "G": 2 }, {}]
     },
     "G7": {
       "name": "G7",
-      "frets": [
-        [{ "finger": 1, "string": 6 }],
-        [{ "finger": 2, "string": 2 }],
-        [{ "finger": 3, "string": 1 }]
-      ]
+      "frets": [{ "e": 1 }, { "A": 2 }, { "E": 3 }]
     },
     "Ebm7": {
       "name": "Ebm7",
-      "frets": [
-        [
-          { "finger": 1, "string": 2 },
-          { "finger": 1, "string": 3 },
-          { "finger": 1, "string": 4 },
-          { "finger": 1, "string": 5 },
-          { "finger": 1, "string": 6 }
-        ],
-        [{ "finger": 2, "string": 5 }],
-        [{ "finger": 3, "string": 3 }]
-      ]
+      "frets": [{ "A": 1, "D": 1, "G": 1, "B": 1, "e": 1 }, { "B": 2 }, { "D": 3 }]
     },
     "BbM7": {
       "name": "BbM7",
-      "frets": [
-        [
-          { "finger": -1, "string": -1 },
-          { "finger": 1, "string": 2 },
-          { "finger": 1, "string": 3 },
-          { "finger": 1, "string": 4 },
-          { "finger": 1, "string": 5 },
-          { "finger": 1, "string": 6 }
-        ],
-        [{ "finger": 2, "string": 4 }],
-        [
-          { "finger": 3, "string": 3 },
-          { "finger": 4, "string": 4 }
-        ]
-      ]
+      "frets": [{ "E": -1, "A": 1, "D": 1, "G": 1, "B": 1, "e": 1 }, { "G": 2 }, { "D": 3, "B": 4 }]
     },
     "A7": {
       "name": "A7",
-      "frets": [
-        [{ "finger": -1, "string": -1 }],
-        [
-          { "finger": 3, "string": 3 },
-          { "finger": 4, "string": 5 }
-        ],
-        []
-      ]
+      "frets": [{ "E": -1 }, { "D": 3, "B": 4 }, {}]
     },
     "AbM7": {
       "name": "AbM7",
-      "frets": [
-        [
-          { "finger": -2, "string": -2 },
-          { "finger": -6, "string": -6 },
-          { "finger": 1, "string": 1 },
-          { "finger": 2, "string": 5 }
-        ],
-        [
-          { "finger": 3, "string": 3 },
-          { "finger": 4, "string": 4 }
-        ],
-        []
-      ]
+      "frets": [{ "E": 1, "A": -1, "B": 2, "e": -1 }, { "D": 3, "G": 4 }, {}]
     },
     "F13": {
       "name": "F13",
-      "frets": [
-        [
-          { "finger": -2, "string": -2 },
-          { "finger": -6, "string": -6 },
-          { "finger": 7, "string": 1 },
-          { "finger": 1, "string": 3 }
-        ],
-        [{ "finger": 2, "string": 4 }],
-        [{ "finger": 4, "string": 5 }]
-      ]
+      "frets": [{ "E": 7, "A": -1, "D": 1, "e": -1 }, { "G": 2 }, { "B": 4 }]
     },
     "Bm": {
       "name": "Bm",
-      "frets": [
-        [
-          { "finger": -1, "string": -1 },
-          { "finger": 1, "string": 2 },
-          { "finger": 1, "string": 3 },
-          { "finger": 1, "string": 4 },
-          { "finger": 1, "string": 5 },
-          { "finger": 1, "string": 6 }
-        ],
-        [{ "finger": 2, "string": 5 }],
-        [
-          { "finger": 3, "string": 3 },
-          { "finger": 4, "string": 4 }
-        ]
-      ]
+      "frets": [{ "E": -1, "A": 1, "D": 1, "G": 1, "B": 1, "e": 1 }, { "B": 2 }, { "D": 3, "G": 4 }]
     },
     "Dsus2": {
       "name": "Dsus2",
-      "frets": [
-        [
-          { "finger": -1, "string": -1 },
-          { "finger": -2, "string": -2 }
-        ],
-        [{ "finger": 1, "string": 4 }],
-        [{ "finger": 3, "string": 5 }]
-      ]
+      "frets": [{ "E": -1, "A": -1 }, { "G": 1 }, { "B": 3 }]
     },
     "Bm7": {
       "name": "Bm7",
-      "frets": [
-        [{ "finger": -1, "string": -1 }],
-        [
-          { "finger": 1, "string": 2 },
-          { "finger": 2, "string": 4 }
-        ],
-        [{ "finger": 3, "string": 5 }]
-      ]
+      "frets": [{ "E": -1 }, { "A": 1, "G": 2 }, { "B": 3 }]
     }
   }
 }

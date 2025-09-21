@@ -6,7 +6,7 @@
  *
  * @file Fret.tsx
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description Render chrod based on given config.
  */
 
@@ -15,10 +15,16 @@ import { IoCloseSharp } from 'react-icons/io5';
 
 import { useAppTheme } from '@/context/AppState';
 import { Circle, Divider, Flex, Icon, Spacer } from '@chakra-ui/react';
+import type { TGuitarString } from '@/types/common.types';
 
 type TFretProps = {
-  stringsToFingers: Map<number, number>;
+  stringsToFingers: Map<TGuitarString, number>;
 };
+
+const GuitarStrings: TGuitarString[] = ['E', 'A', 'D', 'G', 'B', 'e'] as const;
+const THUMB_STRING_ID = 7;
+const MUTED_STRING_ID = -1;
+const DISTANCE_BETWEEN_CHORDS = 20;
 
 export const Fret = (props: TFretProps) => {
   const { fret: theme } = useAppTheme();
@@ -31,16 +37,16 @@ export const Fret = (props: TFretProps) => {
       // [*] theme colors
       backgroundColor={theme.background}
     >
-      {[1, 2, 3, 4, 5, 6].map(stringIdx => {
-        const hasFinger = props.stringsToFingers.has(stringIdx);
-        const finger = props.stringsToFingers.get(stringIdx);
+      {GuitarStrings.map((string, stringIdx) => {
+        const finger = props.stringsToFingers.get(string);
 
-        const muted = props.stringsToFingers.has(-stringIdx);
+        const hasFinger = finger !== undefined && finger !== MUTED_STRING_ID;
+        const muted = finger === MUTED_STRING_ID;
 
-        const leftPercent = (stringIdx - 1) * 20;
+        const leftPercent = stringIdx * DISTANCE_BETWEEN_CHORDS;
 
         return (
-          <Fragment key={stringIdx}>
+          <Fragment key={string}>
             {muted && (
               <Circle
                 size='1.5em'
@@ -60,13 +66,16 @@ export const Fret = (props: TFretProps) => {
                 <Icon as={IoCloseSharp} />
               </Circle>
             )}
+
             <Divider
               orientation='vertical'
               borderWidth='thin'
               // [*] theme colors
               borderColor={theme.dividers}
             />
-            {stringIdx < 6 && <Spacer />}
+
+            {stringIdx < GuitarStrings.length - 1 && <Spacer />}
+
             {hasFinger && (
               <Circle
                 size='1.5em'
@@ -83,7 +92,7 @@ export const Fret = (props: TFretProps) => {
                 borderColor={theme.finger.border}
                 color={theme.finger.color}
               >
-                {finger === 7 ? 'T' : finger}
+                {finger === THUMB_STRING_ID ? 'T' : finger}
               </Circle>
             )}
           </Fragment>

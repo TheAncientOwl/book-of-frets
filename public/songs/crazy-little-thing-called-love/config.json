@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "contributors": ["TheAncientOwl"],
   "title": "Little Thing Called Love",
   "artists": ["Queen"],
@@ -122,118 +122,53 @@
         {
           "times": 1,
           "items": [
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 2, "fret": 5 }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 2, "fret": 4 }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 2, "fret": 3 }],
-            [{ "string": 1, "fret": "-" }],
-
-            [{ "string": 1, "fret": "-" }],
-            [
-              { "string": 1, "fret": "|" },
-              { "string": 2, "fret": "|" },
-              { "string": 3, "fret": "|" },
-              { "string": 4, "fret": "|" },
-              { "string": 5, "fret": "|" },
-              { "string": 6, "fret": "|" }
-            ],
-            [{ "string": 1, "fret": "-" }],
-
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": 5 }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": 4 }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": 3 }],
-            [{ "string": 1, "fret": "-" }],
-
-            [{ "string": 1, "fret": "-" }],
-            [
-              { "string": 1, "fret": "|" },
-              { "string": 2, "fret": "|" },
-              { "string": 3, "fret": "|" },
-              { "string": 4, "fret": "|" },
-              { "string": 5, "fret": "|" },
-              { "string": 6, "fret": "|" }
-            ],
-            [{ "string": 1, "fret": "-" }],
-
-            [
-              { "string": 1, "fret": 0 },
-              { "string": 2, "fret": 1 },
-              { "string": 3, "fret": 2 },
-              { "string": 4, "fret": 3 },
-              { "string": 5, "fret": 0 }
-            ],
-            [
-              { "string": 1, "fret": 0 },
-              { "string": 2, "fret": 1 },
-              { "string": 3, "fret": 2 },
-              { "string": 4, "fret": 3 },
-              { "string": 5, "fret": 0 }
-            ],
-            [
-              { "string": 1, "fret": 0 },
-              { "string": 2, "fret": 1 },
-              { "string": 3, "fret": 2 },
-              { "string": 4, "fret": 3 },
-              { "string": 5, "fret": 0 }
-            ],
-            [
-              { "string": 1, "fret": 0 },
-              { "string": 2, "fret": 1 },
-              { "string": 3, "fret": 2 },
-              { "string": 4, "fret": 3 },
-              { "string": 5, "fret": 0 }
-            ],
-            [
-              { "string": 1, "fret": 0 },
-              { "string": 2, "fret": 1 },
-              { "string": 3, "fret": 2 },
-              { "string": 4, "fret": 3 },
-              { "string": 5, "fret": 0 }
-            ],
-            [
-              { "string": 1, "fret": 0 },
-              { "string": 2, "fret": 1 },
-              { "string": 3, "fret": 2 },
-              { "string": 4, "fret": 3 },
-              { "string": 5, "fret": 0 }
-            ],
-
-            [{ "string": 1, "fret": "-" }],
-            [
-              { "string": 1, "fret": "|" },
-              { "string": 2, "fret": "|" },
-              { "string": 3, "fret": "|" },
-              { "string": 4, "fret": "|" },
-              { "string": 5, "fret": "|" },
-              { "string": 6, "fret": "|" }
-            ],
-            [{ "string": 1, "fret": "-" }],
-
-            [{ "string": 4, "fret": 2 }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 4, "fret": 2 }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 4, "fret": 0 }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 4, "fret": 0 }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 3, "fret": 4 }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 3, "fret": 4 }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 3, "fret": 2 }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 3, "fret": 2 }],
-            [{ "string": 1, "fret": "-" }]
+            "-",
+            { "A": 5 },
+            "-",
+            { "A": 4 },
+            "-",
+            { "A": 3 },
+            "-",
+            "-",
+            "|",
+            "-",
+            "-",
+            "-",
+            "-",
+            { "E": 5 },
+            "-",
+            { "E": 4 },
+            "-",
+            { "E": 3 },
+            "-",
+            "-",
+            "|",
+            "-",
+            { "E": 0, "A": 2, "D": 2, "G": 1, "B": 0 },
+            { "E": 0, "A": 2, "D": 2, "G": 1, "B": 0 },
+            { "E": 0, "A": 2, "D": 2, "G": 1, "B": 0 },
+            { "E": 0, "A": 2, "D": 2, "G": 1, "B": 0 },
+            { "E": 0, "A": 2, "D": 2, "G": 1, "B": 0 },
+            { "E": 0, "A": 2, "D": 2, "G": 1, "B": 0 },
+            "-",
+            "|",
+            "-",
+            { "G": 2 },
+            "-",
+            { "G": 2 },
+            "-",
+            { "G": 0 },
+            "-",
+            { "G": 0 },
+            "-",
+            { "D": 4 },
+            "-",
+            { "D": 4 },
+            "-",
+            { "D": 2 },
+            "-",
+            { "D": 2 },
+            "-"
           ]
         }
       ]
@@ -303,115 +238,41 @@
         {
           "times": 1,
           "items": [
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 2, "fret": 5 }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 2, "fret": 4 }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 2, "fret": 3 }],
-            [{ "string": 1, "fret": "-" }],
-
-            [{ "string": 1, "fret": "-" }],
-            [
-              { "string": 1, "fret": "|" },
-              { "string": 2, "fret": "|" },
-              { "string": 3, "fret": "|" },
-              { "string": 4, "fret": "|" },
-              { "string": 5, "fret": "|" },
-              { "string": 6, "fret": "|" }
-            ],
-            [{ "string": 1, "fret": "-" }],
-
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": 5 }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": 4 }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": 3 }],
-            [{ "string": 1, "fret": "-" }],
-
-            [{ "string": 1, "fret": "-" }],
-            [
-              { "string": 1, "fret": "|" },
-              { "string": 2, "fret": "|" },
-              { "string": 3, "fret": "|" },
-              { "string": 4, "fret": "|" },
-              { "string": 5, "fret": "|" },
-              { "string": 6, "fret": "|" }
-            ],
-            [{ "string": 1, "fret": "-" }],
-
-            [
-              { "string": 1, "fret": 0 },
-              { "string": 2, "fret": 1 },
-              { "string": 3, "fret": 2 },
-              { "string": 4, "fret": 3 },
-              { "string": 5, "fret": 0 }
-            ],
-            [
-              { "string": 1, "fret": 0 },
-              { "string": 2, "fret": 1 },
-              { "string": 3, "fret": 2 },
-              { "string": 4, "fret": 3 },
-              { "string": 5, "fret": 0 }
-            ],
-            [
-              { "string": 1, "fret": 0 },
-              { "string": 2, "fret": 1 },
-              { "string": 3, "fret": 2 },
-              { "string": 4, "fret": 3 },
-              { "string": 5, "fret": 0 }
-            ],
-            [
-              { "string": 1, "fret": 0 },
-              { "string": 2, "fret": 1 },
-              { "string": 3, "fret": 2 },
-              { "string": 4, "fret": 3 },
-              { "string": 5, "fret": 0 }
-            ],
-            [
-              { "string": 1, "fret": 0 },
-              { "string": 2, "fret": 1 },
-              { "string": 3, "fret": 2 },
-              { "string": 4, "fret": 3 },
-              { "string": 5, "fret": 0 }
-            ],
-            [
-              { "string": 1, "fret": 0 },
-              { "string": 2, "fret": 1 },
-              { "string": 3, "fret": 2 },
-              { "string": 4, "fret": 3 },
-              { "string": 5, "fret": 0 }
-            ],
-
-            [{ "string": 1, "fret": "-" }],
-            [
-              { "string": 1, "fret": "|" },
-              { "string": 2, "fret": "|" },
-              { "string": 3, "fret": "|" },
-              { "string": 4, "fret": "|" },
-              { "string": 5, "fret": "|" },
-              { "string": 6, "fret": "|" }
-            ],
-            [{ "string": 1, "fret": "-" }],
-
-            [
-              { "string": 2, "fret": 0 },
-              { "string": 3, "fret": 2 },
-              { "string": 4, "fret": 2 },
-              { "string": 5, "fret": 2 }
-            ],
-
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": "-" }],
-            [{ "string": 1, "fret": "-" }]
+            "-",
+            { "A": 5 },
+            "-",
+            { "A": 4 },
+            "-",
+            { "A": 3 },
+            "-",
+            "-",
+            "|",
+            "-",
+            "-",
+            "-",
+            "-",
+            { "E": 5 },
+            "-",
+            { "E": 4 },
+            "-",
+            { "E": 3 },
+            "-",
+            "-",
+            "|",
+            "-",
+            { "E": 0, "A": 2, "D": 2, "G": 1, "B": 0 },
+            { "E": 0, "A": 2, "D": 2, "G": 1, "B": 0 },
+            { "E": 0, "A": 2, "D": 2, "G": 1, "B": 0 },
+            { "E": 0, "A": 2, "D": 2, "G": 1, "B": 0 },
+            { "E": 0, "A": 2, "D": 2, "G": 1, "B": 0 },
+            { "E": 0, "A": 2, "D": 2, "G": 1, "B": 0 },
+            "-",
+            "|",
+            "-",
+            { "A": 0, "D": 2, "G": 2, "B": 2 },
+            "-",
+            "-",
+            "-"
           ]
         }
       ]

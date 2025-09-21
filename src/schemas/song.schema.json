@@ -95,20 +95,24 @@
                         "required": ["chordIDs", "chordTimes", "strummingPattern"]
                       },
                       {
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "properties": {
-                            "string": { "type": "integer", "minimum": 1, "maximum": 6 },
-                            "fret": {
-                              "anyOf": [
-                                { "type": "integer", "minimum": 0, "maximum": 22 },
-                                { "type": "string", "enum": ["-", "|"] }
-                              ]
-                            }
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": ["-", "|"]
                           },
-                          "required": ["string", "fret"]
-                        }
+                          {
+                            "type": "object",
+                            "properties": {
+                              "E": { "type": "integer", "minimum": 0 },
+                              "A": { "type": "integer", "minimum": 0 },
+                              "D": { "type": "integer", "minimum": 0 },
+                              "G": { "type": "integer", "minimum": 0 },
+                              "B": { "type": "integer", "minimum": 0 },
+                              "e": { "type": "integer", "minimum": 0 }
+                            },
+                            "additionalProperties": false
+                          }
+                        ]
                       }
                     ]
                   }

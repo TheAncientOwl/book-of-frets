@@ -6,7 +6,7 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description App theme types
  */
 
@@ -152,6 +152,7 @@ export type TSongTheme = {
           text: string;
         };
         filler: string;
+        chordBackground: string;
       };
     };
   };

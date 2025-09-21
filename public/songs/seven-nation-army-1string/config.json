@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "contributors": ["TheAncientOwl"],
   "title": "Seven Nation Army | 1 String",
   "artists": ["The White Stripes"],
@@ -16,107 +16,44 @@
         {
           "times": 3,
           "items": [
-            [
-              {
-                "string": 1,
-                "fret": 7
-              }
-            ],
-            [
-              {
-                "string": 1,
-                "fret": 7
-              }
-            ],
-            [
-              {
-                "string": 1,
-                "fret": 10
-              }
-            ],
-            [
-              {
-                "string": 1,
-                "fret": 7
-              }
-            ],
-            [
-              {
-                "string": 1,
-                "fret": 5
-              }
-            ],
-            [
-              {
-                "string": 1,
-                "fret": 3
-              }
-            ],
-            [
-              {
-                "string": 1,
-                "fret": 2
-              }
-            ]
+            "-",
+            { "E": 7 },
+            "-",
+            "-",
+            { "E": 7 },
+            "-",
+            { "E": 10 },
+            "-",
+            { "E": 7 },
+            "-",
+            { "E": 5 },
+            "-",
+            { "E": 3 },
+            "-",
+            { "E": 2 }
           ]
         },
         {
           "times": 1,
           "items": [
-            [
-              {
-                "string": 1,
-                "fret": 7
-              }
-            ],
-            [
-              {
-                "string": 1,
-                "fret": 7
-              }
-            ],
-            [
-              {
-                "string": 1,
-                "fret": 10
-              }
-            ],
-            [
-              {
-                "string": 1,
-                "fret": 7
-              }
-            ],
-            [
-              {
-                "string": 1,
-                "fret": 5
-              }
-            ],
-            [
-              {
-                "string": 1,
-                "fret": 3
-              }
-            ],
-            [
-              {
-                "string": 1,
-                "fret": 5
-              }
-            ],
-            [
-              {
-                "string": 1,
-                "fret": 3
-              }
-            ],
-            [
-              {
-                "string": 1,
-                "fret": 2
-              }
-            ]
+            "-",
+            { "E": 7 },
+            "-",
+            "-",
+            { "E": 7 },
+            "-",
+            { "E": 10 },
+            "-",
+            { "E": 7 },
+            "-",
+            { "E": 5 },
+            "-",
+            { "E": 3 },
+            "-",
+            { "E": 5 },
+            "-",
+            { "E": 3 },
+            "-"
           ]
         }
       ]
