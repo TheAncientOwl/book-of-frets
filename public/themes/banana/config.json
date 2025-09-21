@@ -149,7 +149,8 @@
             "border": "yellow.900",
             "text": "#6b3e26"
           },
-          "filler": "#6b3e26"
+          "filler": "#6b3e26",
+          "chordBackground": "blackAlpha.600"
         }
       }
     },

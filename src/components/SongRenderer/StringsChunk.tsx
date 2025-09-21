@@ -6,7 +6,7 @@
  *
  * @file StringsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.15
+ * @version 0.16
  * @description Render song strings pattern.
  */
 
@@ -31,15 +31,24 @@ const String = (props: TStringProps) => {
   const { song: theme } = useAppTheme();
 
   return (
-    <Flex direction='row' alignItems='center' gap='1em' position='relative'>
+    <Flex direction='row' alignItems='center' position='relative'>
       <Heading
         size='md'
+        position='sticky'
+        left='0'
+        zIndex={5}
+        borderRadius='5px'
+        padding='3px 6px'
+        width='2ch'
+        textAlign='center'
         // [*] theme colors
         color={theme.chunks.item.stringsPattern.stringNames}
+        backgroundColor='blackAlpha.600'
       >
         {props.name}
       </Heading>
-      <Flex direction='row' position='absolute' left='30px' alignItems='center' gap='5px'>
+
+      <Flex direction='row' position='absolute' left='30px' alignItems='center' gap='5px' ml='5px'>
         {props.frets.map((fret, index) => {
           if (fret === '-') {
             return (
