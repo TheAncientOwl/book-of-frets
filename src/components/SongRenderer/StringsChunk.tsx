@@ -6,11 +6,11 @@
  *
  * @file StringsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.14
+ * @version 0.15
  * @description Render song strings pattern.
  */
 
-import { Box, Circle, Divider, Flex, Heading } from '@chakra-ui/react';
+import { Box, Circle, Divider, Flex, Heading, Text } from '@chakra-ui/react';
 
 import { useAppTheme } from '@/context/AppState';
 import type { TGuitarString } from '@/types/common.types';
@@ -43,7 +43,7 @@ const String = (props: TStringProps) => {
         {props.frets.map((fret, index) => {
           if (fret === '-') {
             return (
-              <Box width='1.4em'>
+              <Box width='1.2em'>
                 <Divider
                   borderWidth='thin'
                   // [*] theme colors
@@ -62,10 +62,11 @@ const String = (props: TStringProps) => {
             );
           } else {
             return (
-              <Box width='1.4em'>
+              <Box width='1.2em'>
                 <Circle
                   key={index}
-                  size='1.4em'
+                  padding='0.6em'
+                  size='1em'
                   fontWeight='bold'
                   borderWidth='thin'
                   // [*] theme colors
@@ -73,7 +74,7 @@ const String = (props: TStringProps) => {
                   borderColor={theme.chunks.item.stringsPattern.fret.border}
                   color={theme.chunks.item.stringsPattern.fret.text}
                 >
-                  {fret}
+                  <Text fontSize='sm'>{fret}</Text>
                 </Circle>
               </Box>
             );
