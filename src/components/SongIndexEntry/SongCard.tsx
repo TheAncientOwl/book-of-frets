@@ -53,7 +53,7 @@ export const SongCard = (props: SongProps) => {
 
   return (
     <SimpleGrid
-      gridTemplateColumns={['22px 90px 1000fr 1fr', '22px 100px 1000fr 1fr']}
+      gridTemplateColumns={['26px 90px 1000fr 1fr', '26px 100px 1000fr 1fr']}
       columns={{ base: 3 }}
       cursor='pointer'
       borderStyle='solid'
@@ -70,11 +70,11 @@ export const SongCard = (props: SongProps) => {
         fontWeight='bold'
         fontSize={['md']}
         alignContent='center'
-        textAlign='right'
+        textAlign='center'
         // [*] theme colors
         color={theme.text.number}
       >
-        {props.index}
+        {props.index}.
       </Text>
 
       <Box
