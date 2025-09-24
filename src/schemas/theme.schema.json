@@ -244,6 +244,7 @@
           "additionalProperties": false,
           "properties": {
             "background": { "type": "string" },
+            "divider": { "type": "string" },
             "item": {
               "type": "object",
               "additionalProperties": false,
@@ -323,7 +324,8 @@
                       },
                       "required": ["background", "border", "text"]
                     },
-                    "filler": { "type": "string" }
+                    "filler": { "type": "string" },
+                    "chordBackground": { "type": "string" }
                   },
                   "required": ["divider", "stringNames", "fret", "filler"]
                 }
