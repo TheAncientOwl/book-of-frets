@@ -2,17 +2,20 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Chords Index Schema",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "index": {
       "type": "object",
       "additionalProperties": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "name": { "type": "string" },
           "frets": {
             "type": "array",
             "items": {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "E": { "type": "integer", "minimum": -1, "maximum": 7, "default": 1 },
                 "A": { "type": "integer", "minimum": -1, "maximum": 7, "default": 1 },
@@ -20,8 +23,7 @@
                 "G": { "type": "integer", "minimum": -1, "maximum": 7, "default": 1 },
                 "B": { "type": "integer", "minimum": -1, "maximum": 7, "default": 1 },
                 "e": { "type": "integer", "minimum": -1, "maximum": 7, "default": 1 }
-              },
-              "additionalProperties": false
+              }
             }
           }
         },

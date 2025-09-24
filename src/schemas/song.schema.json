@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Song Schema",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "version": {
       "type": "string",
@@ -53,6 +54,7 @@
       "type": "object",
       "additionalProperties": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "name": { "type": "string" },
           "type": { "type": "string", "enum": ["chords", "strings"] },
@@ -61,6 +63,7 @@
             "type": "array",
             "items": {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "times": {
                   "type": "integer",
@@ -72,6 +75,7 @@
                     "oneOf": [
                       {
                         "type": "object",
+                        "additionalProperties": false,
                         "properties": {
                           "chordIDs": {
                             "type": "array",
@@ -102,6 +106,7 @@
                           },
                           {
                             "type": "object",
+                            "additionalProperties": false,
                             "properties": {
                               "E": { "type": "integer", "minimum": 0 },
                               "A": { "type": "integer", "minimum": 0 },
@@ -109,8 +114,7 @@
                               "G": { "type": "integer", "minimum": 0 },
                               "B": { "type": "integer", "minimum": 0 },
                               "e": { "type": "integer", "minimum": 0 }
-                            },
-                            "additionalProperties": false
+                            }
                           }
                         ]
                       }
@@ -136,6 +140,7 @@
       "type": "array",
       "items": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "alias": {
             "type": "string",

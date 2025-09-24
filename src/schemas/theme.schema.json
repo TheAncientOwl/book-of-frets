@@ -3,15 +3,18 @@
   "title": "App Theme Schema",
   "description": "JSON schema for BookOfFrets theme configuration",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "name": {
       "type": "string"
     },
     "appMenu": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "menuButton": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "background": { "type": "string" },
             "hover": { "type": "string" },
@@ -22,6 +25,7 @@
         },
         "closeButton": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "color": { "type": "string" }
           },
@@ -29,6 +33,7 @@
         },
         "drawer": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "background": { "type": "string" },
             "appText": { "type": "string" },
@@ -38,6 +43,7 @@
         },
         "copyright": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "color": { "type": "string" },
             "hoverColor": { "type": "string" }
@@ -49,6 +55,7 @@
     },
     "general": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "background": { "type": "string" }
       },
@@ -56,10 +63,12 @@
     },
     "chordsIndexPage": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "background": { "type": "string" },
         "searchBar": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "background": { "type": "string" },
             "color": { "type": "string" },
@@ -73,6 +82,7 @@
     },
     "chord": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "border": { "type": "string" },
         "background": { "type": "string" },
@@ -83,11 +93,13 @@
     },
     "fret": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "background": { "type": "string" },
         "dividers": { "type": "string" },
         "muted": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "background": { "type": "string" },
             "border": { "type": "string" },
@@ -97,6 +109,7 @@
         },
         "finger": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "background": { "type": "string" },
             "border": { "type": "string" },
@@ -109,11 +122,13 @@
     },
     "songCard": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "background": { "type": "string" },
         "border": { "type": "string" },
         "hover": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "background": { "type": "string" }
           },
@@ -121,14 +136,17 @@
         },
         "cover": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "border": { "type": "string" },
             "hover": {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "background": { "type": "string" },
                 "play": {
                   "type": "object",
+                  "additionalProperties": false,
                   "properties": {
                     "background": { "type": "string" },
                     "text": { "type": "string" }
@@ -143,6 +161,7 @@
         },
         "text": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "number": { "type": "string" },
             "title": { "type": "string" },
@@ -153,16 +172,19 @@
         },
         "chords": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "pick": { "type": "string" },
             "popover": {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "background": { "type": "string" },
                 "border": { "type": "string" },
                 "arrow": { "type": "string" },
                 "tag": {
                   "type": "object",
+                  "additionalProperties": false,
                   "properties": {
                     "background": { "type": "string" },
                     "border": { "type": "string" },
@@ -181,10 +203,12 @@
     },
     "song": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "background": { "type": "string" },
         "header": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "title": { "type": "string" },
             "artists": { "type": "string" },
@@ -192,6 +216,7 @@
             "coverBorder": { "type": "string" },
             "contributors": {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "heading": { "type": "string" },
                 "content": { "type": "string" },
@@ -206,6 +231,7 @@
         },
         "capo": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "background": { "type": "string" },
             "border": { "type": "string" },
@@ -215,14 +241,17 @@
         },
         "chunks": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "background": { "type": "string" },
             "item": {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "title": { "type": "string" },
                 "times": {
                   "type": "object",
+                  "additionalProperties": false,
                   "properties": {
                     "background": { "type": "string" },
                     "color": { "type": "string" }
@@ -231,6 +260,7 @@
                 },
                 "chordsPattern": {
                   "type": "object",
+                  "additionalProperties": false,
                   "properties": {
                     "background": { "type": "string" },
                     "color": { "type": "string" },
@@ -238,14 +268,17 @@
                     "times": { "type": "string" },
                     "chord": {
                       "type": "object",
+                      "additionalProperties": false,
                       "properties": {
                         "background": { "type": "string" },
                         "color": { "type": "string" },
                         "segment": {
                           "type": "object",
+                          "additionalProperties": false,
                           "properties": {
                             "popover": {
                               "type": "object",
+                              "additionalProperties": false,
                               "properties": {
                                 "background": { "type": "string" },
                                 "arrow": { "type": "string" },
@@ -261,6 +294,7 @@
                         },
                         "times": {
                           "type": "object",
+                          "additionalProperties": false,
                           "properties": {
                             "background": { "type": "string" },
                             "color": { "type": "string" }
@@ -275,11 +309,13 @@
                 },
                 "stringsPattern": {
                   "type": "object",
+                  "additionalProperties": false,
                   "properties": {
                     "divider": { "type": "string" },
                     "stringNames": { "type": "string" },
                     "fret": {
                       "type": "object",
+                      "additionalProperties": false,
                       "properties": {
                         "background": { "type": "string" },
                         "border": { "type": "string" },
@@ -299,6 +335,7 @@
         },
         "notes": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "title": { "type": "string" },
             "note": { "type": "string" }
@@ -307,10 +344,12 @@
         },
         "resources": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "title": { "type": "string" },
             "item": {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "note": { "type": "string" },
                 "alias": { "type": "string" },
@@ -326,10 +365,12 @@
     },
     "songsIndexPage": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "background": { "type": "string" },
         "searchBar": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "background": { "type": "string" },
             "color": { "type": "string" },
@@ -343,15 +384,18 @@
     },
     "settings": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "title": { "type": "string" },
         "themePicker": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "background": { "type": "string" },
             "title": { "type": "string" },
             "item": {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "background": { "type": "string" },
                 "border": { "type": "string" },
