@@ -1,5 +1,12 @@
 {
   "name": "Banananana",
+  "homePage": {
+    "title": "yellow.500",
+    "link": "yellow.100",
+    "paragraph": "yellow.700",
+    "heading": "yellow.500",
+    "listItem": "yellow.700"
+  },
   "appMenu": {
     "menuButton": {
       "background": "#fbec5d",

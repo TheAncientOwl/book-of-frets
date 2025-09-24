@@ -1,5 +1,12 @@
 {
   "name": "Peach",
+  "homePage": {
+    "title": "white",
+    "link": "cyan.400",
+    "paragraph": "white",
+    "heading": "white",
+    "listItem": "white"
+  },
   "appMenu": {
     "menuButton": {
       "background": "#ff9248",

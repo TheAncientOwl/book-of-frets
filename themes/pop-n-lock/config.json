@@ -1,5 +1,12 @@
 {
   "name": "Lavander",
+  "homePage": {
+    "title": "#947ff9",
+    "link": "#E1B55C",
+    "paragraph": "#947ff9",
+    "heading": "#947ff9",
+    "listItem": "#947ff9"
+  },
   "appMenu": {
     "menuButton": {
       "background": "#181426",

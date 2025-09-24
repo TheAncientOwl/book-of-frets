@@ -1,5 +1,12 @@
 {
   "name": "Bright Sky",
+  "homePage": {
+    "title": "white",
+    "link": "cyan.400",
+    "paragraph": "white",
+    "heading": "white",
+    "listItem": "white"
+  },
   "appMenu": {
     "menuButton": {
       "background": "#00b4d8",
