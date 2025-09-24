@@ -8,6 +8,17 @@
     "name": {
       "type": "string"
     },
+    "homePage": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string" },
+        "link": { "type": "string" },
+        "paragraph": { "type": "string" },
+        "heading": { "type": "string" },
+        "listItem": { "type": "string" }
+      }
+    },
     "appMenu": {
       "type": "object",
       "additionalProperties": false,
@@ -424,6 +435,7 @@
   },
   "required": [
     "name",
+    "homePage",
     "appMenu",
     "general",
     "chordsIndexPage",

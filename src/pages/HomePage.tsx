@@ -6,7 +6,7 @@
  *
  * @file HomePage.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description App homepage.
  */
 
@@ -17,30 +17,55 @@ import { useLayoutEffect } from 'react';
 import { setDocumentThemeColor } from '@/theme/setDocumentThemeColor';
 
 export const HomePage = () => {
-  const { general: theme } = useAppTheme();
+  const { general, homePage: theme } = useAppTheme();
 
-  useLayoutEffect(() => setDocumentThemeColor(theme.background), [theme.background]);
+  useLayoutEffect(() => setDocumentThemeColor(general.background), [general.background]);
 
   return (
     <Container height='100%' overflowY='scroll' pt='3rem' color='white' maxW='4xl'>
-      <Heading as='h1' textAlign='center' mb='3rem'>
+      <Heading
+        as='h1'
+        textAlign='center'
+        mb='3rem'
+        // [*] theme colors
+        color={theme.title}
+      >
         Book Of Frets
       </Heading>
 
-      <Box mb='2rem'>
+      <Box
+        mb='2rem'
+        // [*] theme colors
+        color={theme.paragraph}
+      >
         <Text>
           BookOfFrets is a web-based application designed to help guitar enthusiasts learn and
           explore songs through an interactive fretboard. It features a comprehensive collection of
           songs with detailed frets, strumming patterns, chords,{' '}
-          <Link as={RouteLink} color='cyan.400' to='/index/chords'>
+          <Link
+            as={RouteLink}
+            to='/index/chords'
+            // [*] theme colors
+            color={theme.link}
+          >
             chords list
           </Link>
           ,{' '}
-          <Link as={RouteLink} color='cyan.400' to='/index/songs'>
+          <Link
+            as={RouteLink}
+            to='/index/songs'
+            // [*] theme colors
+            color={theme.link}
+          >
             songs list
           </Link>
           , and customizable{' '}
-          <Link as={RouteLink} color='cyan.400' to='/settings'>
+          <Link
+            as={RouteLink}
+            to='/settings'
+            // [*] theme colors
+            color={theme.link}
+          >
             themes
           </Link>
           .
@@ -48,31 +73,80 @@ export const HomePage = () => {
       </Box>
 
       <Box mb='2rem'>
-        <Heading as='h2' size='lg' mb='1rem'>
+        <Heading
+          as='h2'
+          size='lg'
+          mb='1rem'
+          // [*] theme colors
+          color={theme.heading}
+        >
           ✨ Features
         </Heading>
-        <UnorderedList spacing='1rem' pl='1.5rem'>
+        <UnorderedList
+          spacing='1rem'
+          pl='1.5rem'
+          // [*] theme colors
+          color={theme.listItem}
+        >
           <ListItem>
-            🎵 Songs with Frets: Visualize songs with precise fret positions to help you learn
-            finger placements.
+            🎵{' '}
+            <Box as='span' fontWeight='bold'>
+              Songs with Frets
+            </Box>
+            : Visualize songs with precise fret positions to help you learn finger placements.
           </ListItem>
-          <ListItem>🎼 Chords: Access a rich library of chords with clear diagrams.</ListItem>
-          <ListItem>📖 Chords List: Browse and search through a curated list of chords.</ListItem>
-          <ListItem>📂 Songs List: Easily navigate through a growing collection of songs.</ListItem>
           <ListItem>
-            🎨 Themes: Customize the look and feel of the app with various themes.
+            🎼
+            <Box as='span' fontWeight='bold'>
+              Chords
+            </Box>
+            : Access a rich library of chords with clear diagrams.
           </ListItem>
           <ListItem>
-            📺 Video Resources: Learn how to play songs with helpful video tutorials.
+            📖
+            <Box as='span' fontWeight='bold'>
+              Chords List
+            </Box>
+            : Browse and search through a curated list of chords.
+          </ListItem>
+          <ListItem>
+            📂
+            <Box as='span' fontWeight='bold'>
+              Songs List
+            </Box>
+            : Easily navigate through a growing collection of songs.
+          </ListItem>
+          <ListItem>
+            🎨
+            <Box as='span' fontWeight='bold'>
+              Themes
+            </Box>
+            : Customize the look and feel of the app with various themes.
+          </ListItem>
+          <ListItem>
+            📺
+            <Box as='span' fontWeight='bold'>
+              Video Resources
+            </Box>
+            : Learn how to play songs with helpful video tutorials.
           </ListItem>
         </UnorderedList>
       </Box>
 
       <Box mb='2rem'>
-        <Heading as='h2' size='lg' mb='1rem'>
+        <Heading
+          as='h2'
+          size='lg'
+          mb='1rem'
+          // [*] theme colors
+          color={theme.heading}
+        >
           🛠️ Main Feature
         </Heading>
-        <Text>
+        <Text
+          // [*] theme colors
+          color={theme.paragraph}
+        >
           BookOfFrets is easily configurable via JSON files, allowing users and contributors to add
           new songs, chords, and themes without modifying the core code. This extensibility makes it
           simple to expand the app's content and tailor it to your preferences.
@@ -80,10 +154,19 @@ export const HomePage = () => {
       </Box>
 
       <Box mb='2rem'>
-        <Heading as='h2' size='lg' mb='1rem'>
+        <Heading
+          as='h2'
+          size='lg'
+          mb='1rem'
+          // [*] theme colors
+          color={theme.heading}
+        >
           🎶 Motivation
         </Heading>
-        <Text>
+        <Text
+          // [*] theme colors
+          color={theme.paragraph}
+        >
           As a guitar learner, I found myself frustrated with the tedious process of writing chords
           and songs by hand. I wanted a prettier, more extensible solution that could grow with my
           learning journey. BookOfFrets was born out of this desire to create an intuitive and
@@ -92,15 +175,25 @@ export const HomePage = () => {
       </Box>
 
       <Box mb='2rem'>
-        <Heading as='h2' size='lg' mb='1rem'>
+        <Heading
+          as='h2'
+          size='lg'
+          mb='1rem'
+          // [*] theme colors
+          color={theme.heading}
+        >
           🤝 Contribution
         </Heading>
-        <Text>
+        <Text
+          // [*] theme colors
+          color={theme.paragraph}
+        >
           <Link
             href='https://github.com/TheAncientOwl/book-of-frets/blob/main/CONTRIBUTING.md'
             isExternal
-            color='cyan.400'
             mr='5px'
+            // [*] theme colors
+            color={theme.link}
           >
             Contributions
           </Link>
@@ -111,15 +204,24 @@ export const HomePage = () => {
       </Box>
 
       <Box mb='2rem'>
-        <Heading as='h2' size='lg' mb='1rem'>
+        <Heading
+          as='h2'
+          size='lg'
+          mb='1rem'
+          // [*] theme colors
+          color={theme.heading}
+        >
           📜 License
         </Heading>
-        <Text>
+        <Text
+          // [*] theme colors
+          color={theme.paragraph}
+        >
           This project is licensed under the{' '}
           <Link
             href='https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE'
-            isExternal
-            color='cyan.400'
+            isExternal // [*] theme colors
+            color={theme.link}
           >
             MIT License
           </Link>

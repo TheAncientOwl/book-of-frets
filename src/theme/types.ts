@@ -6,9 +6,17 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description App theme types
  */
+
+export type THomePageTheme = {
+  title: string;
+  link: string;
+  paragraph: string;
+  heading: string;
+  listItem: string;
+};
 
 export type TAppMenuTheme = {
   menuButton: {
@@ -209,6 +217,7 @@ export type TAppSettingsTheme = {
 
 export type TAppTheme = {
   name: string;
+  homePage: THomePageTheme;
   appMenu: TAppMenuTheme;
   general: TGeneralAppTheme;
   chordsIndexPage: TChordsIndexPageTheme;
