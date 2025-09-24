@@ -1,0 +1,194 @@
+{
+  "name": "Lavander",
+  "appMenu": {
+    "menuButton": {
+      "background": "#181426",
+      "hover": "purple.600",
+      "border": "purple.500",
+      "text": "#E1B55C"
+    },
+    "closeButton": {
+      "color": "#E1B55C"
+    },
+    "drawer": {
+      "background": "#181426",
+      "appText": "#E1B55C",
+      "routeLink": "#E1B55C"
+    },
+    "copyright": {
+      "color": "#E1B55C",
+      "hoverColor": "purple.100"
+    }
+  },
+  "general": {
+    "background": "#1A1A1A"
+  },
+  "chordsIndexPage": {
+    "background": "#181426",
+    "searchBar": {
+      "background": "blackAlpha.100",
+      "color": "#947ff9",
+      "border": "#947ff9",
+      "focusBorder": "#E1B55C"
+    }
+  },
+  "chord": {
+    "border": "#E1B55C",
+    "background": "#20213B",
+    "dividers": "#E1B55C",
+    "title": "#947ff9"
+  },
+  "fret": {
+    "background": "blackAlpha.300",
+    "dividers": "#E1B55C",
+    "muted": {
+      "background": "#9e1313",
+      "border": "red.600",
+      "color": "whiteAlpha.900"
+    },
+    "finger": {
+      "background": "#181426",
+      "border": "#947ff9",
+      "color": "whiteAlpha.900"
+    }
+  },
+  "songCard": {
+    "background": "blackAlpha.300",
+    "border": "purple.600",
+    "hover": {
+      "background": "blackAlpha.500"
+    },
+    "cover": {
+      "border": "#947ff9",
+      "hover": {
+        "background": "rgba(0,0,0,0.6)",
+        "play": {
+          "background": "purple.600",
+          "text": "#E1B55C"
+        }
+      }
+    },
+    "text": {
+      "number": "#E1B55C",
+      "title": "#947ff9",
+      "authors": "#947ff9",
+      "typeTags": "#E1B55C"
+    },
+    "chords": {
+      "pick": "#E1B55C",
+      "popover": {
+        "border": "#E1B55C",
+        "background": "#181426",
+        "arrow": "#E1B55C",
+        "tag": {
+          "background": "#181426",
+          "border": "purple.700",
+          "text": "#E1B55C"
+        }
+      }
+    }
+  },
+  "song": {
+    "background": "#181426",
+    "header": {
+      "title": "#E1B55C",
+      "artists": "#E1B55C",
+      "typeTags": "#E1B55C",
+      "coverBorder": "#947ff9",
+      "contributors": {
+        "heading": "#181426",
+        "content": "purple.500",
+        "border": "#E1B55C",
+        "title": "#E1B55C",
+        "contributor": "#E1B55C"
+      }
+    },
+    "capo": {
+      "background": "#947ff9",
+      "border": "purple.800",
+      "text": "#E1B55C"
+    },
+    "chunks": {
+      "background": "blackAlpha.400",
+      "divider": "#E1B55C",
+      "item": {
+        "title": "#E1B55C",
+        "times": {
+          "background": "purple.600",
+          "color": "#E1B55C"
+        },
+        "chordsPattern": {
+          "background": "purple.600",
+          "color": "#E1B55C",
+          "divider": "#E1B55C",
+          "times": "#E1B55C",
+          "chord": {
+            "background": "purple.600",
+            "color": "#E1B55C",
+            "segment": {
+              "popover": {
+                "background": "gray.900",
+                "arrow": "#E1B55C",
+                "border": "#E1B55C",
+                "closeButton": "#E1B55C"
+              },
+              "times": "#E1B55C",
+              "pattern": "#E1B55C"
+            },
+            "times": {
+              "background": "purple.500",
+              "color": "#E1B55C"
+            }
+          }
+        },
+        "stringsPattern": {
+          "divider": "#E1B55C",
+          "stringNames": "#E1B55C",
+          "fret": {
+            "background": "purple.600",
+            "border": "purple.900",
+            "text": "#E1B55C"
+          },
+          "filler": "#E1B55C",
+          "chordBackground": "blackAlpha.600"
+        }
+      }
+    },
+    "notes": {
+      "title": "#E1B55C",
+      "note": "#E1B55C"
+    },
+    "resources": {
+      "title": "#E1B55C",
+      "item": {
+        "note": "#E1B55C",
+        "alias": "#E1B55C",
+        "author": "#E1B55C"
+      }
+    }
+  },
+  "songsIndexPage": {
+    "background": "#181426",
+    "searchBar": {
+      "background": "blackAlpha.100",
+      "color": "#947ff9",
+      "border": "#947ff9",
+      "focusBorder": "#E1B55C"
+    }
+  },
+  "settings": {
+    "title": "#947ff9",
+    "themePicker": {
+      "background": "#181426",
+      "title": "#947ff9",
+      "item": {
+        "background": "blackAlpha.400",
+        "hoverBackground": "blackAlpha.500",
+        "border": "purple.800",
+        "indexColor": "#E1B55C",
+        "colorBoxBorder": "#947ff9",
+        "title": "#947ff9"
+      }
+    }
+  }
+}

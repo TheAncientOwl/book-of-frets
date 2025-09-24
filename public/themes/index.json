@@ -11,6 +11,11 @@
       "mainColor": "#575799"
     },
     {
+      "title": "Pop N'Lock",
+      "directory": "pop-n-lock",
+      "mainColor": "#181426"
+    },
+    {
       "title": "Banananana",
       "directory": "banana",
       "mainColor": "#fbec5d"
