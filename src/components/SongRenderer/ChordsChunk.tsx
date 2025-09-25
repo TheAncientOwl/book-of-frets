@@ -6,7 +6,7 @@
  *
  * @file ChordsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.18
+ * @version 0.19
  * @description Render song chords pattern.
  */
 
@@ -15,20 +15,41 @@ import { Fragment } from 'react';
 import { Box, Divider, Tag, Tooltip, type DividerProps } from '@chakra-ui/react';
 
 import { ChordsChunkItem } from '@/components/SongRenderer/ChordsChunkItem';
-import { useAppTheme } from '@/context/AppState';
+import { useAppStateContext, useAppTheme } from '@/context/AppState';
 import type { TChordsChunk } from '@/types/song.types';
 
-type TChordsChunkProps = TChordsChunk & {
-  showChordTimes: boolean;
+type TChordsChunkProps = TChordsChunk & {};
+
+const getDividerHeight = (displayChordTimes: boolean, displayStrummingPattern: boolean): string => {
+  if (displayChordTimes && displayStrummingPattern) {
+    return '80px';
+  }
+
+  if (displayChordTimes) {
+    return '60px';
+  }
+
+  if (displayStrummingPattern) {
+    return '70px';
+  }
+
+  return '30px';
 };
 
-const ChordsChunkDivider = (props: DividerProps) => {
+const ChordsChunkDivider = (props: DividerProps & TChordsChunk) => {
   const { song: theme } = useAppTheme();
+  const { songSettings } = useAppStateContext();
 
   return (
     <Divider
       orientation='vertical'
-      height={['0px', '80px']}
+      height={[
+        '0px',
+        getDividerHeight(
+          songSettings.display.chordTimes.value,
+          songSettings.display.strummingPattern.value
+        ),
+      ]}
       borderWidth='thin'
       mt={['15px', '0px']}
       mb={['15px', '0px']}
@@ -41,6 +62,7 @@ const ChordsChunkDivider = (props: DividerProps) => {
 
 export const ChordsChunk = (props: TChordsChunkProps) => {
   const { song: theme } = useAppTheme();
+  const { songSettings } = useAppStateContext();
 
   return (
     <Box
@@ -51,39 +73,42 @@ export const ChordsChunk = (props: TChordsChunkProps) => {
       alignItems='center'
       justifyContent='center'
     >
-      <ChordsChunkDivider borderStyle={['solid']} />
+      <ChordsChunkDivider borderStyle={['solid']} {...props} />
 
       {props.items.map((segment, segmentIndex) => (
         <Fragment key={segmentIndex}>
-          <ChordsChunkItem {...segment} showChordTimes={props.showChordTimes} />
+          <ChordsChunkItem {...segment} />
 
           <ChordsChunkDivider
             borderStyle={['dashed', 'solid']}
             display={[segmentIndex < props.items.length - 1 ? 'block' : 'none', 'block']}
+            {...props}
           />
         </Fragment>
       ))}
 
-      <Tooltip
-        label={`Repeat ${props.times} times`}
-        // [*] theme colors
-        borderColor={theme.chunks.item.chordsPattern.divider}
-      >
-        <Tag
-          size='sm'
-          fontWeight='bold'
-          position='absolute'
-          top='50%'
-          right='0'
-          transform='translate(0%, -50%)'
-          zIndex={1}
+      {songSettings.display.times.value && (
+        <Tooltip
+          label={`Repeat ${props.times} times`}
           // [*] theme colors
-          backgroundColor={theme.chunks.item.chordsPattern.chord.times.background}
-          color={theme.chunks.item.chordsPattern.chord.times.color}
+          borderColor={theme.chunks.item.chordsPattern.divider}
         >
-          x{props.times}
-        </Tag>
-      </Tooltip>
+          <Tag
+            size='sm'
+            fontWeight='bold'
+            position='absolute'
+            top='50%'
+            right='0'
+            transform='translate(0%, -50%)'
+            zIndex={1}
+            // [*] theme colors
+            backgroundColor={theme.chunks.item.chordsPattern.chord.times.background}
+            color={theme.chunks.item.chordsPattern.chord.times.color}
+          >
+            x{props.times}
+          </Tag>
+        </Tooltip>
+      )}
     </Box>
   );
 };

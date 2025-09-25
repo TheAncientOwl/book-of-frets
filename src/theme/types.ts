@@ -6,11 +6,11 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 0.12
  * @description App theme types
  */
 
-export type THomePageTheme = {
+type THomePageTheme = {
   title: string;
   link: string;
   paragraph: string;
@@ -18,7 +18,7 @@ export type THomePageTheme = {
   listItem: string;
 };
 
-export type TAppMenuTheme = {
+type TAppMenuTheme = {
   menuButton: {
     background: string;
     hover: string;
@@ -31,22 +31,63 @@ export type TAppMenuTheme = {
   drawer: {
     background: string;
     appText: string;
-    routeLink: string;
   };
   copyright: {
     color: string;
     hoverColor: string;
   };
+  tabs: {
+    title: {
+      color: string;
+      border: string;
+      selected: {
+        color: string;
+        border: string;
+      };
+    };
+  };
+  items: {
+    navigation: {
+      routeLink: string;
+    };
+    settings: {
+      title: string;
+      songOption: {
+        color: string;
+        icon: {
+          border: string;
+          color: string;
+          background: string;
+          checked: {
+            background: string;
+            border: string;
+          };
+        };
+      };
+      themePicker: {
+        background: string;
+        title: string;
+        item: {
+          background: string;
+          border: string;
+          hoverBackground: string;
+          indexColor: string;
+          colorBoxBorder: string;
+          title: string;
+        };
+      };
+    };
+  };
 };
 
-export type TChordTheme = {
+type TChordTheme = {
   border: string;
   background: string;
   dividers: string;
   title: string;
 };
 
-export type TFretTheme = {
+type TFretTheme = {
   background: string;
   dividers: string;
   muted: {
@@ -61,7 +102,7 @@ export type TFretTheme = {
   };
 };
 
-export type TSongCardTheme = {
+type TSongCardTheme = {
   background: string;
   border: string;
   hover: {
@@ -98,7 +139,7 @@ export type TSongCardTheme = {
   };
 };
 
-export type TSongTheme = {
+type TSongTheme = {
   background: string;
   header: {
     title: string;
@@ -185,34 +226,18 @@ type TSearchBarTheme = {
   focusBorder: string;
 };
 
-export type TChordsIndexPageTheme = {
+type TChordsIndexPageTheme = {
   background: string;
   searchBar: TSearchBarTheme;
 };
 
-export type TSongsIndexPageTheme = {
+type TSongsIndexPageTheme = {
   background: string;
   searchBar: TSearchBarTheme;
 };
 
-export type TGeneralAppTheme = {
+type TGeneralAppTheme = {
   background: string;
-};
-
-export type TAppSettingsTheme = {
-  title: string;
-  themePicker: {
-    background: string;
-    title: string;
-    item: {
-      background: string;
-      border: string;
-      hoverBackground: string;
-      indexColor: string;
-      colorBoxBorder: string;
-      title: string;
-    };
-  };
 };
 
 export type TAppTheme = {
@@ -226,7 +251,6 @@ export type TAppTheme = {
   songCard: TSongCardTheme;
   song: TSongTheme;
   songsIndexPage: TSongsIndexPageTheme;
-  settings: TAppSettingsTheme;
 };
 
 export type TThemeIndexEntry = {

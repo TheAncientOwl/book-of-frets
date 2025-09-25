@@ -10,8 +10,7 @@
  * @description App menu component.
  */
 
-import { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { useRef, type PropsWithChildren } from 'react';
 
 import {
   Box,
@@ -26,14 +25,34 @@ import {
   Flex,
   Icon,
   Image,
-  List,
-  ListItem,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
   Text,
   useDisclosure,
 } from '@chakra-ui/react';
 
+import { NavigationList } from '@/components/AppMenu/Navigation/NavigationList';
+import Settings from '@/components/AppMenu/Settings/Settings';
 import { useAppStateContext, useAppTheme } from '@/context/AppState';
 import { MdCopyright } from 'react-icons/md';
+
+const TabHeader = (props: PropsWithChildren) => {
+  const { appMenu } = useAppTheme();
+  const theme = appMenu.tabs;
+
+  return (
+    <Tab
+      // [*] theme colors
+      color={theme.title.color}
+      _selected={{ color: theme.title.selected.color, borderColor: theme.title.selected.border }}
+    >
+      {props.children}
+    </Tab>
+  );
+};
 
 // TODO: Implement songs history
 export const AppMenu = () => {
@@ -41,6 +60,7 @@ export const AppMenu = () => {
   const { appLogoURL } = useAppStateContext();
 
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   const btnRef = useRef(null);
 
   return (
@@ -75,7 +95,13 @@ export const AppMenu = () => {
         />
       </Box>
 
-      <Drawer isOpen={isOpen} placement='left' onClose={onClose} finalFocusRef={btnRef}>
+      <Drawer
+        isOpen={isOpen}
+        placement='left'
+        onClose={onClose}
+        finalFocusRef={btnRef}
+        // size='xs'
+      >
         <DrawerOverlay />
         <DrawerContent
           // [*] theme colors
@@ -98,28 +124,27 @@ export const AppMenu = () => {
             </Flex>
           </DrawerHeader>
 
-          <DrawerBody>
-            <List
-              display='flex'
-              flexDirection='column'
-              gap='0.5em'
-              fontWeight='bold'
+          <DrawerBody padding='0'>
+            <Tabs
+              variant='line'
               // [*] theme colors
-              color={theme.drawer.routeLink}
+              borderColor={theme.tabs.title.border}
             >
-              <ListItem onClick={onClose}>
-                <Link to={`/`}>» Home</Link>
-              </ListItem>
-              <ListItem onClick={onClose}>
-                <Link to={`/index/chords`}>» Chords</Link>
-              </ListItem>
-              <ListItem onClick={onClose}>
-                <Link to={`/index/songs`}>» Songs</Link>
-              </ListItem>
-              <ListItem onClick={onClose}>
-                <Link to={`/settings`}>» Settings</Link>
-              </ListItem>
-            </List>
+              <TabList>
+                <TabHeader>Navigation</TabHeader>
+                <TabHeader>Settings</TabHeader>
+              </TabList>
+
+              <TabPanels>
+                <TabPanel>
+                  <NavigationList onItemClick={onClose} />
+                </TabPanel>
+
+                <TabPanel>
+                  <Settings />
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
           </DrawerBody>
 
           <DrawerFooter display='flex' justifyContent='center'>

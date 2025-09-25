@@ -47,10 +47,9 @@
           "additionalProperties": false,
           "properties": {
             "background": { "type": "string" },
-            "appText": { "type": "string" },
-            "routeLink": { "type": "string" }
+            "appText": { "type": "string" }
           },
-          "required": ["background", "appText", "routeLink"]
+          "required": ["background", "appText"]
         },
         "copyright": {
           "type": "object",
@@ -60,9 +59,113 @@
             "hoverColor": { "type": "string" }
           },
           "required": ["color", "hoverColor"]
+        },
+        "tabs": {
+          "type": "object",
+          "additionalItems": false,
+          "properties": {
+            "title": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "color": { "type": "string" },
+                "border": { "type": "string" },
+                "selected": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "color": { "type": "string" },
+                    "border": { "type": "string" }
+                  },
+                  "required": ["color", "border"]
+                }
+              },
+              "required": ["color", "border", "selected"]
+            }
+          },
+          "required": ["title"]
+        },
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "navigation": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "routeLink": { "type": "string" }
+              },
+              "required": ["routeLink"]
+            },
+            "settings": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "title": { "type": "string" },
+                "songOption": {
+                  "type": "object",
+                  "additionalItems": false,
+                  "properties": {
+                    "color": { "type": "string" },
+                    "icon": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "color": { "type": "string" },
+                        "border": { "type": "string" },
+                        "background": { "type": "string" },
+                        "checked": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "border": { "type": "string" },
+                            "background": { "type": "string" }
+                          },
+                          "required": ["background", "border"]
+                        }
+                      },
+                      "required": ["border", "color", "background", "checked"]
+                    }
+                  },
+                  "required": ["color", "icon"]
+                },
+                "themePicker": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "background": { "type": "string" },
+                    "title": { "type": "string" },
+                    "item": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "background": { "type": "string" },
+                        "border": { "type": "string" },
+                        "hoverBackground": { "type": "string" },
+                        "indexColor": { "type": "string" },
+                        "colorBoxBorder": { "type": "string" },
+                        "title": { "type": "string" }
+                      },
+                      "required": [
+                        "background",
+                        "border",
+                        "hoverBackground",
+                        "indexColor",
+                        "colorBoxBorder",
+                        "title"
+                      ]
+                    }
+                  },
+                  "required": ["background", "title", "item"]
+                }
+              },
+              "required": ["title", "songOption", "themePicker"]
+            }
+          },
+          "required": ["navigation", "settings"]
         }
       },
-      "required": ["menuButton", "closeButton", "drawer", "copyright"]
+      "required": ["menuButton", "closeButton", "drawer", "copyright", "items", "tabs"]
     },
     "general": {
       "type": "object",
@@ -394,43 +497,6 @@
         }
       },
       "required": ["background", "searchBar"]
-    },
-    "settings": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "title": { "type": "string" },
-        "themePicker": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "background": { "type": "string" },
-            "title": { "type": "string" },
-            "item": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "background": { "type": "string" },
-                "border": { "type": "string" },
-                "hoverBackground": { "type": "string" },
-                "indexColor": { "type": "string" },
-                "colorBoxBorder": { "type": "string" },
-                "title": { "type": "string" }
-              },
-              "required": [
-                "background",
-                "border",
-                "hoverBackground",
-                "indexColor",
-                "colorBoxBorder",
-                "title"
-              ]
-            }
-          },
-          "required": ["background", "title", "item"]
-        }
-      },
-      "required": ["title", "themePicker"]
     }
   },
   "required": [
@@ -443,7 +509,6 @@
     "fret",
     "songCard",
     "song",
-    "songsIndexPage",
-    "settings"
+    "songsIndexPage"
   ]
 }

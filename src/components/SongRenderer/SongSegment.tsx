@@ -6,7 +6,7 @@
  *
  * @file SongSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.15
+ * @version 0.16
  * @description Render song segment.
  */
 
@@ -18,11 +18,9 @@ import { ChordsChunk } from '@/components/SongRenderer/ChordsChunk';
 import { StringsChunk } from '@/components/SongRenderer/StringsChunk';
 import { useAppTheme } from '@/context/AppState';
 
-type ISongSegmentProps = TSongSegment & {
-  showChordTimes: boolean;
-};
+type TSongSegmentProps = TSongSegment & {};
 
-export const SongSegmentHeading = (props: ISongSegmentProps) => {
+export const SongSegmentHeading = (props: TSongSegmentProps) => {
   const { song: theme } = useAppTheme();
 
   return (
@@ -56,26 +54,14 @@ export const SongSegmentHeading = (props: ISongSegmentProps) => {
   );
 };
 
-export const SongSegmentBody = (props: ISongSegmentProps) => {
+export const SongSegmentBody = (props: TSongSegmentProps) => {
   return (
     <Flex direction='column' alignItems='center' gap='1em'>
       {props.chunks.map((chunk, chunkIdx) => {
         if (props.type === 'chords') {
-          return (
-            <ChordsChunk
-              key={chunkIdx}
-              {...(chunk as TChordsChunk)}
-              showChordTimes={props.showChordTimes}
-            />
-          );
+          return <ChordsChunk key={chunkIdx} {...(chunk as TChordsChunk)} />;
         } else if (props.type === 'strings') {
-          return (
-            <StringsChunk
-              key={chunkIdx}
-              {...(chunk as TStringsChunk)}
-              showChordTimes={props.showChordTimes}
-            />
-          );
+          return <StringsChunk key={chunkIdx} {...(chunk as TStringsChunk)} />;
         } else {
           console.warn(`Unimplemented pattern type "${props.type}`);
           return <></>;

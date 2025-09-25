@@ -6,7 +6,7 @@
  *
  * @file ChordsChunkItem.tsx
  * @author Alexandru Delegeanu
- * @version 0.15
+ * @version 0.16
  * @description Render song pattern segment.
  */
 
@@ -28,9 +28,7 @@ import { Chord } from '@/components/ChordRenderer/Chord';
 import { useAppStateContext, useAppTheme } from '@/context/AppState';
 import type { TChordsChunkItem } from '@/types/song.types';
 
-type TChordsChunkItemProps = TChordsChunkItem & {
-  showChordTimes: boolean;
-};
+type TChordsChunkItemProps = TChordsChunkItem & {};
 
 const EMPHASIZE_STRUMS = ['De', 'Ue'];
 const EMPHASIZE_STRUM_CHAR = 'e';
@@ -39,7 +37,7 @@ const NO_CHORD_ID = '-';
 
 export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
   const { song: theme } = useAppTheme();
-  const { chordsIndex } = useAppStateContext();
+  const { chordsIndex, songSettings } = useAppStateContext();
 
   return (
     <Flex direction='column' alignItems='center'>
@@ -92,7 +90,7 @@ export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
         })}
       </Flex>
 
-      {props.showChordTimes && (
+      {songSettings.display.chordTimes.value && (
         <Tooltip label={`Strum ${props.chordTimes} times`}>
           <Text
             fontSize='xs'
@@ -105,27 +103,29 @@ export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
         </Tooltip>
       )}
 
-      <Box position='relative' mt='0.4em'>
-        <Flex
-          direction='row'
-          gap='0.5em'
-          alignItems='end'
-          // [*] theme colors
-          color={theme.chunks.item.chordsPattern.chord.segment.pattern}
-        >
-          {props.strummingPattern.map((pattern, index) => {
-            return (
-              <Text
-                key={index}
-                fontWeight='bold'
-                textDecoration={EMPHASIZE_STRUMS.includes(pattern) ? 'underline' : 'none'}
-              >
-                {pattern.replace(EMPHASIZE_STRUM_CHAR, '')}
-              </Text>
-            );
-          })}
-        </Flex>
-      </Box>
+      {songSettings.display.strummingPattern.value && (
+        <Box position='relative' mt='0.4em'>
+          <Flex
+            direction='row'
+            gap='0.5em'
+            alignItems='end'
+            // [*] theme colors
+            color={theme.chunks.item.chordsPattern.chord.segment.pattern}
+          >
+            {props.strummingPattern.map((pattern, index) => {
+              return (
+                <Text
+                  key={index}
+                  fontWeight='bold'
+                  textDecoration={EMPHASIZE_STRUMS.includes(pattern) ? 'underline' : 'none'}
+                >
+                  {pattern.replace(EMPHASIZE_STRUM_CHAR, '')}
+                </Text>
+              );
+            })}
+          </Flex>
+        </Box>
+      )}
     </Flex>
   );
 };

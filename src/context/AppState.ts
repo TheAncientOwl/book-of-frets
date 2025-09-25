@@ -6,7 +6,7 @@
  *
  * @file AppState.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description App component.
  */
 
@@ -15,20 +15,53 @@ import type { TAppTheme } from '@/theme/types';
 import type { TChordsIndex } from '@/types/chord.types';
 import { createContext, useContext, type Dispatch, type SetStateAction } from 'react';
 
+type TState<T> = {
+  value: T;
+  set: Dispatch<SetStateAction<T>> | null;
+};
+
 export type TAppState = {
   chordsIndex: TChordsIndex;
+
   appTheme: TAppTheme;
   setAppTheme: Dispatch<SetStateAction<TAppTheme>> | undefined;
+
   appLogoURL: string;
   setAppLogoURL: Dispatch<SetStateAction<string>> | undefined;
+
+  songSettings: {
+    display: {
+      times: TState<boolean>;
+      chordTimes: TState<boolean>;
+      strummingPattern: TState<boolean>;
+    };
+  };
 };
 
 export const AppState = createContext<TAppState>({
   chordsIndex: {},
+
   appTheme: DefaultAppTheme,
   setAppTheme: undefined,
   appLogoURL: `${import.meta.env.BASE_URL}book-of-frets.svg`,
   setAppLogoURL: undefined,
+
+  songSettings: {
+    display: {
+      times: {
+        value: true,
+        set: null,
+      },
+      chordTimes: {
+        value: true,
+        set: null,
+      },
+      strummingPattern: {
+        value: true,
+        set: null,
+      },
+    },
+  },
 });
 
 export const useAppStateContext = () => {

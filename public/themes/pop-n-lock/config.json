@@ -19,12 +19,53 @@
     },
     "drawer": {
       "background": "#181426",
-      "appText": "#E1B55C",
-      "routeLink": "#E1B55C"
+      "appText": "#E1B55C"
     },
     "copyright": {
       "color": "#E1B55C",
       "hoverColor": "purple.100"
+    },
+    "tabs": {
+      "title": {
+        "color": "#E1B55C",
+        "border": "purple.900",
+        "selected": {
+          "color": "#E1B55C",
+          "border": "#E1B55C"
+        }
+      }
+    },
+    "items": {
+      "navigation": {
+        "routeLink": "#E1B55C"
+      },
+      "settings": {
+        "title": "#E1B55C",
+        "songOption": {
+          "color": "#E1B55C",
+          "icon": {
+            "color": "#E1B55C",
+            "background": "blackAlpha.100",
+            "border": "purple.700",
+            "checked": {
+              "background": "purple.900",
+              "border": "purple.800"
+            }
+          }
+        },
+        "themePicker": {
+          "background": "#181426",
+          "title": "#947ff9",
+          "item": {
+            "background": "blackAlpha.400",
+            "hoverBackground": "blackAlpha.500",
+            "border": "purple.800",
+            "indexColor": "#E1B55C",
+            "colorBoxBorder": "#947ff9",
+            "title": "#947ff9"
+          }
+        }
+      }
     }
   },
   "general": {
@@ -181,21 +222,6 @@
       "color": "#947ff9",
       "border": "#947ff9",
       "focusBorder": "#E1B55C"
-    }
-  },
-  "settings": {
-    "title": "#947ff9",
-    "themePicker": {
-      "background": "#181426",
-      "title": "#947ff9",
-      "item": {
-        "background": "blackAlpha.400",
-        "hoverBackground": "blackAlpha.500",
-        "border": "purple.800",
-        "indexColor": "#E1B55C",
-        "colorBoxBorder": "#947ff9",
-        "title": "#947ff9"
-      }
     }
   }
 }

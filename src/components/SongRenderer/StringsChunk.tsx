@@ -6,7 +6,7 @@
  *
  * @file StringsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.16
+ * @version 0.17
  * @description Render song strings pattern.
  */
 
@@ -16,9 +16,7 @@ import { useAppTheme } from '@/context/AppState';
 import type { TGuitarString } from '@/types/common.types';
 import type { TGuitarStringDelimiter, TStringsChunk } from '@/types/song.types';
 
-type TStringsPatternProps = TStringsChunk & {
-  showChordTimes: boolean;
-};
+type TStringsPatternProps = TStringsChunk & {};
 
 type TFretNumber = number | TGuitarStringDelimiter;
 

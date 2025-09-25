@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.27
+ * @version 0.28
  * @description App component.
  */
 
@@ -26,16 +26,29 @@ import type { TChordsIndex } from '@/types/chord.types';
 const SongPage = lazy(() => import('@/pages/SongPage'));
 const ChordsIndexPage = lazy(() => import('@/pages/ChordsIndexPage'));
 const SongsIndexPage = lazy(() => import('@/pages/SongsIndexPage'));
-const SettingsPage = lazy(() => import('@/pages/SettingsPage'));
 
 import DefaultAppTheme from '@/theme/default.json';
 
 export const App = () => {
   const [chordsIndex, setChordsIndex] = useState<TChordsIndex>({});
+
   const [appTheme, setAppTheme] = useLocalStorage<TAppTheme>('app-theme', DefaultAppTheme);
   const [appLogoURL, setAppLogoURL] = useLocalStorage<string>(
     'app-logo-url',
     `${import.meta.env.BASE_URL}logo.svg`
+  );
+
+  const [displayChordTimes, setDisplayChordTimes] = useLocalStorage<boolean>(
+    'song-options-display-chord-times',
+    true
+  );
+  const [displayTimes, setDisplayTimes] = useLocalStorage<boolean>(
+    'song-options-display-times',
+    true
+  );
+  const [displayStrummingPattern, setDisplayStrummingPattern] = useLocalStorage<boolean>(
+    'song-options-display-strumming-pattern',
+    true
   );
 
   useEffect(() => {
@@ -56,8 +69,48 @@ export const App = () => {
   }, [appLogoURL]);
 
   const appStateValue: TAppState = useMemo(
-    () => ({ chordsIndex, appTheme, setAppTheme, appLogoURL, setAppLogoURL }),
-    [chordsIndex, appTheme, setAppTheme, appLogoURL, setAppLogoURL]
+    () => ({
+      chordsIndex,
+
+      appTheme,
+      setAppTheme,
+      appLogoURL,
+      setAppLogoURL,
+
+      songSettings: {
+        display: {
+          times: {
+            value: displayTimes,
+            set: setDisplayTimes,
+          },
+          chordTimes: {
+            value: displayChordTimes,
+            set: setDisplayChordTimes,
+          },
+          strummingPattern: {
+            value: displayStrummingPattern,
+            set: setDisplayStrummingPattern,
+          },
+        },
+      },
+    }),
+    [
+      chordsIndex,
+
+      appTheme,
+      setAppTheme,
+      appLogoURL,
+      setAppLogoURL,
+
+      displayTimes,
+      setDisplayTimes,
+
+      displayChordTimes,
+      displayStrummingPattern,
+
+      setDisplayChordTimes,
+      setDisplayStrummingPattern,
+    ]
   );
 
   return (
@@ -95,14 +148,6 @@ export const App = () => {
               element={
                 <Suspense fallback={<div>Loading...</div>}>
                   <SongsIndexPage />
-                </Suspense>
-              }
-            />
-            <Route
-              path='/settings'
-              element={
-                <Suspense fallback={<div>Loading...</div>}>
-                  <SettingsPage />
                 </Suspense>
               }
             />

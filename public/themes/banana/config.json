@@ -19,12 +19,53 @@
     },
     "drawer": {
       "background": "#fbec5d",
-      "appText": "#6b3e26",
-      "routeLink": "#6b3e26"
+      "appText": "#6b3e26"
     },
     "copyright": {
       "color": "#6b3e26",
       "hoverColor": "yellow.100"
+    },
+    "tabs": {
+      "title": {
+        "color": "#6b3e26",
+        "border": "yellow.700",
+        "selected": {
+          "color": "#6b3e26",
+          "border": "yellow.500"
+        }
+      }
+    },
+    "items": {
+      "navigation": {
+        "routeLink": "#6b3e26"
+      },
+      "settings": {
+        "title": "#6b3e26",
+        "songOption": {
+          "color": "#6b3e26",
+          "icon": {
+            "color": "#6b3e26",
+            "background": "blackAlpha.100",
+            "border": "yellow.500",
+            "checked": {
+              "background": "yellow.600",
+              "border": "yellow.400"
+            }
+          }
+        },
+        "themePicker": {
+          "background": "#fbec5d",
+          "title": "#6b3e26",
+          "item": {
+            "background": "blackAlpha.300",
+            "hoverBackground": "blackAlpha.400",
+            "border": "yellow.800",
+            "indexColor": "#6b3e26",
+            "colorBoxBorder": "gray.900",
+            "title": "#6b3e26"
+          }
+        }
+      }
     }
   },
   "general": {
@@ -181,21 +222,6 @@
       "color": "#6b3e26",
       "border": "#6b3e26",
       "focusBorder": "yellow.500"
-    }
-  },
-  "settings": {
-    "title": "#6b3e26",
-    "themePicker": {
-      "background": "#fbec5d",
-      "title": "#6b3e26",
-      "item": {
-        "background": "blackAlpha.300",
-        "hoverBackground": "blackAlpha.400",
-        "border": "yellow.800",
-        "indexColor": "#6b3e26",
-        "colorBoxBorder": "gray.900",
-        "title": "#6b3e26"
-      }
     }
   }
 }

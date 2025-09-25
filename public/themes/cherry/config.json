@@ -19,12 +19,53 @@
     },
     "drawer": {
       "background": "#9e1313",
-      "appText": "white",
-      "routeLink": "white"
+      "appText": "white"
     },
     "copyright": {
       "color": "white",
       "hoverColor": "red.100"
+    },
+    "tabs": {
+      "title": {
+        "color": "whiteAlpha.700",
+        "border": "white",
+        "selected": {
+          "color": "white",
+          "border": "red.400"
+        }
+      }
+    },
+    "items": {
+      "navigation": {
+        "routeLink": "white"
+      },
+      "settings": {
+        "title": "white",
+        "songOption": {
+          "color": "white",
+          "icon": {
+            "color": "white",
+            "background": "blackAlpha.100",
+            "border": "red.300",
+            "checked": {
+              "background": "red.600",
+              "border": "red.400"
+            }
+          }
+        },
+        "themePicker": {
+          "background": "#9e1313",
+          "title": "white",
+          "item": {
+            "background": "blackAlpha.400",
+            "hoverBackground": "blackAlpha.500",
+            "border": "red.800",
+            "indexColor": "white",
+            "colorBoxBorder": "gray.900",
+            "title": "white"
+          }
+        }
+      }
     }
   },
   "general": {
@@ -181,21 +222,6 @@
       "color": "white",
       "border": "white",
       "focusBorder": "red.500"
-    }
-  },
-  "settings": {
-    "title": "white",
-    "themePicker": {
-      "background": "#9e1313",
-      "title": "white",
-      "item": {
-        "background": "blackAlpha.400",
-        "hoverBackground": "blackAlpha.500",
-        "border": "red.800",
-        "indexColor": "white",
-        "colorBoxBorder": "gray.900",
-        "title": "white"
-      }
     }
   }
 }

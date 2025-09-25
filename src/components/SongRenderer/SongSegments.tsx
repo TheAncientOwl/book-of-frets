@@ -6,7 +6,7 @@
  *
  * @file SongSegments.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description Render song segments data.
  */
 
@@ -19,7 +19,7 @@ import {
   Box,
 } from '@chakra-ui/react';
 
-import type { TChordsChunk, TSongSegment } from '@/types/song.types';
+import type { TSongSegment } from '@/types/song.types';
 
 import { SongSegmentBody, SongSegmentHeading } from '@/components/SongRenderer/SongSegment';
 import { useAppTheme } from '@/context/AppState';
@@ -48,15 +48,6 @@ export const SongSegments = (props: TSongSegmentsProps) => {
           `Failed to find song segment data for "${songSegmentName}"`
         );
 
-        const showChordTimes = Object.entries(props.songSegments).some(
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          ([_, value]) =>
-            value.type === 'chords' &&
-            (value.chunks as TChordsChunk[]).some(pattern =>
-              pattern.items.some(segment => segment.chordTimes > 1)
-            )
-        );
-
         return (
           <AccordionItem
             key={`${songSegmentName}-${index}`}
@@ -81,12 +72,12 @@ export const SongSegments = (props: TSongSegmentsProps) => {
                 textAlign='center'
                 width='100%'
               >
-                <SongSegmentHeading {...songSegmentData} showChordTimes={showChordTimes} />
+                <SongSegmentHeading {...songSegmentData} />
               </Box>
               <AccordionIcon color={theme.chunks.item.title} />
             </AccordionButton>
             <AccordionPanel>
-              <SongSegmentBody {...songSegmentData} showChordTimes={showChordTimes} />
+              <SongSegmentBody {...songSegmentData} />
             </AccordionPanel>
           </AccordionItem>
         );

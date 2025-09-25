@@ -6,7 +6,7 @@
  *
  * @file useLocalStorage.ts
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Local storage hook.
  */
 
@@ -22,7 +22,23 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = window.localStorage.getItem(key);
-      return item ? (JSON.parse(item) as T) : initialValue;
+      if (item) {
+        const parsedValue = JSON.parse(item) as T;
+        // If both initialValue and parsedValue are objects, merge them
+        if (
+          typeof initialValue === 'object' &&
+          initialValue !== null &&
+          typeof parsedValue === 'object' &&
+          parsedValue !== null &&
+          !Array.isArray(initialValue) &&
+          !Array.isArray(parsedValue)
+        ) {
+          return { ...initialValue, ...parsedValue };
+        }
+        // Otherwise, just use parsedValue
+        return parsedValue;
+      }
+      return initialValue;
     } catch (error) {
       console.warn(`Error reading localStorage key "${key}":`, error);
       return initialValue;
