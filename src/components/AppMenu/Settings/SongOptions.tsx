@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Song display options.
  */
 
@@ -48,19 +48,19 @@ export const SongOptions = () => {
         isChecked={display.times.value}
         onChange={() => display.times.set?.(!display.times.value)}
       >
-        Display times
+        Segment Times
       </ThemedCheckbox>
       <ThemedCheckbox
         isChecked={display.chordTimes.value}
         onChange={() => display.chordTimes.set?.(!display.chordTimes.value)}
       >
-        Display chord times
+        Chord Times
       </ThemedCheckbox>
       <ThemedCheckbox
         isChecked={display.strummingPattern.value}
         onChange={() => display.strummingPattern.set?.(!display.strummingPattern.value)}
       >
-        Display strumming pattern
+        Strumming Pattern
       </ThemedCheckbox>
     </VStack>
   );
