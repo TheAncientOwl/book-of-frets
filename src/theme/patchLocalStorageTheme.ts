@@ -6,7 +6,7 @@
  *
  * @file patchLocalStorageTheme.ts
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Patch local storage for theme.
  */
 
@@ -19,7 +19,7 @@ export const patchLocalStorageTheme = () => {
       console.info('Patching theme');
       const parsed = JSON.parse(storedTheme);
       const merged = { ...DefaultAppTheme, ...parsed };
-      console.info({ before: parsed, after: merged });
+      console.info({ before: parsed, after: merged, DefaultAppTheme });
 
       localStorage.setItem('app-theme', JSON.stringify(merged));
 
