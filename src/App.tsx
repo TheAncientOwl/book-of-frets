@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.28
+ * @version 0.29
  * @description App component.
  */
 
@@ -28,8 +28,14 @@ const ChordsIndexPage = lazy(() => import('@/pages/ChordsIndexPage'));
 const SongsIndexPage = lazy(() => import('@/pages/SongsIndexPage'));
 
 import DefaultAppTheme from '@/theme/default.json';
+import { patchLocalStorageTheme } from '@/theme/patchLocalStorageTheme';
 
 export const App = () => {
+  if (!sessionStorage.getItem('patched-app-theme')) {
+    patchLocalStorageTheme();
+    sessionStorage.setItem('patched-app-theme', 'true');
+  }
+
   const [chordsIndex, setChordsIndex] = useState<TChordsIndex>({});
 
   const [appTheme, setAppTheme] = useLocalStorage<TAppTheme>('app-theme', DefaultAppTheme);
