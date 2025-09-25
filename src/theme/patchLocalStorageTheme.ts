@@ -19,7 +19,11 @@ export const patchLocalStorageTheme = () => {
       console.info('Patching theme');
       const parsed = JSON.parse(storedTheme);
       const merged = { ...DefaultAppTheme, ...parsed };
+      console.info({ before: parsed, after: merged });
+
       localStorage.setItem('app-theme', JSON.stringify(merged));
+
+      console.info('Patched theme successfully');
     } catch (err) {
       console.warn('Failed to patch theme', err);
     }
