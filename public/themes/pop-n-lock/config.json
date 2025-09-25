@@ -145,14 +145,14 @@
       "coverBorder": "#947ff9",
       "contributors": {
         "heading": "#181426",
-        "content": "purple.500",
+        "content": "#1a1a1a",
         "border": "#E1B55C",
         "title": "#E1B55C",
         "contributor": "#E1B55C"
       }
     },
     "capo": {
-      "background": "#947ff9",
+      "background": "#1a1a1a",
       "border": "purple.800",
       "text": "#E1B55C"
     },
@@ -171,7 +171,7 @@
           "divider": "#E1B55C",
           "times": "#E1B55C",
           "chord": {
-            "background": "purple.600",
+            "background": "purple.800",
             "color": "#E1B55C",
             "segment": {
               "popover": {
@@ -184,7 +184,7 @@
               "pattern": "#E1B55C"
             },
             "times": {
-              "background": "purple.500",
+              "background": "purple.800",
               "color": "#E1B55C"
             }
           }
