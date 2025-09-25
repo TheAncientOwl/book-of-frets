@@ -6,13 +6,14 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.14
+ * @version 0.15
  * @description App menu component.
  */
 
 import { NavigationList } from '@/components/AppMenu/Navigation/NavigationList';
 import Settings from '@/components/AppMenu/Settings/Settings';
 import { useAppStateContext, useAppTheme } from '@/context/AppState';
+import { useSessionStorage } from '@/hooks/useSessionStorage';
 import {
   Box,
   Link as ChakraLink,
@@ -56,6 +57,7 @@ const TabHeader = (props: PropsWithChildren) => {
 export const AppMenu = () => {
   const { appMenu: theme } = useAppTheme();
   const { appLogoURL } = useAppStateContext();
+  const [activeTab, setActiveTab] = useSessionStorage<number>('menu-active-tab', 0);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -125,6 +127,8 @@ export const AppMenu = () => {
           <DrawerBody padding='0'>
             <Tabs
               variant='line'
+              index={activeTab}
+              onChange={setActiveTab}
               // [*] theme colors
               borderColor={theme.tabs.title.border}
             >
