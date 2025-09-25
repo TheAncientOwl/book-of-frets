@@ -6,12 +6,13 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.13
+ * @version 0.14
  * @description App menu component.
  */
 
-import { useRef, type PropsWithChildren } from 'react';
-
+import { NavigationList } from '@/components/AppMenu/Navigation/NavigationList';
+import Settings from '@/components/AppMenu/Settings/Settings';
+import { useAppStateContext, useAppTheme } from '@/context/AppState';
 import {
   Box,
   Link as ChakraLink,
@@ -33,10 +34,7 @@ import {
   Text,
   useDisclosure,
 } from '@chakra-ui/react';
-
-import { NavigationList } from '@/components/AppMenu/Navigation/NavigationList';
-import Settings from '@/components/AppMenu/Settings/Settings';
-import { useAppStateContext, useAppTheme } from '@/context/AppState';
+import { useRef, type PropsWithChildren } from 'react';
 import { MdCopyright } from 'react-icons/md';
 
 const TabHeader = (props: PropsWithChildren) => {

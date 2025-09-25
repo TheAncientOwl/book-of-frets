@@ -6,16 +6,15 @@
  *
  * @file ThemePicker.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description Display app themes and handles theme setting.
  */
 
 import { useAppStateContext, useAppTheme } from '@/context/AppState';
+import DefaultAppTheme from '@/theme/default.json';
 import type { TAppTheme, TThemeIndexEntry } from '@/theme/types';
 import { Box, Flex, Heading, Image } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
-
-import DefaultAppTheme from '@/theme/default.json';
 
 export const ThemePicker = () => {
   const { appMenu } = useAppTheme();

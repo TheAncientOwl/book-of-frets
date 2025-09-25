@@ -6,7 +6,7 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description Render song header data.
  */
 
@@ -30,7 +30,6 @@ import {
   Tooltip,
 } from '@chakra-ui/react';
 import { Fragment, useState } from 'react';
-
 import { GiGuitarBassHead, GiGuitarHead } from 'react-icons/gi';
 
 type TSongHeaderProps = Pick<TSong, 'title' | 'artists' | 'capo' | 'type' | 'contributors'> & {

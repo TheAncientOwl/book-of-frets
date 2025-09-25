@@ -10,9 +10,8 @@
  * @description List all available songs.
  */
 
-import { Fragment, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-
+import { useAppStateContext, useAppTheme } from '@/context/AppState';
+import type { TSongsIndexEntry } from '@/types/song.types';
 import {
   Box,
   Flex,
@@ -29,11 +28,10 @@ import {
   Text,
   Tooltip,
 } from '@chakra-ui/react';
+import { Fragment, useState } from 'react';
 import { GiGuitarBassHead, GiGuitarHead } from 'react-icons/gi';
-
-import { useAppStateContext, useAppTheme } from '@/context/AppState';
-import type { TSongsIndexEntry } from '@/types/song.types';
 import { TbGuitarPickFilled } from 'react-icons/tb';
+import { useNavigate } from 'react-router-dom';
 
 type SongProps = TSongsIndexEntry & {
   index: number;

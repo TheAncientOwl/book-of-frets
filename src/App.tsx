@@ -6,29 +6,25 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.29
+ * @version 0.30
  * @description App component.
  */
 
-import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
-
-import { Box, ChakraProvider } from '@chakra-ui/react';
-
 import { AppMenu } from '@/components/AppMenu/AppMenu';
-import { HomePage } from '@/pages/HomePage';
-
 import { AppState, type TAppState } from '@/context/AppState';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
+import { HomePage } from '@/pages/HomePage';
+import DefaultAppTheme from '@/theme/default.json';
+import { patchLocalStorageTheme } from '@/theme/patchLocalStorageTheme';
 import type { TAppTheme } from '@/theme/types';
 import type { TChordsIndex } from '@/types/chord.types';
+import { Box, ChakraProvider } from '@chakra-ui/react';
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
 const SongPage = lazy(() => import('@/pages/SongPage'));
 const ChordsIndexPage = lazy(() => import('@/pages/ChordsIndexPage'));
 const SongsIndexPage = lazy(() => import('@/pages/SongsIndexPage'));
-
-import DefaultAppTheme from '@/theme/default.json';
-import { patchLocalStorageTheme } from '@/theme/patchLocalStorageTheme';
 
 export const App = () => {
   if (!sessionStorage.getItem('patched-app-theme')) {

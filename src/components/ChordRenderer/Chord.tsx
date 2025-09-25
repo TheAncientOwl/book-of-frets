@@ -6,18 +6,16 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 0.13
+ * @version 0.14
  * @description Render chrod based on given config.
  */
-
-import { Fragment } from 'react';
-
-import { Box, Divider, Heading } from '@chakra-ui/react';
 
 import { Fret } from '@/components/ChordRenderer/Fret';
 import { useAppTheme } from '@/context/AppState';
 import type { TFret } from '@/types/chord.types';
 import type { TGuitarString } from '@/types/common.types';
+import { Box, Divider, Heading } from '@chakra-ui/react';
+import { Fragment } from 'react';
 
 type TChordProps = {
   name: string;

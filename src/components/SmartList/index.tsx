@@ -6,14 +6,10 @@
  *
  * @file index.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description SmartList index file.
  */
 
-import {
-  SmartListWrapper,
-  type TSmartListWrapperProps,
-} from '@/components/SmartList/SmartListWrapper';
 import {
   SmartListContent,
   type TSmartListContentProps,
@@ -22,6 +18,10 @@ import {
   SmartListSearchBar,
   type TSmartListSearchBarProps,
 } from '@/components/SmartList/SmartListSearchBar';
+import {
+  SmartListWrapper,
+  type TSmartListWrapperProps,
+} from '@/components/SmartList/SmartListWrapper';
 import { createContext, useContext, type ComponentType } from 'react';
 
 export type TSmartListContextData<T> = {

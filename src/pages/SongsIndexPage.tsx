@@ -6,20 +6,17 @@
  *
  * @file SongsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.17
+ * @version 0.18
  * @description List all available songs.
  */
-
-import { useEffect, useLayoutEffect, useState } from 'react';
-
-import { Box, Container, Flex } from '@chakra-ui/react';
-
-import type { TSongsIndexEntry } from '@/types/song.types';
 
 import { createSmartList } from '@/components/SmartList/index';
 import { SongCard } from '@/components/SongIndexEntry/SongCard';
 import { useAppTheme } from '@/context/AppState';
 import { setDocumentThemeColor } from '@/theme/setDocumentThemeColor';
+import type { TSongsIndexEntry } from '@/types/song.types';
+import { Box, Container, Flex } from '@chakra-ui/react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 const SongsList = createSmartList<TSongsIndexEntry>();
 

@@ -6,15 +6,15 @@
  *
  * @file HomePage.tsx
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description App homepage.
  */
 
-import { Link as RouteLink } from 'react-router-dom';
-import { Container, Heading, Text, UnorderedList, ListItem, Link, Box } from '@chakra-ui/react';
 import { useAppTheme } from '@/context/AppState';
-import { useLayoutEffect } from 'react';
 import { setDocumentThemeColor } from '@/theme/setDocumentThemeColor';
+import { Box, Container, Heading, Link, ListItem, Text, UnorderedList } from '@chakra-ui/react';
+import { useLayoutEffect } from 'react';
+import { Link as RouteLink } from 'react-router-dom';
 
 export const HomePage = () => {
   const { general, homePage: theme } = useAppTheme();

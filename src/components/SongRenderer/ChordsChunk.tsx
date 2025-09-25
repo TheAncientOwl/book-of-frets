@@ -6,17 +6,15 @@
  *
  * @file ChordsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.19
+ * @version 0.20
  * @description Render song chords pattern.
  */
-
-import { Fragment } from 'react';
-
-import { Box, Divider, Tag, Tooltip, type DividerProps } from '@chakra-ui/react';
 
 import { ChordsChunkItem } from '@/components/SongRenderer/ChordsChunkItem';
 import { useAppStateContext, useAppTheme } from '@/context/AppState';
 import type { TChordsChunk } from '@/types/song.types';
+import { Box, Divider, Tag, Tooltip, type DividerProps } from '@chakra-ui/react';
+import { Fragment } from 'react';
 
 type TChordsChunkProps = TChordsChunk & {};
 

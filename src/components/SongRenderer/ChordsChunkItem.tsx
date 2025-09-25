@@ -6,10 +6,13 @@
  *
  * @file ChordsChunkItem.tsx
  * @author Alexandru Delegeanu
- * @version 0.16
+ * @version 0.17
  * @description Render song pattern segment.
  */
 
+import { Chord } from '@/components/ChordRenderer/Chord';
+import { useAppStateContext, useAppTheme } from '@/context/AppState';
+import type { TChordsChunkItem } from '@/types/song.types';
 import {
   Box,
   Flex,
@@ -23,10 +26,6 @@ import {
   Text,
   Tooltip,
 } from '@chakra-ui/react';
-
-import { Chord } from '@/components/ChordRenderer/Chord';
-import { useAppStateContext, useAppTheme } from '@/context/AppState';
-import type { TChordsChunkItem } from '@/types/song.types';
 
 type TChordsChunkItemProps = TChordsChunkItem & {};
 

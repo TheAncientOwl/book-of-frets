@@ -6,16 +6,15 @@
  *
  * @file Fret.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description Render chrod based on given config.
  */
 
+import { useAppTheme } from '@/context/AppState';
+import type { TGuitarString } from '@/types/common.types';
+import { Circle, Divider, Flex, Icon, Spacer } from '@chakra-ui/react';
 import { Fragment } from 'react';
 import { IoCloseSharp } from 'react-icons/io5';
-
-import { useAppTheme } from '@/context/AppState';
-import { Circle, Divider, Flex, Icon, Spacer } from '@chakra-ui/react';
-import type { TGuitarString } from '@/types/common.types';
 
 type TFretProps = {
   stringsToFingers: Map<TGuitarString, number>;

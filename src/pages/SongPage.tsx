@@ -6,18 +6,16 @@
  *
  * @file SongPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description Handle song rendering based on url.
  */
-
-import { useEffect, useLayoutEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-
-import type { TSong } from '@/types/song.types';
 
 import { Song as SongRenderer } from '@/components/SongRenderer/Song';
 import { useAppTheme } from '@/context/AppState';
 import { setDocumentThemeColor } from '@/theme/setDocumentThemeColor';
+import type { TSong } from '@/types/song.types';
+import { useEffect, useLayoutEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 export const SongPage = () => {
   const { directory } = useParams();

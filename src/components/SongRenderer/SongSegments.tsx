@@ -6,10 +6,13 @@
  *
  * @file SongSegments.tsx
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description Render song segments data.
  */
 
+import { SongSegmentBody, SongSegmentHeading } from '@/components/SongRenderer/SongSegment';
+import { useAppTheme } from '@/context/AppState';
+import type { TSongSegment } from '@/types/song.types';
 import {
   Accordion,
   AccordionButton,
@@ -18,11 +21,6 @@ import {
   AccordionPanel,
   Box,
 } from '@chakra-ui/react';
-
-import type { TSongSegment } from '@/types/song.types';
-
-import { SongSegmentBody, SongSegmentHeading } from '@/components/SongRenderer/SongSegment';
-import { useAppTheme } from '@/context/AppState';
 
 type TSongSegmentsProps = {
   songSegments: Record<string, TSongSegment>;

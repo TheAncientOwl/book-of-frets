@@ -6,17 +6,15 @@
  *
  * @file SongSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.16
+ * @version 0.17
  * @description Render song segment.
  */
-
-import { Flex, Heading, Tag, Text } from '@chakra-ui/react';
-
-import type { TChordsChunk, TSongSegment, TStringsChunk } from '@/types/song.types';
 
 import { ChordsChunk } from '@/components/SongRenderer/ChordsChunk';
 import { StringsChunk } from '@/components/SongRenderer/StringsChunk';
 import { useAppTheme } from '@/context/AppState';
+import type { TChordsChunk, TSongSegment, TStringsChunk } from '@/types/song.types';
+import { Flex, Heading, Tag, Text } from '@chakra-ui/react';
 
 type TSongSegmentProps = TSongSegment & {};
 

@@ -6,20 +6,16 @@
  *
  * @file SongResources.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description Render song resources data.
  */
 
-import { Fragment } from 'react';
-
-import { Box, Divider, Flex, Heading, Icon, List, Text } from '@chakra-ui/react';
-
-import { MdLibraryMusic } from 'react-icons/md';
-
-import type { TSong } from '@/types/song.types';
-
 import { SongResource } from '@/components/SongRenderer/SongResource';
 import { useAppTheme } from '@/context/AppState';
+import type { TSong } from '@/types/song.types';
+import { Box, Divider, Flex, Heading, Icon, List, Text } from '@chakra-ui/react';
+import { Fragment } from 'react';
+import { MdLibraryMusic } from 'react-icons/md';
 
 type TSongResourcesProps = Pick<TSong, 'resources'>;
 
