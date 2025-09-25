@@ -6,13 +6,14 @@
  *
  * @file ChordsChunkItem.tsx
  * @author Alexandru Delegeanu
- * @version 0.17
+ * @version 0.18
  * @description Render song pattern segment.
  */
 
+import type { TChordsChunkItem } from '@/common/types/song.types';
 import { Chord } from '@/components/ChordRenderer/Chord';
-import { useAppStateContext, useAppTheme } from '@/context/AppState';
-import type { TChordsChunkItem } from '@/types/song.types';
+import { useAppState } from '@/state/hooks/useAppState';
+import { useAppTheme } from '@/state/hooks/useAppTheme';
 import {
   Box,
   Flex,
@@ -36,7 +37,7 @@ const NO_CHORD_ID = '-';
 
 export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
   const { song: theme } = useAppTheme();
-  const { chordsIndex, songSettings } = useAppStateContext();
+  const { chordsIndex, songSettings } = useAppState();
 
   return (
     <Flex direction='column' alignItems='center'>

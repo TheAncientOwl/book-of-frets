@@ -10,7 +10,7 @@
  * @description Song types for json mapping.
  */
 
-import type { TGuitarString } from '@/types/common.types';
+import type { TGuitarString } from '@/common/types/common.types';
 
 export type TStrummingMove = '-' | 'D' | 'U' | 'Dx' | 'Ux' | 'X' | 'De' | 'Dx';
 

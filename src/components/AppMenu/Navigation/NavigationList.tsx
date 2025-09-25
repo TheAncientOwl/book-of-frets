@@ -6,11 +6,11 @@
  *
  * @file NavigationList.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Navigation links.
  */
 
-import { useAppTheme } from '@/context/AppState';
+import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { List, ListItem } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 

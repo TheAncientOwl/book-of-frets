@@ -6,12 +6,12 @@
  *
  * @file Fret.tsx
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description Render chrod based on given config.
  */
 
-import { useAppTheme } from '@/context/AppState';
-import type { TGuitarString } from '@/types/common.types';
+import type { TGuitarString } from '@/common/types/common.types';
+import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { Circle, Divider, Flex, Icon, Spacer } from '@chakra-ui/react';
 import { Fragment } from 'react';
 import { IoCloseSharp } from 'react-icons/io5';

@@ -11,15 +11,11 @@
  */
 
 import { AppMenu } from '@/components/AppMenu/AppMenu';
-import { AppState, type TAppState } from '@/context/AppState';
-import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { HomePage } from '@/pages/HomePage';
-import DefaultAppTheme from '@/theme/default.json';
-import { patchLocalStorageTheme } from '@/theme/patchLocalStorageTheme';
-import type { TAppTheme } from '@/theme/types';
-import type { TChordsIndex } from '@/types/chord.types';
+import { AppStateContext } from '@/state/AppStateContext';
+import { useAppStateValue } from '@/state/hooks/useAppStateValue';
 import { Box, ChakraProvider } from '@chakra-ui/react';
-import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
+import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 const SongPage = lazy(() => import('@/pages/SongPage'));
@@ -27,97 +23,11 @@ const ChordsIndexPage = lazy(() => import('@/pages/ChordsIndexPage'));
 const SongsIndexPage = lazy(() => import('@/pages/SongsIndexPage'));
 
 export const App = () => {
-  if (!sessionStorage.getItem('patched-app-theme')) {
-    patchLocalStorageTheme();
-    sessionStorage.setItem('patched-app-theme', 'true');
-  }
-
-  const [chordsIndex, setChordsIndex] = useState<TChordsIndex>({});
-
-  const [appTheme, setAppTheme] = useLocalStorage<TAppTheme>('app-theme', DefaultAppTheme);
-  const [appLogoURL, setAppLogoURL] = useLocalStorage<string>(
-    'app-logo-url',
-    `${import.meta.env.BASE_URL}logo.svg`
-  );
-
-  const [displayChordTimes, setDisplayChordTimes] = useLocalStorage<boolean>(
-    'song-options-display-chord-times',
-    true
-  );
-  const [displayTimes, setDisplayTimes] = useLocalStorage<boolean>(
-    'song-options-display-times',
-    true
-  );
-  const [displayStrummingPattern, setDisplayStrummingPattern] = useLocalStorage<boolean>(
-    'song-options-display-strumming-pattern',
-    true
-  );
-
-  useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}chords/index.json`)
-      .then(res => res.json())
-      .then(data => setChordsIndex(data.index as TChordsIndex))
-      .catch(() => setChordsIndex({}));
-  }, [setChordsIndex, setAppTheme]);
-
-  useEffect(() => {
-    const ids = ['dynamic-1', 'dynamic-2', 'dynamic-3', 'dynamic-4'];
-    for (const id of ids) {
-      const link = document.getElementById(id) as HTMLLinkElement;
-      if (link) {
-        link.href = appLogoURL;
-      }
-    }
-  }, [appLogoURL]);
-
-  const appStateValue: TAppState = useMemo(
-    () => ({
-      chordsIndex,
-
-      appTheme,
-      setAppTheme,
-      appLogoURL,
-      setAppLogoURL,
-
-      songSettings: {
-        display: {
-          times: {
-            value: displayTimes,
-            set: setDisplayTimes,
-          },
-          chordTimes: {
-            value: displayChordTimes,
-            set: setDisplayChordTimes,
-          },
-          strummingPattern: {
-            value: displayStrummingPattern,
-            set: setDisplayStrummingPattern,
-          },
-        },
-      },
-    }),
-    [
-      chordsIndex,
-
-      appTheme,
-      setAppTheme,
-      appLogoURL,
-      setAppLogoURL,
-
-      displayTimes,
-      setDisplayTimes,
-
-      displayChordTimes,
-      displayStrummingPattern,
-
-      setDisplayChordTimes,
-      setDisplayStrummingPattern,
-    ]
-  );
+  const appStateValue = useAppStateValue();
 
   return (
     <ChakraProvider>
-      <AppState.Provider value={appStateValue}>
+      <AppStateContext.Provider value={appStateValue}>
         <Box
           display='flex'
           width='100vw'
@@ -155,7 +65,7 @@ export const App = () => {
             />
           </Routes>
         </Box>
-      </AppState.Provider>
+      </AppStateContext.Provider>
     </ChakraProvider>
   );
 };

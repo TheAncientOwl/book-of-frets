@@ -6,13 +6,14 @@
  *
  * @file ChordsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.20
+ * @version 0.21
  * @description Render song chords pattern.
  */
 
+import type { TChordsChunk } from '@/common/types/song.types';
 import { ChordsChunkItem } from '@/components/SongRenderer/ChordsChunkItem';
-import { useAppStateContext, useAppTheme } from '@/context/AppState';
-import type { TChordsChunk } from '@/types/song.types';
+import { useAppState } from '@/state/hooks/useAppState';
+import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { Box, Divider, Tag, Tooltip, type DividerProps } from '@chakra-ui/react';
 import { Fragment } from 'react';
 
@@ -36,7 +37,7 @@ const getDividerHeight = (displayChordTimes: boolean, displayStrummingPattern: b
 
 const ChordsChunkDivider = (props: DividerProps & TChordsChunk) => {
   const { song: theme } = useAppTheme();
-  const { songSettings } = useAppStateContext();
+  const { songSettings } = useAppState();
 
   return (
     <Divider
@@ -60,7 +61,7 @@ const ChordsChunkDivider = (props: DividerProps & TChordsChunk) => {
 
 export const ChordsChunk = (props: TChordsChunkProps) => {
   const { song: theme } = useAppTheme();
-  const { songSettings } = useAppStateContext();
+  const { songSettings } = useAppState();
 
   return (
     <Box

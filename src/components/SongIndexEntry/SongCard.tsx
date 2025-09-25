@@ -6,12 +6,13 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.15
+ * @version 0.16
  * @description List all available songs.
  */
 
-import { useAppStateContext, useAppTheme } from '@/context/AppState';
-import type { TSongsIndexEntry } from '@/types/song.types';
+import type { TSongsIndexEntry } from '@/common/types/song.types';
+import { useAppState } from '@/state/hooks/useAppState';
+import { useAppTheme } from '@/state/hooks/useAppTheme';
 import {
   Box,
   Flex,
@@ -46,7 +47,7 @@ export const SongCard = (props: SongProps) => {
   const { songCard: theme } = useAppTheme();
 
   const navigate = useNavigate();
-  const { chordsIndex } = useAppStateContext();
+  const { chordsIndex } = useAppState();
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   return (

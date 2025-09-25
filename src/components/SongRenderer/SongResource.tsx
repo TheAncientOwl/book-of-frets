@@ -6,12 +6,12 @@
  *
  * @file SongResource.tsx
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description Display song resource data.
  */
 
-import { useAppTheme } from '@/context/AppState';
-import type { TResource } from '@/types/song.types';
+import type { TResource } from '@/common/types/song.types';
+import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { AspectRatio, Box, Flex, Icon, Link, ListItem, Skeleton, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import { IoMdMusicalNote } from 'react-icons/io';

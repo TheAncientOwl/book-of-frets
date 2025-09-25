@@ -6,13 +6,13 @@
  *
  * @file SongSegments.tsx
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description Render song segments data.
  */
 
+import type { TSongSegment } from '@/common/types/song.types';
 import { SongSegmentBody, SongSegmentHeading } from '@/components/SongRenderer/SongSegment';
-import { useAppTheme } from '@/context/AppState';
-import type { TSongSegment } from '@/types/song.types';
+import { useAppTheme } from '@/state/hooks/useAppTheme';
 import {
   Accordion,
   AccordionButton,

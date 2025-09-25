@@ -6,7 +6,7 @@
  *
  * @file main.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description React entry point.
  */
 
@@ -14,7 +14,6 @@ import { App } from '@/App.tsx';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
-import './index.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

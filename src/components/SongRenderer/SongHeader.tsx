@@ -6,12 +6,12 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description Render song header data.
  */
 
-import { useAppTheme } from '@/context/AppState';
-import type { TSong } from '@/types/song.types';
+import type { TSong } from '@/common/types/song.types';
+import { useAppTheme } from '@/state/hooks/useAppTheme';
 import {
   Box,
   Circle,

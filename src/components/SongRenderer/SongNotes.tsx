@@ -6,12 +6,12 @@
  *
  * @file SongNotes.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Song notes.
  */
 
-import { useAppTheme } from '@/context/AppState';
-import type { TSong } from '@/types/song.types';
+import type { TSong } from '@/common/types/song.types';
+import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { Box, Divider, Flex, Heading, Icon, List, Text } from '@chakra-ui/react';
 import { Fragment } from 'react';
 import { RiQuillPenAiFill } from 'react-icons/ri';

@@ -4,10 +4,10 @@
 # -----------------------------------------------------------------------------
 # @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
 #
-# @file run.sh
+# @file install_deps.sh
 # @author Alexandru Delegeanu
 # @version 0.1
-# @description Runs @see jpegify.py
+# @description Install dependencies for jpegify tool
 #
 
 if [ -z "$BOOK_OF_FRETS_ROOT" ]; then
@@ -15,14 +15,16 @@ if [ -z "$BOOK_OF_FRETS_ROOT" ]; then
   exit 1
 fi
 
-home=$BOOK_OF_FRETS_ROOT/tools/jpegify
+home=$BOOK_OF_FRETS_ROOT/project/tools/jpegify
 
-if [ ! -d "$home/.venv" ]; then
-    $home/install_deps.sh
+cd $home
+
+if [ ! -d ".venv" ]; then
+  python3 -m venv "$home/.venv"
 fi
 
-source $home/.venv/bin/activate
+source "$home/.venv/bin/activate"
 
-python3 $home/jpegify.py "$1"
+pip3 install -r requirements.txt
 
-deactivate
+cd -

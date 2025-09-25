@@ -7,7 +7,7 @@
 # @file run.sh
 # @author Alexandru Delegeanu
 # @version 0.1
-# @description Runs @see webpify.py
+# @description Runs @see jpegify.py
 #
 
 if [ -z "$BOOK_OF_FRETS_ROOT" ]; then
@@ -15,7 +15,7 @@ if [ -z "$BOOK_OF_FRETS_ROOT" ]; then
   exit 1
 fi
 
-home=$BOOK_OF_FRETS_ROOT/tools/webpify
+home=$BOOK_OF_FRETS_ROOT/project/tools/jpegify
 
 if [ ! -d "$home/.venv" ]; then
     $home/install_deps.sh
@@ -23,6 +23,6 @@ fi
 
 source $home/.venv/bin/activate
 
-python3 $home/webpify.py "$1"
+python3 $home/jpegify.py "$1"
 
 deactivate

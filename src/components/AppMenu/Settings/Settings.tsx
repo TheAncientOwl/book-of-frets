@@ -6,14 +6,14 @@
  *
  * @file Settings.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description App settings menu.
  */
 
 import { SongOptions } from '@/components/AppMenu/Settings/SongOptions';
 import { ThemePicker } from '@/components/AppMenu/Settings/ThemePicker';
-import { useAppTheme } from '@/context/AppState';
-import { setDocumentThemeColor } from '@/theme/setDocumentThemeColor';
+import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { setDocumentThemeColor } from '@/state/theme/utils/setDocumentThemeColor';
 import {
   Accordion,
   AccordionButton,

@@ -5,7 +5,7 @@
 ## Usage
 
 ```bash
-$ tools/webpify/run.sh <input_image_path>
+$ ./project/tools/webpify/run.sh <input_image_path>
 ```
 
 ## Notes

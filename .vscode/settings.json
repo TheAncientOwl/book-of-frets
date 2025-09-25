@@ -2,28 +2,29 @@
   "json.schemas": [
     {
       "fileMatch": ["public/songs/*/*.json"],
-      "url": "./src/schemas/song.schema.json"
+      "url": "./project/schemas/song.schema.json"
     },
     {
       "fileMatch": ["public/songs/index.json"],
-      "url": "./src/schemas/songs-index.schema.json"
+      "url": "./project/schemas/songs-index.schema.json"
     },
     {
       "fileMatch": ["public/chords/index.json"],
-      "url": "./src/schemas/chords-index.schema.json"
+      "url": "./project/schemas/chords-index.schema.json"
     },
     {
       "fileMatch": ["public/themes/index.json"],
-      "url": "./src/schemas/themes-index.schema.json"
+      "url": "./project/schemas/themes-index.schema.json"
     },
     {
       "fileMatch": ["public/themes/*/*.json", "src/theme/default.json"],
-      "url": "./src/schemas/theme.schema.json"
+      "url": "./project/schemas/theme.schema.json"
     }
   ],
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifierEnding": "index",
   "material-icon-theme.folders.associations": {
-    "covers": "images"
+    "covers": "images",
+    "state": "context"
   }
 }

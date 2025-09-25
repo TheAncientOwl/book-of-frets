@@ -5,7 +5,7 @@
 ## Usage
 
 ```bash
-$ tools/jpegify/run.sh <input_image_path>
+$ ./project/tools/jpegify/run.sh <input_image_path>
 ```
 
 ## Notes

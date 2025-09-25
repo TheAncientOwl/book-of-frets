@@ -6,16 +6,16 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.25
+ * @version 0.26
  * @description Render song based on given config.
  */
 
+import type { TSong } from '@/common/types/song.types';
 import { SongHeader } from '@/components/SongRenderer/SongHeader';
 import { SongNotes } from '@/components/SongRenderer/SongNotes';
 import { SongResources } from '@/components/SongRenderer/SongResources';
 import { SongSegments } from '@/components/SongRenderer/SongSegments';
-import { useAppTheme } from '@/context/AppState';
-import type { TSong } from '@/types/song.types';
+import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { Container } from '@chakra-ui/react';
 
 type TSongProps = TSong & {

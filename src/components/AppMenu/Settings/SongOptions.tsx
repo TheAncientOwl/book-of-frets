@@ -6,11 +6,12 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Song display options.
  */
 
-import { useAppStateContext, useAppTheme } from '@/context/AppState';
+import { useAppState } from '@/state/hooks/useAppState';
+import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { Checkbox, VStack, type CheckboxProps } from '@chakra-ui/react';
 
 const ThemedCheckbox = (props: CheckboxProps) => {
@@ -40,7 +41,7 @@ const ThemedCheckbox = (props: CheckboxProps) => {
 export const SongOptions = () => {
   const {
     songSettings: { display },
-  } = useAppStateContext();
+  } = useAppState();
 
   return (
     <VStack align='start' spacing={3}>

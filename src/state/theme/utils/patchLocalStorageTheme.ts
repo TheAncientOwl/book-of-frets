@@ -10,7 +10,7 @@
  * @description Patch local storage for theme.
  */
 
-import DefaultAppTheme from '@/theme/default.json';
+import DefaultAppTheme from '@/state/theme/default.json';
 
 /**
  * @brief Recursively deep-merges two objects.

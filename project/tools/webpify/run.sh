@@ -4,10 +4,10 @@
 # -----------------------------------------------------------------------------
 # @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
 #
-# @file install_deps.sh
+# @file run.sh
 # @author Alexandru Delegeanu
 # @version 0.1
-# @description Install dependencies for webpify tool
+# @description Runs @see webpify.py
 #
 
 if [ -z "$BOOK_OF_FRETS_ROOT" ]; then
@@ -15,16 +15,14 @@ if [ -z "$BOOK_OF_FRETS_ROOT" ]; then
   exit 1
 fi
 
-home=$BOOK_OF_FRETS_ROOT/tools/webpify
+home=$BOOK_OF_FRETS_ROOT/project/tools/webpify
 
-cd $home
-
-if [ ! -d ".venv" ]; then
-  python3 -m venv "$home/.venv"
+if [ ! -d "$home/.venv" ]; then
+    $home/install_deps.sh
 fi
 
-source "$home/.venv/bin/activate"
+source $home/.venv/bin/activate
 
-pip3 install -r requirements.txt
+python3 $home/webpify.py "$1"
 
-cd -
+deactivate
