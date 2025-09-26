@@ -6,7 +6,7 @@
  *
  * @file ThemePicker.tsx
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description Display app themes and handles theme setting.
  */
 
@@ -21,7 +21,7 @@ export const ThemePicker = () => {
   const { appMenu } = useAppTheme();
   const theme = appMenu.items.settings.themePicker;
 
-  const { setAppTheme, setAppLogoURL } = useAppState();
+  const { appTheme, appLogoURL } = useAppState();
 
   const [themesIndex, setThemesIndex] = useState<TThemeIndexEntry[]>([]);
 
@@ -38,10 +38,8 @@ export const ThemePicker = () => {
     fetch(`${import.meta.env.BASE_URL}themes/${directory}/config.json`)
       .then(response => response.json())
       .then(data => {
-        if (setAppTheme !== undefined && setAppLogoURL !== undefined) {
-          setAppTheme({ ...DefaultAppTheme, ...(data as TAppTheme) });
-          setAppLogoURL(`${import.meta.env.BASE_URL}themes/${directory}/logo.svg`);
-        }
+        appTheme.set?.({ ...DefaultAppTheme, ...(data as TAppTheme) });
+        appLogoURL.set?.(`${import.meta.env.BASE_URL}themes/${directory}/logo.svg`);
       })
       .catch(error => {
         console.error(`Failed to fetch theme data of file ${directory}`, error);

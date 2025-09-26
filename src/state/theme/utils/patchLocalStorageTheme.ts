@@ -6,10 +6,11 @@
  *
  * @file patchLocalStorageTheme.ts
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Patch local storage for theme.
  */
 
+import { LocalStorageKeys } from '@/state/common/storageKeys';
 import DefaultAppTheme from '@/state/theme/default.json';
 
 /**
@@ -47,7 +48,7 @@ const deepMerge = <T>(base: T, override: Partial<T>): T => {
 };
 
 export const patchLocalStorageTheme = () => {
-  const storedTheme = localStorage.getItem('app-theme');
+  const storedTheme = localStorage.getItem(LocalStorageKeys.appTheme);
   if (storedTheme) {
     try {
       console.info('Patching theme');
@@ -55,7 +56,7 @@ export const patchLocalStorageTheme = () => {
       const merged = deepMerge(DefaultAppTheme, parsed);
       console.info({ before: parsed, after: merged, default: DefaultAppTheme });
 
-      localStorage.setItem('app-theme', JSON.stringify(merged));
+      localStorage.setItem(LocalStorageKeys.appTheme, JSON.stringify(merged));
 
       console.info('Patched theme successfully');
     } catch (err) {

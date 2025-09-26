@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.16
+ * @version 0.17
  * @description App menu component.
  */
 
@@ -88,7 +88,7 @@ export const AppMenu = () => {
         _hover={{ backgroundColor: theme.menuButton.hover }}
       >
         <Image
-          src={appLogoURL}
+          src={appLogoURL.value}
           alt={`Book of Frets theme logo`}
           width='100%'
           height='100%'
@@ -114,7 +114,7 @@ export const AppMenu = () => {
           />
           <DrawerHeader>
             <Flex direction='row' gap='5px'>
-              <Image src={appLogoURL} alt='Book of Frets Logo' maxW='25px' />
+              <Image src={appLogoURL.value} alt='Book of Frets Logo' maxW='25px' />
               <Box
                 as='span'
                 // [*] theme colors

@@ -6,7 +6,7 @@
  *
  * @file useAppTheme.ts
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description use app theme hook.
  */
 
@@ -18,5 +18,5 @@ export const useAppTheme = () => {
   if (!context) {
     throw new Error('useAppTheme must be used within an AppState.Provider');
   }
-  return context.appTheme;
+  return context.appTheme.value;
 };

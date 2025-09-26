@@ -6,42 +6,47 @@
  *
  * @file useAppStateValue.ts
  * @author Alexandru Delegeanu
- * @version 0.1
- * @description .
+ * @version 0.2
+ * @description Main app state hook.
  */
 
-import type { TChordsIndex } from '@/common/types/chord.types';
 import { useLocalStorage } from '@/common/hooks/useLocalStorage';
-import type { TAppState } from '@/state/state.type';
+import type { TChordsIndex } from '@/common/types/chord.types';
+import { LocalStorageKeys, SessionStorageKeys } from '@/state/common/storageKeys';
+import { DefaultAppState, type TAppState } from '@/state/default';
 import DefaultAppTheme from '@/state/theme/default.json';
 import type { TAppTheme } from '@/state/theme/types';
 import { patchLocalStorageTheme } from '@/state/theme/utils/patchLocalStorageTheme';
 import { useEffect, useMemo, useState } from 'react';
 
 export const useAppStateValue = (): TAppState => {
-  if (!sessionStorage.getItem('patched-app-theme')) {
+  if (!sessionStorage.getItem(SessionStorageKeys.patchedAppTheme)) {
     patchLocalStorageTheme();
-    sessionStorage.setItem('patched-app-theme', 'true');
+    sessionStorage.setItem(SessionStorageKeys.patchedAppTheme, 'true');
   }
 
-  const [chordsIndex, setChordsIndex] = useState<TChordsIndex>({});
-  const [appTheme, setAppTheme] = useLocalStorage<TAppTheme>('app-theme', DefaultAppTheme);
+  const [chordsIndex, setChordsIndex] = useState<TChordsIndex>(DefaultAppState.chordsIndex);
+  const [appTheme, setAppTheme] = useLocalStorage<TAppTheme>(
+    LocalStorageKeys.appTheme,
+    DefaultAppTheme
+  );
+
   const [appLogoURL, setAppLogoURL] = useLocalStorage<string>(
-    'app-logo-url',
-    `${import.meta.env.BASE_URL}logo.svg`
+    LocalStorageKeys.appLogoURL,
+    DefaultAppState.appLogoURL.value
   );
 
   const [displayChordTimes, setDisplayChordTimes] = useLocalStorage<boolean>(
-    'song-options-display-chord-times',
-    true
+    LocalStorageKeys.displayChordTimes,
+    DefaultAppState.songSettings.display.chordTimes.value
   );
   const [displayTimes, setDisplayTimes] = useLocalStorage<boolean>(
-    'song-options-display-times',
-    true
+    LocalStorageKeys.displayTimes,
+    DefaultAppState.songSettings.display.times.value
   );
   const [displayStrummingPattern, setDisplayStrummingPattern] = useLocalStorage<boolean>(
-    'song-options-display-strumming-pattern',
-    true
+    LocalStorageKeys.displayStrummingPattern,
+    DefaultAppState.songSettings.display.strummingPattern.value
   );
 
   useEffect(() => {
@@ -62,10 +67,17 @@ export const useAppStateValue = (): TAppState => {
   return useMemo(
     () => ({
       chordsIndex,
-      appTheme,
-      setAppTheme,
-      appLogoURL,
-      setAppLogoURL,
+
+      appTheme: {
+        value: appTheme,
+        set: setAppTheme,
+      },
+
+      appLogoURL: {
+        value: appLogoURL,
+        set: setAppLogoURL,
+      },
+
       songSettings: {
         display: {
           times: { value: displayTimes, set: setDisplayTimes },
