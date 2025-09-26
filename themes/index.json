@@ -16,6 +16,11 @@
       "mainColor": "#181426"
     },
     {
+      "title": "Catpuccin",
+      "directory": "catpuccin",
+      "mainColor": "#585b70"
+    },
+    {
       "title": "Banananana",
       "directory": "banana",
       "mainColor": "#fbec5d"
