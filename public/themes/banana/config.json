@@ -23,7 +23,7 @@
     },
     "copyright": {
       "color": "#6b3e26",
-      "hoverColor": "yellow.100"
+      "hoverColor": "yellow.500"
     },
     "tabs": {
       "title": {
@@ -57,7 +57,7 @@
           "background": "#fbec5d",
           "title": "#6b3e26",
           "item": {
-            "background": "blackAlpha.300",
+            "background": "blackAlpha.200",
             "hoverBackground": "blackAlpha.400",
             "border": "yellow.800",
             "indexColor": "#6b3e26",
@@ -101,10 +101,10 @@
     }
   },
   "songCard": {
-    "background": "blackAlpha.300",
+    "background": "blackAlpha.200",
     "border": "yellow.500",
     "hover": {
-      "background": "blackAlpha.400"
+      "background": "blackAlpha.300"
     },
     "cover": {
       "border": "yellow.500",

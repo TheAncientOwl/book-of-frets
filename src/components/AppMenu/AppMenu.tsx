@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.17
+ * @version 0.18
  * @description App menu component.
  */
 
@@ -45,6 +45,7 @@ const TabHeader = (props: PropsWithChildren) => {
 
   return (
     <Tab
+      fontWeight='bold'
       // [*] theme colors
       color={theme.title.color}
       _selected={{ color: theme.title.selected.color, borderColor: theme.title.selected.border }}
@@ -117,6 +118,7 @@ export const AppMenu = () => {
               <Image src={appLogoURL.value} alt='Book of Frets Logo' maxW='25px' />
               <Box
                 as='span'
+                fontWeight='bold'
                 // [*] theme colors
                 color={theme.drawer.appText}
               >

@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Song display options.
  */
 
@@ -20,6 +20,7 @@ const ThemedCheckbox = (props: CheckboxProps) => {
 
   return (
     <Checkbox
+      fontWeight='bold'
       {...props}
       // [*] theme colors
       color={theme.color}
