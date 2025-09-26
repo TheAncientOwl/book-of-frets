@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.19
+ * @version 0.20
  * @description App menu component.
  */
 
@@ -18,6 +18,7 @@ import { useAppTheme } from '@/state/hooks/useAppTheme';
 import {
   Box,
   Link as ChakraLink,
+  Divider,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -39,6 +40,7 @@ import {
 import { useRef, type PropsWithChildren } from 'react';
 import { MdCopyright } from 'react-icons/md';
 import { SessionStorageKeys } from '@/state/common/storageKeys';
+import { SongsHistory } from '@/components/AppMenu/Navigation/SongsHistory';
 
 const TabHeader = (props: PropsWithChildren) => {
   const { appMenu } = useAppTheme();
@@ -56,7 +58,6 @@ const TabHeader = (props: PropsWithChildren) => {
   );
 };
 
-// TODO: Implement songs history
 export const AppMenu = () => {
   const { appMenu: theme } = useAppTheme();
   const { appLogoURL } = useAppState();
@@ -144,6 +145,13 @@ export const AppMenu = () => {
               <TabPanels>
                 <TabPanel>
                   <NavigationList onItemClick={onClose} />
+                  <Divider
+                    mt='1em'
+                    mb='1em'
+                    // [*] theme colors
+                    borderColor={theme.items.navigation.routeLink}
+                  />
+                  <SongsHistory onItemClick={onClose} />
                 </TabPanel>
 
                 <TabPanel>

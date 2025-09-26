@@ -6,11 +6,13 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.16
+ * @version 0.17
  * @description List all available songs.
  */
 
 import type { TSongsIndexEntry } from '@/common/types/song.types';
+import { addSongHistoryEntry } from '@/state/common/addSongHistoryEntry';
+import type { TSongHistoryEntry } from '@/state/default';
 import { useAppState } from '@/state/hooks/useAppState';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
 import {
@@ -47,7 +49,7 @@ export const SongCard = (props: SongProps) => {
   const { songCard: theme } = useAppTheme();
 
   const navigate = useNavigate();
-  const { chordsIndex } = useAppState();
+  const { chordsIndex, songsHistory } = useAppState();
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   return (
@@ -59,7 +61,20 @@ export const SongCard = (props: SongProps) => {
       borderWidth='1px'
       padding={['8px']}
       position='relative'
-      onClick={() => navigate(`/${props.directory}`)}
+      onClick={() => {
+        songsHistory.set?.(
+          addSongHistoryEntry(
+            {
+              title: props.title,
+              artists: props.artists,
+              directory: props.directory,
+            } as TSongHistoryEntry,
+            songsHistory.value
+          )
+        );
+
+        navigate(`/${props.directory}`);
+      }}
       // [*] theme colors
       backgroundColor={theme.background}
       borderColor={theme.border}

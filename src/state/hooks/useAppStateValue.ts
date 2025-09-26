@@ -6,14 +6,14 @@
  *
  * @file useAppStateValue.ts
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Main app state hook.
  */
 
 import { useLocalStorage } from '@/common/hooks/useLocalStorage';
 import type { TChordsIndex } from '@/common/types/chord.types';
 import { LocalStorageKeys, SessionStorageKeys } from '@/state/common/storageKeys';
-import { DefaultAppState, type TAppState } from '@/state/default';
+import { DefaultAppState, type TAppState, type TSongHistoryEntry } from '@/state/default';
 import DefaultAppTheme from '@/state/theme/default.json';
 import type { TAppTheme } from '@/state/theme/types';
 import { patchLocalStorageTheme } from '@/state/theme/utils/patchLocalStorageTheme';
@@ -47,6 +47,11 @@ export const useAppStateValue = (): TAppState => {
   const [displayStrummingPattern, setDisplayStrummingPattern] = useLocalStorage<boolean>(
     LocalStorageKeys.displayStrummingPattern,
     DefaultAppState.songSettings.display.strummingPattern.value
+  );
+
+  const [songsHistory, setSongsHistory] = useLocalStorage<TSongHistoryEntry[]>(
+    LocalStorageKeys.songsHistory,
+    DefaultAppState.songsHistory.value
   );
 
   useEffect(() => {
@@ -85,6 +90,11 @@ export const useAppStateValue = (): TAppState => {
           strummingPattern: { value: displayStrummingPattern, set: setDisplayStrummingPattern },
         },
       },
+
+      songsHistory: {
+        value: songsHistory,
+        set: setSongsHistory,
+      },
     }),
     [
       chordsIndex,
@@ -98,6 +108,8 @@ export const useAppStateValue = (): TAppState => {
       setDisplayChordTimes,
       displayStrummingPattern,
       setDisplayStrummingPattern,
+      songsHistory,
+      setSongsHistory,
     ]
   );
 };
