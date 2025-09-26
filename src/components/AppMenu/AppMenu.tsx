@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.18
+ * @version 0.19
  * @description App menu component.
  */
 
@@ -38,6 +38,7 @@ import {
 } from '@chakra-ui/react';
 import { useRef, type PropsWithChildren } from 'react';
 import { MdCopyright } from 'react-icons/md';
+import { SessionStorageKeys } from '@/state/common/storageKeys';
 
 const TabHeader = (props: PropsWithChildren) => {
   const { appMenu } = useAppTheme();
@@ -59,7 +60,7 @@ const TabHeader = (props: PropsWithChildren) => {
 export const AppMenu = () => {
   const { appMenu: theme } = useAppTheme();
   const { appLogoURL } = useAppState();
-  const [activeTab, setActiveTab] = useSessionStorage<number>('menu-active-tab', 0);
+  const [activeTab, setActiveTab] = useSessionStorage<number>(SessionStorageKeys.menuActiveTab, 0);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 

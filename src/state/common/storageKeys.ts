@@ -6,7 +6,7 @@
  *
  * @file storageKeys.ts
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description House of all local/session storage keys.
  */
 
@@ -20,4 +20,5 @@ export const LocalStorageKeys = {
 
 export const SessionStorageKeys = {
   patchedAppTheme: 'patched-app-theme',
+  menuActiveTab: 'menu-active-tab',
 };
