@@ -1,0 +1,11 @@
+import{j as r,B as m,Z as h,_ as f,$ as S,s as C}from"./chakra-DI_L6RO5.js";import{r as a}from"./react-Cp0hs61s.js";import{A as g,L}from"./react-virtualized-Dik8BRzx.js";import{F as j}from"./index-6SX0mSZw.js";const w=t=>{const{data:e}=t.useContext(),s=t.as?t.as:a.Fragment,[n,o]=a.useState(null),i=a.useRef(null);return a.useEffect(()=>{i.current&&o(i.current.getBoundingClientRect().height)},[e]),t.virtualized?n?r.jsx(g,{children:({height:u,width:c})=>r.jsx(L,{height:u,width:c,rowCount:e.length,rowHeight:n,rowRenderer:({index:l,key:d,style:x})=>r.jsx(m,{"aria-label":`item-${l}`,style:x,children:t.render(e[l],l)},d)})}):r.jsx(m,{ref:i,style:{position:"absolute",visibility:"hidden"},children:e[0]!==void 0&&t.render(e[0],0)}):r.jsx(s,{...t.asProps,children:e.map((u,c)=>t.render(u,c))})},v=t=>{const[e,s]=a.useState(""),{useContext:n,...o}=t,{originalData:i,setData:u,resetData:c,getKey:l}=n();return a.useEffect(()=>{if(!e){c();return}const d=i.filter(x=>l(x).toLowerCase().includes(e.toLowerCase()));u(d)},[e,l,u,c,i]),r.jsxs(h,{color:o?.color,children:[r.jsx(f,{...o,"aria-label":"Search items",value:e,onChange:d=>s(d.target.value)}),r.jsx(S,{children:r.jsx(C,{as:j})})]})},R=t=>{const[e,s]=a.useState([]),n=a.useCallback(()=>{s(t.setup.defaultSorted?[...t.setup.data].sort(t.setup.cmp):t.setup.data)},[t.setup.data,t.setup.cmp,t.setup.defaultSorted]);a.useEffect(()=>{n()},[n]);const o=a.useMemo(()=>({originalData:t.setup.data,data:e,setData:s,resetData:n,getKey:t.setup.getKey}),[t.setup.data,e,n,t.setup.getKey]);return r.jsx(t.context.Context,{value:o,children:t.children})};/**
+ * -------------------------------------------------------------------------- *
+ *                     Copyright (c) by OopsieLogsy 2025                      *
+ * -------------------------------------------------------------------------- *
+ * @license https://github.com/TheAncientOwl/oopsie-logsy/blob/main/LICENSE
+ *
+ * @file index.tsx
+ * @author Alexandru Delegeanu
+ * @version 0.3
+ * @description SmartList index file.
+ */const E=()=>{const t=a.createContext(void 0);return{Context:t,use:()=>{const s=a.useContext(t);if(!s)throw new Error("useSmartListContext must be used within a SmartListContext.Provider");return s}}},I=()=>({context:E(),Wrapper:R,Content:w,SearchBar:v});export{I as c};
