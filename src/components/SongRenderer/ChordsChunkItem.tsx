@@ -6,7 +6,7 @@
  *
  * @file ChordsChunkItem.tsx
  * @author Alexandru Delegeanu
- * @version 0.19
+ * @version 0.20
  * @description Render song pattern segment.
  */
 
@@ -49,7 +49,7 @@ export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
 
           return (
             <Box as='span' key={index}>
-              <Popover>
+              <Popover isLazy>
                 <PopoverTrigger>
                   <Tag
                     as='button'

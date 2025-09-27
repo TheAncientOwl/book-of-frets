@@ -6,7 +6,7 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description Render song header data.
  */
 
@@ -118,7 +118,7 @@ export const SongHeader = (props: TSongHeaderProps) => {
         ))}
       </Heading>
 
-      <Popover>
+      <Popover isLazy>
         <PopoverTrigger>
           <Text
             as='button'

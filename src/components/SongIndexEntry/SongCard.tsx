@@ -6,7 +6,7 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.20
+ * @version 0.21
  * @description List all available songs.
  */
 
@@ -204,7 +204,7 @@ export const SongCard = (props: SongProps) => {
       </Box>
 
       <Flex direction='column' justifyContent='center' alignItems='center'>
-        <Popover>
+        <Popover isLazy>
           <PopoverTrigger>
             <Box
               zIndex={2}
