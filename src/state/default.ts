@@ -6,7 +6,7 @@
  *
  * @file default.ts
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Default app state.
  */
 
@@ -42,7 +42,7 @@ const initState = <T>(value: T): TState<T> => ({ value, set: null });
 export const DefaultAppState: TAppState = {
   chordsIndex: {},
   appTheme: initState(DefaultAppTheme),
-  appLogoURL: initState(`${import.meta.env.BASE_URL}book-of-frets.svg`),
+  appLogoURL: initState(`${import.meta.env.BASE_URL}logo.svg`),
   songsHistory: initState([] as TSongHistoryEntry[]),
   songSettings: {
     display: {
