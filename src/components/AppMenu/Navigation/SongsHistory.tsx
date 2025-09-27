@@ -6,7 +6,7 @@
  *
  * @file SongsHistory.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Songs history.
  */
 
@@ -59,9 +59,9 @@ export const SongsHistory = (props: TSongsHistoryProps) => {
         // [*] theme colors
         color={theme.items.navigation.routeLink}
       >
-        {songsHistory.value.map(entry => (
+        {songsHistory.value.map((entry, index) => (
           <ListItem
-            key={entry.directory}
+            key={index}
             onClick={() => {
               songsHistory.set?.(addSongHistoryEntry(entry, songsHistory.value));
               props.onItemClick();
