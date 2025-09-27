@@ -6,7 +6,7 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 0.13
+ * @version 0.14
  * @description App theme types
  */
 
@@ -240,6 +240,11 @@ type TGeneralAppTheme = {
   background: string;
 };
 
+type TScrollbarTheme = {
+  track: string;
+  thumb: string;
+};
+
 export type TAppTheme = {
   name: string;
   homePage: THomePageTheme;
@@ -251,6 +256,7 @@ export type TAppTheme = {
   songCard: TSongCardTheme;
   song: TSongTheme;
   songsIndexPage: TSongsIndexPageTheme;
+  scrollbar: TScrollbarTheme;
 };
 
 export type TThemeIndexEntry = {

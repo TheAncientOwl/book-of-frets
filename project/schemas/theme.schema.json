@@ -497,6 +497,15 @@
         }
       },
       "required": ["background", "searchBar"]
+    },
+    "scrollbar": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "track": { "type": "string" },
+        "thumb": { "type": "string" }
+      },
+      "required": ["track", "thumb"]
     }
   },
   "required": [
@@ -509,6 +518,7 @@
     "fret",
     "songCard",
     "song",
-    "songsIndexPage"
+    "songsIndexPage",
+    "scrollbar"
   ]
 }

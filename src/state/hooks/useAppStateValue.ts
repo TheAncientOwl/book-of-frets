@@ -17,6 +17,7 @@ import { DefaultAppState, type TAppState, type TSongHistoryEntry } from '@/state
 import DefaultAppTheme from '@/state/theme/default.json';
 import type { TAppTheme } from '@/state/theme/types';
 import { patchLocalStorageTheme } from '@/state/theme/utils/patchLocalStorageTheme';
+import { setDocumentScrollbarColors } from '@/state/theme/utils/setDocumentScrollbarColors';
 import { useEffect, useMemo, useState } from 'react';
 
 export const useAppStateValue = (): TAppState => {
@@ -68,6 +69,10 @@ export const useAppStateValue = (): TAppState => {
       if (link) link.href = appLogoURL;
     }
   }, [appLogoURL]);
+
+  useEffect(() => {
+    setDocumentScrollbarColors(appTheme.scrollbar.track, appTheme.scrollbar.thumb);
+  }, [appTheme]);
 
   return useMemo(
     () => ({
