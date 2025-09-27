@@ -223,5 +223,9 @@
       "border": "white",
       "focusBorder": "green.500"
     }
+  },
+  "scrollbar": {
+    "track": "#2B8C44",
+    "thumb": "#226A34"
   }
 }
