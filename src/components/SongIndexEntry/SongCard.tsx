@@ -6,7 +6,7 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.19
+ * @version 0.20
  * @description List all available songs.
  */
 
@@ -44,6 +44,8 @@ const typeToIcon = {
   acoustic: <GiGuitarHead />,
   electric: <GiGuitarBassHead />,
 };
+
+const AboveTheFoldSongsCount = 10;
 
 export const SongCard = (props: SongProps) => {
   const { songCard: theme } = useAppTheme();
@@ -107,6 +109,8 @@ export const SongCard = (props: SongProps) => {
               ${import.meta.env.BASE_URL}songs/${props.directory}/cover-64x64.webp   64w,
               ${import.meta.env.BASE_URL}songs/${props.directory}/cover-128x128.webp 128w,
               ${import.meta.env.BASE_URL}songs/${props.directory}/cover-192x192.webp 192w`}
+            fetchPriority={props.index <= AboveTheFoldSongsCount ? 'high' : 'auto'}
+            loading={props.index <= AboveTheFoldSongsCount ? 'eager' : 'lazy'}
             alt={`${props.title} cover`}
             width='100%'
             height='100%'
