@@ -6,7 +6,7 @@
  *
  * @file SongResource.tsx
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description Display song resource data.
  */
 
@@ -81,7 +81,7 @@ export const SongResource = (props: TSongResourceProps) => {
             <AspectRatio ratio={16 / 9}>
               <Skeleton isLoaded={isLoaded} height='100%' width='100%'>
                 <iframe
-                  src={`https://www.youtube.com/embed/${videoId}`}
+                  src={`https://www.youtube-nocookie.com/embed/${videoId}`}
                   title={props.alias}
                   allow='accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                   allowFullScreen
