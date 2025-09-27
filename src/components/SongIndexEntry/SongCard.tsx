@@ -6,7 +6,7 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.18
+ * @version 0.19
  * @description List all available songs.
  */
 
@@ -31,7 +31,7 @@ import {
   Text,
   Tooltip,
 } from '@chakra-ui/react';
-import { Fragment, useState } from 'react';
+import { Fragment, useState, type MouseEvent } from 'react';
 import { GiGuitarBassHead, GiGuitarHead } from 'react-icons/gi';
 import { TbGuitarPickFilled } from 'react-icons/tb';
 import { useNavigate } from 'react-router-dom';
@@ -203,10 +203,11 @@ export const SongCard = (props: SongProps) => {
         <Popover>
           <PopoverTrigger>
             <Box
-              mr={['10px']}
               zIndex={2}
+              as='button'
               aria-label='More about the song'
-              onClick={e => e.stopPropagation()}
+              onClick={(e: MouseEvent<HTMLButtonElement>) => e.stopPropagation()}
+              mr={['10px']}
               fontSize='20px'
               padding='5px'
               // [*] theme colors

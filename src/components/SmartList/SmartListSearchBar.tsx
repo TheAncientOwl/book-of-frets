@@ -6,7 +6,7 @@
  *
  * @file SmartListSearchBar.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Filter items of SmartList.
  */
 
@@ -39,7 +39,12 @@ export const SmartListSearchBar = <T,>(props: TSmartListSearchBarProps<T>) => {
 
   return (
     <InputGroup color={inputProps?.color}>
-      <Input {...inputProps} value={search} onChange={e => setSearch(e.target.value)} />
+      <Input
+        {...inputProps}
+        aria-label='Search items'
+        value={search}
+        onChange={e => setSearch(e.target.value)}
+      />
       <InputRightElement>
         <Icon as={FaSearch} />
       </InputRightElement>

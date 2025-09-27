@@ -6,7 +6,7 @@
  *
  * @file SmartListContent.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Render filtered, virtualized items of the SmartList.
  */
 
@@ -55,7 +55,7 @@ export const SmartListContent = <T,>(props: TSmartListContentProps<T>) => {
             rowCount={data.length}
             rowHeight={rowHeight}
             rowRenderer={({ index, key, style }) => (
-              <Box aria-details={`item-${index}`} key={key} style={style}>
+              <Box aria-label={`item-${index}`} key={key} style={style}>
                 {props.render(data[index], index)}
               </Box>
             )}
