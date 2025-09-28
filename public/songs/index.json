@@ -1,13 +1,6 @@
 {
   "index": [
     {
-      "title": "Never Gonna Give You Up",
-      "artists": ["Rick Astley"],
-      "directory": "never-gonna-give-you-up",
-      "type": ["acoustic"],
-      "chordIDs": ["Fmaj7", "G", "Em", "Am"]
-    },
-    {
       "title": "Run Away To Mars",
       "artists": ["TALK"],
       "directory": "run-away-to-mars",
@@ -36,11 +29,11 @@
       "chordIDs": ["C", "G", "D", "Em"]
     },
     {
-      "title": "Let Me Love You",
-      "artists": ["DJ Snake", "Justin Bieber"],
-      "directory": "let-me-love-you",
+      "title": "As It Was",
+      "artists": ["Harry Styles"],
+      "directory": "as-it-was",
       "type": ["acoustic"],
-      "chordIDs": ["Am", "C", "Em", "F", "G", "Dm"]
+      "chordIDs": ["Dsus2", "Bm7", "E", "A"]
     },
     {
       "title": "Flowers Need Rain",
@@ -64,13 +57,6 @@
       "chordIDs": ["Em", "C", "G", "D"]
     },
     {
-      "title": "Shivers",
-      "artists": ["Ed Sheeran"],
-      "directory": "shivers",
-      "type": ["acoustic"],
-      "chordIDs": ["Bm", "G", "D", "A"]
-    },
-    {
       "title": "Adore You",
       "artists": ["Harry Styles"],
       "directory": "adore-you",
@@ -78,11 +64,25 @@
       "chordIDs": ["Am7", "C", "Fmaj7", "G"]
     },
     {
-      "title": "As It Was",
-      "artists": ["Harry Styles"],
-      "directory": "as-it-was",
+      "title": "Let Me Love You",
+      "artists": ["DJ Snake", "Justin Bieber"],
+      "directory": "let-me-love-you",
       "type": ["acoustic"],
-      "chordIDs": ["Dsus2", "Bm7", "E", "A"]
+      "chordIDs": ["Am", "C", "Em", "F", "G", "Dm"]
+    },
+    {
+      "title": "Never Gonna Give You Up",
+      "artists": ["Rick Astley"],
+      "directory": "never-gonna-give-you-up",
+      "type": ["acoustic"],
+      "chordIDs": ["Fmaj7", "G", "Em", "Am"]
+    },
+    {
+      "title": "Shivers",
+      "artists": ["Ed Sheeran"],
+      "directory": "shivers",
+      "type": ["acoustic"],
+      "chordIDs": ["Bm", "G", "D", "A"]
     },
     {
       "title": "Just the Two of Us | Lvl 1",
