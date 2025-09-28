@@ -1,0 +1,158 @@
+{
+  "version": "0.1.0",
+  "contributors": ["TheAncientOwl"],
+  "title": "Before You go",
+  "artists": ["Lewis Capaldi"],
+  "type": ["acoustic"],
+  "notes": [],
+  "capo": 3,
+  "chordIDs": ["C", "Am", "Fmaj7", "G"],
+  "songSegments": {
+    "verse-picked-1": {
+      "name": "verse picked 1",
+      "type": "tabs",
+      "times": 1,
+      "chunks": []
+    },
+    "chorus-picked": {
+      "name": "chorus picked",
+      "type": "tabs",
+      "times": 1,
+      "chunks": []
+    },
+    "break": {
+      "name": "chorus picked",
+      "type": "tabs",
+      "times": 1,
+      "chunks": []
+    },
+    "verse-strummed": {
+      "name": "verse strummed",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 2,
+          "items": [
+            {
+              "chordIDs": ["C", "Am", "Fmaj7", "G"],
+              "chordTimes": 4,
+              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "chorus-strummed": {
+      "name": "chorus strummed",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 2,
+          "items": [
+            {
+              "chordIDs": ["C", "G", "Am", "Fmaj7"],
+              "chordTimes": 4,
+              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": ["G"],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "bridge": {
+      "name": "Bridge",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": ["Am", "F", "C", "G"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": ["Am", "F", "G", "G"],
+              "chordTimes": 2,
+              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "final-chorus-1": {
+      "name": "final chorus",
+      "type": "tabs",
+      "times": 1,
+      "chunks": []
+    },
+    "final-chorus-2": {
+      "name": "final chorus 2",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": ["C", "G", "Am"],
+              "chordTimes": 4,
+              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+            },
+            {
+              "chordIDs": ["Fmaj7"],
+              "chordTimes": 3,
+              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "verse-picked-2": {
+      "name": "verse picked 2",
+      "type": "tabs",
+      "times": 1,
+      "chunks": []
+    }
+  },
+  "songSegmentsOrder": [
+    "verse-picked-1",
+    "chorus-picked",
+    "break",
+    "verse-strummed",
+    "chorus-strummed",
+    "bridge",
+    "final-chorus-1",
+    "final-chorus-2",
+    "verse-picked-2"
+  ],
+  "resources": [
+    {
+      "alias": "Before You Go Guitar Tutorial 🎸 Lewis Capaldi Guitar Lesson |Fingerpicking + TAB|",
+      "author": "GuitarZero2Hero ~ YouTube",
+      "link": "https://youtu.be/xynOZh5dLEg"
+    },
+    {
+      "alias": "Before You Go Guitar Cover Lewis Capaldi 🎸|Tabs + Chords|",
+      "author": "GuitarZero2Hero Express ~ YouTube",
+      "link": "https://youtu.be/s949Lv3agb8"
+    }
+  ]
+}

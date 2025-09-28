@@ -57,7 +57,7 @@
         "additionalProperties": false,
         "properties": {
           "name": { "type": "string" },
-          "type": { "type": "string", "enum": ["chords", "strings"] },
+          "type": { "type": "string", "enum": ["chords", "strings", "tabs"] },
           "times": { "type": "number", "default": 1, "minimum": 1 },
           "chunks": {
             "type": "array",
