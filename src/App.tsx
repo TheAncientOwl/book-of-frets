@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.31
+ * @version 0.32
  * @description App component.
  */
 
@@ -32,7 +32,7 @@ export const App = () => {
           display='flex'
           width='100vw'
           height='100dvh'
-          padding={['0em', '0em', '1em', '2em']}
+          padding={['0em', '0em', '0.5em', '0.5em']}
           background={appStateValue.appTheme.value.general.background}
         >
           <AppMenu />
