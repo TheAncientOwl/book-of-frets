@@ -6,7 +6,7 @@
  *
  * @file StringsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.19
+ * @version 0.20
  * @description Render song strings pattern.
  */
 
@@ -49,7 +49,7 @@ const String = (props: TStringProps) => {
         {props.frets.map((fret, index) => {
           if (fret === '-') {
             return (
-              <Box width='1.2em'>
+              <Box key={index} width='1.2em'>
                 <Divider
                   borderWidth='thin'
                   // [*] theme colors
@@ -60,6 +60,7 @@ const String = (props: TStringProps) => {
           } else if (fret === '|') {
             return (
               <Box
+                key={index}
                 // [*] theme colors
                 color={theme.chunks.item.stringsPattern.filler}
               >
@@ -68,7 +69,7 @@ const String = (props: TStringProps) => {
             );
           } else {
             return (
-              <Box width='1.2em'>
+              <Box key={index} width='1.2em'>
                 <Circle
                   key={index}
                   padding='0.6em'
