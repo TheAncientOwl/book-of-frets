@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.4.1",
   "contributors": ["TheAncientOwl"],
   "title": "Seven Nation Army",
   "artists": ["The White Stripes"],
@@ -11,7 +11,7 @@
     "main1": {
       "name": "main 1",
       "type": "strings",
-      "times": 1,
+      "times": 3,
       "chunks": [
         {
           "times": 3,
@@ -81,7 +81,7 @@
     "main3": {
       "name": "main 3",
       "type": "strings",
-      "times": 1,
+      "times": 3,
       "chunks": [
         {
           "times": 1,
@@ -153,7 +153,7 @@
       ]
     }
   },
-  "songSegmentsOrder": ["main1", "main2", "main3", "main3", "main2", "outro"],
+  "songSegmentsOrder": ["main1", "main2", "main3", "main2", "outro"],
   "resources": [
     {
       "alias": "The White Stripes - Seven Nation Army | Riff Tabs | Guitar Lesson/Tutorial | Acoustic Riff: 12",
