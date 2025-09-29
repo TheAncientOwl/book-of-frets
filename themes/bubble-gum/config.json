@@ -65,6 +65,51 @@
             "title": "white"
           }
         }
+      },
+      "tuner": {
+        "divider": "white",
+        "controlButton": {
+          "background": "pink.400",
+          "color": "whiteAlpha.900",
+          "hover": {
+            "background": "pink.500",
+            "color": "white"
+          }
+        },
+        "frequencyDisplay": {
+          "color": "white"
+        },
+        "frequencyProgressIndicator": {
+          "matched": {
+            "background": "blackAlpha.300",
+            "border": "green.500",
+            "color": "green.500"
+          },
+          "tuneUp": {
+            "background": "blackAlpha.300",
+            "border": "pink.300",
+            "color": "pink.300"
+          },
+          "tuneDown": {
+            "background": "blackAlpha.300",
+            "border": "red.500",
+            "color": "red.500"
+          }
+        },
+        "strings": {
+          "active": {
+            "noteColor": "pink.500",
+            "noteBorderColor": "pink.500",
+            "stringColor": "pink.500",
+            "backgroundColor": "blackAlpha.300"
+          },
+          "inactive": {
+            "noteColor": "gray.300",
+            "noteBorderColor": "gray.300",
+            "stringColor": "gray.500",
+            "backgroundColor": "blackAlpha.300"
+          }
+        }
       }
     }
   },
