@@ -6,7 +6,7 @@
  *
  * @file GuitarTuner.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description Main tuner component.
  */
 
@@ -48,6 +48,11 @@ export const GuitarTuner = () => {
   } = useAppTheme();
   const [activeString, setActiveString] = useState<TStringName | null>(null);
 
+  const startTuner = () => {
+    pitchDetector.startTuner();
+    setActiveString('E');
+  };
+
   const stopTuner = () => {
     pitchDetector.stopTuner();
     setActiveString(null);
@@ -61,7 +66,7 @@ export const GuitarTuner = () => {
         <Box>
           <ControlButton
             isRunning={pitchDetector.isRunning}
-            onStart={pitchDetector.startTuner}
+            onStart={startTuner}
             onStop={stopTuner}
           />
         </Box>
