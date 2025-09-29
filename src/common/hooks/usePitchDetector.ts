@@ -6,7 +6,7 @@
  *
  * @file usePitchDetector.ts
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Pitch detector hook.
  */
 
@@ -85,6 +85,7 @@ export const usePitchDetector = (notes: TNotesConfiguration) => {
       setIsRunning(true);
       detectPitch();
     } catch (err) {
+      alert(`[!] Error accessing microphone: ${err}`);
       console.error('Error accessing microphone', err);
     }
   };
