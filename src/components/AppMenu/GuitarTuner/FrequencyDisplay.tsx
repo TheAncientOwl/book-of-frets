@@ -6,11 +6,12 @@
  *
  * @file FrequencyDisplay.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Display current frequency.
  */
 
 import { Box, type BoxProps } from '@chakra-ui/react';
+import { useAppTheme } from '@/state/hooks/useAppTheme';
 
 type TFrequencyDisplayProps = {
   freq: number | null;
@@ -18,12 +19,18 @@ type TFrequencyDisplayProps = {
 };
 
 export const FrequencyDisplay = (props: TFrequencyDisplayProps) => {
+  const {
+    appMenu: {
+      items: { tuner: theme },
+    },
+  } = useAppTheme();
+
   return (
     <Box
       {...props.containerProps}
       fontWeight='bold'
       // [*] theme colors
-      color='white'
+      color={theme.frequencyDisplay.color}
     >
       {props.freq !== null ? `(${props.freq?.toFixed(2)} Hz)` : '(0 Hz)'}
     </Box>

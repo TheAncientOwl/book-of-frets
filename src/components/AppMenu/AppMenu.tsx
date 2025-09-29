@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.20
+ * @version 0.21
  * @description App menu component.
  */
 
@@ -64,7 +64,7 @@ export const AppMenu = () => {
   const { appLogoURL } = useAppState();
   const [activeTab, setActiveTab] = useSessionStorage<number>(SessionStorageKeys.menuActiveTab, 0);
 
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure({ isOpen: true });
 
   const btnRef = useRef(null);
 

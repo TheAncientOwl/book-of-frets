@@ -6,10 +6,11 @@
  *
  * @file ControlButton.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Turn the tuner ON / OFF.
  */
 
+import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { IconButton } from '@chakra-ui/react';
 import { FaPlay, FaStop } from 'react-icons/fa';
 
@@ -20,6 +21,12 @@ type TControlButton = {
 };
 
 export const ControlButton = (props: TControlButton) => {
+  const {
+    appMenu: {
+      items: { tuner: theme },
+    },
+  } = useAppTheme();
+
   return (
     <IconButton
       aria-label='play-pause tuner'
@@ -28,11 +35,11 @@ export const ControlButton = (props: TControlButton) => {
       mb='10px'
       size='lg'
       // [*] theme colors
-      backgroundColor='purple.400'
-      color='whiteAlpha.900'
+      backgroundColor={theme.controlButton.background}
+      color={theme.controlButton.color}
       _hover={{
-        backgroundColor: 'purple.500',
-        color: 'white',
+        backgroundColor: theme.controlButton.hover.background,
+        color: theme.controlButton.hover.color,
       }}
     />
   );

@@ -6,10 +6,11 @@
  *
  * @file Strings.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Strings display for the guitar tuner.
  */
 
+import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { Circle, Divider, Flex, type FlexProps } from '@chakra-ui/react';
 
 export type TStringName = 'E' | 'A' | 'D' | 'G' | 'B' | 'e';
@@ -21,6 +22,14 @@ type TStringProps = {
 };
 
 const String = (props: TStringProps) => {
+  const {
+    appMenu: {
+      items: { tuner: theme },
+    },
+  } = useAppTheme();
+
+  const colors = props.active ? theme.strings.active : theme.strings.inactive;
+
   return (
     <Flex
       direction='column'
@@ -35,9 +44,9 @@ const String = (props: TStringProps) => {
         fontWeight='bold'
         borderWidth='3px'
         // [*] theme colors
-        color={props.active ? 'purple.500' : 'gray.300'}
-        borderColor={props.active ? 'purple.500' : 'gray.300'}
-        backgroundColor='blackAlpha.300'
+        color={colors.noteColor}
+        borderColor={colors.noteBorderColor}
+        backgroundColor={colors.backgroundColor}
       >
         {props.name}
       </Circle>
@@ -47,7 +56,7 @@ const String = (props: TStringProps) => {
         height='125px'
         borderWidth='2px'
         // [*] theme colors
-        borderColor={props.active ? 'purple.500' : 'gray.300'}
+        borderColor={colors.stringColor}
       />
     </Flex>
   );

@@ -6,7 +6,7 @@
  *
  * @file GuitarTuner.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description Main tuner component.
  */
 
@@ -19,6 +19,7 @@ import { ControlButton } from '@/components/AppMenu/GuitarTuner/ControlButton';
 import { FrequencyDisplay } from '@/components/AppMenu/GuitarTuner/FrequencyDisplay';
 import { FrequencyProgressIndicator } from '@/components/AppMenu/GuitarTuner/FrequencyProgressIndicator';
 import { Strings, type TStringName } from '@/components/AppMenu/GuitarTuner/Strings';
+import { useAppTheme } from '@/state/hooks/useAppTheme';
 
 const StandardNotes: TNotesConfiguration = [
   { name: 'E2', freq: 82.41 },
@@ -40,7 +41,11 @@ const StringToNoteIndex = {
 
 export const GuitarTuner = () => {
   const pitchDetector = usePitchDetector(StandardNotes);
-
+  const {
+    appMenu: {
+      items: { tuner: theme },
+    },
+  } = useAppTheme();
   const [activeString, setActiveString] = useState<TStringName | null>(null);
 
   const stopTuner = () => {
@@ -50,7 +55,7 @@ export const GuitarTuner = () => {
 
   return (
     <Box textAlign='center' borderRadius='5px'>
-      <Divider borderColor='white' />
+      <Divider borderColor={theme.divider} />
 
       <Grid gridTemplateColumns={['1fr 1fr']} alignItems='center' padding='0 2rem'>
         <Box>
@@ -74,7 +79,7 @@ export const GuitarTuner = () => {
         </Flex>
       </Grid>
 
-      <Divider borderColor='white' mb='1rem' />
+      <Divider borderColor={theme.divider} mb='1rem' />
 
       <Strings
         activeString={activeString}
@@ -82,7 +87,7 @@ export const GuitarTuner = () => {
         containerProps={{ mb: '1rem' }}
       />
 
-      <Divider borderColor='white' />
+      <Divider borderColor={theme.divider} />
     </Box>
   );
 };
