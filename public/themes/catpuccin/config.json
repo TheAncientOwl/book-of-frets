@@ -65,6 +65,51 @@
             "title": "#a6adc8"
           }
         }
+      },
+      "tuner": {
+        "divider": "#6c7086",
+        "controlButton": {
+          "background": "#7f849c",
+          "color": "#a6e3a1",
+          "hover": {
+            "background": "#6c7086",
+            "color": "#94e2d5"
+          }
+        },
+        "frequencyDisplay": {
+          "color": "#bac2de"
+        },
+        "frequencyProgressIndicator": {
+          "matched": {
+            "background": "blackAlpha.300",
+            "border": "#a6e3a1",
+            "color": "#94e2d5"
+          },
+          "tuneUp": {
+            "background": "blackAlpha.300",
+            "border": "#fab387",
+            "color": "#f9e2af"
+          },
+          "tuneDown": {
+            "background": "blackAlpha.300",
+            "border": "#eba0ac",
+            "color": "#f38ba8"
+          }
+        },
+        "strings": {
+          "active": {
+            "noteColor": "#a6e3a1",
+            "noteBorderColor": "#94e2d5",
+            "stringColor": "#94e2d5",
+            "backgroundColor": "blackAlpha.300"
+          },
+          "inactive": {
+            "noteColor": "#7f849c",
+            "noteBorderColor": "#6c7086",
+            "stringColor": "#6c7086",
+            "backgroundColor": "blackAlpha.300"
+          }
+        }
       }
     }
   },

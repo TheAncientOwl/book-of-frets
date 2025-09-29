@@ -6,7 +6,7 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 0.14
+ * @version 0.15
  * @description App theme types
  */
 
@@ -74,6 +74,51 @@ type TAppMenuTheme = {
           indexColor: string;
           colorBoxBorder: string;
           title: string;
+        };
+      };
+    };
+    tuner: {
+      divider: string;
+      controlButton: {
+        background: string;
+        color: string;
+        hover: {
+          background: string;
+          color: string;
+        };
+      };
+      frequencyDisplay: {
+        color: string;
+      };
+      frequencyProgressIndicator: {
+        matched: {
+          background: string;
+          border: string;
+          color: string;
+        };
+        tuneUp: {
+          background: string;
+          border: string;
+          color: string;
+        };
+        tuneDown: {
+          background: string;
+          border: string;
+          color: string;
+        };
+      };
+      strings: {
+        active: {
+          noteColor: string;
+          noteBorderColor: string;
+          stringColor: string;
+          backgroundColor: string;
+        };
+        inactive: {
+          noteColor: string;
+          noteBorderColor: string;
+          stringColor: string;
+          backgroundColor: string;
         };
       };
     };

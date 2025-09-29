@@ -6,7 +6,7 @@
  *
  * @file ThemePicker.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description Display app themes and handles theme setting.
  */
 
@@ -14,6 +14,7 @@ import { useAppState } from '@/state/hooks/useAppState';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
 import DefaultAppTheme from '@/state/theme/default.json';
 import type { TAppTheme, TThemeIndexEntry } from '@/state/theme/types';
+import { deepMerge } from '@/state/theme/utils/patchLocalStorageTheme';
 import { Box, Flex, Heading, Image } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 
@@ -38,7 +39,7 @@ export const ThemePicker = () => {
     fetch(`${import.meta.env.BASE_URL}themes/${directory}/config.json`)
       .then(response => response.json())
       .then(data => {
-        appTheme.set?.({ ...DefaultAppTheme, ...(data as TAppTheme) });
+        appTheme.set?.(deepMerge(DefaultAppTheme, data as TAppTheme));
         appLogoURL.set?.(`${import.meta.env.BASE_URL}themes/${directory}/logo.svg`);
       })
       .catch(error => {

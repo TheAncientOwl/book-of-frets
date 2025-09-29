@@ -160,9 +160,115 @@
                 }
               },
               "required": ["title", "songOption", "themePicker"]
+            },
+            "tuner": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "divider": { "type": "string" },
+                "controlButton": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "background": { "type": "string" },
+                    "color": { "type": "string" },
+                    "hover": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "background": { "type": "string" },
+                        "color": { "type": "string" }
+                      },
+                      "required": ["background", "color"]
+                    }
+                  },
+                  "required": ["background", "color", "hover"]
+                },
+                "frequencyDisplay": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "color": { "type": "string" }
+                  },
+                  "required": ["color"]
+                },
+                "frequencyProgressIndicator": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "matched": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "background": { "type": "string" },
+                        "border": { "type": "string" },
+                        "color": { "type": "string" }
+                      },
+                      "required": ["background", "border", "color"]
+                    },
+                    "tuneUp": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "background": { "type": "string" },
+                        "border": { "type": "string" },
+                        "color": { "type": "string" }
+                      },
+                      "required": ["background", "border", "color"]
+                    },
+                    "tuneDown": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "background": { "type": "string" },
+                        "border": { "type": "string" },
+                        "color": { "type": "string" }
+                      },
+                      "required": ["background", "border", "color"]
+                    }
+                  },
+                  "required": ["matched", "tuneUp", "tuneDown"]
+                },
+                "strings": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "active": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "noteColor": { "type": "string" },
+                        "noteBorderColor": { "type": "string" },
+                        "stringColor": { "type": "string" },
+                        "backgroundColor": { "type": "string" }
+                      },
+                      "required": ["noteColor", "noteBorderColor", "stringColor", "backgroundColor"]
+                    },
+                    "inactive": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "noteColor": { "type": "string" },
+                        "noteBorderColor": { "type": "string" },
+                        "stringColor": { "type": "string" },
+                        "backgroundColor": { "type": "string" }
+                      },
+                      "required": ["noteColor", "noteBorderColor", "stringColor", "backgroundColor"]
+                    }
+                  },
+                  "required": ["active", "inactive"]
+                }
+              },
+              "required": [
+                "divider",
+                "controlButton",
+                "frequencyDisplay",
+                "frequencyProgressIndicator",
+                "strings"
+              ]
             }
           },
-          "required": ["navigation", "settings"]
+          "required": ["navigation", "settings", "tuner"]
         }
       },
       "required": ["menuButton", "closeButton", "drawer", "copyright", "items", "tabs"]
