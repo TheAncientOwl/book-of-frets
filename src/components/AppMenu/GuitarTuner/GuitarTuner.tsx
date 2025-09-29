@@ -6,15 +6,21 @@
  *
  * @file GuitarTuner.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Main tuner component.
  */
 
-import { Box, Button } from '@chakra-ui/react';
-import { useState, useRef } from 'react';
-import { PitchDetector } from 'pitchy';
+import { useState } from 'react';
+import { FaPlay } from 'react-icons/fa6';
 
-const StandardNotes = [
+import { Box, IconButton } from '@chakra-ui/react';
+
+import { usePitchDetector, type TNotesConfiguration } from '@/common/hooks/usePitchDetector';
+import { Strings, type TStringName } from '@/components/AppMenu/GuitarTuner/Strings';
+import { FaStop } from 'react-icons/fa';
+import { FrequencyProgressIndicator } from '@/components/AppMenu/GuitarTuner/FrequencyProgressIndicator';
+
+const StandardNotes: TNotesConfiguration = [
   { name: 'E2', freq: 82.41 },
   { name: 'A2', freq: 110.0 },
   { name: 'D3', freq: 146.83 },
@@ -23,99 +29,19 @@ const StandardNotes = [
   { name: 'E4', freq: 329.63 },
 ];
 
-const getClosestNote = (freq: number) => {
-  let closest = StandardNotes[0];
-  let minDiff = Math.abs(freq - closest.freq);
-  for (const note of StandardNotes) {
-    const diff = Math.abs(freq - note.freq);
-    if (diff < minDiff) {
-      closest = note;
-      minDiff = diff;
-    }
-  }
-  return closest.name;
+const StringToNoteIndex = {
+  E: 0,
+  A: 1,
+  D: 2,
+  G: 3,
+  B: 4,
+  e: 5,
 };
 
 export const GuitarTuner = () => {
-  const [note, setNote] = useState('-');
-  const [frequency, setFrequency] = useState<number | null>(null);
-  const [isRunning, setIsRunning] = useState(false);
+  const pitchDetector = usePitchDetector(StandardNotes);
 
-  const audioContextRef = useRef<AudioContext | null>(null);
-  const analyserRef = useRef<AnalyserNode | null>(null);
-  const detectorRef = useRef<PitchDetector<Float32Array> | null>(null);
-  const inputRef = useRef<Float32Array<ArrayBuffer> | null>(null);
-  const animationFrameIdRef = useRef<number | null>(null);
-  const mediaStreamRef = useRef<MediaStream | null>(null);
-
-  const detectPitch = () => {
-    if (
-      !audioContextRef.current ||
-      !analyserRef.current ||
-      !detectorRef.current ||
-      !inputRef.current
-    ) {
-      return;
-    }
-    const analyser = analyserRef.current;
-    const detector = detectorRef.current;
-    const input = inputRef.current;
-
-    analyser.getFloatTimeDomainData(input);
-    const [pitch, clarity] = detector.findPitch(input, audioContextRef.current.sampleRate);
-
-    if (pitch && clarity > 0.8) {
-      setFrequency(pitch);
-      setNote(getClosestNote(pitch));
-    }
-
-    animationFrameIdRef.current = requestAnimationFrame(detectPitch);
-  };
-
-  const startTuner = async () => {
-    if (isRunning) return;
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      mediaStreamRef.current = stream;
-      const audioContext = new AudioContext();
-      audioContextRef.current = audioContext;
-      const source = audioContext.createMediaStreamSource(stream);
-      const analyser = audioContext.createAnalyser();
-      analyser.fftSize = 2048;
-      analyserRef.current = analyser;
-      source.connect(analyser);
-      const detector = PitchDetector.forFloat32Array(analyser.fftSize);
-      detectorRef.current = detector;
-      inputRef.current = new Float32Array(analyser.fftSize);
-      setIsRunning(true);
-      detectPitch();
-    } catch (err) {
-      console.error('Error accessing microphone', err);
-    }
-  };
-
-  const stopTuner = () => {
-    if (!isRunning) {
-      return;
-    }
-
-    if (animationFrameIdRef.current !== null) {
-      cancelAnimationFrame(animationFrameIdRef.current);
-    }
-
-    audioContextRef.current?.close();
-    mediaStreamRef.current?.getTracks().forEach(track => track.stop());
-
-    animationFrameIdRef.current = null;
-    audioContextRef.current = null;
-    mediaStreamRef.current = null;
-    analyserRef.current = null;
-    detectorRef.current = null;
-    inputRef.current = null;
-    setIsRunning(false);
-    setNote('-');
-    setFrequency(null);
-  };
+  const [activeString, setActiveString] = useState<TStringName | null>(null);
 
   return (
     <Box
@@ -123,16 +49,29 @@ export const GuitarTuner = () => {
       // [*] theme colors
       color='white'
     >
-      <Box>Note: {note}</Box>
-      <Box>Frequency: {frequency ? `(${frequency.toFixed(2)} Hz)` : ''}</Box>
-      <Box mt={4}>
-        <Button onClick={startTuner} isDisabled={isRunning} mr={2}>
-          Start
-        </Button>
-        <Button onClick={stopTuner} isDisabled={!isRunning}>
-          Stop
-        </Button>
+      <IconButton
+        aria-label='play-pause tuner'
+        icon={pitchDetector.isRunning ? <FaStop /> : <FaPlay />}
+        onClick={pitchDetector.isRunning ? pitchDetector.stopTuner : pitchDetector.startTuner}
+        mb='10px'
+      />
+
+      <Box mb='5px'>
+        {pitchDetector.frequency ? `(${pitchDetector.frequency.toFixed(2)} Hz)` : '(- Hz)'}
       </Box>
+
+      <FrequencyProgressIndicator
+        active={activeString !== null && pitchDetector.isRunning}
+        currentFreq={pitchDetector.frequency || 0}
+        targetFreq={StandardNotes[StringToNoteIndex[activeString || 'E']].freq}
+        threshold={2}
+        boxProps={{ mb: '15px' }}
+      />
+
+      <Strings
+        activeString={activeString}
+        onStringClick={clickedString => setActiveString(clickedString)}
+      />
     </Box>
   );
 };
