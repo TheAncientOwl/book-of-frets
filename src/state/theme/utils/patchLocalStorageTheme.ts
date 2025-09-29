@@ -19,7 +19,7 @@ import DefaultAppTheme from '@/state/theme/default.json';
  * - Nested objects are merged instead of replaced.
  *
  */
-const deepMerge = <T>(base: T, override: Partial<T>): T => {
+export const deepMerge = <T>(base: T, override: Partial<T>): T => {
   const baseRecord = base as unknown as Record<string, unknown>;
   const overrideRecord = override as unknown as Record<string, unknown>;
   const result: Record<string, unknown> = { ...baseRecord };
