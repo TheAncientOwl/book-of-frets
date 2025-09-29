@@ -6,11 +6,11 @@
  *
  * @file Strings.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Strings display for the guitar tuner.
  */
 
-import { Button, Divider, Flex, Heading } from '@chakra-ui/react';
+import { Circle, Divider, Flex, type FlexProps } from '@chakra-ui/react';
 
 export type TStringName = 'E' | 'A' | 'D' | 'G' | 'B' | 'e';
 
@@ -27,42 +27,43 @@ const String = (props: TStringProps) => {
       alignItems='center'
       justifyContent='center'
       position='relative'
-      gap='5px'
+      as='button'
+      onClick={props.onClick}
     >
-      <Heading
-        size='md'
-        position='sticky'
-        left='0'
-        zIndex={5}
-        borderRadius='5px'
-        textAlign='center'
+      <Circle
+        size='10'
+        fontWeight='bold'
+        borderWidth='3px'
+        // [*] theme colors
+        color={props.active ? 'purple.500' : 'gray.300'}
+        borderColor={props.active ? 'purple.500' : 'gray.300'}
+        backgroundColor='blackAlpha.300'
       >
-        <Button
-          rounded='full'
-          size='sm'
-          width='100%'
-          colorScheme={props.active ? 'green' : 'gray'}
-          onClick={props.onClick}
-        >
-          {props.name}
-        </Button>
-      </Heading>
+        {props.name}
+      </Circle>
 
-      <Divider orientation='vertical' height='125px' borderWidth='2px' />
+      <Divider
+        orientation='vertical'
+        height='125px'
+        borderWidth='2px'
+        // [*] theme colors
+        borderColor={props.active ? 'purple.500' : 'gray.300'}
+      />
     </Flex>
   );
 };
 
-type TStringsProps = {
+type TTunerStringsProps = {
   activeString: TStringName | null;
   onStringClick: (clickedString: TStringName) => void;
+  containerProps?: FlexProps;
 };
 
 const StringsOrder: TStringName[] = ['E', 'A', 'D', 'G', 'B', 'e'] as const;
 
-export const Strings = (props: TStringsProps) => {
+export const TunerStrings = (props: TTunerStringsProps) => {
   return (
-    <Flex direction='row' gap='10px' justifyContent='center'>
+    <Flex {...props.containerProps} direction='row' gap='10px' justifyContent='center'>
       {StringsOrder.map((stringName, index) => (
         <String
           key={index}

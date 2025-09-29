@@ -6,19 +6,20 @@
  *
  * @file GuitarTuner.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Main tuner component.
  */
 
 import { useState } from 'react';
 import { FaPlay } from 'react-icons/fa6';
 
-import { Box, IconButton } from '@chakra-ui/react';
+import { Box, Divider, Flex, Grid, IconButton } from '@chakra-ui/react';
 
 import { usePitchDetector, type TNotesConfiguration } from '@/common/hooks/usePitchDetector';
 import { FrequencyProgressIndicator } from '@/components/AppMenu/GuitarTuner/FrequencyProgressIndicator';
-import { Strings, type TStringName } from '@/components/AppMenu/GuitarTuner/Strings';
+import { TunerStrings, type TStringName } from '@/components/AppMenu/GuitarTuner/Strings';
 import { FaStop } from 'react-icons/fa';
+import { FrequencyDisplay } from '@/components/AppMenu/GuitarTuner/FrequencyDisplay';
 
 const StandardNotes: TNotesConfiguration = [
   { name: 'E2', freq: 82.41 },
@@ -51,32 +52,52 @@ export const GuitarTuner = () => {
   return (
     <Box
       textAlign='center'
+      borderRadius='5px'
       // [*] theme colors
       color='white'
     >
-      <IconButton
-        aria-label='play-pause tuner'
-        icon={pitchDetector.isRunning ? <FaStop /> : <FaPlay />}
-        onClick={pitchDetector.isRunning ? stopTuner : pitchDetector.startTuner}
-        mb='10px'
-      />
+      <Divider borderColor='white' />
 
-      <Box mb='5px'>
-        {pitchDetector.frequency ? `(${pitchDetector.frequency.toFixed(2)} Hz)` : '(- Hz)'}
-      </Box>
+      <Grid gridTemplateColumns={['1fr 1fr']} alignItems='center' padding='0 2rem'>
+        <Box>
+          <IconButton
+            aria-label='play-pause tuner'
+            icon={pitchDetector.isRunning ? <FaStop /> : <FaPlay />}
+            onClick={pitchDetector.isRunning ? stopTuner : pitchDetector.startTuner}
+            mb='10px'
+            size='lg'
+            // [*] theme colors
+            backgroundColor='purple.400'
+            color='whiteAlpha.900'
+            _hover={{
+              backgroundColor: 'purple.500',
+              color: 'white',
+            }}
+          />
+        </Box>
 
-      <FrequencyProgressIndicator
-        active={activeString !== null && pitchDetector.isRunning}
-        currentFreq={pitchDetector.frequency || 0}
-        targetFreq={StandardNotes[StringToNoteIndex[activeString || 'E']].freq}
-        threshold={2}
-        boxProps={{ mb: '15px' }}
-      />
+        <Flex direction='column' padding='1rem 0'>
+          <FrequencyDisplay freq={pitchDetector.frequency} containerProps={{ mb: '0.7rem' }} />
 
-      <Strings
+          <FrequencyProgressIndicator
+            active={activeString !== null && pitchDetector.isRunning}
+            currentFreq={pitchDetector.frequency || 0}
+            targetFreq={StandardNotes[StringToNoteIndex[activeString || 'E']].freq}
+            threshold={2}
+            containerProps={{ mb: '1rem' }}
+          />
+        </Flex>
+      </Grid>
+
+      <Divider borderColor='white' mb='1rem' />
+
+      <TunerStrings
         activeString={activeString}
         onStringClick={clickedString => setActiveString(clickedString)}
+        containerProps={{ mb: '1rem' }}
       />
+
+      <Divider borderColor='white' />
     </Box>
   );
 };

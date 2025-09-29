@@ -6,15 +6,15 @@
  *
  * @file FrequencyProgressIndicator.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Display progress until target frequency.
  */
 
-import { Box, Icon, type BoxProps } from '@chakra-ui/react';
+import { Circle, Flex, Icon, type FlexProps } from '@chakra-ui/react';
 import { FaCheck } from 'react-icons/fa';
 
 type TFrequencyProgressIndicatorProps = {
-  boxProps?: BoxProps;
+  containerProps?: FlexProps;
   active: boolean;
   currentFreq: number;
   targetFreq: number;
@@ -29,16 +29,30 @@ export const FrequencyProgressIndicator = (props: TFrequencyProgressIndicatorPro
   const tuneUp = diff > 0;
 
   return (
-    <Box {...props.boxProps} color={matched ? 'green' : tuneUp ? 'cyan' : 'red'}>
-      {props.active ? (
-        matched ? (
-          <Icon as={FaCheck} />
+    <Flex
+      {...props.containerProps}
+      justifyContent='center'
+      // [*] theme colors
+      color={matched ? 'green.500' : tuneUp ? 'purple.300' : 'red.500'}
+    >
+      <Circle
+        size='12'
+        borderWidth='thin'
+        fontWeight='bold'
+        // [*] theme colors
+        backgroundColor='blackAlpha.300'
+        borderColor={matched ? 'green.500' : tuneUp ? 'purple.300' : 'red.500'}
+      >
+        {props.active ? (
+          matched ? (
+            <Icon as={FaCheck} />
+          ) : (
+            `${tuneUp ? '+' : '-'}${diffAbs.toFixed(0)}`
+          )
         ) : (
-          `${tuneUp ? '+' : '-'}${diffAbs.toFixed(0)}`
-        )
-      ) : (
-        '-'
-      )}
-    </Box>
+          '0'
+        )}
+      </Circle>
+    </Flex>
   );
 };
