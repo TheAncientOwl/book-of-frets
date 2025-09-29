@@ -6,7 +6,7 @@
  *
  * @file Strings.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Strings display for the guitar tuner.
  */
 
@@ -53,7 +53,7 @@ const String = (props: TStringProps) => {
   );
 };
 
-type TTunerStringsProps = {
+type TStringsProps = {
   activeString: TStringName | null;
   onStringClick: (clickedString: TStringName) => void;
   containerProps?: FlexProps;
@@ -61,7 +61,7 @@ type TTunerStringsProps = {
 
 const StringsOrder: TStringName[] = ['E', 'A', 'D', 'G', 'B', 'e'] as const;
 
-export const TunerStrings = (props: TTunerStringsProps) => {
+export const Strings = (props: TStringsProps) => {
   return (
     <Flex {...props.containerProps} direction='row' gap='10px' justifyContent='center'>
       {StringsOrder.map((stringName, index) => (

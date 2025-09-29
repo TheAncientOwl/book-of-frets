@@ -6,20 +6,19 @@
  *
  * @file GuitarTuner.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Main tuner component.
  */
 
 import { useState } from 'react';
-import { FaPlay } from 'react-icons/fa6';
 
-import { Box, Divider, Flex, Grid, IconButton } from '@chakra-ui/react';
+import { Box, Divider, Flex, Grid } from '@chakra-ui/react';
 
 import { usePitchDetector, type TNotesConfiguration } from '@/common/hooks/usePitchDetector';
-import { FrequencyProgressIndicator } from '@/components/AppMenu/GuitarTuner/FrequencyProgressIndicator';
-import { TunerStrings, type TStringName } from '@/components/AppMenu/GuitarTuner/Strings';
-import { FaStop } from 'react-icons/fa';
+import { ControlButton } from '@/components/AppMenu/GuitarTuner/ControlButton';
 import { FrequencyDisplay } from '@/components/AppMenu/GuitarTuner/FrequencyDisplay';
+import { FrequencyProgressIndicator } from '@/components/AppMenu/GuitarTuner/FrequencyProgressIndicator';
+import { Strings, type TStringName } from '@/components/AppMenu/GuitarTuner/Strings';
 
 const StandardNotes: TNotesConfiguration = [
   { name: 'E2', freq: 82.41 },
@@ -50,29 +49,15 @@ export const GuitarTuner = () => {
   };
 
   return (
-    <Box
-      textAlign='center'
-      borderRadius='5px'
-      // [*] theme colors
-      color='white'
-    >
+    <Box textAlign='center' borderRadius='5px'>
       <Divider borderColor='white' />
 
       <Grid gridTemplateColumns={['1fr 1fr']} alignItems='center' padding='0 2rem'>
         <Box>
-          <IconButton
-            aria-label='play-pause tuner'
-            icon={pitchDetector.isRunning ? <FaStop /> : <FaPlay />}
-            onClick={pitchDetector.isRunning ? stopTuner : pitchDetector.startTuner}
-            mb='10px'
-            size='lg'
-            // [*] theme colors
-            backgroundColor='purple.400'
-            color='whiteAlpha.900'
-            _hover={{
-              backgroundColor: 'purple.500',
-              color: 'white',
-            }}
+          <ControlButton
+            isRunning={pitchDetector.isRunning}
+            onStart={pitchDetector.startTuner}
+            onStop={stopTuner}
           />
         </Box>
 
@@ -91,7 +76,7 @@ export const GuitarTuner = () => {
 
       <Divider borderColor='white' mb='1rem' />
 
-      <TunerStrings
+      <Strings
         activeString={activeString}
         onStringClick={clickedString => setActiveString(clickedString)}
         containerProps={{ mb: '1rem' }}
