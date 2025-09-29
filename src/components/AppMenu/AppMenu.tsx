@@ -64,7 +64,7 @@ export const AppMenu = () => {
   const { appLogoURL } = useAppState();
   const [activeTab, setActiveTab] = useSessionStorage<number>(SessionStorageKeys.menuActiveTab, 0);
 
-  const { isOpen, onOpen, onClose } = useDisclosure({ isOpen: true });
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const btnRef = useRef(null);
 
