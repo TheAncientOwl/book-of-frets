@@ -67,17 +67,17 @@
         }
       },
       "tuner": {
-        "divider": "whiteAlpha.700",
+        "divider": "#E1B55C",
         "controlButton": {
           "background": "purple.700",
-          "color": "whiteAlpha.700",
+          "color": "#E1B55C",
           "hover": {
             "background": "purple.800",
-            "color": "whiteAlpha.800"
+            "color": "#E1B55C"
           }
         },
         "frequencyDisplay": {
-          "color": "whiteAlpha.700"
+          "color": "#E1B55C"
         },
         "frequencyProgressIndicator": {
           "matched": {
@@ -104,9 +104,9 @@
             "backgroundColor": "blackAlpha.300"
           },
           "inactive": {
-            "noteColor": "gray.500",
-            "noteBorderColor": "gray.500",
-            "stringColor": "gray.500",
+            "noteColor": "#E1B55C",
+            "noteBorderColor": "#E1B55C",
+            "stringColor": "#E1B55C",
             "backgroundColor": "blackAlpha.300"
           }
         }
