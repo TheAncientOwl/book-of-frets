@@ -6,7 +6,7 @@
  *
  * @file GuitarTuner.tsx
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description Main tuner component.
  */
 
@@ -14,11 +14,14 @@ import { useState } from 'react';
 
 import { Box, Divider, Flex, Grid } from '@chakra-ui/react';
 
+import { useLocalStorage } from '@/common/hooks/useLocalStorage';
 import { usePitchDetector, type TNotesConfiguration } from '@/common/hooks/usePitchDetector';
 import { ControlButton } from '@/components/AppMenu/GuitarTuner/ControlButton';
 import { FrequencyDisplay } from '@/components/AppMenu/GuitarTuner/FrequencyDisplay';
 import { FrequencyProgressIndicator } from '@/components/AppMenu/GuitarTuner/FrequencyProgressIndicator';
+import { FrequencyThresholdSlider } from '@/components/AppMenu/GuitarTuner/FrequencyThresholdSlider';
 import { Strings, type TStringName } from '@/components/AppMenu/GuitarTuner/Strings';
+import { LocalStorageKeys } from '@/state/common/storageKeys';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
 
 const StandardNotes: TNotesConfiguration = [
@@ -46,6 +49,7 @@ export const GuitarTuner = () => {
       items: { tuner: theme },
     },
   } = useAppTheme();
+  const [threshold, setThreshold] = useLocalStorage<number>(LocalStorageKeys.tunerThreshold, 2);
   const [activeString, setActiveString] = useState<TStringName | null>(null);
 
   const startTuner = () => {
@@ -78,7 +82,7 @@ export const GuitarTuner = () => {
             active={activeString !== null && pitchDetector.isRunning}
             currentFreq={pitchDetector.frequency || 0}
             targetFreq={StandardNotes[StringToNoteIndex[activeString || 'E']].freq}
-            threshold={2}
+            threshold={threshold}
             containerProps={{ mb: '1rem' }}
           />
         </Flex>
@@ -92,7 +96,9 @@ export const GuitarTuner = () => {
         containerProps={{ mb: '1rem' }}
       />
 
-      <Divider borderColor={theme.divider} />
+      <Divider borderColor={theme.divider} mb='1rem' />
+
+      <FrequencyThresholdSlider threshold={threshold} onThresholdChange={setThreshold} />
     </Box>
   );
 };

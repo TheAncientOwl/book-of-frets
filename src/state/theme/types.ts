@@ -6,7 +6,7 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 0.15
+ * @version 0.16
  * @description App theme types
  */
 
@@ -119,6 +119,18 @@ type TAppMenuTheme = {
           noteBorderColor: string;
           stringColor: string;
           backgroundColor: string;
+        };
+      };
+      thresholdSlider: {
+        color: string;
+        slider: {
+          track: string;
+          filler: string;
+          thumb: string;
+          tooltip: {
+            background: string;
+            color: string;
+          };
         };
       };
     };

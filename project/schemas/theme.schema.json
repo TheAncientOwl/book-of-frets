@@ -257,6 +257,33 @@
                     }
                   },
                   "required": ["active", "inactive"]
+                },
+                "thresholdSlider": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "color": { "type": "string" },
+                    "slider": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "track": { "type": "string" },
+                        "filler": { "type": "string" },
+                        "thumb": { "type": "string" },
+                        "tooltip": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "background": { "type": "string" },
+                            "color": { "type": "string" }
+                          },
+                          "required": ["background", "color"]
+                        }
+                      },
+                      "required": ["track", "filler", "thumb", "tooltip"]
+                    }
+                  },
+                  "required": ["color", "slider"]
                 }
               },
               "required": [
@@ -264,7 +291,8 @@
                 "controlButton",
                 "frequencyDisplay",
                 "frequencyProgressIndicator",
-                "strings"
+                "strings",
+                "thresholdSlider"
               ]
             }
           },
