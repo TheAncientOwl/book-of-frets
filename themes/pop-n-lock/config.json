@@ -109,6 +109,18 @@
             "stringColor": "#E1B55C",
             "backgroundColor": "blackAlpha.300"
           }
+        },
+        "thresholdSlider": {
+          "color": "#E1B55C",
+          "slider": {
+            "track": "#E1B55C",
+            "filler": "purple.500",
+            "thumb": "purple.600",
+            "tooltip": {
+              "background": "purple.500",
+              "color": "#E1B55C"
+            }
+          }
         }
       }
     }

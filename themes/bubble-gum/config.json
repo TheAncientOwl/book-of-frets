@@ -109,6 +109,18 @@
             "stringColor": "gray.500",
             "backgroundColor": "blackAlpha.300"
           }
+        },
+        "thresholdSlider": {
+          "color": "white",
+          "slider": {
+            "track": "white",
+            "filler": "pink.400",
+            "thumb": "pink.600",
+            "tooltip": {
+              "background": "pink.500",
+              "color": "white"
+            }
+          }
         }
       }
     }
