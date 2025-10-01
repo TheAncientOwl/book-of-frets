@@ -6,7 +6,7 @@
  *
  * @file song.types.ts
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 0.12
  * @description Song types for json mapping.
  */
 
@@ -50,6 +50,7 @@ export type TSong = {
   title: string;
   artists: string[];
   capo: number;
+  chordIDs: string[];
   songSegments: Record<string, TSongSegment>;
   songSegmentsOrder: string[];
   resources: TResource[];
