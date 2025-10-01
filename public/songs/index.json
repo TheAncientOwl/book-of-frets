@@ -78,6 +78,13 @@
       "chordIDs": ["Fmaj7", "G", "Em", "Am"]
     },
     {
+      "title": "Viva La Vida",
+      "artists": ["Coldplay"],
+      "directory": "viva-la-vida",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "D", "G", "Em"]
+    },
+    {
       "title": "Shivers",
       "artists": ["Ed Sheeran"],
       "directory": "shivers",
