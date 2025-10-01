@@ -6,7 +6,7 @@
  *
  * @file SongSegments.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description Render song segments data.
  */
 
@@ -14,7 +14,6 @@ import type { TSongSegment } from '@/common/types/song.types';
 import { SongSegmentBody, SongSegmentHeading } from '@/components/SongRenderer/SongSegment';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
 import {
-  Accordion,
   AccordionButton,
   AccordionIcon,
   AccordionItem,
@@ -31,14 +30,7 @@ export const SongSegments = (props: TSongSegmentsProps) => {
   const { song: theme } = useAppTheme();
 
   return (
-    <Accordion
-      allowMultiple
-      padding='1.5em 1em'
-      borderRadius='1rem'
-      defaultIndex={props.songSegmentsOrder.map((_, i) => i)}
-      // [*] theme colors
-      backgroundColor={theme.chunks.background}
-    >
+    <>
       {props.songSegmentsOrder.map((songSegmentName, index) => {
         const songSegmentData = props.songSegments[songSegmentName];
         console.assert(
@@ -60,6 +52,7 @@ export const SongSegments = (props: TSongSegmentsProps) => {
               pt={['10px', '15px']}
               pb={['10px', '15px']}
               mb={['0px', '5px']}
+              // [*] theme colors
               backgroundColor='blackAlpha.100'
               _hover={{ backgroundColor: 'blackAlpha.100' }}
             >
@@ -72,7 +65,10 @@ export const SongSegments = (props: TSongSegmentsProps) => {
               >
                 <SongSegmentHeading {...songSegmentData} />
               </Box>
-              <AccordionIcon color={theme.chunks.item.title} />
+              <AccordionIcon
+                // [*] theme colors
+                color={theme.chunks.item.title}
+              />
             </AccordionButton>
             <AccordionPanel>
               <SongSegmentBody {...songSegmentData} />
@@ -80,6 +76,6 @@ export const SongSegments = (props: TSongSegmentsProps) => {
           </AccordionItem>
         );
       })}
-    </Accordion>
+    </>
   );
 };

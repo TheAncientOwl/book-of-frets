@@ -6,17 +6,18 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.26
+ * @version 0.27
  * @description Render song based on given config.
  */
 
 import type { TSong } from '@/common/types/song.types';
+import { SongChordsList } from '@/components/SongRenderer/SongChordsList';
 import { SongHeader } from '@/components/SongRenderer/SongHeader';
 import { SongNotes } from '@/components/SongRenderer/SongNotes';
 import { SongResources } from '@/components/SongRenderer/SongResources';
 import { SongSegments } from '@/components/SongRenderer/SongSegments';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
-import { Container } from '@chakra-ui/react';
+import { Accordion, Container } from '@chakra-ui/react';
 
 type TSongProps = TSong & {
   directory: string;
@@ -28,7 +29,7 @@ export const Song = (props: TSongProps) => {
   return (
     <Container
       maxW={['100vw', '5xl']}
-      padding={['25px 10px', '2em 1em']}
+      padding={['25px 0px', '2em 1em']}
       borderRadius={['0em', '0.5em']}
       height='100%'
       overflowY='scroll'
@@ -44,7 +45,21 @@ export const Song = (props: TSongProps) => {
         contributors={props.contributors}
       />
 
-      <SongSegments songSegments={props.songSegments} songSegmentsOrder={props.songSegmentsOrder} />
+      <Accordion
+        allowMultiple
+        padding={['1.5em 0em', '1.5em 1em']}
+        borderRadius='1rem'
+        defaultIndex={[0, ...props.songSegmentsOrder.map((_, i) => i + 1)]}
+        // [*] theme colors
+        backgroundColor={theme.chunks.background}
+      >
+        <SongChordsList chordIDs={props.chordIDs} />
+
+        <SongSegments
+          songSegments={props.songSegments}
+          songSegmentsOrder={props.songSegmentsOrder}
+        />
+      </Accordion>
 
       <SongNotes notes={props.notes} />
 
