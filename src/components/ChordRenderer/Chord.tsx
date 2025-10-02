@@ -6,25 +6,23 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 0.16
+ * @version 0.17
  * @description Render chrod based on given config.
  */
 
-import type { TFret } from '@/common/types/chord.types';
+import type { TChord } from '@/common/types/chord.types';
 import type { TGuitarString } from '@/common/types/common.types';
 import { Fret } from '@/components/ChordRenderer/Fret';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
-import { Box, Divider, Heading, type BoxProps } from '@chakra-ui/react';
+import { Box, Circle, Divider, Heading, type BoxProps } from '@chakra-ui/react';
 import { Fragment } from 'react';
 
-type TChordProps = {
-  name: string;
-  frets: TFret[];
+type TChordProps = TChord & {
   containerProps?: BoxProps;
 };
 
 export const Chord = (props: TChordProps) => {
-  const { chord: theme } = useAppTheme();
+  const { chord: theme, fret: fretTheme } = useAppTheme();
 
   return (
     <Box
@@ -42,7 +40,7 @@ export const Chord = (props: TChordProps) => {
       borderColor={theme.border}
     >
       <Heading
-        // size='xl'
+        position='relative'
         fontSize='2.3em'
         textAlign='center'
         mb='0.25em'
@@ -50,6 +48,25 @@ export const Chord = (props: TChordProps) => {
         color={theme.title}
       >
         {props.name}
+
+        {props.startFret && (
+          <Circle
+            size='2em'
+            fontSize='0.3em'
+            fontWeight='bold'
+            borderWidth='thin'
+            position='absolute'
+            top='50%'
+            right='-85%'
+            zIndex='1'
+            // [*] theme colors
+            backgroundColor={fretTheme.finger.background}
+            borderColor={fretTheme.finger.border}
+            color={fretTheme.finger.color}
+          >
+            {props.startFret}
+          </Circle>
+        )}
       </Heading>
 
       <Box width='11em'>

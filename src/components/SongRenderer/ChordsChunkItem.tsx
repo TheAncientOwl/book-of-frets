@@ -6,7 +6,7 @@
  *
  * @file ChordsChunkItem.tsx
  * @author Alexandru Delegeanu
- * @version 0.20
+ * @version 0.21
  * @description Render song pattern segment.
  */
 
@@ -81,7 +81,7 @@ export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
                       color={theme.chunks.item.chordsPattern.chord.segment.popover.closeButton}
                     />
                     <Flex justifyContent='center' padding='25px'>
-                      <Chord name={chordConfig.name} frets={chordConfig.frets} />
+                      <Chord {...chordConfig} />
                     </Flex>
                   </PopoverContent>
                 </Portal>

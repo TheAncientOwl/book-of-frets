@@ -6,7 +6,7 @@
  *
  * @file song.types.ts
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Chords types for json mapping.
  */
 
@@ -16,6 +16,7 @@ export type TFret = Partial<Record<TGuitarString, number>>;
 
 export type TChord = {
   name: string;
+  startFret?: number;
   frets: TFret[];
 };
 

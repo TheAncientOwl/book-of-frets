@@ -6,7 +6,7 @@
  *
  * @file ChordsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.18
+ * @version 0.19
  * @description Handle chords rendering.
  */
 
@@ -71,9 +71,7 @@ export const ChordsIndexPage = () => {
             }}
             render={([chordKeyName, chordConfig]) => (
               <Fragment key={chordKeyName}>
-                {chordKeyName !== '-' && (
-                  <Chord key={chordKeyName} name={chordConfig.name} frets={chordConfig.frets} />
-                )}
+                {chordKeyName !== '-' && <Chord key={chordKeyName} {...chordConfig} />}
               </Fragment>
             )}
           />
