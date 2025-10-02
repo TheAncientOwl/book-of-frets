@@ -6,12 +6,12 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.32
+ * @version 0.33
  * @description App component.
  */
 
 import { AppMenu } from '@/components/AppMenu/AppMenu';
-import { HomePage } from '@/pages/HomePage';
+import SongsIndexPage from '@/pages/SongsIndexPage';
 import { AppStateContext } from '@/state/AppStateContext';
 import { useAppStateValue } from '@/state/hooks/useAppStateValue';
 import { Box, ChakraProvider } from '@chakra-ui/react';
@@ -20,7 +20,7 @@ import { Route, Routes } from 'react-router-dom';
 
 const SongPage = lazy(() => import('@/pages/SongPage'));
 const ChordsIndexPage = lazy(() => import('@/pages/ChordsIndexPage'));
-const SongsIndexPage = lazy(() => import('@/pages/SongsIndexPage'));
+const AboutPage = lazy(() => import('@/pages/AboutPage'));
 
 export const App = () => {
   const appStateValue = useAppStateValue();
@@ -38,28 +38,29 @@ export const App = () => {
           <AppMenu />
 
           <Routes>
-            <Route path='/' element={<HomePage />} />
+            <Route path='/' element={<SongsIndexPage />} />
+
             <Route
               path='/:directory'
               element={
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<div>Thinking...</div>}>
                   <SongPage />
                 </Suspense>
               }
             />
             <Route
-              path='/index/chords'
+              path='/chords'
               element={
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<div>Thinking...</div>}>
                   <ChordsIndexPage />
                 </Suspense>
               }
             />
             <Route
-              path='/index/songs'
+              path='/about'
               element={
                 <Suspense fallback={<div>Loading...</div>}>
-                  <SongsIndexPage />
+                  <AboutPage />
                 </Suspense>
               }
             />

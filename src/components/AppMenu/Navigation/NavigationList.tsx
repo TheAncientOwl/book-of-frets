@@ -6,7 +6,7 @@
  *
  * @file NavigationList.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Navigation links.
  */
 
@@ -45,13 +45,13 @@ export const NavigationList = (props: TNavigationListProps) => {
         color={theme.items.navigation.routeLink}
       >
         <ListItem onClick={props.onItemClick}>
-          <Link to={`/`}>Home</Link>
+          <Link to={`/`}>Songs</Link>
         </ListItem>
         <ListItem onClick={props.onItemClick}>
-          <Link to={`/index/songs`}>Songs</Link>
+          <Link to={`/chords`}>Chords</Link>
         </ListItem>
         <ListItem onClick={props.onItemClick}>
-          <Link to={`/index/chords`}>Chords</Link>
+          <Link to={`/about`}>About</Link>
         </ListItem>
       </List>
     </Box>

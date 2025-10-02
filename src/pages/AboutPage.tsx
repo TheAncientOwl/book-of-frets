@@ -4,9 +4,9 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
- * @file HomePage.tsx
+ * @file AboutPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description App homepage.
  */
 
@@ -16,7 +16,7 @@ import { Box, Container, Heading, Link, ListItem, Text, UnorderedList } from '@c
 import { useLayoutEffect } from 'react';
 import { Link as RouteLink } from 'react-router-dom';
 
-export const HomePage = () => {
+export const AboutPage = () => {
   const { general, homePage: theme } = useAppTheme();
 
   useLayoutEffect(() => setDocumentThemeColor(general.background), [general.background]);
@@ -231,3 +231,5 @@ export const HomePage = () => {
     </Container>
   );
 };
+
+export default AboutPage;
