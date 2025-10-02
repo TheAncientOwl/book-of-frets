@@ -78,11 +78,11 @@
       "chordIDs": ["Fmaj7", "G", "Em", "Am"]
     },
     {
-      "title": "Viva La Vida",
+      "title": "Viva La Vida | Easy",
       "artists": ["Coldplay"],
-      "directory": "viva-la-vida",
+      "directory": "viva-la-vida-easy",
       "type": ["acoustic"],
-      "chordIDs": ["C", "D", "G", "Em"]
+      "chordIDs": ["C", "D_3fr", "D", "G", "Em"]
     },
     {
       "title": "Shivers",
