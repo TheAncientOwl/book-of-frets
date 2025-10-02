@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.21
+ * @version 0.22
  * @description App menu component.
  */
 
@@ -138,7 +138,12 @@ export const AppMenu = () => {
               // [*] theme colors
               borderColor={theme.tabs.title.border}
             >
-              <TabList>
+              <TabList
+                position='sticky'
+                top='0'
+                // [*] theme colors
+                backgroundColor={theme.drawer.background}
+              >
                 <TabHeader>Navigation</TabHeader>
                 <TabHeader>Tuner</TabHeader>
                 <TabHeader>Settings</TabHeader>
