@@ -6,17 +6,16 @@
  *
  * @file SongsHistory.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Songs history.
  */
 
-import { addSongHistoryEntry } from '@/state/common/addSongHistoryEntry';
+import type { TSongHistoryEntry } from '@/state/default';
 import { useAppState } from '@/state/hooks/useAppState';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { Box, Heading, IconButton, List, ListItem, Text } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
 import { FaTrashAlt } from 'react-icons/fa';
-import type { TSongHistoryEntry } from '@/state/default';
+import { Link } from 'react-router-dom';
 
 type TSongsHistoryProps = {
   onItemClick: () => void;
@@ -60,13 +59,7 @@ export const SongsHistory = (props: TSongsHistoryProps) => {
         color={theme.items.navigation.routeLink}
       >
         {songsHistory.value.map((entry, index) => (
-          <ListItem
-            key={index}
-            onClick={() => {
-              songsHistory.set?.(addSongHistoryEntry(entry, songsHistory.value));
-              props.onItemClick();
-            }}
-          >
+          <ListItem key={index} onClick={props.onItemClick}>
             <Link to={`/${entry.directory}`}>
               <Text isTruncated maxW='100%'>
                 {entry.title} | {entry.artists.join(', ')}

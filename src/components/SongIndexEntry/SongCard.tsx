@@ -11,8 +11,6 @@
  */
 
 import type { TSongsIndexEntry } from '@/common/types/song.types';
-import { addSongHistoryEntry } from '@/state/common/addSongHistoryEntry';
-import type { TSongHistoryEntry } from '@/state/default';
 import { useAppState } from '@/state/hooks/useAppState';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
 import {
@@ -51,7 +49,7 @@ export const SongCard = (props: SongProps) => {
   const { songCard: theme } = useAppTheme();
 
   const navigate = useNavigate();
-  const { chordsIndex, songsHistory } = useAppState();
+  const { chordsIndex } = useAppState();
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   return (
@@ -64,17 +62,6 @@ export const SongCard = (props: SongProps) => {
       padding={['8px']}
       position='relative'
       onClick={() => {
-        songsHistory.set?.(
-          addSongHistoryEntry(
-            {
-              title: props.title,
-              artists: props.artists,
-              directory: props.directory,
-            } as TSongHistoryEntry,
-            songsHistory.value
-          )
-        );
-
         navigate(`/${props.directory}`);
       }}
       // [*] theme colors

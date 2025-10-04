@@ -12,6 +12,9 @@
 
 import type { TSong } from '@/common/types/song.types';
 import { Song as SongRenderer } from '@/components/SongRenderer/Song';
+import { addSongHistoryEntry } from '@/state/common/addSongHistoryEntry';
+import type { TSongHistoryEntry } from '@/state/default';
+import { useAppState } from '@/state/hooks/useAppState';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { setDocumentThemeColor } from '@/state/theme/utils/setDocumentThemeColor';
 import { useEffect, useLayoutEffect, useState } from 'react';
@@ -20,8 +23,9 @@ import { useParams } from 'react-router-dom';
 export const SongPage = () => {
   const { directory } = useParams();
   const { song: theme } = useAppTheme();
+  const { songsHistory } = useAppState();
 
-  const [songConfig, setSongConfig] = useState<TSong | null>(null);
+  const [songConfig, setSongConfig] = useState<{ data: TSong; directory: string } | null>(null);
 
   useLayoutEffect(() => setDocumentThemeColor(theme.background), [theme.background]);
 
@@ -38,13 +42,30 @@ export const SongPage = () => {
         return response.json();
       })
       .then(data => {
-        if (data) setSongConfig(data);
+        if (data) {
+          setSongConfig({ data, directory: directory! });
+        }
       });
   }, [directory]);
 
+  useEffect(() => {
+    if (!songConfig) return;
+
+    songsHistory.set?.(
+      addSongHistoryEntry(
+        {
+          title: songConfig.data.title,
+          artists: songConfig.data.artists,
+          directory: songConfig.directory,
+        } as TSongHistoryEntry,
+        songsHistory.value
+      )
+    );
+  }, [songConfig, songsHistory]);
+
   if (!songConfig) return <div>Loading song...</div>;
 
-  return <SongRenderer directory={directory || ''} {...songConfig} />;
+  return <SongRenderer directory={songConfig.directory} {...songConfig.data} />;
 };
 
 export default SongPage;
