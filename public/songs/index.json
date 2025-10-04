@@ -141,6 +141,13 @@
       "chordIDs": ["D", "DM7", "D6", "D#dim7", "Em7", "A7", "D7", "G#dim7", "E7", "A", "G", "Gm"]
     },
     {
+      "title": "All I Want For Christmas Is You",
+      "artists": ["Mariah Carey"],
+      "directory": "all-i-want-for-christmas-is-you",
+      "type": ["acoustic"],
+      "chordIDs": ["G", "Em", "C", "D", "G/B", "Cm_3fr", "B7", "D7", "E7", "Am7"]
+    },
+    {
       "title": "The Times They Are A Changin'",
       "artists": ["Bob Dylan"],
       "directory": "the-times-they-are-a-changin",
