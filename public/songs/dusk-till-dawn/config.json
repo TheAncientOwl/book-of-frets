@@ -1,0 +1,198 @@
+{
+  "version": "0.1.0",
+  "contributors": ["TheAncientOwl"],
+  "title": "Dusk Till Dawn",
+  "artists": ["Zayn", "Sia"],
+  "type": ["acoustic"],
+  "notes": [],
+  "capo": 2,
+  "chordIDs": ["Am", "Fmaj7", "C", "G/B", "Em", "C/E"],
+  "songSegments": {
+    "verse/prechorus-intro": {
+      "name": "verse / prechorus",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 3,
+          "items": [
+            {
+              "chordIDs": ["Am", "Fmaj7", "C", "G/B"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": ["Am", "Fmaj7", "C", "G/B"],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "D", "D", "D", "De", "D", "D", "D"]
+            }
+          ]
+        },
+        {
+          "times": 2,
+          "items": [
+            {
+              "chordIDs": ["Am", "Fmaj7", "C", "G/B"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            }
+          ]
+        }
+      ]
+    },
+    "chorus": {
+      "name": "chorus",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": ["Am"],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "-", "-", "-", "D", "-", "D", "U"]
+            }
+          ]
+        },
+        {
+          "times": 4,
+          "items": [
+            {
+              "chordIDs": ["Am", "Fmaj7", "C", "Em"],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "break": {
+      "name": "break",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": ["Am"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            }
+          ]
+        }
+      ]
+    },
+    "verse/prechorus": {
+      "name": "verse / prechorus",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 3,
+          "items": [
+            {
+              "chordIDs": ["Am", "Fmaj7", "C", "G/B"],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "D", "D", "D", "De", "D", "D", "D"]
+            }
+          ]
+        },
+        {
+          "times": 2,
+          "items": [
+            {
+              "chordIDs": ["Am", "Fmaj7", "C", "G/B"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            }
+          ]
+        }
+      ]
+    },
+    "bridge": {
+      "name": "bridge",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": ["Fmaj7"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            },
+            {
+              "chordIDs": ["Fmaj7", "C"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            },
+            {
+              "chordIDs": ["C", "G"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            },
+            {
+              "chordIDs": ["G", "C/E"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": ["Fmaj7"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            },
+            {
+              "chordIDs": ["Fmaj7", "C"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            },
+            {
+              "chordIDs": ["C", "G"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            },
+            {
+              "chordIDs": ["G"],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "songSegmentsOrder": [
+    "verse/prechorus-intro",
+    "chorus",
+    "break",
+    "verse/prechorus",
+    "chorus",
+    "bridge",
+    "chorus"
+  ],
+  "resources": [
+    {
+      "alias": "Dusk Till Dawn Guitar Tutorial - Zayn feat Sia Guitar Lesson 🎸 |Chords + No Capo + Guitar Cover|",
+      "author": "GuitarZero2Hero ~ YouTube",
+      "link": "https://youtu.be/v2AMU6dh0pA"
+    },
+    {
+      "alias": "Dusk Till Dawn Guitar Cover Acoustic - Zayn Feat Sia 🎸 |Tabs + Chords|",
+      "author": "GuitarZero2Hero Express ~ YouTube",
+      "link": "https://youtu.be/qT8s6mvDzxw"
+    }
+  ]
+}

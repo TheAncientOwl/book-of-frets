@@ -64,6 +64,13 @@
       "chordIDs": ["Am7", "C", "Fmaj7", "G"]
     },
     {
+      "title": "Dusk Till Dawn",
+      "artists": ["Zayn", "Sia"],
+      "directory": "dusk-till-dawn",
+      "type": ["acoustic"],
+      "chordIDs": ["Am", "Fmaj7", "C", "G/B", "Em", "C/E"]
+    },
+    {
       "title": "Let Me Love You",
       "artists": ["DJ Snake", "Justin Bieber"],
       "directory": "let-me-love-you",
