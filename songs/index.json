@@ -22,6 +22,13 @@
       "chordIDs": ["C", "Am", "Fmaj7", "G"]
     },
     {
+      "title": "Save Your Tears",
+      "artists": ["The Weekend", "Ariana Grande"],
+      "directory": "save-your-tears",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "Am", "Em", "G"]
+    },
+    {
       "title": "Golden",
       "artists": ["HUNTR/X"],
       "directory": "golden-acoustic-v1",
@@ -34,13 +41,6 @@
       "directory": "as-it-was",
       "type": ["acoustic"],
       "chordIDs": ["Dsus2", "Bm7", "E", "A"]
-    },
-    {
-      "title": "Flowers Need Rain",
-      "artists": ["Preston Pablo"],
-      "directory": "flowers-need-rain",
-      "chordIDs": ["-"],
-      "type": ["acoustic", "electric"]
     },
     {
       "title": "Sweater Weather",
@@ -76,6 +76,13 @@
       "directory": "let-me-love-you",
       "type": ["acoustic"],
       "chordIDs": ["Am", "C", "Em", "F", "G", "Dm"]
+    },
+    {
+      "title": "Flowers Need Rain",
+      "artists": ["Preston Pablo"],
+      "directory": "flowers-need-rain",
+      "chordIDs": ["-"],
+      "type": ["acoustic", "electric"]
     },
     {
       "title": "Never Gonna Give You Up",
