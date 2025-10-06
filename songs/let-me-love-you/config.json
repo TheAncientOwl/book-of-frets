@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "contributors": ["TheAncientOwl"],
   "title": "Let Me Love You",
   "artists": ["DJ Snake", "Justin Bieber"],
@@ -17,12 +17,12 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am", "C"],
+              "chordIDs": [["Am", "C"]],
               "chordTimes": 1,
               "strummingPattern": ["D"]
             },
             {
-              "chordIDs": ["F"],
+              "chordIDs": [["F"]],
               "chordTimes": 2,
               "strummingPattern": ["D"]
             }
@@ -39,7 +39,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am", "C"],
+              "chordIDs": [["Am", "C"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -66,12 +66,12 @@
           "times": 2,
           "items": [
             {
-              "chordIDs": ["Em"],
+              "chordIDs": [["Em"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "-"]
             },
             {
-              "chordIDs": ["F"],
+              "chordIDs": [["F"]],
               "chordTimes": 1,
               "strummingPattern": ["-", "U", "X", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
             }
@@ -88,7 +88,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["F", "Am", "G", "Dm"],
+              "chordIDs": [["F", "Am", "G", "Dm"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -120,7 +120,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am", "C"],
+              "chordIDs": [["Am", "C"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -147,12 +147,12 @@
           "times": 2,
           "items": [
             {
-              "chordIDs": ["Em"],
+              "chordIDs": [["Em"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "-"]
             },
             {
-              "chordIDs": ["F"],
+              "chordIDs": [["F"]],
               "chordTimes": 1,
               "strummingPattern": ["-", "U", "X", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
             }
@@ -169,7 +169,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am", "C"],
+              "chordIDs": [["Am", "C"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -196,12 +196,12 @@
           "times": 2,
           "items": [
             {
-              "chordIDs": ["Em"],
+              "chordIDs": [["Em"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "-"]
             },
             {
-              "chordIDs": ["F"],
+              "chordIDs": [["F"]],
               "chordTimes": 1,
               "strummingPattern": ["-", "U", "X", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
             }

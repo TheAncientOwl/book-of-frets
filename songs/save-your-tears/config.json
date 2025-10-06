@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "Save Your Tears",
   "artists": ["The Weekend", "Ariana Grande"],
@@ -17,7 +17,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["C"],
+              "chordIDs": [["C"]],
               "chordTimes": 4,
               "strummingPattern": [
                 "D",
@@ -51,7 +51,7 @@
           "times": 8,
           "items": [
             {
-              "chordIDs": ["C", "Am", "Em", "G"],
+              "chordIDs": [["C", "Am", "Em", "G"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -85,7 +85,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Dm", "Am", "Fmaj7", "G"],
+              "chordIDs": [["Dm", "Am", "Fmaj7", "G"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -119,12 +119,12 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["C", "Am"],
+              "chordIDs": [["C", "Am"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "D"]
             },
             {
-              "chordIDs": ["Em", "G"],
+              "chordIDs": [["Em", "G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "U", "D", "U", "D", "U", "D", "U"]
             }
@@ -134,18 +134,18 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["C", "Am"],
+              "chordIDs": [["C", "Am"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "D"]
             },
             {
-              "chordIDs": ["Em"],
-              "chordTimes": 4,
+              "chordIDs": [["Em"]],
+              "chordTimes": 1,
               "strummingPattern": ["D", "U", "D", "U", "D", "U", "D", "U"]
             },
             {
-              "chordIDs": ["Em"],
-              "chordTimes": 4,
+              "chordIDs": [["G"]],
+              "chordTimes": 1,
               "strummingPattern": ["D", "U", "D", "U", "D", "-", "-", "-"]
             }
           ]
@@ -161,7 +161,7 @@
           "times": 4,
           "items": [
             {
-              "chordIDs": ["C", "Am", "Em", "G"],
+              "chordIDs": [["C", "Am", "Em", "G"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -195,7 +195,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Dm", "Am", "Fmaj7"],
+              "chordIDs": [["Dm", "Am", "Fmaj7"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -222,7 +222,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["F", "G"],
+              "chordIDs": [["F", "G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "-"]
             }
@@ -232,7 +232,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Dm", "Am", "Fmaj7", "G"],
+              "chordIDs": [["Dm", "Am", "Fmaj7", "G"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -266,7 +266,7 @@
           "times": 2,
           "items": [
             {
-              "chordIDs": ["C", "Am", "Em", "G"],
+              "chordIDs": [["C", "Am", "Em", "G"]],
               "chordTimes": 1,
               "strummingPattern": ["D"]
             }
@@ -283,7 +283,7 @@
           "times": 4,
           "items": [
             {
-              "chordIDs": ["C", "Am", "Em", "G"],
+              "chordIDs": [["C", "Am", "Em", "G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "U", "D", "U", "D", "U", "D", "U"]
             }

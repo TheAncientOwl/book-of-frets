@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "Shivers",
   "artists": ["Ed Sheeran"],
@@ -17,7 +17,7 @@
           "times": 3,
           "items": [
             {
-              "chordIDs": ["Bm", "G", "D", "A"],
+              "chordIDs": [["Bm", "G", "D", "A"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -51,12 +51,12 @@
           "times": 2,
           "items": [
             {
-              "chordIDs": ["Bm", "G", "D"],
+              "chordIDs": [["Bm", "G", "D"]],
               "chordTimes": 2,
               "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
             },
             {
-              "chordIDs": ["A"],
+              "chordIDs": [["A"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
             }
@@ -73,7 +73,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Bm", "G", "D", "A"],
+              "chordIDs": [["Bm", "G", "D", "A"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -100,7 +100,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Bm", "G", "D", "A"],
+              "chordIDs": [["Bm", "G", "D", "A"]],
               "chordTimes": 4,
               "strummingPattern": ["D", "U", "Dx", "U"]
             }
@@ -117,17 +117,17 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Bm"],
+              "chordIDs": [["Bm"]],
               "chordTimes": 1,
               "strummingPattern": ["D"]
             },
             {
-              "chordIDs": ["G", "D"],
+              "chordIDs": [["G", "D"]],
               "chordTimes": 2,
               "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
             },
             {
-              "chordIDs": ["A"],
+              "chordIDs": [["A"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
             }
@@ -137,12 +137,12 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Bm", "G", "D"],
+              "chordIDs": [["Bm", "G", "D"]],
               "chordTimes": 2,
               "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
             },
             {
-              "chordIDs": ["A"],
+              "chordIDs": [["A"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
             }

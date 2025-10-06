@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "Before You go",
   "artists": ["Lewis Capaldi"],
@@ -35,7 +35,7 @@
           "times": 2,
           "items": [
             {
-              "chordIDs": ["C", "Am", "Fmaj7", "G"],
+              "chordIDs": [["C", "Am", "Fmaj7", "G"]],
               "chordTimes": 4,
               "strummingPattern": ["D", "-", "D", "U", "D", "U"]
             }
@@ -52,7 +52,7 @@
           "times": 2,
           "items": [
             {
-              "chordIDs": ["C", "G", "Am", "Fmaj7"],
+              "chordIDs": [["C", "G", "Am", "Fmaj7"]],
               "chordTimes": 4,
               "strummingPattern": ["D", "-", "D", "U", "D", "U"]
             }
@@ -62,7 +62,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["G"],
+              "chordIDs": [["G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "D", "U"]
             }
@@ -79,17 +79,10 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am", "F", "C", "G"],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
-            }
-          ]
-        },
-        {
-          "times": 1,
-          "items": [
-            {
-              "chordIDs": ["Am", "F", "G", "G"],
+              "chordIDs": [
+                ["Am", "F", "C", "G"],
+                ["Am", "F", "G", "G"]
+              ],
               "chordTimes": 2,
               "strummingPattern": ["D", "-", "D", "U", "D", "U"]
             }
@@ -112,12 +105,12 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["C", "G", "Am"],
+              "chordIDs": [["C", "G", "Am"]],
               "chordTimes": 4,
               "strummingPattern": ["D", "-", "D", "U", "D", "U"]
             },
             {
-              "chordIDs": ["Fmaj7"],
+              "chordIDs": [["Fmaj7"]],
               "chordTimes": 3,
               "strummingPattern": ["D", "-", "D", "U", "D", "U"]
             }
