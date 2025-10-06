@@ -1,5 +1,5 @@
 {
-  "version": "0.2.1",
+  "version": "0.3.0",
   "contributors": ["TheAncientOwl"],
   "title": "Never Gonna Give You Up",
   "artists": ["Rick Astley"],
@@ -17,12 +17,12 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Fmaj7"],
+              "chordIDs": [["Fmaj7"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "U", "D"]
             },
             {
-              "chordIDs": ["G"],
+              "chordIDs": [["G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "U", "D", "D", "D", "U"]
             }
@@ -32,12 +32,12 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Em"],
+              "chordIDs": [["Em"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "U", "D"]
             },
             {
-              "chordIDs": ["Am"],
+              "chordIDs": [["Am"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "U", "D", "D", "D", "U"]
             }
@@ -54,7 +54,7 @@
           "times": 4,
           "items": [
             {
-              "chordIDs": ["Fmaj7", "G"],
+              "chordIDs": [["Fmaj7", "G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "U", "D", "-", "D", "-", "U", "D", "D", "D", "U"]
             }
@@ -71,7 +71,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Fmaj7", "G"],
+              "chordIDs": [["Fmaj7", "G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "U", "D", "-", "D", "-", "U", "D", "D", "D", "U"]
             }
@@ -88,12 +88,12 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Fmaj7"],
+              "chordIDs": [["Fmaj7"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "U", "D"]
             },
             {
-              "chordIDs": ["G"],
+              "chordIDs": [["G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "U", "D", "D", "D", "U"]
             }
@@ -103,12 +103,12 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Em"],
+              "chordIDs": [["Em"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "U", "D"]
             },
             {
-              "chordIDs": ["Am"],
+              "chordIDs": [["Am"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "U", "D", "D", "D", "U"]
             }

@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "contributors": ["TheAncientOwl"],
   "title": "Watermelon Sugar",
   "artists": ["Harry Styles"],
@@ -17,7 +17,7 @@
           "times": 404,
           "items": [
             {
-              "chordIDs": ["Dm", "Am", "C", "G"],
+              "chordIDs": [["Dm", "Am", "C", "G"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",

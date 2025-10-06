@@ -6,7 +6,7 @@
  *
  * @file ChordsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.21
+ * @version 0.22
  * @description Render song chords pattern.
  */
 
@@ -19,39 +19,19 @@ import { Fragment } from 'react';
 
 type TChordsChunkProps = TChordsChunk & {};
 
-const getDividerHeight = (displayChordTimes: boolean, displayStrummingPattern: boolean): string => {
-  if (displayChordTimes && displayStrummingPattern) {
-    return '80px';
-  }
-
-  if (displayChordTimes) {
-    return '60px';
-  }
-
-  if (displayStrummingPattern) {
-    return '70px';
-  }
-
-  return '30px';
-};
-
 const ChordsChunkDivider = (props: DividerProps & TChordsChunk) => {
   const { song: theme } = useAppTheme();
-  const { songSettings } = useAppState();
 
   return (
     <Divider
       orientation='vertical'
-      height={[
-        '0px',
-        getDividerHeight(
-          songSettings.display.chordTimes.value,
-          songSettings.display.strummingPattern.value
-        ),
-      ]}
+      height={['0px', 'auto']}
+      width={['70%', '0px']}
       borderWidth='thin'
       mt={['15px', '0px']}
       mb={['15px', '0px']}
+      ml={['auto', '0px']}
+      mr={['auto', '0px']}
       // [*] theme colors
       borderColor={theme.chunks.item.chordsPattern.divider}
       {...props}
@@ -69,10 +49,10 @@ export const ChordsChunk = (props: TChordsChunkProps) => {
       position='relative'
       display={['box', 'flex']}
       gap='1em'
-      alignItems='center'
+      alignItems='stretch'
       justifyContent='center'
     >
-      <ChordsChunkDivider borderStyle={['solid']} {...props} />
+      <ChordsChunkDivider display={['none', 'block']} borderStyle={['solid']} {...props} />
 
       {props.items.map((segment, segmentIndex) => (
         <Fragment key={segmentIndex}>

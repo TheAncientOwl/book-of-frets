@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "contributors": ["TheAncientOwl"],
   "title": "Without You",
   "artists": ["The Kid LAROI"],
@@ -17,7 +17,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["-"],
+              "chordIDs": [["-"]],
               "chordTimes": 1,
               "strummingPattern": ["Dx", "-", "Dx", "-", "Dx", "-", "Dx", "Ux"]
             }
@@ -27,7 +27,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am", "Fmaj7", "C", "G"],
+              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -61,7 +61,7 @@
           "times": 2,
           "items": [
             {
-              "chordIDs": ["Am", "Fmaj7", "C", "G"],
+              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -95,7 +95,7 @@
           "times": 2,
           "items": [
             {
-              "chordIDs": ["Am", "Fmaj7", "C", "G"],
+              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -129,7 +129,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am", "Fmaj7", "C"],
+              "chordIDs": [["Am", "Fmaj7", "C"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -156,7 +156,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["E"],
+              "chordIDs": [["E"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -190,7 +190,7 @@
           "times": 4,
           "items": [
             {
-              "chordIDs": ["Am", "Fmaj7", "C", "G"],
+              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -224,7 +224,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am", "Fmaj7", "C"],
+              "chordIDs": [["Am", "Fmaj7", "C"]],
               "chordTimes": 1,
               "strummingPattern": ["D"]
             }
@@ -234,7 +234,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["G"],
+              "chordIDs": [["G"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -268,7 +268,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am", "Fmaj7", "C"],
+              "chordIDs": [["Am", "Fmaj7", "C"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "D",
@@ -295,7 +295,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["-"],
+              "chordIDs": [["-"]],
               "chordTimes": 1,
               "strummingPattern": [
                 "-",
@@ -329,7 +329,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am", "Fmaj7", "C", "G"],
+              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
               "chordTimes": 1,
               "strummingPattern": ["D"]
             }
