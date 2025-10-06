@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "contributors": ["TheAncientOwl"],
   "title": "Adore You",
   "artists": ["Harry Styles"],
@@ -17,12 +17,10 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am7", "-", "C", "-"],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
-            },
-            {
-              "chordIDs": ["Fmaj7", "-", "-", "G"],
+              "chordIDs": [
+                ["Am7", "-", "C", "-"],
+                ["Fmaj7", "-", "-", "G"]
+              ],
               "chordTimes": 1,
               "strummingPattern": ["D"]
             }
@@ -39,17 +37,10 @@
           "times": 6,
           "items": [
             {
-              "chordIDs": ["Am7", "C"],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
-            },
-            {
-              "chordIDs": ["Fmaj7"],
-              "chordTimes": 3,
-              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
-            },
-            {
-              "chordIDs": ["G"],
+              "chordIDs": [
+                ["Am7", "Am7", "C", "C"],
+                ["Fmaj7", "Fmaj7", "Fmaj7", "G"]
+              ],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
             }
@@ -72,17 +63,10 @@
           "times": 5,
           "items": [
             {
-              "chordIDs": ["Am7", "C"],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
-            },
-            {
-              "chordIDs": ["Fmaj7"],
-              "chordTimes": 3,
-              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
-            },
-            {
-              "chordIDs": ["G"],
+              "chordIDs": [
+                ["Am7", "Am7", "C", "C"],
+                ["Fmaj7", "Fmaj7", "Fmaj7", "G"]
+              ],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
             }
@@ -111,17 +95,10 @@
           "times": 4,
           "items": [
             {
-              "chordIDs": ["Am7", "C"],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
-            },
-            {
-              "chordIDs": ["Fmaj7"],
-              "chordTimes": 3,
-              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
-            },
-            {
-              "chordIDs": ["G"],
+              "chordIDs": [
+                ["Am7", "Am7", "C", "C"],
+                ["Fmaj7", "Fmaj7", "Fmaj7", "G"]
+              ],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
             }

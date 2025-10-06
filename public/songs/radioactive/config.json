@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "contributors": ["TheAncientOwl"],
   "title": "Radioactive",
   "artists": ["Imagine Dragons"],
@@ -17,7 +17,7 @@
           "times": 3,
           "items": [
             {
-              "chordIDs": ["Am", "C", "G", "D"],
+              "chordIDs": [["Am", "C", "G", "D"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
             }
@@ -34,7 +34,7 @@
           "times": 3,
           "items": [
             {
-              "chordIDs": ["Am", "C", "G", "D"],
+              "chordIDs": [["Am", "C", "G", "D"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "U", "D", "U", "D", "-", "D", "U"]
             }

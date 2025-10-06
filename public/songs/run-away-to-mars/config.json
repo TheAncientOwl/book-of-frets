@@ -1,5 +1,5 @@
 {
-  "version": "0.3.1",
+  "version": "0.4.0",
   "contributors": ["TheAncientOwl"],
   "title": "Run Away To Mars",
   "artists": ["TALK"],
@@ -17,7 +17,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["G", "D/F#", "Em7", "Cadd9"],
+              "chordIDs": [["G", "D/F#", "Em7", "Cadd9"]],
               "chordTimes": 2,
               "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
             }
@@ -34,7 +34,7 @@
           "times": 2,
           "items": [
             {
-              "chordIDs": ["G", "D/F#", "Em7", "Cadd9"],
+              "chordIDs": [["G", "D/F#", "Em7", "Cadd9"]],
               "chordTimes": 2,
               "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
             }
@@ -51,7 +51,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am7", "D"],
+              "chordIDs": [["Am7", "D"]],
               "chordTimes": 2,
               "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
             }
@@ -68,22 +68,22 @@
           "times": 4,
           "items": [
             {
-              "chordIDs": ["Em", "C"],
+              "chordIDs": [["Em", "C"]],
               "chordTimes": 2,
               "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
             },
             {
-              "chordIDs": ["G"],
+              "chordIDs": [["G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
             },
             {
-              "chordIDs": ["G"],
+              "chordIDs": [["G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D"]
             },
             {
-              "chordIDs": ["D/F#"],
+              "chordIDs": [["D/F#"]],
               "chordTimes": 2,
               "strummingPattern": ["D", "U", "D", "U"]
             }
@@ -100,7 +100,7 @@
           "times": 2,
           "items": [
             {
-              "chordIDs": ["Am7", "Dsus4", "D"],
+              "chordIDs": [["Am7", "Dsus4", "D"]],
               "chordTimes": 2,
               "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
             }
@@ -117,17 +117,10 @@
           "times": 3,
           "items": [
             {
-              "chordIDs": ["Em", "C", "G"],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
-            }
-          ]
-        },
-        {
-          "times": 1,
-          "items": [
-            {
-              "chordIDs": ["D/F#", "Em", "C", "G"],
+              "chordIDs": [
+                ["Em", "C", "G"],
+                ["D/F#", "Em", "C", "G"]
+              ],
               "chordTimes": 1,
               "strummingPattern": ["D"]
             }

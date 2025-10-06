@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "contributors": ["TheAncientOwl"],
   "title": "Nice to Meet You",
   "artists": ["Myles Smith"],
@@ -17,13 +17,11 @@
           "times": 2,
           "items": [
             {
-              "chordIDs": ["Em", "C"],
+              "chordIDs": [
+                ["Em", "C"],
+                ["G", "G"]
+              ],
               "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
-            },
-            {
-              "chordIDs": ["G"],
-              "chordTimes": 4,
               "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
             }
           ]
@@ -39,17 +37,20 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Em", "C", "G", "D"],
+              "chordIDs": [
+                ["Em", "C", "G", "D"],
+                ["Em", "C", "G"]
+              ],
               "chordTimes": 2,
               "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
-            },
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "items": [
             {
-              "chordIDs": ["Em", "C", "G"],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
-            },
-            {
-              "chordIDs": ["D"],
+              "chordIDs": [["D"]],
               "chordTimes": 1,
               "strummingPattern": ["D"]
             }
@@ -66,7 +67,7 @@
           "times": 4,
           "items": [
             {
-              "chordIDs": ["Em", "C", "G", "D"],
+              "chordIDs": [["Em", "C", "G", "D"]],
               "chordTimes": 2,
               "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
             }
@@ -83,7 +84,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Em", "C", "G", "D"],
+              "chordIDs": [["Em", "C", "G", "D"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
             }
@@ -100,7 +101,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Em", "C", "G", "D"],
+              "chordIDs": [["Em", "C", "G", "D"]],
               "chordTimes": 1,
               "strummingPattern": ["D"]
             }

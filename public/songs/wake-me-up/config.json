@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "contributors": ["TheAncientOwl"],
   "title": "Wake Me Up",
   "artists": ["Avicii"],
@@ -17,12 +17,12 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am", "Fmaj7", "C/G"],
+              "chordIDs": [["Am", "Fmaj7", "C/G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
             },
             {
-              "chordIDs": ["C/G", "G"],
+              "chordIDs": [["C/G", "G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
             }
@@ -32,12 +32,12 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am", "Fmaj7", "C/G"],
+              "chordIDs": [["Am", "Fmaj7", "C/G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
             },
             {
-              "chordIDs": ["C/G", "E"],
+              "chordIDs": [["C/G", "E"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
             }
@@ -54,12 +54,12 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am", "Fmaj7", "C/G"],
+              "chordIDs": [["Am", "Fmaj7", "C/G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
             },
             {
-              "chordIDs": ["C/G", "G"],
+              "chordIDs": [["C/G", "G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
             }
@@ -69,12 +69,12 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am", "Fmaj7", "C/G"],
+              "chordIDs": [["Am", "Fmaj7", "C/G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
             },
             {
-              "chordIDs": ["C/G", "E"],
+              "chordIDs": [["C/G", "E"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
             }
@@ -91,12 +91,12 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am", "Fmaj7", "C/G"],
+              "chordIDs": [["Am", "Fmaj7", "C/G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
             },
             {
-              "chordIDs": ["C/G", "G"],
+              "chordIDs": [["C/G", "G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
             }
@@ -106,12 +106,12 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am", "Fmaj7", "C/G"],
+              "chordIDs": [["Am", "Fmaj7", "C/G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
             },
             {
-              "chordIDs": ["C/G", "E"],
+              "chordIDs": [["C/G", "E"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
             }
@@ -128,7 +128,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Am", "Fmaj7", "C/G", "C/G"],
+              "chordIDs": [["Am", "Fmaj7", "C/G", "C/G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
             }

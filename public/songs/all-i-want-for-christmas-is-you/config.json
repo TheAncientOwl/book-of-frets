@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "All I Want For Christmas Is You",
   "artists": ["Mariah Carey"],
@@ -17,7 +17,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["G", "Em", "C", "D"],
+              "chordIDs": [["G", "Em", "C", "D"]],
               "chordTimes": 1,
               "strummingPattern": ["D"]
             }
@@ -34,27 +34,11 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["G", "G/B", "C", "Cm_3fr"],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
-            }
-          ]
-        },
-        {
-          "times": 1,
-          "items": [
-            {
-              "chordIDs": ["G", "B7", "Em", "Cm_3fr"],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
-            }
-          ]
-        },
-        {
-          "times": 1,
-          "items": [
-            {
-              "chordIDs": ["G", "E7", "Am7", "Cm_3fr", "D7"],
+              "chordIDs": [
+                ["G", "G/B", "C", "Cm_3fr"],
+                ["G", "B7", "Em", "Cm_3fr"],
+                ["G", "E7", "Am7", "Cm_3fr", "D7"]
+              ],
               "chordTimes": 1,
               "strummingPattern": ["D"]
             }
@@ -71,7 +55,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["G", "Em", "C", "D"],
+              "chordIDs": [["G", "Em", "C", "D"]],
               "chordTimes": 4,
               "strummingPattern": ["D", "U"]
             }
@@ -88,17 +72,10 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["G", "G", "G", "G"],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "U"]
-            }
-          ]
-        },
-        {
-          "times": 1,
-          "items": [
-            {
-              "chordIDs": ["C", "C", "Cm_3fr", "Cm_3fr"],
+              "chordIDs": [
+                ["G", "G", "G", "G"],
+                ["C", "C", "Cm_3fr", "Cm_3fr"]
+              ],
               "chordTimes": 4,
               "strummingPattern": ["D", "U"]
             }
@@ -115,22 +92,22 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["G"],
-              "chordTimes": 4,
+              "chordIDs": [["G", "G", "G", "G"]],
+              "chordTimes": 1,
               "strummingPattern": ["D", "U"]
             },
             {
-              "chordIDs": ["G", "B7"],
+              "chordIDs": [["G", "B7"]],
               "chordTimes": 2,
               "strummingPattern": ["D", "U"]
             },
             {
-              "chordIDs": ["Em"],
+              "chordIDs": [["Em"]],
               "chordTimes": 4,
               "strummingPattern": ["D", "U"]
             },
             {
-              "chordIDs": ["Em", "Cm_3fr"],
+              "chordIDs": [["Em", "Cm_3fr"]],
               "chordTimes": 2,
               "strummingPattern": ["D", "U"]
             }
@@ -140,7 +117,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["G", "E7", "Am7", "D7"],
+              "chordIDs": [["G", "E7", "Am7", "D7"]],
               "chordTimes": 4,
               "strummingPattern": ["D", "U"]
             }
@@ -157,27 +134,11 @@
           "times": 2,
           "items": [
             {
-              "chordIDs": ["B7", "B7", "Em", "Em"],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "U"]
-            }
-          ]
-        },
-        {
-          "times": 1,
-          "items": [
-            {
-              "chordIDs": ["Cm_3fr", "Cm_3fr", "G", "E7"],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "U"]
-            }
-          ]
-        },
-        {
-          "times": 1,
-          "items": [
-            {
-              "chordIDs": ["Am7", "Am7", "D", "D"],
+              "chordIDs": [
+                ["B7", "B7", "Em", "Em"],
+                ["Cm_3fr", "Cm_3fr", "G", "E7"],
+                ["Am7", "Am7", "D", "D"]
+              ],
               "chordTimes": 4,
               "strummingPattern": ["D", "U"]
             }

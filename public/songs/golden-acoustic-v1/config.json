@@ -1,5 +1,5 @@
 {
-  "version": "0.2.1",
+  "version": "0.3.0",
   "contributors": ["TheAncientOwl"],
   "title": "Golden",
   "artists": ["HUNTR/X"],
@@ -17,17 +17,20 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["C", "G", "D", "Em"],
+              "chordIDs": [
+                ["C", "G", "D", "Em"],
+                ["C", "G", "D"]
+              ],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
-            },
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "items": [
             {
-              "chordIDs": ["C", "G", "D"],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
-            },
-            {
-              "chordIDs": ["Em"],
+              "chordIDs": [["Em"]],
               "chordTimes": 1,
               "strummingPattern": ["D"]
             }
@@ -44,7 +47,7 @@
           "times": 4,
           "items": [
             {
-              "chordIDs": ["C", "G", "D", "Em"],
+              "chordIDs": [["C", "G", "D", "Em"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
             }
@@ -52,8 +55,8 @@
         }
       ]
     },
-    "pre-chorus-1": {
-      "name": "pre-chorus 1",
+    "prechorus-1": {
+      "name": "prechorus 1",
       "type": "chords",
       "times": 1,
       "chunks": [
@@ -61,22 +64,7 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["C", "G", "D", "Em"],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
-            },
-            {
-              "chordIDs": ["C", "G"],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
-            },
-            {
-              "chordIDs": ["D", "D"],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
-            },
-            {
-              "chordIDs": ["C"],
+              "chordIDs": [["C", "G", "D", "Em"], ["C", "G", "D", "D"], ["C"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
             }
@@ -93,17 +81,17 @@
           "times": 3,
           "items": [
             {
-              "chordIDs": ["D"],
+              "chordIDs": [["D"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
             },
             {
-              "chordIDs": ["G", "D"],
+              "chordIDs": [["G", "D"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U"]
             },
             {
-              "chordIDs": ["Em", "C"],
+              "chordIDs": [["Em", "C"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
             }
@@ -113,17 +101,17 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["D"],
+              "chordIDs": [["D"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
             },
             {
-              "chordIDs": ["G", "D"],
+              "chordIDs": [["G", "D"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U"]
             },
             {
-              "chordIDs": ["Em"],
+              "chordIDs": [["Em"]],
               "chordTimes": 3,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
             }
@@ -140,12 +128,12 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Em"],
+              "chordIDs": [["Em"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
             },
             {
-              "chordIDs": ["D", "Bm", "C"],
+              "chordIDs": [["D", "Bm", "C"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
             }
@@ -155,12 +143,12 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["G"],
+              "chordIDs": [["G"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
             },
             {
-              "chordIDs": ["D", "Bm", "C"],
+              "chordIDs": [["D", "Bm", "C"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
             }
@@ -168,8 +156,8 @@
         }
       ]
     },
-    "pre-chorus-2": {
-      "name": "pre-chorus 2",
+    "prechorus-2": {
+      "name": "prechorus 2",
       "type": "chords",
       "times": 1,
       "chunks": [
@@ -177,17 +165,10 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["Em", "D", "Bm", "C"],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
-            }
-          ]
-        },
-        {
-          "times": 1,
-          "items": [
-            {
-              "chordIDs": ["Em", "Bm", "D", "C"],
+              "chordIDs": [
+                ["Em", "D", "Bm", "C"],
+                ["Em", "Bm", "D", "C"]
+              ],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
             }
@@ -204,17 +185,17 @@
           "times": 3,
           "items": [
             {
-              "chordIDs": ["D"],
+              "chordIDs": [["D"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
             },
             {
-              "chordIDs": ["G", "D"],
+              "chordIDs": [["G", "D"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U"]
             },
             {
-              "chordIDs": ["Em", "C"],
+              "chordIDs": [["Em", "C"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
             }
@@ -224,17 +205,17 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": ["D"],
+              "chordIDs": [["D"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
             },
             {
-              "chordIDs": ["G", "D"],
+              "chordIDs": [["G", "D"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U"]
             },
             {
-              "chordIDs": ["Em"],
+              "chordIDs": [["Em"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
             }
@@ -251,17 +232,17 @@
           "times": 2,
           "items": [
             {
-              "chordIDs": ["C", "D"],
+              "chordIDs": [["C", "D"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
             },
             {
-              "chordIDs": ["G", "D"],
+              "chordIDs": [["G", "D"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U"]
             },
             {
-              "chordIDs": ["Em"],
+              "chordIDs": [["Em"]],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
             }
@@ -278,17 +259,20 @@
           "times": 2,
           "items": [
             {
-              "chordIDs": ["C", "G", "D", "Em"],
+              "chordIDs": [
+                ["C", "G", "D", "Em"],
+                ["C", "G", "D"]
+              ],
               "chordTimes": 1,
               "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
-            },
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "items": [
             {
-              "chordIDs": ["C", "G", "D"],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "U", "D", "U"]
-            },
-            {
-              "chordIDs": ["Em"],
+              "chordIDs": [["Em"]],
               "chordTimes": 1,
               "strummingPattern": ["D"]
             }
@@ -300,10 +284,10 @@
   "songSegmentsOrder": [
     "intro",
     "verse-1",
-    "pre-chorus-1",
+    "prechorus-1",
     "chorus-1",
     "verse-2",
-    "pre-chorus-2",
+    "prechorus-2",
     "chorus-2",
     "post-chorus",
     "outro"

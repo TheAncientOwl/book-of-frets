@@ -77,9 +77,17 @@
                         "type": "object",
                         "additionalProperties": false,
                         "properties": {
+                          "align": {
+                            "type": "string",
+                            "enum": ["center", "flex-start", "flex-end"]
+                          },
                           "chordIDs": {
                             "type": "array",
-                            "items": { "type": "string" },
+                            "items": {
+                              "type": "array",
+                              "items": { "type": "string" },
+                              "minItems": 1
+                            },
                             "minItems": 1
                           },
                           "chordTimes": {
