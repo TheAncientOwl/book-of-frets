@@ -6,11 +6,12 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.33
+ * @version 0.34
  * @description App component.
  */
 
 import { AppMenu } from '@/components/AppMenu/AppMenu';
+import { Loading } from '@/components/Loading/Loading';
 import SongsIndexPage from '@/pages/SongsIndexPage';
 import { AppStateContext } from '@/state/AppStateContext';
 import { useAppStateValue } from '@/state/hooks/useAppStateValue';
@@ -43,7 +44,7 @@ export const App = () => {
             <Route
               path='/:directory'
               element={
-                <Suspense fallback={<div>Thinking...</div>}>
+                <Suspense fallback={<Loading />}>
                   <SongPage />
                 </Suspense>
               }
@@ -51,7 +52,7 @@ export const App = () => {
             <Route
               path='/chords'
               element={
-                <Suspense fallback={<div>Thinking...</div>}>
+                <Suspense fallback={<Loading />}>
                   <ChordsIndexPage />
                 </Suspense>
               }
@@ -59,7 +60,7 @@ export const App = () => {
             <Route
               path='/about'
               element={
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<Loading />}>
                   <AboutPage />
                 </Suspense>
               }
