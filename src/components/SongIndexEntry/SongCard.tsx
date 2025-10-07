@@ -6,7 +6,7 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.22
+ * @version 0.23
  * @description List all available songs.
  */
 
@@ -221,12 +221,12 @@ export const SongCard = (props: SongProps) => {
                 {props.chordIDs.map(chordId => {
                   const chordConfig = chordsIndex[chordId];
 
-                  console.assert(
-                    chordConfig !== undefined,
-                    `Could not find chord config for ${chordId}`
-                  );
+                  if (!chordConfig) {
+                    console.warn(`Missing chord config for ${chordId}`);
+                    return null;
+                  }
 
-                  return chordConfig !== undefined ? (
+                  return (
                     <Tag
                       size={['sm', 'md']}
                       borderStyle='solid'
@@ -240,7 +240,7 @@ export const SongCard = (props: SongProps) => {
                     >
                       {chordConfig.name}
                     </Tag>
-                  ) : null;
+                  );
                 })}
               </Flex>
             </PopoverBody>
