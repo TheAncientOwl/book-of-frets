@@ -6,7 +6,7 @@
  *
  * @file vite.config.ts
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description Vite configuration.
  */
 
@@ -21,6 +21,12 @@ export default defineConfig({
     include: ['react-virtualized'],
   },
   build: {
+    minify: 'terser',
+    terserOptions: {
+      format: {
+        comments: false,
+      },
+    },
     rollupOptions: {
       output: {
         manualChunks: {
