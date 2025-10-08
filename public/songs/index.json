@@ -78,6 +78,13 @@
       "chordIDs": ["Am", "C", "Em", "F", "G", "Dm"]
     },
     {
+      "title": "Riptide",
+      "artists": ["Vance Joy"],
+      "directory": "riptide",
+      "type": ["acoustic"],
+      "chordIDs": ["Am", "G", "C", "Fmaj7"]
+    },
+    {
       "title": "What I've Done",
       "artists": ["Linkin Park"],
       "directory": "what-ive-done",

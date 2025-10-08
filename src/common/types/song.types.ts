@@ -27,7 +27,9 @@ export type TChordsChunk = {
 };
 
 export type TGuitarStringDelimiter = '-' | '|';
-export type TStringsChunkItem = Partial<Record<TGuitarString, number>> | TGuitarStringDelimiter;
+export type TStringsChunkItem =
+  | Partial<Record<TGuitarString, number | string>>
+  | TGuitarStringDelimiter;
 
 export type TStringsChunk = {
   times: number;
