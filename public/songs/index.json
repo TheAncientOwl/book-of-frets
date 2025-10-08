@@ -78,6 +78,13 @@
       "chordIDs": ["Am", "C", "Em", "F", "G", "Dm"]
     },
     {
+      "title": "What I've Done",
+      "artists": ["Linkin Park"],
+      "directory": "what-ive-done",
+      "type": ["acoustic"],
+      "chordIDs": ["Em", "G", "D", "Asus2", "Dadd11_3fr", "G/B"]
+    },
+    {
       "title": "Flowers Need Rain",
       "artists": ["Preston Pablo"],
       "directory": "flowers-need-rain",

@@ -173,6 +173,15 @@
     "C/E": {
       "name": "C / E",
       "frets": [{ "B": 1 }, { "D": 2 }, { "A": 3 }]
+    },
+    "Asus2": {
+      "name": "Asus2",
+      "frets": [{}, { "D": 1, "G": 2 }, {}]
+    },
+    "Dadd11_3fr": {
+      "name": "Dadd11",
+      "startFret": 3,
+      "frets": [{ "B": 1 }, { "D": 2 }, { "A": 3 }]
     }
   }
 }
