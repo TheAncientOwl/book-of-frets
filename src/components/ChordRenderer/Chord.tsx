@@ -6,7 +6,7 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 0.17
+ * @version 0.18
  * @description Render chrod based on given config.
  */
 
@@ -14,7 +14,7 @@ import type { TChord } from '@/common/types/chord.types';
 import type { TGuitarString } from '@/common/types/common.types';
 import { Fret } from '@/components/ChordRenderer/Fret';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
-import { Box, Circle, Divider, Heading, type BoxProps } from '@chakra-ui/react';
+import { Box, Circle, Divider, Flex, Heading, type BoxProps } from '@chakra-ui/react';
 import { Fragment } from 'react';
 
 type TChordProps = TChord & {
@@ -25,7 +25,7 @@ export const Chord = (props: TChordProps) => {
   const { chord: theme, fret: fretTheme } = useAppTheme();
 
   return (
-    <Box
+    <Flex
       width='13em'
       padding='1em 1em'
       borderRadius='1em'
@@ -34,13 +34,17 @@ export const Chord = (props: TChordProps) => {
       display='flex'
       flexDirection='column'
       alignItems='center'
+      position='relative'
       {...props.containerProps}
       // [*] theme colors
       background={theme.background}
       borderColor={theme.border}
     >
       <Heading
-        position='relative'
+        display='flex'
+        justifyContent='center'
+        alignItems='center'
+        gap='5px'
         fontSize='2.3em'
         textAlign='center'
         mb='0.25em'
@@ -51,18 +55,14 @@ export const Chord = (props: TChordProps) => {
 
         {props.startFret && (
           <Circle
-            size='2em'
-            fontSize='0.3em'
+            size='6'
+            fontSize='0.45em'
             fontWeight='bold'
             borderWidth='thin'
-            position='absolute'
-            top='50%'
-            right='-85%'
-            zIndex='1'
             // [*] theme colors
             backgroundColor={fretTheme.finger.background}
             borderColor={fretTheme.finger.border}
-            color={fretTheme.finger.color}
+            color={theme.title}
           >
             {props.startFret}
           </Circle>
@@ -94,6 +94,6 @@ export const Chord = (props: TChordProps) => {
           );
         })}
       </Box>
-    </Box>
+    </Flex>
   );
 };
