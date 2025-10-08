@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "contributors": ["TheAncientOwl"],
   "title": "Hey, Soul Sister",
   "artists": ["Train"],
@@ -241,7 +241,8 @@
     "verse",
     "chorus-2",
     "bridge",
-    "chorus-2.2"
+    "chorus-2.2",
+    "outro"
   ],
   "resources": [
     {
