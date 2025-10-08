@@ -85,6 +85,13 @@
       "chordIDs": ["Am", "G", "C", "Fmaj7"]
     },
     {
+      "title": "Hey, Soul Sister",
+      "artists": ["Train"],
+      "directory": "hey-soul-sister",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "G", "Am", "F"]
+    },
+    {
       "title": "What I've Done",
       "artists": ["Linkin Park"],
       "directory": "what-ive-done",
