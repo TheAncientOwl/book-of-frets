@@ -1,0 +1,321 @@
+{
+  "version": "0.1.0",
+  "contributors": ["TheAncientOwl"],
+  "title": "I Know What You Did Last Summer",
+  "artists": ["Shawn Mendes", "Camila Cabello"],
+  "type": ["acoustic"],
+  "notes": [],
+  "capo": 0,
+  "chordIDs": ["F", "G", "C", "Am", "E", "Em"],
+  "songSegments": {
+    "intro": {
+      "name": "intro",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 2,
+          "items": [
+            {
+              "chordIDs": [["Am", "F", "G"]],
+              "chordTimes": 1,
+              "strummingPattern": [
+                "D",
+                "-",
+                "U",
+                "D",
+                "U",
+                "D",
+                "-",
+                "U",
+                "D",
+                "U",
+                "D",
+                "-",
+                "D",
+                "U"
+              ]
+            },
+            {
+              "chordIDs": [["C"]],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "-", "U", "D", "U"]
+            },
+            {
+              "chordIDs": [["G"]],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "-", "U", "D", "U", "D", "-", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "verse": {
+      "name": "verse",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 2,
+          "items": [
+            {
+              "chordIDs": [["Am", "F", "G"]],
+              "chordTimes": 1,
+              "strummingPattern": [
+                "D",
+                "-",
+                "U",
+                "D",
+                "U",
+                "D",
+                "-",
+                "U",
+                "D",
+                "U",
+                "D",
+                "-",
+                "D",
+                "U"
+              ]
+            },
+            {
+              "chordIDs": [["C"]],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "-", "U", "D", "U"]
+            },
+            {
+              "chordIDs": [["G"]],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "-", "U", "D", "U", "D", "-", "D", "U"]
+            }
+          ]
+        }
+      ]
+    },
+    "prechorus": {
+      "name": "prechorus",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": [
+                ["F", "G", "Am", "Am"],
+                ["F", "G", "Am", "E"]
+              ],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "-", "U", "D", "U", "D", "-", "D", "U"]
+            },
+            {
+              "chordIDs": [["E"]],
+              "chordTimes": 1,
+              "strummingPattern": ["D"]
+            }
+          ]
+        }
+      ]
+    },
+    "chorus-1": {
+      "name": "chorus 1",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 2,
+          "items": [
+            {
+              "chordIDs": [["Am", "F", "G"]],
+              "chordTimes": 1,
+              "strummingPattern": [
+                "D",
+                "-",
+                "-",
+                "U",
+                "Dx",
+                "Ux",
+                "Dx",
+                "Ux",
+                "Dx",
+                "Ux",
+                "D",
+                "-",
+                "Dx",
+                "U",
+                "Dx",
+                "Ux"
+              ]
+            },
+            {
+              "chordIDs": [["C"]],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "-", "-", "U", "Dx", "Ux", "Dx"]
+            },
+            {
+              "chordIDs": [["G"]],
+              "chordTimes": 1,
+              "strummingPattern": ["U", "Dx", "U", "D", "-", "Dx", "Ux", "Dx", "Ux"]
+            }
+          ]
+        }
+      ]
+    },
+    "postchorus": {
+      "name": "postchorus",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 2,
+          "items": [
+            {
+              "chordIDs": [["Am", "F", "G"]],
+              "chordTimes": 8,
+              "strummingPattern": ["D", "-"]
+            },
+            {
+              "chordIDs": [["C"]],
+              "chordTimes": 3,
+              "strummingPattern": ["D", "-"]
+            },
+            {
+              "chordIDs": [["G"]],
+              "chordTimes": 5,
+              "strummingPattern": ["D", "-"]
+            }
+          ]
+        }
+      ]
+    },
+    "chorus-2": {
+      "name": "chorus 2",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 5,
+          "items": [
+            {
+              "chordIDs": [["F", "G", "Am", "Em"]],
+              "chordTimes": 1,
+              "strummingPattern": [
+                "De",
+                "-",
+                "D",
+                "-",
+                "D",
+                "-",
+                "De",
+                "-",
+                "D",
+                "-",
+                "D",
+                "-",
+                "De",
+                "-",
+                "D",
+                "-"
+              ]
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": [["F", "G", "Am", "E"]],
+              "chordTimes": 1,
+              "strummingPattern": [
+                "De",
+                "-",
+                "D",
+                "-",
+                "D",
+                "-",
+                "De",
+                "-",
+                "D",
+                "-",
+                "D",
+                "-",
+                "De",
+                "-",
+                "D",
+                "-"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "chorus-1.1": {
+      "name": "chorus 1",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 4,
+          "items": [
+            {
+              "chordIDs": [["Am", "F", "G"]],
+              "chordTimes": 1,
+              "strummingPattern": [
+                "D",
+                "-",
+                "-",
+                "U",
+                "Dx",
+                "Ux",
+                "Dx",
+                "Ux",
+                "Dx",
+                "Ux",
+                "D",
+                "-",
+                "Dx",
+                "U",
+                "Dx",
+                "Ux"
+              ]
+            },
+            {
+              "chordIDs": [["C"]],
+              "chordTimes": 1,
+              "strummingPattern": ["D", "-", "-", "U", "Dx", "Ux", "Dx"]
+            },
+            {
+              "chordIDs": [["G"]],
+              "chordTimes": 1,
+              "strummingPattern": ["U", "Dx", "U", "D", "-", "Dx", "Ux", "Dx", "Ux"]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "songSegmentsOrder": [
+    "intro",
+    "verse",
+    "prechorus",
+    "chorus-1",
+    "postchorus",
+    "verse",
+    "prechorus",
+    "chorus-1",
+    "chorus-2",
+    "chorus-1.1"
+  ],
+  "resources": [
+    {
+      "alias": "I Know What You Did Last Summer Guitar Tutorial 🎸 Shawn Mendes Feat. Camila Cabello Guitar Lesson",
+      "author": "GuitarZero2Hero ~ YouTube",
+      "link": "https://youtu.be/Jw5Kweenx48"
+    },
+    {
+      "alias": "I Know What You Did Last Summer Guitar Cover Acoustic - Shawn Mendes & Camila Cabello 🎸 |Chords|",
+      "author": "GuitarZero2Hero Express ~ YouTube",
+      "link": "https://youtu.be/MZIw3lbMvtg"
+    }
+  ]
+}

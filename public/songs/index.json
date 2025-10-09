@@ -99,6 +99,13 @@
       "chordIDs": ["Em", "G", "D", "Asus2", "Dadd11_3fr", "G/B"]
     },
     {
+      "title": "I Know What You Did Last Summer",
+      "artists": ["Shawn Mendes", "Camila Cabello"],
+      "directory": "i-know-what-you-did-last-summer",
+      "type": ["acoustic"],
+      "chordIDs": ["F", "G", "C", "Am", "E", "Em"]
+    },
+    {
       "title": "Flowers Need Rain",
       "artists": ["Preston Pablo"],
       "directory": "flowers-need-rain",
