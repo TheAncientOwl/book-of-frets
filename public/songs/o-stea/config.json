@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "contributors": ["TheAncientOwl"],
   "title": "O Stea",
   "artists": ["Deepcentral"],
@@ -7,6 +7,7 @@
   "notes": ["Drop D"],
   "capo": 0,
   "chordIDs": ["Em7", "Cadd9", "G", "D"],
+  "strumms": [["D", "D", "-", "U", "U", "-", "D", "-", "U", "-", "D", "U"]],
   "segments": {
     "main": {
       "name": "main",
@@ -19,7 +20,7 @@
             {
               "chordIDs": [["Em7", "Cadd9", "G", "D"]],
               "times": 1,
-              "strumm": ["D", "D", "-", "U", "U", "-", "D", "-", "U", "-", "D", "U"]
+              "strumm": 0
             }
           ]
         }

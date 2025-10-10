@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "What I've Done",
   "artists": ["Linkin Park"],
@@ -7,6 +7,16 @@
   "notes": [],
   "capo": 3,
   "chordIDs": ["Em", "G", "D", "Asus2", "Dadd11_3fr", "G/B"],
+  "strumms": [
+    ["D", "U", "D", "U", "D", "U", "D", "U"],
+    ["D", "U", "D", "U", "-", "U", "D", "U"],
+    ["D", "U", "D", "U"],
+    ["D", "D", "D", "D", "D", "D", "D", "D"],
+    ["D", "D", "D", "D", "D", "D", "-", "-"],
+    ["D", "-", "-", "-"],
+    ["Dx", "Ux", "Dx", "Ux"],
+    ["D"]
+  ],
   "segments": {
     "intro": {
       "name": "intro",
@@ -19,7 +29,7 @@
             {
               "chordIDs": [["Em", "G", "D", "Asus2"]],
               "times": 1,
-              "strumm": ["D", "U", "D", "U", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -36,7 +46,7 @@
             {
               "chordIDs": [["Em", "Em"]],
               "times": 1,
-              "strumm": ["D", "U", "D", "U", "-", "U", "D", "U"]
+              "strumm": 1
             }
           ]
         }
@@ -53,7 +63,7 @@
             {
               "chordIDs": [["Em", "G", "D", "Asus2"]],
               "times": 1,
-              "strumm": ["D", "U", "D", "U", "-", "U", "D", "U"]
+              "strumm": 1
             }
           ]
         }
@@ -70,17 +80,17 @@
             {
               "chordIDs": [["C", "C", "Dadd11_3fr"]],
               "times": 1,
-              "strumm": ["D", "U", "D", "U", "-", "U", "D", "U"]
+              "strumm": 1
             },
             {
               "chordIDs": [["Dadd11_3fr"]],
               "times": 1,
-              "strumm": ["D", "-", "-", "-"]
+              "strumm": 5
             },
             {
               "chordIDs": [["Dadd11_3fr"]],
               "times": 1,
-              "strumm": ["Dx", "Ux", "Dx", "Ux"]
+              "strumm": 6
             }
           ]
         }
@@ -97,7 +107,7 @@
             {
               "chordIDs": [["Em", "G", "D", "Asus2"]],
               "times": 1,
-              "strumm": ["D", "U", "D", "U", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -117,12 +127,12 @@
                 ["Em", "G", "D"]
               ],
               "times": 1,
-              "strumm": ["D", "U", "D", "U", "D", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["Asus2", "G/B", "C", "D"]],
               "times": 1,
-              "strumm": ["D", "U", "D", "U"]
+              "strumm": 2
             }
           ]
         }
@@ -139,7 +149,7 @@
             {
               "chordIDs": [["Em", "G", "D", "Asus2"]],
               "times": 1,
-              "strumm": ["D", "D", "D", "D", "D", "D", "D", "D"]
+              "strumm": 3
             }
           ]
         },
@@ -149,7 +159,7 @@
             {
               "chordIDs": [["Asus2"]],
               "times": 1,
-              "strumm": ["D", "D", "D", "D", "D", "D", "-", "-"]
+              "strumm": 4
             }
           ]
         }
@@ -166,7 +176,7 @@
             {
               "chordIDs": [["Em", "G", "D", "Asus2"]],
               "times": 1,
-              "strumm": ["D", "U", "D", "U", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -183,7 +193,7 @@
             {
               "chordIDs": [["Em", "G", "D", "Asus2"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 7
             }
           ]
         }

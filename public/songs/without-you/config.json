@@ -1,12 +1,19 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "contributors": ["TheAncientOwl"],
-  "title": "Without You",
-  "artists": ["The Kid LAROI"],
+  "title": "Adore You",
+  "artists": ["Harry Styles"],
   "type": ["acoustic"],
   "notes": [],
   "capo": 0,
-  "chordIDs": ["Am", "Fmaj7", "C", "G", "E"],
+  "chordIDs": ["C", "Em", "Am", "F", "G"],
+  "strumms": [
+    ["D", "D", "U", "U", "D", "U"],
+    ["D", "-", "D", "U", "-", "U", "D", "U"],
+    ["D", "D", "-", "U", "D", "U"],
+    ["D", "-", "-", "U", "D", "U", "D", "U"],
+    ["D", "U", "D", "U", "D", "U", "D", "U"]
+  ],
   "segments": {
     "intro": {
       "name": "intro",
@@ -17,70 +24,9 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": [["-"]],
-              "times": 1,
-              "strumm": ["Dx", "-", "Dx", "-", "Dx", "-", "Dx", "Ux"]
-            }
-          ]
-        },
-        {
-          "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
-              "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "-",
-                "-",
-                "D",
-                "-",
-                "-",
-                "U",
-                "-",
-                "U",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "U"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "chorus1": {
-      "name": "chorus",
-      "type": "chords",
-      "times": 1,
-      "chunks": [
-        {
-          "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
-              "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "-",
-                "-",
-                "D",
-                "-",
-                "-",
-                "U",
-                "-",
-                "U",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "U"
-              ]
+              "chordIDs": [["C"]],
+              "times": 2,
+              "strumm": 0
             }
           ]
         }
@@ -89,127 +35,62 @@
     "verse": {
       "name": "verse",
       "type": "chords",
-      "times": 1,
-      "chunks": [
-        {
-          "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
-              "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "-",
-                "-",
-                "D",
-                "-",
-                "-",
-                "U",
-                "-",
-                "U",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "U"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "pre-chorus1": {
-      "name": "pre-chorus 1",
-      "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
           "times": 1,
           "items": [
             {
-              "chordIDs": [["Am", "Fmaj7", "C"]],
+              "chordIDs": [["C"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "-",
-                "-",
-                "D",
-                "-",
-                "-",
-                "U",
-                "-",
-                "U",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "U"
-              ]
-            }
-          ]
-        },
-        {
-          "times": 1,
-          "items": [
+              "strumm": 1
+            },
             {
-              "chordIDs": [["E"]],
+              "chordIDs": [["Em"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "-",
-                "-",
-                "Dx",
-                "Ux",
-                "Dx",
-                "Ux"
-              ]
+              "strumm": 1
+            },
+            {
+              "chordIDs": [["Am"]],
+              "times": 1,
+              "strumm": 1
+            },
+            {
+              "chordIDs": [["F"]],
+              "times": 1,
+              "strumm": 1
             }
           ]
         }
       ]
     },
-    "chorus2": {
+    "chorus": {
       "name": "chorus",
       "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
-          "times": 4,
+          "times": 1,
           "items": [
             {
-              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
+              "chordIDs": [["C"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "-",
-                "-",
-                "D",
-                "-",
-                "-",
-                "U",
-                "-",
-                "U",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "U"
-              ]
+              "strumm": 2
+            },
+            {
+              "chordIDs": [["G"]],
+              "times": 1,
+              "strumm": 2
+            },
+            {
+              "chordIDs": [["Am"]],
+              "times": 1,
+              "strumm": 2
+            },
+            {
+              "chordIDs": [["F"]],
+              "times": 1,
+              "strumm": 2
             }
           ]
         }
@@ -221,100 +102,17 @@
       "times": 1,
       "chunks": [
         {
-          "times": 1,
+          "times": 2,
           "items": [
             {
-              "chordIDs": [["Am", "Fmaj7", "C"]],
+              "chordIDs": [["Em"]],
               "times": 1,
-              "strumm": ["D"]
-            }
-          ]
-        },
-        {
-          "times": 1,
-          "items": [
+              "strumm": 3
+            },
             {
-              "chordIDs": [["G"]],
+              "chordIDs": [["F"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "U"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "pre-chorus2": {
-      "name": "pre-chorus 2",
-      "type": "chords",
-      "times": 1,
-      "chunks": [
-        {
-          "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C"]],
-              "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "-",
-                "-",
-                "D",
-                "-",
-                "-",
-                "U",
-                "-",
-                "U",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "U"
-              ]
-            }
-          ]
-        },
-        {
-          "times": 1,
-          "items": [
-            {
-              "chordIDs": [["-"]],
-              "times": 1,
-              "strumm": [
-                "-",
-                "-",
-                "-",
-                "-",
-                "-",
-                "-",
-                "-",
-                "-",
-                "-",
-                "-",
-                "-",
-                "-",
-                "Dx",
-                "Ux",
-                "Dx",
-                "Ux"
-              ]
+              "strumm": 3
             }
           ]
         }
@@ -329,36 +127,21 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
-              "times": 1,
-              "strumm": ["D"]
+              "chordIDs": [["C"]],
+              "times": 2,
+              "strumm": 4
             }
           ]
         }
       ]
     }
   },
-  "order": [
-    "intro",
-    "chorus1",
-    "verse",
-    "pre-chorus1",
-    "chorus2",
-    "bridge",
-    "pre-chorus2",
-    "chorus1",
-    "outro"
-  ],
+  "order": ["intro", "verse", "chorus", "verse", "chorus", "bridge", "chorus", "outro"],
   "res": [
     {
-      "alias": "Without You Guitar Tutorial The Kid LAROI Lesson |Easy Chords + Cover|",
+      "alias": "Adore You Guitar Tutorial Harry Styles Lesson |Easy Chords + Cover|",
       "author": "GuitarZero2Hero ~ YouTube",
-      "link": "https://youtu.be/I8UfGA0qR7A"
-    },
-    {
-      "alias": "Without You Guitar Cover The Kid LAROI 🎸|Tabs + Chords|",
-      "author": "GuitarZero2Hero Express ~ YouTube",
-      "link": "https://youtu.be/ayhT2swtB0w"
+      "link": "https://youtu.be/3x7X9Xxj7Ck"
     }
   ]
 }

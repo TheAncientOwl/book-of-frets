@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "contributors": ["TheAncientOwl"],
   "title": "Dusk Till Dawn",
   "artists": ["Zayn", "Sia"],
@@ -7,6 +7,12 @@
   "notes": [],
   "capo": 2,
   "chordIDs": ["Am", "Fmaj7", "C", "G/B", "Em", "C/E"],
+  "strumms": [
+    ["D"],
+    ["D", "D", "D", "D", "De", "D", "D", "D"],
+    ["D", "-", "-", "-", "D", "-", "D", "U"],
+    ["D", "-", "D", "-", "D", "-", "D", "U"]
+  ],
   "segments": {
     "verse/prechorus-intro": {
       "name": "verse / prechorus",
@@ -19,7 +25,7 @@
             {
               "chordIDs": [["Am", "Fmaj7", "C", "G/B"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 0
             }
           ]
         },
@@ -29,7 +35,7 @@
             {
               "chordIDs": [["Am", "Fmaj7", "C", "G/B"]],
               "times": 1,
-              "strumm": ["D", "D", "D", "D", "De", "D", "D", "D"]
+              "strumm": 1
             }
           ]
         },
@@ -39,7 +45,7 @@
             {
               "chordIDs": [["Am", "Fmaj7", "C", "G/B"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 0
             }
           ]
         }
@@ -56,7 +62,7 @@
             {
               "chordIDs": [["Am"]],
               "times": 1,
-              "strumm": ["D", "-", "-", "-", "D", "-", "D", "U"]
+              "strumm": 2
             }
           ]
         },
@@ -66,7 +72,7 @@
             {
               "chordIDs": [["Am", "Fmaj7", "C", "Em"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "D", "-", "D", "U"]
+              "strumm": 3
             }
           ]
         }
@@ -83,7 +89,7 @@
             {
               "chordIDs": [["Am"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 0
             }
           ]
         }
@@ -100,7 +106,7 @@
             {
               "chordIDs": [["Am", "Fmaj7", "C", "G/B"]],
               "times": 1,
-              "strumm": ["D", "D", "D", "D", "De", "D", "D", "D"]
+              "strumm": 1
             }
           ]
         },
@@ -110,7 +116,7 @@
             {
               "chordIDs": [["Am", "Fmaj7", "C", "G/B"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 0
             }
           ]
         }
@@ -127,22 +133,22 @@
             {
               "chordIDs": [["Fmaj7"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 0
             },
             {
               "chordIDs": [["Fmaj7", "C"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 0
             },
             {
               "chordIDs": [["C", "G"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 0
             },
             {
               "chordIDs": [["G", "C/E"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 0
             }
           ]
         },
@@ -152,22 +158,22 @@
             {
               "chordIDs": [["Fmaj7"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 0
             },
             {
               "chordIDs": [["Fmaj7", "C"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 0
             },
             {
               "chordIDs": [["C", "G"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 0
             },
             {
               "chordIDs": [["G"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 0
             }
           ]
         }

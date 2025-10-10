@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "I Know What You Did Last Summer",
   "artists": ["Shawn Mendes", "Camila Cabello"],
@@ -7,6 +7,17 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["F", "G", "C", "Am", "E", "Em"],
+  "strumms": [
+    ["D", "-", "U", "D", "U", "D", "-", "U", "D", "U", "D", "-", "D", "U"],
+    ["D", "-", "U", "D", "U"],
+    ["D", "-", "U", "D", "U", "D", "-", "D", "U"],
+    ["D", "-", "-", "U", "Dx", "Ux", "Dx", "Ux", "Dx", "Ux", "D", "-", "Dx", "U", "Dx", "Ux"],
+    ["De", "-", "D", "-", "D", "-", "De", "-", "D", "-", "D", "-", "De", "-", "D", "-"],
+    ["D", "-"],
+    ["D", "-", "-", "U", "Dx", "Ux", "Dx"],
+    ["U", "Dx", "U", "D", "-", "Dx", "Ux", "Dx", "Ux"],
+    ["D"]
+  ],
   "segments": {
     "intro": {
       "name": "intro",
@@ -19,17 +30,17 @@
             {
               "chordIDs": [["Am", "F", "G"]],
               "times": 1,
-              "strumm": ["D", "-", "U", "D", "U", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["C"]],
               "times": 1,
-              "strumm": ["D", "-", "U", "D", "U"]
+              "strumm": 1
             },
             {
               "chordIDs": [["G"]],
               "times": 1,
-              "strumm": ["D", "-", "U", "D", "U", "D", "-", "D", "U"]
+              "strumm": 2
             }
           ]
         }
@@ -46,17 +57,17 @@
             {
               "chordIDs": [["Am", "F", "G"]],
               "times": 1,
-              "strumm": ["D", "-", "U", "D", "U", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["C"]],
               "times": 1,
-              "strumm": ["D", "-", "U", "D", "U"]
+              "strumm": 1
             },
             {
               "chordIDs": [["G"]],
               "times": 1,
-              "strumm": ["D", "-", "U", "D", "U", "D", "-", "D", "U"]
+              "strumm": 2
             }
           ]
         }
@@ -76,12 +87,12 @@
                 ["F", "G", "Am", "E"]
               ],
               "times": 1,
-              "strumm": ["D", "-", "U", "D", "U", "D", "-", "D", "U"]
+              "strumm": 2
             },
             {
               "chordIDs": [["E"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 8
             }
           ]
         }
@@ -98,34 +109,17 @@
             {
               "chordIDs": [["Am", "F", "G"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "-",
-                "U",
-                "Dx",
-                "Ux",
-                "Dx",
-                "Ux",
-                "Dx",
-                "Ux",
-                "D",
-                "-",
-                "Dx",
-                "U",
-                "Dx",
-                "Ux"
-              ]
+              "strumm": 3
             },
             {
               "chordIDs": [["C"]],
               "times": 1,
-              "strumm": ["D", "-", "-", "U", "Dx", "Ux", "Dx"]
+              "strumm": 6
             },
             {
               "chordIDs": [["G"]],
               "times": 1,
-              "strumm": ["U", "Dx", "U", "D", "-", "Dx", "Ux", "Dx", "Ux"]
+              "strumm": 7
             }
           ]
         }
@@ -142,17 +136,17 @@
             {
               "chordIDs": [["Am", "F", "G"]],
               "times": 8,
-              "strumm": ["D", "-"]
+              "strumm": 5
             },
             {
               "chordIDs": [["C"]],
               "times": 3,
-              "strumm": ["D", "-"]
+              "strumm": 5
             },
             {
               "chordIDs": [["G"]],
               "times": 5,
-              "strumm": ["D", "-"]
+              "strumm": 5
             }
           ]
         }
@@ -169,24 +163,7 @@
             {
               "chordIDs": [["F", "G", "Am", "Em"]],
               "times": 1,
-              "strumm": [
-                "De",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "De",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "De",
-                "-",
-                "D",
-                "-"
-              ]
+              "strumm": 4
             }
           ]
         },
@@ -196,24 +173,7 @@
             {
               "chordIDs": [["F", "G", "Am", "E"]],
               "times": 1,
-              "strumm": [
-                "De",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "De",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "De",
-                "-",
-                "D",
-                "-"
-              ]
+              "strumm": 4
             }
           ]
         }
@@ -230,34 +190,17 @@
             {
               "chordIDs": [["Am", "F", "G"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "-",
-                "U",
-                "Dx",
-                "Ux",
-                "Dx",
-                "Ux",
-                "Dx",
-                "Ux",
-                "D",
-                "-",
-                "Dx",
-                "U",
-                "Dx",
-                "Ux"
-              ]
+              "strumm": 3
             },
             {
               "chordIDs": [["C"]],
               "times": 1,
-              "strumm": ["D", "-", "-", "U", "Dx", "Ux", "Dx"]
+              "strumm": 6
             },
             {
               "chordIDs": [["G"]],
               "times": 1,
-              "strumm": ["U", "Dx", "U", "D", "-", "Dx", "Ux", "Dx", "Ux"]
+              "strumm": 7
             }
           ]
         }

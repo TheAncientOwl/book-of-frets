@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "contributors": ["TheAncientOwl"],
   "title": "Let Me Love You",
   "artists": ["DJ Snake", "Justin Bieber"],
@@ -7,6 +7,14 @@
   "notes": [],
   "capo": 3,
   "chordIDs": ["Am", "C", "Em", "F", "G", "Dm"],
+  "strumms": [
+    ["D"],
+    ["D", "-", "-", "-", "U", "Dx", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"],
+    ["D", "-", "-"],
+    ["-", "U", "X", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"],
+    ["D", "-", "U", "D", "U", "D", "-", "U", "D", "U", "D", "-", "D", "U"],
+    ["D", "-", "D", "U", "X", "-", "D", "-", "D", "-", "D", "U", "X", "-", "D", "U"]
+  ],
   "segments": {
     "intro": {
       "name": "intro",
@@ -19,12 +27,12 @@
             {
               "chordIDs": [["Am", "C"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 0
             },
             {
               "chordIDs": [["F"]],
               "times": 2,
-              "strumm": ["D"]
+              "strumm": 0
             }
           ]
         }
@@ -41,24 +49,7 @@
             {
               "chordIDs": [["Am", "C"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "-",
-                "-",
-                "U",
-                "Dx",
-                "-",
-                "D",
-                "-",
-                "U",
-                "D",
-                "U",
-                "D",
-                "-",
-                "D",
-                "U"
-              ]
+              "strumm": 1
             }
           ]
         },
@@ -68,12 +59,12 @@
             {
               "chordIDs": [["Em"]],
               "times": 1,
-              "strumm": ["D", "-", "-"]
+              "strumm": 2
             },
             {
               "chordIDs": [["F"]],
               "times": 1,
-              "strumm": ["-", "U", "X", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
+              "strumm": 3
             }
           ]
         }
@@ -90,7 +81,7 @@
             {
               "chordIDs": [["F", "Am", "G", "Dm"]],
               "times": 1,
-              "strumm": ["D", "-", "U", "D", "U", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
+              "strumm": 4
             }
           ]
         }
@@ -107,24 +98,7 @@
             {
               "chordIDs": [["Am", "C"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "-",
-                "-",
-                "U",
-                "Dx",
-                "-",
-                "D",
-                "-",
-                "U",
-                "D",
-                "U",
-                "D",
-                "-",
-                "D",
-                "U"
-              ]
+              "strumm": 1
             }
           ]
         },
@@ -134,12 +108,12 @@
             {
               "chordIDs": [["Em"]],
               "times": 1,
-              "strumm": ["D", "-", "-"]
+              "strumm": 2
             },
             {
               "chordIDs": [["F"]],
               "times": 1,
-              "strumm": ["-", "U", "X", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
+              "strumm": 3
             }
           ]
         }
@@ -156,24 +130,7 @@
             {
               "chordIDs": [["Am", "C"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "D",
-                "U",
-                "X",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "U",
-                "X",
-                "-",
-                "D",
-                "U"
-              ]
+              "strumm": 5
             }
           ]
         },
@@ -183,12 +140,12 @@
             {
               "chordIDs": [["Em"]],
               "times": 1,
-              "strumm": ["D", "-", "-"]
+              "strumm": 2
             },
             {
               "chordIDs": [["F"]],
               "times": 1,
-              "strumm": ["-", "U", "X", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
+              "strumm": 3
             }
           ]
         }

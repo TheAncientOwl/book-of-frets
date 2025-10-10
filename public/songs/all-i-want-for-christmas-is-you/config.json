@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "contributors": ["TheAncientOwl"],
   "title": "All I Want For Christmas Is You",
   "artists": ["Mariah Carey"],
@@ -7,6 +7,7 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["G", "Em", "C", "D", "G/B", "Cm_3fr", "B7", "D7", "E7", "Am7"],
+  "strumms": [["D"], ["D", "U"]],
   "segments": {
     "intro/break-down": {
       "name": "intro / break",
@@ -19,7 +20,7 @@
             {
               "chordIDs": [["G", "Em", "C", "D"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 0
             }
           ]
         }
@@ -40,7 +41,7 @@
                 ["G", "E7", "Am7", "Cm_3fr", "D7"]
               ],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 0
             }
           ]
         }
@@ -57,7 +58,7 @@
             {
               "chordIDs": [["G", "Em", "C", "D"]],
               "times": 4,
-              "strumm": ["D", "U"]
+              "strumm": 1
             }
           ]
         }
@@ -77,7 +78,7 @@
                 ["C", "C", "Cm_3fr", "Cm_3fr"]
               ],
               "times": 4,
-              "strumm": ["D", "U"]
+              "strumm": 1
             }
           ]
         }
@@ -94,22 +95,22 @@
             {
               "chordIDs": [["G", "G", "G", "G"]],
               "times": 1,
-              "strumm": ["D", "U"]
+              "strumm": 1
             },
             {
               "chordIDs": [["G", "B7"]],
               "times": 2,
-              "strumm": ["D", "U"]
+              "strumm": 1
             },
             {
               "chordIDs": [["Em"]],
               "times": 4,
-              "strumm": ["D", "U"]
+              "strumm": 1
             },
             {
               "chordIDs": [["Em", "Cm_3fr"]],
               "times": 2,
-              "strumm": ["D", "U"]
+              "strumm": 1
             }
           ]
         },
@@ -119,7 +120,7 @@
             {
               "chordIDs": [["G", "E7", "Am7", "D7"]],
               "times": 4,
-              "strumm": ["D", "U"]
+              "strumm": 1
             }
           ]
         }
@@ -140,7 +141,7 @@
                 ["Am7", "Am7", "D", "D"]
               ],
               "times": 4,
-              "strumm": ["D", "U"]
+              "strumm": 1
             }
           ]
         }

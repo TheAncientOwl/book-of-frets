@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "contributors": ["TheAncientOwl"],
   "title": "Watermelon Sugar",
   "artists": ["Harry Styles"],
@@ -7,6 +7,7 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["Dm", "Am", "C", "G"],
+  "strumms": [["D", "-", "-", "-", "D", "-", "D", "U", "-", "U", "D", "U", "-", "U", "D", "U"]],
   "segments": {
     "main": {
       "name": "main",
@@ -19,24 +20,7 @@
             {
               "chordIDs": [["Dm", "Am", "C", "G"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "-",
-                "-",
-                "D",
-                "-",
-                "D",
-                "U",
-                "-",
-                "U",
-                "D",
-                "U",
-                "-",
-                "U",
-                "D",
-                "U"
-              ]
+              "strumm": 0
             }
           ]
         }

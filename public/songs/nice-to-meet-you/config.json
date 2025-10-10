@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "contributors": ["TheAncientOwl"],
   "title": "Nice to Meet You",
   "artists": ["Myles Smith"],
@@ -7,6 +7,7 @@
   "notes": [],
   "capo": 1,
   "chordIDs": ["Em", "C", "G", "D"],
+  "strumms": [["D", "-", "D", "-", "U", "D", "U"], ["D"]],
   "segments": {
     "verse": {
       "name": "verse",
@@ -22,7 +23,7 @@
                 ["G", "G"]
               ],
               "times": 2,
-              "strumm": ["D", "-", "D", "-", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -42,7 +43,7 @@
                 ["Em", "C", "G"]
               ],
               "times": 2,
-              "strumm": ["D", "-", "D", "-", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         },
@@ -52,7 +53,7 @@
             {
               "chordIDs": [["D"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 1
             }
           ]
         }
@@ -69,7 +70,7 @@
             {
               "chordIDs": [["Em", "C", "G", "D"]],
               "times": 2,
-              "strumm": ["D", "-", "D", "-", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -86,7 +87,7 @@
             {
               "chordIDs": [["Em", "C", "G", "D"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -103,7 +104,7 @@
             {
               "chordIDs": [["Em", "C", "G", "D"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 1
             }
           ]
         }

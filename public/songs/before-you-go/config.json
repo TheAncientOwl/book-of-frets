@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "contributors": ["TheAncientOwl"],
   "title": "Before You go",
   "artists": ["Lewis Capaldi"],
@@ -7,6 +7,7 @@
   "notes": [],
   "capo": 3,
   "chordIDs": ["C", "Am", "Fmaj7", "G"],
+  "strumms": [["D", "-", "D", "U", "D", "U"]],
   "segments": {
     "verse-picked-1": {
       "name": "verse picked 1",
@@ -37,7 +38,7 @@
             {
               "chordIDs": [["C", "Am", "Fmaj7", "G"]],
               "times": 4,
-              "strumm": ["D", "-", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -54,7 +55,7 @@
             {
               "chordIDs": [["C", "G", "Am", "Fmaj7"]],
               "times": 4,
-              "strumm": ["D", "-", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         },
@@ -64,7 +65,7 @@
             {
               "chordIDs": [["G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -84,7 +85,7 @@
                 ["Am", "F", "G", "G"]
               ],
               "times": 2,
-              "strumm": ["D", "-", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -107,12 +108,12 @@
             {
               "chordIDs": [["C", "G", "Am"]],
               "times": 4,
-              "strumm": ["D", "-", "D", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["Fmaj7"]],
               "times": 3,
-              "strumm": ["D", "-", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }

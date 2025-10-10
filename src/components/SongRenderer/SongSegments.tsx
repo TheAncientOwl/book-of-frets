@@ -6,11 +6,11 @@
  *
  * @file SongSegments.tsx
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 0.12
  * @description Render song segments data.
  */
 
-import type { TSongSegment } from '@/common/types/song.types';
+import type { TSongSegment, TStrummingPattern } from '@/common/types/song.types';
 import { SongSegmentBody, SongSegmentHeading } from '@/components/SongRenderer/SongSegment';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
 import {
@@ -24,6 +24,7 @@ import {
 type TSongSegmentsProps = {
   segments: Record<string, TSongSegment>;
   order: string[];
+  strumms: TStrummingPattern[];
 };
 
 export const SongSegments = (props: TSongSegmentsProps) => {
@@ -63,7 +64,7 @@ export const SongSegments = (props: TSongSegmentsProps) => {
                 textAlign='center'
                 width='100%'
               >
-                <SongSegmentHeading {...songSegmentData} />
+                <SongSegmentHeading {...songSegmentData} strumms={props.strumms} />
               </Box>
               <AccordionIcon
                 // [*] theme colors
@@ -71,7 +72,7 @@ export const SongSegments = (props: TSongSegmentsProps) => {
               />
             </AccordionButton>
             <AccordionPanel>
-              <SongSegmentBody {...songSegmentData} />
+              <SongSegmentBody {...songSegmentData} strumms={props.strumms} />
             </AccordionPanel>
           </AccordionItem>
         );

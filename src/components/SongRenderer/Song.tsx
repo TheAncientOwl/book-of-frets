@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.28
+ * @version 0.29
  * @description Render song based on given config.
  */
 
@@ -55,7 +55,7 @@ export const Song = (props: TSongProps) => {
       >
         <SongChordsList chordIDs={props.chordIDs} />
 
-        <SongSegments segments={props.segments} order={props.order} />
+        <SongSegments segments={props.segments} order={props.order} strumms={props.strumms} />
       </Accordion>
 
       <SongNotes notes={props.notes} />

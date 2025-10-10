@@ -50,6 +50,17 @@
       },
       "minItems": 1
     },
+    "strumms": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["D", "U", "-", "Dx", "Ux", "X", "De", "Ue"]
+        },
+        "minItems": 1
+      }
+    },
     "segments": {
       "type": "object",
       "additionalProperties": {
@@ -95,14 +106,7 @@
                             "minimum": 1,
                             "default": 1
                           },
-                          "strumm": {
-                            "type": "array",
-                            "items": {
-                              "type": "string",
-                              "enum": ["D", "U", "-", "Dx", "Ux", "X", "De", "Ue"]
-                            },
-                            "minItems": 1
-                          }
+                          "strumm": { "type": "number", "minimum": 0, "default": 0 }
                         },
                         "required": ["chordIDs", "times", "strumm"]
                       },
@@ -176,6 +180,7 @@
     "notes",
     "capo",
     "chordIDs",
+    "strumms",
     "segments",
     "order",
     "res"

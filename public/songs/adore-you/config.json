@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "contributors": ["TheAncientOwl"],
   "title": "Adore You",
   "artists": ["Harry Styles"],
@@ -7,6 +7,7 @@
   "notes": [],
   "capo": 3,
   "chordIDs": ["Am7", "C", "Fmaj7", "G"],
+  "strumms": [["D"], ["D", "-", "D", "-", "D", "-", "D", "U"]],
   "segments": {
     "intro": {
       "name": "intro",
@@ -22,7 +23,7 @@
                 ["Fmaj7", "-", "-", "G"]
               ],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 0
             }
           ]
         }
@@ -42,7 +43,7 @@
                 ["Fmaj7", "Fmaj7", "Fmaj7", "G"]
               ],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "D", "-", "D", "U"]
+              "strumm": 1
             }
           ]
         }
@@ -68,7 +69,7 @@
                 ["Fmaj7", "Fmaj7", "Fmaj7", "G"]
               ],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "D", "-", "D", "U"]
+              "strumm": 1
             }
           ]
         }
@@ -100,7 +101,7 @@
                 ["Fmaj7", "Fmaj7", "Fmaj7", "G"]
               ],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "D", "-", "D", "U"]
+              "strumm": 1
             }
           ]
         }

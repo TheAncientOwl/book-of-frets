@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "contributors": ["TheAncientOwl"],
   "title": "The Times They Are A Changin'",
   "artists": ["Bob Dylan"],
@@ -7,6 +7,7 @@
   "notes": [],
   "capo": 3,
   "chordIDs": ["G", "Em", "C", "Csus2", "G/B"],
+  "strumms": [["D", "-", "D", "U", "D", "U"]],
   "segments": {
     "intro": {
       "name": "intro",
@@ -20,7 +21,7 @@
               "align": "flex-start",
               "chordIDs": [["G", "G", "G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -45,7 +46,7 @@
                 ["G", "G", "D", "G"]
               ],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -66,7 +67,7 @@
                 ["G", "G", "G"]
               ],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -91,7 +92,7 @@
                 ["G", "G", "D"]
               ],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -113,7 +114,7 @@
                 ["D", "D", "D"]
               ],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -138,7 +139,7 @@
                 ["G", "C", "D", "G"]
               ],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -156,7 +157,7 @@
               "align": "flex-start",
               "chordIDs": [["G", "D", "Csus2", "D", "G", "G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -181,7 +182,7 @@
                 ["G", "C", "D", "G"]
               ],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -204,7 +205,7 @@
                 ["G", "G", "G"]
               ],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -229,7 +230,7 @@
                 ["G", "C", "D", "G"]
               ],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -247,7 +248,7 @@
               "align": "flex-start",
               "chordIDs": [["G", "Em", "C", "G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }

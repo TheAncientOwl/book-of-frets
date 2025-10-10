@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "contributors": ["TheAncientOwl"],
   "title": "Wake Me Up",
   "artists": ["Avicii"],
@@ -7,6 +7,7 @@
   "notes": [],
   "capo": 2,
   "chordIDs": ["Am", "Fmaj7", "G", "C/G", "E"],
+  "strumms": [["D", "-", "D", "-", "-", "U", "D", "U"]],
   "segments": {
     "intro": {
       "name": "intro",
@@ -19,12 +20,12 @@
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["C/G", "G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         },
@@ -34,12 +35,12 @@
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["C/G", "E"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -56,12 +57,12 @@
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["C/G", "G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         },
@@ -71,12 +72,12 @@
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["C/G", "E"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -93,12 +94,12 @@
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["C/G", "G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         },
@@ -108,12 +109,12 @@
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["C/G", "E"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -130,7 +131,7 @@
             {
               "chordIDs": [["Am", "Fmaj7", "C/G", "C/G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }

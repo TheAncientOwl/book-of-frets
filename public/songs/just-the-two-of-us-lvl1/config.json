@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "contributors": ["TheAncientOwl"],
   "title": "Just the Two of Us | Lvl 1",
   "artists": ["Grover Washington Jr."],
@@ -7,6 +7,11 @@
   "notes": [],
   "capo": 1,
   "chordIDs": ["CM7", "B7", "Em", "Dm7", "G7"],
+  "strumms": [
+    ["D", "-", "D", "U", "-", "U", "D", "U"],
+    ["D", "-", "D", "U"],
+    ["D", "-", "-", "U", "D", "U", "D", "-", "-", "U", "D", "U", "D", "-", "D", "U"]
+  ],
   "segments": {
     "main-progression": {
       "name": "main progression",
@@ -19,22 +24,22 @@
             {
               "chordIDs": [["CM7"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["B7"]],
               "times": 2,
-              "strumm": ["D", "-", "D", "U"]
+              "strumm": 1
             },
             {
               "chordIDs": [["Em"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["Dm7", "G7"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U"]
+              "strumm": 1
             }
           ]
         },
@@ -44,34 +49,17 @@
             {
               "chordIDs": [["CM7"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["B7"]],
               "times": 2,
-              "strumm": ["D", "-", "D", "U"]
+              "strumm": 1
             },
             {
               "chordIDs": [["Em"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "-",
-                "U",
-                "D",
-                "U",
-                "D",
-                "-",
-                "-",
-                "U",
-                "D",
-                "U",
-                "D",
-                "-",
-                "D",
-                "U"
-              ]
+              "strumm": 2
             }
           ]
         }

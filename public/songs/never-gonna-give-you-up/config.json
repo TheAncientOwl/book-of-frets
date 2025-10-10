@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "contributors": ["TheAncientOwl"],
   "title": "Never Gonna Give You Up",
   "artists": ["Rick Astley"],
@@ -7,6 +7,11 @@
   "notes": ["Last chorus Em & Am only one down strum"],
   "capo": 1,
   "chordIDs": ["Fmaj7", "G", "Em", "Am"],
+  "strumms": [
+    ["D", "-", "U", "D"],
+    ["D", "-", "U", "D", "D", "D", "U"],
+    ["D", "-", "U", "D", "-", "D", "-", "U", "D", "D", "D", "U"]
+  ],
   "segments": {
     "intro": {
       "name": "intro",
@@ -19,12 +24,12 @@
             {
               "chordIDs": [["Fmaj7"]],
               "times": 1,
-              "strumm": ["D", "-", "U", "D"]
+              "strumm": 0
             },
             {
               "chordIDs": [["G"]],
               "times": 1,
-              "strumm": ["D", "-", "U", "D", "D", "D", "U"]
+              "strumm": 1
             }
           ]
         },
@@ -34,12 +39,12 @@
             {
               "chordIDs": [["Em"]],
               "times": 1,
-              "strumm": ["D", "-", "U", "D"]
+              "strumm": 0
             },
             {
               "chordIDs": [["Am"]],
               "times": 1,
-              "strumm": ["D", "-", "U", "D", "D", "D", "U"]
+              "strumm": 1
             }
           ]
         }
@@ -56,7 +61,7 @@
             {
               "chordIDs": [["Fmaj7", "G"]],
               "times": 1,
-              "strumm": ["D", "-", "U", "D", "-", "D", "-", "U", "D", "D", "D", "U"]
+              "strumm": 2
             }
           ]
         }
@@ -73,7 +78,7 @@
             {
               "chordIDs": [["Fmaj7", "G"]],
               "times": 1,
-              "strumm": ["D", "-", "U", "D", "-", "D", "-", "U", "D", "D", "D", "U"]
+              "strumm": 2
             }
           ]
         }
@@ -90,12 +95,12 @@
             {
               "chordIDs": [["Fmaj7"]],
               "times": 1,
-              "strumm": ["D", "-", "U", "D"]
+              "strumm": 0
             },
             {
               "chordIDs": [["G"]],
               "times": 1,
-              "strumm": ["D", "-", "U", "D", "D", "D", "U"]
+              "strumm": 1
             }
           ]
         },
@@ -105,12 +110,12 @@
             {
               "chordIDs": [["Em"]],
               "times": 1,
-              "strumm": ["D", "-", "U", "D"]
+              "strumm": 0
             },
             {
               "chordIDs": [["Am"]],
               "times": 1,
-              "strumm": ["D", "-", "U", "D", "D", "D", "U"]
+              "strumm": 1
             }
           ]
         }

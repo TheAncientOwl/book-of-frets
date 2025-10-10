@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "contributors": ["TheAncientOwl"],
   "title": "Save Your Tears",
   "artists": ["The Weekend", "Ariana Grande"],
@@ -7,6 +7,14 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["C", "Am", "Em", "G", "Fmaj7"],
+  "strumms": [
+    ["D", "-", "D", "-", "De", "-", "D", "-", "D", "-", "D", "-", "De", "-", "D", "-"],
+    ["D", "D"],
+    ["D", "U", "D", "U", "D", "U", "D", "U"],
+    ["D", "U", "D", "U", "D", "-", "-", "-"],
+    ["D", "-", "D", "-", "D", "-", "D", "-"],
+    ["D"]
+  ],
   "segments": {
     "intro": {
       "name": "intro",
@@ -19,24 +27,7 @@
             {
               "chordIDs": [["C"]],
               "times": 4,
-              "strumm": [
-                "D",
-                "-",
-                "D",
-                "-",
-                "De",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "De",
-                "-",
-                "D",
-                "-"
-              ]
+              "strumm": 0
             }
           ]
         }
@@ -53,24 +44,7 @@
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "D",
-                "-",
-                "De",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "De",
-                "-",
-                "D",
-                "-"
-              ]
+              "strumm": 0
             }
           ]
         }
@@ -87,24 +61,7 @@
             {
               "chordIDs": [["Dm", "Am", "Fmaj7", "G"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "D",
-                "-",
-                "De",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "De",
-                "-",
-                "D",
-                "-"
-              ]
+              "strumm": 0
             }
           ]
         }
@@ -121,12 +78,12 @@
             {
               "chordIDs": [["C", "Am"]],
               "times": 1,
-              "strumm": ["D", "D"]
+              "strumm": 1
             },
             {
               "chordIDs": [["Em", "G"]],
               "times": 1,
-              "strumm": ["D", "U", "D", "U", "D", "U", "D", "U"]
+              "strumm": 2
             }
           ]
         },
@@ -136,17 +93,17 @@
             {
               "chordIDs": [["C", "Am"]],
               "times": 1,
-              "strumm": ["D", "D"]
+              "strumm": 1
             },
             {
               "chordIDs": [["Em"]],
               "times": 1,
-              "strumm": ["D", "U", "D", "U", "D", "U", "D", "U"]
+              "strumm": 2
             },
             {
               "chordIDs": [["G"]],
               "times": 1,
-              "strumm": ["D", "U", "D", "U", "D", "-", "-", "-"]
+              "strumm": 3
             }
           ]
         }
@@ -163,24 +120,7 @@
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "D",
-                "-",
-                "De",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "De",
-                "-",
-                "D",
-                "-"
-              ]
+              "strumm": 0
             }
           ]
         }
@@ -197,24 +137,7 @@
             {
               "chordIDs": [["Dm", "Am", "Fmaj7"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "D",
-                "-",
-                "De",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "De",
-                "-",
-                "D",
-                "-"
-              ]
+              "strumm": 0
             }
           ]
         },
@@ -224,7 +147,7 @@
             {
               "chordIDs": [["F", "G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "D", "-", "D", "-"]
+              "strumm": 4
             }
           ]
         },
@@ -234,24 +157,7 @@
             {
               "chordIDs": [["Dm", "Am", "Fmaj7", "G"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "D",
-                "-",
-                "De",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "De",
-                "-",
-                "D",
-                "-"
-              ]
+              "strumm": 0
             }
           ]
         }
@@ -268,7 +174,7 @@
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 5
             }
           ]
         }
@@ -285,7 +191,7 @@
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
               "times": 1,
-              "strumm": ["D", "U", "D", "U", "D", "U", "D", "U"]
+              "strumm": 2
             }
           ]
         }

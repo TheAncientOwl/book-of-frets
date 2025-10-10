@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "contributors": ["TheAncientOwl"],
   "title": "Sweater Weather",
   "artists": ["The Neighbourhood"],
@@ -7,6 +7,13 @@
   "notes": [],
   "capo": 3,
   "chordIDs": ["C", "Am", "Em", "G", "D"],
+  "strumms": [
+    ["D", "-", "D", "U", "-", "U", "D", "U"],
+    ["D", "-", "D", "U"],
+    ["D"],
+    ["D", "-", "D", "-", "-", "U", "D", "U"],
+    ["D", "-", "D", "-", "D", "U", "D", "U"]
+  ],
   "segments": {
     "verse": {
       "name": "verse",
@@ -19,12 +26,12 @@
             {
               "chordIDs": [["C", "Am", "Em"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["Am", "G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U"]
+              "strumm": 1
             }
           ]
         }
@@ -41,7 +48,7 @@
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -58,7 +65,7 @@
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 2
             }
           ]
         }
@@ -75,7 +82,7 @@
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 2
             }
           ]
         },
@@ -85,7 +92,7 @@
             {
               "chordIDs": [["D"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 2
             }
           ]
         }
@@ -102,7 +109,7 @@
             {
               "chordIDs": [["Am", "G", "D", "D"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "strumm": 3
             }
           ]
         },
@@ -112,7 +119,7 @@
             {
               "chordIDs": [["Am", "G", "D", "D"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "strumm": 3
             }
           ]
         }
@@ -129,7 +136,7 @@
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "strumm": 4
             }
           ]
         }
@@ -146,7 +153,7 @@
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 2
             }
           ]
         }

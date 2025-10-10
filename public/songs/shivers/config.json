@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "contributors": ["TheAncientOwl"],
   "title": "Shivers",
   "artists": ["Ed Sheeran"],
@@ -7,6 +7,13 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["Bm", "G", "D", "A"],
+  "strumms": [
+    ["D", "-", "D", "Ue", "-", "U", "D", "Ue", "-", "U", "D", "Ue", "-", "U", "D", "U"],
+    ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"],
+    ["D", "U", "D", "U", "-", "U", "D", "U", "-", "U", "D", "U", "-", "U", "D", "U"],
+    ["D", "U", "Dx", "U"],
+    ["D"]
+  ],
   "segments": {
     "verse": {
       "name": "verse",
@@ -19,24 +26,7 @@
             {
               "chordIDs": [["Bm", "G", "D", "A"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "-",
-                "D",
-                "Ue",
-                "-",
-                "U",
-                "D",
-                "Ue",
-                "-",
-                "U",
-                "D",
-                "Ue",
-                "-",
-                "U",
-                "D",
-                "U"
-              ]
+              "strumm": 0
             }
           ]
         }
@@ -53,12 +43,12 @@
             {
               "chordIDs": [["Bm", "G", "D"]],
               "times": 2,
-              "strumm": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+              "strumm": 1
             },
             {
               "chordIDs": [["A"]],
               "times": 1,
-              "strumm": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+              "strumm": 1
             }
           ]
         }
@@ -75,24 +65,7 @@
             {
               "chordIDs": [["Bm", "G", "D", "A"]],
               "times": 1,
-              "strumm": [
-                "D",
-                "U",
-                "D",
-                "U",
-                "-",
-                "U",
-                "D",
-                "U",
-                "-",
-                "U",
-                "D",
-                "U",
-                "-",
-                "U",
-                "D",
-                "U"
-              ]
+              "strumm": 2
             }
           ]
         },
@@ -102,7 +75,7 @@
             {
               "chordIDs": [["Bm", "G", "D", "A"]],
               "times": 4,
-              "strumm": ["D", "U", "Dx", "U"]
+              "strumm": 3
             }
           ]
         }
@@ -119,17 +92,17 @@
             {
               "chordIDs": [["Bm"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 4
             },
             {
               "chordIDs": [["G", "D"]],
               "times": 2,
-              "strumm": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+              "strumm": 1
             },
             {
               "chordIDs": [["A"]],
               "times": 1,
-              "strumm": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+              "strumm": 1
             }
           ]
         },
@@ -139,12 +112,12 @@
             {
               "chordIDs": [["Bm", "G", "D"]],
               "times": 2,
-              "strumm": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+              "strumm": 1
             },
             {
               "chordIDs": [["A"]],
               "times": 1,
-              "strumm": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+              "strumm": 1
             }
           ]
         }

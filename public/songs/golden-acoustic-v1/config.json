@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "contributors": ["TheAncientOwl"],
   "title": "Golden",
   "artists": ["HUNTR/X"],
@@ -7,6 +7,7 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["C", "G", "D", "Em", "Bm"],
+  "strumms": [["D", "-", "D", "U", "U", "D", "U"], ["D"], ["D", "-", "D", "U"]],
   "segments": {
     "intro": {
       "name": "intro",
@@ -22,7 +23,7 @@
                 ["C", "G", "D"]
               ],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         },
@@ -32,7 +33,7 @@
             {
               "chordIDs": [["Em"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 1
             }
           ]
         }
@@ -49,7 +50,7 @@
             {
               "chordIDs": [["C", "G", "D", "Em"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -66,7 +67,7 @@
             {
               "chordIDs": [["C", "G", "D", "Em"], ["C", "G", "D", "D"], ["C"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -83,17 +84,17 @@
             {
               "chordIDs": [["D"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["G", "D"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U"]
+              "strumm": 2
             },
             {
               "chordIDs": [["Em", "C"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         },
@@ -103,17 +104,17 @@
             {
               "chordIDs": [["D"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["G", "D"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U"]
+              "strumm": 2
             },
             {
               "chordIDs": [["Em"]],
               "times": 3,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -130,12 +131,12 @@
             {
               "chordIDs": [["Em"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["D", "Bm", "C"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         },
@@ -145,12 +146,12 @@
             {
               "chordIDs": [["G"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["D", "Bm", "C"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -170,7 +171,7 @@
                 ["Em", "Bm", "D", "C"]
               ],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -187,17 +188,17 @@
             {
               "chordIDs": [["D"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["G", "D"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U"]
+              "strumm": 2
             },
             {
               "chordIDs": [["Em", "C"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         },
@@ -207,17 +208,17 @@
             {
               "chordIDs": [["D"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["G", "D"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U"]
+              "strumm": 2
             },
             {
               "chordIDs": [["Em"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -234,17 +235,17 @@
             {
               "chordIDs": [["C", "D"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             },
             {
               "chordIDs": [["G", "D"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U"]
+              "strumm": 2
             },
             {
               "chordIDs": [["Em"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -264,7 +265,7 @@
                 ["C", "G", "D"]
               ],
               "times": 1,
-              "strumm": ["D", "-", "D", "U", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         },
@@ -274,7 +275,7 @@
             {
               "chordIDs": [["Em"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 1
             }
           ]
         }

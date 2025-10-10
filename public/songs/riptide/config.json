@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "Riptide",
   "artists": ["Vance Joy"],
@@ -7,6 +7,7 @@
   "notes": [],
   "capo": 5,
   "chordIDs": ["Am", "G", "C", "Fmaj7"],
+  "strumms": [["D", "-", "D", "-", "-", "U", "D", "U"], ["D"]],
   "segments": {
     "intro/verse/chorus": {
       "name": "intro / verse / chorus",
@@ -19,7 +20,7 @@
             {
               "chordIDs": [["Am", "G", "C", "C"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -67,7 +68,7 @@
             {
               "chordIDs": [["Am", "G", "C", "Fmaj7"]],
               "times": 2,
-              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -84,7 +85,7 @@
             {
               "chordIDs": [["Am", "G", "C"]],
               "times": 1,
-              "strumm": ["D"]
+              "strumm": 1
             }
           ]
         }

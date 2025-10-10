@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "contributors": ["TheAncientOwl"],
   "title": "Radioactive",
   "artists": ["Imagine Dragons"],
@@ -7,6 +7,10 @@
   "notes": [],
   "capo": 2,
   "chordIDs": ["Am", "C", "G", "D"],
+  "strumms": [
+    ["D", "-", "D", "-", "U", "D", "U"],
+    ["D", "U", "D", "U", "D", "-", "D", "U"]
+  ],
   "segments": {
     "intro": {
       "name": "intro",
@@ -19,7 +23,7 @@
             {
               "chordIDs": [["Am", "C", "G", "D"]],
               "times": 1,
-              "strumm": ["D", "-", "D", "-", "U", "D", "U"]
+              "strumm": 0
             }
           ]
         }
@@ -36,7 +40,7 @@
             {
               "chordIDs": [["Am", "C", "G", "D"]],
               "times": 1,
-              "strumm": ["D", "U", "D", "U", "D", "-", "D", "U"]
+              "strumm": 1
             }
           ]
         }

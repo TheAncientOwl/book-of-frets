@@ -6,11 +6,11 @@
  *
  * @file ChordsChunkItem.tsx
  * @author Alexandru Delegeanu
- * @version 0.23
+ * @version 0.24
  * @description Render song pattern segment.
  */
 
-import type { TChordsChunkItem } from '@/common/types/song.types';
+import type { TChordsChunkItem, TStrummingPattern } from '@/common/types/song.types';
 import { Chord } from '@/components/ChordRenderer/Chord';
 import { useAppState } from '@/state/hooks/useAppState';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
@@ -29,7 +29,9 @@ import {
   Tooltip,
 } from '@chakra-ui/react';
 
-type TChordsChunkItemProps = TChordsChunkItem & {};
+type TChordsChunkItemProps = TChordsChunkItem & {
+  strumms: TStrummingPattern[];
+};
 
 const EMPHASIZE_STRUMS = ['De', 'Ue'];
 const EMPHASIZE_STRUM_CHAR = 'e';
@@ -39,6 +41,14 @@ const NO_CHORD_ID = '-';
 export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
   const { song: theme } = useAppTheme();
   const { chordsIndex, songSettings } = useAppState();
+
+  if (props.strumm >= props.strumms.length) {
+    console.error({
+      message: `Found strum index ${props.strumm} when strumms length is ${props.strumms.length}`,
+      strumms: props.strumms,
+    });
+    return null;
+  }
 
   return (
     <Flex direction='column' alignItems='center' justifyContent='flex-end'>
@@ -138,7 +148,7 @@ export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
             // [*] theme colors
             color={theme.chunks.item.chordsPattern.chord.segment.pattern}
           >
-            {props.strumm.map((pattern, index) => {
+            {props.strumms[props.strumm].map((pattern, index) => {
               return (
                 <Text
                   key={index}
