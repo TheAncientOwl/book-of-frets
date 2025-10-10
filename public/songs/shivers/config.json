@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.1",
   "contributors": ["TheAncientOwl"],
   "title": "Shivers",
   "artists": ["Ed Sheeran"],
@@ -15,7 +15,7 @@
     ["D"]
   ],
   "segments": {
-    "verse": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 1,
@@ -32,7 +32,7 @@
         }
       ]
     },
-    "chorus-1": {
+    "c1": {
       "name": "chorus 1",
       "type": "chords",
       "times": 1,
@@ -81,7 +81,7 @@
         }
       ]
     },
-    "chorus-2": {
+    "c2": {
       "name": "chorus 2",
       "type": "chords",
       "times": 1,
@@ -124,7 +124,7 @@
       ]
     }
   },
-  "order": ["verse", "chorus-1", "verse", "chorus-2"],
+  "order": ["v", "c1", "v", "c2"],
   "res": [
     {
       "alias": "Shivers Guitar Tutorial Ed Sheeran Guitar Lesson |No Capo + Easy Chords|",

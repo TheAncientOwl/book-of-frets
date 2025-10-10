@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.4.1",
   "contributors": ["TheAncientOwl"],
   "title": "Let Me Love You",
   "artists": ["DJ Snake", "Justin Bieber"],
@@ -16,7 +16,7 @@
     ["D", "-", "D", "U", "X", "-", "D", "-", "D", "-", "D", "U", "X", "-", "D", "U"]
   ],
   "segments": {
-    "intro": {
+    "i": {
       "name": "intro",
       "type": "chords",
       "times": 1,
@@ -38,7 +38,7 @@
         }
       ]
     },
-    "verse": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 2,
@@ -70,7 +70,7 @@
         }
       ]
     },
-    "prechorus": {
+    "p": {
       "name": "prechorus",
       "type": "chords",
       "times": 2,
@@ -87,7 +87,7 @@
         }
       ]
     },
-    "chorus": {
+    "c": {
       "name": "chorus",
       "type": "chords",
       "times": 2,
@@ -119,7 +119,7 @@
         }
       ]
     },
-    "dance-break": {
+    "d": {
       "name": "dance break",
       "type": "chords",
       "times": 2,
@@ -152,7 +152,7 @@
       ]
     }
   },
-  "order": ["intro", "verse", "prechorus", "chorus", "dance-break"],
+  "order": ["i", "v", "p", "c", "d"],
   "res": [
     {
       "alias": "Let Me Love You DJ Snake Feat. Justin Bieber Guitar Tutorial Lesson |Tabs + Easy Chords + Cover|",

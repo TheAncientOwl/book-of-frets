@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.4.1",
   "contributors": ["TheAncientOwl"],
   "title": "Just the Two of Us | Lvl 1",
   "artists": ["Grover Washington Jr."],
@@ -13,7 +13,7 @@
     ["D", "-", "-", "U", "D", "U", "D", "-", "-", "U", "D", "U", "D", "-", "D", "U"]
   ],
   "segments": {
-    "main-progression": {
+    "m": {
       "name": "main progression",
       "type": "chords",
       "times": 404,
@@ -66,7 +66,7 @@
       ]
     }
   },
-  "order": ["main-progression"],
+  "order": ["m"],
   "res": [
     {
       "alias": "Just The Two Of Us Guitar Tutorial Grover Washington Jr Guitar |Chords + Fingerpicking|",

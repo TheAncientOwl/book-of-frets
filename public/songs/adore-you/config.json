@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.4.1",
   "contributors": ["TheAncientOwl"],
   "title": "Adore You",
   "artists": ["Harry Styles"],
@@ -9,7 +9,7 @@
   "chordIDs": ["Am7", "C", "Fmaj7", "G"],
   "strumms": [["D"], ["D", "-", "D", "-", "D", "-", "D", "U"]],
   "segments": {
-    "intro": {
+    "i": {
       "name": "intro",
       "type": "chords",
       "times": 1,
@@ -29,7 +29,7 @@
         }
       ]
     },
-    "main-progression-1": {
+    "m1": {
       "name": "main progression",
       "type": "chords",
       "times": 1,
@@ -49,13 +49,13 @@
         }
       ]
     },
-    "post-chorus-1": {
+    "po1": {
       "name": "post chorus 1",
       "type": "strings",
       "times": 1,
       "chunks": []
     },
-    "main-progression-2": {
+    "m2": {
       "name": "main progression",
       "type": "chords",
       "times": 1,
@@ -75,19 +75,19 @@
         }
       ]
     },
-    "post-chorus-2": {
+    "po2": {
       "name": "post chorus 2",
       "type": "strings",
       "times": 1,
       "chunks": []
     },
-    "solo": {
+    "s": {
       "name": "solo",
       "type": "strings",
       "times": 1,
       "chunks": []
     },
-    "main-progression-3": {
+    "m3": {
       "name": "main progression",
       "type": "chords",
       "times": 1,
@@ -107,23 +107,14 @@
         }
       ]
     },
-    "post-chorus-3": {
+    "po3": {
       "name": "post chorus 2",
       "type": "strings",
       "times": 1,
       "chunks": []
     }
   },
-  "order": [
-    "intro",
-    "main-progression-1",
-    "post-chorus-1",
-    "main-progression-2",
-    "post-chorus-2",
-    "solo",
-    "main-progression-3",
-    "post-chorus-3"
-  ],
+  "order": ["i", "m1", "po1", "m2", "po2", "s", "m3", "po3"],
   "res": [
     {
       "alias": "Adore You Guitar Cover Harry Styles 🎸|Tabs + Chords|",

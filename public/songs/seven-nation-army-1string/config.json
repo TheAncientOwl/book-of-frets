@@ -1,5 +1,5 @@
 {
-  "version": "0.5.0",
+  "version": "0.5.1",
   "contributors": ["TheAncientOwl"],
   "title": "Seven Nation Army | 1 String",
   "artists": ["The White Stripes"],
@@ -9,7 +9,7 @@
   "chordIDs": ["-"],
   "strumms": [],
   "segments": {
-    "main": {
+    "m": {
       "name": "main",
       "type": "strings",
       "times": 1,
@@ -60,6 +60,6 @@
       ]
     }
   },
-  "order": ["main"],
+  "order": ["m"],
   "res": []
 }

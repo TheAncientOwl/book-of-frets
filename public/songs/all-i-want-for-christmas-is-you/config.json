@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.1",
   "contributors": ["TheAncientOwl"],
   "title": "All I Want For Christmas Is You",
   "artists": ["Mariah Carey"],
@@ -9,7 +9,7 @@
   "chordIDs": ["G", "Em", "C", "D", "G/B", "Cm_3fr", "B7", "D7", "E7", "Am7"],
   "strumms": [["D"], ["D", "U"]],
   "segments": {
-    "intro/break-down": {
+    "ibd": {
       "name": "intro / break",
       "type": "chords",
       "times": 1,
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "slow-verse": {
+    "sv": {
       "name": "slow verse",
       "type": "chords",
       "times": 1,
@@ -47,7 +47,7 @@
         }
       ]
     },
-    "intro/break-strum": {
+    "ibs": {
       "name": "intro / break",
       "type": "chords",
       "times": 1,
@@ -64,7 +64,7 @@
         }
       ]
     },
-    "verse": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 2,
@@ -84,7 +84,7 @@
         }
       ]
     },
-    "chorus": {
+    "c": {
       "name": "chorus",
       "type": "chords",
       "times": 1,
@@ -126,7 +126,7 @@
         }
       ]
     },
-    "bridge": {
+    "b": {
       "name": "bridge",
       "type": "chords",
       "times": 1,
@@ -148,20 +148,7 @@
       ]
     }
   },
-  "order": [
-    "intro/break-down",
-    "slow-verse",
-    "intro/break-strum",
-    "verse",
-    "intro/break-strum",
-    "verse",
-    "chorus",
-    "intro/break-strum",
-    "bridge",
-    "verse",
-    "chorus",
-    "intro/break-strum"
-  ],
+  "order": ["ibd", "sv", "ibs", "v", "ibs", "v", "c", "ibs", "b", "v", "c", "ibs"],
   "res": [
     {
       "alias": "All I Want For Christmas Is You Guitar Tutorial 🎄🎸Mariah Carey Guitar Lesson |Easy Chords|",

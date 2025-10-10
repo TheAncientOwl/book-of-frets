@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1",
   "contributors": ["TheAncientOwl"],
   "title": "What I've Done",
   "artists": ["Linkin Park"],
@@ -18,7 +18,7 @@
     ["D"]
   ],
   "segments": {
-    "intro": {
+    "i": {
       "name": "intro",
       "type": "chords",
       "times": 1,
@@ -35,7 +35,7 @@
         }
       ]
     },
-    "break": {
+    "bk": {
       "name": "break",
       "type": "chords",
       "times": 1,
@@ -52,7 +52,7 @@
         }
       ]
     },
-    "verse": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 1,
@@ -69,7 +69,7 @@
         }
       ]
     },
-    "prechorus": {
+    "pr": {
       "name": "prechorus",
       "type": "chords",
       "times": 1,
@@ -96,7 +96,7 @@
         }
       ]
     },
-    "chorus-1": {
+    "c1": {
       "name": "chorus 1",
       "type": "chords",
       "times": 1,
@@ -113,7 +113,7 @@
         }
       ]
     },
-    "chorus-2": {
+    "c2": {
       "name": "chorus 2",
       "type": "chords",
       "times": 1,
@@ -138,7 +138,7 @@
         }
       ]
     },
-    "chorus-3": {
+    "c3": {
       "name": "chorus 3",
       "type": "chords",
       "times": 1,
@@ -165,7 +165,7 @@
         }
       ]
     },
-    "final-chorus": {
+    "fc": {
       "name": "final chorus",
       "type": "chords",
       "times": 1,
@@ -182,7 +182,7 @@
         }
       ]
     },
-    "outro": {
+    "o": {
       "name": "outro",
       "type": "chords",
       "times": 1,
@@ -200,19 +200,7 @@
       ]
     }
   },
-  "order": [
-    "intro",
-    "break",
-    "verse",
-    "prechorus",
-    "chorus-1",
-    "verse",
-    "prechorus",
-    "chorus-2",
-    "chorus-3",
-    "final-chorus",
-    "outro"
-  ],
+  "order": ["i", "bk", "v", "pr", "c1", "v", "pr", "c2", "c3", "fc", "o"],
   "res": [
     {
       "alias": "What I've Done Acoustic Guitar Tutorial Linkin Park Guitar Lesson |Easy Chords|",

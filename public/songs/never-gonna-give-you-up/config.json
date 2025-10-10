@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.4.1",
   "contributors": ["TheAncientOwl"],
   "title": "Never Gonna Give You Up",
   "artists": ["Rick Astley"],
@@ -13,7 +13,7 @@
     ["D", "-", "U", "D", "-", "D", "-", "U", "D", "D", "D", "U"]
   ],
   "segments": {
-    "intro": {
+    "i": {
       "name": "intro",
       "type": "chords",
       "times": 4,
@@ -50,7 +50,7 @@
         }
       ]
     },
-    "verse": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 1,
@@ -67,8 +67,8 @@
         }
       ]
     },
-    "pre-chorus": {
-      "name": "pre-chorus",
+    "pr": {
+      "name": "prechorus",
       "type": "chords",
       "times": 1,
       "chunks": [
@@ -84,7 +84,7 @@
         }
       ]
     },
-    "chorus": {
+    "c": {
       "name": "chorus",
       "type": "chords",
       "times": 4,
@@ -122,7 +122,7 @@
       ]
     }
   },
-  "order": ["intro", "verse", "pre-chorus", "chorus", "pre-chorus", "chorus"],
+  "order": ["i", "v", "pr", "c", "pr", "c"],
   "res": [
     {
       "alias": "Rick Astley - Never Gonna Give You Up EASY Guitar Tutorial With Chords / Lyrics",

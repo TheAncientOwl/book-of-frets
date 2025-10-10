@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.1",
   "contributors": ["TheAncientOwl"],
   "title": "Before You go",
   "artists": ["Lewis Capaldi"],
@@ -9,25 +9,25 @@
   "chordIDs": ["C", "Am", "Fmaj7", "G"],
   "strumms": [["D", "-", "D", "U", "D", "U"]],
   "segments": {
-    "verse-picked-1": {
+    "vp1": {
       "name": "verse picked 1",
       "type": "tabs",
       "times": 1,
       "chunks": []
     },
-    "chorus-picked": {
+    "cp": {
       "name": "chorus picked",
       "type": "tabs",
       "times": 1,
       "chunks": []
     },
-    "break": {
-      "name": "chorus picked",
+    "bk": {
+      "name": "break",
       "type": "tabs",
       "times": 1,
       "chunks": []
     },
-    "verse-strummed": {
+    "vs": {
       "name": "verse strummed",
       "type": "chords",
       "times": 1,
@@ -44,7 +44,7 @@
         }
       ]
     },
-    "chorus-strummed": {
+    "cs": {
       "name": "chorus strummed",
       "type": "chords",
       "times": 1,
@@ -71,8 +71,8 @@
         }
       ]
     },
-    "bridge": {
-      "name": "Bridge",
+    "b": {
+      "name": "bridge",
       "type": "chords",
       "times": 1,
       "chunks": [
@@ -91,13 +91,13 @@
         }
       ]
     },
-    "final-chorus-1": {
+    "fc1": {
       "name": "final chorus",
       "type": "tabs",
       "times": 1,
       "chunks": []
     },
-    "final-chorus-2": {
+    "fc2": {
       "name": "final chorus 2",
       "type": "chords",
       "times": 1,
@@ -119,24 +119,14 @@
         }
       ]
     },
-    "verse-picked-2": {
+    "vp2": {
       "name": "verse picked 2",
       "type": "tabs",
       "times": 1,
       "chunks": []
     }
   },
-  "order": [
-    "verse-picked-1",
-    "chorus-picked",
-    "break",
-    "verse-strummed",
-    "chorus-strummed",
-    "bridge",
-    "final-chorus-1",
-    "final-chorus-2",
-    "verse-picked-2"
-  ],
+  "order": ["vp1", "cp", "bk", "vs", "cs", "b", "fc1", "fc2", "vp2"],
   "res": [
     {
       "alias": "Before You Go Guitar Tutorial 🎸 Lewis Capaldi Guitar Lesson |Fingerpicking + TAB|",

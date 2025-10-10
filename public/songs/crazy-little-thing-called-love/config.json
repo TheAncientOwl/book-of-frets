@@ -1,5 +1,5 @@
 {
-  "version": "0.5.0",
+  "version": "0.5.1",
   "contributors": ["TheAncientOwl"],
   "title": "Little Thing Called Love",
   "artists": ["Queen"],
@@ -17,7 +17,7 @@
     ["D"]
   ],
   "segments": {
-    "intro": {
+    "i": {
       "name": "intro",
       "type": "chords",
       "times": 1,
@@ -34,7 +34,7 @@
         }
       ]
     },
-    "verse": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 2,
@@ -76,7 +76,7 @@
         }
       ]
     },
-    "chorus1": {
+    "c1": {
       "name": "chorus 1",
       "type": "chords",
       "times": 1,
@@ -123,7 +123,7 @@
         }
       ]
     },
-    "chorus2": {
+    "c2": {
       "name": "chorus 2",
       "type": "strings",
       "times": 1,
@@ -182,7 +182,7 @@
         }
       ]
     },
-    "solo1": {
+    "s1": {
       "name": "solo 1",
       "type": "chords",
       "times": 1,
@@ -239,7 +239,7 @@
         }
       ]
     },
-    "solo2": {
+    "s2": {
       "name": "solo 2",
       "type": "strings",
       "times": 1,
@@ -286,7 +286,7 @@
         }
       ]
     },
-    "outro": {
+    "o": {
       "name": "outro",
       "type": "chords",
       "times": 1,
@@ -334,7 +334,7 @@
       ]
     }
   },
-  "order": ["intro", "verse", "verse", "chorus1", "chorus2", "verse", "solo1", "solo2", "outro"],
+  "order": ["i", "v", "v", "c1", "c2", "v", "s1", "s2", "o"],
   "res": [
     {
       "alias": "Crazy Little Thing Called Love Guitar Tutorial - Queen Guitar Lesson 🎸 |TABS + Easy Chords + Solo|",

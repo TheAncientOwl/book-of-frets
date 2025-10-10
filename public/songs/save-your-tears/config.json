@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.1",
   "contributors": ["TheAncientOwl"],
   "title": "Save Your Tears",
   "artists": ["The Weekend", "Ariana Grande"],
@@ -16,7 +16,7 @@
     ["D"]
   ],
   "segments": {
-    "intro": {
+    "i": {
       "name": "intro",
       "type": "chords",
       "times": 1,
@@ -33,7 +33,7 @@
         }
       ]
     },
-    "verse-1": {
+    "v1": {
       "name": "verse 1",
       "type": "chords",
       "times": 1,
@@ -50,7 +50,7 @@
         }
       ]
     },
-    "prechorus-1": {
+    "pr1": {
       "name": "prechorus 1",
       "type": "chords",
       "times": 1,
@@ -67,7 +67,7 @@
         }
       ]
     },
-    "chorus-1": {
+    "c1": {
       "name": "chorus 1",
       "type": "chords",
       "times": 1,
@@ -109,7 +109,7 @@
         }
       ]
     },
-    "verse-2": {
+    "v2": {
       "name": "verse 2",
       "type": "chords",
       "times": 1,
@@ -126,7 +126,7 @@
         }
       ]
     },
-    "prechorus-2": {
+    "pr2": {
       "name": "prechorus 2",
       "type": "chords",
       "times": 1,
@@ -163,7 +163,7 @@
         }
       ]
     },
-    "bridge": {
+    "b": {
       "name": "bridge",
       "type": "chords",
       "times": 1,
@@ -180,7 +180,7 @@
         }
       ]
     },
-    "chorus-2": {
+    "c2": {
       "name": "chorus 2",
       "type": "chords",
       "times": 1,
@@ -198,17 +198,7 @@
       ]
     }
   },
-  "order": [
-    "intro",
-    "verse-1",
-    "prechorus-1",
-    "chorus-1",
-    "verse-2",
-    "prechorus-2",
-    "chorus-1",
-    "bridge",
-    "chorus-2"
-  ],
+  "order": ["i", "v1", "pr1", "c1", "v2", "pr2", "c1", "b", "c2"],
   "res": [
     {
       "alias": "Save Your Tears Guitar Tutorial The Weeknd Guitar Lesson |Easy Chords|",

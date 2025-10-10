@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.1",
   "contributors": ["TheAncientOwl"],
   "title": "Dusk Till Dawn",
   "artists": ["Zayn", "Sia"],
@@ -14,7 +14,7 @@
     ["D", "-", "D", "-", "D", "-", "D", "U"]
   ],
   "segments": {
-    "verse/prechorus-intro": {
+    "vpi": {
       "name": "verse / prechorus",
       "type": "chords",
       "times": 1,
@@ -51,7 +51,7 @@
         }
       ]
     },
-    "chorus": {
+    "c": {
       "name": "chorus",
       "type": "chords",
       "times": 1,
@@ -78,7 +78,7 @@
         }
       ]
     },
-    "break": {
+    "bk": {
       "name": "break",
       "type": "chords",
       "times": 1,
@@ -95,7 +95,7 @@
         }
       ]
     },
-    "verse/prechorus": {
+    "vp": {
       "name": "verse / prechorus",
       "type": "chords",
       "times": 1,
@@ -122,7 +122,7 @@
         }
       ]
     },
-    "bridge": {
+    "b": {
       "name": "bridge",
       "type": "chords",
       "times": 1,
@@ -180,15 +180,7 @@
       ]
     }
   },
-  "order": [
-    "verse/prechorus-intro",
-    "chorus",
-    "break",
-    "verse/prechorus",
-    "chorus",
-    "bridge",
-    "chorus"
-  ],
+  "order": ["vpi", "c", "bk", "vp", "c", "b", "c"],
   "res": [
     {
       "alias": "Dusk Till Dawn Guitar Tutorial - Zayn feat Sia Guitar Lesson 🎸 |Chords + No Capo + Guitar Cover|",

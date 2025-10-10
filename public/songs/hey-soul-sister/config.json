@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1",
   "contributors": ["TheAncientOwl"],
   "title": "Hey, Soul Sister",
   "artists": ["Train"],
@@ -9,7 +9,7 @@
   "chordIDs": ["C", "G", "Am", "F"],
   "strumms": [["D", "-", "D", "-", "D", "U", "D", "U"], ["D", "-", "D", "-"], ["D"]],
   "segments": {
-    "intro": {
+    "i": {
       "name": "intro",
       "type": "chords",
       "times": 1,
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "verse": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 1,
@@ -51,7 +51,7 @@
         }
       ]
     },
-    "chorus-1": {
+    "c1": {
       "name": "chorus 1",
       "type": "chords",
       "times": 1,
@@ -83,7 +83,7 @@
         }
       ]
     },
-    "break": {
+    "bk": {
       "name": "break",
       "type": "chords",
       "times": 1,
@@ -100,7 +100,7 @@
         }
       ]
     },
-    "chorus-2": {
+    "c2": {
       "name": "chorus 2",
       "type": "chords",
       "times": 1,
@@ -132,7 +132,7 @@
         }
       ]
     },
-    "bridge": {
+    "b": {
       "name": "bridge",
       "type": "chords",
       "times": 1,
@@ -159,7 +159,7 @@
         }
       ]
     },
-    "chorus-2.2": {
+    "c2.2": {
       "name": "chorus 2",
       "type": "chords",
       "times": 1,
@@ -191,7 +191,7 @@
         }
       ]
     },
-    "outro": {
+    "o": {
       "name": "outro",
       "type": "chords",
       "times": 1,
@@ -234,17 +234,7 @@
       ]
     }
   },
-  "order": [
-    "intro",
-    "verse",
-    "chorus-1",
-    "break",
-    "verse",
-    "chorus-2",
-    "bridge",
-    "chorus-2.2",
-    "outro"
-  ],
+  "order": ["i", "v", "c1", "bk", "v", "c2", "b", "c2.2", "o"],
   "res": [
     {
       "alias": "Hey Soul Sister Guitar Tutorial - Train Guitar Lesson 🎸 |Easy Chords + Guitar Cover|",

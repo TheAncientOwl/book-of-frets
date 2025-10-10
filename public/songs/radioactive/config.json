@@ -1,5 +1,5 @@
 {
-  "version": "0.5.0",
+  "version": "0.5.1",
   "contributors": ["TheAncientOwl"],
   "title": "Radioactive",
   "artists": ["Imagine Dragons"],
@@ -12,7 +12,7 @@
     ["D", "U", "D", "U", "D", "-", "D", "U"]
   ],
   "segments": {
-    "intro": {
+    "i": {
       "name": "intro",
       "type": "chords",
       "times": 1,
@@ -29,7 +29,7 @@
         }
       ]
     },
-    "verse": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 1,
@@ -47,7 +47,7 @@
       ]
     }
   },
-  "order": ["intro", "verse"],
+  "order": ["i", "v"],
   "res": [
     {
       "alias": "Radioactive Guitar Tutorial - Imagine Dragons Guitar Lesson |Easy Chords + Guitar Cover|",

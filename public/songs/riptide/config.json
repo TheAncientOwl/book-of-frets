@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1",
   "contributors": ["TheAncientOwl"],
   "title": "Riptide",
   "artists": ["Vance Joy"],
@@ -9,7 +9,7 @@
   "chordIDs": ["Am", "G", "C", "Fmaj7"],
   "strumms": [["D", "-", "D", "-", "-", "U", "D", "U"], ["D"]],
   "segments": {
-    "intro/verse/chorus": {
+    "ivc": {
       "name": "intro / verse / chorus",
       "type": "chords",
       "times": 1,
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "break": {
+    "bk": {
       "name": "break",
       "type": "strings",
       "times": 4,
@@ -57,7 +57,7 @@
         }
       ]
     },
-    "bridge": {
+    "b": {
       "name": "bridge",
       "type": "chords",
       "times": 1,
@@ -74,7 +74,7 @@
         }
       ]
     },
-    "post-bridge": {
+    "pb": {
       "name": "post bridge",
       "type": "chords",
       "times": 1,
@@ -92,7 +92,7 @@
       ]
     }
   },
-  "order": ["intro/verse/chorus", "break", "bridge", "intro/verse/chorus"],
+  "order": ["ivc", "bk", "b", "pb", "ivc"],
   "res": [
     {
       "alias": "Riptide Guitar Tutorial - Vance Joy Guitar Lesson 🎸 |Easy Chords + Guitar Cover|",

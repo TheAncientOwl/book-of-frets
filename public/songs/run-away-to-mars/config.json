@@ -1,5 +1,5 @@
 {
-  "version": "0.5.0",
+  "version": "0.5.1",
   "contributors": ["TheAncientOwl"],
   "title": "Run Away To Mars",
   "artists": ["TALK"],
@@ -14,7 +14,7 @@
     ["D"]
   ],
   "segments": {
-    "intro": {
+    "i": {
       "name": "intro",
       "type": "chords",
       "times": 1,
@@ -31,7 +31,7 @@
         }
       ]
     },
-    "verse": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 1,
@@ -48,8 +48,8 @@
         }
       ]
     },
-    "pre-chorus": {
-      "name": "pre-chorus",
+    "pr": {
+      "name": "prechorus",
       "type": "chords",
       "times": 1,
       "chunks": [
@@ -65,7 +65,7 @@
         }
       ]
     },
-    "chorus": {
+    "c": {
       "name": "chorus",
       "type": "chords",
       "times": 1,
@@ -97,7 +97,7 @@
         }
       ]
     },
-    "bridge": {
+    "b": {
       "name": "bridge",
       "type": "chords",
       "times": 1,
@@ -114,7 +114,7 @@
         }
       ]
     },
-    "outro": {
+    "o": {
       "name": "outro",
       "type": "chords",
       "times": 1,
@@ -135,17 +135,7 @@
       ]
     }
   },
-  "order": [
-    "intro",
-    "verse",
-    "pre-chorus",
-    "chorus",
-    "verse",
-    "pre-chorus",
-    "chorus",
-    "bridge",
-    "outro"
-  ],
+  "order": ["i", "v", "pr", "c", "v", "pr", "c", "b", "o"],
   "res": [
     {
       "alias": "Run Away to Mars by TALK - Beginner Guitar Lesson & Play Along",

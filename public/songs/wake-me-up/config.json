@@ -1,5 +1,5 @@
 {
-  "version": "0.5.0",
+  "version": "0.5.1",
   "contributors": ["TheAncientOwl"],
   "title": "Wake Me Up",
   "artists": ["Avicii"],
@@ -9,7 +9,7 @@
   "chordIDs": ["Am", "Fmaj7", "G", "C/G", "E"],
   "strumms": [["D", "-", "D", "-", "-", "U", "D", "U"]],
   "segments": {
-    "intro": {
+    "i": {
       "name": "intro",
       "type": "chords",
       "times": 1,
@@ -46,7 +46,7 @@
         }
       ]
     },
-    "chorus": {
+    "c": {
       "name": "chorus",
       "type": "chords",
       "times": 1,
@@ -83,7 +83,7 @@
         }
       ]
     },
-    "dance": {
+    "d": {
       "name": "dance",
       "type": "chords",
       "times": 1,
@@ -120,7 +120,7 @@
         }
       ]
     },
-    "verse": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 1,
@@ -138,7 +138,7 @@
       ]
     }
   },
-  "order": ["intro", "chorus", "dance", "verse"],
+  "order": ["i", "c", "d", "v"],
   "res": [
     {
       "alias": "Wake Me Up Guitar Tutorial - Avicii Guitar Lesson 🎸|100% Accurate Chords + Lead + No Capo + Cover|",

@@ -1,5 +1,5 @@
 {
-  "version": "0.6.0",
+  "version": "0.6.1",
   "contributors": ["TheAncientOwl"],
   "title": "Flowers Need Rain",
   "artists": ["Preston Pablo"],
@@ -9,7 +9,7 @@
   "chordIDs": ["-"],
   "strumms": [],
   "segments": {
-    "main": {
+    "m": {
       "name": "main",
       "type": "strings",
       "times": 1,
@@ -59,7 +59,7 @@
       ]
     }
   },
-  "order": ["main"],
+  "order": ["m"],
   "res": [
     {
       "alias": "How to play Flowers Need Rain by Preston Pablo",

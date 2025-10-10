@@ -1,5 +1,5 @@
 {
-  "version": "0.5.0",
+  "version": "0.5.1",
   "contributors": ["TheAncientOwl"],
   "title": "Sweater Weather",
   "artists": ["The Neighbourhood"],
@@ -15,7 +15,7 @@
     ["D", "-", "D", "-", "D", "U", "D", "U"]
   ],
   "segments": {
-    "verse": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 1,
@@ -37,8 +37,8 @@
         }
       ]
     },
-    "pre-chorus": {
-      "name": "pre-chorus",
+    "pr": {
+      "name": "prechorus",
       "type": "chords",
       "times": 1,
       "chunks": [
@@ -54,7 +54,7 @@
         }
       ]
     },
-    "chorus": {
+    "c1": {
       "name": "chorus",
       "type": "chords",
       "times": 1,
@@ -71,7 +71,7 @@
         }
       ]
     },
-    "chorus2": {
+    "c2": {
       "name": "chorus 2",
       "type": "chords",
       "times": 1,
@@ -98,7 +98,7 @@
         }
       ]
     },
-    "bridge": {
+    "b": {
       "name": "bridge",
       "type": "chords",
       "times": 1,
@@ -125,7 +125,7 @@
         }
       ]
     },
-    "chorus3": {
+    "c3": {
       "name": "chorus 3",
       "type": "chords",
       "times": 1,
@@ -142,7 +142,7 @@
         }
       ]
     },
-    "outro": {
+    "o": {
       "name": "outro",
       "type": "chords",
       "times": 1,
@@ -160,17 +160,7 @@
       ]
     }
   },
-  "order": [
-    "verse",
-    "pre-chorus",
-    "chorus",
-    "verse",
-    "pre-chorus",
-    "chorus2",
-    "bridge",
-    "chorus3",
-    "outro"
-  ],
+  "order": ["v", "pr", "c1", "v", "pr", "c2", "b", "c3", "o"],
   "res": [
     {
       "alias": "Sweater Weather Guitar Tutorial - The Neighbourhood Guitar Lesson |Chords + Guitar Cover|",

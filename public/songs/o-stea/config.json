@@ -1,5 +1,5 @@
 {
-  "version": "0.5.0",
+  "version": "0.5.1",
   "contributors": ["TheAncientOwl"],
   "title": "O Stea",
   "artists": ["Deepcentral"],
@@ -9,8 +9,8 @@
   "chordIDs": ["Em7", "Cadd9", "G", "D"],
   "strumms": [["D", "D", "-", "U", "U", "-", "D", "-", "U", "-", "D", "U"]],
   "segments": {
-    "main": {
-      "name": "main",
+    "m": {
+      "name": "main progression",
       "type": "chords",
       "times": 1,
       "chunks": [
@@ -27,7 +27,7 @@
       ]
     }
   },
-  "order": ["main"],
+  "order": ["m"],
   "res": [
     {
       "alias": "CUM SĂ CÂNȚI \"O STEA\" LA CHITARA!? (DEEPCENTRAL)",

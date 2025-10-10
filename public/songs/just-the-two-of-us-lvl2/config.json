@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.4.1",
   "contributors": ["TheAncientOwl"],
   "title": "Just the Two of Us | Lvl 2",
   "artists": ["Grover Washington Jr."],
@@ -17,7 +17,7 @@
     ["D"]
   ],
   "segments": {
-    "verse": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 2,
@@ -69,7 +69,7 @@
         }
       ]
     },
-    "chorus": {
+    "c": {
       "name": "chorus",
       "type": "chords",
       "times": 2,
@@ -106,7 +106,7 @@
         }
       ]
     },
-    "bridge-1": {
+    "b1": {
       "name": "bridge 1",
       "type": "chords",
       "times": 1,
@@ -173,7 +173,7 @@
         }
       ]
     },
-    "bridge-2": {
+    "b2": {
       "name": "bridge 2",
       "type": "chords",
       "times": 1,
@@ -241,7 +241,7 @@
       ]
     }
   },
-  "order": ["verse", "chorus", "verse", "chorus", "bridge-1", "bridge-2"],
+  "order": ["v", "c", "v", "c", "b1", "b2"],
   "res": [
     {
       "alias": "Just The Two Of Us Guitar Tutorial Grover Washington Jr Guitar |Chords + Fingerpicking|",
