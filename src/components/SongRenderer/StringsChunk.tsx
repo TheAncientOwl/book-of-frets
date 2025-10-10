@@ -6,7 +6,7 @@
  *
  * @file StringsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.20
+ * @version 0.21
  * @description Render song strings pattern.
  */
 
@@ -17,7 +17,7 @@ import { Box, Circle, Divider, Flex, Heading, Text } from '@chakra-ui/react';
 
 type TStringsPatternProps = TStringsChunk & {};
 
-type TFretNumber = number | TGuitarStringDelimiter;
+type TFretNumber = number | string | TGuitarStringDelimiter;
 
 type TStringProps = {
   name: string;
