@@ -6,13 +6,13 @@
  *
  * @file default.ts
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Default app state.
  */
 
 import type { TChordsIndex } from '@/common/types/chord.types';
 import type { TSongsIndexEntry } from '@/common/types/song.types';
-import DefaultAppTheme from '@/state/theme/default.json';
+import DefaultAppTheme from '@/state/theme/default.min.json';
 import type { TAppTheme } from '@/state/theme/types';
 import { type Dispatch, type SetStateAction } from 'react';
 

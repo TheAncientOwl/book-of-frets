@@ -6,7 +6,7 @@
  *
  * @file useAppStateValue.ts
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Main app state hook.
  */
 
@@ -14,7 +14,7 @@ import { useLocalStorage } from '@/common/hooks/useLocalStorage';
 import type { TChordsIndex } from '@/common/types/chord.types';
 import { LocalStorageKeys, SessionStorageKeys } from '@/state/common/storageKeys';
 import { DefaultAppState, type TAppState, type TSongHistoryEntry } from '@/state/default';
-import DefaultAppTheme from '@/state/theme/default.json';
+import DefaultAppTheme from '@/state/theme/default.min.json';
 import type { TAppTheme } from '@/state/theme/types';
 import { patchLocalStorageTheme } from '@/state/theme/utils/patchLocalStorageTheme';
 import { setDocumentScrollbarColors } from '@/state/theme/utils/setDocumentScrollbarColors';
@@ -56,7 +56,7 @@ export const useAppStateValue = (): TAppState => {
   );
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}chords/index.json`)
+    fetch(`${import.meta.env.BASE_URL}chords/index.min.json`)
       .then(res => res.json())
       .then(data => setChordsIndex(data.index as TChordsIndex))
       .catch(() => setChordsIndex({}));

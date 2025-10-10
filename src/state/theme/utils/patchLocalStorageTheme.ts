@@ -6,12 +6,12 @@
  *
  * @file patchLocalStorageTheme.ts
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Patch local storage for theme.
  */
 
 import { LocalStorageKeys } from '@/state/common/storageKeys';
-import DefaultAppTheme from '@/state/theme/default.json';
+import DefaultAppTheme from '@/state/theme/default.min.json';
 
 /**
  * @brief Recursively deep-merges two objects.

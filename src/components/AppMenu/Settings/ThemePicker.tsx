@@ -6,13 +6,13 @@
  *
  * @file ThemePicker.tsx
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description Display app themes and handles theme setting.
  */
 
 import { useAppState } from '@/state/hooks/useAppState';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
-import DefaultAppTheme from '@/state/theme/default.json';
+import DefaultAppTheme from '@/state/theme/default.min.json';
 import type { TAppTheme, TThemeIndexEntry } from '@/state/theme/types';
 import { deepMerge } from '@/state/theme/utils/patchLocalStorageTheme';
 import { Box, Flex, Heading, Image } from '@chakra-ui/react';
@@ -27,7 +27,7 @@ export const ThemePicker = () => {
   const [themesIndex, setThemesIndex] = useState<TThemeIndexEntry[]>([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}themes/index.json`)
+    fetch(`${import.meta.env.BASE_URL}themes/index.min.json`)
       .then(response => response.json())
       .then(data => setThemesIndex(data.index as TThemeIndexEntry[]))
       .catch(error => {
@@ -36,7 +36,7 @@ export const ThemePicker = () => {
   }, []);
 
   const setAppThemeValue = (directory: string) => {
-    fetch(`${import.meta.env.BASE_URL}themes/${directory}/config.json`)
+    fetch(`${import.meta.env.BASE_URL}themes/${directory}/config.min.json`)
       .then(response => response.json())
       .then(data => {
         appTheme.set?.(deepMerge(DefaultAppTheme, data as TAppTheme));
