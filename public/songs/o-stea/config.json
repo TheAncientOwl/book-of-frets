@@ -7,7 +7,7 @@
   "notes": ["Drop D"],
   "capo": 0,
   "chordIDs": ["Em7", "Cadd9", "G", "D"],
-  "songSegments": {
+  "segments": {
     "main": {
       "name": "main",
       "type": "chords",
@@ -18,16 +18,16 @@
           "items": [
             {
               "chordIDs": [["Em7", "Cadd9", "G", "D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "D", "-", "U", "U", "-", "D", "-", "U", "-", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "D", "-", "U", "U", "-", "D", "-", "U", "-", "D", "U"]
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": ["main"],
-  "resources": [
+  "order": ["main"],
+  "res": [
     {
       "alias": "CUM SĂ CÂNȚI \"O STEA\" LA CHITARA!? (DEEPCENTRAL)",
       "author": "Cantam La Chitara ~ YouTube",

@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.27
+ * @version 0.28
  * @description Render song based on given config.
  */
 
@@ -49,21 +49,18 @@ export const Song = (props: TSongProps) => {
         allowMultiple
         padding={['1.5em 0em', '1.5em 1em']}
         borderRadius='1rem'
-        defaultIndex={[0, ...props.songSegmentsOrder.map((_, i) => i + 1)]}
+        defaultIndex={[0, ...props.order.map((_, i) => i + 1)]}
         // [*] theme colors
         backgroundColor={theme.chunks.background}
       >
         <SongChordsList chordIDs={props.chordIDs} />
 
-        <SongSegments
-          songSegments={props.songSegments}
-          songSegmentsOrder={props.songSegmentsOrder}
-        />
+        <SongSegments segments={props.segments} order={props.order} />
       </Accordion>
 
       <SongNotes notes={props.notes} />
 
-      <SongResources resources={props.resources} />
+      <SongResources res={props.res} />
     </Container>
   );
 };

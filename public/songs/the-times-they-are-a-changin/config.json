@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 3,
   "chordIDs": ["G", "Em", "C", "Csus2", "G/B"],
-  "songSegments": {
+  "segments": {
     "intro": {
       "name": "intro",
       "type": "chords",
@@ -19,8 +19,8 @@
             {
               "align": "flex-start",
               "chordIDs": [["G", "G", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -44,8 +44,8 @@
                 ["D", "Csus2", "G/B", "D"],
                 ["G", "G", "D", "G"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -65,8 +65,8 @@
                 ["G", "Em", "C", "G"],
                 ["G", "G", "G"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -90,8 +90,8 @@
                 ["D", "Csus2", "G/B", "D"],
                 ["G", "G", "D"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -112,8 +112,8 @@
                 ["D", "Csus2", "G/B", "D"],
                 ["D", "D", "D"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -137,8 +137,8 @@
                 ["D", "Csus2", "G/B", "D"],
                 ["G", "C", "D", "G"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -155,8 +155,8 @@
             {
               "align": "flex-start",
               "chordIDs": [["G", "D", "Csus2", "D", "G", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -180,8 +180,8 @@
                 ["G", "Csus2", "G/B", "D"],
                 ["G", "C", "D", "G"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -203,8 +203,8 @@
                 ["G", "C", "D", "G"],
                 ["G", "G", "G"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -228,8 +228,8 @@
                 ["D", "Csus2", "G/B", "D"],
                 ["G", "C", "D", "G"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -246,15 +246,15 @@
             {
               "align": "flex-start",
               "chordIDs": [["G", "Em", "C", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "D", "U"]
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": [
+  "order": [
     "intro",
     "verse-1",
     "break-1",
@@ -267,7 +267,7 @@
     "verse-5",
     "outro"
   ],
-  "resources": [
+  "res": [
     {
       "alias": "The Times They Are A Changin' Guitar Tutorial Bob Dylan Guitar Lesson |Easy Chords + Strumming|",
       "author": "GuitarZero2Hero ~ YouTube",

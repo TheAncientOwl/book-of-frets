@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 3,
   "chordIDs": ["Am", "C", "Em", "F", "G", "Dm"],
-  "songSegments": {
+  "segments": {
     "intro": {
       "name": "intro",
       "type": "chords",
@@ -18,13 +18,13 @@
           "items": [
             {
               "chordIDs": [["Am", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             },
             {
               "chordIDs": [["F"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D"]
+              "times": 2,
+              "strumm": ["D"]
             }
           ]
         }
@@ -40,8 +40,8 @@
           "items": [
             {
               "chordIDs": [["Am", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "-",
@@ -67,13 +67,13 @@
           "items": [
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "-"]
+              "times": 1,
+              "strumm": ["D", "-", "-"]
             },
             {
               "chordIDs": [["F"]],
-              "chordTimes": 1,
-              "strummingPattern": ["-", "U", "X", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
+              "times": 1,
+              "strumm": ["-", "U", "X", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
             }
           ]
         }
@@ -89,23 +89,8 @@
           "items": [
             {
               "chordIDs": [["F", "Am", "G", "Dm"]],
-              "chordTimes": 1,
-              "strummingPattern": [
-                "D",
-                "-",
-                "U",
-                "D",
-                "U",
-                "D",
-                "-",
-                "U",
-                "D",
-                "U",
-                "D",
-                "-",
-                "D",
-                "U"
-              ]
+              "times": 1,
+              "strumm": ["D", "-", "U", "D", "U", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
             }
           ]
         }
@@ -121,8 +106,8 @@
           "items": [
             {
               "chordIDs": [["Am", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "-",
@@ -148,13 +133,13 @@
           "items": [
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "-"]
+              "times": 1,
+              "strumm": ["D", "-", "-"]
             },
             {
               "chordIDs": [["F"]],
-              "chordTimes": 1,
-              "strummingPattern": ["-", "U", "X", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
+              "times": 1,
+              "strumm": ["-", "U", "X", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
             }
           ]
         }
@@ -170,8 +155,8 @@
           "items": [
             {
               "chordIDs": [["Am", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "D",
@@ -197,21 +182,21 @@
           "items": [
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "-"]
+              "times": 1,
+              "strumm": ["D", "-", "-"]
             },
             {
               "chordIDs": [["F"]],
-              "chordTimes": 1,
-              "strummingPattern": ["-", "U", "X", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
+              "times": 1,
+              "strumm": ["-", "U", "X", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": ["intro", "verse", "prechorus", "chorus", "dance-break"],
-  "resources": [
+  "order": ["intro", "verse", "prechorus", "chorus", "dance-break"],
+  "res": [
     {
       "alias": "Let Me Love You DJ Snake Feat. Justin Bieber Guitar Tutorial Lesson |Tabs + Easy Chords + Cover|",
       "author": "GuitarZero2Hero ~ YouTube",

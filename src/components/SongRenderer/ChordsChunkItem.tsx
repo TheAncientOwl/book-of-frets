@@ -6,7 +6,7 @@
  *
  * @file ChordsChunkItem.tsx
  * @author Alexandru Delegeanu
- * @version 0.22
+ * @version 0.23
  * @description Render song pattern segment.
  */
 
@@ -117,14 +117,14 @@ export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
       </Flex>
 
       {songSettings.display.chordTimes.value && (
-        <Tooltip label={`Strum ${props.chordTimes} times`}>
+        <Tooltip label={`Strum ${props.times} times`}>
           <Text
             fontSize='xs'
             fontWeight='bold'
             // [*] theme colors
             color={theme.chunks.item.chordsPattern.chord.segment.times}
           >
-            x{props.chordTimes}
+            x{props.times}
           </Text>
         </Tooltip>
       )}
@@ -138,7 +138,7 @@ export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
             // [*] theme colors
             color={theme.chunks.item.chordsPattern.chord.segment.pattern}
           >
-            {props.strummingPattern.map((pattern, index) => {
+            {props.strumm.map((pattern, index) => {
               return (
                 <Text
                   key={index}

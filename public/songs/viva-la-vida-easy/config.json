@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 1,
   "chordIDs": ["C", "D_3fr", "D", "G", "Em"],
-  "songSegments": {
+  "segments": {
     "verse-palm-muted": {
       "name": "verse palm muted",
       "type": "chords",
@@ -18,13 +18,13 @@
           "items": [
             {
               "chordIDs": [["C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "De", "D", "De", "D", "D"]
+              "times": 1,
+              "strumm": ["D", "De", "D", "De", "D", "D"]
             },
             {
               "chordIDs": [["D_3fr"]],
-              "chordTimes": 1,
-              "strummingPattern": ["De", "D", "De", "D", "D", "De", "D", "De", "D"]
+              "times": 1,
+              "strumm": ["De", "D", "De", "D", "D", "De", "D", "De", "D"]
             }
           ]
         },
@@ -33,13 +33,13 @@
           "items": [
             {
               "chordIDs": [["G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "De", "D", "De", "D", "D"]
+              "times": 1,
+              "strumm": ["D", "De", "D", "De", "D", "D"]
             },
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["De", "D", "De", "D", "D", "De", "D", "De", "D"]
+              "times": 1,
+              "strumm": ["De", "D", "De", "D", "D", "De", "D", "De", "D"]
             }
           ]
         }
@@ -55,13 +55,13 @@
           "items": [
             {
               "chordIDs": [["C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "D", "U", "D"]
             },
             {
               "chordIDs": [["D_3fr"]],
-              "chordTimes": 1,
-              "strummingPattern": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
             }
           ]
         },
@@ -70,13 +70,13 @@
           "items": [
             {
               "chordIDs": [["G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "D", "U", "D"]
             },
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
             }
           ]
         }
@@ -92,13 +92,13 @@
           "items": [
             {
               "chordIDs": [["C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "D", "U", "D"]
             },
             {
               "chordIDs": [["D_3fr"]],
-              "chordTimes": 1,
-              "strummingPattern": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
             }
           ]
         },
@@ -107,13 +107,13 @@
           "items": [
             {
               "chordIDs": [["G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "D", "U", "D"]
             },
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
             }
           ]
         }
@@ -129,13 +129,13 @@
           "items": [
             {
               "chordIDs": [["C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "D", "U", "D"]
             },
             {
               "chordIDs": [["D_3fr"]],
-              "chordTimes": 1,
-              "strummingPattern": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
             }
           ]
         },
@@ -144,13 +144,13 @@
           "items": [
             {
               "chordIDs": [["G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "D", "U", "D"]
             },
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
             }
           ]
         }
@@ -166,13 +166,13 @@
           "items": [
             {
               "chordIDs": [["C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "D", "U", "D"]
             },
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
             }
           ]
         },
@@ -181,13 +181,13 @@
           "items": [
             {
               "chordIDs": [["D_3fr"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "D", "U", "D"]
             },
             {
               "chordIDs": [["D_3fr"]],
-              "chordTimes": 1,
-              "strummingPattern": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
             }
           ]
         }
@@ -203,13 +203,13 @@
           "items": [
             {
               "chordIDs": [["C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "D", "U", "D"]
             },
             {
               "chordIDs": [["D_3fr"]],
-              "chordTimes": 1,
-              "strummingPattern": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
             }
           ]
         },
@@ -218,13 +218,13 @@
           "items": [
             {
               "chordIDs": [["G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "D", "U", "D"]
             },
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["U", "-", "U", "D", "U", "-", "U", "D", "U"]
             }
           ]
         }
@@ -240,15 +240,15 @@
           "items": [
             {
               "chordIDs": [["C", "D_3fr", "G", "Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": [
+  "order": [
     "verse-palm-muted",
     "verse-1",
     "chorus",
@@ -258,7 +258,7 @@
     "chorus-2",
     "outro"
   ],
-  "resources": [
+  "res": [
     {
       "alias": "Viva La Vida Guitar Tutorial 🎸 Coldplay Guitar Lesson |Easy + Live Version Chords + TAB|",
       "author": "GuitarZero2Hero ~ YouTube",

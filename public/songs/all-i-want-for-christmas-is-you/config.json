@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["G", "Em", "C", "D", "G/B", "Cm_3fr", "B7", "D7", "E7", "Am7"],
-  "songSegments": {
+  "segments": {
     "intro/break-down": {
       "name": "intro / break",
       "type": "chords",
@@ -18,8 +18,8 @@
           "items": [
             {
               "chordIDs": [["G", "Em", "C", "D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         }
@@ -39,8 +39,8 @@
                 ["G", "B7", "Em", "Cm_3fr"],
                 ["G", "E7", "Am7", "Cm_3fr", "D7"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         }
@@ -56,8 +56,8 @@
           "items": [
             {
               "chordIDs": [["G", "Em", "C", "D"]],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "U"]
+              "times": 4,
+              "strumm": ["D", "U"]
             }
           ]
         }
@@ -76,8 +76,8 @@
                 ["G", "G", "G", "G"],
                 ["C", "C", "Cm_3fr", "Cm_3fr"]
               ],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "U"]
+              "times": 4,
+              "strumm": ["D", "U"]
             }
           ]
         }
@@ -93,23 +93,23 @@
           "items": [
             {
               "chordIDs": [["G", "G", "G", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U"]
+              "times": 1,
+              "strumm": ["D", "U"]
             },
             {
               "chordIDs": [["G", "B7"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "U"]
+              "times": 2,
+              "strumm": ["D", "U"]
             },
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "U"]
+              "times": 4,
+              "strumm": ["D", "U"]
             },
             {
               "chordIDs": [["Em", "Cm_3fr"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "U"]
+              "times": 2,
+              "strumm": ["D", "U"]
             }
           ]
         },
@@ -118,8 +118,8 @@
           "items": [
             {
               "chordIDs": [["G", "E7", "Am7", "D7"]],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "U"]
+              "times": 4,
+              "strumm": ["D", "U"]
             }
           ]
         }
@@ -139,15 +139,15 @@
                 ["Cm_3fr", "Cm_3fr", "G", "E7"],
                 ["Am7", "Am7", "D", "D"]
               ],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "U"]
+              "times": 4,
+              "strumm": ["D", "U"]
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": [
+  "order": [
     "intro/break-down",
     "slow-verse",
     "intro/break-strum",
@@ -161,7 +161,7 @@
     "chorus",
     "intro/break-strum"
   ],
-  "resources": [
+  "res": [
     {
       "alias": "All I Want For Christmas Is You Guitar Tutorial 🎄🎸Mariah Carey Guitar Lesson |Easy Chords|",
       "author": "GuitarZero2Hero ~ YouTube",

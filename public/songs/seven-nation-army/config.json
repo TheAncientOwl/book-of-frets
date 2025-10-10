@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["-"],
-  "songSegments": {
+  "segments": {
     "main1": {
       "name": "main 1",
       "type": "strings",
@@ -153,8 +153,8 @@
       ]
     }
   },
-  "songSegmentsOrder": ["main1", "main2", "main3", "main2", "outro"],
-  "resources": [
+  "order": ["main1", "main2", "main3", "main2", "outro"],
+  "res": [
     {
       "alias": "The White Stripes - Seven Nation Army | Riff Tabs | Guitar Lesson/Tutorial | Acoustic Riff: 12",
       "author": "Acoustic Version ~ YouTube",

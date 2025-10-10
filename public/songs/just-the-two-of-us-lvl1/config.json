@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 1,
   "chordIDs": ["CM7", "B7", "Em", "Dm7", "G7"],
-  "songSegments": {
+  "segments": {
     "main-progression": {
       "name": "main progression",
       "type": "chords",
@@ -18,23 +18,23 @@
           "items": [
             {
               "chordIDs": [["CM7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "-", "U", "D", "U"]
             },
             {
               "chordIDs": [["B7"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "U"]
+              "times": 2,
+              "strumm": ["D", "-", "D", "U"]
             },
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "-", "U", "D", "U"]
             },
             {
               "chordIDs": [["Dm7", "G7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U"]
             }
           ]
         },
@@ -43,18 +43,18 @@
           "items": [
             {
               "chordIDs": [["CM7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "-", "U", "D", "U"]
             },
             {
               "chordIDs": [["B7"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "U"]
+              "times": 2,
+              "strumm": ["D", "-", "D", "U"]
             },
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "-",
@@ -78,8 +78,8 @@
       ]
     }
   },
-  "songSegmentsOrder": ["main-progression"],
-  "resources": [
+  "order": ["main-progression"],
+  "res": [
     {
       "alias": "Just The Two Of Us Guitar Tutorial Grover Washington Jr Guitar |Chords + Fingerpicking|",
       "author": "GuitarZero2Hero ~ YouTube",

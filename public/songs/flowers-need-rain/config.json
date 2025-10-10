@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["-"],
-  "songSegments": {
+  "segments": {
     "main": {
       "name": "main",
       "type": "strings",
@@ -58,8 +58,8 @@
       ]
     }
   },
-  "songSegmentsOrder": ["main"],
-  "resources": [
+  "order": ["main"],
+  "res": [
     {
       "alias": "How to play Flowers Need Rain by Preston Pablo",
       "author": "Elijah Plays ~ YouTube",

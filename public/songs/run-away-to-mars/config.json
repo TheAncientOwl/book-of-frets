@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 2,
   "chordIDs": ["G", "D/F#", "Em7", "Cadd9", "Am7", "D", "Dsus4"],
-  "songSegments": {
+  "segments": {
     "intro": {
       "name": "intro",
       "type": "chords",
@@ -18,8 +18,8 @@
           "items": [
             {
               "chordIDs": [["G", "D/F#", "Em7", "Cadd9"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 2,
+              "strumm": ["D", "-", "D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -35,8 +35,8 @@
           "items": [
             {
               "chordIDs": [["G", "D/F#", "Em7", "Cadd9"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 2,
+              "strumm": ["D", "-", "D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -52,8 +52,8 @@
           "items": [
             {
               "chordIDs": [["Am7", "D"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 2,
+              "strumm": ["D", "-", "D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -69,23 +69,23 @@
           "items": [
             {
               "chordIDs": [["Em", "C"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 2,
+              "strumm": ["D", "-", "D", "-", "D", "U", "D", "U"]
             },
             {
               "chordIDs": [["G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "D", "U", "D", "U"]
             },
             {
               "chordIDs": [["G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D"]
+              "times": 1,
+              "strumm": ["D", "-", "D"]
             },
             {
               "chordIDs": [["D/F#"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 2,
+              "strumm": ["D", "U", "D", "U"]
             }
           ]
         }
@@ -101,8 +101,8 @@
           "items": [
             {
               "chordIDs": [["Am7", "Dsus4", "D"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 2,
+              "strumm": ["D", "-", "D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -121,15 +121,15 @@
                 ["Em", "C", "G"],
                 ["D/F#", "Em", "C", "G"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": [
+  "order": [
     "intro",
     "verse",
     "pre-chorus",
@@ -140,7 +140,7 @@
     "bridge",
     "outro"
   ],
-  "resources": [
+  "res": [
     {
       "alias": "Run Away to Mars by TALK - Beginner Guitar Lesson & Play Along",
       "author": "Mechanics Of Music",

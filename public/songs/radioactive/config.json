@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 2,
   "chordIDs": ["Am", "C", "G", "D"],
-  "songSegments": {
+  "segments": {
     "intro": {
       "name": "intro",
       "type": "chords",
@@ -18,8 +18,8 @@
           "items": [
             {
               "chordIDs": [["Am", "C", "G", "D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "U", "D", "U"]
             }
           ]
         }
@@ -35,16 +35,16 @@
           "items": [
             {
               "chordIDs": [["Am", "C", "G", "D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "D", "-", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U", "D", "-", "D", "U"]
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": ["intro", "verse"],
-  "resources": [
+  "order": ["intro", "verse"],
+  "res": [
     {
       "alias": "Radioactive Guitar Tutorial - Imagine Dragons Guitar Lesson |Easy Chords + Guitar Cover|",
       "author": "GuitarZero2Hero ~ YouTube",

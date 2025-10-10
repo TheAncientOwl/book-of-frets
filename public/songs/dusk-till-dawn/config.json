@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 2,
   "chordIDs": ["Am", "Fmaj7", "C", "G/B", "Em", "C/E"],
-  "songSegments": {
+  "segments": {
     "verse/prechorus-intro": {
       "name": "verse / prechorus",
       "type": "chords",
@@ -18,8 +18,8 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C", "G/B"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         },
@@ -28,8 +28,8 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C", "G/B"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "D", "D", "D", "De", "D", "D", "D"]
+              "times": 1,
+              "strumm": ["D", "D", "D", "D", "De", "D", "D", "D"]
             }
           ]
         },
@@ -38,8 +38,8 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C", "G/B"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         }
@@ -55,8 +55,8 @@
           "items": [
             {
               "chordIDs": [["Am"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "-", "-", "D", "-", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "-", "-", "D", "-", "D", "U"]
             }
           ]
         },
@@ -65,8 +65,8 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C", "Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "D", "-", "D", "U"]
             }
           ]
         }
@@ -82,8 +82,8 @@
           "items": [
             {
               "chordIDs": [["Am"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         }
@@ -99,8 +99,8 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C", "G/B"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "D", "D", "D", "De", "D", "D", "D"]
+              "times": 1,
+              "strumm": ["D", "D", "D", "D", "De", "D", "D", "D"]
             }
           ]
         },
@@ -109,8 +109,8 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C", "G/B"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         }
@@ -126,23 +126,23 @@
           "items": [
             {
               "chordIDs": [["Fmaj7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             },
             {
               "chordIDs": [["Fmaj7", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             },
             {
               "chordIDs": [["C", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             },
             {
               "chordIDs": [["G", "C/E"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         },
@@ -151,30 +151,30 @@
           "items": [
             {
               "chordIDs": [["Fmaj7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             },
             {
               "chordIDs": [["Fmaj7", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             },
             {
               "chordIDs": [["C", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             },
             {
               "chordIDs": [["G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": [
+  "order": [
     "verse/prechorus-intro",
     "chorus",
     "break",
@@ -183,7 +183,7 @@
     "bridge",
     "chorus"
   ],
-  "resources": [
+  "res": [
     {
       "alias": "Dusk Till Dawn Guitar Tutorial - Zayn feat Sia Guitar Lesson 🎸 |Chords + No Capo + Guitar Cover|",
       "author": "GuitarZero2Hero ~ YouTube",

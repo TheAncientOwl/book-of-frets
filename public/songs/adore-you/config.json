@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 3,
   "chordIDs": ["Am7", "C", "Fmaj7", "G"],
-  "songSegments": {
+  "segments": {
     "intro": {
       "name": "intro",
       "type": "chords",
@@ -21,8 +21,8 @@
                 ["Am7", "-", "C", "-"],
                 ["Fmaj7", "-", "-", "G"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         }
@@ -41,8 +41,8 @@
                 ["Am7", "Am7", "C", "C"],
                 ["Fmaj7", "Fmaj7", "Fmaj7", "G"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "D", "-", "D", "U"]
             }
           ]
         }
@@ -67,8 +67,8 @@
                 ["Am7", "Am7", "C", "C"],
                 ["Fmaj7", "Fmaj7", "Fmaj7", "G"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "D", "-", "D", "U"]
             }
           ]
         }
@@ -99,8 +99,8 @@
                 ["Am7", "Am7", "C", "C"],
                 ["Fmaj7", "Fmaj7", "Fmaj7", "G"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "D", "-", "D", "U"]
             }
           ]
         }
@@ -113,7 +113,7 @@
       "chunks": []
     }
   },
-  "songSegmentsOrder": [
+  "order": [
     "intro",
     "main-progression-1",
     "post-chorus-1",
@@ -123,7 +123,7 @@
     "main-progression-3",
     "post-chorus-3"
   ],
-  "resources": [
+  "res": [
     {
       "alias": "Adore You Guitar Cover Harry Styles 🎸|Tabs + Chords|",
       "author": "GuitarZero2Hero Express ~ YouTube",

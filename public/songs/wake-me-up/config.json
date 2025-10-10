@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 2,
   "chordIDs": ["Am", "Fmaj7", "G", "C/G", "E"],
-  "songSegments": {
+  "segments": {
     "intro": {
       "name": "intro",
       "type": "chords",
@@ -18,13 +18,13 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
             },
             {
               "chordIDs": [["C/G", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
             }
           ]
         },
@@ -33,13 +33,13 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
             },
             {
               "chordIDs": [["C/G", "E"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
             }
           ]
         }
@@ -55,13 +55,13 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
             },
             {
               "chordIDs": [["C/G", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
             }
           ]
         },
@@ -70,13 +70,13 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
             },
             {
               "chordIDs": [["C/G", "E"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
             }
           ]
         }
@@ -92,13 +92,13 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
             },
             {
               "chordIDs": [["C/G", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
             }
           ]
         },
@@ -107,13 +107,13 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
             },
             {
               "chordIDs": [["C/G", "E"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
             }
           ]
         }
@@ -129,16 +129,16 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C/G", "C/G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": ["intro", "chorus", "dance", "verse"],
-  "resources": [
+  "order": ["intro", "chorus", "dance", "verse"],
+  "res": [
     {
       "alias": "Wake Me Up Guitar Tutorial - Avicii Guitar Lesson 🎸|100% Accurate Chords + Lead + No Capo + Cover|",
       "author": "GuitarZero2Hero ~ YouTube",

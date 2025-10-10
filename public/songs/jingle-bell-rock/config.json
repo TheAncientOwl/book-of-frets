@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["D", "DM7", "D6", "D#dim7", "Em7", "A7", "D7", "G#dim7", "E7", "A", "G", "Gm"],
-  "songSegments": {
+  "segments": {
     "intro": {
       "name": "intro",
       "type": "strings",
@@ -109,8 +109,8 @@
                 ["Em7", "A7", "|", "Em7", "A7"],
                 ["Em7", "A7"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             }
           ]
         }
@@ -131,8 +131,8 @@
                 ["Em7", "A7", "|", "Em7", "A7"],
                 ["Em7", "A7", "|", "D", "D7"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             }
           ]
         }
@@ -151,8 +151,8 @@
                 ["G", "G#dim7", "D", "D"],
                 ["E7", "E7"]
               ],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "U"]
+              "times": 4,
+              "strumm": ["D", "U"]
             }
           ]
         },
@@ -161,8 +161,8 @@
           "items": [
             {
               "chordIDs": [["A"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         }
@@ -214,8 +214,8 @@
                 ["G", "Gm"],
                 ["Em7", "A7", "D"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             }
           ]
         }
@@ -231,13 +231,13 @@
           "items": [
             {
               "chordIDs": [["D", "DM7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             },
             {
               "chordIDs": [["D6", "D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             }
           ]
         },
@@ -246,13 +246,13 @@
           "items": [
             {
               "chordIDs": [["D6", "D#dim7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             },
             {
               "chordIDs": [["Em7", "A7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             }
           ]
         },
@@ -261,13 +261,13 @@
           "items": [
             {
               "chordIDs": [["Em7", "A7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             },
             {
               "chordIDs": [["Em7", "A7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             }
           ]
         },
@@ -276,13 +276,13 @@
           "items": [
             {
               "chordIDs": [["Em7", "A7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             },
             {
               "chordIDs": [["D", "D7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             }
           ]
         }
@@ -304,8 +304,8 @@
                 ["Em7", "A7", "|", "Em7", "A7"],
                 ["Em7", "A7", "D"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             }
           ]
         },
@@ -314,15 +314,15 @@
           "items": [
             {
               "chordIDs": [["D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "-", "-", "D", "-"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U", "-", "-", "D", "-"]
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": [
+  "order": [
     "intro",
     "verse-1",
     "verse-2",
@@ -333,7 +333,7 @@
     "chorus-riff",
     "post-chorus-2"
   ],
-  "resources": [
+  "res": [
     {
       "alias": "Jingle Bell Rock Guitar Tutorial Bobbly Helms Acoustic Guitar Lesson |Chords + Strumming|",
       "author": "GuitarZero2Hero ~ YouTube",

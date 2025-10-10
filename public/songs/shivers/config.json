@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["Bm", "G", "D", "A"],
-  "songSegments": {
+  "segments": {
     "verse": {
       "name": "verse",
       "type": "chords",
@@ -18,8 +18,8 @@
           "items": [
             {
               "chordIDs": [["Bm", "G", "D", "A"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "D",
@@ -52,13 +52,13 @@
           "items": [
             {
               "chordIDs": [["Bm", "G", "D"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+              "times": 2,
+              "strumm": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
             },
             {
               "chordIDs": [["A"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+              "times": 1,
+              "strumm": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
             }
           ]
         }
@@ -74,8 +74,8 @@
           "items": [
             {
               "chordIDs": [["Bm", "G", "D", "A"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "U",
                 "D",
@@ -101,8 +101,8 @@
           "items": [
             {
               "chordIDs": [["Bm", "G", "D", "A"]],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "U", "Dx", "U"]
+              "times": 4,
+              "strumm": ["D", "U", "Dx", "U"]
             }
           ]
         }
@@ -118,18 +118,18 @@
           "items": [
             {
               "chordIDs": [["Bm"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             },
             {
               "chordIDs": [["G", "D"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+              "times": 2,
+              "strumm": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
             },
             {
               "chordIDs": [["A"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+              "times": 1,
+              "strumm": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
             }
           ]
         },
@@ -138,21 +138,21 @@
           "items": [
             {
               "chordIDs": [["Bm", "G", "D"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+              "times": 2,
+              "strumm": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
             },
             {
               "chordIDs": [["A"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
+              "times": 1,
+              "strumm": ["D", "U", "Dx", "Ux", "-", "Ux", "Dx", "Ux"]
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": ["verse", "chorus-1", "verse", "chorus-2"],
-  "resources": [
+  "order": ["verse", "chorus-1", "verse", "chorus-2"],
+  "res": [
     {
       "alias": "Shivers Guitar Tutorial Ed Sheeran Guitar Lesson |No Capo + Easy Chords|",
       "author": "GuitarZero2Hero ~ YouTube",

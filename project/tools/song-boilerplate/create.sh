@@ -25,7 +25,7 @@ read -p "» Enter capo (number): " capo
 echo ""
 echo "⏳ Generating..."
 
-resources_json='[
+res_json='[
     {
       "alias": "",
       "author": "GuitarZero2Hero ~ YouTube",
@@ -54,9 +54,9 @@ cat > "$output_file" <<EOF
   "notes": [],
   "capo": ${capo},
   "chordIDs": [],
-  "songSegments": {},
-  "songSegmentsOrder": [],
-  "resources": ${resources_json}
+  "segments": {},
+  "order": [],
+  "res": ${res_json}
 }
 EOF
 

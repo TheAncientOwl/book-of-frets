@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["Am", "Fmaj7", "C", "G", "E"],
-  "songSegments": {
+  "segments": {
     "intro": {
       "name": "intro",
       "type": "chords",
@@ -18,8 +18,8 @@
           "items": [
             {
               "chordIDs": [["-"]],
-              "chordTimes": 1,
-              "strummingPattern": ["Dx", "-", "Dx", "-", "Dx", "-", "Dx", "Ux"]
+              "times": 1,
+              "strumm": ["Dx", "-", "Dx", "-", "Dx", "-", "Dx", "Ux"]
             }
           ]
         },
@@ -28,8 +28,8 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "-",
@@ -62,8 +62,8 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "-",
@@ -96,8 +96,8 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "-",
@@ -130,8 +130,8 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "-",
@@ -157,8 +157,8 @@
           "items": [
             {
               "chordIDs": [["E"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "D",
@@ -191,8 +191,8 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "-",
@@ -225,8 +225,8 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         },
@@ -235,8 +235,8 @@
           "items": [
             {
               "chordIDs": [["G"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "D",
@@ -269,8 +269,8 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "-",
@@ -296,8 +296,8 @@
           "items": [
             {
               "chordIDs": [["-"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "-",
                 "-",
                 "-",
@@ -330,15 +330,15 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": [
+  "order": [
     "intro",
     "chorus1",
     "verse",
@@ -349,7 +349,7 @@
     "chorus1",
     "outro"
   ],
-  "resources": [
+  "res": [
     {
       "alias": "Without You Guitar Tutorial The Kid LAROI Lesson |Easy Chords + Cover|",
       "author": "GuitarZero2Hero ~ YouTube",

@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["-"],
-  "songSegments": {
+  "segments": {
     "main": {
       "name": "main",
       "type": "strings",
@@ -59,6 +59,6 @@
       ]
     }
   },
-  "songSegmentsOrder": ["main"],
-  "resources": []
+  "order": ["main"],
+  "res": []
 }

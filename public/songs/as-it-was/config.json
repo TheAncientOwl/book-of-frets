@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["Dsus2", "Bm7", "E", "A"],
-  "songSegments": {
+  "segments": {
     "main-progression": {
       "name": "main progression",
       "type": "chords",
@@ -18,8 +18,8 @@
           "items": [
             {
               "chordIDs": [["Dsus2", "Bm7", "E", "A"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "D",
@@ -43,8 +43,8 @@
       ]
     }
   },
-  "songSegmentsOrder": ["main-progression"],
-  "resources": [
+  "order": ["main-progression"],
+  "res": [
     {
       "alias": "As It Was Guitar Tutorial - Harry Styles Guitar Lesson |Chords + Fingerpicking|",
       "author": "GuitarZero2Hero ~ YouTube",

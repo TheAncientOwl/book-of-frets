@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 5,
   "chordIDs": ["Am", "G", "C", "Fmaj7"],
-  "songSegments": {
+  "segments": {
     "intro/verse/chorus": {
       "name": "intro / verse / chorus",
       "type": "chords",
@@ -18,8 +18,8 @@
           "items": [
             {
               "chordIDs": [["Am", "G", "C", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
             }
           ]
         }
@@ -66,8 +66,8 @@
           "items": [
             {
               "chordIDs": [["Am", "G", "C", "Fmaj7"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 2,
+              "strumm": ["D", "-", "D", "-", "-", "U", "D", "U"]
             }
           ]
         }
@@ -83,16 +83,16 @@
           "items": [
             {
               "chordIDs": [["Am", "G", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": ["intro/verse/chorus", "break", "bridge", "intro/verse/chorus"],
-  "resources": [
+  "order": ["intro/verse/chorus", "break", "bridge", "intro/verse/chorus"],
+  "res": [
     {
       "alias": "Riptide Guitar Tutorial - Vance Joy Guitar Lesson 🎸 |Easy Chords + Guitar Cover|",
       "author": "GuitarZero2Hero ~ YouTube",

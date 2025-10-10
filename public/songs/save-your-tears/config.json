@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["C", "Am", "Em", "G", "Fmaj7"],
-  "songSegments": {
+  "segments": {
     "intro": {
       "name": "intro",
       "type": "chords",
@@ -18,8 +18,8 @@
           "items": [
             {
               "chordIDs": [["C"]],
-              "chordTimes": 4,
-              "strummingPattern": [
+              "times": 4,
+              "strumm": [
                 "D",
                 "-",
                 "D",
@@ -52,8 +52,8 @@
           "items": [
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "D",
@@ -86,8 +86,8 @@
           "items": [
             {
               "chordIDs": [["Dm", "Am", "Fmaj7", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "D",
@@ -120,13 +120,13 @@
           "items": [
             {
               "chordIDs": [["C", "Am"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "D"]
+              "times": 1,
+              "strumm": ["D", "D"]
             },
             {
               "chordIDs": [["Em", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U", "D", "U", "D", "U"]
             }
           ]
         },
@@ -135,18 +135,18 @@
           "items": [
             {
               "chordIDs": [["C", "Am"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "D"]
+              "times": 1,
+              "strumm": ["D", "D"]
             },
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U", "D", "U", "D", "U"]
             },
             {
               "chordIDs": [["G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "D", "-", "-", "-"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U", "D", "-", "-", "-"]
             }
           ]
         }
@@ -162,8 +162,8 @@
           "items": [
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "D",
@@ -196,8 +196,8 @@
           "items": [
             {
               "chordIDs": [["Dm", "Am", "Fmaj7"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "D",
@@ -223,8 +223,8 @@
           "items": [
             {
               "chordIDs": [["F", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "-", "D", "-"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "D", "-", "D", "-"]
             }
           ]
         },
@@ -233,8 +233,8 @@
           "items": [
             {
               "chordIDs": [["Dm", "Am", "Fmaj7", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "D",
@@ -267,8 +267,8 @@
           "items": [
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         }
@@ -284,15 +284,15 @@
           "items": [
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U", "D", "U", "D", "U"]
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": [
+  "order": [
     "intro",
     "verse-1",
     "prechorus-1",
@@ -303,7 +303,7 @@
     "bridge",
     "chorus-2"
   ],
-  "resources": [
+  "res": [
     {
       "alias": "Save Your Tears Guitar Tutorial The Weeknd Guitar Lesson |Easy Chords|",
       "author": "GuitarZero2Hero ~ YouTube",

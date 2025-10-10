@@ -6,7 +6,7 @@
  *
  * @file SongSegments.tsx
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description Render song segments data.
  */
 
@@ -22,8 +22,8 @@ import {
 } from '@chakra-ui/react';
 
 type TSongSegmentsProps = {
-  songSegments: Record<string, TSongSegment>;
-  songSegmentsOrder: string[];
+  segments: Record<string, TSongSegment>;
+  order: string[];
 };
 
 export const SongSegments = (props: TSongSegmentsProps) => {
@@ -31,8 +31,8 @@ export const SongSegments = (props: TSongSegmentsProps) => {
 
   return (
     <>
-      {props.songSegmentsOrder.map((songSegmentName, index) => {
-        const songSegmentData = props.songSegments[songSegmentName];
+      {props.order.map((songSegmentName, index) => {
+        const songSegmentData = props.segments[songSegmentName];
         console.assert(
           songSegmentData !== undefined,
           `Failed to find song segment data for "${songSegmentName}"`

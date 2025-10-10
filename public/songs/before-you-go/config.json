@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 3,
   "chordIDs": ["C", "Am", "Fmaj7", "G"],
-  "songSegments": {
+  "segments": {
     "verse-picked-1": {
       "name": "verse picked 1",
       "type": "tabs",
@@ -36,8 +36,8 @@
           "items": [
             {
               "chordIDs": [["C", "Am", "Fmaj7", "G"]],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 4,
+              "strumm": ["D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -53,8 +53,8 @@
           "items": [
             {
               "chordIDs": [["C", "G", "Am", "Fmaj7"]],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 4,
+              "strumm": ["D", "-", "D", "U", "D", "U"]
             }
           ]
         },
@@ -63,8 +63,8 @@
           "items": [
             {
               "chordIDs": [["G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -83,8 +83,8 @@
                 ["Am", "F", "C", "G"],
                 ["Am", "F", "G", "G"]
               ],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 2,
+              "strumm": ["D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -106,13 +106,13 @@
           "items": [
             {
               "chordIDs": [["C", "G", "Am"]],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 4,
+              "strumm": ["D", "-", "D", "U", "D", "U"]
             },
             {
               "chordIDs": [["Fmaj7"]],
-              "chordTimes": 3,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 3,
+              "strumm": ["D", "-", "D", "U", "D", "U"]
             }
           ]
         }
@@ -125,7 +125,7 @@
       "chunks": []
     }
   },
-  "songSegmentsOrder": [
+  "order": [
     "verse-picked-1",
     "chorus-picked",
     "break",
@@ -136,7 +136,7 @@
     "final-chorus-2",
     "verse-picked-2"
   ],
-  "resources": [
+  "res": [
     {
       "alias": "Before You Go Guitar Tutorial 🎸 Lewis Capaldi Guitar Lesson |Fingerpicking + TAB|",
       "author": "GuitarZero2Hero ~ YouTube",

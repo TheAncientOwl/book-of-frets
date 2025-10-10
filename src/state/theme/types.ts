@@ -6,7 +6,7 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 0.16
+ * @version 0.17
  * @description App theme types
  */
 
@@ -266,7 +266,7 @@ type TSongTheme = {
     title: string;
     note: string;
   };
-  resources: {
+  res: {
     title: string;
     item: {
       note: string;

@@ -50,7 +50,7 @@
       },
       "minItems": 1
     },
-    "songSegments": {
+    "segments": {
       "type": "object",
       "additionalProperties": {
         "type": "object",
@@ -90,12 +90,12 @@
                             },
                             "minItems": 1
                           },
-                          "chordTimes": {
+                          "times": {
                             "type": "integer",
                             "minimum": 1,
                             "default": 1
                           },
-                          "strummingPattern": {
+                          "strumm": {
                             "type": "array",
                             "items": {
                               "type": "string",
@@ -104,7 +104,7 @@
                             "minItems": 1
                           }
                         },
-                        "required": ["chordIDs", "chordTimes", "strummingPattern"]
+                        "required": ["chordIDs", "times", "strumm"]
                       },
                       {
                         "oneOf": [
@@ -137,14 +137,14 @@
         "required": ["name", "type", "times", "chunks"]
       }
     },
-    "songSegmentsOrder": {
+    "order": {
       "type": "array",
       "items": {
         "type": "string"
       },
       "minItems": 1
     },
-    "resources": {
+    "res": {
       "type": "array",
       "items": {
         "type": "object",
@@ -176,8 +176,8 @@
     "notes",
     "capo",
     "chordIDs",
-    "songSegments",
-    "songSegmentsOrder",
-    "resources"
+    "segments",
+    "order",
+    "res"
   ]
 }

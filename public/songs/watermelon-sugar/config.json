@@ -7,7 +7,7 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["Dm", "Am", "C", "G"],
-  "songSegments": {
+  "segments": {
     "main": {
       "name": "main",
       "type": "chords",
@@ -18,8 +18,8 @@
           "items": [
             {
               "chordIDs": [["Dm", "Am", "C", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": [
+              "times": 1,
+              "strumm": [
                 "D",
                 "-",
                 "-",
@@ -43,8 +43,8 @@
       ]
     }
   },
-  "songSegmentsOrder": ["main"],
-  "resources": [
+  "order": ["main"],
+  "res": [
     {
       "alias": "Watermelon Sugar Guitar Tutorial 🍉 Harry Styles Guitar Lesson |Easy Chords + No Capo|",
       "author": "GuitarZero2Hero ~ YouTube",

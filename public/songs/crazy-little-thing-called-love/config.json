@@ -7,7 +7,7 @@
   "notes": ["On D chord, 2nd down strum, pinky finger down => Dsus4"],
   "capo": 0,
   "chordIDs": ["D", "Dsus4", "G", "C", "Bb", "E", "A"],
-  "songSegments": {
+  "segments": {
     "intro": {
       "name": "intro",
       "type": "chords",
@@ -18,8 +18,8 @@
           "items": [
             {
               "chordIDs": [["D", "D", "D", "D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U", "-", "U", "D", "U"]
             }
           ]
         }
@@ -35,13 +35,13 @@
           "items": [
             {
               "chordIDs": [["D", "D", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U", "-", "U", "D", "U"]
             },
             {
               "chordIDs": [["C", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             }
           ]
         },
@@ -50,18 +50,18 @@
           "items": [
             {
               "chordIDs": [["D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U", "-", "U", "D", "U"]
             },
             {
               "chordIDs": [["Bb", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             },
             {
               "chordIDs": [["D", "D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U", "-", "U", "D", "U"]
             }
           ]
         }
@@ -77,18 +77,18 @@
           "items": [
             {
               "chordIDs": [["G", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U", "-", "U", "D", "U"]
             },
             {
               "chordIDs": [["C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "-"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "-", "D", "U", "D", "-"]
             },
             {
               "chordIDs": [["G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U", "-", "U", "D", "U"]
             }
           ]
         },
@@ -97,18 +97,18 @@
           "items": [
             {
               "chordIDs": [["Bb", "Bb"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U", "D", "U", "D", "U"]
             },
             {
               "chordIDs": [["E", "A"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             },
             {
               "chordIDs": [["F"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         }
@@ -183,23 +183,23 @@
           "items": [
             {
               "chordIDs": [["Bb", "Bb"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "D", "U", "D", "U"]
             },
             {
               "chordIDs": [["D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D"]
+              "times": 1,
+              "strumm": ["D", "-", "D"]
             },
             {
               "chordIDs": [["G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             },
             {
               "chordIDs": [["D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "D", "U", "D", "U"]
             }
           ]
         },
@@ -208,23 +208,23 @@
           "items": [
             {
               "chordIDs": [["Bb", "Bb"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "-", "D", "U", "D", "U", "D", "U"]
             },
             {
               "chordIDs": [["D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D"]
+              "times": 1,
+              "strumm": ["D", "-", "D"]
             },
             {
               "chordIDs": [["E", "A"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             },
             {
               "chordIDs": [["F"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": ["D"]
             }
           ]
         }
@@ -287,13 +287,13 @@
           "items": [
             {
               "chordIDs": [["D", "D", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U", "-", "U", "D", "U"]
             },
             {
               "chordIDs": [["C", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             }
           ]
         },
@@ -302,8 +302,8 @@
           "items": [
             {
               "chordIDs": [["D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U", "-", "U", "D", "U"]
             }
           ]
         },
@@ -312,31 +312,21 @@
           "items": [
             {
               "chordIDs": [["Bb", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U"]
             },
             {
               "chordIDs": [["D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": ["D", "U", "D", "U", "-", "U", "D", "U"]
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": [
-    "intro",
-    "verse",
-    "verse",
-    "chorus1",
-    "chorus2",
-    "verse",
-    "solo1",
-    "solo2",
-    "outro"
-  ],
-  "resources": [
+  "order": ["intro", "verse", "verse", "chorus1", "chorus2", "verse", "solo1", "solo2", "outro"],
+  "res": [
     {
       "alias": "Crazy Little Thing Called Love Guitar Tutorial - Queen Guitar Lesson 🎸 |TABS + Easy Chords + Solo|",
       "author": "GuitarZero2Hero ~ YouTube",
