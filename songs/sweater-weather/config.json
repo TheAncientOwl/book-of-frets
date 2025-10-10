@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.1",
   "contributors": ["TheAncientOwl"],
   "title": "Sweater Weather",
   "artists": ["The Neighbourhood"],
@@ -7,8 +7,15 @@
   "notes": [],
   "capo": 3,
   "chordIDs": ["C", "Am", "Em", "G", "D"],
-  "songSegments": {
-    "verse": {
+  "strumms": [
+    ["D", "-", "D", "U", "-", "U", "D", "U"],
+    ["D", "-", "D", "U"],
+    ["D"],
+    ["D", "-", "D", "-", "-", "U", "D", "U"],
+    ["D", "-", "D", "-", "D", "U", "D", "U"]
+  ],
+  "segments": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 1,
@@ -18,20 +25,20 @@
           "items": [
             {
               "chordIDs": [["C", "Am", "Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["Am", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U"]
+              "times": 1,
+              "strumm": 1
             }
           ]
         }
       ]
     },
-    "pre-chorus": {
-      "name": "pre-chorus",
+    "pr": {
+      "name": "prechorus",
       "type": "chords",
       "times": 1,
       "chunks": [
@@ -40,14 +47,14 @@
           "items": [
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "chorus": {
+    "c1": {
       "name": "chorus",
       "type": "chords",
       "times": 1,
@@ -57,14 +64,14 @@
           "items": [
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": 2
             }
           ]
         }
       ]
     },
-    "chorus2": {
+    "c2": {
       "name": "chorus 2",
       "type": "chords",
       "times": 1,
@@ -74,8 +81,8 @@
           "items": [
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": 2
             }
           ]
         },
@@ -84,14 +91,14 @@
           "items": [
             {
               "chordIDs": [["D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": 2
             }
           ]
         }
       ]
     },
-    "bridge": {
+    "b": {
       "name": "bridge",
       "type": "chords",
       "times": 1,
@@ -101,8 +108,8 @@
           "items": [
             {
               "chordIDs": [["Am", "G", "D", "D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 3
             }
           ]
         },
@@ -111,14 +118,14 @@
           "items": [
             {
               "chordIDs": [["Am", "G", "D", "D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 3
             }
           ]
         }
       ]
     },
-    "chorus3": {
+    "c3": {
       "name": "chorus 3",
       "type": "chords",
       "times": 1,
@@ -128,14 +135,14 @@
           "items": [
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 4
             }
           ]
         }
       ]
     },
-    "outro": {
+    "o": {
       "name": "outro",
       "type": "chords",
       "times": 1,
@@ -145,26 +152,16 @@
           "items": [
             {
               "chordIDs": [["C", "Am", "Em", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": 2
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": [
-    "verse",
-    "pre-chorus",
-    "chorus",
-    "verse",
-    "pre-chorus",
-    "chorus2",
-    "bridge",
-    "chorus3",
-    "outro"
-  ],
-  "resources": [
+  "order": ["v", "pr", "c1", "v", "pr", "c2", "b", "c3", "o"],
+  "res": [
     {
       "alias": "Sweater Weather Guitar Tutorial - The Neighbourhood Guitar Lesson |Chords + Guitar Cover|",
       "author": "GuitarZero2Hero ~ YouTube",

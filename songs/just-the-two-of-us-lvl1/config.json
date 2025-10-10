@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.1",
   "contributors": ["TheAncientOwl"],
   "title": "Just the Two of Us | Lvl 1",
   "artists": ["Grover Washington Jr."],
@@ -7,8 +7,13 @@
   "notes": [],
   "capo": 1,
   "chordIDs": ["CM7", "B7", "Em", "Dm7", "G7"],
-  "songSegments": {
-    "main-progression": {
+  "strumms": [
+    ["D", "-", "D", "U", "-", "U", "D", "U"],
+    ["D", "-", "D", "U"],
+    ["D", "-", "-", "U", "D", "U", "D", "-", "-", "U", "D", "U", "D", "-", "D", "U"]
+  ],
+  "segments": {
+    "m": {
       "name": "main progression",
       "type": "chords",
       "times": 404,
@@ -18,23 +23,23 @@
           "items": [
             {
               "chordIDs": [["CM7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["B7"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "U"]
+              "times": 2,
+              "strumm": 1
             },
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["Dm7", "G7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U"]
+              "times": 1,
+              "strumm": 1
             }
           ]
         },
@@ -43,43 +48,26 @@
           "items": [
             {
               "chordIDs": [["CM7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["B7"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "U"]
+              "times": 2,
+              "strumm": 1
             },
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": [
-                "D",
-                "-",
-                "-",
-                "U",
-                "D",
-                "U",
-                "D",
-                "-",
-                "-",
-                "U",
-                "D",
-                "U",
-                "D",
-                "-",
-                "D",
-                "U"
-              ]
+              "times": 1,
+              "strumm": 2
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": ["main-progression"],
-  "resources": [
+  "order": ["m"],
+  "res": [
     {
       "alias": "Just The Two Of Us Guitar Tutorial Grover Washington Jr Guitar |Chords + Fingerpicking|",
       "author": "GuitarZero2Hero ~ YouTube",

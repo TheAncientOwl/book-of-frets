@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.1",
   "contributors": ["TheAncientOwl"],
   "title": "What I've Done",
   "artists": ["Linkin Park"],
@@ -7,8 +7,18 @@
   "notes": [],
   "capo": 3,
   "chordIDs": ["Em", "G", "D", "Asus2", "Dadd11_3fr", "G/B"],
-  "songSegments": {
-    "intro": {
+  "strumms": [
+    ["D", "U", "D", "U", "D", "U", "D", "U"],
+    ["D", "U", "D", "U", "-", "U", "D", "U"],
+    ["D", "U", "D", "U"],
+    ["D", "D", "D", "D", "D", "D", "D", "D"],
+    ["D", "D", "D", "D", "D", "D", "-", "-"],
+    ["D", "-", "-", "-"],
+    ["Dx", "Ux", "Dx", "Ux"],
+    ["D"]
+  ],
+  "segments": {
+    "i": {
       "name": "intro",
       "type": "chords",
       "times": 1,
@@ -18,14 +28,14 @@
           "items": [
             {
               "chordIDs": [["Em", "G", "D", "Asus2"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "break": {
+    "bk": {
       "name": "break",
       "type": "chords",
       "times": 1,
@@ -35,14 +45,14 @@
           "items": [
             {
               "chordIDs": [["Em", "Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 1
             }
           ]
         }
       ]
     },
-    "verse": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 1,
@@ -52,14 +62,14 @@
           "items": [
             {
               "chordIDs": [["Em", "G", "D", "Asus2"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 1
             }
           ]
         }
       ]
     },
-    "prechorus": {
+    "pr": {
       "name": "prechorus",
       "type": "chords",
       "times": 1,
@@ -69,24 +79,24 @@
           "items": [
             {
               "chordIDs": [["C", "C", "Dadd11_3fr"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 1
             },
             {
               "chordIDs": [["Dadd11_3fr"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "-", "-"]
+              "times": 1,
+              "strumm": 5
             },
             {
               "chordIDs": [["Dadd11_3fr"]],
-              "chordTimes": 1,
-              "strummingPattern": ["Dx", "Ux", "Dx", "Ux"]
+              "times": 1,
+              "strumm": 6
             }
           ]
         }
       ]
     },
-    "chorus-1": {
+    "c1": {
       "name": "chorus 1",
       "type": "chords",
       "times": 1,
@@ -96,14 +106,14 @@
           "items": [
             {
               "chordIDs": [["Em", "G", "D", "Asus2"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "chorus-2": {
+    "c2": {
       "name": "chorus 2",
       "type": "chords",
       "times": 1,
@@ -116,19 +126,19 @@
                 ["Em", "G", "D", "Asus2"],
                 ["Em", "G", "D"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["Asus2", "G/B", "C", "D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 2
             }
           ]
         }
       ]
     },
-    "chorus-3": {
+    "c3": {
       "name": "chorus 3",
       "type": "chords",
       "times": 1,
@@ -138,8 +148,8 @@
           "items": [
             {
               "chordIDs": [["Em", "G", "D", "Asus2"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "D", "D", "D", "D", "D", "D", "D"]
+              "times": 1,
+              "strumm": 3
             }
           ]
         },
@@ -148,14 +158,14 @@
           "items": [
             {
               "chordIDs": [["Asus2"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "D", "D", "D", "D", "D", "-", "-"]
+              "times": 1,
+              "strumm": 4
             }
           ]
         }
       ]
     },
-    "final-chorus": {
+    "fc": {
       "name": "final chorus",
       "type": "chords",
       "times": 1,
@@ -165,14 +175,14 @@
           "items": [
             {
               "chordIDs": [["Em", "G", "D", "Asus2"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "outro": {
+    "o": {
       "name": "outro",
       "type": "chords",
       "times": 1,
@@ -182,28 +192,16 @@
           "items": [
             {
               "chordIDs": [["Em", "G", "D", "Asus2"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": 7
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": [
-    "intro",
-    "break",
-    "verse",
-    "prechorus",
-    "chorus-1",
-    "verse",
-    "prechorus",
-    "chorus-2",
-    "chorus-3",
-    "final-chorus",
-    "outro"
-  ],
-  "resources": [
+  "order": ["i", "bk", "v", "pr", "c1", "v", "pr", "c2", "c3", "fc", "o"],
+  "res": [
     {
       "alias": "What I've Done Acoustic Guitar Tutorial Linkin Park Guitar Lesson |Easy Chords|",
       "author": "GuitarZero2Hero ~ YouTube",

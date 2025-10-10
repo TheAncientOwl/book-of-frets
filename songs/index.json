@@ -127,6 +127,13 @@
       "chordIDs": ["C", "D_3fr", "D", "G", "Em"]
     },
     {
+      "title": "Issues",
+      "artists": ["Julia Michaels"],
+      "directory": "issues",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "D", "G/B", "C", "D/F#", "Em"]
+    },
+    {
       "title": "Shivers",
       "artists": ["Ed Sheeran"],
       "directory": "shivers",

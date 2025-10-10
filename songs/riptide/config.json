@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.1",
   "contributors": ["TheAncientOwl"],
   "title": "Riptide",
   "artists": ["Vance Joy"],
@@ -7,8 +7,9 @@
   "notes": [],
   "capo": 5,
   "chordIDs": ["Am", "G", "C", "Fmaj7"],
-  "songSegments": {
-    "intro/verse/chorus": {
+  "strumms": [["D", "-", "D", "-", "-", "U", "D", "U"], ["D"]],
+  "segments": {
+    "ivc": {
       "name": "intro / verse / chorus",
       "type": "chords",
       "times": 1,
@@ -18,14 +19,14 @@
           "items": [
             {
               "chordIDs": [["Am", "G", "C", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "break": {
+    "bk": {
       "name": "break",
       "type": "strings",
       "times": 4,
@@ -56,7 +57,7 @@
         }
       ]
     },
-    "bridge": {
+    "b": {
       "name": "bridge",
       "type": "chords",
       "times": 1,
@@ -66,14 +67,14 @@
           "items": [
             {
               "chordIDs": [["Am", "G", "C", "Fmaj7"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 2,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "post-bridge": {
+    "pb": {
       "name": "post bridge",
       "type": "chords",
       "times": 1,
@@ -83,16 +84,16 @@
           "items": [
             {
               "chordIDs": [["Am", "G", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": 1
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": ["intro/verse/chorus", "break", "bridge", "intro/verse/chorus"],
-  "resources": [
+  "order": ["ivc", "bk", "b", "pb", "ivc"],
+  "res": [
     {
       "alias": "Riptide Guitar Tutorial - Vance Joy Guitar Lesson 🎸 |Easy Chords + Guitar Cover|",
       "author": "GuitarZero2Hero ~ YouTube",

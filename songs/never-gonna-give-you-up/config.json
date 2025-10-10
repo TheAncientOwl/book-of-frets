@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.1",
   "contributors": ["TheAncientOwl"],
   "title": "Never Gonna Give You Up",
   "artists": ["Rick Astley"],
@@ -7,8 +7,13 @@
   "notes": ["Last chorus Em & Am only one down strum"],
   "capo": 1,
   "chordIDs": ["Fmaj7", "G", "Em", "Am"],
-  "songSegments": {
-    "intro": {
+  "strumms": [
+    ["D", "-", "U", "D"],
+    ["D", "-", "U", "D", "D", "D", "U"],
+    ["D", "-", "U", "D", "-", "D", "-", "U", "D", "D", "D", "U"]
+  ],
+  "segments": {
+    "i": {
       "name": "intro",
       "type": "chords",
       "times": 4,
@@ -18,13 +23,13 @@
           "items": [
             {
               "chordIDs": [["Fmaj7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "U", "D"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "U", "D", "D", "D", "U"]
+              "times": 1,
+              "strumm": 1
             }
           ]
         },
@@ -33,19 +38,19 @@
           "items": [
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "U", "D"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["Am"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "U", "D", "D", "D", "U"]
+              "times": 1,
+              "strumm": 1
             }
           ]
         }
       ]
     },
-    "verse": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 1,
@@ -55,15 +60,15 @@
           "items": [
             {
               "chordIDs": [["Fmaj7", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "U", "D", "-", "D", "-", "U", "D", "D", "D", "U"]
+              "times": 1,
+              "strumm": 2
             }
           ]
         }
       ]
     },
-    "pre-chorus": {
-      "name": "pre-chorus",
+    "pr": {
+      "name": "prechorus",
       "type": "chords",
       "times": 1,
       "chunks": [
@@ -72,14 +77,14 @@
           "items": [
             {
               "chordIDs": [["Fmaj7", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "U", "D", "-", "D", "-", "U", "D", "D", "D", "U"]
+              "times": 1,
+              "strumm": 2
             }
           ]
         }
       ]
     },
-    "chorus": {
+    "c": {
       "name": "chorus",
       "type": "chords",
       "times": 4,
@@ -89,13 +94,13 @@
           "items": [
             {
               "chordIDs": [["Fmaj7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "U", "D"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "U", "D", "D", "D", "U"]
+              "times": 1,
+              "strumm": 1
             }
           ]
         },
@@ -104,21 +109,21 @@
           "items": [
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "U", "D"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["Am"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "U", "D", "D", "D", "U"]
+              "times": 1,
+              "strumm": 1
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": ["intro", "verse", "pre-chorus", "chorus", "pre-chorus", "chorus"],
-  "resources": [
+  "order": ["i", "v", "pr", "c", "pr", "c"],
+  "res": [
     {
       "alias": "Rick Astley - Never Gonna Give You Up EASY Guitar Tutorial With Chords / Lyrics",
       "author": "Easy 2 Play Music ~ YouTube",

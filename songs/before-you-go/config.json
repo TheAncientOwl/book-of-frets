@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.1",
   "contributors": ["TheAncientOwl"],
   "title": "Before You go",
   "artists": ["Lewis Capaldi"],
@@ -7,26 +7,27 @@
   "notes": [],
   "capo": 3,
   "chordIDs": ["C", "Am", "Fmaj7", "G"],
-  "songSegments": {
-    "verse-picked-1": {
+  "strumms": [["D", "-", "D", "U", "D", "U"]],
+  "segments": {
+    "vp1": {
       "name": "verse picked 1",
       "type": "tabs",
       "times": 1,
       "chunks": []
     },
-    "chorus-picked": {
+    "cp": {
       "name": "chorus picked",
       "type": "tabs",
       "times": 1,
       "chunks": []
     },
-    "break": {
-      "name": "chorus picked",
+    "bk": {
+      "name": "break",
       "type": "tabs",
       "times": 1,
       "chunks": []
     },
-    "verse-strummed": {
+    "vs": {
       "name": "verse strummed",
       "type": "chords",
       "times": 1,
@@ -36,14 +37,14 @@
           "items": [
             {
               "chordIDs": [["C", "Am", "Fmaj7", "G"]],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 4,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "chorus-strummed": {
+    "cs": {
       "name": "chorus strummed",
       "type": "chords",
       "times": 1,
@@ -53,8 +54,8 @@
           "items": [
             {
               "chordIDs": [["C", "G", "Am", "Fmaj7"]],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 4,
+              "strumm": 0
             }
           ]
         },
@@ -63,15 +64,15 @@
           "items": [
             {
               "chordIDs": [["G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "bridge": {
-      "name": "Bridge",
+    "b": {
+      "name": "bridge",
       "type": "chords",
       "times": 1,
       "chunks": [
@@ -83,20 +84,20 @@
                 ["Am", "F", "C", "G"],
                 ["Am", "F", "G", "G"]
               ],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 2,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "final-chorus-1": {
+    "fc1": {
       "name": "final chorus",
       "type": "tabs",
       "times": 1,
       "chunks": []
     },
-    "final-chorus-2": {
+    "fc2": {
       "name": "final chorus 2",
       "type": "chords",
       "times": 1,
@@ -106,37 +107,27 @@
           "items": [
             {
               "chordIDs": [["C", "G", "Am"]],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 4,
+              "strumm": 0
             },
             {
               "chordIDs": [["Fmaj7"]],
-              "chordTimes": 3,
-              "strummingPattern": ["D", "-", "D", "U", "D", "U"]
+              "times": 3,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "verse-picked-2": {
+    "vp2": {
       "name": "verse picked 2",
       "type": "tabs",
       "times": 1,
       "chunks": []
     }
   },
-  "songSegmentsOrder": [
-    "verse-picked-1",
-    "chorus-picked",
-    "break",
-    "verse-strummed",
-    "chorus-strummed",
-    "bridge",
-    "final-chorus-1",
-    "final-chorus-2",
-    "verse-picked-2"
-  ],
-  "resources": [
+  "order": ["vp1", "cp", "bk", "vs", "cs", "b", "fc1", "fc2", "vp2"],
+  "res": [
     {
       "alias": "Before You Go Guitar Tutorial 🎸 Lewis Capaldi Guitar Lesson |Fingerpicking + TAB|",
       "author": "GuitarZero2Hero ~ YouTube",

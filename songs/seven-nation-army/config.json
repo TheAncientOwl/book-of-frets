@@ -1,5 +1,5 @@
 {
-  "version": "0.4.1",
+  "version": "0.5.1",
   "contributors": ["TheAncientOwl"],
   "title": "Seven Nation Army",
   "artists": ["The White Stripes"],
@@ -7,8 +7,9 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["-"],
-  "songSegments": {
-    "main1": {
+  "strumms": [],
+  "segments": {
+    "m1": {
       "name": "main 1",
       "type": "strings",
       "times": 3,
@@ -36,7 +37,7 @@
         }
       ]
     },
-    "main2": {
+    "m2": {
       "name": "main 2",
       "type": "strings",
       "times": 1,
@@ -78,7 +79,7 @@
         }
       ]
     },
-    "main3": {
+    "m3": {
       "name": "main 3",
       "type": "strings",
       "times": 3,
@@ -124,7 +125,7 @@
         }
       ]
     },
-    "outro": {
+    "o": {
       "name": "outro",
       "type": "strings",
       "times": 1,
@@ -153,8 +154,8 @@
       ]
     }
   },
-  "songSegmentsOrder": ["main1", "main2", "main3", "main2", "outro"],
-  "resources": [
+  "order": ["m1", "m2", "m3", "m2", "o"],
+  "res": [
     {
       "alias": "The White Stripes - Seven Nation Army | Riff Tabs | Guitar Lesson/Tutorial | Acoustic Riff: 12",
       "author": "Acoustic Version ~ YouTube",

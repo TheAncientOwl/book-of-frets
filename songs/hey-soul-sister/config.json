@@ -1,5 +1,5 @@
 {
-  "version": "0.1.1",
+  "version": "0.2.1",
   "contributors": ["TheAncientOwl"],
   "title": "Hey, Soul Sister",
   "artists": ["Train"],
@@ -7,8 +7,9 @@
   "notes": [],
   "capo": 4,
   "chordIDs": ["C", "G", "Am", "F"],
-  "songSegments": {
-    "intro": {
+  "strumms": [["D", "-", "D", "-", "D", "U", "D", "U"], ["D", "-", "D", "-"], ["D"]],
+  "segments": {
+    "i": {
       "name": "intro",
       "type": "chords",
       "times": 1,
@@ -18,14 +19,14 @@
           "items": [
             {
               "chordIDs": [["C", "G", "Am", "F"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 2,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "verse": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 1,
@@ -38,19 +39,19 @@
                 ["C", "G", "Am", "F"],
                 ["C", "G", "Am"]
               ],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 2,
+              "strumm": 0
             },
             {
               "chordIDs": [["F", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "chorus-1": {
+    "c1": {
       "name": "chorus 1",
       "type": "chords",
       "times": 1,
@@ -60,13 +61,13 @@
           "items": [
             {
               "chordIDs": [["F", "F", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["C", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-"]
+              "times": 1,
+              "strumm": 1
             }
           ]
         },
@@ -75,14 +76,14 @@
           "items": [
             {
               "chordIDs": [["F", "F", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "break": {
+    "bk": {
       "name": "break",
       "type": "chords",
       "times": 1,
@@ -92,14 +93,14 @@
           "items": [
             {
               "chordIDs": [["C", "G", "Am", "F"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 2,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "chorus-2": {
+    "c2": {
       "name": "chorus 2",
       "type": "chords",
       "times": 1,
@@ -109,13 +110,13 @@
           "items": [
             {
               "chordIDs": [["F", "F", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["C", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-"]
+              "times": 1,
+              "strumm": 1
             }
           ]
         },
@@ -124,14 +125,14 @@
           "items": [
             {
               "chordIDs": [["F", "F", "G", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "bridge": {
+    "b": {
       "name": "bridge",
       "type": "chords",
       "times": 1,
@@ -141,24 +142,24 @@
           "items": [
             {
               "chordIDs": [["C", "G"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 2,
+              "strumm": 0
             },
             {
               "chordIDs": [["Am", "G"]],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 4,
+              "strumm": 0
             },
             {
               "chordIDs": [["Am", "G", "F", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "chorus-2.2": {
+    "c2.2": {
       "name": "chorus 2",
       "type": "chords",
       "times": 1,
@@ -168,13 +169,13 @@
           "items": [
             {
               "chordIDs": [["F", "F", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["C", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-"]
+              "times": 1,
+              "strumm": 1
             }
           ]
         },
@@ -183,14 +184,14 @@
           "items": [
             {
               "chordIDs": [["F", "F", "G", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "outro": {
+    "o": {
       "name": "outro",
       "type": "chords",
       "times": 1,
@@ -200,13 +201,13 @@
           "items": [
             {
               "chordIDs": [["C", "G", "Am"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 2,
+              "strumm": 0
             },
             {
               "chordIDs": [["F", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         },
@@ -215,36 +216,26 @@
           "items": [
             {
               "chordIDs": [["C", "G", "Am"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 2,
+              "strumm": 0
             },
             {
               "chordIDs": [["F"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": 2
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": [
-    "intro",
-    "verse",
-    "chorus-1",
-    "break",
-    "verse",
-    "chorus-2",
-    "bridge",
-    "chorus-2.2",
-    "outro"
-  ],
-  "resources": [
+  "order": ["i", "v", "c1", "bk", "v", "c2", "b", "c2.2", "o"],
+  "res": [
     {
       "alias": "Hey Soul Sister Guitar Tutorial - Train Guitar Lesson 🎸 |Easy Chords + Guitar Cover|",
       "author": "GuitarZero2Hero ~ YouTube",
