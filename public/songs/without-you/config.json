@@ -1,18 +1,19 @@
 {
-  "version": "0.5.1",
+  "version": "0.5.0",
   "contributors": ["TheAncientOwl"],
   "title": "Without You",
-  "artists": ["Harry Styles"],
+  "artists": ["The Kid LAROI"],
   "type": ["acoustic"],
   "notes": [],
   "capo": 0,
-  "chordIDs": ["C", "Em", "Am", "F", "G"],
+  "chordIDs": ["Am", "Fmaj7", "C", "G", "E"],
   "strumms": [
-    ["D", "D", "U", "U", "D", "U"],
-    ["D", "-", "D", "U", "-", "U", "D", "U"],
-    ["D", "D", "-", "U", "D", "U"],
-    ["D", "-", "-", "U", "D", "U", "D", "U"],
-    ["D", "U", "D", "U", "D", "U", "D", "U"]
+    ["Dx", "-", "Dx", "-", "Dx", "-", "Dx", "Ux"],
+    ["D", "-", "-", "-", "D", "-", "-", "U", "-", "U", "D", "-", "D", "-", "D", "U"],
+    ["D", "-", "D", "-", "D", "-", "D", "-", "D", "-", "-", "-", "Dx", "Ux", "Dx", "Ux"],
+    ["D"],
+    ["D", "-", "D", "-", "D", "-", "D", "-", "D", "-", "D", "-", "D", "-", "D", "U"],
+    ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "Dx", "Ux", "Dx", "Ux"]
   ],
   "segments": {
     "intro": {
@@ -24,9 +25,36 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": [["C"]],
-              "times": 2,
+              "chordIDs": [["-"]],
+              "times": 1,
               "strumm": 0
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
+              "times": 1,
+              "strumm": 1
+            }
+          ]
+        }
+      ]
+    },
+    "chorus1": {
+      "name": "chorus",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 2,
+          "items": [
+            {
+              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
+              "times": 1,
+              "strumm": 1
             }
           ]
         }
@@ -35,28 +63,13 @@
     "verse": {
       "name": "verse",
       "type": "chords",
-      "times": 2,
+      "times": 1,
       "chunks": [
         {
-          "times": 1,
+          "times": 2,
           "items": [
             {
-              "chordIDs": [["C"]],
-              "times": 1,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["Em"]],
-              "times": 1,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["Am"]],
-              "times": 1,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["F"]],
+              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
               "times": 1,
               "strumm": 1
             }
@@ -64,33 +77,45 @@
         }
       ]
     },
-    "chorus": {
-      "name": "chorus",
+    "pre-chorus1": {
+      "name": "pre-chorus 1",
       "type": "chords",
-      "times": 2,
+      "times": 1,
       "chunks": [
         {
           "times": 1,
           "items": [
             {
-              "chordIDs": [["C"]],
+              "chordIDs": [["Am", "Fmaj7", "C"]],
               "times": 1,
-              "strumm": 2
-            },
+              "strumm": 1
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "items": [
             {
-              "chordIDs": [["G"]],
+              "chordIDs": [["E"]],
               "times": 1,
               "strumm": 2
-            },
+            }
+          ]
+        }
+      ]
+    },
+    "chorus2": {
+      "name": "chorus",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 4,
+          "items": [
             {
-              "chordIDs": [["Am"]],
+              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
               "times": 1,
-              "strumm": 2
-            },
-            {
-              "chordIDs": [["F"]],
-              "times": 1,
-              "strumm": 2
+              "strumm": 1
             }
           ]
         }
@@ -102,17 +127,49 @@
       "times": 1,
       "chunks": [
         {
-          "times": 2,
+          "times": 1,
           "items": [
             {
-              "chordIDs": [["Em"]],
+              "chordIDs": [["Am", "Fmaj7", "C"]],
               "times": 1,
               "strumm": 3
-            },
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "items": [
             {
-              "chordIDs": [["F"]],
+              "chordIDs": [["G"]],
               "times": 1,
-              "strumm": 3
+              "strumm": 4
+            }
+          ]
+        }
+      ]
+    },
+    "pre-chorus2": {
+      "name": "pre-chorus 2",
+      "type": "chords",
+      "times": 1,
+      "chunks": [
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": [["Am", "Fmaj7", "C"]],
+              "times": 1,
+              "strumm": 1
+            }
+          ]
+        },
+        {
+          "times": 1,
+          "items": [
+            {
+              "chordIDs": [["-"]],
+              "times": 1,
+              "strumm": 5
             }
           ]
         }
@@ -127,20 +184,35 @@
           "times": 1,
           "items": [
             {
-              "chordIDs": [["C"]],
-              "times": 2,
-              "strumm": 4
+              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
+              "times": 1,
+              "strumm": 3
             }
           ]
         }
       ]
     }
   },
-  "order": ["intro", "verse", "chorus", "verse", "chorus", "bridge", "chorus", "outro"],
+  "order": [
+    "intro",
+    "chorus1",
+    "verse",
+    "pre-chorus1",
+    "chorus2",
+    "bridge",
+    "pre-chorus2",
+    "chorus1",
+    "outro"
+  ],
   "res": [
     {
-      "alias": "Adore You Guitar Tutorial Harry Styles Lesson |Easy Chords + Cover|",
+      "alias": "Without You Guitar Tutorial The Kid LAROI Lesson |Easy Chords + Cover|",
       "author": "GuitarZero2Hero ~ YouTube",
+      "link": "https://youtu.be/I8UfGA0qR7A"
+    },
+    {
+      "alias": "Without You Guitar Cover The Kid LAROI 🎸|Tabs + Chords|",
+      "author": "GuitarZero2Hero Express ~ YouTube",
       "link": "https://youtu.be/ayhT2swtB0w"
     }
   ]
