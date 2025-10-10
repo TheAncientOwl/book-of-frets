@@ -1,4 +1,5 @@
 {
+  // [json]
   "json.schemas": [
     {
       "fileMatch": ["public/songs/*/*.json"],
@@ -21,8 +22,28 @@
       "url": "./project/schemas/theme.schema.json"
     }
   ],
+
+  "[plaintext]": {
+    "editor.formatOnSave": false
+  },
+  "files.associations": {
+    "*.min.json": "plaintext"
+  },
+
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "public/.*\\.json$",
+        "cmd": "./project/tools/minify-json/run.sh ${file}"
+      }
+    ]
+  },
+
+  // [typescript]
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifierEnding": "index",
+
+  // [icons]
   "material-icon-theme.folders.associations": {
     "covers": "images",
     "state": "context"

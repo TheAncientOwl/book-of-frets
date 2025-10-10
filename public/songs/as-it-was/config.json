@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.1",
   "contributors": ["TheAncientOwl"],
   "title": "As It Was",
   "artists": ["Harry Styles"],
@@ -7,8 +7,9 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["Dsus2", "Bm7", "E", "A"],
-  "songSegments": {
-    "main-progression": {
+  "strumms": [["D", "-", "D", "-", "D", "U", "D", "U", "-", "U", "D", "-", "D", "U", "D", "U"]],
+  "segments": {
+    "m": {
       "name": "main progression",
       "type": "chords",
       "times": 1,
@@ -18,33 +19,16 @@
           "items": [
             {
               "chordIDs": [["Dsus2", "Bm7", "E", "A"]],
-              "chordTimes": 1,
-              "strummingPattern": [
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "U",
-                "D",
-                "U",
-                "-",
-                "U",
-                "D",
-                "-",
-                "D",
-                "U",
-                "D",
-                "U"
-              ]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": ["main-progression"],
-  "resources": [
+  "order": ["m"],
+  "res": [
     {
       "alias": "As It Was Guitar Tutorial - Harry Styles Guitar Lesson |Chords + Fingerpicking|",
       "author": "GuitarZero2Hero ~ YouTube",

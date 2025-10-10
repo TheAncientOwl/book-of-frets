@@ -6,18 +6,20 @@
  *
  * @file ChordsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.22
+ * @version 0.23
  * @description Render song chords pattern.
  */
 
-import type { TChordsChunk } from '@/common/types/song.types';
+import type { TChordsChunk, TStrummingPattern } from '@/common/types/song.types';
 import { ChordsChunkItem } from '@/components/SongRenderer/ChordsChunkItem';
 import { useAppState } from '@/state/hooks/useAppState';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { Box, Divider, Tag, Tooltip, type DividerProps } from '@chakra-ui/react';
 import { Fragment } from 'react';
 
-type TChordsChunkProps = TChordsChunk & {};
+type TChordsChunkProps = TChordsChunk & {
+  strumms: TStrummingPattern[];
+};
 
 const ChordsChunkDivider = (props: DividerProps & TChordsChunk) => {
   const { song: theme } = useAppTheme();
@@ -56,7 +58,7 @@ export const ChordsChunk = (props: TChordsChunkProps) => {
 
       {props.items.map((segment, segmentIndex) => (
         <Fragment key={segmentIndex}>
-          <ChordsChunkItem {...segment} />
+          <ChordsChunkItem {...segment} strumms={props.strumms} />
 
           <ChordsChunkDivider
             borderStyle={['dashed', 'solid']}

@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.1",
   "contributors": ["TheAncientOwl"],
   "title": "Let Me Love You",
   "artists": ["DJ Snake", "Justin Bieber"],
@@ -7,8 +7,16 @@
   "notes": [],
   "capo": 3,
   "chordIDs": ["Am", "C", "Em", "F", "G", "Dm"],
-  "songSegments": {
-    "intro": {
+  "strumms": [
+    ["D"],
+    ["D", "-", "-", "-", "U", "Dx", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"],
+    ["D", "-", "-"],
+    ["-", "U", "X", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"],
+    ["D", "-", "U", "D", "U", "D", "-", "U", "D", "U", "D", "-", "D", "U"],
+    ["D", "-", "D", "U", "X", "-", "D", "-", "D", "-", "D", "U", "X", "-", "D", "U"]
+  ],
+  "segments": {
+    "i": {
       "name": "intro",
       "type": "chords",
       "times": 1,
@@ -18,19 +26,19 @@
           "items": [
             {
               "chordIDs": [["Am", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["F"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D"]
+              "times": 2,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "verse": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 2,
@@ -40,25 +48,8 @@
           "items": [
             {
               "chordIDs": [["Am", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": [
-                "D",
-                "-",
-                "-",
-                "-",
-                "U",
-                "Dx",
-                "-",
-                "D",
-                "-",
-                "U",
-                "D",
-                "U",
-                "D",
-                "-",
-                "D",
-                "U"
-              ]
+              "times": 1,
+              "strumm": 1
             }
           ]
         },
@@ -67,19 +58,19 @@
           "items": [
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "-"]
+              "times": 1,
+              "strumm": 2
             },
             {
               "chordIDs": [["F"]],
-              "chordTimes": 1,
-              "strummingPattern": ["-", "U", "X", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
+              "times": 1,
+              "strumm": 3
             }
           ]
         }
       ]
     },
-    "prechorus": {
+    "p": {
       "name": "prechorus",
       "type": "chords",
       "times": 2,
@@ -89,29 +80,14 @@
           "items": [
             {
               "chordIDs": [["F", "Am", "G", "Dm"]],
-              "chordTimes": 1,
-              "strummingPattern": [
-                "D",
-                "-",
-                "U",
-                "D",
-                "U",
-                "D",
-                "-",
-                "U",
-                "D",
-                "U",
-                "D",
-                "-",
-                "D",
-                "U"
-              ]
+              "times": 1,
+              "strumm": 4
             }
           ]
         }
       ]
     },
-    "chorus": {
+    "c": {
       "name": "chorus",
       "type": "chords",
       "times": 2,
@@ -121,25 +97,8 @@
           "items": [
             {
               "chordIDs": [["Am", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": [
-                "D",
-                "-",
-                "-",
-                "-",
-                "U",
-                "Dx",
-                "-",
-                "D",
-                "-",
-                "U",
-                "D",
-                "U",
-                "D",
-                "-",
-                "D",
-                "U"
-              ]
+              "times": 1,
+              "strumm": 1
             }
           ]
         },
@@ -148,19 +107,19 @@
           "items": [
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "-"]
+              "times": 1,
+              "strumm": 2
             },
             {
               "chordIDs": [["F"]],
-              "chordTimes": 1,
-              "strummingPattern": ["-", "U", "X", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
+              "times": 1,
+              "strumm": 3
             }
           ]
         }
       ]
     },
-    "dance-break": {
+    "d": {
       "name": "dance break",
       "type": "chords",
       "times": 2,
@@ -170,25 +129,8 @@
           "items": [
             {
               "chordIDs": [["Am", "C"]],
-              "chordTimes": 1,
-              "strummingPattern": [
-                "D",
-                "-",
-                "D",
-                "U",
-                "X",
-                "-",
-                "D",
-                "-",
-                "D",
-                "-",
-                "D",
-                "U",
-                "X",
-                "-",
-                "D",
-                "U"
-              ]
+              "times": 1,
+              "strumm": 5
             }
           ]
         },
@@ -197,21 +139,21 @@
           "items": [
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "-"]
+              "times": 1,
+              "strumm": 2
             },
             {
               "chordIDs": [["F"]],
-              "chordTimes": 1,
-              "strummingPattern": ["-", "U", "X", "-", "D", "-", "U", "D", "U", "D", "-", "D", "U"]
+              "times": 1,
+              "strumm": 3
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": ["intro", "verse", "prechorus", "chorus", "dance-break"],
-  "resources": [
+  "order": ["i", "v", "p", "c", "d"],
+  "res": [
     {
       "alias": "Let Me Love You DJ Snake Feat. Justin Bieber Guitar Tutorial Lesson |Tabs + Easy Chords + Cover|",
       "author": "GuitarZero2Hero ~ YouTube",

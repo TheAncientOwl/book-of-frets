@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.1",
   "contributors": ["TheAncientOwl"],
   "title": "Jingle Bell Rock",
   "artists": ["Bobby Helms"],
@@ -7,8 +7,9 @@
   "notes": [],
   "capo": 0,
   "chordIDs": ["D", "DM7", "D6", "D#dim7", "Em7", "A7", "D7", "G#dim7", "E7", "A", "G", "Gm"],
-  "songSegments": {
-    "intro": {
+  "strumms": [["D", "U", "D", "U"], ["D", "U"], ["D"], ["D", "U", "D", "U", "-", "-", "D", "-"]],
+  "segments": {
+    "i": {
       "name": "intro",
       "type": "strings",
       "times": 1,
@@ -94,7 +95,7 @@
         }
       ]
     },
-    "verse-1": {
+    "v1": {
       "name": "verse 1",
       "type": "chords",
       "times": 1,
@@ -109,14 +110,14 @@
                 ["Em7", "A7", "|", "Em7", "A7"],
                 ["Em7", "A7"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "verse-2": {
+    "v2": {
       "name": "verse 2",
       "type": "chords",
       "times": 1,
@@ -131,14 +132,14 @@
                 ["Em7", "A7", "|", "Em7", "A7"],
                 ["Em7", "A7", "|", "D", "D7"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "chorus": {
+    "c": {
       "name": "chorus",
       "type": "chords",
       "times": 1,
@@ -151,8 +152,8 @@
                 ["G", "G#dim7", "D", "D"],
                 ["E7", "E7"]
               ],
-              "chordTimes": 4,
-              "strummingPattern": ["D", "U"]
+              "times": 4,
+              "strumm": 1
             }
           ]
         },
@@ -161,14 +162,14 @@
           "items": [
             {
               "chordIDs": [["A"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": 2
             }
           ]
         }
       ]
     },
-    "chorus-riff": {
+    "cr": {
       "name": "chorus riff",
       "type": "strings",
       "times": 1,
@@ -199,7 +200,7 @@
         }
       ]
     },
-    "post-chorus-1": {
+    "pc1": {
       "name": "post chorus 1",
       "type": "chords",
       "times": 1,
@@ -214,14 +215,14 @@
                 ["G", "Gm"],
                 ["Em7", "A7", "D"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "verse-3": {
+    "v3": {
       "name": "verse 3",
       "type": "chords",
       "times": 1,
@@ -231,13 +232,13 @@
           "items": [
             {
               "chordIDs": [["D", "DM7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["D6", "D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         },
@@ -246,13 +247,13 @@
           "items": [
             {
               "chordIDs": [["D6", "D#dim7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["Em7", "A7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         },
@@ -261,13 +262,13 @@
           "items": [
             {
               "chordIDs": [["Em7", "A7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["Em7", "A7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         },
@@ -276,19 +277,19 @@
           "items": [
             {
               "chordIDs": [["Em7", "A7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["D", "D7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "post-chorus-2": {
+    "pc2": {
       "name": "post chorus 2",
       "type": "chords",
       "times": 1,
@@ -304,8 +305,8 @@
                 ["Em7", "A7", "|", "Em7", "A7"],
                 ["Em7", "A7", "D"]
               ],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         },
@@ -314,26 +315,16 @@
           "items": [
             {
               "chordIDs": [["D"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "U", "D", "U", "-", "-", "D", "-"]
+              "times": 1,
+              "strumm": 3
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": [
-    "intro",
-    "verse-1",
-    "verse-2",
-    "chorus",
-    "chorus-riff",
-    "post-chorus-1",
-    "chorus",
-    "chorus-riff",
-    "post-chorus-2"
-  ],
-  "resources": [
+  "order": ["i", "v1", "v2", "c", "cr", "pc1", "v3", "c", "cr", "pc2"],
+  "res": [
     {
       "alias": "Jingle Bell Rock Guitar Tutorial Bobbly Helms Acoustic Guitar Lesson |Chords + Strumming|",
       "author": "GuitarZero2Hero ~ YouTube",

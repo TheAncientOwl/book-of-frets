@@ -6,7 +6,7 @@
 #
 # @file create.sh
 # @author Alexandru Delegeanu
-# @version 0.1
+# @version 0.3
 # @description Create song boilerplate
 #
 
@@ -25,7 +25,7 @@ read -p "» Enter capo (number): " capo
 echo ""
 echo "⏳ Generating..."
 
-resources_json='[
+res_json='[
     {
       "alias": "",
       "author": "GuitarZero2Hero ~ YouTube",
@@ -54,9 +54,10 @@ cat > "$output_file" <<EOF
   "notes": [],
   "capo": ${capo},
   "chordIDs": [],
-  "songSegments": {},
-  "songSegmentsOrder": [],
-  "resources": ${resources_json}
+  "strumms": [],
+  "segments": {},
+  "order": [],
+  "res": ${res_json}
 }
 EOF
 

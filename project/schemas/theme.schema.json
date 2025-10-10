@@ -592,7 +592,7 @@
           },
           "required": ["title", "note"]
         },
-        "resources": {
+        "res": {
           "type": "object",
           "additionalProperties": false,
           "properties": {
@@ -611,7 +611,7 @@
           "required": ["title", "item"]
         }
       },
-      "required": ["background", "header", "capo", "chunks", "notes", "resources"]
+      "required": ["background", "header", "capo", "chunks", "notes", "res"]
     },
     "songsIndexPage": {
       "type": "object",

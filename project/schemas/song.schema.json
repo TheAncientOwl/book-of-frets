@@ -50,7 +50,18 @@
       },
       "minItems": 1
     },
-    "songSegments": {
+    "strumms": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["D", "U", "-", "Dx", "Ux", "X", "De", "Ue"]
+        },
+        "minItems": 1
+      }
+    },
+    "segments": {
       "type": "object",
       "additionalProperties": {
         "type": "object",
@@ -90,21 +101,14 @@
                             },
                             "minItems": 1
                           },
-                          "chordTimes": {
+                          "times": {
                             "type": "integer",
                             "minimum": 1,
                             "default": 1
                           },
-                          "strummingPattern": {
-                            "type": "array",
-                            "items": {
-                              "type": "string",
-                              "enum": ["D", "U", "-", "Dx", "Ux", "X", "De", "Ue"]
-                            },
-                            "minItems": 1
-                          }
+                          "strumm": { "type": "number", "minimum": 0, "default": 0 }
                         },
-                        "required": ["chordIDs", "chordTimes", "strummingPattern"]
+                        "required": ["chordIDs", "times", "strumm"]
                       },
                       {
                         "oneOf": [
@@ -137,14 +141,14 @@
         "required": ["name", "type", "times", "chunks"]
       }
     },
-    "songSegmentsOrder": {
+    "order": {
       "type": "array",
       "items": {
         "type": "string"
       },
       "minItems": 1
     },
-    "resources": {
+    "res": {
       "type": "array",
       "items": {
         "type": "object",
@@ -176,8 +180,9 @@
     "notes",
     "capo",
     "chordIDs",
-    "songSegments",
-    "songSegmentsOrder",
-    "resources"
+    "strumms",
+    "segments",
+    "order",
+    "res"
   ]
 }

@@ -6,7 +6,7 @@
  *
  * @file SongResource.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description Display song resource data.
  */
 
@@ -51,7 +51,7 @@ export const SongResource = (props: TSongResourceProps) => {
         <Icon
           as={IoMdMusicalNote}
           // [*] theme colors
-          color={theme.resources.item.note}
+          color={theme.res.item.note}
         />
 
         <Link
@@ -59,7 +59,7 @@ export const SongResource = (props: TSongResourceProps) => {
           href={props.link.replaceAll('{book-of-frets}', import.meta.env.BASE_URL)}
           size={['xs', 'sm']}
           // [*] theme colors
-          color={theme.resources.item.alias}
+          color={theme.res.item.alias}
         >
           {props.alias}
         </Link>
@@ -70,7 +70,7 @@ export const SongResource = (props: TSongResourceProps) => {
             textAlign='center'
             fontSize={['small', 'sm']}
             // [*] theme colors
-            color={theme.resources.item.author}
+            color={theme.res.item.author}
           >
             by {props.author}
           </Text>

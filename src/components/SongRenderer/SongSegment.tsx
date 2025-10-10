@@ -6,17 +6,24 @@
  *
  * @file SongSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.18
+ * @version 0.19
  * @description Render song segment.
  */
 
-import type { TChordsChunk, TSongSegment, TStringsChunk } from '@/common/types/song.types';
+import type {
+  TChordsChunk,
+  TSongSegment,
+  TStringsChunk,
+  TStrummingPattern,
+} from '@/common/types/song.types';
 import { ChordsChunk } from '@/components/SongRenderer/ChordsChunk';
 import { StringsChunk } from '@/components/SongRenderer/StringsChunk';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { Flex, Heading, Tag, Text } from '@chakra-ui/react';
 
-type TSongSegmentProps = TSongSegment & {};
+type TSongSegmentProps = TSongSegment & {
+  strumms: TStrummingPattern[];
+};
 
 export const SongSegmentHeading = (props: TSongSegmentProps) => {
   const { song: theme } = useAppTheme();
@@ -57,7 +64,9 @@ export const SongSegmentBody = (props: TSongSegmentProps) => {
     <Flex direction='column' alignItems='center' gap='1em'>
       {props.chunks.map((chunk, chunkIdx) => {
         if (props.type === 'chords') {
-          return <ChordsChunk key={chunkIdx} {...(chunk as TChordsChunk)} />;
+          return (
+            <ChordsChunk key={chunkIdx} {...(chunk as TChordsChunk)} strumms={props.strumms} />
+          );
         } else if (props.type === 'strings') {
           return <StringsChunk key={chunkIdx} {...(chunk as TStringsChunk)} />;
         } else {

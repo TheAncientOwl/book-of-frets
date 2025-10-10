@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.1",
   "contributors": ["TheAncientOwl"],
   "title": "Just the Two of Us | Lvl 2",
   "artists": ["Grover Washington Jr."],
@@ -7,8 +7,17 @@
   "notes": [],
   "capo": 1,
   "chordIDs": ["CM7", "B7", "Em", "Dm7", "G7", "Ebm7", "A7", "AbM7"],
-  "songSegments": {
-    "verse": {
+  "strumms": [
+    ["D", "-", "D", "U", "-", "U", "D", "U"],
+    ["D", "-", "D", "U"],
+    ["D", "-", "-", "U", "D", "U", "D", "-", "-", "U", "D", "U", "D", "-", "D", "U"],
+    ["D", "-", "D", "U", "Dx", "-", "-", "-"],
+    ["D", "-", "-", "U", "Dx", "-"],
+    ["D", "-", "-", "U", "D", "U", "D", "-", "D", "U"],
+    ["D"]
+  ],
+  "segments": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 2,
@@ -18,23 +27,23 @@
           "items": [
             {
               "chordIDs": [["CM7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["B7"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "U"]
+              "times": 2,
+              "strumm": 1
             },
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["Dm7", "G7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U"]
+              "times": 1,
+              "strumm": 1
             }
           ]
         },
@@ -43,41 +52,24 @@
           "items": [
             {
               "chordIDs": [["CM7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["B7"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "U"]
+              "times": 2,
+              "strumm": 1
             },
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": [
-                "D",
-                "-",
-                "-",
-                "U",
-                "D",
-                "U",
-                "D",
-                "-",
-                "-",
-                "U",
-                "D",
-                "U",
-                "D",
-                "-",
-                "D",
-                "U"
-              ]
+              "times": 1,
+              "strumm": 2
             }
           ]
         }
       ]
     },
-    "chorus": {
+    "c": {
       "name": "chorus",
       "type": "chords",
       "times": 2,
@@ -87,13 +79,13 @@
           "items": [
             {
               "chordIDs": [["CM7", "B7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "Dx", "-", "-", "-"]
+              "times": 1,
+              "strumm": 3
             },
             {
               "chordIDs": [["Em7", "Ebm7", "Dm7", "G7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U"]
+              "times": 1,
+              "strumm": 1
             }
           ]
         },
@@ -102,36 +94,19 @@
           "items": [
             {
               "chordIDs": [["CM7", "B7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "Dx", "-", "-", "-"]
+              "times": 1,
+              "strumm": 3
             },
             {
               "chordIDs": [["Em"]],
-              "chordTimes": 1,
-              "strummingPattern": [
-                "D",
-                "-",
-                "-",
-                "U",
-                "D",
-                "U",
-                "D",
-                "-",
-                "-",
-                "U",
-                "D",
-                "U",
-                "D",
-                "-",
-                "D",
-                "U"
-              ]
+              "times": 1,
+              "strumm": 2
             }
           ]
         }
       ]
     },
-    "bridge-1": {
+    "b1": {
       "name": "bridge 1",
       "type": "chords",
       "times": 1,
@@ -141,13 +116,13 @@
           "items": [
             {
               "chordIDs": [["CM7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["B7"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "U"]
+              "times": 2,
+              "strumm": 1
             }
           ]
         },
@@ -156,13 +131,13 @@
           "items": [
             {
               "chordIDs": [["BbM7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["A7"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "U"]
+              "times": 2,
+              "strumm": 1
             }
           ]
         },
@@ -171,13 +146,13 @@
           "items": [
             {
               "chordIDs": [["AbM7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["G7"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "U"]
+              "times": 2,
+              "strumm": 1
             }
           ]
         },
@@ -186,19 +161,19 @@
           "items": [
             {
               "chordIDs": [["CM7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "-", "U", "Dx", "-"]
+              "times": 1,
+              "strumm": 4
             },
             {
               "chordIDs": [["F13"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "-", "U", "D", "U", "D", "-", "D", "U"]
+              "times": 1,
+              "strumm": 5
             }
           ]
         }
       ]
     },
-    "bridge-2": {
+    "b2": {
       "name": "bridge 2",
       "type": "chords",
       "times": 1,
@@ -208,13 +183,13 @@
           "items": [
             {
               "chordIDs": [["CM7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["B7"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "U"]
+              "times": 2,
+              "strumm": 1
             }
           ]
         },
@@ -223,13 +198,13 @@
           "items": [
             {
               "chordIDs": [["BbM7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["A7"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "U"]
+              "times": 2,
+              "strumm": 1
             }
           ]
         },
@@ -238,13 +213,13 @@
           "items": [
             {
               "chordIDs": [["AbM7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "U", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["G7"]],
-              "chordTimes": 2,
-              "strummingPattern": ["D", "-", "D", "U"]
+              "times": 2,
+              "strumm": 1
             }
           ]
         },
@@ -253,21 +228,21 @@
           "items": [
             {
               "chordIDs": [["CM7"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "-", "U", "Dx", "-"]
+              "times": 1,
+              "strumm": 4
             },
             {
               "chordIDs": [["F13"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D"]
+              "times": 1,
+              "strumm": 6
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": ["verse", "chorus", "verse", "chorus", "bridge-1", "bridge-2"],
-  "resources": [
+  "order": ["v", "c", "v", "c", "b1", "b2"],
+  "res": [
     {
       "alias": "Just The Two Of Us Guitar Tutorial Grover Washington Jr Guitar |Chords + Fingerpicking|",
       "author": "GuitarZero2Hero ~ YouTube",

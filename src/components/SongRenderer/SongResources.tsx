@@ -6,7 +6,7 @@
  *
  * @file SongResources.tsx
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description Render song resources data.
  */
 
@@ -17,7 +17,7 @@ import { Box, Divider, Flex, Heading, Icon, List, ListItem, Text } from '@chakra
 import { Fragment } from 'react';
 import { MdLibraryMusic } from 'react-icons/md';
 
-type TSongResourcesProps = Pick<TSong, 'resources'>;
+type TSongResourcesProps = Pick<TSong, 'res'>;
 
 export const SongResources = (props: TSongResourcesProps) => {
   const { song: theme } = useAppTheme();
@@ -30,7 +30,7 @@ export const SongResources = (props: TSongResourcesProps) => {
           alignItems='center'
           gap='0.25em'
           // [*] theme colors
-          color={theme.resources.title}
+          color={theme.res.title}
         >
           <Icon as={MdLibraryMusic} />
           Resources
@@ -38,19 +38,19 @@ export const SongResources = (props: TSongResourcesProps) => {
         </Flex>
       </Heading>
 
-      {props.resources.length === 0 && <Text textAlign='center'>Nothing here yet</Text>}
+      {props.res.length === 0 && <Text textAlign='center'>Nothing here yet</Text>}
 
       <List>
-        {props.resources.map((resource, index) => (
+        {props.res.map((resource, index) => (
           <Fragment key={index}>
             <SongResource {...resource} />
             <ListItem>
-              {index < props.resources.length - 1 && (
+              {index < props.res.length - 1 && (
                 <Divider
                   mt='1em'
                   mb='1em'
                   // [*] theme colors
-                  borderColor={theme.resources.item.alias}
+                  borderColor={theme.res.item.alias}
                 />
               )}
             </ListItem>

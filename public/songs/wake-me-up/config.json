@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.1",
   "contributors": ["TheAncientOwl"],
   "title": "Wake Me Up",
   "artists": ["Avicii"],
@@ -7,8 +7,9 @@
   "notes": [],
   "capo": 2,
   "chordIDs": ["Am", "Fmaj7", "G", "C/G", "E"],
-  "songSegments": {
-    "intro": {
+  "strumms": [["D", "-", "D", "-", "-", "U", "D", "U"]],
+  "segments": {
+    "i": {
       "name": "intro",
       "type": "chords",
       "times": 1,
@@ -18,13 +19,13 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["C/G", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         },
@@ -33,19 +34,19 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["C/G", "E"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "chorus": {
+    "c": {
       "name": "chorus",
       "type": "chords",
       "times": 1,
@@ -55,13 +56,13 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["C/G", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         },
@@ -70,19 +71,19 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["C/G", "E"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "dance": {
+    "d": {
       "name": "dance",
       "type": "chords",
       "times": 1,
@@ -92,13 +93,13 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["C/G", "G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         },
@@ -107,19 +108,19 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             },
             {
               "chordIDs": [["C/G", "E"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     },
-    "verse": {
+    "v": {
       "name": "verse",
       "type": "chords",
       "times": 1,
@@ -129,16 +130,16 @@
           "items": [
             {
               "chordIDs": [["Am", "Fmaj7", "C/G", "C/G"]],
-              "chordTimes": 1,
-              "strummingPattern": ["D", "-", "D", "-", "-", "U", "D", "U"]
+              "times": 1,
+              "strumm": 0
             }
           ]
         }
       ]
     }
   },
-  "songSegmentsOrder": ["intro", "chorus", "dance", "verse"],
-  "resources": [
+  "order": ["i", "c", "d", "v"],
+  "res": [
     {
       "alias": "Wake Me Up Guitar Tutorial - Avicii Guitar Lesson 🎸|100% Accurate Chords + Lead + No Capo + Cover|",
       "author": "GuitarZero2Hero ~ YouTube",

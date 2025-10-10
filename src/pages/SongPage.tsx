@@ -6,7 +6,7 @@
  *
  * @file SongPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.13
+ * @version 0.14
  * @description Handle song rendering based on url.
  */
 
@@ -32,7 +32,7 @@ export const SongPage = () => {
   useEffect(() => {
     if (!directory) return;
 
-    fetch(`${import.meta.env.BASE_URL}songs/${directory}/config.json`)
+    fetch(`${import.meta.env.BASE_URL}songs/${directory}/config.min.json`)
       .then(response => {
         if (!response.ok) {
           // TODO: Redirect to 404 song not found
