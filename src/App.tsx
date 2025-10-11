@@ -6,12 +6,13 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.34
+ * @version 0.35
  * @description App component.
  */
 
 import { AppMenu } from '@/components/AppMenu/AppMenu';
 import { Loading } from '@/components/Loading/Loading';
+import SongPage from '@/pages/SongPage';
 import SongsIndexPage from '@/pages/SongsIndexPage';
 import { AppStateContext } from '@/state/AppStateContext';
 import { useAppStateValue } from '@/state/hooks/useAppStateValue';
@@ -19,7 +20,6 @@ import { Box, ChakraProvider } from '@chakra-ui/react';
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-const SongPage = lazy(() => import('@/pages/SongPage'));
 const ChordsIndexPage = lazy(() => import('@/pages/ChordsIndexPage'));
 const AboutPage = lazy(() => import('@/pages/AboutPage'));
 
@@ -41,14 +41,8 @@ export const App = () => {
           <Routes>
             <Route path='/' element={<SongsIndexPage />} />
 
-            <Route
-              path='/:directory'
-              element={
-                <Suspense fallback={<Loading />}>
-                  <SongPage />
-                </Suspense>
-              }
-            />
+            <Route path='/:directory' element={<SongPage />} />
+
             <Route
               path='/chords'
               element={
@@ -57,6 +51,7 @@ export const App = () => {
                 </Suspense>
               }
             />
+
             <Route
               path='/about'
               element={
