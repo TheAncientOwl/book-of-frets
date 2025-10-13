@@ -6,22 +6,23 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.35
+ * @version 0.36
  * @description App component.
  */
 
 import { AppMenu } from '@/components/AppMenu/AppMenu';
 import { Loading } from '@/components/Loading/Loading';
-import SongPage from '@/pages/SongPage';
-import SongsIndexPage from '@/pages/SongsIndexPage';
+import { SongPage } from '@/pages/SongPage';
+import { SongsIndexPage } from '@/pages/SongsIndexPage';
 import { AppStateContext } from '@/state/AppStateContext';
 import { useAppStateValue } from '@/state/hooks/useAppStateValue';
 import { Box, ChakraProvider } from '@chakra-ui/react';
 import { lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 const ChordsIndexPage = lazy(() => import('@/pages/ChordsIndexPage'));
 const AboutPage = lazy(() => import('@/pages/AboutPage'));
+const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'));
 
 export const App = () => {
   const appStateValue = useAppStateValue();
@@ -39,9 +40,9 @@ export const App = () => {
           <AppMenu />
 
           <Routes>
-            <Route path='/' element={<SongsIndexPage />} />
-
-            <Route path='/:directory' element={<SongPage />} />
+            <Route path='/' element={<Navigate to='/songs' replace />} />
+            <Route path='/songs' element={<SongsIndexPage />} />
+            <Route path='/songs/:directory' element={<SongPage />} />
 
             <Route
               path='/chords'
@@ -57,6 +58,15 @@ export const App = () => {
               element={
                 <Suspense fallback={<Loading />}>
                   <AboutPage />
+                </Suspense>
+              }
+            />
+
+            <Route
+              path='*'
+              element={
+                <Suspense fallback={<Loading />}>
+                  <NotFoundPage />
                 </Suspense>
               }
             />

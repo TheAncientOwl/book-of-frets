@@ -6,7 +6,7 @@
  *
  * @file SongPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.14
+ * @version 0.15
  * @description Handle song rendering based on url.
  */
 
@@ -18,7 +18,7 @@ import { useAppState } from '@/state/hooks/useAppState';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { setDocumentThemeColor } from '@/state/theme/utils/setDocumentThemeColor';
 import { useEffect, useLayoutEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 export const SongPage = () => {
   const { directory } = useParams();
@@ -28,6 +28,8 @@ export const SongPage = () => {
   const [songConfig, setSongConfig] = useState<{ data: TSong; directory: string } | null>(null);
 
   useLayoutEffect(() => setDocumentThemeColor(theme.background), [theme.background]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!directory) return;
@@ -45,8 +47,12 @@ export const SongPage = () => {
         if (data) {
           setSongConfig({ data, directory: directory! });
         }
+      })
+      .catch(err => {
+        console.error(err);
+        navigate('/404');
       });
-  }, [directory]);
+  }, [directory, navigate]);
 
   useEffect(() => {
     if (!songConfig) return;

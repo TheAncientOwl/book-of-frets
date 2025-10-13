@@ -6,7 +6,7 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.23
+ * @version 0.24
  * @description List all available songs.
  */
 
@@ -62,7 +62,7 @@ export const SongCard = (props: SongProps) => {
       padding={['8px']}
       position='relative'
       onClick={() => {
-        navigate(`/${props.directory}`);
+        navigate(`/songs/${props.directory}`);
       }}
       // [*] theme colors
       backgroundColor={theme.background}
