@@ -6,7 +6,7 @@
  *
  * @file SongPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.15
+ * @version 0.16
  * @description Handle song rendering based on url.
  */
 
@@ -39,6 +39,7 @@ export const SongPage = () => {
         if (!response.ok) {
           // TODO: Redirect to 404 song not found
           console.error(`Song ${directory} not found`);
+          navigate('/404');
           return null;
         }
         return response.json();
