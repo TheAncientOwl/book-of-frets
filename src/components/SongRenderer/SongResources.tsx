@@ -6,7 +6,7 @@
  *
  * @file SongResources.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description Render song resources data.
  */
 
@@ -45,14 +45,12 @@ export const SongResources = (props: TSongResourcesProps) => {
           <Fragment key={index}>
             <SongResource {...resource} />
             <ListItem>
-              {index < props.res.length - 1 && (
-                <Divider
-                  mt='1em'
-                  mb='1em'
-                  // [*] theme colors
-                  borderColor={theme.res.item.alias}
-                />
-              )}
+              <Divider
+                mt='1em'
+                mb='1em'
+                // [*] theme colors
+                borderColor={theme.res.item.alias}
+              />
             </ListItem>
           </Fragment>
         ))}

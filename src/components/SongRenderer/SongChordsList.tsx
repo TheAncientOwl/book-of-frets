@@ -6,7 +6,7 @@
  *
  * @file SongChordsList.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Song chords list component.
  */
 
@@ -39,7 +39,7 @@ export const SongChordsList = (props: TSongChordsList) => {
     >
       <AccordionButton
         display='flex'
-        justifyContent='flex-end'
+        justifyContent='center'
         alignItems='center'
         position='relative'
         pt={['10px', '15px']}
@@ -49,13 +49,7 @@ export const SongChordsList = (props: TSongChordsList) => {
         backgroundColor='blackAlpha.100'
         _hover={{ backgroundColor: 'blackAlpha.100' }}
       >
-        <Box
-          position='absolute'
-          left='50%'
-          transform='translateX(-50%)'
-          textAlign='center'
-          width='100%'
-        >
+        <Box textAlign='center' width='100%'>
           <Heading
             as='h3'
             size='md'
@@ -68,6 +62,8 @@ export const SongChordsList = (props: TSongChordsList) => {
         </Box>
 
         <AccordionIcon
+          position='absolute'
+          right='10px'
           // [*] theme colors
           color={theme.chunks.item.title}
         />
