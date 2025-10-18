@@ -6,7 +6,7 @@
  *
  * @file SmartListContent.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description Render filtered, virtualized items of the SmartList.
  */
 
@@ -21,6 +21,7 @@ export type TSmartListContentProps<T> = {
   as?: ComponentType<{ children: ReactNode }>;
   asProps?: SimpleGridProps | ListProps | BoxProps;
   virtualized?: boolean;
+  virtualizedOverscanRowCount?: number;
 };
 
 export const SmartListContent = <T,>(props: TSmartListContentProps<T>) => {
@@ -50,6 +51,7 @@ export const SmartListContent = <T,>(props: TSmartListContentProps<T>) => {
       <AutoSizer>
         {({ height, width }) => (
           <List
+            overscanRowCount={props.virtualizedOverscanRowCount}
             height={height}
             width={width}
             rowCount={data.length}

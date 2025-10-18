@@ -6,7 +6,7 @@
  *
  * @file SongsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.20
+ * @version 0.21
  * @description List all available songs.
  */
 
@@ -79,6 +79,7 @@ export const SongsIndexPage = () => {
         >
           <SongsList.Content
             virtualized
+            virtualizedOverscanRowCount={3}
             useContext={SongsList.context.use}
             render={(song, index) => <SongCard key={index} index={index + 1} {...song} />}
           />
