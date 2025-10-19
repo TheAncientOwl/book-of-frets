@@ -6,20 +6,20 @@
  *
  * @file SongSegments.tsx
  * @author Alexandru Delegeanu
- * @version 0.13
+ * @version 0.14
  * @description Render song segments data.
  */
 
 import type { TSongSegment, TStrummingPattern } from '@/common/types/song.types';
-import { SongSegmentBody, SongSegmentHeading } from '@/components/SongRenderer/SongSegment';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
 import {
+  Accordion,
   AccordionButton,
   AccordionIcon,
-  AccordionItem,
   AccordionPanel,
-  Box,
-} from '@chakra-ui/react';
+} from '@/components/Accordion/Accordion';
+import { SongSegmentBody, SongSegmentHeading } from '@/components/SongRenderer/SongSegment';
+import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { Box } from '@chakra-ui/react';
 
 type TSongSegmentsProps = {
   segments: Record<string, TSongSegment>;
@@ -40,38 +40,53 @@ export const SongSegments = (props: TSongSegmentsProps) => {
         );
 
         return (
-          <AccordionItem
+          <Accordion
+            defaultOpen
             key={`${songSegmentName}-${index}`}
             // [*] theme colors
-            borderColor={theme.chunks.divider}
+            boxProps={
+              {
+                // borderColor: theme.chunks.divider,
+                // backgroundColor: 'blackAlpha.400',
+              }
+            }
+            // borderColor={theme.chunks.divider}
           >
             <AccordionButton
-              display='flex'
-              justifyContent='center'
-              alignItems='center'
-              position='relative'
-              pt={['10px', '15px']}
-              pb={['10px', '15px']}
-              mb={['0px', '5px']}
               // [*] theme colors
-              backgroundColor='blackAlpha.100'
-              _hover={{ backgroundColor: 'blackAlpha.100' }}
+              // backgroundColor='blackAlpha.100'
+              // _hover={{ backgroundColor: 'blackAlpha.100' }}
+              boxProps={{
+                borderColor: theme.chunks.divider,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                position: 'relative',
+              }}
             >
               <Box textAlign='center' width='100%'>
                 <SongSegmentHeading {...songSegmentData} strumms={props.strumms} />
               </Box>
               <AccordionIcon
+                boxProps={{
+                  position: 'absolute',
+                  right: '10px',
+                }}
+                // [*] theme colors
+                color={theme.chunks.item.title}
+              />
+              {/* <AccordionIcon
                 position='absolute'
                 right='10px'
                 // transform='translateX(-50%)'
                 // [*] theme colors
                 color={theme.chunks.item.title}
-              />
+              /> */}
             </AccordionButton>
             <AccordionPanel>
               <SongSegmentBody {...songSegmentData} strumms={props.strumms} />
             </AccordionPanel>
-          </AccordionItem>
+          </Accordion>
         );
       })}
     </>

@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.29
+ * @version 0.30
  * @description Render song based on given config.
  */
 
@@ -17,7 +17,7 @@ import { SongNotes } from '@/components/SongRenderer/SongNotes';
 import { SongResources } from '@/components/SongRenderer/SongResources';
 import { SongSegments } from '@/components/SongRenderer/SongSegments';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
-import { Accordion, Container } from '@chakra-ui/react';
+import { Box, Container } from '@chakra-ui/react';
 
 type TSongProps = TSong & {
   directory: string;
@@ -45,18 +45,16 @@ export const Song = (props: TSongProps) => {
         contributors={props.contributors}
       />
 
-      <Accordion
-        allowMultiple
-        padding={['1.5em 0em', '1.5em 1em']}
+      <Box
+        padding={['1.5rem 10px', '1.5rem 1rem']}
         borderRadius='1rem'
-        defaultIndex={[0, ...props.order.map((_, i) => i + 1)]}
         // [*] theme colors
         backgroundColor={theme.chunks.background}
       >
         <SongChordsList chordIDs={props.chordIDs} />
 
         <SongSegments segments={props.segments} order={props.order} strumms={props.strumms} />
-      </Accordion>
+      </Box>
 
       <SongNotes notes={props.notes} />
 
