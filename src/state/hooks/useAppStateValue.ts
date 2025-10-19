@@ -6,7 +6,7 @@
  *
  * @file useAppStateValue.ts
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Main app state hook.
  */
 
@@ -18,7 +18,7 @@ import DefaultAppTheme from '@/state/theme/default.min.json';
 import type { TAppTheme } from '@/state/theme/types';
 import { patchLocalStorageTheme } from '@/state/theme/utils/patchLocalStorageTheme';
 import { setDocumentScrollbarColors } from '@/state/theme/utils/setDocumentScrollbarColors';
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo } from 'react';
 
 export const useAppStateValue = (): TAppState => {
   if (!sessionStorage.getItem(SessionStorageKeys.patchedAppTheme)) {
@@ -26,7 +26,10 @@ export const useAppStateValue = (): TAppState => {
     sessionStorage.setItem(SessionStorageKeys.patchedAppTheme, 'true');
   }
 
-  const [chordsIndex, setChordsIndex] = useState<TChordsIndex>(DefaultAppState.chordsIndex);
+  const [chordsIndex, setChordsIndex] = useLocalStorage<TChordsIndex>(
+    LocalStorageKeys.chordsIndex,
+    DefaultAppState.chordsIndex
+  );
   const [appTheme, setAppTheme] = useLocalStorage<TAppTheme>(
     LocalStorageKeys.appTheme,
     DefaultAppTheme
@@ -55,12 +58,18 @@ export const useAppStateValue = (): TAppState => {
     DefaultAppState.songsHistory.value
   );
 
-  useEffect(() => {
+  const updateChordsIndex = useCallback(() => {
     fetch(`${import.meta.env.BASE_URL}chords/index.min.json`)
       .then(res => res.json())
       .then(data => setChordsIndex(data.index as TChordsIndex))
       .catch(() => setChordsIndex({}));
-  }, []);
+  }, [setChordsIndex]);
+
+  useEffect(() => {
+    if (Object.entries(chordsIndex).length === 0) {
+      updateChordsIndex();
+    }
+  }, [chordsIndex, updateChordsIndex]);
 
   useEffect(() => {
     const ids = ['dynamic-1', 'dynamic-2', 'dynamic-3', 'dynamic-4'];
@@ -100,6 +109,8 @@ export const useAppStateValue = (): TAppState => {
         value: songsHistory,
         set: setSongsHistory,
       },
+
+      updateChordsIndex,
     }),
     [
       chordsIndex,
@@ -115,6 +126,7 @@ export const useAppStateValue = (): TAppState => {
       setDisplayStrummingPattern,
       songsHistory,
       setSongsHistory,
+      updateChordsIndex,
     ]
   );
 };

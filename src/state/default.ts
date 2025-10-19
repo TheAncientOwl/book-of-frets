@@ -6,7 +6,7 @@
  *
  * @file default.ts
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description Default app state.
  */
 
@@ -35,6 +35,7 @@ export type TAppState = {
       strummingPattern: TState<boolean>;
     };
   };
+  updateChordsIndex: () => void;
 };
 
 const initState = <T>(value: T): TState<T> => ({ value, set: null });
@@ -50,5 +51,8 @@ export const DefaultAppState: TAppState = {
       chordTimes: initState(true),
       strummingPattern: initState(true),
     },
+  },
+  updateChordsIndex: () => {
+    console.warn('::updateChordsIndex(): default value, no updates will be done');
   },
 };

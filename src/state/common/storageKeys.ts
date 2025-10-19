@@ -6,7 +6,7 @@
  *
  * @file storageKeys.ts
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description House of all local/session storage keys.
  */
 
@@ -18,6 +18,7 @@ export const LocalStorageKeys = {
   displayStrummingPattern: 'song-options-display-strumming-pattern',
   songsHistory: 'songs-history',
   tunerThreshold: 'tuner-threshold',
+  chordsIndex: 'chords-index',
 };
 
 export const SessionStorageKeys = {
