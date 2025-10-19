@@ -6,7 +6,7 @@
  *
  * @file Accordion.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Accordion components.
  */
 
@@ -92,19 +92,19 @@ type TAccordionIconProps = IconBaseProps & {
   boxProps?: BoxProps;
 };
 
-export const AccordionIcon = (props: TAccordionIconProps) => {
+export const AccordionIcon = ({ boxProps, ...iconProps }: TAccordionIconProps) => {
   const context = useContext(AccordionContext);
   if (!context) throw new Error('AccordionIcon must be used inside an Accordion');
 
   return (
-    <Box {...props.boxProps}>
+    <Box {...boxProps}>
       <HiChevronDown
         style={{
           transition: 'transform 0.2s',
           transform: context.isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
         }}
         aria-hidden='true'
-        {...props}
+        {...iconProps}
       />
     </Box>
   );
