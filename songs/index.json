@@ -36,11 +36,18 @@
       "chordIDs": ["C", "G", "D", "Em"]
     },
     {
-      "title": "As It Was",
-      "artists": ["Harry Styles"],
-      "directory": "as-it-was",
+      "title": "What I've Done",
+      "artists": ["Linkin Park"],
+      "directory": "what-ive-done",
       "type": ["acoustic"],
-      "chordIDs": ["Dsus2", "Bm7", "E", "A"]
+      "chordIDs": ["Em", "G", "D", "Asus2", "Dadd11_3fr", "G/B"]
+    },
+    {
+      "title": "Hey, Soul Sister",
+      "artists": ["Train"],
+      "directory": "hey-soul-sister",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "G", "Am", "F"]
     },
     {
       "title": "Sweater Weather",
@@ -71,6 +78,13 @@
       "chordIDs": ["Am", "Fmaj7", "C", "G/B", "Em", "C/E"]
     },
     {
+      "title": "As It Was",
+      "artists": ["Harry Styles"],
+      "directory": "as-it-was",
+      "type": ["acoustic"],
+      "chordIDs": ["Dsus2", "Bm7", "E", "A"]
+    },
+    {
       "title": "Let Me Love You",
       "artists": ["DJ Snake", "Justin Bieber"],
       "directory": "let-me-love-you",
@@ -83,20 +97,6 @@
       "directory": "riptide",
       "type": ["acoustic"],
       "chordIDs": ["Am", "G", "C", "Fmaj7"]
-    },
-    {
-      "title": "Hey, Soul Sister",
-      "artists": ["Train"],
-      "directory": "hey-soul-sister",
-      "type": ["acoustic"],
-      "chordIDs": ["C", "G", "Am", "F"]
-    },
-    {
-      "title": "What I've Done",
-      "artists": ["Linkin Park"],
-      "directory": "what-ive-done",
-      "type": ["acoustic"],
-      "chordIDs": ["Em", "G", "D", "Asus2", "Dadd11_3fr", "G/B"]
     },
     {
       "title": "I Know What You Did Last Summer",
