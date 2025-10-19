@@ -6,7 +6,7 @@
  *
  * @file ChordsChunkItem.tsx
  * @author Alexandru Delegeanu
- * @version 0.24
+ * @version 0.25
  * @description Render song pattern segment.
  */
 
@@ -70,10 +70,9 @@ export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
 
                 const chordConfig = chordsIndex[chordId];
 
-                console.assert(
-                  chordConfig !== undefined,
-                  `Missing chord index for ID '${chordId}'`
-                );
+                if (chordConfig === undefined) {
+                  console.error(`Missing chord index for ID '${chordId}'`);
+                }
 
                 return (
                   <Box as='span' key={index}>
@@ -87,35 +86,40 @@ export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
                           backgroundColor={theme.chunks.item.chordsPattern.chord.background}
                           color={theme.chunks.item.chordsPattern.chord.color}
                         >
-                          {chordId !== NO_CHORD_ID ? chordConfig.name : '-'}
+                          {chordId !== NO_CHORD_ID && chordConfig !== undefined
+                            ? chordConfig.name
+                            : '-'}
                         </Tag>
                       </PopoverTrigger>
-
                       <Portal>
-                        <PopoverContent
-                          // [*] theme colors
-                          zIndex={1}
-                          backgroundColor={
-                            theme.chunks.item.chordsPattern.chord.segment.popover.background
-                          }
-                          borderColor={theme.chunks.item.chordsPattern.chord.segment.popover.border}
-                        >
-                          <PopoverArrow
+                        {chordConfig && (
+                          <PopoverContent
                             // [*] theme colors
+                            zIndex={1}
                             backgroundColor={
-                              theme.chunks.item.chordsPattern.chord.segment.popover.arrow
+                              theme.chunks.item.chordsPattern.chord.segment.popover.background
                             }
-                          />
-                          <PopoverCloseButton
-                            // [*] theme colors
-                            color={
-                              theme.chunks.item.chordsPattern.chord.segment.popover.closeButton
+                            borderColor={
+                              theme.chunks.item.chordsPattern.chord.segment.popover.border
                             }
-                          />
-                          <Flex justifyContent='center' padding='25px'>
-                            <Chord {...chordConfig} />
-                          </Flex>
-                        </PopoverContent>
+                          >
+                            <PopoverArrow
+                              // [*] theme colors
+                              backgroundColor={
+                                theme.chunks.item.chordsPattern.chord.segment.popover.arrow
+                              }
+                            />
+                            <PopoverCloseButton
+                              // [*] theme colors
+                              color={
+                                theme.chunks.item.chordsPattern.chord.segment.popover.closeButton
+                              }
+                            />
+                            <Flex justifyContent='center' padding='25px'>
+                              <Chord {...chordConfig} />
+                            </Flex>
+                          </PopoverContent>
+                        )}
                       </Portal>
                     </Popover>
                   </Box>
