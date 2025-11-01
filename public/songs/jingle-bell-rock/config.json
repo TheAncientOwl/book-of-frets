@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "contributors": ["TheAncientOwl"],
   "title": "Jingle Bell Rock",
   "artists": ["Bobby Helms"],
@@ -184,7 +184,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["0 D 1 DM7 1 D6 1 D 1", "0 D6 1 B7 1 G 1 Gm 1", "0 Em 1 A7 1 D 1"]]
+          "items": [["0 D 1 DM7 1 | 0 D6 1 D 1", "0 D6 1 B7 1 | 0 G 1 Gm 1", "0 Em 1 A7 1 | 0 D 1"]]
         }
       ]
     },

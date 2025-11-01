@@ -21,10 +21,10 @@
     "i": {
       "name": "intro",
       "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
-          "times": 2,
+          "times": 1,
           "items": [["0 Em 1 G 1 D 1 Asus2 1"]]
         }
       ]
@@ -36,17 +36,17 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["1 Em 2"]]
+          "items": [["1 Em 1 Em 1"]]
         }
       ]
     },
     "v": {
       "name": "verse",
       "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
-          "times": 2,
+          "times": 1,
           "items": [["1 Em 1 G 1 D 1 Asus2 1"]]
         }
       ]
@@ -65,10 +65,10 @@
     "c1": {
       "name": "chorus 1",
       "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
-          "times": 2,
+          "times": 1,
           "items": [["0 Em 1 G 1 D 1 Asus2 1"]]
         }
       ]
@@ -76,10 +76,10 @@
     "c2": {
       "name": "chorus 2",
       "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
-          "times": 2,
+          "times": 1,
           "items": [["0 Em 1 G 1 D 1 Asus2 1", "0 Em 1 G 1 D 1"], ["2 Asus2 1 G/B 1 C 1 D 1"]]
         }
       ]
@@ -87,10 +87,10 @@
     "c3": {
       "name": "chorus 3",
       "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
-          "times": 2,
+          "times": 1,
           "items": [["3 Em 1 G 1 D 1 Asus2 1"]]
         },
         {
@@ -102,10 +102,10 @@
     "fc": {
       "name": "final chorus",
       "type": "chords",
-      "times": 1,
+      "times": 4,
       "chunks": [
         {
-          "times": 4,
+          "times": 1,
           "items": [["0 Em 1 G 1 D 1 Asus2 1"]]
         }
       ]

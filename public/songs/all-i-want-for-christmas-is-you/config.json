@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "contributors": ["TheAncientOwl"],
   "title": "All I Want For Christmas Is You",
   "artists": ["Mariah Carey"],
@@ -28,11 +28,7 @@
         {
           "times": 1,
           "items": [
-            [
-              "0 C 1 G/B 1 C 1 Cm_3fr 1",
-              "0 G 1 B7 1 Em 1 Cm_3fr 1",
-              "0 G 1 E7 1 Am7 1 Cm_3fr 1 D7 1"
-            ]
+            ["0 C 1 G/B 1 C 1 Cm_3fr 1", "0 G 1 B7 1 Em 1 Cm_3fr 1", "0 G 1 E7 1 Am7 1 D7 1"]
           ]
         }
       ]

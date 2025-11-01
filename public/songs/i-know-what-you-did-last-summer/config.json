@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "contributors": ["TheAncientOwl"],
   "title": "I Know What You Did Last Summer",
   "artists": ["Shawn Mendes", "Camila Cabello"],
@@ -56,7 +56,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["2 F 1 G 1 Am 2", "2 F 1 G 1 Am 1 E 1"]]
+          "items": [["2 F 1 G 1 Am 1 Am 1", "2 F 1 G 1 Am 1"]]
         },
         {
           "times": 1,
@@ -86,7 +86,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["5 Am 8 G 8 G 1", "5 C 3 G 5"]]
+          "items": [["5 Am 8 G 8 C 3 G 5"]]
         }
       ]
     },

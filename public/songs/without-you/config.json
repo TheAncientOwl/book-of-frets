@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "contributors": ["TheAncientOwl"],
   "title": "Without You",
   "artists": ["The Kid LAROI"],
@@ -34,10 +34,10 @@
     "c1": {
       "name": "chorus",
       "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
-          "times": 2,
+          "times": 1,
           "items": [["1 Am 1 Fmaj7 1 C 1 G 1"]]
         }
       ]
@@ -45,10 +45,10 @@
     "v": {
       "name": "verse",
       "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
-          "times": 2,
+          "times": 1,
           "items": [["1 Am 1 Fmaj7 1 C 1 G 1"]]
         }
       ]
@@ -71,10 +71,10 @@
     "c2": {
       "name": "chorus",
       "type": "chords",
-      "times": 1,
+      "times": 4,
       "chunks": [
         {
-          "times": 4,
+          "times": 1,
           "items": [["1 Am 1 Fmaj7 1 C 1 G 1"]]
         }
       ]

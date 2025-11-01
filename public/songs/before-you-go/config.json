@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "contributors": ["TheAncientOwl"],
   "title": "Before You go",
   "artists": ["Lewis Capaldi"],
@@ -66,9 +66,14 @@
     },
     "fc1": {
       "name": "final chorus",
-      "type": "tabs",
+      "type": "chords",
       "times": 1,
-      "chunks": []
+      "chunks": [
+        {
+          "times": 1,
+          "items": [["0 C 4 G 4 Am 4 Fmaj7 4"]]
+        }
+      ]
     },
     "fc2": {
       "name": "final chorus 2",
