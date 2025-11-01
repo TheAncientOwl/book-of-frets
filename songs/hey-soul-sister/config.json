@@ -1,5 +1,5 @@
 {
-  "version": "0.2.1",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Hey, Soul Sister",
   "artists": ["Train"],
@@ -16,13 +16,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["C", "G", "Am", "F"]],
-              "times": 2,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 C 2 G 2 Am 2 F 2"]]
         }
       ]
     },
@@ -33,21 +27,7 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [
-                ["C", "G", "Am", "F"],
-                ["C", "G", "Am"]
-              ],
-              "times": 2,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["F", "G"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 C 2 G 2 Am 2 F 2", "0 C 2 G 2 Am 2 F 1 G 1"]]
         }
       ]
     },
@@ -58,28 +38,11 @@
       "chunks": [
         {
           "times": 3,
-          "items": [
-            {
-              "chordIDs": [["F", "F", "G"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["C", "G"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["0 F 2 G 1", "1 C 1 G 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["F", "F", "G"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 F 2 G 1"]]
         }
       ]
     },
@@ -90,13 +53,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["C", "G", "Am", "F"]],
-              "times": 2,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 C 2 G 2 Am 2 F 2"]]
         }
       ]
     },
@@ -107,28 +64,11 @@
       "chunks": [
         {
           "times": 3,
-          "items": [
-            {
-              "chordIDs": [["F", "F", "G"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["C", "G"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["0 F 2 G 1"], ["1 C 1 G 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["F", "F", "G", "G"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 F 2 G 2"]]
         }
       ]
     },
@@ -139,23 +79,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["C", "G"]],
-              "times": 2,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["Am", "G"]],
-              "times": 4,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["Am", "G", "F", "G"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 C 2 G 2 Am 4 G 4", "0 Am 1 G 1 F 1 G 1"]]
         }
       ]
     },
@@ -166,28 +90,11 @@
       "chunks": [
         {
           "times": 5,
-          "items": [
-            {
-              "chordIDs": [["F", "F", "G"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["C", "G"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["0 F 2 G 1", "1 C 1 G 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["F", "F", "G", "G"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 F 2 G 2"]]
         }
       ]
     },
@@ -198,38 +105,15 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["C", "G", "Am"]],
-              "times": 2,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["F", "G"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 C 2 G 2 Am 2 F 1 G 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["C", "G", "Am"]],
-              "times": 2,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["F"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["G"]],
-              "times": 1,
-              "strumm": 2
-            }
-          ]
+          "items": [["0 C 2 G 2 Am 2 F 1"]]
+        },
+        {
+          "times": 1,
+          "items": [["2 G 1"]]
         }
       ]
     }

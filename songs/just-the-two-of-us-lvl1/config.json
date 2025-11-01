@@ -1,5 +1,5 @@
 {
-  "version": "0.4.1",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Just the Two of Us | Lvl 1",
   "artists": ["Grover Washington Jr."],
@@ -20,48 +20,19 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["CM7"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["B7"]],
-              "times": 2,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["Em"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["Dm7", "G7"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["0 CM7 1", "1 B7 2"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["CM7"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["B7"]],
-              "times": 2,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["Em"]],
-              "times": 1,
-              "strumm": 2
-            }
-          ]
+          "items": [["0 Em 1", "1 Dm7 1 G7 1"]]
+        },
+        {
+          "times": 1,
+          "items": [["0 CM7 1", "1 B7 2"]]
+        },
+        {
+          "times": 1,
+          "items": [["2 Em 1"]]
         }
       ]
     }

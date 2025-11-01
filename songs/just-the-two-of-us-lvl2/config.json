@@ -1,5 +1,5 @@
 {
-  "version": "0.4.1",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Just the Two of Us | Lvl 2",
   "artists": ["Grover Washington Jr."],
@@ -24,48 +24,19 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["CM7"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["B7"]],
-              "times": 2,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["Em"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["Dm7", "G7"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["0 CM7 1", "1 B7 2"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["CM7"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["B7"]],
-              "times": 2,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["Em"]],
-              "times": 1,
-              "strumm": 2
-            }
-          ]
+          "items": [["0 Em 1", "1 Dm7 1 G7 1"]]
+        },
+        {
+          "times": 1,
+          "items": [["0 CM7 1", "1 B7 2"]]
+        },
+        {
+          "times": 1,
+          "items": [["2 Em 1"]]
         }
       ]
     },
@@ -76,33 +47,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["CM7", "B7"]],
-              "times": 1,
-              "strumm": 3
-            },
-            {
-              "chordIDs": [["Em7", "Ebm7", "Dm7", "G7"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["3 CM7 1 B7 1"], ["1 Em7 1 Ebm7 1 Dm7 1 G7 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["CM7", "B7"]],
-              "times": 1,
-              "strumm": 3
-            },
-            {
-              "chordIDs": [["Em"]],
-              "times": 1,
-              "strumm": 2
-            }
-          ]
+          "items": [["3 CM7 1 B7 1"], ["2 Em 1"]]
         }
       ]
     },
@@ -113,63 +62,19 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["CM7"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["B7"]],
-              "times": 2,
-              "strumm": 1
-            }
-          ]
+          "items": [["0 CM7 1", "1 B7 2"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["BbM7"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["A7"]],
-              "times": 2,
-              "strumm": 1
-            }
-          ]
+          "items": [["0 BbM7 1", "1 A7 2"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["AbM7"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["G7"]],
-              "times": 2,
-              "strumm": 1
-            }
-          ]
+          "items": [["0 AbM7 1", "1 G7 2"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["CM7"]],
-              "times": 1,
-              "strumm": 4
-            },
-            {
-              "chordIDs": [["F13"]],
-              "times": 1,
-              "strumm": 5
-            }
-          ]
+          "items": [["4 CM7 1", "5 F13 1"]]
         }
       ]
     },
@@ -180,63 +85,19 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["CM7"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["B7"]],
-              "times": 2,
-              "strumm": 1
-            }
-          ]
+          "items": [["0 CM7 1", "1 B7 2"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["BbM7"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["A7"]],
-              "times": 2,
-              "strumm": 1
-            }
-          ]
+          "items": [["0 BbM7 1", "1 A7 2"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["AbM7"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["G7"]],
-              "times": 2,
-              "strumm": 1
-            }
-          ]
+          "items": [["0 AbM7 1", "1 G7 2"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["CM7"]],
-              "times": 1,
-              "strumm": 4
-            },
-            {
-              "chordIDs": [["F13"]],
-              "times": 1,
-              "strumm": 6
-            }
-          ]
+          "items": [["4 CM7 1", "6 F13 1"]]
         }
       ]
     }

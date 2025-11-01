@@ -1,5 +1,5 @@
 {
-  "version": "0.2.1",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Riptide",
   "artists": ["Vance Joy"],
@@ -16,13 +16,7 @@
       "chunks": [
         {
           "times": 15,
-          "items": [
-            {
-              "chordIDs": [["Am", "G", "C", "C"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Am 1 G 1 C 2"]]
         }
       ]
     },
@@ -64,13 +58,7 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Am", "G", "C", "Fmaj7"]],
-              "times": 2,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Am 2 G 2 C 2 Fmaj7 2"]]
         }
       ]
     },
@@ -81,13 +69,7 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Am", "G", "C"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["1 Am 1 G 1 C 1"]]
         }
       ]
     }

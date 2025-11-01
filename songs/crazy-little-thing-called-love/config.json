@@ -1,5 +1,5 @@
 {
-  "version": "0.5.1",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Little Thing Called Love",
   "artists": ["Queen"],
@@ -24,13 +24,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["D", "D", "D", "D"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 D 4"]]
         }
       ]
     },
@@ -41,38 +35,11 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["D", "D", "G"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["C", "G"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["0 D 2 G 1", "1 C 1 G 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["D"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["Bb", "C"]],
-              "times": 1,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["D", "D"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 D 1", "1 Bb 1 C 1"], ["0 D 2"]]
         }
       ]
     },
@@ -83,43 +50,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["G", "G"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["C"]],
-              "times": 1,
-              "strumm": 2
-            },
-            {
-              "chordIDs": [["G"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 G 2"], ["2 C 1"], ["0 G 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Bb", "Bb"]],
-              "times": 1,
-              "strumm": 3
-            },
-            {
-              "chordIDs": [["E", "A"]],
-              "times": 1,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["F"]],
-              "times": 1,
-              "strumm": 6
-            }
-          ]
+          "items": [["3 Bb 2", "1 E 1 A 1", "6 F 1"]]
         }
       ]
     },
@@ -190,51 +125,15 @@
         {
           "times": 1,
           "items": [
-            {
-              "chordIDs": [["Bb", "Bb"]],
-              "times": 1,
-              "strumm": 4
-            },
-            {
-              "chordIDs": [["D"]],
-              "times": 1,
-              "strumm": 5
-            },
-            {
-              "chordIDs": [["G"]],
-              "times": 1,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["D"]],
-              "times": 1,
-              "strumm": 4
-            }
+            ["4 Bb 2", "5 D 1"],
+            ["1 G 1", "4 D 1"]
           ]
         },
         {
           "times": 1,
           "items": [
-            {
-              "chordIDs": [["Bb", "Bb"]],
-              "times": 1,
-              "strumm": 4
-            },
-            {
-              "chordIDs": [["D"]],
-              "times": 1,
-              "strumm": 5
-            },
-            {
-              "chordIDs": [["E", "A"]],
-              "times": 1,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["F"]],
-              "times": 1,
-              "strumm": 6
-            }
+            ["4 Bb 2", "5 D 1"],
+            ["1 E 1 A 1", "6 F 1"]
           ]
         }
       ]
@@ -293,43 +192,15 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["D", "D", "G"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["C", "G"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["0 D 2 G 1", "1 C 1 G 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["D"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 D 1"]]
         },
         {
           "times": 404,
-          "items": [
-            {
-              "chordIDs": [["Bb", "C"]],
-              "times": 1,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["D"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["1 Bb 1 C 1", "0 D 1"]]
         }
       ]
     }

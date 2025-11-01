@@ -1,5 +1,5 @@
 {
-  "version": "0.4.1",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Let Me Love You",
   "artists": ["DJ Snake", "Justin Bieber"],
@@ -23,18 +23,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "C"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["F"]],
-              "times": 2,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Am 1 C 1 F 2"]]
         }
       ]
     },
@@ -45,28 +34,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "C"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["1 Am 1 C 1"]]
         },
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Em"]],
-              "times": 1,
-              "strumm": 2
-            },
-            {
-              "chordIDs": [["F"]],
-              "times": 1,
-              "strumm": 3
-            }
-          ]
+          "items": [["2 Em 1", "3 F 1"]]
         }
       ]
     },
@@ -77,13 +49,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["F", "Am", "G", "Dm"]],
-              "times": 1,
-              "strumm": 4
-            }
-          ]
+          "items": [["4 F 1 Am 1 G 1 Dm 1"]]
         }
       ]
     },
@@ -94,28 +60,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "C"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["1 Am 1 C 1"]]
         },
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Em"]],
-              "times": 1,
-              "strumm": 2
-            },
-            {
-              "chordIDs": [["F"]],
-              "times": 1,
-              "strumm": 3
-            }
-          ]
+          "items": [["2 Em 1", "3 F 1"]]
         }
       ]
     },
@@ -126,28 +75,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "C"]],
-              "times": 1,
-              "strumm": 5
-            }
-          ]
+          "items": [["5 Am 1 C 1"]]
         },
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Em"]],
-              "times": 1,
-              "strumm": 2
-            },
-            {
-              "chordIDs": [["F"]],
-              "times": 1,
-              "strumm": 3
-            }
-          ]
+          "items": [["2 Em 1", "3 F 1"]]
         }
       ]
     }

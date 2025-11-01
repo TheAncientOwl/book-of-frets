@@ -1,5 +1,5 @@
 {
-  "version": "0.5.1",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "O Stea",
   "artists": ["Deepcentral"],
@@ -16,13 +16,7 @@
       "chunks": [
         {
           "times": 404,
-          "items": [
-            {
-              "chordIDs": [["Em7", "Cadd9", "G", "D"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Em7 1 Cadd9 1 G 1 D 1"]]
         }
       ]
     }

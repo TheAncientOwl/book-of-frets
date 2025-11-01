@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Issues",
   "artists": ["Julia Michaels"],
@@ -17,44 +17,26 @@
     "v1": {
       "name": "verse",
       "type": "chords",
-      "times": 1,
+      "times": 3,
       "chunks": [
         {
-          "times": 3,
-          "items": [
-            {
-              "chordIDs": [["C", "D", "G/B", "C"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "times": 1,
+          "items": [["0 C 1 D 1 G/B 1 C 1"]]
         }
       ]
     },
     "pr": {
       "name": "prechorus",
       "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
-          "times": 2,
-          "items": [
-            {
-              "chordIDs": [["C", "D"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["G"]],
-              "times": 1,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["D/F#"]],
-              "times": 1,
-              "strumm": 2
-            }
-          ]
+          "times": 1,
+          "items": [["0 C 1 D 1"]]
+        },
+        {
+          "times": 1,
+          "items": [["1 G 1", "2 D/F# 1"]]
         }
       ]
     },
@@ -65,45 +47,22 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["C", "D", "G", "Em"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 C 1 D 1 G 1 Em 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["C"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["D"]],
-              "times": 1,
-              "strumm": 3
-            }
-          ]
+          "items": [["0 C 1", "3 D 1"]]
         }
       ]
     },
     "v2": {
       "name": "verse",
       "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
-          "times": 2,
-          "items": [
-            {
-              "chordIDs": [["C", "D", "G/B", "C"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "times": 1,
+          "items": [["0 C 1 D 1 G/B 1 C 1"]]
         }
       ]
     },
@@ -114,13 +73,7 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["C", "D", "G", "Em"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 C 1 D 1 G 1 Em 1"]]
         }
       ]
     },
@@ -131,28 +84,11 @@
       "chunks": [
         {
           "times": 4,
-          "items": [
-            {
-              "chordIDs": [["C", "D", "G", "Em"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 C 1 D 1 G 1 Em 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["C"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["D"]],
-              "times": 1,
-              "strumm": 3
-            }
-          ]
+          "items": [["0 C 1", "3 D 1"]]
         }
       ]
     }
