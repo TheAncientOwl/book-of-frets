@@ -1,5 +1,5 @@
 {
-  "version": "0.4.1",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Adore You",
   "artists": ["Harry Styles"],
@@ -16,16 +16,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [
-                ["Am7", "-", "C", "-"],
-                ["Fmaj7", "-", "-", "G"]
-              ],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Am7 1 - 1 C 1 - 1", "0 Fmaj7 1 - 1 - 1 G 1"]]
         }
       ]
     },
@@ -36,16 +27,7 @@
       "chunks": [
         {
           "times": 6,
-          "items": [
-            {
-              "chordIDs": [
-                ["Am7", "Am7", "C", "C"],
-                ["Fmaj7", "Fmaj7", "Fmaj7", "G"]
-              ],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["1 Am7 2 C 2 Fmaj7 3 G 1"]]
         }
       ]
     },
@@ -62,16 +44,7 @@
       "chunks": [
         {
           "times": 5,
-          "items": [
-            {
-              "chordIDs": [
-                ["Am7", "Am7", "C", "C"],
-                ["Fmaj7", "Fmaj7", "Fmaj7", "G"]
-              ],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["1 Am7 2 C 2 Fmaj7 3 G 1"]]
         }
       ]
     },
@@ -94,16 +67,7 @@
       "chunks": [
         {
           "times": 4,
-          "items": [
-            {
-              "chordIDs": [
-                ["Am7", "Am7", "C", "C"],
-                ["Fmaj7", "Fmaj7", "Fmaj7", "G"]
-              ],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["1 Am7 2 C 2 Fmaj7 3 G 1"]]
         }
       ]
     },

@@ -6,7 +6,7 @@
  *
  * @file ChordsChunkItem.tsx
  * @author Alexandru Delegeanu
- * @version 0.25
+ * @version 0.27
  * @description Render song pattern segment.
  */
 
@@ -29,7 +29,8 @@ import {
   Tooltip,
 } from '@chakra-ui/react';
 
-type TChordsChunkItemProps = TChordsChunkItem & {
+type TChordsChunkItemProps = {
+  data: TChordsChunkItem;
   strumms: TStrummingPattern[];
 };
 
@@ -38,112 +39,112 @@ const EMPHASIZE_STRUM_CHAR = 'e';
 const SEPARATOR_CHORD_CHAR = '|';
 const NO_CHORD_ID = '-';
 
-export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
+const mapPairs = <T, R>(array: T[], callback: (a: T, b: T, index: number) => R): R[] => {
+  const result: R[] = [];
+  for (let idx = 2; idx < array.length; idx += 2) {
+    result.push(callback(array[idx - 1], array[idx], idx - 1));
+  }
+  return result;
+};
+
+type TItemLineProps = {
+  data: string[];
+  strummingPattern: TStrummingPattern;
+  showPattern: boolean;
+};
+
+const ItemLine = (props: TItemLineProps) => {
   const { song: theme } = useAppTheme();
   const { chordsIndex, songSettings } = useAppState();
 
-  if (props.strumm >= props.strumms.length) {
-    console.error({
-      message: `Found strum index ${props.strumm} when strumms length is ${props.strumms.length}`,
-      strumms: props.strumms,
-    });
-    return null;
-  }
-
   return (
-    <Flex direction='column' alignItems='center' justifyContent='flex-end'>
-      <Flex direction='column' gap='5px' alignItems={props.align || 'center'}>
-        {props.chordIDs.map((chordIDsLine, index) => {
+    <Flex direction='column' justifyContent='center' alignItems='center' gap='0.5rem'>
+      <Flex direction='row' gap='20px'>
+        {mapPairs(props.data, (chordId, times, index) => {
+          if (chordId === SEPARATOR_CHORD_CHAR) {
+            return (
+              <Divider
+                height='22px'
+                borderWidth='thin'
+                // [*] theme colors
+                borderColor={theme.chunks.divider}
+              />
+            );
+          }
+
+          const chordConfig = chordsIndex[chordId];
+
+          if (chordConfig === undefined) {
+            console.error(`Missing chord index for ID '${chordId}'`);
+          }
+
           return (
-            <Flex key={index} direction='row' gap='1em' mb='0.6em'>
-              {chordIDsLine.map((chordId, index) => {
-                if (chordId === SEPARATOR_CHORD_CHAR) {
-                  return (
-                    <Divider
-                      height='22px'
-                      borderWidth='thin'
-                      // [*] theme colors
-                      borderColor={theme.chunks.divider}
-                    />
-                  );
-                }
-
-                const chordConfig = chordsIndex[chordId];
-
-                if (chordConfig === undefined) {
-                  console.error(`Missing chord index for ID '${chordId}'`);
-                }
-
-                return (
-                  <Box as='span' key={index}>
-                    <Popover isLazy>
-                      <PopoverTrigger>
-                        <Tag
-                          as='button'
-                          fontWeight='bold'
-                          cursor='pointer'
-                          // [*] theme colors
-                          backgroundColor={theme.chunks.item.chordsPattern.chord.background}
-                          color={theme.chunks.item.chordsPattern.chord.color}
-                        >
-                          {chordId !== NO_CHORD_ID && chordConfig !== undefined
-                            ? chordConfig.name
-                            : '-'}
-                        </Tag>
-                      </PopoverTrigger>
-                      <Portal>
-                        {chordConfig && (
-                          <PopoverContent
+            <Box as='span' key={index}>
+              <Popover isLazy>
+                <PopoverTrigger>
+                  <Tag
+                    as='button'
+                    fontWeight='bold'
+                    cursor='pointer'
+                    position='relative'
+                    // [*] theme colors
+                    backgroundColor={theme.chunks.item.chordsPattern.chord.background}
+                    color={theme.chunks.item.chordsPattern.chord.color}
+                  >
+                    {chordId !== NO_CHORD_ID && chordConfig !== undefined ? chordConfig.name : '-'}
+                    {songSettings.display.chordTimes.value &&
+                      (times !== '1' || songSettings.display.chordTimesOne.value) && (
+                        <Tooltip label={`Strum ${times} times`}>
+                          <Text
+                            position='absolute'
+                            top='-10px'
+                            right='0'
+                            transform='translateX(100%)'
+                            fontSize='xs'
+                            fontWeight='bold'
                             // [*] theme colors
-                            zIndex={1}
-                            backgroundColor={
-                              theme.chunks.item.chordsPattern.chord.segment.popover.background
-                            }
-                            borderColor={
-                              theme.chunks.item.chordsPattern.chord.segment.popover.border
-                            }
+                            color={theme.chunks.item.chordsPattern.chord.segment.times}
                           >
-                            <PopoverArrow
-                              // [*] theme colors
-                              backgroundColor={
-                                theme.chunks.item.chordsPattern.chord.segment.popover.arrow
-                              }
-                            />
-                            <PopoverCloseButton
-                              // [*] theme colors
-                              color={
-                                theme.chunks.item.chordsPattern.chord.segment.popover.closeButton
-                              }
-                            />
-                            <Flex justifyContent='center' padding='25px'>
-                              <Chord {...chordConfig} />
-                            </Flex>
-                          </PopoverContent>
-                        )}
-                      </Portal>
-                    </Popover>
-                  </Box>
-                );
-              })}
-            </Flex>
+                            {times}
+                          </Text>
+                        </Tooltip>
+                      )}
+                  </Tag>
+                </PopoverTrigger>
+
+                <Portal>
+                  {chordConfig && (
+                    <PopoverContent
+                      // [*] theme colors
+                      zIndex={1}
+                      backgroundColor={
+                        theme.chunks.item.chordsPattern.chord.segment.popover.background
+                      }
+                      borderColor={theme.chunks.item.chordsPattern.chord.segment.popover.border}
+                    >
+                      <PopoverArrow
+                        // [*] theme colors
+                        backgroundColor={
+                          theme.chunks.item.chordsPattern.chord.segment.popover.arrow
+                        }
+                      />
+                      <PopoverCloseButton
+                        // [*] theme colors
+                        color={theme.chunks.item.chordsPattern.chord.segment.popover.closeButton}
+                      />
+                      <Flex justifyContent='center' padding='25px'>
+                        <Chord {...chordConfig} />
+                      </Flex>
+                    </PopoverContent>
+                  )}
+                </Portal>
+              </Popover>
+            </Box>
           );
         })}
       </Flex>
 
-      {songSettings.display.chordTimes.value && (
-        <Tooltip label={`Strum ${props.times} times`}>
-          <Text
-            fontSize='xs'
-            fontWeight='bold'
-            // [*] theme colors
-            color={theme.chunks.item.chordsPattern.chord.segment.times}
-          >
-            x{props.times}
-          </Text>
-        </Tooltip>
-      )}
-
-      {songSettings.display.strummingPattern.value && (
+      {props.showPattern && songSettings.display.strummingPattern.value && (
         <Box position='relative' mt='0.4em'>
           <Flex
             direction='row'
@@ -152,7 +153,7 @@ export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
             // [*] theme colors
             color={theme.chunks.item.chordsPattern.chord.segment.pattern}
           >
-            {props.strumms[props.strumm].map((pattern, index) => {
+            {props.strummingPattern.map((pattern, index) => {
               return (
                 <Text
                   key={index}
@@ -166,6 +167,47 @@ export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
           </Flex>
         </Box>
       )}
+    </Flex>
+  );
+};
+
+export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
+  const { songSettings } = useAppState();
+
+  const linesData = props.data.map(lineData => lineData.split(' '));
+
+  const samePattern =
+    linesData.length === 0 || linesData.every(lineData => lineData[0] === linesData[0][0]);
+
+  return (
+    <Flex
+      direction={samePattern ? 'column' : 'row'}
+      alignItems='center'
+      justifyContent='center'
+      gap={songSettings.display.chordTimesOne.value ? '1.5rem' : '1rem'}
+    >
+      {linesData.map((lineData, index) => {
+        const strumm = Number(lineData[0]);
+
+        if (strumm >= props.strumms.length) {
+          console.error({
+            message: `Found strum index ${strumm} when strumms length is ${props.strumms.length}`,
+            strumms: props.strumms,
+          });
+          return null;
+        }
+
+        return (
+          <ItemLine
+            key={index}
+            data={lineData}
+            strummingPattern={props.strumms[strumm]}
+            showPattern={
+              index === linesData.length - 1 ? true : strumm !== Number(linesData[index + 1][0])
+            }
+          />
+        );
+      })}
     </Flex>
   );
 };

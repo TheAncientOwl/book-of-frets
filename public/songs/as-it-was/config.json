@@ -1,5 +1,5 @@
 {
-  "version": "0.3.1",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "As It Was",
   "artists": ["Harry Styles"],
@@ -16,13 +16,7 @@
       "chunks": [
         {
           "times": 404,
-          "items": [
-            {
-              "chordIDs": [["Dsus2", "Bm7", "E", "A"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Dsus2 1 Bm7 1 E 1 A 1"]]
         }
       ]
     }

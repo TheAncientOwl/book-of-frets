@@ -1,5 +1,5 @@
 {
-  "version": "0.3.1",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Shivers",
   "artists": ["Ed Sheeran"],
@@ -18,39 +18,22 @@
     "v": {
       "name": "verse",
       "type": "chords",
-      "times": 1,
+      "times": 3,
       "chunks": [
         {
-          "times": 3,
-          "items": [
-            {
-              "chordIDs": [["Bm", "G", "D", "A"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "times": 1,
+          "items": [["0 Bm 1 G 1 D 1 A 1"]]
         }
       ]
     },
     "c1": {
       "name": "chorus 1",
       "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
-          "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Bm", "G", "D"]],
-              "times": 2,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["A"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "times": 1,
+          "items": [["1 Bm 2 G 2 D 2 A 1"]]
         }
       ]
     },
@@ -61,23 +44,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Bm", "G", "D", "A"]],
-              "times": 1,
-              "strumm": 2
-            }
-          ]
+          "items": [["2 Bm 1 G 1 D 1 A 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Bm", "G", "D", "A"]],
-              "times": 4,
-              "strumm": 3
-            }
-          ]
+          "items": [["3 Bm 4 G 4 D 4 A 4"]]
         }
       ]
     },
@@ -88,38 +59,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Bm"]],
-              "times": 1,
-              "strumm": 4
-            },
-            {
-              "chordIDs": [["G", "D"]],
-              "times": 2,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["A"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["4 Bm 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Bm", "G", "D"]],
-              "times": 2,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["A"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["1 G 2 D 2 A 1", "1 Bm 2 G 2 D 2 A 1"]]
         }
       ]
     }

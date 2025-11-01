@@ -1,5 +1,5 @@
 {
-  "version": "0.2.1",
+  "version": "1.0.1",
   "contributors": ["TheAncientOwl"],
   "title": "I Know What You Did Last Summer",
   "artists": ["Shawn Mendes", "Camila Cabello"],
@@ -22,54 +22,30 @@
     "i": {
       "name": "intro",
       "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
-          "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Am", "F", "G"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["C"]],
-              "times": 1,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["G"]],
-              "times": 1,
-              "strumm": 2
-            }
-          ]
+          "times": 1,
+          "items": [["0 Am 1 F 1 G 1"]]
+        },
+        {
+          "times": 1,
+          "items": [["1 C 1", "2 G 1"]]
         }
       ]
     },
     "v": {
       "name": "verse",
       "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
-          "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Am", "F", "G"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["C"]],
-              "times": 1,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["G"]],
-              "times": 1,
-              "strumm": 2
-            }
-          ]
+          "times": 1,
+          "items": [["0 Am 1 F 1 G 1"]]
+        },
+        {
+          "times": 1,
+          "items": [["1 C 1", "2 G 1"]]
         }
       ]
     },
@@ -80,75 +56,37 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [
-                ["F", "G", "Am", "Am"],
-                ["F", "G", "Am", "E"]
-              ],
-              "times": 1,
-              "strumm": 2
-            },
-            {
-              "chordIDs": [["E"]],
-              "times": 1,
-              "strumm": 8
-            }
-          ]
+          "items": [["2 F 1 G 1 Am 1 Am 1", "2 F 1 G 1 Am 1"]]
+        },
+        {
+          "times": 1,
+          "items": [["8 E 1"]]
         }
       ]
     },
     "c1": {
       "name": "chorus 1",
       "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
-          "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Am", "F", "G"]],
-              "times": 1,
-              "strumm": 3
-            },
-            {
-              "chordIDs": [["C"]],
-              "times": 1,
-              "strumm": 6
-            },
-            {
-              "chordIDs": [["G"]],
-              "times": 1,
-              "strumm": 7
-            }
-          ]
+          "times": 1,
+          "items": [["3 Am 1 F 1 G 1"]]
+        },
+        {
+          "times": 1,
+          "items": [["6 C 1", "7 G 1"]]
         }
       ]
     },
     "po": {
       "name": "postchorus",
       "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
-          "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Am", "F", "G"]],
-              "times": 8,
-              "strumm": 5
-            },
-            {
-              "chordIDs": [["C"]],
-              "times": 3,
-              "strumm": 5
-            },
-            {
-              "chordIDs": [["G"]],
-              "times": 5,
-              "strumm": 5
-            }
-          ]
+          "times": 1,
+          "items": [["5 Am 8 G 8 C 3 G 5"]]
         }
       ]
     },
@@ -159,50 +97,26 @@
       "chunks": [
         {
           "times": 5,
-          "items": [
-            {
-              "chordIDs": [["F", "G", "Am", "Em"]],
-              "times": 1,
-              "strumm": 4
-            }
-          ]
+          "items": [["4 F 1 G 1 Am 1 Em 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["F", "G", "Am", "E"]],
-              "times": 1,
-              "strumm": 4
-            }
-          ]
+          "items": [["4 F 1 G 1 Am 1 E 1"]]
         }
       ]
     },
     "c1.1": {
       "name": "chorus 1",
       "type": "chords",
-      "times": 1,
+      "times": 4,
       "chunks": [
         {
-          "times": 4,
-          "items": [
-            {
-              "chordIDs": [["Am", "F", "G"]],
-              "times": 1,
-              "strumm": 3
-            },
-            {
-              "chordIDs": [["C"]],
-              "times": 1,
-              "strumm": 6
-            },
-            {
-              "chordIDs": [["G"]],
-              "times": 1,
-              "strumm": 7
-            }
-          ]
+          "times": 1,
+          "items": [["3 Am 1 F 1 G 1"]]
+        },
+        {
+          "times": 1,
+          "items": [["6 C 1", "7 G 1"]]
         }
       ]
     }

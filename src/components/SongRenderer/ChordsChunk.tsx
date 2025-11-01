@@ -6,7 +6,7 @@
  *
  * @file ChordsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.23
+ * @version 0.24
  * @description Render song chords pattern.
  */
 
@@ -21,7 +21,7 @@ type TChordsChunkProps = TChordsChunk & {
   strumms: TStrummingPattern[];
 };
 
-const ChordsChunkDivider = (props: DividerProps & TChordsChunk) => {
+export const ChordsChunkDivider = (props: DividerProps & TChordsChunk) => {
   const { song: theme } = useAppTheme();
 
   return (
@@ -53,22 +53,23 @@ export const ChordsChunk = (props: TChordsChunkProps) => {
       gap='1em'
       alignItems='stretch'
       justifyContent='center'
+      fontSize={['0.85em', '0.9em', '1em']}
     >
       <ChordsChunkDivider display={['none', 'block']} borderStyle={['solid']} {...props} />
 
       {props.items.map((segment, segmentIndex) => (
         <Fragment key={segmentIndex}>
-          <ChordsChunkItem {...segment} strumms={props.strumms} />
+          <ChordsChunkItem data={segment} strumms={props.strumms} />
 
           <ChordsChunkDivider
-            borderStyle={['dashed', 'solid']}
+            borderStyle={['none', 'solid']}
             display={[segmentIndex < props.items.length - 1 ? 'block' : 'none', 'block']}
             {...props}
           />
         </Fragment>
       ))}
 
-      {songSettings.display.times.value && (
+      {songSettings.display.times.value && props.times > 1 && (
         <Tooltip
           label={`Repeat ${props.times} times`}
           // [*] theme colors

@@ -1,5 +1,5 @@
 {
-  "version": "0.5.1",
+  "version": "1.0.1",
   "contributors": ["TheAncientOwl"],
   "title": "Without You",
   "artists": ["The Kid LAROI"],
@@ -23,57 +23,33 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["-"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 - 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["1 Am 1 Fmaj7 1 C 1 G 1"]]
         }
       ]
     },
     "c1": {
       "name": "chorus",
       "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
-          "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "times": 1,
+          "items": [["1 Am 1 Fmaj7 1 C 1 G 1"]]
         }
       ]
     },
     "v": {
       "name": "verse",
       "type": "chords",
-      "times": 1,
+      "times": 2,
       "chunks": [
         {
-          "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "times": 1,
+          "items": [["1 Am 1 Fmaj7 1 C 1 G 1"]]
         }
       ]
     },
@@ -84,40 +60,22 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["1 Am 1 Fmaj7 1 C 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["E"]],
-              "times": 1,
-              "strumm": 2
-            }
-          ]
+          "items": [["2 E 1"]]
         }
       ]
     },
     "c2": {
       "name": "chorus",
       "type": "chords",
-      "times": 1,
+      "times": 4,
       "chunks": [
         {
-          "times": 4,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "times": 1,
+          "items": [["1 Am 1 Fmaj7 1 C 1 G 1"]]
         }
       ]
     },
@@ -128,23 +86,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C"]],
-              "times": 1,
-              "strumm": 3
-            }
-          ]
+          "items": [["3 Am 1 Fmaj7 1 C 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["G"]],
-              "times": 1,
-              "strumm": 4
-            }
-          ]
+          "items": [["4 G 1"]]
         }
       ]
     },
@@ -155,23 +101,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["1 Am 1 Fmaj7 1 C 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["-"]],
-              "times": 1,
-              "strumm": 5
-            }
-          ]
+          "items": [["5 - 1"]]
         }
       ]
     },
@@ -182,13 +116,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C", "G"]],
-              "times": 1,
-              "strumm": 3
-            }
-          ]
+          "items": [["3 Am 1 Fmaj 1 C 1 G 1"]]
         }
       ]
     }

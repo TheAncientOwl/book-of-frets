@@ -1,5 +1,5 @@
 {
-  "version": "0.4.1",
+  "version": "1.0.1",
   "contributors": ["TheAncientOwl"],
   "title": "Golden",
   "artists": ["HUNTR/X"],
@@ -16,26 +16,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [
-                ["C", "G", "D", "Em"],
-                ["C", "G", "D"]
-              ],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 C 1 G 1 D 1 Em 1", "0 C 1 G 1 D 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Em"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["1 Em 1"]]
         }
       ]
     },
@@ -46,13 +31,7 @@
       "chunks": [
         {
           "times": 4,
-          "items": [
-            {
-              "chordIDs": [["C", "G", "D", "Em"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 C 1 G 1 D 1 Em 1"]]
         }
       ]
     },
@@ -63,13 +42,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["C", "G", "D", "Em"], ["C", "G", "D", "D"], ["C"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 C 1 G 1 D 1 Em 1", "0 C 1 G 1 D 1 D 1", "0 C 1"]]
         }
       ]
     },
@@ -80,43 +53,11 @@
       "chunks": [
         {
           "times": 3,
-          "items": [
-            {
-              "chordIDs": [["D"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["G", "D"]],
-              "times": 1,
-              "strumm": 2
-            },
-            {
-              "chordIDs": [["Em", "C"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 D 1", "2 G 1 D 1", "0 Em 1 C 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["D"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["G", "D"]],
-              "times": 1,
-              "strumm": 2
-            },
-            {
-              "chordIDs": [["Em"]],
-              "times": 3,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 D 1", "2 G 1 D 1", "0 Em 1 Em 1 Em 1"]]
         }
       ]
     },
@@ -128,31 +69,8 @@
         {
           "times": 1,
           "items": [
-            {
-              "chordIDs": [["Em"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["D", "Bm", "C"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
-        },
-        {
-          "times": 1,
-          "items": [
-            {
-              "chordIDs": [["G"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["D", "Bm", "C"]],
-              "times": 1,
-              "strumm": 0
-            }
+            ["0 Em 1", "0 D 1 Bm 1 C 1"],
+            ["0 G 1", "0 D 1 Bm 1 C 1"]
           ]
         }
       ]
@@ -164,16 +82,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [
-                ["Em", "D", "Bm", "C"],
-                ["Em", "Bm", "D", "C"]
-              ],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Em 1 D 1 Bm 1 C 1", "0 Em 1 Bm 1 D 1 C 1"]]
         }
       ]
     },
@@ -184,43 +93,11 @@
       "chunks": [
         {
           "times": 3,
-          "items": [
-            {
-              "chordIDs": [["D"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["G", "D"]],
-              "times": 1,
-              "strumm": 2
-            },
-            {
-              "chordIDs": [["Em", "C"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 D 1", "2 G 1 D 1", "0 Em 1 C 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["D"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["G", "D"]],
-              "times": 1,
-              "strumm": 2
-            },
-            {
-              "chordIDs": [["Em"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 D 1", "2 G 1 D 1", "0 Em 1"]]
         }
       ]
     },
@@ -231,23 +108,7 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["C", "D"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["G", "D"]],
-              "times": 1,
-              "strumm": 2
-            },
-            {
-              "chordIDs": [["Em"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 C 1 D 1", "2 G 1 D 1", "0 Em 1"]]
         }
       ]
     },
@@ -258,26 +119,11 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [
-                ["C", "G", "D", "Em"],
-                ["C", "G", "D"]
-              ],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 C 1 G 1 D 1 Em 1", "0 C 1 G 1 D 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Em"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["1 Em 1"]]
         }
       ]
     }

@@ -6,7 +6,7 @@
  *
  * @file useAppStateValue.ts
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description Main app state hook.
  */
 
@@ -43,6 +43,10 @@ export const useAppStateValue = (): TAppState => {
   const [displayChordTimes, setDisplayChordTimes] = useLocalStorage<boolean>(
     LocalStorageKeys.displayChordTimes,
     DefaultAppState.songSettings.display.chordTimes.value
+  );
+  const [displayChordTimesOne, setDisplayChordTimesOne] = useLocalStorage<boolean>(
+    LocalStorageKeys.displayChordTimesOne,
+    DefaultAppState.songSettings.display.chordTimesOne.value
   );
   const [displayTimes, setDisplayTimes] = useLocalStorage<boolean>(
     LocalStorageKeys.displayTimes,
@@ -101,6 +105,7 @@ export const useAppStateValue = (): TAppState => {
         display: {
           times: { value: displayTimes, set: setDisplayTimes },
           chordTimes: { value: displayChordTimes, set: setDisplayChordTimes },
+          chordTimesOne: { value: displayChordTimesOne, set: setDisplayChordTimesOne },
           strummingPattern: { value: displayStrummingPattern, set: setDisplayStrummingPattern },
         },
       },
@@ -127,6 +132,8 @@ export const useAppStateValue = (): TAppState => {
       songsHistory,
       setSongsHistory,
       updateChordsIndex,
+      displayChordTimesOne,
+      setDisplayChordTimesOne,
     ]
   );
 };
