@@ -1,5 +1,5 @@
 {
-  "version": "0.2.1",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "What I've Done",
   "artists": ["Linkin Park"],
@@ -25,13 +25,7 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Em", "G", "D", "Asus2"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Em 1 G 1 D 1 Asus2 1"]]
         }
       ]
     },
@@ -42,13 +36,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Em", "Em"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["1 Em 2"]]
         }
       ]
     },
@@ -59,13 +47,7 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Em", "G", "D", "Asus2"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["1 Em 1 G 1 D 1 Asus2 1"]]
         }
       ]
     },
@@ -76,23 +58,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["C", "C", "Dadd11_3fr"]],
-              "times": 1,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["Dadd11_3fr"]],
-              "times": 1,
-              "strumm": 5
-            },
-            {
-              "chordIDs": [["Dadd11_3fr"]],
-              "times": 1,
-              "strumm": 6
-            }
-          ]
+          "items": [["1 C 2 Dadd11_3fr 1"], ["5 Dadd11_3fr 1", "6 Dadd11_3fr 1"]]
         }
       ]
     },
@@ -103,13 +69,7 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Em", "G", "D", "Asus2"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Em 1 G 1 D 1 Asus2 1"]]
         }
       ]
     },
@@ -120,21 +80,7 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [
-                ["Em", "G", "D", "Asus2"],
-                ["Em", "G", "D"]
-              ],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["Asus2", "G/B", "C", "D"]],
-              "times": 1,
-              "strumm": 2
-            }
-          ]
+          "items": [["0 Em 1 G 1 D 1 Asus2 1", "0 Em 1 G 1 D 1"], ["2 Asus2 1 G/B 1 C 1 D 1"]]
         }
       ]
     },
@@ -145,23 +91,11 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Em", "G", "D", "Asus2"]],
-              "times": 1,
-              "strumm": 3
-            }
-          ]
+          "items": [["3 Em 1 G 1 D 1 Asus2 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Asus2"]],
-              "times": 1,
-              "strumm": 4
-            }
-          ]
+          "items": [["4 Asus2 1"]]
         }
       ]
     },
@@ -172,13 +106,7 @@
       "chunks": [
         {
           "times": 4,
-          "items": [
-            {
-              "chordIDs": [["Em", "G", "D", "Asus2"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Em 1 G 1 D 1 Asus2 1"]]
         }
       ]
     },
@@ -189,13 +117,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Em", "G", "D", "Asus2"]],
-              "times": 1,
-              "strumm": 7
-            }
-          ]
+          "items": [["7 Em 1 G 1 D 1 Asus2 1"]]
         }
       ]
     }

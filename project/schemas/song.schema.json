@@ -85,30 +85,11 @@
                   "items": {
                     "oneOf": [
                       {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "properties": {
-                          "align": {
-                            "type": "string",
-                            "enum": ["center", "flex-start", "flex-end"]
-                          },
-                          "chordIDs": {
-                            "type": "array",
-                            "items": {
-                              "type": "array",
-                              "items": { "type": "string" },
-                              "minItems": 1
-                            },
-                            "minItems": 1
-                          },
-                          "times": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "default": 1
-                          },
-                          "strumm": { "type": "number", "minimum": 0, "default": 0 }
-                        },
-                        "required": ["chordIDs", "times", "strumm"]
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[0-9]+(?: [A-Za-z0-9#/()_+-|]+ [0-9]+)+$"
+                        }
                       },
                       {
                         "oneOf": [

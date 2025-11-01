@@ -1,5 +1,5 @@
 {
-  "version": "0.5.1",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Nice to Meet You",
   "artists": ["Myles Smith"],
@@ -16,16 +16,7 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [
-                ["Em", "C"],
-                ["G", "G"]
-              ],
-              "times": 2,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Em 2 C 2 G 4"]]
         }
       ]
     },
@@ -36,26 +27,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [
-                ["Em", "C", "G", "D"],
-                ["Em", "C", "G"]
-              ],
-              "times": 2,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Em 2 C 2 G 2 D 2", "0 Em 2 C 2 G 2"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["D"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["1 D 1"]]
         }
       ]
     },
@@ -66,13 +42,7 @@
       "chunks": [
         {
           "times": 4,
-          "items": [
-            {
-              "chordIDs": [["Em", "C", "G", "D"]],
-              "times": 2,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Em 2 C 2 G 2 D 2"]]
         }
       ]
     },
@@ -83,13 +53,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Em", "C", "G", "D"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Em 1 C 1 G 1 D 1"]]
         }
       ]
     },
@@ -100,13 +64,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Em", "C", "G", "D"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["1 Em 1 C 1 G 1 D 1"]]
         }
       ]
     }

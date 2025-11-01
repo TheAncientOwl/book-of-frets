@@ -1,5 +1,5 @@
 {
-  "version": "0.5.1",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Wake Me Up",
   "artists": ["Avicii"],
@@ -16,33 +16,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["C/G", "G"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Am 1 Fmaj7 1 C/G 2 G 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["C/G", "E"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Am 1 Fmaj7 1 C/G 2 E 1"]]
         }
       ]
     },
@@ -53,33 +31,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["C/G", "G"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Am 1 Fmaj7 1 C/G 2 G 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["C/G", "E"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Am 1 Fmaj7 1 C/G 2 E 1"]]
         }
       ]
     },
@@ -90,33 +46,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["C/G", "G"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Am 1 Fmaj7 1 C/G 2 G 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C/G"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["C/G", "E"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Am 1 Fmaj7 1 C/G 2 E 1"]]
         }
       ]
     },
@@ -127,13 +61,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am", "Fmaj7", "C/G", "C/G"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Am 1 Fmaj7 1 C/G 2"]]
         }
       ]
     }

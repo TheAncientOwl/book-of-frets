@@ -1,5 +1,5 @@
 {
-  "version": "0.5.1",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Run Away To Mars",
   "artists": ["TALK"],
@@ -21,13 +21,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["G", "D/F#", "Em7", "Cadd9"]],
-              "times": 2,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 G 2 D/F# 2 Em7 2 Cadd9 2"]]
         }
       ]
     },
@@ -38,13 +32,7 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["G", "D/F#", "Em7", "Cadd9"]],
-              "times": 2,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 G 2 D/F# 2 Em7 2 Cadd9 2"]]
         }
       ]
     },
@@ -55,13 +43,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Am7", "D"]],
-              "times": 2,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Am7 2 D 2"]]
         }
       ]
     },
@@ -72,28 +54,7 @@
       "chunks": [
         {
           "times": 4,
-          "items": [
-            {
-              "chordIDs": [["Em", "C"]],
-              "times": 2,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["G"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["G"]],
-              "times": 1,
-              "strumm": 1
-            },
-            {
-              "chordIDs": [["D/F#"]],
-              "times": 2,
-              "strumm": 2
-            }
-          ]
+          "items": [["0 Em 2 C 2 G 1"], ["1 G 1", "2 D/F# 2"]]
         }
       ]
     },
@@ -104,13 +65,7 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["Am7", "Dsus4", "D"]],
-              "times": 2,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Am7 2 Dsus4 2 D 2"]]
         }
       ]
     },
@@ -121,16 +76,7 @@
       "chunks": [
         {
           "times": 3,
-          "items": [
-            {
-              "chordIDs": [
-                ["Em", "C", "G"],
-                ["D/F#", "Em", "C", "G"]
-              ],
-              "times": 1,
-              "strumm": 3
-            }
-          ]
+          "items": [["3 Em 1 C 1 G 1", "3 D/F# 1 Em 1 C 1 G 1"]]
         }
       ]
     }

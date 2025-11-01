@@ -1,5 +1,5 @@
 {
-  "version": "0.3.1",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Before You go",
   "artists": ["Lewis Capaldi"],
@@ -34,13 +34,7 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["C", "Am", "Fmaj7", "G"]],
-              "times": 4,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 C 4 Am 4 Fmaj7 4 G 4"]]
         }
       ]
     },
@@ -51,23 +45,11 @@
       "chunks": [
         {
           "times": 2,
-          "items": [
-            {
-              "chordIDs": [["C", "G", "Am", "Fmaj7"]],
-              "times": 4,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 C 4 G 4 Am 4 Fmaj7 4"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["G"]],
-              "times": 1,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 G 1"]]
         }
       ]
     },
@@ -78,16 +60,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [
-                ["Am", "F", "C", "G"],
-                ["Am", "F", "G", "G"]
-              ],
-              "times": 2,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 Am 2 Fmaj7 2 C 2 G 2", "0 Am 2 Fmaj7 2 G 4"]]
         }
       ]
     },
@@ -104,18 +77,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["C", "G", "Am"]],
-              "times": 4,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["Fmaj7"]],
-              "times": 3,
-              "strumm": 0
-            }
-          ]
+          "items": [["0 C 4 G 4 Am 4 Fmaj7 3"]]
         }
       ]
     },

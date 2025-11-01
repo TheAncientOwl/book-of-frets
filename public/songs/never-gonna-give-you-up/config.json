@@ -1,5 +1,5 @@
 {
-  "version": "0.4.1",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Never Gonna Give You Up",
   "artists": ["Rick Astley"],
@@ -20,33 +20,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Fmaj7"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["G"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["0 Fmaj7 1", "1 G 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Em"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["Am"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["0 Em 1", "1 Am 1"]]
         }
       ]
     },
@@ -57,13 +35,7 @@
       "chunks": [
         {
           "times": 4,
-          "items": [
-            {
-              "chordIDs": [["Fmaj7", "G"]],
-              "times": 1,
-              "strumm": 2
-            }
-          ]
+          "items": [["2 Fmaj7 1 G 1"]]
         }
       ]
     },
@@ -74,13 +46,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Fmaj7", "G"]],
-              "times": 1,
-              "strumm": 2
-            }
-          ]
+          "items": [["2 Fmaj7 1 G 1"]]
         }
       ]
     },
@@ -91,38 +57,16 @@
       "chunks": [
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Fmaj7"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["G"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["0 Fmaj7 1", "1 G 1"]]
         },
         {
           "times": 1,
-          "items": [
-            {
-              "chordIDs": [["Em"]],
-              "times": 1,
-              "strumm": 0
-            },
-            {
-              "chordIDs": [["Am"]],
-              "times": 1,
-              "strumm": 1
-            }
-          ]
+          "items": [["0 Em 1", "1 Am 1"]]
         }
       ]
     }
   },
-  "order": ["i", "v", "pr", "c", "pr", "c"],
+  "order": ["i", "v", "pr", "c", "v", "pr", "c"],
   "res": [
     {
       "alias": "Rick Astley - Never Gonna Give You Up EASY Guitar Tutorial With Chords / Lyrics",
