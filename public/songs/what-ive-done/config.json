@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "contributors": ["TheAncientOwl"],
   "title": "What I've Done",
   "artists": ["Linkin Park"],
@@ -58,7 +58,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["1 C 2 Dadd11_3fr 1"], ["5 Dadd11_3fr 1", "6 Dadd11_3fr 1"]]
+          "items": [["1 C 1 C 1 Dadd11_3fr 1"], ["5 Dadd11_3fr 1", "6 Dadd11_3fr 1"]]
         }
       ]
     },

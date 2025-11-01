@@ -6,7 +6,7 @@
  *
  * @file ChordsChunkItem.tsx
  * @author Alexandru Delegeanu
- * @version 0.26
+ * @version 0.27
  * @description Render song pattern segment.
  */
 
@@ -92,22 +92,23 @@ const ItemLine = (props: TItemLineProps) => {
                     color={theme.chunks.item.chordsPattern.chord.color}
                   >
                     {chordId !== NO_CHORD_ID && chordConfig !== undefined ? chordConfig.name : '-'}
-                    {songSettings.display.chordTimes.value && (
-                      <Tooltip label={`Strum ${times} times`}>
-                        <Text
-                          position='absolute'
-                          top='-10px'
-                          right='0'
-                          transform='translateX(100%)'
-                          fontSize='xs'
-                          fontWeight='bold'
-                          // [*] theme colors
-                          color={theme.chunks.item.chordsPattern.chord.segment.times}
-                        >
-                          {times}
-                        </Text>
-                      </Tooltip>
-                    )}
+                    {songSettings.display.chordTimes.value &&
+                      (times !== '1' || songSettings.display.chordTimesOne.value) && (
+                        <Tooltip label={`Strum ${times} times`}>
+                          <Text
+                            position='absolute'
+                            top='-10px'
+                            right='0'
+                            transform='translateX(100%)'
+                            fontSize='xs'
+                            fontWeight='bold'
+                            // [*] theme colors
+                            color={theme.chunks.item.chordsPattern.chord.segment.times}
+                          >
+                            {times}
+                          </Text>
+                        </Tooltip>
+                      )}
                   </Tag>
                 </PopoverTrigger>
 
@@ -171,6 +172,8 @@ const ItemLine = (props: TItemLineProps) => {
 };
 
 export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
+  const { songSettings } = useAppState();
+
   const linesData = props.data.map(lineData => lineData.split(' '));
 
   const samePattern =
@@ -181,7 +184,7 @@ export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
       direction={samePattern ? 'column' : 'row'}
       alignItems='center'
       justifyContent='center'
-      gap='2rem'
+      gap={songSettings.display.chordTimesOne.value ? '1.5rem' : '1rem'}
     >
       {linesData.map((lineData, index) => {
         const strumm = Number(lineData[0]);
@@ -195,16 +198,14 @@ export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
         }
 
         return (
-          <>
-            <ItemLine
-              key={index}
-              data={lineData}
-              strummingPattern={props.strumms[strumm]}
-              showPattern={
-                index === linesData.length - 1 ? true : strumm !== Number(linesData[index + 1][0])
-              }
-            />
-          </>
+          <ItemLine
+            key={index}
+            data={lineData}
+            strummingPattern={props.strumms[strumm]}
+            showPattern={
+              index === linesData.length - 1 ? true : strumm !== Number(linesData[index + 1][0])
+            }
+          />
         );
       })}
     </Flex>

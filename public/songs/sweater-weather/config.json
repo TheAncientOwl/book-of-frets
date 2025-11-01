@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "contributors": ["TheAncientOwl"],
   "title": "Sweater Weather",
   "artists": ["The Neighbourhood"],
@@ -70,11 +70,11 @@
       "chunks": [
         {
           "times": 2,
-          "items": [["3 Am 1 G 1 D 2"]]
+          "items": [["3 Am 1 G 1 D 1 D 1"]]
         },
         {
           "times": 4,
-          "items": [["3 Am 1 G 1 D 2"]]
+          "items": [["3 Am 1 G 1 D 1 D 1"]]
         }
       ]
     },

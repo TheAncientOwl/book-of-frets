@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "contributors": ["TheAncientOwl"],
   "title": "Golden",
   "artists": ["HUNTR/X"],
@@ -42,7 +42,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["0 C 1 G 1 D 1 Em 1", "0 C 1 G 1 D 2", "0 C 1"]]
+          "items": [["0 C 1 G 1 D 1 Em 1", "0 C 1 G 1 D 1 D 1", "0 C 1"]]
         }
       ]
     },
@@ -57,7 +57,7 @@
         },
         {
           "times": 1,
-          "items": [["0 D 1", "2 G 1 D 1", "0 Em 3"]]
+          "items": [["0 D 1", "2 G 1 D 1", "0 Em 1 Em 1 Em 1"]]
         }
       ]
     },

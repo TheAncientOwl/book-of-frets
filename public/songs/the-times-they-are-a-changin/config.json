@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "contributors": ["TheAncientOwl"],
   "title": "The Times They Are A Changin'",
   "artists": ["Bob Dylan"],
@@ -16,7 +16,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["0 G 3"]]
+          "items": [["0 G 1 G 1 G 1"]]
         }
       ]
     },
@@ -29,12 +29,12 @@
           "times": 1,
           "items": [
             [
-              "0 G 1 Em 1 C 1 G 2",
+              "0 G 1 Em 1 C 1 G 1 G 1",
               "0 G 1 Em 1 C 1 D 1",
-              "0 G 1 Em 1 C 1 G 3",
-              "0 G 1 Am 1 D 2",
+              "0 G 1 Em 1 C 1 G 1 G 1 G 1",
+              "0 G 1 Am 1 D 1 D 1",
               "0 D 1 Csus2 1 G/B 1 D 1",
-              "0 G 2 D 1 G 1"
+              "0 G 1 G 1 D 1 G 1"
             ]
           ]
         }
@@ -47,7 +47,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["0 G 1 Em 1 C 1 G 4"]]
+          "items": [["0 G 1 Em 1 C 1 G 1 G 1 G 1", "0 G 1"]]
         }
       ]
     },
@@ -60,12 +60,12 @@
           "times": 1,
           "items": [
             [
-              "0 G 1 Em 1 C 1 G 2",
+              "0 G 1 Em 1 C 1 G 1 G 1",
               "0 G 1 Em 1 C 1 D 1",
-              "0 G 1 Em 1 C 1 G 2",
-              "0 G 1 Am 1 D 2",
+              "0 G 1 Em 1 C 1 G 1 G 1",
+              "0 G 1 Am 1 D 1 D 1",
               "0 D 1 Csus2 1 G/B 1 D 1",
-              "0 G 2 D 1"
+              "0 G 1 G 1 D 1"
             ]
           ]
         }
@@ -78,7 +78,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["0 G 1 Em 1 C 1 G 2", "0 D 1 Csus2 1 G/B 1 D 1", "0 D 3"]]
+          "items": [["0 G 1 Em 1 C 1 G 1 G 1", "0 D 1 Csus2 1 G/B 1 D 1", "0 D 1 D 1 D 1"]]
         }
       ]
     },
@@ -91,10 +91,10 @@
           "times": 1,
           "items": [
             [
-              "0 G 1 Em 1 C 1 G 2",
+              "0 G 1 Em 1 C 1 G 1 G 1",
               "0 G 1 Em 1 C 1 D 1",
-              "0 G 1 Em 1 C 1 G 2",
-              "0 G 1 Am 1 D 2",
+              "0 G 1 Em 1 C 1 G 1 G 1",
+              "0 G 1 Am 1 D 1 D 1",
               "0 D 1 Csus2 1 G/B 1 D 1",
               "0 G 1 C 1 D 1 G 1"
             ]
@@ -109,7 +109,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["0 G 1 D 1 Csus2 1 D 1 G 2"]]
+          "items": [["0 G 1 D 1 Csus2 1 D 1 G 1 G 1"]]
         }
       ]
     },
@@ -122,10 +122,10 @@
           "times": 1,
           "items": [
             [
-              "0 G 1 Em 1 C 1 G 2",
+              "0 G 1 Em 1 C 1 G 1 G 1",
               "0 G 1 Em 1 C 1 D 1",
-              "0 G 1 Em 1 C 1 G 2",
-              "0 G 1 Am 1 D 2",
+              "0 G 1 Em 1 C 1 G 1 G 1",
+              "0 G 1 Am 1 D 1 D 1",
               "0 G 1 Csus2 1 G/B 1 D 1",
               "0 G 1 C 1 D 1 G 1"
             ]
@@ -140,7 +140,14 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["0 G 1 Em 1 C 1 G 2", "0 D 1 Csus2 1 G/B 1 D 2", "0 G 1 C 1 D 1 G 1", "0 G 3"]]
+          "items": [
+            [
+              "0 G 1 Em 1 C 1 G 1 G 1",
+              "0 D 1 Csus2 1 G/B 1 D 1 D 1",
+              "0 G 1 C 1 D 1 G 1",
+              "0 G 1 G 1 G 1"
+            ]
+          ]
         }
       ]
     },
@@ -153,10 +160,10 @@
           "times": 1,
           "items": [
             [
-              "0 G 1 Em 1 C 1 G 2",
+              "0 G 1 Em 1 C 1 G 1 G 1",
               "0 G 1 Em 1 C 1 D 1",
-              "0 G 1 Em 1 C 1 G 2",
-              "0 G 1 Em 1 C 1 G 2",
+              "0 G 1 Em 1 C 1 G 1 G 1",
+              "0 G 1 Em 1 C 1 G 1 G 1",
               "0 D 1 Csus2 1 G/B 1 D 1",
               "0 G 1 C 1 D 1 G 1"
             ]

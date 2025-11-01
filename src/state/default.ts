@@ -6,7 +6,7 @@
  *
  * @file default.ts
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description Default app state.
  */
 
@@ -32,6 +32,7 @@ export type TAppState = {
     display: {
       times: TState<boolean>;
       chordTimes: TState<boolean>;
+      chordTimesOne: TState<boolean>;
       strummingPattern: TState<boolean>;
     };
   };
@@ -49,6 +50,7 @@ export const DefaultAppState: TAppState = {
     display: {
       times: initState(true),
       chordTimes: initState(true),
+      chordTimesOne: initState(true),
       strummingPattern: initState(true),
     },
   },
