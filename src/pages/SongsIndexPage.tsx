@@ -6,7 +6,7 @@
  *
  * @file SongsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.21
+ * @version 0.22
  * @description List all available songs.
  */
 
@@ -28,7 +28,7 @@ export const SongsIndexPage = () => {
   const [songsIndex, setSongsIndex] = useState<TSongsIndexEntry[]>([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}songs/index.min.json`)
+    fetch(`${import.meta.env.BASE_URL}songs/index.min.json.gz`)
       .then(response => response.json())
       .then(data => setSongsIndex(data.index as TSongsIndexEntry[]))
       .catch(error => {
