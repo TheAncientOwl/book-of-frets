@@ -6,7 +6,7 @@
  *
  * @file useAppStateValue.ts
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description Main app state hook.
  */
 
@@ -65,7 +65,7 @@ export const useAppStateValue = (): TAppState => {
 
   const updateChordsIndex = useCallback(() => {
     fetchArchivedJSON(
-      `${import.meta.env.BASE_URL}chords/index.min.json.gz`,
+      `${import.meta.env.BASE_URL}chords/index.min.json.gz.bin`,
       `${import.meta.env.BASE_URL}chords/index.min.json`,
       json => setChordsIndex((json as { index: TChordsIndex }).index),
       error => {
