@@ -6,7 +6,7 @@
  *
  * @file Settings.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description App settings menu.
  */
 
@@ -57,7 +57,13 @@ export const Settings = () => {
   useLayoutEffect(() => setDocumentThemeColor(general.background), [general.background]);
 
   return (
-    <Accordion allowMultiple defaultIndex={[0, 1]} display='flex' flexDirection='column' gap='1em'>
+    <Accordion
+      allowMultiple
+      defaultIndex={[0, 1, 2]}
+      display='flex'
+      flexDirection='column'
+      gap='1em'
+    >
       <SettingsAccordionItem title='Song Options'>
         <SongOptions />
       </SettingsAccordionItem>
