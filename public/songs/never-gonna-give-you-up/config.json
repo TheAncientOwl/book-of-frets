@@ -6,7 +6,7 @@
   "type": ["acoustic"],
   "notes": ["Last chorus Em & Am only one down strum"],
   "capo": 1,
-  "chordIDs": ["Fmaj7", "G", "Em", "Am"],
+  "chordIDs": ["Ft", "G", "Em", "Am"],
   "strumms": [
     ["D", "-", "U", "D"],
     ["D", "-", "U", "D", "D", "D", "U"],
@@ -20,7 +20,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["0 Fmaj7 1", "1 G 1"]]
+          "items": [["0 Ft 1", "1 G 1"]]
         },
         {
           "times": 1,
@@ -35,7 +35,7 @@
       "chunks": [
         {
           "times": 4,
-          "items": [["2 Fmaj7 1 G 1"]]
+          "items": [["2 Ft 1 G 1"]]
         }
       ]
     },
@@ -46,7 +46,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["2 Fmaj7 1 G 1"]]
+          "items": [["2 Ft 1 G 1"]]
         }
       ]
     },
@@ -57,7 +57,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["0 Fmaj7 1", "1 G 1"]]
+          "items": [["0 Ft 1", "1 G 1"]]
         },
         {
           "times": 1,
