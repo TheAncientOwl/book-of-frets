@@ -6,10 +6,11 @@
  *
  * @file ThemePicker.tsx
  * @author Alexandru Delegeanu
- * @version 0.12
+ * @version 0.13
  * @description Display app themes and handles theme setting.
  */
 
+import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
 import { useAppState } from '@/state/hooks/useAppState';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
 import DefaultAppTheme from '@/state/theme/default.min.json';
@@ -27,24 +28,28 @@ export const ThemePicker = () => {
   const [themesIndex, setThemesIndex] = useState<TThemeIndexEntry[]>([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}themes/index.min.json.gz`)
-      .then(response => response.json())
-      .then(data => setThemesIndex(data.index as TThemeIndexEntry[]))
-      .catch(error => {
+    fetchArchivedJSON(
+      `${import.meta.env.BASE_URL}themes/index.min.json.gz.bin`,
+      `${import.meta.env.BASE_URL}themes/index.min.json`,
+      json => setThemesIndex((json as { index: TThemeIndexEntry[] }).index),
+      error => {
         console.error('Failed to fetch Themes index:', error);
-      });
+      }
+    );
   }, []);
 
   const setAppThemeValue = (directory: string) => {
-    fetch(`${import.meta.env.BASE_URL}themes/${directory}/config.min.json.gz`)
-      .then(response => response.json())
-      .then(data => {
-        appTheme.set?.(deepMerge(DefaultAppTheme, data as TAppTheme));
+    fetchArchivedJSON(
+      `${import.meta.env.BASE_URL}themes/${directory}/config.min.json.gz.bin`,
+      `${import.meta.env.BASE_URL}themes/${directory}/config.min.json`,
+      json => {
+        appTheme.set?.(deepMerge(DefaultAppTheme, json as TAppTheme));
         appLogoURL.set?.(`${import.meta.env.BASE_URL}themes/${directory}/logo.svg`);
-      })
-      .catch(error => {
+      },
+      error => {
         console.error(`Failed to fetch theme data of file ${directory}`, error);
-      });
+      }
+    );
   };
 
   return (

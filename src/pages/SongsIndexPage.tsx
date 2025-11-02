@@ -6,11 +6,12 @@
  *
  * @file SongsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.22
+ * @version 0.23
  * @description List all available songs.
  */
 
 import type { TSongsIndexEntry } from '@/common/types/song.types';
+import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
 import { createSmartList } from '@/components/SmartList/index';
 import { SongCard } from '@/components/SongIndexEntry/SongCard';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
@@ -28,13 +29,14 @@ export const SongsIndexPage = () => {
   const [songsIndex, setSongsIndex] = useState<TSongsIndexEntry[]>([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}songs/index.min.json.gz`)
-      .then(response => response.json())
-      .then(data => setSongsIndex(data.index as TSongsIndexEntry[]))
-      .catch(error => {
-        // TODO: redirect to 404 or something
+    fetchArchivedJSON(
+      `${import.meta.env.BASE_URL}songs/index.min.json.gz.bin`,
+      `${import.meta.env.BASE_URL}songs/index.min.json`,
+      json => setSongsIndex((json as { index: TSongsIndexEntry[] }).index),
+      error => {
         console.error('Failed to fetch songs index:', error);
-      });
+      }
+    );
   }, []);
 
   return (
