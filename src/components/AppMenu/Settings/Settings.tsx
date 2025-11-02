@@ -6,10 +6,11 @@
  *
  * @file Settings.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description App settings menu.
  */
 
+import { Refresh } from '@/components/AppMenu/Settings/Refresh';
 import { SongOptions } from '@/components/AppMenu/Settings/SongOptions';
 import { ThemePicker } from '@/components/AppMenu/Settings/ThemePicker';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
@@ -59,6 +60,10 @@ export const Settings = () => {
     <Accordion allowMultiple defaultIndex={[0, 1]} display='flex' flexDirection='column' gap='1em'>
       <SettingsAccordionItem title='Song Options'>
         <SongOptions />
+      </SettingsAccordionItem>
+
+      <SettingsAccordionItem title='General'>
+        <Refresh />
       </SettingsAccordionItem>
 
       <SettingsAccordionItem title='Theme'>
