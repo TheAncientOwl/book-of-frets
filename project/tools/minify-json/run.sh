@@ -48,7 +48,9 @@ if [ $? -eq 0 ]; then
 
   # Compress the minified JSON file with gzip, keeping the original minified file
   gzip -k -9 "$output_file"
-  compressed_file="${output_file}.gz"
+  archived_file="${output_file}.gz"
+  compressed_file="${output_file}.gz.bin"
+  mv $archived_file $compressed_file
 
   if [ -f "$compressed_file" ]; then
     echo "✅ Compressed file created: $compressed_file"

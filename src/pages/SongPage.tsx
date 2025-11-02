@@ -36,7 +36,7 @@ export const SongPage = () => {
     if (!directory) return;
     (async () => {
       try {
-        const url = `${import.meta.env.BASE_URL}songs/${directory}/config.min.json.gz`;
+        const url = `${import.meta.env.BASE_URL}songs/${directory}/config.min.json.gz.bin`;
         const response = await fetch(url);
         if (!response.ok) throw new Error('not found');
 
