@@ -14,7 +14,7 @@ import { useLocalStorage } from '@/common/hooks/useLocalStorage';
 import type { TChordsIndex } from '@/common/types/chord.types';
 import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
 import { LocalStorageKeys, SessionStorageKeys } from '@/state/common/storageKeys';
-import { DefaultAppState, type TAppState, type TSongHistoryEntry } from '@/state/default';
+import { DefaultAppState, type TAppState } from '@/state/default';
 import DefaultAppTheme from '@/state/theme/default.min.json';
 import type { TAppTheme } from '@/state/theme/types';
 import { patchLocalStorageTheme } from '@/state/theme/utils/patchLocalStorageTheme';
@@ -58,10 +58,10 @@ export const useAppStateValue = (): TAppState => {
     DefaultAppState.songSettings.display.strummingPattern.value
   );
 
-  const [songsHistory, setSongsHistory] = useLocalStorage<TSongHistoryEntry[]>(
-    LocalStorageKeys.songsHistory,
-    DefaultAppState.songsHistory.value
-  );
+  // const [songsHistory, setSongsHistory] = useLocalStorage<TSongHistoryEntry[]>(
+  //   LocalStorageKeys.songsHistory,
+  //   DefaultAppState.songsHistory.value
+  // );
 
   const updateChordsIndex = useCallback(() => {
     fetchArchivedJSON(
@@ -116,10 +116,10 @@ export const useAppStateValue = (): TAppState => {
         },
       },
 
-      songsHistory: {
-        value: songsHistory,
-        set: setSongsHistory,
-      },
+      // songsHistory: {
+      //   value: songsHistory,
+      //   set: setSongsHistory,
+      // },
 
       updateChordsIndex,
     }),
@@ -135,8 +135,8 @@ export const useAppStateValue = (): TAppState => {
       setDisplayChordTimes,
       displayStrummingPattern,
       setDisplayStrummingPattern,
-      songsHistory,
-      setSongsHistory,
+      // songsHistory,
+      // setSongsHistory,
       updateChordsIndex,
       displayChordTimesOne,
       setDisplayChordTimesOne,

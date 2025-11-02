@@ -27,7 +27,7 @@ export type TAppState = {
   chordsIndex: TChordsIndex;
   appTheme: TState<TAppTheme>;
   appLogoURL: TState<string>;
-  songsHistory: TState<TSongHistoryEntry[]>;
+  // songsHistory: TState<TSongHistoryEntry[]>;
   songSettings: {
     display: {
       times: TState<boolean>;
@@ -45,7 +45,7 @@ export const DefaultAppState: TAppState = {
   chordsIndex: {},
   appTheme: initState(DefaultAppTheme),
   appLogoURL: initState(`${import.meta.env.BASE_URL}logo.svg`),
-  songsHistory: initState([] as TSongHistoryEntry[]),
+  // songsHistory: initState([] as TSongHistoryEntry[]),
   songSettings: {
     display: {
       times: initState(true),

@@ -40,7 +40,7 @@ import {
 import { useRef, type PropsWithChildren } from 'react';
 import { MdCopyright } from 'react-icons/md';
 import { SessionStorageKeys } from '@/state/common/storageKeys';
-import { SongsHistory } from '@/components/AppMenu/Navigation/SongsHistory';
+// import { SongsHistory } from '@/components/AppMenu/Navigation/SongsHistory';
 import { GuitarTuner } from '@/components/AppMenu/GuitarTuner/GuitarTuner';
 
 const TabHeader = (props: PropsWithChildren) => {
@@ -158,7 +158,7 @@ export const AppMenu = () => {
                     // [*] theme colors
                     borderColor={theme.items.navigation.routeLink}
                   />
-                  <SongsHistory onItemClick={onClose} />
+                  {/* <SongsHistory onItemClick={onClose} /> */}
                 </TabPanel>
 
                 <TabPanel>
