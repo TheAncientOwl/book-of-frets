@@ -6,7 +6,7 @@
  *
  * @file GuitarTuner.tsx
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description Main tuner component.
  */
 
@@ -102,3 +102,5 @@ export const GuitarTuner = () => {
     </Box>
   );
 };
+
+export default GuitarTuner;

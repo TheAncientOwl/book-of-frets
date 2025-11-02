@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.22
+ * @version 0.23
  * @description App menu component.
  */
 
@@ -41,7 +41,10 @@ import { useRef, type PropsWithChildren } from 'react';
 import { MdCopyright } from 'react-icons/md';
 import { SessionStorageKeys } from '@/state/common/storageKeys';
 // import { SongsHistory } from '@/components/AppMenu/Navigation/SongsHistory';
-import { GuitarTuner } from '@/components/AppMenu/GuitarTuner/GuitarTuner';
+import { lazy, Suspense } from 'react';
+import { Loading } from '@/components/Loading/Loading';
+
+const GuitarTuner = lazy(() => import('@/components/AppMenu/GuitarTuner/GuitarTuner'));
 
 const TabHeader = (props: PropsWithChildren) => {
   const { appMenu } = useAppTheme();
@@ -162,7 +165,9 @@ export const AppMenu = () => {
                 </TabPanel>
 
                 <TabPanel>
-                  <GuitarTuner />
+                  <Suspense fallback={<Loading />}>
+                    <GuitarTuner />
+                  </Suspense>
                 </TabPanel>
 
                 <TabPanel>
