@@ -12,14 +12,14 @@
       "artists": ["The Kid LAROI"],
       "directory": "without-you",
       "type": ["acoustic"],
-      "chordIDs": ["Am", "Fmaj7", "C", "G", "E"]
+      "chordIDs": ["Am", "Ft", "C", "G", "E"]
     },
     {
       "title": "Before You Go",
       "artists": ["Lewis Capaldi"],
       "directory": "before-you-go",
       "type": ["acoustic"],
-      "chordIDs": ["C", "Am", "Fmaj7", "G"]
+      "chordIDs": ["C", "Am", "Ft", "G"]
     },
     {
       "title": "Save Your Tears",
@@ -68,14 +68,14 @@
       "artists": ["Harry Styles"],
       "directory": "adore-you",
       "type": ["acoustic"],
-      "chordIDs": ["Am7", "C", "Fmaj7", "G"]
+      "chordIDs": ["Am7", "C", "Ft", "G"]
     },
     {
       "title": "Dusk Till Dawn",
       "artists": ["Zayn", "Sia"],
       "directory": "dusk-till-dawn",
       "type": ["acoustic"],
-      "chordIDs": ["Am", "Fmaj7", "C", "G/B", "Em", "C/E"]
+      "chordIDs": ["Am", "Ft", "C", "G/B", "Em", "C/E"]
     },
     {
       "title": "As It Was",
@@ -96,7 +96,7 @@
       "artists": ["Vance Joy"],
       "directory": "riptide",
       "type": ["acoustic"],
-      "chordIDs": ["Am", "G", "C", "Fmaj7"]
+      "chordIDs": ["Am", "G", "C", "Ft"]
     },
     {
       "title": "I Know What You Did Last Summer",
@@ -117,7 +117,7 @@
       "artists": ["Rick Astley"],
       "directory": "never-gonna-give-you-up",
       "type": ["acoustic"],
-      "chordIDs": ["Fmaj7", "G", "Em", "Am"]
+      "chordIDs": ["Ft", "G", "Em", "Am"]
     },
     {
       "title": "Viva La Vida | Easy",
@@ -166,7 +166,7 @@
       "artists": ["Avicii"],
       "directory": "wake-me-up",
       "type": ["acoustic"],
-      "chordIDs": ["Am", "Fmaj7", "G", "C/G", "E"]
+      "chordIDs": ["Am", "Ft", "G", "C/G", "E"]
     },
     {
       "title": "Watermelon Sugar",

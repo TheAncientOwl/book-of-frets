@@ -6,7 +6,7 @@
   "type": ["acoustic"],
   "notes": [],
   "capo": 2,
-  "chordIDs": ["Am", "Fmaj7", "G", "C/G", "E"],
+  "chordIDs": ["Am", "Ft", "G", "C/G", "E"],
   "strumms": [["D", "-", "D", "-", "-", "U", "D", "U"]],
   "segments": {
     "i": {
@@ -16,11 +16,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["0 Am 1 Fmaj7 1 C/G 2 G 1"]]
+          "items": [["0 Am 1 Ft 1 C/G 2 G 1"]]
         },
         {
           "times": 1,
-          "items": [["0 Am 1 Fmaj7 1 C/G 2 E 1"]]
+          "items": [["0 Am 1 Ft 1 C/G 2 E 1"]]
         }
       ]
     },
@@ -31,11 +31,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["0 Am 1 Fmaj7 1 C/G 2 G 1"]]
+          "items": [["0 Am 1 Ft 1 C/G 2 G 1"]]
         },
         {
           "times": 1,
-          "items": [["0 Am 1 Fmaj7 1 C/G 2 E 1"]]
+          "items": [["0 Am 1 Ft 1 C/G 2 E 1"]]
         }
       ]
     },
@@ -46,11 +46,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["0 Am 1 Fmaj7 1 C/G 2 G 1"]]
+          "items": [["0 Am 1 Ft 1 C/G 2 G 1"]]
         },
         {
           "times": 1,
-          "items": [["0 Am 1 Fmaj7 1 C/G 2 E 1"]]
+          "items": [["0 Am 1 Ft 1 C/G 2 E 1"]]
         }
       ]
     },
@@ -61,7 +61,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": [["0 Am 1 Fmaj7 1 C/G 2"]]
+          "items": [["0 Am 1 Ft 1 C/G 2"]]
         }
       ]
     }

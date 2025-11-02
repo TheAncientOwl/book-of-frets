@@ -6,7 +6,7 @@
   "type": ["acoustic"],
   "notes": [],
   "capo": 5,
-  "chordIDs": ["Am", "G", "C", "Fmaj7"],
+  "chordIDs": ["Am", "G", "C", "Ft"],
   "strumms": [["D", "-", "D", "-", "-", "U", "D", "U"], ["D"]],
   "segments": {
     "ivc": {
@@ -58,7 +58,7 @@
       "chunks": [
         {
           "times": 2,
-          "items": [["0 Am 2 G 2 C 2 Fmaj7 2"]]
+          "items": [["0 Am 2 G 2 C 2 Ft 2"]]
         }
       ]
     },
