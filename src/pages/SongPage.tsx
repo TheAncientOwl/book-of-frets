@@ -6,7 +6,7 @@
  *
  * @file SongPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.17
+ * @version 0.18
  * @description Handle song rendering based on url.
  */
 
@@ -19,6 +19,7 @@ import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { setDocumentThemeColor } from '@/state/theme/utils/setDocumentThemeColor';
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { gunzipSync, strFromU8 } from 'fflate';
 
 export const SongPage = () => {
   const { directory } = useParams();
@@ -33,25 +34,42 @@ export const SongPage = () => {
 
   useEffect(() => {
     if (!directory) return;
+    (async () => {
+      try {
+        const url = `${import.meta.env.BASE_URL}songs/${directory}/config.min.json.gz`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('not found');
 
-    fetch(`${import.meta.env.BASE_URL}songs/${directory}/config.min.json.gz`)
-      .then(response => {
-        if (!response.ok) {
-          console.error(`Song ${directory} not found`);
-          navigate('/404');
-          return null;
+        // Check if the server already sent Content-Encoding: gzip
+        const encoding = response.headers.get('content-encoding');
+        let jsonText: string;
+
+        if (encoding === 'gzip') {
+          // Already decompressed by browser
+          jsonText = await response.text();
+        } else {
+          // Still compressed — manually gunzip
+          const arrayBuffer = await response.arrayBuffer();
+          const decompressed = gunzipSync(new Uint8Array(arrayBuffer));
+          jsonText = strFromU8(decompressed);
         }
-        return response.json();
-      })
-      .then(data => {
-        if (data) {
-          setSongConfig({ data, directory: directory! });
-        }
-      })
-      .catch(err => {
+
+        const json = JSON.parse(jsonText);
+        setSongConfig({ data: json, directory });
+      } catch (err) {
         console.error(err);
-        navigate('/404');
-      });
+        // fallback to plain JSON if .gz missing or invalid
+        try {
+          const res = await fetch(`${import.meta.env.BASE_URL}songs/${directory}/config.min.json`);
+          if (!res.ok) throw new Error('not found');
+          const json = await res.json();
+          setSongConfig({ data: json, directory });
+        } catch (fallbackErr) {
+          console.error(fallbackErr);
+          navigate('/404');
+        }
+      }
+    })();
   }, [directory, navigate]);
 
   useEffect(() => {
