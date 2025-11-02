@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.30
+ * @version 0.31
  * @description Render song based on given config.
  */
 
@@ -18,6 +18,7 @@ import { SongResources } from '@/components/SongRenderer/SongResources';
 import { SongSegments } from '@/components/SongRenderer/SongSegments';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { Box, Container } from '@chakra-ui/react';
+import { useInView } from 'react-intersection-observer';
 
 type TSongProps = TSong & {
   directory: string;
@@ -25,6 +26,7 @@ type TSongProps = TSong & {
 
 export const Song = (props: TSongProps) => {
   const { song: theme } = useAppTheme();
+  const { ref, inView } = useInView({ triggerOnce: true, rootMargin: '300px' });
 
   return (
     <Container
@@ -58,7 +60,7 @@ export const Song = (props: TSongProps) => {
 
       <SongNotes notes={props.notes} />
 
-      <SongResources res={props.res} />
+      <Box ref={ref}>{inView ? <SongResources res={props.res} /> : null}</Box>
     </Container>
   );
 };
