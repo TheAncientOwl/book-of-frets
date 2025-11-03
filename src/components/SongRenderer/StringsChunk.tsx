@@ -6,18 +6,17 @@
  *
  * @file StringsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.21
+ * @version 0.22
  * @description Render song strings pattern.
  */
 
-import type { TGuitarString } from '@/common/types/common.types';
-import type { TGuitarStringDelimiter, TStringsChunk } from '@/common/types/song.types';
+import type { TStringsChunk } from '@/common/types/song.types';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { Box, Circle, Divider, Flex, Heading, Text } from '@chakra-ui/react';
 
 type TStringsPatternProps = TStringsChunk & {};
 
-type TFretNumber = number | string | TGuitarStringDelimiter;
+type TFretNumber = number | string;
 
 type TStringProps = {
   name: string;
@@ -92,45 +91,50 @@ const String = (props: TStringProps) => {
   );
 };
 
-const StringToNumber = {
-  E: 0,
-  A: 1,
-  D: 2,
-  G: 3,
-  B: 4,
-  e: 5,
-};
-
 export const StringsChunk = (props: TStringsPatternProps) => {
   const { song: theme } = useAppTheme();
-  const stringsToFrets = [[], [], [], [], [], []] as TFretNumber[][];
 
-  props.items.forEach(item => {
-    if (typeof item === 'string') {
-      stringsToFrets.forEach(arr => arr.push(item));
+  const stringsToFrets = {
+    E: ['|'] as TFretNumber[],
+    A: ['|'] as TFretNumber[],
+    D: ['|'] as TFretNumber[],
+    G: ['|'] as TFretNumber[],
+    B: ['|'] as TFretNumber[],
+    e: ['|'] as TFretNumber[],
+  };
+
+  props.items.split(' ').map(item => {
+    if (item === '-' || item === '|') {
+      Object.values(stringsToFrets).forEach(entry => entry.push(item));
       return;
     }
 
-    Object.entries(item).forEach(([string, fret]) => {
-      stringsToFrets[StringToNumber[string as TGuitarString]].push(fret);
+    let newSize: number | undefined = undefined;
+    item.split('+').map(chord => {
+      const arr = stringsToFrets[chord.charAt(0) as keyof typeof stringsToFrets];
+      arr.push(chord.slice(1));
+      newSize = arr.length;
     });
 
-    const newMax = Math.max(...stringsToFrets.map(arr => arr.length));
-    stringsToFrets.forEach(arr => {
-      if (arr.length != newMax) {
-        arr.push('-');
-      }
-    });
+    if (newSize !== undefined) {
+      Object.values(stringsToFrets).forEach(entry => {
+        if (entry.length < (newSize as number)) {
+          entry.push('-');
+        }
+      });
+    }
   });
+
+  Object.values(stringsToFrets).forEach(arr => arr.push('|'));
 
   return (
     <Flex direction='column' gap='0.5em' width='100%' overflow='scroll'>
-      <String name='e' frets={stringsToFrets[5]} />
-      <String name='B' frets={stringsToFrets[4]} />
-      <String name='G' frets={stringsToFrets[3]} />
-      <String name='D' frets={stringsToFrets[2]} />
-      <String name='A' frets={stringsToFrets[1]} />
-      <String name='E' frets={stringsToFrets[0]} />
+      <String name='e' frets={stringsToFrets.e} />
+      <String name='B' frets={stringsToFrets.B} />
+      <String name='G' frets={stringsToFrets.G} />
+      <String name='D' frets={stringsToFrets.D} />
+      <String name='A' frets={stringsToFrets.A} />
+      <String name='E' frets={stringsToFrets.E} />
       <Divider
         // [*] theme colors
         borderColor={theme.chunks.item.stringsPattern.divider}

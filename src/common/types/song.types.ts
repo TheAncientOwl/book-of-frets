@@ -6,11 +6,9 @@
  *
  * @file song.types.ts
  * @author Alexandru Delegeanu
- * @version 0.16
+ * @version 0.17
  * @description Song types for json mapping.
  */
-
-import type { TGuitarString } from '@/common/types/common.types';
 
 export type TStrummingMove = '-' | 'D' | 'U' | 'Dx' | 'Ux' | 'X' | 'De' | 'Dx';
 
@@ -26,14 +24,9 @@ export type TChordsChunk = {
   align?: TAlignType[];
 };
 
-export type TGuitarStringDelimiter = '-' | '|';
-export type TStringsChunkItem =
-  | Partial<Record<TGuitarString, number | string>>
-  | TGuitarStringDelimiter;
-
 export type TStringsChunk = {
   times: number;
-  items: TStringsChunkItem[];
+  items: string;
 };
 
 export type TSongSegment = {

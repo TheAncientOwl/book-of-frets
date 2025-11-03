@@ -81,38 +81,26 @@
                   "minimum": 1
                 },
                 "items": {
-                  "type": "array",
-                  "items": {
-                    "oneOf": [
-                      {
-                        "type": "array",
-                        "items": {
-                          "type": "string",
-                          "pattern": "^[0-9]+(?: [A-Za-z0-9#/()_+-|]+ [0-9]+)+$"
-                        }
-                      },
-                      {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^-(?:\\s*((?:[EADGBe]\\d{1,2}(?:\\+[EADGBe]\\d{1,2})*)+)|\\s*-\\s*|\\s*\\|\\s*)+$"
+                    },
+                    {
+                      "type": "array",
+                      "items": {
                         "oneOf": [
                           {
-                            "type": "string",
-                            "enum": ["-", "|"]
-                          },
-                          {
-                            "type": "object",
-                            "additionalProperties": false,
-                            "properties": {
-                              "E": { "type": ["integer", "string"], "minimum": 0 },
-                              "A": { "type": ["integer", "string"], "minimum": 0 },
-                              "D": { "type": ["integer", "string"], "minimum": 0 },
-                              "G": { "type": ["integer", "string"], "minimum": 0 },
-                              "B": { "type": ["integer", "string"], "minimum": 0 },
-                              "e": { "type": ["integer", "string"], "minimum": 0 }
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "pattern": "^[0-9]+(?: [A-Za-z0-9#/()_+-|]+ [0-9]+)+$"
                             }
                           }
                         ]
                       }
-                    ]
-                  }
+                    }
+                  ]
                 }
               },
               "required": ["times", "items"]
