@@ -6,7 +6,7 @@
  *
  * @file SongChordsList.tsx
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description Song chords list component.
  */
 
@@ -62,7 +62,7 @@ export const SongChordsList = (props: TSongChordsList) => {
       </AccordionButton>
 
       <AccordionPanel>
-        <List display='flex' gap='10px' overflowX='auto'>
+        <List display='flex' gap='10px' overflowX='auto' padding={['1.1em 0em', '1.1em 1em']}>
           {props.chordIDs.map(chordID => {
             const config = chordsIndex[chordID];
             if (config === undefined) {
