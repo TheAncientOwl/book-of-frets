@@ -6,7 +6,7 @@
  *
  * @file Accordion.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Accordion components.
  */
 
@@ -81,9 +81,7 @@ export const AccordionPanel = (props: TAccordionPanelProps) => {
 
   return (
     <Collapse in={context.isOpen} animateOpacity>
-      <Box padding={['1.1em 0em', '1.1em 1em']} {...props.boxProps}>
-        {props.children}
-      </Box>
+      {props.children}
     </Collapse>
   );
 };

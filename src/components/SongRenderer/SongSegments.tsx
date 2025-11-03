@@ -6,7 +6,7 @@
  *
  * @file SongSegments.tsx
  * @author Alexandru Delegeanu
- * @version 0.15
+ * @version 0.16
  * @description Render song segments data.
  */
 
@@ -19,7 +19,6 @@ import {
 } from '@/components/Accordion/Accordion';
 import { SongSegmentBody, SongSegmentHeading } from '@/components/SongRenderer/SongSegment';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
-import { Box } from '@chakra-ui/react';
 
 type TSongSegmentsProps = {
   segments: Record<string, TSongSegment>;
@@ -51,9 +50,7 @@ export const SongSegments = (props: TSongSegmentsProps) => {
                 borderColor: theme.chunks.divider,
               }}
             >
-              <Box textAlign='center' width='100%'>
-                <SongSegmentHeading {...songSegmentData} strumms={props.strumms} />
-              </Box>
+              <SongSegmentHeading {...songSegmentData} strumms={props.strumms} />
               <AccordionIcon
                 boxProps={{
                   position: 'absolute',
