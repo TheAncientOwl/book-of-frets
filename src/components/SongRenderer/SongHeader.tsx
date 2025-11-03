@@ -6,7 +6,7 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description Render song header data.
  */
 
@@ -112,9 +112,9 @@ export const SongHeader = (props: TSongHeaderProps) => {
         color={theme.header.artists}
       >
         {props.artists.map((artist, index) => (
-          <Box key={index} as='span'>
+          <Fragment key={index}>
             {artist} {index < props.artists.length - 1 && ', '}
-          </Box>
+          </Fragment>
         ))}
       </Heading>
 
@@ -131,6 +131,7 @@ export const SongHeader = (props: TSongHeaderProps) => {
           </Text>
         </PopoverTrigger>
         <PopoverContent
+          overflow='hidden'
           textAlign='center'
           // [*] theme colors
           borderColor={theme.header.contributors.border}
