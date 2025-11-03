@@ -6,7 +6,7 @@
  *
  * @file SongResources.tsx
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description Render song resources data.
  */
 
@@ -58,3 +58,5 @@ export const SongResources = (props: TSongResourcesProps) => {
     </Box>
   );
 };
+
+export default SongResources;

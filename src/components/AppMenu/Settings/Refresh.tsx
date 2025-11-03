@@ -6,7 +6,7 @@
  *
  * @file Refresh.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description .Refresh configs
  */
 
@@ -37,3 +37,5 @@ export const Refresh = () => {
     </VStack>
   );
 };
+
+export default Refresh;

@@ -6,7 +6,7 @@
  *
  * @file SongNotes.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Song notes.
  */
 
@@ -56,3 +56,5 @@ export const SongNotes = (props: TSongNotesProps) => {
     </Fragment>
   );
 };
+
+export default SongNotes;

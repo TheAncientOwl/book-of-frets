@@ -6,7 +6,7 @@
  *
  * @file ThemePicker.tsx
  * @author Alexandru Delegeanu
- * @version 0.13
+ * @version 0.14
  * @description Display app themes and handles theme setting.
  */
 
@@ -118,3 +118,5 @@ export const ThemePicker = () => {
     </Flex>
   );
 };
+
+export default ThemePicker;

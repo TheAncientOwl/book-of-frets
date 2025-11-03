@@ -6,19 +6,22 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.31
+ * @version 0.32
  * @description Render song based on given config.
  */
 
 import type { TSong } from '@/common/types/song.types';
 import { SongChordsList } from '@/components/SongRenderer/SongChordsList';
 import { SongHeader } from '@/components/SongRenderer/SongHeader';
-import { SongNotes } from '@/components/SongRenderer/SongNotes';
-import { SongResources } from '@/components/SongRenderer/SongResources';
 import { SongSegments } from '@/components/SongRenderer/SongSegments';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { Box, Container } from '@chakra-ui/react';
 import { useInView } from 'react-intersection-observer';
+import { lazy, Suspense } from 'react';
+import { Loading } from '@/components/Loading/Loading';
+
+const SongNotes = lazy(() => import('@/components/SongRenderer/SongNotes'));
+const SongResources = lazy(() => import('@/components/SongRenderer/SongResources'));
 
 type TSongProps = TSong & {
   directory: string;
@@ -58,9 +61,19 @@ export const Song = (props: TSongProps) => {
         <SongSegments segments={props.segments} order={props.order} strumms={props.strumms} />
       </Box>
 
-      <SongNotes notes={props.notes} />
+      {props.notes.length > 0 && (
+        <Suspense fallback={<Loading />}>
+          <SongNotes notes={props.notes} />
+        </Suspense>
+      )}
 
-      <Box ref={ref}>{inView ? <SongResources res={props.res} /> : null}</Box>
+      <Box ref={ref}>
+        {inView ? (
+          <Suspense fallback={<Loading />}>
+            <SongResources res={props.res} />
+          </Suspense>
+        ) : null}
+      </Box>
     </Container>
   );
 };

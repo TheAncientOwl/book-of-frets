@@ -6,13 +6,12 @@
  *
  * @file Settings.tsx
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description App settings menu.
  */
 
-import { Refresh } from '@/components/AppMenu/Settings/Refresh';
 import { SongOptions } from '@/components/AppMenu/Settings/SongOptions';
-import { ThemePicker } from '@/components/AppMenu/Settings/ThemePicker';
+import { Loading } from '@/components/Loading/Loading';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
 import { setDocumentThemeColor } from '@/state/theme/utils/setDocumentThemeColor';
 import {
@@ -23,7 +22,10 @@ import {
   AccordionPanel,
   Heading,
 } from '@chakra-ui/react';
-import { useLayoutEffect, type PropsWithChildren } from 'react';
+import { lazy, Suspense, useLayoutEffect, type PropsWithChildren } from 'react';
+
+const Refresh = lazy(() => import('@/components/AppMenu/Settings/Refresh'));
+const ThemePicker = lazy(() => import('@/components/AppMenu/Settings/ThemePicker'));
 
 const SettingsAccordionItem = (props: PropsWithChildren & { title: string }) => {
   const { appMenu: theme } = useAppTheme();
@@ -69,11 +71,15 @@ export const Settings = () => {
       </SettingsAccordionItem>
 
       <SettingsAccordionItem title='General'>
-        <Refresh />
+        <Suspense fallback={<Loading />}>
+          <Refresh />
+        </Suspense>
       </SettingsAccordionItem>
 
       <SettingsAccordionItem title='Theme'>
-        <ThemePicker />
+        <Suspense fallback={<Loading />}>
+          <ThemePicker />
+        </Suspense>
       </SettingsAccordionItem>
     </Accordion>
   );
