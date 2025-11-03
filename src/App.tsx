@@ -6,7 +6,7 @@
  *
  * @file App.tsx
  * @author Alexandru Delegeanu
- * @version 0.36
+ * @version 0.37
  * @description App component.
  */
 
@@ -31,6 +31,7 @@ export const App = () => {
     <ChakraProvider>
       <AppStateContext.Provider value={appStateValue}>
         <Box
+          as='main'
           display='flex'
           width='100vw'
           height='100dvh'
