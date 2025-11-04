@@ -29,6 +29,13 @@
       "chordIDs": ["C", "Am", "Em", "G"]
     },
     {
+      "title": "All Of Me",
+      "artists": ["John Legend"],
+      "directory": "all-of-me",
+      "type": ["acoustic"],
+      "chordIDs": ["Em", "C", "G", "D", "Am"]
+    },
+    {
       "title": "Golden",
       "artists": ["HUNTR/X"],
       "directory": "golden-acoustic-v1",
