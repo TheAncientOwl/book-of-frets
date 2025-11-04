@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.0.1",
   "contributors": ["TheAncientOwl"],
   "title": "Seven Nation Army",
   "artists": ["The White Stripes"],
@@ -27,7 +27,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": "- E3+A5 - E3+A5 - E3+A5 - E3+A5 - E3+A5 - E3+A5 - E3+A5 - - E5+A7 - E5+A7 - E5+A7 - E5+A7 - E5+A7 - E5+A7 - E5+A7 -"
+          "items": "- E3+A5 - E3+A5 - E3+A5 - E3+A5 - E3+A5 - E3+A5 - E3+A5 - | - E5+A7 - E5+A7 - E5+A7 - E5+A7 - E5+A7 - E5+A7 - E5+A7 -"
         }
       ]
     },
@@ -38,7 +38,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": "- A7+D9 - A7+D9 - A10+D12 - A7+D9 - A5+D7 - A3+D5 - A2+D4 - - - - A7+D9 - - A7+D9 - A10+D12 - A7+D9 A5+D7 A3+D5 - A2+D4 -"
+          "items": "- A7+D9 - A7+D9 - A10+D12 - A7+D9 - A5+D7 - A3+D5 - A2+D4 - | - A7+D9 - - A7+D9 - A10+D12 - A7+D9 - A5+D7 - A3+D5 - A2+D4 -"
         }
       ]
     },
