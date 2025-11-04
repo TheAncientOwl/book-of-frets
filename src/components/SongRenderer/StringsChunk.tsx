@@ -6,7 +6,7 @@
  *
  * @file StringsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.22
+ * @version 0.23
  * @description Render song strings pattern.
  */
 
@@ -29,22 +29,25 @@ const String = (props: TStringProps) => {
   return (
     <Flex direction='row' alignItems='center' position='relative'>
       <Heading
-        size='md'
+        size='xs'
         position='sticky'
         left='0'
         zIndex={5}
-        borderRadius='5px'
-        padding='3px 6px'
-        width='2ch'
+        borderRadius='0.1em'
+        padding='0.3em 0.7em'
         textAlign='center'
+        width='2ch'
+        display='flex'
+        justifyContent='center'
+        alignItems='center'
         // [*] theme colors
         color={theme.chunks.item.stringsPattern.stringNames}
-        backgroundColor='blackAlpha.600'
+        backgroundColor='blackAlpha.700'
       >
         {props.name}
       </Heading>
 
-      <Flex direction='row' position='absolute' left='30px' alignItems='center' gap='5px' ml='5px'>
+      <Flex direction='row' alignItems='center' gap='0.4em' ml='0.2em'>
         {props.frets.map((fret, index) => {
           if (fret === '-') {
             return (
@@ -128,17 +131,20 @@ export const StringsChunk = (props: TStringsPatternProps) => {
   Object.values(stringsToFrets).forEach(arr => arr.push('|'));
 
   return (
-    <Flex direction='column' gap='0.5em' width='100%' overflow='scroll'>
-      <String name='e' frets={stringsToFrets.e} />
-      <String name='B' frets={stringsToFrets.B} />
-      <String name='G' frets={stringsToFrets.G} />
-      <String name='D' frets={stringsToFrets.D} />
-      <String name='A' frets={stringsToFrets.A} />
-      <String name='E' frets={stringsToFrets.E} />
-      <Divider
-        // [*] theme colors
-        borderColor={theme.chunks.item.stringsPattern.divider}
-      />
+    <Flex direction='column' width='100%' overflowX='auto' fontSize={['0.8em', '0.9em', '1em']}>
+      <Box minWidth='max-content'>
+        <String name='e' frets={stringsToFrets.e} />
+        <String name='B' frets={stringsToFrets.B} />
+        <String name='G' frets={stringsToFrets.G} />
+        <String name='D' frets={stringsToFrets.D} />
+        <String name='A' frets={stringsToFrets.A} />
+        <String name='E' frets={stringsToFrets.E} />
+        <Divider
+          marginTop='1em'
+          // [*] theme colors
+          borderColor={theme.chunks.item.stringsPattern.divider}
+        />
+      </Box>
     </Flex>
   );
 };
