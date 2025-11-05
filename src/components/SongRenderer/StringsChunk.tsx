@@ -6,13 +6,13 @@
  *
  * @file StringsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.23
+ * @version 0.24
  * @description Render song strings pattern.
  */
 
 import type { TStringsChunk } from '@/common/types/song.types';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
-import { Box, Circle, Divider, Flex, Heading, Text } from '@chakra-ui/react';
+import { Box, Divider, Flex, Text } from '@chakra-ui/react';
 
 type TStringsPatternProps = TStringsChunk & {};
 
@@ -23,81 +23,56 @@ type TStringProps = {
   frets: TFretNumber[];
 };
 
-const String = (props: TStringProps) => {
+const CELL_WIDTH = 3;
+
+const String = ({ name, frets }: TStringProps) => {
   const { song: theme } = useAppTheme();
 
+  const mappedFrets = frets
+    .map(fret => {
+      if (fret === '-') return '─'.repeat(CELL_WIDTH);
+      if (fret === '|') return '│';
+      return fret.toString().padStart(2, ' ').padEnd(CELL_WIDTH, ' ');
+    })
+    .join('');
+
   return (
-    <Flex direction='row' alignItems='center' position='relative'>
-      <Heading
-        size='xs'
+    <Flex align='center'>
+      <Box
         position='sticky'
         left='0'
         zIndex={5}
-        borderRadius='0.1em'
-        padding='0.3em 0.7em'
-        textAlign='center'
-        width='2ch'
-        display='flex'
-        justifyContent='center'
-        alignItems='center'
-        // [*] theme colors
-        color={theme.chunks.item.stringsPattern.stringNames}
         backgroundColor='blackAlpha.700'
+        px='1'
+        fontWeight='bold'
+        color={theme.chunks.item.stringsPattern.stringNames}
+        fontFamily='monospace'
       >
-        {props.name}
-      </Heading>
-
-      <Flex direction='row' alignItems='center' gap='0.4em' ml='0.2em'>
-        {props.frets.map((fret, index) => {
-          if (fret === '-') {
-            return (
-              <Box key={index} width='1.2em'>
-                <Divider
-                  borderWidth='thin'
-                  // [*] theme colors
-                  borderColor={theme.chunks.item.stringsPattern.filler}
-                />
-              </Box>
-            );
-          } else if (fret === '|') {
-            return (
-              <Box
-                key={index}
-                // [*] theme colors
-                color={theme.chunks.item.stringsPattern.filler}
-              >
-                |
-              </Box>
-            );
-          } else {
-            return (
-              <Box key={index} width='1.2em'>
-                <Circle
-                  key={index}
-                  padding='0.6em'
-                  size='1em'
-                  fontWeight='bold'
-                  borderWidth='thin'
-                  // [*] theme colors
-                  backgroundColor={theme.chunks.item.stringsPattern.fret.background}
-                  borderColor={theme.chunks.item.stringsPattern.fret.border}
-                  color={theme.chunks.item.stringsPattern.fret.text}
-                >
-                  <Text fontSize='sm'>{fret}</Text>
-                </Circle>
-              </Box>
-            );
-          }
-        })}
-      </Flex>
+        {name}
+      </Box>
+      <Text
+        backgroundColor='blackAlpha.200'
+        fontFamily='monospace'
+        whiteSpace='pre'
+        color={theme.chunks.item.stringsPattern.fret.text}
+      >
+        {mappedFrets}
+      </Text>
     </Flex>
   );
 };
 
-export const StringsChunk = (props: TStringsPatternProps) => {
-  const { song: theme } = useAppTheme();
+type TStringToFrets = {
+  e: TFretNumber[];
+  B: TFretNumber[];
+  G: TFretNumber[];
+  D: TFretNumber[];
+  A: TFretNumber[];
+  E: TFretNumber[];
+};
 
-  const stringsToFrets = {
+const expandItems = (items: string): TStringToFrets => {
+  const stringsToFrets: TStringToFrets = {
     E: ['|'] as TFretNumber[],
     A: ['|'] as TFretNumber[],
     D: ['|'] as TFretNumber[],
@@ -106,9 +81,11 @@ export const StringsChunk = (props: TStringsPatternProps) => {
     e: ['|'] as TFretNumber[],
   };
 
-  props.items.split(' ').map(item => {
+  const asValues = Object.values(stringsToFrets);
+
+  items.split(' ').map(item => {
     if (item === '-' || item === '|') {
-      Object.values(stringsToFrets).forEach(entry => entry.push(item));
+      asValues.forEach(entry => entry.push(item));
       return;
     }
 
@@ -120,7 +97,7 @@ export const StringsChunk = (props: TStringsPatternProps) => {
     });
 
     if (newSize !== undefined) {
-      Object.values(stringsToFrets).forEach(entry => {
+      asValues.forEach(entry => {
         if (entry.length < (newSize as number)) {
           entry.push('-');
         }
@@ -128,10 +105,18 @@ export const StringsChunk = (props: TStringsPatternProps) => {
     }
   });
 
-  Object.values(stringsToFrets).forEach(arr => arr.push('|'));
+  asValues.forEach(arr => arr.push('|'));
+
+  return stringsToFrets;
+};
+
+export const StringsChunk = (props: TStringsPatternProps) => {
+  const { song: theme } = useAppTheme();
+
+  const stringsToFrets = expandItems(props.items);
 
   return (
-    <Flex direction='column' width='100%' overflowX='auto' fontSize={['0.8em', '0.9em', '1em']}>
+    <Flex direction='column' width='100%' overflowX='auto' fontSize={['1.2em']}>
       <Box minWidth='max-content'>
         <String name='e' frets={stringsToFrets.e} />
         <String name='B' frets={stringsToFrets.B} />
