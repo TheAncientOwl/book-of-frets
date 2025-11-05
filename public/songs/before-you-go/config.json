@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.1.1",
   "contributors": ["TheAncientOwl"],
   "title": "Before You go",
   "artists": ["Lewis Capaldi"],
@@ -16,7 +16,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": "- E1 B1 A3 B1 A3 B1 - | - A3 B1 A3 B1 A3 B1 -"
+          "items": "- A3 B1 A3 B1 A3 B1 - | - A3 B1 A3 B1 A3 B1 -"
         },
         {
           "times": 1,
