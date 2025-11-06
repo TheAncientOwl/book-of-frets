@@ -1,5 +1,5 @@
 {
-  "version": "1.1.1",
+  "version": "1.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "Before You go",
   "artists": ["Lewis Capaldi"],
@@ -16,15 +16,15 @@
       "chunks": [
         {
           "times": 1,
-          "items": "- A3 B1 A3 B1 A3 B1 - | - A3 B1 A3 B1 A3 B1 -"
+          "items": "[C] - A3 B1 A3 B1 A3 B1 - | - A3 B1 A3 B1 A3 B1 -"
         },
         {
           "times": 1,
-          "items": "- A3 B1 A3 B1 A3 B1 A3 B1 A3 B1 A3 B1 - | - A3 B1 A3 B1 A3 B1 A3 B1 A3 B1 A3 B1 - | - E0 B1 E0 B1 E0 B1 E0 B1 E0 B1 E0 B1 - | - E0 B1 E0 B1 E0 B1 E0 B1 E0 B1 E0 B1 -"
+          "items": "[C] - A3 B1 A3 B1 A3 B1 A3 B1 A3 B1 A3 B1 - | - A3 B1 A3 B1 A3 B1 A3 B1 A3 B1 A3 B1 - | [Am] - E0 B1 E0 B1 E0 B1 E0 B1 E0 B1 E0 B1 - | - E0 B1 E0 B1 E0 B1 E0 B1 E0 B1 E0 B1 -"
         },
         {
           "times": 1,
-          "items": "- E1 B1 E1 B1 E1 B1 E1 B1 E1 B1 E1 B1 - | - E1 B1 E1 B1 E1 B1 E1 B1 E1 B1 E1 B1 - | - E3 B1 E3 B1 E3 B1 E3 B1 E3 B1 E3 B1 - | - E3 B0 E3 B0 E3 B0 E3 B0 E3 B0 E3 B0 -"
+          "items": "[F] - E1 B1 E1 B1 E1 B1 E1 B1 E1 B1 E1 B1 - | - E1 B1 E1 B1 E1 B1 E1 B1 E1 B1 E1 B1 - | [Cadd11] - E3 B1 E3 B1 E3 B1 E3 B1 E3 B1 E3 B1 - | - E3 B0 E3 B0 E3 B0 E3 B0 E3 B0 E3 B0 -"
         }
       ]
     },
@@ -35,23 +35,23 @@
       "chunks": [
         {
           "times": 1,
-          "items": "- A3 B1 A3 e0 A3 B1 A3 B1 A3 e0 A3 B1 - | - A3 B1 A3 e0 A3 B1 A3 B1 A3 e0 A3 B1 - | - E3 B1 E3 e0 E3 B1 E3 B1 E3 e0 E3 B1 - | - E3 B1 E3 e0 E3 B1 E3 B1 E3 e0 E3 B1 -"
+          "items": "[C] - A3 B1 A3 e0 A3 B1 A3 B1 A3 e0 A3 B1 - | - A3 B1 A3 e0 A3 B1 A3 B1 A3 e0 A3 B1 - | [Cadd11] - E3 B1 E3 e0 E3 B1 E3 B1 E3 e0 E3 B1 - | - E3 B1 E3 e0 E3 B1 E3 B1 E3 e0 E3 B1 -"
         },
         {
           "times": 1,
-          "items": "- A0 B1 A0 e0 A0 B1 A0 B1 A0 e0 A0 B1 - | - A0 B1 A0 e0 A0 B1 A0 B1 A0 e0 A0 B1 - | - E1 B1 E1 e0 E1 B1 E1 B1 E1 e0 E1 B1 - | - E1 B3 E1 B3 E1 B3 E1 B3 E1 B3 E1 B3 -"
+          "items": "[Am] - A0 B1 A0 e0 A0 B1 A0 B1 A0 e0 A0 B1 - | - A0 B1 A0 e0 A0 B1 A0 B1 A0 e0 A0 B1 - | [Fmaj7] - E1 B1 E1 e0 E1 B1 E1 B1 E1 e0 E1 B1 - | - E1 B3 E1 B3 E1 B3 E1 B3 E1 B3 E1 B3 -"
         },
         {
           "times": 1,
-          "items": "- A3 B1 A3 e0 A3 B1 A3 B1 A3 e0 A3 B1 - | - A3 B1 A3 e0 A3 B1 A3 B1 A3 e0 A3 B1 - | - E3 B1 E3 e0 E3 B1 E3 B1 E3 e0 E3 B1 - | - E3 B1 E3 e0 E3 B1 E3 B1 E3 e0 E3 B1 -"
+          "items": "[C] - A3 B1 A3 e0 A3 B1 A3 B1 A3 e0 A3 B1 - | - A3 B1 A3 e0 A3 B1 A3 B1 A3 e0 A3 B1 - | [Cadd11] - E3 B1 E3 e0 E3 B1 E3 B1 E3 e0 E3 B1 - | - E3 B1 E3 e0 E3 B1 E3 B1 E3 e0 E3 B1 -"
         },
         {
           "times": 1,
-          "items": "- A0 B1 A0 e0 A0 B1 A0 B1 A0 e0 A0 B1 - | - A0 B1 A0 e0 A0 B1 A0 B1 A0 e0 A0 B1 - | - E1 B1 E1 e0 E1 B1 E1 B1 E1 e0 E1 B1 - | - E1 B3 E1 B3 E1 B3 E1 B3 E1 B3 E1 B3 -"
+          "items": "[Am] - A0 B1 A0 e0 A0 B1 A0 B1 A0 e0 A0 B1 - | - A0 B1 A0 e0 A0 B1 A0 B1 A0 e0 A0 B1 - | [Fmaj7] - E1 B1 E1 e0 E1 B1 E1 B1 E1 e0 E1 B1 - | - E1 B3 E1 B3 E1 B3 E1 B3 E1 B3 E1 B3 -"
         },
         {
           "times": 1,
-          "items": "- E3 - G0 - E3 - B3 - E3 - G0 - E3 - G0 - E3 - B3 - E3 - G0 - | - E3 - - - - - - - - - - - -"
+          "items": "[G] - E3 - G0 - E3 - B3 - E3 - G0 - E3 - G0 - E3 - B3 - E3 - G0 - | - E3 - - - - - - - - - - - -"
         }
       ]
     },
@@ -62,7 +62,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": "- A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - | - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 -"
+          "items": "[C] - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - | - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 -"
         }
       ]
     },
@@ -132,7 +132,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": "- E3 - G0 - E3 - B3 - E3 - G0 - E3 - G0 - E3 - B3 - E3 - G0 - | - E3 - - - - - - - - - - - -"
+          "items": "[G] - E3 - G0 - E3 - B3 - E3 - G0 - E3 - G0 - E3 - B3 - E3 - G0 - | - E3 - - - - - - - - - - - -"
         }
       ]
     }
