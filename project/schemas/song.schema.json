@@ -84,7 +84,7 @@
                   "oneOf": [
                     {
                       "type": "string",
-                      "pattern": "^-(?:\\s*((?:[EADGBe]\\d{1,2}(?:\\+[EADGBe]\\d{1,2})*)+)|\\s*-\\s*|\\s*\\|\\s*)+$"
+                      "pattern": "^(?:\\s*(?:\\[[A-Za-z0-9#+/()]+\\]|[EADGBe]\\d{1,2}(?:\\+[EADGBe]\\d{1,2})*|-|\\|)\\s*)+$"
                     },
                     {
                       "type": "array",

@@ -6,7 +6,7 @@
  *
  * @file StringsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.24
+ * @version 0.25
  * @description Render song strings pattern.
  */
 
@@ -62,6 +62,45 @@ const String = ({ name, frets }: TStringProps) => {
   );
 };
 
+type TDisplayChord = {
+  name: string;
+  offset: number;
+};
+
+type TDisplayChordsProps = {
+  chords: TDisplayChord[];
+};
+
+const DisplayChords = ({ chords }: TDisplayChordsProps) => {
+  const { song: theme } = useAppTheme();
+
+  console.log(JSON.stringify(chords));
+
+  const mappedChords = chords
+    .map((chord, index) => {
+      if (index === 0) {
+        return chord.name;
+      }
+
+      return chord.name.padStart(
+        (chord.offset - chords[index - 1].offset) * CELL_WIDTH - chords[index - 1].name.length,
+        ' '
+      );
+    })
+    .join('');
+
+  return (
+    <Text
+      ml='3ch'
+      fontFamily='monospace'
+      whiteSpace='pre'
+      color={theme.chunks.item.stringsPattern.stringNames}
+    >
+      {mappedChords}
+    </Text>
+  );
+};
+
 type TStringToFrets = {
   e: TFretNumber[];
   B: TFretNumber[];
@@ -71,7 +110,7 @@ type TStringToFrets = {
   E: TFretNumber[];
 };
 
-const expandItems = (items: string): TStringToFrets => {
+const parseItems = (items: string): { stringsToFrets: TStringToFrets; chords: TDisplayChord[] } => {
   const stringsToFrets: TStringToFrets = {
     E: ['|'] as TFretNumber[],
     A: ['|'] as TFretNumber[],
@@ -80,12 +119,19 @@ const expandItems = (items: string): TStringToFrets => {
     B: ['|'] as TFretNumber[],
     e: ['|'] as TFretNumber[],
   };
+  const chords: TDisplayChord[] = [] as TDisplayChord[];
 
   const asValues = Object.values(stringsToFrets);
 
-  items.split(' ').map(item => {
+  items.split(' ').map((item, index) => {
     if (item === '-' || item === '|') {
       asValues.forEach(entry => entry.push(item));
+      return;
+    }
+
+    if (item.charAt(0) === '[') {
+      console.log(item);
+      chords.push({ name: item.slice(1, item.length - 1), offset: index });
       return;
     }
 
@@ -107,17 +153,18 @@ const expandItems = (items: string): TStringToFrets => {
 
   asValues.forEach(arr => arr.push('|'));
 
-  return stringsToFrets;
+  return { stringsToFrets, chords };
 };
 
 export const StringsChunk = (props: TStringsPatternProps) => {
   const { song: theme } = useAppTheme();
 
-  const stringsToFrets = expandItems(props.items);
+  const { stringsToFrets, chords } = parseItems(props.items);
 
   return (
     <Flex direction='column' width='100%' overflowX='auto' fontSize={['1.2em']}>
       <Box minWidth='max-content'>
+        {chords.length > 0 && <DisplayChords chords={chords} />}
         <String name='e' frets={stringsToFrets.e} />
         <String name='B' frets={stringsToFrets.B} />
         <String name='G' frets={stringsToFrets.G} />
