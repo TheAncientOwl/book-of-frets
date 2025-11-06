@@ -6,7 +6,7 @@
  *
  * @file ChordsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.24
+ * @version 0.25
  * @description Render song chords pattern.
  */
 
@@ -14,7 +14,7 @@ import type { TChordsChunk, TStrummingPattern } from '@/common/types/song.types'
 import { ChordsChunkItem } from '@/components/SongRenderer/ChordsChunkItem';
 import { useAppState } from '@/state/hooks/useAppState';
 import { useAppTheme } from '@/state/hooks/useAppTheme';
-import { Box, Divider, Tag, Tooltip, type DividerProps } from '@chakra-ui/react';
+import { Box, Divider, Text, Tooltip, type DividerProps } from '@chakra-ui/react';
 import { Fragment } from 'react';
 
 type TChordsChunkProps = TChordsChunk & {
@@ -45,6 +45,8 @@ export const ChordsChunk = (props: TChordsChunkProps) => {
   const { song: theme } = useAppTheme();
   const { songSettings } = useAppState();
 
+  const showTimes = songSettings.display.times.value && props.times > 1;
+
   return (
     <Box
       width='100%'
@@ -54,6 +56,14 @@ export const ChordsChunk = (props: TChordsChunkProps) => {
       alignItems='stretch'
       justifyContent='center'
       fontSize={['0.85em', '0.9em', '1em']}
+      maxWidth='fit-content'
+      // overflow='auto'
+      border='none'
+      borderWidth='thin'
+      borderRight={[showTimes ? '1px solid red' : 'none', 'none']}
+      paddingRight={[showTimes ? '1em' : '0em', '0em']}
+      // [*] theme colors
+      borderColor={theme.chunks.item.chordsPattern.divider}
     >
       <ChordsChunkDivider display={['none', 'block']} borderStyle={['solid']} {...props} />
 
@@ -63,32 +73,34 @@ export const ChordsChunk = (props: TChordsChunkProps) => {
 
           <ChordsChunkDivider
             borderStyle={['none', 'solid']}
-            display={[segmentIndex < props.items.length - 1 ? 'block' : 'none', 'block']}
+            display={[
+              segmentIndex < props.items.length - (showTimes ? 2 : 1) ? 'block' : 'none',
+              'block',
+            ]}
             {...props}
           />
         </Fragment>
       ))}
 
-      {songSettings.display.times.value && props.times > 1 && (
+      {showTimes && (
         <Tooltip
           label={`Repeat ${props.times} times`}
           // [*] theme colors
           borderColor={theme.chunks.item.chordsPattern.divider}
         >
-          <Tag
+          <Text
             size='sm'
             fontWeight='bold'
             position='absolute'
             top='50%'
             right='0'
-            transform='translate(0%, -50%)'
+            transform='translate(150%, -50%)'
             zIndex={1}
             // [*] theme colors
-            backgroundColor={theme.chunks.item.chordsPattern.chord.times.background}
             color={theme.chunks.item.chordsPattern.chord.times.color}
           >
             x{props.times}
-          </Tag>
+          </Text>
         </Tooltip>
       )}
     </Box>

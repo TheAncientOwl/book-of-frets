@@ -6,7 +6,7 @@
  *
  * @file SongSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.20
+ * @version 0.21
  * @description Render song segment.
  */
 
@@ -61,7 +61,13 @@ export const SongSegmentHeading = (props: TSongSegmentProps) => {
 
 export const SongSegmentBody = (props: TSongSegmentProps) => {
   return (
-    <Flex direction='column' alignItems='center' gap='1em' padding={['1.1em 0em', '1.1em 1em']}>
+    <Flex
+      direction='column'
+      alignItems='center'
+      gap='1em'
+      padding={['1.1em 0em', '1.1em 1em']}
+      overflowX={['auto', 'hidden']}
+    >
       {props.chunks.map((chunk, chunkIdx) => {
         if (props.type === 'chords') {
           return (
