@@ -6,7 +6,7 @@
  *
  * @file StringsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.25
+ * @version 0.26
  * @description Render song strings pattern.
  */
 
@@ -74,8 +74,6 @@ type TDisplayChordsProps = {
 const DisplayChords = ({ chords }: TDisplayChordsProps) => {
   const { song: theme } = useAppTheme();
 
-  console.log(JSON.stringify(chords));
-
   const mappedChords = chords
     .map((chord, index) => {
       if (index === 0) {
@@ -130,7 +128,6 @@ const parseItems = (items: string): { stringsToFrets: TStringToFrets; chords: TD
     }
 
     if (item.charAt(0) === '[') {
-      console.log(item);
       chords.push({ name: item.slice(1, item.length - 1), offset: index });
       return;
     }

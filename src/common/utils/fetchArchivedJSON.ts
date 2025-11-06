@@ -6,7 +6,7 @@
  *
  * @file fetchArchivedJSON.ts
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Fetches archived JSON config.
  */
 
@@ -36,7 +36,6 @@ export const fetchArchivedJSON = async (
       const json = await res.json();
       onSuccess(json);
     } catch (fallbackErr) {
-      console.log('xdd');
       onError(fallbackErr);
     }
   }
