@@ -22,6 +22,20 @@
       "chordIDs": ["C", "Am", "Ft", "G"]
     },
     {
+      "title": "Someone You Loved",
+      "artists": ["Lewis Capaldi"],
+      "directory": "someone-you-loved",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "G", "Am", "F", "Dm"]
+    },
+    {
+      "title": "Someone You Loved | Easy",
+      "artists": ["Lewis Capaldi"],
+      "directory": "someone-you-loved-easy",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "G", "Am", "F", "Dm"]
+    },
+    {
       "title": "Save Your Tears",
       "artists": ["The Weekend", "Ariana Grande"],
       "directory": "save-your-tears",
