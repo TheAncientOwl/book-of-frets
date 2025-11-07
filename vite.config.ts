@@ -6,7 +6,7 @@
  *
  * @file vite.config.ts
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description Vite configuration.
  */
 
@@ -30,7 +30,6 @@ export default defineConfig({
           react: ['react', 'react-dom', 'react-router-dom'],
           chakra: ['@chakra-ui/react', '@emotion/react', '@emotion/styled'],
           'framer-motion': ['framer-motion'],
-          'react-intersection-observer': ['react-intersection-observer'],
           'react-icons': [
             'react-icons/md',
             'react-icons/io5',

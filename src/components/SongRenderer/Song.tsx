@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.33
+ * @version 0.34
  * @description Render song based on given config.
  */
 
@@ -18,17 +18,19 @@ import { SongSegments } from '@/components/SongRenderer/SongSegments';
 import { useAppStore } from '@/store/index';
 import { Box, Container } from '@chakra-ui/react';
 import { lazy, Suspense } from 'react';
-import { useInView } from 'react-intersection-observer';
 
 const SongNotes = lazy(() => import('@/components/SongRenderer/SongNotes'));
 const SongResources = lazy(() => import('@/components/SongRenderer/SongResources'));
+
+const InView = lazy(() =>
+  import('react-intersection-observer').then(mod => ({ default: mod.InView }))
+);
 
 type TSongProps = TSong & {
   directory: string;
 };
 
 export const Song = (props: TSongProps) => {
-  const { ref, inView } = useInView({ triggerOnce: true, rootMargin: '300px' });
   const theme = useAppStore(state => state.appTheme.song);
 
   return (
@@ -67,13 +69,11 @@ export const Song = (props: TSongProps) => {
         </Suspense>
       )}
 
-      <Box ref={ref}>
-        {inView ? (
-          <Suspense fallback={<Loading />}>
-            <SongResources res={props.res} />
-          </Suspense>
-        ) : null}
-      </Box>
+      <InView triggerOnce rootMargin='300px'>
+        {({ inView, ref }) => (
+          <Box ref={ref}>{inView ? <SongResources res={props.res} /> : null}</Box>
+        )}
+      </InView>
     </Container>
   );
 };
