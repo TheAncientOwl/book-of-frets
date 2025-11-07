@@ -6,22 +6,21 @@
  *
  * @file NotFoundPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Display 404 not found page.
  */
 
-import { useAppTheme } from '@/state/hooks/useAppTheme';
-import { setDocumentThemeColor } from '@/state/theme/utils/setDocumentThemeColor';
+import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
+import { useAppStore } from '@/store/index';
 import { Box, Button, Container, Flex, Image, Text, Tooltip } from '@chakra-ui/react';
 import { useLayoutEffect } from 'react';
 import { useNavigate } from 'react-router';
 
 const NotFoundPage = () => {
-  const { general } = useAppTheme();
-
   const navigate = useNavigate();
+  const pageBackground = useAppStore(state => state.appTheme.general.background);
 
-  useLayoutEffect(() => setDocumentThemeColor(general.background), [general.background]);
+  useLayoutEffect(() => setDocumentThemeColor(pageBackground), [pageBackground]);
 
   return (
     <Container>

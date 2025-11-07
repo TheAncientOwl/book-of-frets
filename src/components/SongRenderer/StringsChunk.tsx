@@ -6,12 +6,12 @@
  *
  * @file StringsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.26
+ * @version 0.27
  * @description Render song strings pattern.
  */
 
 import type { TStringsChunk } from '@/common/types/song.types';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useAppStore } from '@/store/index';
 import { Box, Divider, Flex, Text } from '@chakra-ui/react';
 
 type TStringsPatternProps = TStringsChunk & {};
@@ -26,7 +26,7 @@ type TStringProps = {
 const CELL_WIDTH = 3;
 
 const String = ({ name, frets }: TStringProps) => {
-  const { song: theme } = useAppTheme();
+  const theme = useAppStore(state => state.appTheme.song);
 
   const mappedFrets = frets
     .map(fret => {
@@ -72,7 +72,7 @@ type TDisplayChordsProps = {
 };
 
 const DisplayChords = ({ chords }: TDisplayChordsProps) => {
-  const { song: theme } = useAppTheme();
+  const theme = useAppStore(state => state.appTheme.song);
 
   const mappedChords = chords
     .map((chord, index) => {
@@ -154,7 +154,7 @@ const parseItems = (items: string): { stringsToFrets: TStringToFrets; chords: TD
 };
 
 export const StringsChunk = (props: TStringsPatternProps) => {
-  const { song: theme } = useAppTheme();
+  const theme = useAppStore(state => state.appTheme.song);
 
   const { stringsToFrets, chords } = parseItems(props.items);
 

@@ -6,12 +6,12 @@
  *
  * @file SongNotes.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Song notes.
  */
 
 import type { TSong } from '@/common/types/song.types';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useAppStore } from '@/store/index';
 import { Box, Divider, Flex, Heading, Icon, List, Text } from '@chakra-ui/react';
 import { Fragment } from 'react';
 import { RiQuillPenAiFill } from 'react-icons/ri';
@@ -19,7 +19,7 @@ import { RiQuillPenAiFill } from 'react-icons/ri';
 type TSongNotesProps = Pick<TSong, 'notes'>;
 
 export const SongNotes = (props: TSongNotesProps) => {
-  const { song: theme } = useAppTheme();
+  const theme = useAppStore(state => state.appTheme.song);
 
   return (
     <Fragment>

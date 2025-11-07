@@ -6,11 +6,11 @@
  *
  * @file FrequencyThresholdSlider.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description UI display of frequency threshold.
  */
 
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useAppStore } from '@/store/index';
 import {
   Heading,
   SimpleGrid,
@@ -29,11 +29,7 @@ type TFrequencyThresholdSlider = {
 };
 
 export const FrequencyThresholdSlider = (props: TFrequencyThresholdSlider) => {
-  const {
-    appMenu: {
-      items: { tuner: theme },
-    },
-  } = useAppTheme();
+  const theme = useAppStore(state => state.appTheme.appMenu.items.tuner);
 
   return (
     <SimpleGrid {...props.containerProps} columns={[1, 2]} gap='5px'>

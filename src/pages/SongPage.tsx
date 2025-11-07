@@ -6,7 +6,7 @@
  *
  * @file SongPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.19
+ * @version 0.20
  * @description Handle song rendering based on url.
  */
 
@@ -14,19 +14,17 @@ import type { TSong } from '@/common/types/song.types';
 import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
 import { Loading } from '@/components/Loading/Loading';
 import { Song as SongRenderer } from '@/components/SongRenderer/Song';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
-import { setDocumentThemeColor } from '@/state/theme/utils/setDocumentThemeColor';
+import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
+import { useAppStore } from '@/store/index';
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 export const SongPage = () => {
-  const { directory } = useParams();
-  const { song: theme } = useAppTheme();
-  // const { songsHistory } = useAppState();
-
   const [songConfig, setSongConfig] = useState<{ data: TSong; directory: string } | null>(null);
+  const { directory } = useParams();
+  const pageBackground = useAppStore(state => state.appTheme.song.background);
 
-  useLayoutEffect(() => setDocumentThemeColor(theme.background), [theme.background]);
+  useLayoutEffect(() => setDocumentThemeColor(pageBackground), [pageBackground]);
 
   const navigate = useNavigate();
 
@@ -43,21 +41,6 @@ export const SongPage = () => {
       }
     );
   }, [directory, navigate]);
-
-  // useEffect(() => {
-  //   if (!songConfig) return;
-
-  //   songsHistory.set?.(
-  //     addSongHistoryEntry(
-  //       {
-  //         title: songConfig.data.title,
-  //         artists: songConfig.data.artists,
-  //         directory: songConfig.directory,
-  //       } as TSongHistoryEntry,
-  //       songsHistory.value
-  //     )
-  //   );
-  // }, [songConfig, songsHistory]);
 
   if (!songConfig) return <Loading />;
 

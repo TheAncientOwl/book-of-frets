@@ -6,7 +6,7 @@
  *
  * @file SongSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.21
+ * @version 0.22
  * @description Render song segment.
  */
 
@@ -18,7 +18,7 @@ import type {
 } from '@/common/types/song.types';
 import { ChordsChunk } from '@/components/SongRenderer/ChordsChunk';
 import { StringsChunk } from '@/components/SongRenderer/StringsChunk';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useAppStore } from '@/store/index';
 import { Flex, Heading, Tag, Text } from '@chakra-ui/react';
 
 type TSongSegmentProps = TSongSegment & {
@@ -26,7 +26,7 @@ type TSongSegmentProps = TSongSegment & {
 };
 
 export const SongSegmentHeading = (props: TSongSegmentProps) => {
-  const { song: theme } = useAppTheme();
+  const theme = useAppStore(state => state.appTheme.song);
 
   return (
     <Heading

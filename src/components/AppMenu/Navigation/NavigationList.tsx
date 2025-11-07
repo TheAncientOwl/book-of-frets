@@ -6,11 +6,11 @@
  *
  * @file NavigationList.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Navigation links.
  */
 
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useAppStore } from '@/store/index';
 import { Box, Heading, List, ListItem } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
@@ -19,7 +19,7 @@ type TNavigationListProps = {
 };
 
 export const NavigationList = (props: TNavigationListProps) => {
-  const { appMenu: theme } = useAppTheme();
+  const theme = useAppStore(state => state.appTheme.appMenu);
 
   return (
     <Box>

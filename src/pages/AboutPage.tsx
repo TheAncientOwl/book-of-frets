@@ -6,20 +6,23 @@
  *
  * @file AboutPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description App homepage.
  */
 
-import { useAppTheme } from '@/state/hooks/useAppTheme';
-import { setDocumentThemeColor } from '@/state/theme/utils/setDocumentThemeColor';
+import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
+import { useShallowAppStore } from '@/store/index';
 import { Box, Container, Heading, Link, ListItem, Text, UnorderedList } from '@chakra-ui/react';
 import { useLayoutEffect } from 'react';
 import { Link as RouteLink } from 'react-router-dom';
 
 export const AboutPage = () => {
-  const { general, homePage: theme } = useAppTheme();
+  const { pageBackground, theme } = useShallowAppStore(state => ({
+    pageBackground: state.appTheme.general.background,
+    theme: state.appTheme.homePage,
+  }));
 
-  useLayoutEffect(() => setDocumentThemeColor(general.background), [general.background]);
+  useLayoutEffect(() => setDocumentThemeColor(pageBackground), [pageBackground]);
 
   return (
     <Container height='100%' overflowY='scroll' pt='3rem' color='white' maxW='4xl'>

@@ -6,14 +6,14 @@
  *
  * @file Settings.tsx
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description App settings menu.
  */
 
 import { SongOptions } from '@/components/AppMenu/Settings/SongOptions';
 import { Loading } from '@/components/Loading/Loading';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
-import { setDocumentThemeColor } from '@/state/theme/utils/setDocumentThemeColor';
+import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
+import { useAppStore } from '@/store/index';
 import {
   Accordion,
   AccordionButton,
@@ -28,7 +28,7 @@ const Refresh = lazy(() => import('@/components/AppMenu/Settings/Refresh'));
 const ThemePicker = lazy(() => import('@/components/AppMenu/Settings/ThemePicker'));
 
 const SettingsAccordionItem = (props: PropsWithChildren & { title: string }) => {
-  const { appMenu: theme } = useAppTheme();
+  const theme = useAppStore(state => state.appTheme.appMenu);
 
   return (
     <AccordionItem borderStyle='none'>
@@ -54,9 +54,9 @@ const SettingsAccordionItem = (props: PropsWithChildren & { title: string }) => 
 };
 
 export const Settings = () => {
-  const { general } = useAppTheme();
+  const background = useAppStore(state => state.appTheme.general.background);
 
-  useLayoutEffect(() => setDocumentThemeColor(general.background), [general.background]);
+  useLayoutEffect(() => setDocumentThemeColor(background), [background]);
 
   return (
     <Accordion

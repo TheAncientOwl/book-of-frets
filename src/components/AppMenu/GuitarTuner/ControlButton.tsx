@@ -6,11 +6,11 @@
  *
  * @file ControlButton.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Turn the tuner ON / OFF.
  */
 
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useAppStore } from '@/store/index';
 import { IconButton } from '@chakra-ui/react';
 import { FaPlay, FaStop } from 'react-icons/fa';
 
@@ -21,11 +21,7 @@ type TControlButton = {
 };
 
 export const ControlButton = (props: TControlButton) => {
-  const {
-    appMenu: {
-      items: { tuner: theme },
-    },
-  } = useAppTheme();
+  const theme = useAppStore(state => state.appTheme.appMenu.items.tuner);
 
   return (
     <IconButton

@@ -6,11 +6,11 @@
  *
  * @file FrequencyProgressIndicator.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Display progress until target frequency.
  */
 
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useAppStore } from '@/store/index';
 import { Circle, Flex, Icon, type FlexProps } from '@chakra-ui/react';
 import { FaCheck } from 'react-icons/fa';
 
@@ -23,11 +23,7 @@ type TFrequencyProgressIndicatorProps = {
 };
 
 export const FrequencyProgressIndicator = (props: TFrequencyProgressIndicatorProps) => {
-  const {
-    appMenu: {
-      items: { tuner: theme },
-    },
-  } = useAppTheme();
+  const theme = useAppStore(state => state.appTheme.appMenu.items.tuner);
 
   const diff = props.targetFreq - props.currentFreq;
   const diffAbs = Math.abs(diff);

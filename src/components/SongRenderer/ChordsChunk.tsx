@@ -6,14 +6,13 @@
  *
  * @file ChordsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.25
+ * @version 0.26
  * @description Render song chords pattern.
  */
 
 import type { TChordsChunk, TStrummingPattern } from '@/common/types/song.types';
 import { ChordsChunkItem } from '@/components/SongRenderer/ChordsChunkItem';
-import { useAppState } from '@/state/hooks/useAppState';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useAppStore, useShallowAppStore } from '@/store/index';
 import { Box, Divider, Text, Tooltip, type DividerProps } from '@chakra-ui/react';
 import { Fragment } from 'react';
 
@@ -22,7 +21,7 @@ type TChordsChunkProps = TChordsChunk & {
 };
 
 export const ChordsChunkDivider = (props: DividerProps & TChordsChunk) => {
-  const { song: theme } = useAppTheme();
+  const theme = useAppStore(state => state.appTheme.song);
 
   return (
     <Divider
@@ -42,10 +41,12 @@ export const ChordsChunkDivider = (props: DividerProps & TChordsChunk) => {
 };
 
 export const ChordsChunk = (props: TChordsChunkProps) => {
-  const { song: theme } = useAppTheme();
-  const { songSettings } = useAppState();
+  const { theme, settingsDisplaySegmentTimes } = useShallowAppStore(state => ({
+    theme: state.appTheme.song,
+    settingsDisplaySegmentTimes: state.songSettings.display.segmentTimes,
+  }));
 
-  const showTimes = songSettings.display.times.value && props.times > 1;
+  const showTimes = settingsDisplaySegmentTimes && props.times > 1;
 
   return (
     <Box

@@ -10,7 +10,7 @@
  * @description Sets HTML document color theme.
  */
 
-import { getChakraColorHex } from '@/state/theme/utils/getChakraColorHex';
+import { getChakraColorHex } from '@/store/theme/utils/getChakraColorHex';
 import { theme } from '@chakra-ui/react';
 
 export const setDocumentThemeColor = (color: string) => {

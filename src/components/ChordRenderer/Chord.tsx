@@ -6,14 +6,14 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 0.18
+ * @version 0.19
  * @description Render chrod based on given config.
  */
 
 import type { TChord } from '@/common/types/chord.types';
 import type { TGuitarString } from '@/common/types/common.types';
 import { Fret } from '@/components/ChordRenderer/Fret';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useShallowAppStore } from '@/store/index';
 import { Box, Circle, Divider, Flex, Heading, type BoxProps } from '@chakra-ui/react';
 import { Fragment } from 'react';
 
@@ -22,7 +22,10 @@ type TChordProps = TChord & {
 };
 
 export const Chord = (props: TChordProps) => {
-  const { chord: theme, fret: fretTheme } = useAppTheme();
+  const { theme, fretTheme } = useShallowAppStore(state => ({
+    theme: state.appTheme.chord,
+    fretTheme: state.appTheme.fret,
+  }));
 
   return (
     <Flex

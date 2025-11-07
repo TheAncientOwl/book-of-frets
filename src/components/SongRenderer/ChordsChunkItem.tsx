@@ -6,14 +6,13 @@
  *
  * @file ChordsChunkItem.tsx
  * @author Alexandru Delegeanu
- * @version 0.27
+ * @version 0.28
  * @description Render song pattern segment.
  */
 
 import type { TChordsChunkItem, TStrummingPattern } from '@/common/types/song.types';
 import { Chord } from '@/components/ChordRenderer/Chord';
-import { useAppState } from '@/state/hooks/useAppState';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useAppStore, useShallowAppStore } from '@/store/index';
 import {
   Box,
   Divider,
@@ -54,8 +53,11 @@ type TItemLineProps = {
 };
 
 const ItemLine = (props: TItemLineProps) => {
-  const { song: theme } = useAppTheme();
-  const { chordsIndex, songSettings } = useAppState();
+  const { theme, chordsIndex, songSettings } = useShallowAppStore(state => ({
+    theme: state.appTheme.song,
+    chordsIndex: state.chordsIndex,
+    songSettings: state.songSettings,
+  }));
 
   return (
     <Flex direction='column' justifyContent='center' alignItems='center' gap='0.5rem'>
@@ -92,8 +94,8 @@ const ItemLine = (props: TItemLineProps) => {
                     color={theme.chunks.item.chordsPattern.chord.color}
                   >
                     {chordId !== NO_CHORD_ID && chordConfig !== undefined ? chordConfig.name : '-'}
-                    {songSettings.display.chordTimes.value &&
-                      (times !== '1' || songSettings.display.chordTimesOne.value) && (
+                    {songSettings.display.chordTimes &&
+                      (times !== '1' || songSettings.display.chordTimesOne) && (
                         <Tooltip label={`Strum ${times} times`}>
                           <Text
                             position='absolute'
@@ -144,7 +146,7 @@ const ItemLine = (props: TItemLineProps) => {
         })}
       </Flex>
 
-      {props.showPattern && songSettings.display.strummingPattern.value && (
+      {props.showPattern && songSettings.display.strummingPattern && (
         <Box position='relative' mt='0.4em'>
           <Flex
             direction='row'
@@ -172,7 +174,9 @@ const ItemLine = (props: TItemLineProps) => {
 };
 
 export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
-  const { songSettings } = useAppState();
+  const settingsDisplayChordTimesOne = useAppStore(
+    state => state.songSettings.display.chordTimesOne
+  );
 
   const linesData = props.data.map(lineData => lineData.split(' '));
 
@@ -184,7 +188,7 @@ export const ChordsChunkItem = (props: TChordsChunkItemProps) => {
       direction={samePattern ? 'column' : 'row'}
       alignItems='center'
       justifyContent='center'
-      gap={songSettings.display.chordTimesOne.value ? '1.5rem' : '1rem'}
+      gap={settingsDisplayChordTimesOne ? '1.5rem' : '1rem'}
     >
       {linesData.map((lineData, index) => {
         const strumm = Number(lineData[0]);
