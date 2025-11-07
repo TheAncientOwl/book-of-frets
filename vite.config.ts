@@ -6,7 +6,7 @@
  *
  * @file vite.config.ts
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 0.12
  * @description Vite configuration.
  */
 
@@ -28,7 +28,8 @@ export default defineConfig({
       output: {
         manualChunks: {
           react: ['react', 'react-dom', 'react-router-dom'],
-          chakra: ['@chakra-ui/react', '@emotion/react', '@emotion/styled'],
+          chakra: ['@chakra-ui/react'],
+          emotion: ['@emotion/react', '@emotion/styled'],
           'framer-motion': ['framer-motion'],
         },
       },
