@@ -6,7 +6,7 @@
  *
  * @file SongsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.23
+ * @version 0.24
  * @description List all available songs.
  */
 
@@ -14,15 +14,15 @@ import type { TSongsIndexEntry } from '@/common/types/song.types';
 import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
 import { createSmartList } from '@/components/SmartList/index';
 import { SongCard } from '@/components/SongIndexEntry/SongCard';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
-import { setDocumentThemeColor } from '@/state/theme/utils/setDocumentThemeColor';
+import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
+import { useAppStore } from '@/store/index';
 import { Box, Container, Flex } from '@chakra-ui/react';
 import { useEffect, useLayoutEffect, useState } from 'react';
 
 const SongsList = createSmartList<TSongsIndexEntry>();
 
 export const SongsIndexPage = () => {
-  const { songsIndexPage: theme } = useAppTheme();
+  const theme = useAppStore(state => state.appTheme.songsIndexPage);
 
   useLayoutEffect(() => setDocumentThemeColor(theme.background), [theme.background]);
 

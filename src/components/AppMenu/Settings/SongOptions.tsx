@@ -6,17 +6,15 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description Song display options.
  */
 
-import { useAppState } from '@/state/hooks/useAppState';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useAppStore, useShallowAppStore } from '@/store/index';
 import { Checkbox, VStack, type CheckboxProps } from '@chakra-ui/react';
 
 const ThemedCheckbox = (props: CheckboxProps) => {
-  const { appMenu } = useAppTheme();
-  const theme = appMenu.items.settings.songOption;
+  const theme = useAppStore(state => state.appTheme.appMenu.items.settings.songOption);
 
   return (
     <Checkbox
@@ -41,32 +39,42 @@ const ThemedCheckbox = (props: CheckboxProps) => {
 
 export const SongOptions = () => {
   const {
-    songSettings: { display },
-  } = useAppState();
+    display,
+    setDisplaySegmentTimes,
+    setDisplayChordTimes,
+    setDisplayChordTimesOne,
+    setDisplayStrummingPattern,
+  } = useShallowAppStore(state => ({
+    display: state.songSettings.display,
+    setDisplaySegmentTimes: state.setDisplaySegmentTimes,
+    setDisplayChordTimes: state.setDisplayChordTimes,
+    setDisplayChordTimesOne: state.setDisplayChordTimesOne,
+    setDisplayStrummingPattern: state.setDisplayStrummingPattern,
+  }));
 
   return (
     <VStack align='start' spacing={3}>
       <ThemedCheckbox
-        isChecked={display.times.value}
-        onChange={() => display.times.set?.(!display.times.value)}
+        isChecked={display.segmentTimes}
+        onChange={() => setDisplaySegmentTimes(!display.segmentTimes)}
       >
         Segment Times
       </ThemedCheckbox>
       <ThemedCheckbox
-        isChecked={display.chordTimes.value}
-        onChange={() => display.chordTimes.set?.(!display.chordTimes.value)}
+        isChecked={display.chordTimes}
+        onChange={() => setDisplayChordTimes(!display.chordTimes)}
       >
         Chord Times
       </ThemedCheckbox>
       <ThemedCheckbox
-        isChecked={display.chordTimesOne.value}
-        onChange={() => display.chordTimesOne.set?.(!display.chordTimesOne.value)}
+        isChecked={display.chordTimesOne}
+        onChange={() => setDisplayChordTimesOne(!display.chordTimesOne)}
       >
         Chord Times 1
       </ThemedCheckbox>
       <ThemedCheckbox
-        isChecked={display.strummingPattern.value}
-        onChange={() => display.strummingPattern.set?.(!display.strummingPattern.value)}
+        isChecked={display.strummingPattern}
+        onChange={() => setDisplayStrummingPattern(!display.strummingPattern)}
       >
         Strumming Pattern
       </ThemedCheckbox>

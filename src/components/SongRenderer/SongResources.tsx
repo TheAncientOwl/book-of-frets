@@ -6,13 +6,13 @@
  *
  * @file SongResources.tsx
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 0.12
  * @description Render song resources data.
  */
 
 import type { TSong } from '@/common/types/song.types';
 import { SongResource } from '@/components/SongRenderer/SongResource';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useAppStore } from '@/store/index';
 import { Box, Divider, Flex, Heading, Icon, List, ListItem, Text } from '@chakra-ui/react';
 import { Fragment } from 'react';
 import { MdLibraryMusic } from 'react-icons/md';
@@ -20,7 +20,7 @@ import { MdLibraryMusic } from 'react-icons/md';
 type TSongResourcesProps = Pick<TSong, 'res'>;
 
 export const SongResources = (props: TSongResourcesProps) => {
-  const { song: theme } = useAppTheme();
+  const theme = useAppStore(state => state.appTheme.song);
 
   return (
     <Box mt='1em' padding='1em 1.25em'>

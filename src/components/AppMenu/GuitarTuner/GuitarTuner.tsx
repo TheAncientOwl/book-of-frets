@@ -6,7 +6,7 @@
  *
  * @file GuitarTuner.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description Main tuner component.
  */
 
@@ -21,8 +21,8 @@ import { FrequencyDisplay } from '@/components/AppMenu/GuitarTuner/FrequencyDisp
 import { FrequencyProgressIndicator } from '@/components/AppMenu/GuitarTuner/FrequencyProgressIndicator';
 import { FrequencyThresholdSlider } from '@/components/AppMenu/GuitarTuner/FrequencyThresholdSlider';
 import { Strings, type TStringName } from '@/components/AppMenu/GuitarTuner/Strings';
-import { LocalStorageKeys } from '@/state/common/storageKeys';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { LocalStorageKeys } from '@/store/common/storageKeys';
+import { useAppStore } from '@/store/index';
 
 const StandardNotes: TNotesConfiguration = [
   { name: 'E2', freq: 82.41 },
@@ -44,13 +44,9 @@ const StringToNoteIndex = {
 
 export const GuitarTuner = () => {
   const pitchDetector = usePitchDetector(StandardNotes);
-  const {
-    appMenu: {
-      items: { tuner: theme },
-    },
-  } = useAppTheme();
   const [threshold, setThreshold] = useLocalStorage<number>(LocalStorageKeys.tunerThreshold, 2);
   const [activeString, setActiveString] = useState<TStringName | null>(null);
+  const theme = useAppStore(store => store.appTheme.appMenu.items.tuner);
 
   const startTuner = () => {
     pitchDetector.startTuner();

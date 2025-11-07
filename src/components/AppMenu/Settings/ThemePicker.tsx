@@ -6,24 +6,25 @@
  *
  * @file ThemePicker.tsx
  * @author Alexandru Delegeanu
- * @version 0.14
+ * @version 0.15
  * @description Display app themes and handles theme setting.
  */
 
 import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
-import { useAppState } from '@/state/hooks/useAppState';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
-import DefaultAppTheme from '@/state/theme/default.min.json';
-import type { TAppTheme, TThemeIndexEntry } from '@/state/theme/types';
-import { deepMerge } from '@/state/theme/utils/patchLocalStorageTheme';
+import DefaultAppTheme from '@/store/theme/default.min.json';
+import type { TAppTheme, TThemeIndexEntry } from '@/store/theme/types';
+import { deepMerge } from '@/store/theme/utils/patchLocalStorageTheme';
+import { useAppStore, useShallowAppStore } from '@/store/index';
 import { Box, Flex, Heading, Image } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 
 export const ThemePicker = () => {
-  const { appMenu } = useAppTheme();
-  const theme = appMenu.items.settings.themePicker;
+  const theme = useAppStore(state => state.appTheme.appMenu.items.settings.themePicker);
 
-  const { appTheme, appLogoURL } = useAppState();
+  const { setAppTheme, setApplogoURL } = useShallowAppStore(state => ({
+    setAppTheme: state.setAppTheme,
+    setApplogoURL: state.setAppLogoURL,
+  }));
 
   const [themesIndex, setThemesIndex] = useState<TThemeIndexEntry[]>([]);
 
@@ -43,8 +44,8 @@ export const ThemePicker = () => {
       `${import.meta.env.BASE_URL}themes/${directory}/config.min.json.gz.bin`,
       `${import.meta.env.BASE_URL}themes/${directory}/config.min.json`,
       json => {
-        appTheme.set?.(deepMerge(DefaultAppTheme, json as TAppTheme));
-        appLogoURL.set?.(`${import.meta.env.BASE_URL}themes/${directory}/logo.svg`);
+        setAppTheme(deepMerge(DefaultAppTheme, json as TAppTheme));
+        setApplogoURL(`${import.meta.env.BASE_URL}themes/${directory}/logo.svg`);
       },
       error => {
         console.error(`Failed to fetch theme data of file ${directory}`, error);

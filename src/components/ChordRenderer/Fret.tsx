@@ -6,12 +6,12 @@
  *
  * @file Fret.tsx
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 0.12
  * @description Render chrod based on given config.
  */
 
 import type { TGuitarString } from '@/common/types/common.types';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useAppStore } from '@/store/index';
 import { Circle, Divider, Flex, Icon, Spacer } from '@chakra-ui/react';
 import { Fragment } from 'react';
 import { IoCloseSharp } from 'react-icons/io5';
@@ -26,7 +26,7 @@ const MUTED_STRING_ID = -1;
 const DISTANCE_BETWEEN_CHORDS = 20;
 
 export const Fret = (props: TFretProps) => {
-  const { fret: theme } = useAppTheme();
+  const theme = useAppStore(state => state.appTheme.fret);
 
   return (
     <Flex

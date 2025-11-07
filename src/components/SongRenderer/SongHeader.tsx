@@ -6,12 +6,12 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 0.12
  * @description Render song header data.
  */
 
 import type { TSong } from '@/common/types/song.types';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useAppStore } from '@/store/index';
 import {
   Box,
   Circle,
@@ -42,8 +42,8 @@ const typeToIcon = {
 };
 
 export const SongHeader = (props: TSongHeaderProps) => {
-  const { song: theme } = useAppTheme();
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const theme = useAppStore(state => state.appTheme.song);
 
   return (
     <Flex direction='column' alignItems='center' mb='15px'>

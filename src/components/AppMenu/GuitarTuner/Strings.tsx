@@ -6,11 +6,11 @@
  *
  * @file Strings.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 0.5
  * @description Strings display for the guitar tuner.
  */
 
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useAppStore } from '@/store/index';
 import { Circle, Divider, Flex, type FlexProps } from '@chakra-ui/react';
 
 export type TStringName = 'E' | 'A' | 'D' | 'G' | 'B' | 'e';
@@ -22,11 +22,7 @@ type TStringProps = {
 };
 
 const String = (props: TStringProps) => {
-  const {
-    appMenu: {
-      items: { tuner: theme },
-    },
-  } = useAppTheme();
+  const theme = useAppStore(state => state.appTheme.appMenu.items.tuner);
 
   const colors = props.active ? theme.strings.active : theme.strings.inactive;
 

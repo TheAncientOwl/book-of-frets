@@ -6,7 +6,7 @@
  *
  * @file SongChordsList.tsx
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description Song chords list component.
  */
 
@@ -17,8 +17,7 @@ import {
   AccordionPanel,
 } from '@/components/Accordion/Accordion';
 import { Chord } from '@/components/ChordRenderer/Chord';
-import { useAppState } from '@/state/hooks/useAppState';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useShallowAppStore } from '@/store/index';
 import { Heading, List, ListItem } from '@chakra-ui/react';
 
 type TSongChordsList = {
@@ -26,8 +25,10 @@ type TSongChordsList = {
 };
 
 export const SongChordsList = (props: TSongChordsList) => {
-  const { chordsIndex } = useAppState();
-  const { song: theme } = useAppTheme();
+  const { chordsIndex, theme } = useShallowAppStore(state => ({
+    chordsIndex: state.chordsIndex,
+    theme: state.appTheme.song,
+  }));
 
   return (
     <Accordion defaultOpen>

@@ -6,12 +6,12 @@
  *
  * @file SongResource.tsx
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description Display song resource data.
  */
 
 import type { TResource } from '@/common/types/song.types';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useAppStore } from '@/store/index';
 import { AspectRatio, Box, Flex, Icon, Link, ListItem, Skeleton, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import { IoMdMusicalNote } from 'react-icons/io';
@@ -41,9 +41,10 @@ const getYouTubeVideoId = (url: string): string | null => {
 };
 
 export const SongResource = (props: TSongResourceProps) => {
-  const { song: theme } = useAppTheme();
-  const videoId = getYouTubeVideoId(props.link);
   const [isLoaded, setIsLoaded] = useState(false);
+  const theme = useAppStore(state => state.appTheme.song);
+
+  const videoId = getYouTubeVideoId(props.link);
 
   return (
     <ListItem>

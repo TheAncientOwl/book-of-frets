@@ -6,15 +6,15 @@
  *
  * @file Refresh.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description .Refresh configs
  */
 
-import { useAppStateValue } from '@/state/hooks/useAppStateValue';
+import { useAppStore } from '@/store/index';
 import { Button, VStack, useToast } from '@chakra-ui/react';
 
 export const Refresh = () => {
-  const { updateChordsIndex } = useAppStateValue();
+  const updateChordsIndex = useAppStore(state => state.updateChordsIndex);
   const toast = useToast();
 
   const handleRefresh = () => {

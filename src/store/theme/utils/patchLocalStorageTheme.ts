@@ -6,12 +6,12 @@
  *
  * @file patchLocalStorageTheme.ts
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 0.6
  * @description Patch local storage for theme.
  */
 
-import { LocalStorageKeys } from '@/state/common/storageKeys';
-import DefaultAppTheme from '@/state/theme/default.min.json';
+import { LocalStorageKeys } from '@/store/common/storageKeys';
+import DefaultAppTheme from '@/store/theme/default.min.json';
 
 /**
  * @brief Recursively deep-merges two objects.
@@ -48,15 +48,22 @@ export const deepMerge = <T>(base: T, override: Partial<T>): T => {
 };
 
 export const patchLocalStorageTheme = () => {
-  const storedTheme = localStorage.getItem(LocalStorageKeys.appTheme);
-  if (storedTheme) {
-    try {
-      console.info('Patching theme');
-      const parsed = JSON.parse(storedTheme);
-      const merged = deepMerge(DefaultAppTheme, parsed);
-      console.info({ before: parsed, after: merged, default: DefaultAppTheme });
+  const storedState = localStorage.getItem(LocalStorageKeys.appStorage);
 
-      localStorage.setItem(LocalStorageKeys.appTheme, JSON.stringify(merged));
+  if (storedState) {
+    try {
+      const state = JSON.parse(storedState);
+      const storedTheme = state['appTheme'];
+
+      console.info('Patching theme');
+      const merged = deepMerge(DefaultAppTheme, storedTheme);
+
+      console.info({ before: storedTheme, after: merged, default: DefaultAppTheme });
+
+      localStorage.setItem(
+        LocalStorageKeys.appStorage,
+        JSON.stringify({ ...state, appTheme: merged })
+      );
 
       console.info('Patched theme successfully');
     } catch (err) {

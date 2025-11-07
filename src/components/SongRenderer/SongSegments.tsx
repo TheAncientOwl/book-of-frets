@@ -6,7 +6,7 @@
  *
  * @file SongSegments.tsx
  * @author Alexandru Delegeanu
- * @version 0.16
+ * @version 0.17
  * @description Render song segments data.
  */
 
@@ -18,7 +18,7 @@ import {
   AccordionPanel,
 } from '@/components/Accordion/Accordion';
 import { SongSegmentBody, SongSegmentHeading } from '@/components/SongRenderer/SongSegment';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useAppStore } from '@/store/index';
 
 type TSongSegmentsProps = {
   segments: Record<string, TSongSegment>;
@@ -27,7 +27,7 @@ type TSongSegmentsProps = {
 };
 
 export const SongSegments = (props: TSongSegmentsProps) => {
-  const { song: theme } = useAppTheme();
+  const theme = useAppStore(state => state.appTheme.song);
 
   return (
     <>

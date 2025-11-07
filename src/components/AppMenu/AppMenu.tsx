@@ -6,15 +6,14 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.23
+ * @version 0.24
  * @description App menu component.
  */
 
+import { useSessionStorage } from '@/common/hooks/useSessionStorage';
 import { NavigationList } from '@/components/AppMenu/Navigation/NavigationList';
 import Settings from '@/components/AppMenu/Settings/Settings';
-import { useSessionStorage } from '@/common/hooks/useSessionStorage';
-import { useAppState } from '@/state/hooks/useAppState';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { SessionStorageKeys } from '@/store/common/storageKeys';
 import {
   Box,
   Link as ChakraLink,
@@ -39,16 +38,15 @@ import {
 } from '@chakra-ui/react';
 import { useRef, type PropsWithChildren } from 'react';
 import { MdCopyright } from 'react-icons/md';
-import { SessionStorageKeys } from '@/state/common/storageKeys';
 // import { SongsHistory } from '@/components/AppMenu/Navigation/SongsHistory';
-import { lazy, Suspense } from 'react';
 import { Loading } from '@/components/Loading/Loading';
+import { useAppStore, useShallowAppStore } from '@/store/index';
+import { lazy, Suspense } from 'react';
 
 const GuitarTuner = lazy(() => import('@/components/AppMenu/GuitarTuner/GuitarTuner'));
 
 const TabHeader = (props: PropsWithChildren) => {
-  const { appMenu } = useAppTheme();
-  const theme = appMenu.tabs;
+  const theme = useAppStore(state => state.appTheme.appMenu.tabs);
 
   return (
     <Tab
@@ -63,10 +61,12 @@ const TabHeader = (props: PropsWithChildren) => {
 };
 
 export const AppMenu = () => {
-  const { appMenu: theme } = useAppTheme();
-  const { appLogoURL } = useAppState();
-  const [activeTab, setActiveTab] = useSessionStorage<number>(SessionStorageKeys.menuActiveTab, 0);
+  const { theme, appLogoURL } = useShallowAppStore(state => ({
+    theme: state.appTheme.appMenu,
+    appLogoURL: state.appLogoURL,
+  }));
 
+  const [activeTab, setActiveTab] = useSessionStorage<number>(SessionStorageKeys.menuActiveTab, 0);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const btnRef = useRef(null);
@@ -95,7 +95,7 @@ export const AppMenu = () => {
         _hover={{ backgroundColor: theme.menuButton.hover }}
       >
         <Image
-          src={appLogoURL.value}
+          src={appLogoURL}
           alt={`Book of Frets theme logo`}
           width='100%'
           height='100%'
@@ -121,7 +121,7 @@ export const AppMenu = () => {
           />
           <DrawerHeader>
             <Flex direction='row' gap='5px'>
-              <Image src={appLogoURL.value} alt='Book of Frets Logo' maxW='25px' />
+              <Image src={appLogoURL} alt='Book of Frets Logo' maxW='25px' />
               <Box
                 as='span'
                 fontWeight='bold'

@@ -6,24 +6,25 @@
  *
  * @file ChordsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.19
+ * @version 0.20
  * @description Handle chords rendering.
  */
 
 import type { TChord } from '@/common/types/chord.types';
 import { Chord } from '@/components/ChordRenderer/Chord';
 import { createSmartList } from '@/components/SmartList/index';
-import { useAppState } from '@/state/hooks/useAppState';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
-import { setDocumentThemeColor } from '@/state/theme/utils/setDocumentThemeColor';
+import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
+import { useShallowAppStore } from '@/store/index';
 import { Box, Container, Flex, SimpleGrid } from '@chakra-ui/react';
 import { Fragment, useLayoutEffect } from 'react';
 
 const ChordsList = createSmartList<[string, TChord]>();
 
 export const ChordsIndexPage = () => {
-  const { chordsIndex } = useAppState();
-  const { chordsIndexPage: theme } = useAppTheme();
+  const { chordsIndex, theme } = useShallowAppStore(state => ({
+    chordsIndex: state.chordsIndex,
+    theme: state.appTheme.chordsIndexPage,
+  }));
 
   useLayoutEffect(() => setDocumentThemeColor(theme.background), [theme.background]);
 

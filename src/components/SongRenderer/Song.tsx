@@ -6,19 +6,19 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.32
+ * @version 0.33
  * @description Render song based on given config.
  */
 
 import type { TSong } from '@/common/types/song.types';
+import { Loading } from '@/components/Loading/Loading';
 import { SongChordsList } from '@/components/SongRenderer/SongChordsList';
 import { SongHeader } from '@/components/SongRenderer/SongHeader';
 import { SongSegments } from '@/components/SongRenderer/SongSegments';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useAppStore } from '@/store/index';
 import { Box, Container } from '@chakra-ui/react';
-import { useInView } from 'react-intersection-observer';
 import { lazy, Suspense } from 'react';
-import { Loading } from '@/components/Loading/Loading';
+import { useInView } from 'react-intersection-observer';
 
 const SongNotes = lazy(() => import('@/components/SongRenderer/SongNotes'));
 const SongResources = lazy(() => import('@/components/SongRenderer/SongResources'));
@@ -28,8 +28,8 @@ type TSongProps = TSong & {
 };
 
 export const Song = (props: TSongProps) => {
-  const { song: theme } = useAppTheme();
   const { ref, inView } = useInView({ triggerOnce: true, rootMargin: '300px' });
+  const theme = useAppStore(state => state.appTheme.song);
 
   return (
     <Container

@@ -6,13 +6,12 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.24
+ * @version 0.25
  * @description List all available songs.
  */
 
 import type { TSongsIndexEntry } from '@/common/types/song.types';
-import { useAppState } from '@/state/hooks/useAppState';
-import { useAppTheme } from '@/state/hooks/useAppTheme';
+import { useShallowAppStore } from '@/store/index';
 import {
   Box,
   Flex,
@@ -46,11 +45,14 @@ const typeToIcon = {
 const AboveTheFoldSongsCount = 10;
 
 export const SongCard = (props: SongProps) => {
-  const { songCard: theme } = useAppTheme();
+  const { theme, chordsIndex } = useShallowAppStore(state => ({
+    theme: state.appTheme.songCard,
+    chordsIndex: state.chordsIndex,
+  }));
+
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const navigate = useNavigate();
-  const { chordsIndex } = useAppState();
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   return (
     <SimpleGrid

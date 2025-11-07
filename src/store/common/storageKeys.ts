@@ -4,19 +4,17 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/oopsie-logsy/blob/main/LICENSE
  *
- * @file useAppState.ts
+ * @file storageKeys.ts
  * @author Alexandru Delegeanu
- * @version 0.1
- * @description .
+ * @version 0.7
+ * @description House of all local/session storage keys.
  */
 
-import { AppStateContext } from '@/state/AppStateContext';
-import { useContext } from 'react';
+export const LocalStorageKeys = {
+  appStorage: 'app-storage',
+  tunerThreshold: 'tuner-threshold',
+};
 
-export const useAppState = () => {
-  const context = useContext(AppStateContext);
-  if (!context) {
-    throw new Error('useAppStateContext must be used within an AppState.Provider');
-  }
-  return context;
+export const SessionStorageKeys = {
+  menuActiveTab: 'menu-active-tab',
 };
