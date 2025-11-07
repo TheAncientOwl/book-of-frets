@@ -6,7 +6,7 @@
  *
  * @file vite.config.ts
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 0.11
  * @description Vite configuration.
  */
 
@@ -30,17 +30,6 @@ export default defineConfig({
           react: ['react', 'react-dom', 'react-router-dom'],
           chakra: ['@chakra-ui/react', '@emotion/react', '@emotion/styled'],
           'framer-motion': ['framer-motion'],
-          'react-icons': [
-            'react-icons/md',
-            'react-icons/io5',
-            'react-icons/io',
-            'react-icons/gi',
-            'react-icons/tb',
-            'react-icons/hi',
-            'react-icons/lib',
-            'react-icons/fa',
-            'react-icons/ri',
-          ],
         },
       },
     },
