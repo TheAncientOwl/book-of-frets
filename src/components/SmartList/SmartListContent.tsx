@@ -6,14 +6,26 @@
  *
  * @file SmartListContent.tsx
  * @author Alexandru Delegeanu
- * @version 0.6
+ * @version 0.7
  * @description Render filtered, virtualized items of the SmartList.
  */
 
+import { Loading } from '@/components/Loading/Loading';
 import type { TSmartListContextUse } from '@/components/SmartList/index';
 import { Box, type BoxProps, type ListProps, type SimpleGridProps } from '@chakra-ui/react';
-import { Fragment, useEffect, useRef, useState, type ComponentType, type ReactNode } from 'react';
-import { AutoSizer, List } from 'react-virtualized';
+import {
+  Fragment,
+  Suspense,
+  lazy,
+  useEffect,
+  useRef,
+  useState,
+  type ComponentType,
+  type ReactNode,
+} from 'react';
+
+const AutoSizer = lazy(() => import('react-virtualized').then(mod => ({ default: mod.AutoSizer })));
+const List = lazy(() => import('react-virtualized').then(mod => ({ default: mod.List })));
 
 export type TSmartListContentProps<T> = {
   useContext: TSmartListContextUse<T>;
@@ -48,22 +60,32 @@ export const SmartListContent = <T,>(props: TSmartListContentProps<T>) => {
     }
 
     return (
-      <AutoSizer>
-        {({ height, width }) => (
-          <List
-            overscanRowCount={props.virtualizedOverscanRowCount}
-            height={height}
-            width={width}
-            rowCount={data.length}
-            rowHeight={rowHeight}
-            rowRenderer={({ index, key, style }) => (
-              <Box aria-label={`item-${index}`} key={key} style={style}>
-                {props.render(data[index], index)}
-              </Box>
-            )}
-          />
-        )}
-      </AutoSizer>
+      <Suspense fallback={<Loading />}>
+        <AutoSizer>
+          {({ height, width }: { height: number; width: number }) => (
+            <List
+              overscanRowCount={props.virtualizedOverscanRowCount}
+              height={height}
+              width={width}
+              rowCount={data.length}
+              rowHeight={rowHeight}
+              rowRenderer={({
+                index,
+                key,
+                style,
+              }: {
+                index: number;
+                key: string;
+                style: React.CSSProperties;
+              }) => (
+                <Box aria-label={`item-${index}`} key={key} style={style}>
+                  {props.render(data[index], index)}
+                </Box>
+              )}
+            />
+          )}
+        </AutoSizer>
+      </Suspense>
     );
   }
 

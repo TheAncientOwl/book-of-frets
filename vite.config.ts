@@ -6,7 +6,7 @@
  *
  * @file vite.config.ts
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description Vite configuration.
  */
 
@@ -17,9 +17,6 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   base: '/',
-  optimizeDeps: {
-    include: ['react-virtualized'],
-  },
   build: {
     minify: 'terser',
     terserOptions: {
@@ -31,7 +28,6 @@ export default defineConfig({
       output: {
         manualChunks: {
           react: ['react', 'react-dom', 'react-router-dom'],
-          'react-virtualized': ['react-virtualized'],
           chakra: ['@chakra-ui/react', '@emotion/react', '@emotion/styled'],
           'framer-motion': ['framer-motion'],
           'react-intersection-observer': ['react-intersection-observer'],
