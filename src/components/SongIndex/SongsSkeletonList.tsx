@@ -6,7 +6,7 @@
  *
  * @file SongsSkeletonList.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Render songs skeleton list.
  */
 
@@ -17,14 +17,12 @@ type TSongsSkeletonListProps = {
   items: number;
 };
 
-export const SongsSkeletonList = (props: TSongsSkeletonListProps) => {
+const SkeletonSongCard = () => {
   const theme = useAppStore(state => state.appTheme.songCard);
 
-  const card = (
+  return (
     <SimpleGrid
       gridTemplateColumns={['26px 90px 1000fr 1fr', '26px 100px 1000fr 1fr']}
-      columns={{ base: 3 }}
-      cursor='pointer'
       borderStyle='solid'
       borderWidth='1px'
       padding={['8px']}
@@ -58,7 +56,14 @@ export const SongsSkeletonList = (props: TSongsSkeletonListProps) => {
       </Flex>
     </SimpleGrid>
   );
+};
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  return <List>{Array.from({ length: props.items }).map(_ => card)}</List>;
+export const SongsSkeletonList = (props: TSongsSkeletonListProps) => {
+  return (
+    <List>
+      {Array.from({ length: props.items }).map((_, index) => (
+        <SkeletonSongCard key={index} />
+      ))}
+    </List>
+  );
 };
