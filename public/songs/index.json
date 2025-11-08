@@ -218,6 +218,13 @@
       "chordIDs": ["D", "DM7", "D6", "D#dim7", "Em7", "A7", "D7", "G#dim7", "E7", "A", "G", "Gm"]
     },
     {
+      "title": "Feliz Navidad",
+      "artists": ["José Feliciano"],
+      "directory": "feliz-navidad",
+      "type": ["acoustic"],
+      "chordIDs": ["G", "A7", "D", "Bm"]
+    },
+    {
       "title": "All I Want For Christmas Is You",
       "artists": ["Mariah Carey"],
       "directory": "all-i-want-for-christmas-is-you",
