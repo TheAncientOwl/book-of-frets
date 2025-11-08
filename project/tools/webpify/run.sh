@@ -6,7 +6,7 @@
 #
 # @file run.sh
 # @author Alexandru Delegeanu
-# @version 0.1
+# @version 0.2
 # @description Runs @see webpify.py
 #
 
@@ -23,6 +23,6 @@ fi
 
 source $home/.venv/bin/activate
 
-python3 $home/webpify.py "$1"
+python3 $home/webpify.py "$@"
 
 deactivate
