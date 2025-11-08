@@ -5,7 +5,7 @@ Generates necessary images for song cover images used by cards / song UI compone
 ## Usage
 
 ```bash
-$ ./project/tools/song-covers-generator/run.sh <input_image_path>
+$ ./project/tools/song/resize-cover/run.sh <input_image_path>
 ```
 
 ## Notes
