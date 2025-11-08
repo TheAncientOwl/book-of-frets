@@ -5,8 +5,10 @@
 ## Usage
 
 ```bash
-$ ./project/tools/webpify/run.sh <input_image_path>
+$ ./project/tools/webpify/run.sh <input_image_path> [quality]
 ```
+
+The `quality` argument is optional. If omitted, it defaults to 100.
 
 ## Notes
 
