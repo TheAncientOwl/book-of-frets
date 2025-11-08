@@ -6,11 +6,10 @@
  *
  * @file SmartListContent.tsx
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description Render filtered, virtualized items of the SmartList.
  */
 
-import { Loading } from '@/components/Loading/Loading';
 import type { TSmartListContextUse } from '@/components/SmartList/index';
 import { Box, type BoxProps, type ListProps, type SimpleGridProps } from '@chakra-ui/react';
 import {
@@ -34,6 +33,7 @@ export type TSmartListContentProps<T> = {
   asProps?: SimpleGridProps | ListProps | BoxProps;
   virtualized?: boolean;
   virtualizedOverscanRowCount?: number;
+  virtualizedFallback?: ReactNode;
 };
 
 export const SmartListContent = <T,>(props: TSmartListContentProps<T>) => {
@@ -60,7 +60,7 @@ export const SmartListContent = <T,>(props: TSmartListContentProps<T>) => {
     }
 
     return (
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={props.virtualizedFallback}>
         <AutoSizer>
           {({ height, width }: { height: number; width: number }) => (
             <List

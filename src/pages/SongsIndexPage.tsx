@@ -6,16 +6,17 @@
  *
  * @file SongsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.24
+ * @version 0.25
  * @description List all available songs.
  */
 
 import type { TSongsIndexEntry } from '@/common/types/song.types';
 import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
 import { createSmartList } from '@/components/SmartList/index';
-import { SongCard } from '@/components/SongIndexEntry/SongCard';
-import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
+import { SongCard } from '@/components/SongIndex/SongCard';
+import { SongsSkeletonList } from '@/components/SongIndex/SongsSkeletonList';
 import { useAppStore } from '@/store/index';
+import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
 import { Box, Container, Flex } from '@chakra-ui/react';
 import { useEffect, useLayoutEffect, useState } from 'react';
 
@@ -80,6 +81,7 @@ export const SongsIndexPage = () => {
           }}
         >
           <SongsList.Content
+            virtualizedFallback={<SongsSkeletonList items={11} />}
             virtualized
             virtualizedOverscanRowCount={3}
             useContext={SongsList.context.use}
