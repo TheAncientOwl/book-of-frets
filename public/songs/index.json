@@ -92,6 +92,13 @@
       "chordIDs": ["Am7", "C", "Ft", "G"]
     },
     {
+      "title": "Beautiful People",
+      "artists": ["Ed Sheeran", "Khalid"],
+      "directory": "beautiful-people",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "Am", "F", "Em"]
+    },
+    {
       "title": "Dusk Till Dawn",
       "artists": ["Zayn", "Sia"],
       "directory": "dusk-till-dawn",
