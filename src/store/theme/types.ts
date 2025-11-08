@@ -6,7 +6,7 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 0.17
+ * @version 0.18
  * @description App theme types
  */
 
@@ -196,7 +196,7 @@ type TSongCardTheme = {
   };
 };
 
-type TSongTheme = {
+export type TSongTheme = {
   background: string;
   header: {
     title: string;

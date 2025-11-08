@@ -6,16 +6,16 @@
  *
  * @file SongPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.20
+ * @version 0.21
  * @description Handle song rendering based on url.
  */
 
 import type { TSong } from '@/common/types/song.types';
 import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
-import { Loading } from '@/components/Loading/Loading';
+import { SkeletonSong as SkeletonSongRenderer } from '@/components/SongRenderer/SkeletonSong';
 import { Song as SongRenderer } from '@/components/SongRenderer/Song';
-import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
 import { useAppStore } from '@/store/index';
+import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
@@ -42,7 +42,7 @@ export const SongPage = () => {
     );
   }, [directory, navigate]);
 
-  if (!songConfig) return <Loading />;
+  if (!songConfig) return <SkeletonSongRenderer />;
 
   return <SongRenderer directory={songConfig.directory} {...songConfig.data} />;
 };
