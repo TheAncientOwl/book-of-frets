@@ -85,6 +85,13 @@
       "chordIDs": ["Em", "C", "G", "D"]
     },
     {
+      "title": "Mercy",
+      "artists": ["Shawn Mendes"],
+      "directory": "mercy",
+      "type": ["acoustic"],
+      "chordIDs": []
+    },
+    {
       "title": "Adore You",
       "artists": ["Harry Styles"],
       "directory": "adore-you",
