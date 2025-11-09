@@ -225,6 +225,13 @@
       "chordIDs": ["D", "DM7", "D6", "D#dim7", "Em7", "A7", "D7", "G#dim7", "E7", "A", "G", "Gm"]
     },
     {
+      "title": "Rudolph The Red Nosed Reindeer",
+      "artists": ["Gene Autry"],
+      "directory": "rudolph-the-red-nosed-reindeer",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "G/B", "Am", "G", "Em", "D", "D7", "A7"]
+    },
+    {
       "title": "Feliz Navidad",
       "artists": ["José Feliciano"],
       "directory": "feliz-navidad",
