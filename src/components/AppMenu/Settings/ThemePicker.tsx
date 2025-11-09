@@ -6,7 +6,7 @@
  *
  * @file ThemePicker.tsx
  * @author Alexandru Delegeanu
- * @version 0.15
+ * @version 0.16
  * @description Display app themes and handles theme setting.
  */
 
@@ -32,6 +32,7 @@ export const ThemePicker = () => {
     fetchArchivedJSON(
       `${import.meta.env.BASE_URL}themes/index.min.json.gz.bin`,
       `${import.meta.env.BASE_URL}themes/index.min.json`,
+      `${import.meta.env.BASE_URL}themes/index.json`,
       json => setThemesIndex((json as { index: TThemeIndexEntry[] }).index),
       error => {
         console.error('Failed to fetch Themes index:', error);
@@ -43,6 +44,7 @@ export const ThemePicker = () => {
     fetchArchivedJSON(
       `${import.meta.env.BASE_URL}themes/${directory}/config.min.json.gz.bin`,
       `${import.meta.env.BASE_URL}themes/${directory}/config.min.json`,
+      `${import.meta.env.BASE_URL}themes/${directory}/config.json`,
       json => {
         setAppTheme(deepMerge(DefaultAppTheme, json as TAppTheme));
         setApplogoURL(`${import.meta.env.BASE_URL}themes/${directory}/logo.svg`);

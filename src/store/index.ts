@@ -6,7 +6,7 @@
  *
  * @file index.ts
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 0.2
  * @description Zustand global app store.
  */
 
@@ -60,6 +60,7 @@ export const useAppStore = create<TAppStore, [['zustand/persist', unknown]]>(
           await fetchArchivedJSON(
             `${import.meta.env.BASE_URL}chords/index.min.json.gz.bin`,
             `${import.meta.env.BASE_URL}chords/index.min.json`,
+            `${import.meta.env.BASE_URL}chords/index.json`,
             json => set({ chordsIndex: (json as { index: TChordsIndex }).index }),
             error => {
               console.error(error);

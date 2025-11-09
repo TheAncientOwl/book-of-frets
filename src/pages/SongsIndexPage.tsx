@@ -6,7 +6,7 @@
  *
  * @file SongsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.25
+ * @version 0.26
  * @description List all available songs.
  */
 
@@ -33,6 +33,7 @@ export const SongsIndexPage = () => {
     fetchArchivedJSON(
       `${import.meta.env.BASE_URL}songs/index.min.json.gz.bin`,
       `${import.meta.env.BASE_URL}songs/index.min.json`,
+      `${import.meta.env.BASE_URL}songs/index.json`,
       json => setSongsIndex((json as { index: TSongsIndexEntry[] }).index),
       error => {
         console.error('Failed to fetch songs index:', error);

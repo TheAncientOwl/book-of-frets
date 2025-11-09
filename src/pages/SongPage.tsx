@@ -6,7 +6,7 @@
  *
  * @file SongPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.21
+ * @version 0.22
  * @description Handle song rendering based on url.
  */
 
@@ -34,6 +34,7 @@ export const SongPage = () => {
     fetchArchivedJSON(
       `${import.meta.env.BASE_URL}songs/${directory}/config.min.json.gz.bin`,
       `${import.meta.env.BASE_URL}songs/${directory}/config.min.json`,
+      `${import.meta.env.BASE_URL}songs/${directory}/config.json`,
       json => setSongConfig({ data: json as TSong, directory }),
       error => {
         console.error(error);

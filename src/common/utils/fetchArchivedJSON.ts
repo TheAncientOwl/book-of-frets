@@ -6,7 +6,7 @@
  *
  * @file fetchArchivedJSON.ts
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Fetches archived JSON config.
  */
 
@@ -15,9 +15,28 @@ import { gunzipSync, strFromU8 } from 'fflate';
 export const fetchArchivedJSON = async (
   archiveURL: string,
   backupJsonURL: string,
+  devJsonURL: string,
   onSuccess: (json: unknown) => void,
   onError: (err: unknown) => void
 ) => {
+  if (import.meta.env.DEV) {
+    console.info(`::fetchArchivedJSON(): dev mode - fetching ${devJsonURL}`);
+
+    fetch(devJsonURL)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(
+            `::fetchArchivedJSON(): Failed to fetch config.json: ${response.statusText}`
+          );
+        }
+        return response.json();
+      })
+      .then(json => onSuccess(json))
+      .catch(error => onError(error));
+
+    return;
+  }
+
   try {
     const response = await fetch(archiveURL);
     if (!response.ok) throw new Error('not found');
