@@ -6,7 +6,7 @@
  *
  * @file fetchArchivedJSON.ts
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 0.4
  * @description Fetches archived JSON config.
  */
 
@@ -20,7 +20,7 @@ export const fetchArchivedJSON = async (
   onError: (err: unknown) => void
 ) => {
   if (import.meta.env.DEV) {
-    console.info(`::fetchArchivedJSON(): dev mode - fetching ${devJsonURL}`);
+    console.info(`[DevMode] - fetching ${devJsonURL}`);
 
     fetch(devJsonURL)
       .then(response => {
