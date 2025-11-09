@@ -15,6 +15,13 @@
       "chordIDs": ["Am", "Ft", "C", "G", "E"]
     },
     {
+      "title": "Glimpse Of Us",
+      "artists": ["Joji"],
+      "directory": "glimpse-of-us",
+      "type": ["acoustic"],
+      "chordIDs": ["Am", "D7", "G", "Em", "D/F#"]
+    },
+    {
       "title": "Before You Go",
       "artists": ["Lewis Capaldi"],
       "directory": "before-you-go",
@@ -25,13 +32,6 @@
       "title": "Someone You Loved",
       "artists": ["Lewis Capaldi"],
       "directory": "someone-you-loved",
-      "type": ["acoustic"],
-      "chordIDs": ["C", "G", "Am", "F", "Dm"]
-    },
-    {
-      "title": "Someone You Loved | Easy",
-      "artists": ["Lewis Capaldi"],
-      "directory": "someone-you-loved-easy",
       "type": ["acoustic"],
       "chordIDs": ["C", "G", "Am", "F", "Dm"]
     },
@@ -167,6 +167,13 @@
       "directory": "issues",
       "type": ["acoustic"],
       "chordIDs": ["C", "D", "G/B", "C", "D/F#", "Em"]
+    },
+    {
+      "title": "Someone You Loved | Easy",
+      "artists": ["Lewis Capaldi"],
+      "directory": "someone-you-loved-easy",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "G", "Am", "F", "Dm"]
     },
     {
       "title": "Shivers",
