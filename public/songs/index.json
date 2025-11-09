@@ -89,7 +89,7 @@
       "artists": ["Shawn Mendes"],
       "directory": "mercy",
       "type": ["acoustic"],
-      "chordIDs": []
+      "chordIDs": ["Em", "G", "Bm", "A", "D"]
     },
     {
       "title": "Adore You",
