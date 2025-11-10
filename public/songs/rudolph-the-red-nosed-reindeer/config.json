@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "Rudolph The Red Nosed Reindeer",
   "artists": ["Gene Autry"],
@@ -31,7 +31,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": "- - A5 - A3 - - A2 - - A0 - -"
+          "items": "- - - A5 - A3 - - - A2 - - - A0 - - -"
         }
       ]
     },
@@ -75,11 +75,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": "[C] - B8 - B10 - - B8 - G9 - - e8 - - | [C] - B10 - B8 - - - - | [C] - B8 - - B10 - - B8 - - B10 - - B8 - - - B10 B13 - - - | [G] - B12 - - - -"
+          "items": "[C] - B8 - B10 - - B8 - G9 - - e8 - - | [C] - B10 - B8 - - - - - - | [C] - B8 - - B10 - - B8 - - B10 - - B8 - - - - B10/13 - - - | [G] - B12 - - - - - - - - - - -"
         },
         {
           "times": 1,
-          "items": "[G] - B6 - B8 - - B6 - G7 - - e7 - - | [G] - e5 - B8 - - - - | [G] - B8 - - B10 - - B8 - - B10 - - B8 - - - B10 - - - - | [C] - G9 [D7] - B7 - -"
+          "items": "[G] - B6 - B8 - - B6 - G7 - - e7 - - - | [G] - e5 - B8 - - - - - - - | [G] - B8 - - B10 - - B8 - - B10 - - B8 - - - - B10 - - - - - - | [C] - G9 - - [D7] - B7 - - - - - - - -"
         }
       ]
     },
@@ -123,7 +123,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": "- G7+e7 - - G5+e5 - - G4+e3 - - - | - D5+B5 - - D4+B3 - - D2+B1 - - B3 - -"
+          "items": "- G7+e7 - - - G5+e5 - - - G4+e3 - - - - - - - | - D5+B5 - - - D4+B3 - - - D2+B1 - - - B3 - - -"
         }
       ]
     },

@@ -6,7 +6,7 @@
  *
  * @file StringsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.27
+ * @version 0.28
  * @description Render song strings pattern.
  */
 
@@ -23,18 +23,8 @@ type TStringProps = {
   frets: TFretNumber[];
 };
 
-const CELL_WIDTH = 3;
-
 const String = ({ name, frets }: TStringProps) => {
   const theme = useAppStore(state => state.appTheme.song);
-
-  const mappedFrets = frets
-    .map(fret => {
-      if (fret === '-') return '─'.repeat(CELL_WIDTH);
-      if (fret === '|') return '│';
-      return fret.toString().padStart(2, ' ').padEnd(CELL_WIDTH, ' ');
-    })
-    .join('');
 
   return (
     <Flex align='center'>
@@ -56,7 +46,7 @@ const String = ({ name, frets }: TStringProps) => {
         whiteSpace='pre'
         color={theme.chunks.item.stringsPattern.fret.text}
       >
-        {mappedFrets}
+        {frets}
       </Text>
     </Flex>
   );
@@ -80,9 +70,9 @@ const DisplayChords = ({ chords }: TDisplayChordsProps) => {
         return chord.name;
       }
 
-      return chord.name.padStart(
-        (chord.offset - chords[index - 1].offset) * CELL_WIDTH - chords[index - 1].name.length,
-        ' '
+      return (
+        ' '.repeat(chord.offset - chords[index - 1].offset - chords[index - 1].name.length) +
+        chord.name
       );
     })
     .join('');
@@ -121,30 +111,38 @@ const parseItems = (items: string): { stringsToFrets: TStringToFrets; chords: TD
 
   const asValues = Object.values(stringsToFrets);
 
-  items.split(' ').map((item, index) => {
+  let chordOffset: number = 0;
+  items.split(' ').map(item => {
     if (item === '-' || item === '|') {
       asValues.forEach(entry => entry.push(item));
+      chordOffset += 1;
       return;
     }
 
     if (item.charAt(0) === '[') {
-      chords.push({ name: item.slice(1, item.length - 1), offset: index });
+      chords.push({ name: item.slice(1, item.length - 1), offset: chordOffset });
       return;
     }
 
-    let newSize: number | undefined = undefined;
+    let newStringSize: number | undefined = undefined;
+    let fillLength: number = 0;
     item.split('+').map(chord => {
       const arr = stringsToFrets[chord.charAt(0) as keyof typeof stringsToFrets];
-      arr.push(chord.slice(1));
-      newSize = arr.length;
+
+      const fret = chord.slice(1);
+      fillLength = Math.max(fillLength, fret.length);
+
+      arr.push(fret);
+      newStringSize = arr.length;
     });
 
-    if (newSize !== undefined) {
+    if (newStringSize !== undefined) {
       asValues.forEach(entry => {
-        if (entry.length < (newSize as number)) {
-          entry.push('-');
+        if (entry.length < (newStringSize as number)) {
+          entry.push('-'.repeat(fillLength));
         }
       });
+      chordOffset += fillLength;
     }
   });
 
