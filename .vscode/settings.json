@@ -30,14 +30,14 @@
     "*.min.json": "plaintext"
   },
 
-  //   "emeraldwalk.runonsave": {
-  //     "commands": [
-  //       {
-  //         "match": "public/.*\\.json$",
-  //         "cmd": "./project/tools/minify-json/run.sh ${file}"
-  //       }
-  //     ]
-  //   },
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "public/.*\\.json$",
+        "cmd": "./project/tools/minify-json/run.sh ${file}"
+      }
+    ]
+  },
 
   // [typescript]
   "typescript.preferences.importModuleSpecifier": "non-relative",
