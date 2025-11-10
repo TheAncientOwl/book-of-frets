@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "Feliz Navidad",
   "artists": ["José Feliciano"],
@@ -16,11 +16,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": "[D] - - - B10 e10 - - e9 - e10 - | [G] - e7 - - - | [A7] - e9 e9 - - e7 - B10 - e7 | [D] - B10 - - - - - -"
+          "items": "[D] - - - - B10 e10 - - e9 - e10 - | [G] - e7 - - - - - - | [A7] - e9 - e9 - - e7 - B10 - e7 | [D] - B10 - - - - - -"
         },
         {
           "times": 1,
-          "items": "[D] - - B10 e10 - - e9 - e10 - | [G] - e7 - - B8 - B10 - - e7 B10 - | [A7] - - B10 - B10 - B8 - - B8 - - | [D] - B7 - - - - - -"
+          "items": "[D] - - - - B10 e10 - - e9 - e10 - | [G] - e7 - - - - B8 - B10 - - - e7 B10 - | [A7] - - - - B10 - - B10 - B8 - - B8 - - | [D] - B7 - - - - - -"
         }
       ]
     },
@@ -53,11 +53,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": "[G] - D9 - G7 B8 - G7 D9 G7 - | [A7] - D11 - G9 B10 - G9 D11 G9 - | [D] - D7 - G7 B7 - G7 D7 G7 - | [D] - D7 - G7 B7 - G7 D7 G7 -"
+          "items": "[G] - D9 - - G7 B8 - - G7 D9 G7 - | [A7] - D11 - - G9 B10 - - G9 D11 G9 - | [D] - D7 - - G7 B7 - - G7 D7 G7 - | [D] - D7 - - G7 B7 - - G7 D7 G7 -"
         },
         {
           "times": 1,
-          "items": "[G] - D9 - G7 B8 - G7 D9 G7 - | [A7] - D11 - G9 B10 - G9 D11 G9 - | [D] - D7 - G7 B7 - G7 D7 G7 - | [D] - D7+G7+B7 - - - - - - - -"
+          "items": "[G] - D9 - - G7 B8 - - G7 D9 G7 - | [A7] - D11 - - G9 B10 - - G9 D11 G9 - | [D] - D7 - - G7 B7 - - G7 D7 G7 - | [D] - D7+G7+B7 - - - - - - - - - -"
         }
       ]
     },
@@ -68,11 +68,11 @@
       "chunks": [
         {
           "times": 1,
-          "items": "[G] - D9 - G7 B8 - G7 D9 G7 - | [A7] - D11 - G9 B10 - G9 D11 G9 - | [D] - D7 - G7 B7 - G7 D7 G7 - | [Bm] - D9 - G7 B7 - G7 D9 G7 -"
+          "items": "[G] - D9 - - G7 B8 - - G7 D9 G7 - | [A7] - D11 - - G9 B10 - - G9 D11 G9 - | [D] - D7 - - G7 B7 - - G7 D7 G7 - | [Bm] - D9 - - G7 B7 - - G7 D9 G7 -"
         },
         {
           "times": 1,
-          "items": "[G] - D9 - G7 B8 - G7 D9 G7 - | [A7] - D11 - G9 B10 - G9 D11 G9 - | [D] - D7 - G7 B7 - G7 D7 G7 - | [D] - D7+G7+B7 - - - - - - - -"
+          "items": "[G] - D9 - - G7 B8 - - G7 D9 G7 - | [A7] - D11 - - G9 B10 - - G9 D11 G9 - | [D] - D7 - - G7 B7 - - G7 D7 G7 - | [D] - D7+G7+B7 - - - - - - - - - -"
         }
       ]
     },

@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Little Thing Called Love",
   "artists": ["Queen"],
@@ -65,7 +65,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": "- A5 - A4 - A3 - - | - - - - E5 - E4 - E3 - - | - E0+A2+D2+G1+B0 E0+A2+D2+G1+B0 E0+A2+D2+G1+B0 E0+A2+D2+G1+B0 E0+A2+D2+G1+B0 E0+A2+D2+G1+B0 - | - G2 - G2 - G0 - G0 - D4 - D4 - D2 - D2 -"
+          "items": "- - - - A5 - A4 - A3 - - | - - - - E5 - E4 - E3 - - | - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - | - G2 - G2 - G0 - G0 - D4 - D4 - D2 - D2 -"
         }
       ]
     },
@@ -97,7 +97,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": "- A5 - A4 - A3 - - | - - - - E5 - E4 - E3 - - | - E0+A2+D2+G1+B0 E0+A2+D2+G1+B0 E0+A2+D2+G1+B0 E0+A2+D2+G1+B0 E0+A2+D2+G1+B0 E0+A2+D2+G1+B0 - | - A0+D2+G2+B2 - - -"
+          "items": "- - - - A5 - A4 - A3 - - | - - - - E5 - E4 - E3 - - | - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - | - A0+D2+G2+B2 - - - - - - - - - - - - - - -"
         }
       ]
     },

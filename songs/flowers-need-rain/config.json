@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Flowers Need Rain",
   "artists": ["Preston Pablo"],
@@ -16,7 +16,7 @@
       "chunks": [
         {
           "times": 404,
-          "items": "- E9 A9 E9 A9 E9 A9 E9 A9 - E5 A6 E5 A6 E5 A6 E5 A6 - E12 A13 E12 A13 E12 A13 E12 A13 - E7 A8 E7 A8 E7 A8 E7 A8 -"
+          "items": "- E9 - - A9 - - E9 - - A9 - - E9 - - A9 - - E9 - - A9 - | - E5 - - A6 - - E5 - - A6 - - E5 - - A6 - - E5 - - A6 - | - E12 - - A13 - - E12 - - A13 - - E12 - - A13 - - E12 - - A13 - | - E7 - - A8 - - E7 - - A8 - - E7 - - A8 - - E7 - - A8 -"
         }
       ]
     }

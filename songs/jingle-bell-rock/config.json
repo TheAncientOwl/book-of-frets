@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Jingle Bell Rock",
   "artists": ["Bobby Helms"],
@@ -16,7 +16,7 @@
       "chunks": [
         {
           "times": 1,
-          "items": "- G7+B7 - G7+B7 - G7+B7 - - - G6+B7 - G6+B7 - G6+B7 - - - | - B7 - e5 - G7 - B5 - B5 B6 - B5 - G7 - G4 - | - D7 - - - - - - - - - - - - - - | - - - E5 - E3 - - - E2 - - - E0 - - -"
+          "items": "- G7+B7 - G7+B7 - G7+B7 - - - G6+B7 - G6+B7 - G6+B7 - - - | - B7 - e5 - G7 - B5 - B5/6 - B5 - G7 - G4 - | - D7 - - - - - - - - - - - - - - | - - - E5 - E3 - - - E2 - - - E0 - - -"
         }
       ]
     },
