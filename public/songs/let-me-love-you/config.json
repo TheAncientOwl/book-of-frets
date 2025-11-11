@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Let Me Love You",
   "artists": ["DJ Snake", "Justin Bieber"],
@@ -85,6 +85,7 @@
     }
   },
   "order": ["i", "v", "p", "c", "d"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Let Me Love You DJ Snake Feat. Justin Bieber Guitar Tutorial Lesson |Tabs + Easy Chords + Cover|",

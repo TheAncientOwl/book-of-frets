@@ -6,11 +6,15 @@
  *
  * @file SongSegments.tsx
  * @author Alexandru Delegeanu
- * @version 0.17
+ * @version 0.18
  * @description Render song segments data.
  */
 
-import type { TSongSegment, TStrummingPattern } from '@/common/types/song.types';
+import type {
+  TSongSegment,
+  TSongSegmentLyrics,
+  TStrummingPattern,
+} from '@/common/types/song.types';
 import {
   Accordion,
   AccordionButton,
@@ -24,6 +28,8 @@ type TSongSegmentsProps = {
   segments: Record<string, TSongSegment>;
   order: string[];
   strumms: TStrummingPattern[];
+  showLyrics: boolean;
+  lyrics: TSongSegmentLyrics[];
 };
 
 export const SongSegments = (props: TSongSegmentsProps) => {
@@ -50,7 +56,12 @@ export const SongSegments = (props: TSongSegmentsProps) => {
                 borderColor: theme.chunks.divider,
               }}
             >
-              <SongSegmentHeading {...songSegmentData} strumms={props.strumms} />
+              <SongSegmentHeading
+                {...songSegmentData}
+                strumms={props.strumms}
+                showLyrics={props.showLyrics}
+                lyrics={props.lyrics[index]}
+              />
               <AccordionIcon
                 boxProps={{
                   position: 'absolute',
@@ -61,7 +72,12 @@ export const SongSegments = (props: TSongSegmentsProps) => {
               />
             </AccordionButton>
             <AccordionPanel>
-              <SongSegmentBody {...songSegmentData} strumms={props.strumms} />
+              <SongSegmentBody
+                {...songSegmentData}
+                strumms={props.strumms}
+                showLyrics={props.showLyrics}
+                lyrics={props.lyrics[index]}
+              />
             </AccordionPanel>
           </Accordion>
         );

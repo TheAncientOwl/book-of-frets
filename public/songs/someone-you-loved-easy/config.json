@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Someone You Loved | Easy",
   "artists": ["Lewis Capaldi"],
@@ -53,6 +53,7 @@
     }
   },
   "order": ["m1", "b", "m2"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Someone You Loved Guitar Tutorial Lewis Capaldi Guitar Lesson 🎸|Fingerpicking + Easy Chords + TAB|",

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Dusk Till Dawn",
   "artists": ["Zayn", "Sia"],
@@ -91,6 +91,7 @@
     }
   },
   "order": ["vpi", "c", "bk", "vp", "c", "b", "c"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Dusk Till Dawn Guitar Tutorial - Zayn feat Sia Guitar Lesson 🎸 |Chords + No Capo + Guitar Cover|",

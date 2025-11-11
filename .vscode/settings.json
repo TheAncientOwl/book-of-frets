@@ -2,8 +2,12 @@
   // [json]
   "json.schemas": [
     {
-      "fileMatch": ["public/songs/*/*.json"],
+      "fileMatch": ["public/songs/*/config.json"],
       "url": "./project/schemas/song.schema.json"
+    },
+    {
+      "fileMatch": ["public/songs/*/lyrics.json"],
+      "url": "./project/schemas/lyrics.schema.json"
     },
     {
       "fileMatch": ["public/songs/index.json"],

@@ -6,17 +6,19 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.34
+ * @version 0.35
  * @description Render song based on given config.
  */
 
-import type { TSong } from '@/common/types/song.types';
+import { useSessionStorage } from '@/common/hooks/useSessionStorage';
+import type { TSong, TSongSegmentLyrics } from '@/common/types/song.types';
+import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
 import { Loading } from '@/components/Loading/Loading';
 import { SongChordsList } from '@/components/SongRenderer/SongChordsList';
 import { SongHeader } from '@/components/SongRenderer/SongHeader';
 import { SongSegments } from '@/components/SongRenderer/SongSegments';
 import { useAppStore } from '@/store/index';
-import { Box, Container } from '@chakra-ui/react';
+import { Box, Button, Container } from '@chakra-ui/react';
 import { lazy, Suspense } from 'react';
 
 const SongNotes = lazy(() => import('@/components/SongRenderer/SongNotes'));
@@ -32,6 +34,23 @@ type TSongProps = TSong & {
 
 export const Song = (props: TSongProps) => {
   const theme = useAppStore(state => state.appTheme.song);
+
+  const [showLyrics, setShowLyrics] = useSessionStorage(props.title + '-show-lyrics', false);
+  const [lyrics, setLyrics] = useSessionStorage(props.title + '-lyrics', [] as string[][]);
+
+  const fetchLyrics = () => {
+    if (import.meta.env.DEV || lyrics.length === 0) {
+      fetchArchivedJSON(
+        `${import.meta.env.BASE_URL}songs/${props.directory}/lyrics.min.json.gz.bin`,
+        `${import.meta.env.BASE_URL}songs/${props.directory}/lyrics.min.json`,
+        `${import.meta.env.BASE_URL}songs/${props.directory}/lyrics.json`,
+        json => setLyrics((json as { lyrics: TSongSegmentLyrics[] }).lyrics),
+        error => {
+          console.error('Failed to fetch song lyrics:', error);
+        }
+      );
+    }
+  };
 
   return (
     <Container
@@ -52,6 +71,22 @@ export const Song = (props: TSongProps) => {
         contributors={props.contributors}
       />
 
+      {props.lyrics && (
+        <Box display='flex' justifyContent='center' mb='1em'>
+          <Button
+            size='sm'
+            onClick={() => {
+              setShowLyrics(!showLyrics);
+              fetchLyrics();
+            }}
+            // [*] theme colors
+            colorScheme={showLyrics ? 'red' : 'purple'}
+          >
+            {showLyrics ? 'Hide Lyrics' : 'Show Lyrics'}
+          </Button>
+        </Box>
+      )}
+
       <Box
         padding={['1.5rem 10px', '1.5rem 1rem']}
         borderRadius='1rem'
@@ -60,7 +95,13 @@ export const Song = (props: TSongProps) => {
       >
         <SongChordsList chordIDs={props.chordIDs} />
 
-        <SongSegments segments={props.segments} order={props.order} strumms={props.strumms} />
+        <SongSegments
+          segments={props.segments}
+          order={props.order}
+          strumms={props.strumms}
+          showLyrics={showLyrics && lyrics.length > 0}
+          lyrics={lyrics}
+        />
       </Box>
 
       {props.notes.length > 0 && (

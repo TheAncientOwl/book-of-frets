@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Before You go",
   "artists": ["Lewis Capaldi"],
@@ -145,6 +145,7 @@
     }
   },
   "order": ["i", "vp1", "cp", "bk", "vs", "cs", "b", "fc1", "fc2", "vp2"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Before You Go Guitar Tutorial 🎸 Lewis Capaldi Guitar Lesson |Fingerpicking + TAB|",

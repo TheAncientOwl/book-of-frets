@@ -116,6 +116,10 @@
       },
       "minItems": 1
     },
+    "lyrics": {
+      "type": "boolean",
+      "default": false
+    },
     "res": {
       "type": "array",
       "items": {
@@ -151,6 +155,7 @@
     "strumms",
     "segments",
     "order",
+    "lyrics",
     "res"
   ]
 }

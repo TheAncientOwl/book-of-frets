@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Rudolph The Red Nosed Reindeer",
   "artists": ["Gene Autry"],
@@ -140,6 +140,7 @@
     }
   },
   "order": ["i", "r1", "v1", "c", "r1", "v1", "s", "v3", "c", "r1", "v4", "o1", "r2", "o2"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Rudolph The Red Nosed Reindeer Christmas Guitar Tutorial & Lesson |Easy Chords + Strumming + Solo|",

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Nice to Meet You",
   "artists": ["Myles Smith"],
@@ -70,6 +70,7 @@
     }
   },
   "order": ["v", "pr", "c", "v", "pr", "c", "po"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Myles Smith - Nice To Meet You EASY Guitar Tutorial With Chords / Lyrics",

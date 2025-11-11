@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Radioactive",
   "artists": ["Imagine Dragons"],
@@ -36,6 +36,7 @@
     }
   },
   "order": ["i", "v"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Radioactive Guitar Tutorial - Imagine Dragons Guitar Lesson |Easy Chords + Guitar Cover|",

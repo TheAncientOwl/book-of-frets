@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Sweater Weather",
   "artists": ["The Neighbourhood"],
@@ -102,6 +102,7 @@
     }
   },
   "order": ["v", "pr", "c1", "v", "pr", "c2", "b", "c3", "o"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Sweater Weather Guitar Tutorial - The Neighbourhood Guitar Lesson |Chords + Guitar Cover|",

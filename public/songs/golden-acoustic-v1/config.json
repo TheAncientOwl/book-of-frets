@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Golden",
   "artists": ["HUNTR/X"],
@@ -129,6 +129,7 @@
     }
   },
   "order": ["i", "v1", "p1", "c1", "v2", "p2", "c2", "po", "o"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Golden - Huntrix (KPop Demon Hunters) EASY Guitar Tutorial with Chords | Lyrics",
