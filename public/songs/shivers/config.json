@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Shivers",
   "artists": ["Ed Sheeran"],
@@ -69,6 +69,7 @@
     }
   },
   "order": ["v", "c1", "v", "c2"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Shivers Guitar Tutorial Ed Sheeran Guitar Lesson |No Capo + Easy Chords|",

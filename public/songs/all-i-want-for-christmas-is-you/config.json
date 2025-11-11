@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "All I Want For Christmas Is You",
   "artists": ["Mariah Carey"],
@@ -79,6 +79,7 @@
     }
   },
   "order": ["ibd", "sv", "ibs", "v", "ibs", "v", "c", "ibs", "b", "v", "c", "ibs"],
+  "lyrics": false,
   "res": [
     {
       "alias": "All I Want For Christmas Is You Guitar Tutorial 🎄🎸Mariah Carey Guitar Lesson |Easy Chords|",

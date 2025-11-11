@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "I Know What You Did Last Summer",
   "artists": ["Shawn Mendes", "Camila Cabello"],
@@ -122,6 +122,7 @@
     }
   },
   "order": ["i", "v", "pr", "c1", "po", "v", "pr", "c1", "c2", "c1.1"],
+  "lyrics": false,
   "res": [
     {
       "alias": "I Know What You Did Last Summer Guitar Tutorial 🎸 Shawn Mendes Feat. Camila Cabello Guitar Lesson",

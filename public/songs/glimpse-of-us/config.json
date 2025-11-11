@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Glimpse Of Us",
   "artists": ["Joji"],
@@ -134,6 +134,7 @@
     }
   },
   "order": ["i", "v1", "p", "c1", "c2", "b", "v2", "p", "c1", "c2", "bg", "c1", "c2", "o"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Glimpse Of Us Guitar Tutorial Joji Guitar Lesson |Fingerpicking + Easy Strummed Version + TAB|",

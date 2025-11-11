@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Hey, Soul Sister",
   "artists": ["Train"],
@@ -119,6 +119,7 @@
     }
   },
   "order": ["i", "v", "c1", "bk", "v", "c2", "b", "c2.2", "o"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Hey Soul Sister Guitar Tutorial - Train Guitar Lesson 🎸 |Easy Chords + Guitar Cover|",

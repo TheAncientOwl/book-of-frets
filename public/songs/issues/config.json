@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Issues",
   "artists": ["Julia Michaels"],
@@ -94,6 +94,7 @@
     }
   },
   "order": ["v1", "pr", "c", "v2", "pr", "c", "b", "lc"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Issues Guitar Tutorial - Julia Michaels Guitar Lesson 🎸 |Easy Chords + Guitar Cover|",

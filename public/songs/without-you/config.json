@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Without You",
   "artists": ["The Kid LAROI"],
@@ -122,6 +122,7 @@
     }
   },
   "order": ["i", "c1", "v", "pr1", "c2", "b", "pr2", "c1", "o"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Without You Guitar Tutorial The Kid LAROI Lesson |Easy Chords + Cover|",

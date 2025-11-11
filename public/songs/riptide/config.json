@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "3.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Riptide",
   "artists": ["Vance Joy"],
@@ -55,6 +55,7 @@
     }
   },
   "order": ["ivc", "bk", "b", "pb", "ivc"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Riptide Guitar Tutorial - Vance Joy Guitar Lesson 🎸 |Easy Chords + Guitar Cover|",

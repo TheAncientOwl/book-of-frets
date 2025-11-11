@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "As It Was",
   "artists": ["Harry Styles"],
@@ -22,6 +22,7 @@
     }
   },
   "order": ["m"],
+  "lyrics": false,
   "res": [
     {
       "alias": "As It Was Guitar Tutorial - Harry Styles Guitar Lesson |Chords + Fingerpicking|",

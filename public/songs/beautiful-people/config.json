@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Beautiful People",
   "artists": ["Ed Sheeran", "Khalid"],
@@ -79,6 +79,7 @@
     }
   },
   "order": ["i", "m4", "p", "m4", "m3", "p", "m4", "o"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Beautiful People Guitar Tutorial 🎸 Ed Sheeran Guitar Lesson |Easy Chords|",

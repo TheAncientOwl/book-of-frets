@@ -6,13 +6,14 @@
  *
  * @file SongSegment.tsx
  * @author Alexandru Delegeanu
- * @version 0.22
+ * @version 0.23
  * @description Render song segment.
  */
 
 import type {
   TChordsChunk,
   TSongSegment,
+  TSongSegmentLyrics,
   TStringsChunk,
   TStrummingPattern,
 } from '@/common/types/song.types';
@@ -23,6 +24,8 @@ import { Flex, Heading, Tag, Text } from '@chakra-ui/react';
 
 type TSongSegmentProps = TSongSegment & {
   strumms: TStrummingPattern[];
+  showLyrics: boolean;
+  lyrics: TSongSegmentLyrics;
 };
 
 export const SongSegmentHeading = (props: TSongSegmentProps) => {
@@ -71,7 +74,13 @@ export const SongSegmentBody = (props: TSongSegmentProps) => {
       {props.chunks.map((chunk, chunkIdx) => {
         if (props.type === 'chords') {
           return (
-            <ChordsChunk key={chunkIdx} {...(chunk as TChordsChunk)} strumms={props.strumms} />
+            <ChordsChunk
+              key={chunkIdx}
+              {...(chunk as TChordsChunk)}
+              strumms={props.strumms}
+              showLyrics={props.showLyrics}
+              lyrics={props.lyrics}
+            />
           );
         } else if (props.type === 'strings') {
           return <StringsChunk key={chunkIdx} {...(chunk as TStringsChunk)} />;

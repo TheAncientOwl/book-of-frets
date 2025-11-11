@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Wake Me Up",
   "artists": ["Avicii"],
@@ -67,6 +67,7 @@
     }
   },
   "order": ["i", "c", "d", "v"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Wake Me Up Guitar Tutorial - Avicii Guitar Lesson 🎸|100% Accurate Chords + Lead + No Capo + Cover|",

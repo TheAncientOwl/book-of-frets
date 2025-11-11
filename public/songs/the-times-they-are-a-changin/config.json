@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "The Times They Are A Changin'",
   "artists": ["Bob Dylan"],
@@ -184,6 +184,7 @@
     }
   },
   "order": ["i", "v1", "b1", "v2", "b2", "v3", "b3", "v4", "b4", "v5", "o"],
+  "lyrics": false,
   "res": [
     {
       "alias": "The Times They Are A Changin' Guitar Tutorial Bob Dylan Guitar Lesson |Easy Chords + Strumming|",

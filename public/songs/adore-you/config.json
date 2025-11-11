@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Adore You",
   "artists": ["Harry Styles"],
@@ -79,6 +79,7 @@
     }
   },
   "order": ["i", "m1", "po1", "m2", "po2", "s", "m3", "po3"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Adore You Guitar Cover Harry Styles 🎸|Tabs + Chords|",

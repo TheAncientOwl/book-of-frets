@@ -6,11 +6,15 @@
  *
  * @file ChordsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.26
+ * @version 0.27
  * @description Render song chords pattern.
  */
 
-import type { TChordsChunk, TStrummingPattern } from '@/common/types/song.types';
+import type {
+  TChordsChunk,
+  TSongSegmentLyrics,
+  TStrummingPattern,
+} from '@/common/types/song.types';
 import { ChordsChunkItem } from '@/components/SongRenderer/ChordsChunkItem';
 import { useAppStore, useShallowAppStore } from '@/store/index';
 import { Box, Divider, Text, Tooltip, type DividerProps } from '@chakra-ui/react';
@@ -18,6 +22,8 @@ import { Fragment } from 'react';
 
 type TChordsChunkProps = TChordsChunk & {
   strumms: TStrummingPattern[];
+  showLyrics: boolean;
+  lyrics: TSongSegmentLyrics;
 };
 
 export const ChordsChunkDivider = (props: DividerProps & TChordsChunk) => {
@@ -49,61 +55,86 @@ export const ChordsChunk = (props: TChordsChunkProps) => {
   const showTimes = settingsDisplaySegmentTimes && props.times > 1;
 
   return (
-    <Box
-      width='100%'
-      position='relative'
-      display={['box', 'flex']}
-      gap='1em'
-      alignItems='stretch'
-      justifyContent='center'
-      fontSize={['0.85em', '0.9em', '1em']}
-      maxWidth='fit-content'
-      // overflow='auto'
-      border='none'
-      borderWidth='thin'
-      borderRight={[showTimes ? '1px solid red' : 'none', 'none']}
-      paddingRight={[showTimes ? '1em' : '0em', '0em']}
-      // [*] theme colors
-      borderColor={theme.chunks.item.chordsPattern.divider}
-    >
-      <ChordsChunkDivider display={['none', 'block']} borderStyle={['solid']} {...props} />
+    <Fragment>
+      <Box
+        width='100%'
+        position='relative'
+        display={['box', 'flex']}
+        gap='1em'
+        alignItems='stretch'
+        justifyContent='center'
+        fontSize={['0.85em', '0.9em', '1em']}
+        maxWidth='fit-content'
+        // overflow='auto'
+        border='none'
+        borderWidth='thin'
+        borderRight={[showTimes ? '1px solid red' : 'none', 'none']}
+        paddingRight={[showTimes ? '1em' : '0em', '0em']}
+        // [*] theme colors
+        borderColor={theme.chunks.item.chordsPattern.divider}
+      >
+        <ChordsChunkDivider display={['none', 'block']} borderStyle={['solid']} {...props} />
 
-      {props.items.map((segment, segmentIndex) => (
-        <Fragment key={segmentIndex}>
-          <ChordsChunkItem data={segment} strumms={props.strumms} />
+        {props.items.map((segment, segmentIndex) => (
+          <Fragment key={segmentIndex}>
+            <ChordsChunkItem data={segment} strumms={props.strumms} />
 
-          <ChordsChunkDivider
-            borderStyle={['none', 'solid']}
-            display={[
-              segmentIndex < props.items.length - (showTimes ? 2 : 1) ? 'block' : 'none',
-              'block',
-            ]}
-            {...props}
-          />
-        </Fragment>
-      ))}
+            <ChordsChunkDivider
+              borderStyle={['none', 'solid']}
+              display={[
+                segmentIndex < props.items.length - (showTimes ? 2 : 1) ? 'block' : 'none',
+                'block',
+              ]}
+              {...props}
+            />
+          </Fragment>
+        ))}
 
-      {showTimes && (
-        <Tooltip
-          label={`Repeat ${props.times} times`}
-          // [*] theme colors
-          borderColor={theme.chunks.item.chordsPattern.divider}
-        >
-          <Text
-            size='sm'
-            fontWeight='bold'
-            position='absolute'
-            top='50%'
-            right='0'
-            transform='translate(150%, -50%)'
-            zIndex={1}
+        {showTimes && (
+          <Tooltip
+            label={`Repeat ${props.times} times`}
             // [*] theme colors
-            color={theme.chunks.item.chordsPattern.chord.times.color}
+            borderColor={theme.chunks.item.chordsPattern.divider}
           >
-            x{props.times}
+            <Text
+              size='sm'
+              fontWeight='bold'
+              position='absolute'
+              top='50%'
+              right='0'
+              transform='translate(150%, -50%)'
+              zIndex={1}
+              // [*] theme colors
+              color={theme.chunks.item.chordsPattern.chord.times.color}
+            >
+              x{props.times}
+            </Text>
+          </Tooltip>
+        )}
+      </Box>
+
+      <Box padding={['0.3em 1em', '0.5em 1em']} maxWidth='100%'>
+        {props.showLyrics && (
+          <Text
+            whiteSpace='pre'
+            overflow='auto'
+            fontFamily='monospace'
+            // [*] theme colors
+            // TODO: add separate theme entry for lyrics
+            color={theme.chunks.item.chordsPattern.times}
+          >
+            {props.lyrics.map((lyrics, index) => (
+              <Fragment key={index}>
+                {lyrics.slice(1)}
+                <br />
+                {index < props.lyrics.length - 1 && lyrics.charAt(0) === 'L' && (
+                  <Box height={['15px', '10px']}></Box>
+                )}
+              </Fragment>
+            ))}
           </Text>
-        </Tooltip>
-      )}
-    </Box>
+        )}
+      </Box>
+    </Fragment>
   );
 };

@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "3.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Jingle Bell Rock",
   "artists": ["Bobby Helms"],
@@ -135,6 +135,7 @@
     }
   },
   "order": ["i", "v1", "v2", "c", "cr", "pc1", "v3", "c", "cr", "pc2"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Jingle Bell Rock Guitar Tutorial Bobbly Helms Acoustic Guitar Lesson |Chords + Strumming|",
