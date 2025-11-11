@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "3.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Seven Nation Army",
   "artists": ["The White Stripes"],
@@ -55,6 +55,7 @@
     }
   },
   "order": ["m1", "m2", "m3", "m2", "o"],
+  "lyrics": false,
   "res": [
     {
       "alias": "The White Stripes - Seven Nation Army | Riff Tabs | Guitar Lesson/Tutorial | Acoustic Riff: 12",

@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Mercy",
   "artists": ["Shawn Mendes"],
@@ -63,6 +63,7 @@
     }
   },
   "order": ["i", "v", "c", "b"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Mercy Guitar Tutorial Shawn Mendes Guitar Lesson |Easy Chords + Guitar Cover|",

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "What I've Done",
   "artists": ["Linkin Park"],
@@ -123,6 +123,7 @@
     }
   },
   "order": ["i", "bk", "v", "pr", "c1", "v", "pr", "c2", "c3", "fc", "o"],
+  "lyrics": false,
   "res": [
     {
       "alias": "What I've Done Acoustic Guitar Tutorial Linkin Park Guitar Lesson |Easy Chords|",

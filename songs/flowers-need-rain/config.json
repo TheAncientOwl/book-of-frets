@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "3.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Flowers Need Rain",
   "artists": ["Preston Pablo"],
@@ -22,6 +22,7 @@
     }
   },
   "order": ["m"],
+  "lyrics": false,
   "res": [
     {
       "alias": "How to play Flowers Need Rain by Preston Pablo",

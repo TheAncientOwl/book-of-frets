@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Feliz Navidad",
   "artists": ["José Feliciano"],
@@ -89,6 +89,7 @@
     }
   },
   "order": ["i", "v", "c", "v", "c", "vp", "cp", "o"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Feliz Navidad Guitar Tutorial - José Feliciano Guitar Lesson |Easy Chords + Lead Guitar|",

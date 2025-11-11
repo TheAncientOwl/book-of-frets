@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Save Your Tears",
   "artists": ["The Weekend", "Ariana Grande"],
@@ -118,6 +118,7 @@
     }
   },
   "order": ["i", "v1", "pr1", "c1", "v2", "pr2", "c1", "b", "c2"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Save Your Tears Guitar Tutorial The Weeknd Guitar Lesson |Easy Chords|",

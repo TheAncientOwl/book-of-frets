@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Never Gonna Give You Up",
   "artists": ["Rick Astley"],
@@ -67,6 +67,7 @@
     }
   },
   "order": ["i", "v", "pr", "c", "v", "pr", "c"],
+  "lyrics": false,
   "res": [
     {
       "alias": "Rick Astley - Never Gonna Give You Up EASY Guitar Tutorial With Chords / Lyrics",
