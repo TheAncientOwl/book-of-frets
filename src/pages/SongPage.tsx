@@ -6,18 +6,20 @@
  *
  * @file SongPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.23
+ * @version 0.24
  * @description Handle song rendering based on url.
  */
 
 import type { TSong } from '@/common/types/song.types';
 import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
-import { SkeletonSong as SkeletonSongRenderer } from '@/components/Song/Skeleton';
-import { Song as SongRenderer } from '@/components/Song';
+import { SkeletonSong } from '@/components/Song/Skeleton';
+// import { Song } from '@/components/Song';
 import { useAppStore } from '@/store/index';
 import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { lazy, Suspense, useEffect, useLayoutEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+
+const Song = lazy(() => import('@/components/Song'));
 
 export const SongPage = () => {
   const [songConfig, setSongConfig] = useState<{ data: TSong; directory: string } | null>(null);
@@ -44,9 +46,11 @@ export const SongPage = () => {
   }, [directory, navigate]);
 
   return songConfig ? (
-    <SongRenderer directory={songConfig.directory} {...songConfig.data} />
+    <Suspense fallback={<SkeletonSong />}>
+      <Song directory={songConfig.directory} {...songConfig.data} />
+    </Suspense>
   ) : (
-    <SkeletonSongRenderer />
+    <SkeletonSong />
   );
 };
 

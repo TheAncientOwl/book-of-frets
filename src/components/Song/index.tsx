@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.36
+ * @version 0.37
  * @description Render song based on given config.
  */
 
@@ -114,3 +114,5 @@ export const Song = (props: TSongProps) => {
     </Container>
   );
 };
+
+export default Song;
