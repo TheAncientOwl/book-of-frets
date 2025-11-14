@@ -6,7 +6,7 @@
  *
  * @file ChordsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.27
+ * @version 0.28
  * @description Render song chords pattern.
  */
 
@@ -16,34 +16,22 @@ import type {
   TStrummingPattern,
 } from '@/common/types/song.types';
 import { ChordsChunkItem } from '@/components/Song/Segments/Chunk/Chords/ChordsChunkItem';
-import { useAppStore, useShallowAppStore } from '@/store/index';
-import { Box, Divider, Text, Tooltip, type DividerProps } from '@chakra-ui/react';
-import { Fragment } from 'react';
+import { ChordsChunkDivider } from '@/components/Song/Segments/Chunk/Chords/Divider';
+import { useShallowAppStore } from '@/store/index';
+import { Loading } from '@/ui/Loading/index';
+import { Box, Text, Tooltip } from '@chakra-ui/react';
+import { Fragment, lazy, Suspense } from 'react';
+
+const ChordsChunkLyrics = lazy(() =>
+  import('@/components/Song/Segments/Chunk/Chords/Lyrics').then(mod => ({
+    default: mod.ChordsChunkLyrics,
+  }))
+);
 
 type TChordsChunkProps = TChordsChunk & {
   strumms: TStrummingPattern[];
   showLyrics: boolean;
   lyrics: TSongSegmentLyrics;
-};
-
-export const ChordsChunkDivider = (props: DividerProps & TChordsChunk) => {
-  const theme = useAppStore(state => state.appTheme.song);
-
-  return (
-    <Divider
-      orientation='vertical'
-      height={['0px', 'auto']}
-      width={['70%', '0px']}
-      borderWidth='thin'
-      mt={['15px', '0px']}
-      mb={['15px', '0px']}
-      ml={['auto', '0px']}
-      mr={['auto', '0px']}
-      // [*] theme colors
-      borderColor={theme.chunks.item.chordsPattern.divider}
-      {...props}
-    />
-  );
 };
 
 export const ChordsChunk = (props: TChordsChunkProps) => {
@@ -73,7 +61,7 @@ export const ChordsChunk = (props: TChordsChunkProps) => {
         // [*] theme colors
         borderColor={theme.chunks.item.chordsPattern.divider}
       >
-        <ChordsChunkDivider display={['none', 'block']} borderStyle={['solid']} {...props} />
+        <ChordsChunkDivider display={['none', 'block']} borderStyle={['solid']} />
 
         {props.items.map((segment, segmentIndex) => (
           <Fragment key={segmentIndex}>
@@ -85,7 +73,6 @@ export const ChordsChunk = (props: TChordsChunkProps) => {
                 segmentIndex < props.items.length - (showTimes ? 2 : 1) ? 'block' : 'none',
                 'block',
               ]}
-              {...props}
             />
           </Fragment>
         ))}
@@ -113,28 +100,9 @@ export const ChordsChunk = (props: TChordsChunkProps) => {
         )}
       </Box>
 
-      <Box padding={['0.3em 1em', '0.5em 1em']} maxWidth='100%'>
-        {props.showLyrics && (
-          <Text
-            whiteSpace='pre'
-            overflow='auto'
-            fontFamily='monospace'
-            // [*] theme colors
-            // TODO: add separate theme entry for lyrics
-            color={theme.chunks.item.chordsPattern.times}
-          >
-            {props.lyrics.map((lyrics, index) => (
-              <Fragment key={index}>
-                {lyrics.slice(1)}
-                <br />
-                {index < props.lyrics.length - 1 && lyrics.charAt(0) === 'L' && (
-                  <Box height={['15px', '10px']}></Box>
-                )}
-              </Fragment>
-            ))}
-          </Text>
-        )}
-      </Box>
+      <Suspense fallback={<Loading />}>
+        <ChordsChunkLyrics visible={props.showLyrics} lyrics={props.lyrics} />
+      </Suspense>
     </Fragment>
   );
 };
