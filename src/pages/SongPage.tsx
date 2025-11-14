@@ -6,7 +6,7 @@
  *
  * @file SongPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.22
+ * @version 0.23
  * @description Handle song rendering based on url.
  */
 
@@ -43,9 +43,11 @@ export const SongPage = () => {
     );
   }, [directory, navigate]);
 
-  if (!songConfig) return <SkeletonSongRenderer />;
-
-  return <SongRenderer directory={songConfig.directory} {...songConfig.data} />;
+  return songConfig ? (
+    <SongRenderer directory={songConfig.directory} {...songConfig.data} />
+  ) : (
+    <SkeletonSongRenderer />
+  );
 };
 
 export default SongPage;
