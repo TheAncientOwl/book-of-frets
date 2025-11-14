@@ -11,7 +11,7 @@
  */
 
 import { SongOptions } from '@/components/AppMenu/Settings/SongOptions';
-import { Loading } from '@/components/Loading/Loading';
+import { Loading } from '@/ui/Loading';
 import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
 import { useAppStore } from '@/store/index';
 import {

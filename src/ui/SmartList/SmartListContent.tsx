@@ -10,7 +10,7 @@
  * @description Render filtered, virtualized items of the SmartList.
  */
 
-import type { TSmartListContextUse } from '@/components/SmartList/index';
+import type { TSmartListContextUse } from '@/ui/SmartList/index';
 import { Box, type BoxProps, type ListProps, type SimpleGridProps } from '@chakra-ui/react';
 import {
   Fragment,

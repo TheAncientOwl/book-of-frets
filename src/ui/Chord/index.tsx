@@ -12,7 +12,7 @@
 
 import type { TChord } from '@/common/types/chord.types';
 import type { TGuitarString } from '@/common/types/common.types';
-import { Fret } from '@/components/ChordRenderer/Fret';
+import { Fret } from '@/ui/Chord/Fret';
 import { useShallowAppStore } from '@/store/index';
 import { Box, Circle, Divider, Flex, Heading, type BoxProps } from '@chakra-ui/react';
 import { Fragment } from 'react';
@@ -100,3 +100,5 @@ export const Chord = (props: TChordProps) => {
     </Flex>
   );
 };
+
+export default Chord;

@@ -10,18 +10,12 @@
  * @description SmartList index file.
  */
 
-import {
-  SmartListContent,
-  type TSmartListContentProps,
-} from '@/components/SmartList/SmartListContent';
+import { SmartListContent, type TSmartListContentProps } from '@/ui/SmartList/SmartListContent';
 import {
   SmartListSearchBar,
   type TSmartListSearchBarProps,
-} from '@/components/SmartList/SmartListSearchBar';
-import {
-  SmartListWrapper,
-  type TSmartListWrapperProps,
-} from '@/components/SmartList/SmartListWrapper';
+} from '@/ui/SmartList/SmartListSearchBar';
+import { SmartListWrapper, type TSmartListWrapperProps } from '@/ui/SmartList/SmartListWrapper';
 import { createContext, useContext, type ComponentType } from 'react';
 
 export type TSmartListContextData<T> = {

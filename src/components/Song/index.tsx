@@ -6,23 +6,24 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.35
+ * @version 0.37
  * @description Render song based on given config.
  */
 
 import { useSessionStorage } from '@/common/hooks/useSessionStorage';
 import type { TSong, TSongSegmentLyrics } from '@/common/types/song.types';
 import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
-import { Loading } from '@/components/Loading/Loading';
-import { SongChordsList } from '@/components/SongRenderer/SongChordsList';
-import { SongHeader } from '@/components/SongRenderer/SongHeader';
-import { SongSegments } from '@/components/SongRenderer/SongSegments';
+import { SongChordsList } from '@/components/Song/ChordsList';
+import { SongHeader } from '@/components/Song/Header';
+import { FetchLyricsButton } from '@/components/Song/Lyrics/FetchLyricsButton';
+import { SongSegments } from '@/components/Song/Segments/SongSegments';
 import { useAppStore } from '@/store/index';
-import { Box, Button, Container } from '@chakra-ui/react';
+import { Loading } from '@/ui/Loading';
+import { Box, Container } from '@chakra-ui/react';
 import { lazy, Suspense } from 'react';
 
-const SongNotes = lazy(() => import('@/components/SongRenderer/SongNotes'));
-const SongResources = lazy(() => import('@/components/SongRenderer/SongResources'));
+const SongNotes = lazy(() => import('@/components/Song/Notes'));
+const SongResources = lazy(() => import('@/components/Song/Resources'));
 
 const InView = lazy(() =>
   import('react-intersection-observer').then(mod => ({ default: mod.InView }))
@@ -71,21 +72,14 @@ export const Song = (props: TSongProps) => {
         contributors={props.contributors}
       />
 
-      {props.lyrics && (
-        <Box display='flex' justifyContent='center' mb='1em'>
-          <Button
-            size='sm'
-            onClick={() => {
-              setShowLyrics(!showLyrics);
-              fetchLyrics();
-            }}
-            // [*] theme colors
-            colorScheme={showLyrics ? 'red' : 'purple'}
-          >
-            {showLyrics ? 'Hide Lyrics' : 'Show Lyrics'}
-          </Button>
-        </Box>
-      )}
+      <FetchLyricsButton
+        available={props.lyrics}
+        lyricsShown={showLyrics}
+        onClick={() => {
+          setShowLyrics(!showLyrics);
+          fetchLyrics();
+        }}
+      />
 
       <Box
         padding={['1.5rem 10px', '1.5rem 1rem']}
@@ -112,9 +106,13 @@ export const Song = (props: TSongProps) => {
 
       <InView triggerOnce rootMargin='300px'>
         {({ inView, ref }) => (
-          <Box ref={ref}>{inView ? <SongResources res={props.res} /> : null}</Box>
+          <Suspense fallback={<Loading />}>
+            <Box ref={ref}>{inView ? <SongResources res={props.res} /> : null}</Box>
+          </Suspense>
         )}
       </InView>
     </Container>
   );
 };
+
+export default Song;

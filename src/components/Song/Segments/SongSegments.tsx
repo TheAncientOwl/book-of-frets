@@ -15,13 +15,8 @@ import type {
   TSongSegmentLyrics,
   TStrummingPattern,
 } from '@/common/types/song.types';
-import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionPanel,
-} from '@/components/Accordion/Accordion';
-import { SongSegmentBody, SongSegmentHeading } from '@/components/SongRenderer/SongSegment';
+import { Accordion, AccordionButton, AccordionIcon, AccordionPanel } from '@/ui/Accordion';
+import { SongSegmentBody, SongSegmentHeading } from '@/components/Song/Segments/SongSegment';
 import { useAppStore } from '@/store/index';
 
 type TSongSegmentsProps = {

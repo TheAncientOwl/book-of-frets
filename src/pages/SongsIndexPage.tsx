@@ -12,9 +12,9 @@
 
 import type { TSongsIndexEntry } from '@/common/types/song.types';
 import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
-import { createSmartList } from '@/components/SmartList/index';
-import { SongCard } from '@/components/SongIndex/SongCard';
-import { SongsSkeletonList } from '@/components/SongIndex/SongsSkeletonList';
+import { createSmartList } from '@/ui/SmartList/index';
+import { SongCard } from '@/components/SongCard';
+import { SongsSkeletonList } from '@/components/SongCard/Skeleton';
 import { useAppStore } from '@/store/index';
 import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
 import { Box, Container, Flex } from '@chakra-ui/react';

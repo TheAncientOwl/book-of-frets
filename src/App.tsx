@@ -10,8 +10,8 @@
  * @description App component.
  */
 
-import { AppMenu } from '@/components/AppMenu/AppMenu';
-import { Loading } from '@/components/Loading/Loading';
+import { AppMenu } from '@/components/AppMenu';
+import { Loading } from '@/ui/Loading';
 import { SongPage } from '@/pages/SongPage';
 import { SongsIndexPage } from '@/pages/SongsIndexPage';
 import { setDocumentScrollbarColors } from '@/store/theme/utils/setDocumentScrollbarColors';
