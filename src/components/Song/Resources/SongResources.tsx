@@ -11,7 +11,7 @@
  */
 
 import type { TSong } from '@/common/types/song.types';
-import { SongResource } from '@/components/SongRenderer/SongResource';
+import { SongResource } from '@/components/Song/Resources/SongResource';
 import { useAppStore } from '@/store/index';
 import { Box, Divider, Flex, Heading, Icon, List, ListItem, Text } from '@chakra-ui/react';
 import { Fragment } from 'react';

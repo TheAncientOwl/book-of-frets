@@ -10,7 +10,7 @@
  * @description Provide context for SmartList.
  */
 
-import type { TSmartListContext, TSmartListContextData } from '@/components/SmartList/index';
+import type { TSmartListContext, TSmartListContextData } from '@/ui/SmartList/index';
 import { useCallback, useEffect, useMemo, useState, type PropsWithChildren } from 'react';
 
 export type TSmartListWrapperProps<T> = PropsWithChildren & {

@@ -10,13 +10,8 @@
  * @description Song chords list component.
  */
 
-import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionPanel,
-} from '@/components/Accordion/Accordion';
-import { Chord } from '@/components/ChordRenderer/Chord';
+import { Accordion, AccordionButton, AccordionIcon, AccordionPanel } from '@/ui/Accordion';
+import { Chord } from '@/ui/Chord';
 import { useShallowAppStore } from '@/store/index';
 import { Heading, List, ListItem } from '@chakra-ui/react';
 

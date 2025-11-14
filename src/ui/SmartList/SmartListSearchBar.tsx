@@ -10,7 +10,7 @@
  * @description Filter items of SmartList.
  */
 
-import type { TSmartListContextUse } from '@/components/SmartList/index';
+import type { TSmartListContextUse } from '@/ui/SmartList/index';
 import { Icon, Input, InputGroup, InputRightElement, type InputProps } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';

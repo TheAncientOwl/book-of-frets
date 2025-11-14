@@ -17,8 +17,8 @@ import type {
   TStringsChunk,
   TStrummingPattern,
 } from '@/common/types/song.types';
-import { ChordsChunk } from '@/components/SongRenderer/ChordsChunk';
-import { StringsChunk } from '@/components/SongRenderer/StringsChunk';
+import { ChordsChunk } from '@/components/Song/Segments/Chunk/Chords/ChordsChunk';
+import { StringsChunk } from '@/components/Song/Segments/Chunk/Strings/StringsChunk';
 import { useAppStore } from '@/store/index';
 import { Flex, Heading, Tag, Text } from '@chakra-ui/react';
 

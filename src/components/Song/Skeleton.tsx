@@ -10,12 +10,7 @@
  * @description Display skeleton of song.
  */
 
-import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionPanel,
-} from '@/components/Accordion/Accordion';
+import { Accordion, AccordionButton, AccordionIcon, AccordionPanel } from '@/ui/Accordion';
 import { useAppStore } from '@/store/index';
 import type { TSongTheme } from '@/store/theme/types';
 import { Box, Container, Flex, Heading, List, Skeleton, VStack } from '@chakra-ui/react';

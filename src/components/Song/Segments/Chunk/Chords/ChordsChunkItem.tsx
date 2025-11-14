@@ -11,7 +11,7 @@
  */
 
 import type { TChordsChunkItem, TStrummingPattern } from '@/common/types/song.types';
-import { Chord } from '@/components/ChordRenderer/Chord';
+import { Chord } from '@/ui/Chord';
 import { useAppStore, useShallowAppStore } from '@/store/index';
 import {
   Box,

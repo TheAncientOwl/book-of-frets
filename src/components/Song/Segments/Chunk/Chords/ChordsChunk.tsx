@@ -15,7 +15,7 @@ import type {
   TSongSegmentLyrics,
   TStrummingPattern,
 } from '@/common/types/song.types';
-import { ChordsChunkItem } from '@/components/SongRenderer/ChordsChunkItem';
+import { ChordsChunkItem } from '@/components/Song/Segments/Chunk/Chords/ChordsChunkItem';
 import { useAppStore, useShallowAppStore } from '@/store/index';
 import { Box, Divider, Text, Tooltip, type DividerProps } from '@chakra-ui/react';
 import { Fragment } from 'react';

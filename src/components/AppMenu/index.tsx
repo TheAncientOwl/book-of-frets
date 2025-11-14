@@ -11,8 +11,8 @@
  */
 
 import { useSessionStorage } from '@/common/hooks/useSessionStorage';
-import { NavigationList } from '@/components/AppMenu/Navigation/NavigationList';
-import Settings from '@/components/AppMenu/Settings/Settings';
+import { NavigationList } from '@/components/AppMenu/Navigation/List';
+import Settings from '@/components/AppMenu/Settings';
 import { SessionStorageKeys } from '@/store/common/storageKeys';
 import {
   Box,
@@ -39,11 +39,11 @@ import {
 import { useRef, type PropsWithChildren } from 'react';
 import { MdCopyright } from 'react-icons/md';
 // import { SongsHistory } from '@/components/AppMenu/Navigation/SongsHistory';
-import { Loading } from '@/components/Loading/Loading';
+import { Loading } from '@/ui/Loading';
 import { useAppStore, useShallowAppStore } from '@/store/index';
 import { lazy, Suspense } from 'react';
 
-const GuitarTuner = lazy(() => import('@/components/AppMenu/GuitarTuner/GuitarTuner'));
+const GuitarTuner = lazy(() => import('@/components/AppMenu/GuitarTuner'));
 
 const TabHeader = (props: PropsWithChildren) => {
   const theme = useAppStore(state => state.appTheme.appMenu.tabs);

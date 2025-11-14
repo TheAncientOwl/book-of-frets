@@ -12,8 +12,8 @@
 
 import type { TSong } from '@/common/types/song.types';
 import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
-import { SkeletonSong as SkeletonSongRenderer } from '@/components/SongRenderer/SkeletonSong';
-import { Song as SongRenderer } from '@/components/SongRenderer/Song';
+import { SkeletonSong as SkeletonSongRenderer } from '@/components/Song/Skeleton';
+import { Song as SongRenderer } from '@/components/Song';
 import { useAppStore } from '@/store/index';
 import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
 import { useEffect, useLayoutEffect, useState } from 'react';

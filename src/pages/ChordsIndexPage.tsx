@@ -11,8 +11,8 @@
  */
 
 import type { TChord } from '@/common/types/chord.types';
-import { Chord } from '@/components/ChordRenderer/Chord';
-import { createSmartList } from '@/components/SmartList/index';
+import { Chord } from '@/ui/Chord';
+import { createSmartList } from '@/ui/SmartList/index';
 import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
 import { useShallowAppStore } from '@/store/index';
 import { Box, Container, Flex, SimpleGrid } from '@chakra-ui/react';
