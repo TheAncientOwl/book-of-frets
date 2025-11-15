@@ -8,7 +8,7 @@
   "capo": 4,
   "chordIDs": ["C", "G", "Am", "F"],
   "strumms": [["D", "-", "D", "-", "D", "U", "D", "U"], ["D", "-", "D", "-"], ["D"]],
-  "segments": {
+  "sections": {
     "i": {
       "name": "intro",
       "type": "chords",

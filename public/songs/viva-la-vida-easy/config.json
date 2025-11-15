@@ -14,7 +14,7 @@
     ["U", "-", "U", "D", "U", "-", "U", "D", "U"],
     ["D"]
   ],
-  "segments": {
+  "sections": {
     "vm": {
       "name": "verse palm muted",
       "type": "chords",

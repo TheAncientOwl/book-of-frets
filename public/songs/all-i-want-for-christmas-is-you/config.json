@@ -8,7 +8,7 @@
   "capo": 0,
   "chordIDs": ["G", "Em", "C", "D", "G/B", "Cm_3fr", "B7", "D7", "E7", "Am7"],
   "strumms": [["D"], ["D", "U"]],
-  "segments": {
+  "sections": {
     "ibd": {
       "name": "intro / break",
       "type": "chords",

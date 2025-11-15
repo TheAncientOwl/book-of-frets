@@ -8,7 +8,7 @@
   "capo": 0,
   "chordIDs": ["Em7", "Cadd9", "G", "D"],
   "strumms": [["D", "D", "-", "U", "U", "-", "D", "-", "U", "-", "D", "U"]],
-  "segments": {
+  "sections": {
     "m": {
       "name": "main progression",
       "type": "chords",

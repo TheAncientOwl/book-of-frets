@@ -12,7 +12,7 @@
     ["D", "-", "D", "U"],
     ["D", "-", "-", "U", "D", "U", "D", "-", "-", "U", "D", "U", "D", "-", "D", "U"]
   ],
-  "segments": {
+  "sections": {
     "m": {
       "name": "main progression",
       "type": "chords",

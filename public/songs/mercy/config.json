@@ -12,7 +12,7 @@
     ["D", "-", "D", "U", "-", "U", "D", "U"],
     ["D", "D", "D", "De", "D", "D", "De", "D"]
   ],
-  "segments": {
+  "sections": {
     "i": {
       "name": "intro",
       "type": "chords",

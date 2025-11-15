@@ -233,7 +233,7 @@ export type TSongTheme = {
         chord: {
           background: string;
           color: string;
-          segment: {
+          section: {
             popover: {
               background: string;
               arrow: string;

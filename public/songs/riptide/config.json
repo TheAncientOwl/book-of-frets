@@ -8,7 +8,7 @@
   "capo": 5,
   "chordIDs": ["Am", "G", "C", "Ft"],
   "strumms": [["D", "-", "D", "-", "-", "U", "D", "U"], ["D"]],
-  "segments": {
+  "sections": {
     "ivc": {
       "name": "intro / verse / chorus",
       "type": "chords",

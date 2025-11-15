@@ -16,7 +16,7 @@
     ["D", "-", "-", "U", "D", "U", "D", "-", "D", "U"],
     ["D"]
   ],
-  "segments": {
+  "sections": {
     "v": {
       "name": "verse",
       "type": "chords",

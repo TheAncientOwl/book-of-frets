@@ -8,7 +8,7 @@
   "capo": 0,
   "chordIDs": ["Dsus2", "Bm7", "E", "A"],
   "strumms": [["D", "-", "D", "-", "D", "U", "D", "U", "-", "U", "D", "-", "D", "U", "D", "U"]],
-  "segments": {
+  "sections": {
     "m": {
       "name": "main progression",
       "type": "chords",

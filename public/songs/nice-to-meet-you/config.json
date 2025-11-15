@@ -8,7 +8,7 @@
   "capo": 1,
   "chordIDs": ["Em", "C", "G", "D"],
   "strumms": [["D", "-", "D", "-", "U", "D", "U"], ["D"]],
-  "segments": {
+  "sections": {
     "v": {
       "name": "verse",
       "type": "chords",

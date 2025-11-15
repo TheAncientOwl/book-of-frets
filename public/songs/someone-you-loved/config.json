@@ -8,7 +8,7 @@
   "capo": 1,
   "chordIDs": ["C", "G", "Am", "F", "Dm"],
   "strumms": [],
-  "segments": {
+  "sections": {
     "mv1": {
       "name": "main riff var.",
       "type": "strings",

@@ -521,7 +521,7 @@
                       "properties": {
                         "background": { "type": "string" },
                         "color": { "type": "string" },
-                        "segment": {
+                        "section": {
                           "type": "object",
                           "additionalProperties": false,
                           "properties": {
@@ -551,7 +551,7 @@
                           "required": ["background", "color"]
                         }
                       },
-                      "required": ["background", "color", "segment", "times"]
+                      "required": ["background", "color", "section", "times"]
                     }
                   },
                   "required": ["background", "color", "divider", "times", "chord"]

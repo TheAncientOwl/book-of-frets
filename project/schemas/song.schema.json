@@ -61,7 +61,7 @@
         "minItems": 1
       }
     },
-    "segments": {
+    "sections": {
       "type": "object",
       "additionalProperties": {
         "type": "object",
@@ -153,7 +153,7 @@
     "capo",
     "chordIDs",
     "strumms",
-    "segments",
+    "sections",
     "order",
     "lyrics",
     "res"

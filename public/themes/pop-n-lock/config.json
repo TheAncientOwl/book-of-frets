@@ -230,7 +230,7 @@
           "chord": {
             "background": "purple.800",
             "color": "#E1B55C",
-            "segment": {
+            "section": {
               "popover": {
                 "background": "gray.900",
                 "arrow": "#E1B55C",

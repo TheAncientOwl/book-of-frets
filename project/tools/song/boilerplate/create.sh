@@ -55,7 +55,7 @@ cat > "$output_file" <<EOF
   "capo": ${capo},
   "chordIDs": [],
   "strumms": [],
-  "segments": {},
+  "sections": {},
   "order": [],
   "res": ${res_json}
 }

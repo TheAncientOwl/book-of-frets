@@ -13,7 +13,7 @@
     ["D", "U"],
     ["D"]
   ],
-  "segments": {
+  "sections": {
     "v1": {
       "name": "verse",
       "type": "chords",

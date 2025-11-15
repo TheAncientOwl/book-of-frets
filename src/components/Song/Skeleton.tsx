@@ -96,7 +96,7 @@ const SkeletonSongChordsList = ({ theme }: { theme: TSongTheme }) => {
   );
 };
 
-const SkeletonSongSegments = ({ theme }: { theme: TSongTheme }) => {
+const SkeletonSongSections = ({ theme }: { theme: TSongTheme }) => {
   return (
     <>
       {Array.from({ length: 3 }).map((_, index) => (
@@ -156,7 +156,7 @@ export const SkeletonSong = () => {
         backgroundColor={theme.chunks.background}
       >
         <SkeletonSongChordsList theme={theme} />
-        <SkeletonSongSegments theme={theme} />
+        <SkeletonSongSections theme={theme} />
       </Box>
     </Container>
   );
