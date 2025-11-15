@@ -15,7 +15,7 @@ import type {
   TSongSectionLyrics,
   TStrummingPattern,
 } from '@/common/types/song.types';
-import { Chords } from '@/components/Song/Sections/Chords/Chords';
+import { Chords } from '@/components/Song/Sections/Chords';
 import { useAppStore } from '@/store/index';
 import { Accordion, AccordionButton, AccordionIcon, AccordionPanel } from '@/ui/Accordion';
 import { Flex, Heading, Tag, Text } from '@chakra-ui/react';

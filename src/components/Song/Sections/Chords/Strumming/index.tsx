@@ -22,7 +22,7 @@ import { Loading } from '@/ui/Loading/index';
 import { Box, Text, Tooltip } from '@chakra-ui/react';
 import { Fragment, lazy, Suspense } from 'react';
 
-const ChordsChunkLyrics = lazy(() =>
+const StrummingChordsLyrics = lazy(() =>
   import('@/components/Song/Sections/Chords/Strumming/Lyrics').then(mod => ({
     default: mod.StrummingChordsLyrics,
   }))
@@ -101,7 +101,7 @@ export const StrummingChords = (props: TChordsChunkProps) => {
       </Box>
 
       <Suspense fallback={<Loading />}>
-        <ChordsChunkLyrics visible={props.showLyrics} lyrics={props.lyrics} />
+        <StrummingChordsLyrics visible={props.showLyrics} lyrics={props.lyrics} />
       </Suspense>
     </Fragment>
   );
