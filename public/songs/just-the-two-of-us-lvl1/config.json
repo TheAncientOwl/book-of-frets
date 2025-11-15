@@ -15,9 +15,9 @@
   "sections": {
     "m": {
       "name": "main progression",
-      "type": "chords",
+      "type": "str",
       "times": 404,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 CM7 1", "1 B7 2"]]

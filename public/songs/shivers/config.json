@@ -17,9 +17,9 @@
   "sections": {
     "v": {
       "name": "verse",
-      "type": "chords",
+      "type": "str",
       "times": 3,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 Bm 1 G 1 D 1 A 1"]]
@@ -28,9 +28,9 @@
     },
     "c1": {
       "name": "chorus 1",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["1 Bm 2 G 2 D 2 A 1"]]
@@ -39,9 +39,9 @@
     },
     "bridge": {
       "name": "bridge",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["2 Bm 1 G 1 D 1 A 1"]]
@@ -54,9 +54,9 @@
     },
     "c2": {
       "name": "chorus 2",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["4 Bm 1"]]

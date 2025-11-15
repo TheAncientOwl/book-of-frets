@@ -11,9 +11,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 Am7 1 - 1 C 1 - 1", "0 Ft 1 - 1 - 1 G 1"]]
@@ -22,9 +22,9 @@
     },
     "m1": {
       "name": "main progression",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 6,
           "items": [["1 Am7 2 C 2 Ft 3 G 1"]]
@@ -33,15 +33,15 @@
     },
     "po1": {
       "name": "post chorus 1",
-      "type": "strings",
+      "type": "fs",
       "times": 1,
-      "chunks": []
+      "items": []
     },
     "m2": {
       "name": "main progression",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 5,
           "items": [["1 Am7 2 C 2 Ft 3 G 1"]]
@@ -50,21 +50,21 @@
     },
     "po2": {
       "name": "post chorus 2",
-      "type": "strings",
+      "type": "fs",
       "times": 1,
-      "chunks": []
+      "items": []
     },
     "s": {
       "name": "solo",
-      "type": "strings",
+      "type": "fs",
       "times": 1,
-      "chunks": []
+      "items": []
     },
     "m3": {
       "name": "main progression",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 4,
           "items": [["1 Am7 2 C 2 Ft 3 G 1"]]
@@ -73,9 +73,9 @@
     },
     "po3": {
       "name": "post chorus 2",
-      "type": "strings",
+      "type": "fs",
       "times": 1,
-      "chunks": []
+      "items": []
     }
   },
   "order": ["i", "m1", "po1", "m2", "po2", "s", "m3", "po3"],

@@ -11,9 +11,9 @@
   "sections": {
     "ivc": {
       "name": "intro / verse / chorus",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 15,
           "items": [["0 Am 1 G 1 C 2"]]
@@ -22,9 +22,9 @@
     },
     "bk": {
       "name": "break",
-      "type": "strings",
+      "type": "fs",
       "times": 4,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": "- B3h5 - B5 - e3 - - - - G5 B5 - - -"
@@ -33,9 +33,9 @@
     },
     "b": {
       "name": "bridge",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 2,
           "items": [["0 Am 2 G 2 C 2 Ft 2"]]
@@ -44,9 +44,9 @@
     },
     "pb": {
       "name": "post bridge",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 2,
           "items": [["1 Am 1 G 1 C 1"]]

@@ -11,9 +11,9 @@
   "sections": {
     "ibd": {
       "name": "intro / break",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 G 1 Em 1 C 1 D 1"]]
@@ -22,9 +22,9 @@
     },
     "sv": {
       "name": "slow verse",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [
@@ -35,9 +35,9 @@
     },
     "ibs": {
       "name": "intro / break",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["1 G 4 Em 4 C 4 D 4"]]
@@ -46,9 +46,9 @@
     },
     "v": {
       "name": "verse",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["1 G 16 C 8 Cm_3fr 8"]]
@@ -57,9 +57,9 @@
     },
     "c": {
       "name": "chorus",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["1 G 6 B7 2 Em 6 Cm_3fr 1", "1 G 4 E7 4 Am7 4 D7 4"]]
@@ -68,9 +68,9 @@
     },
     "b": {
       "name": "bridge",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 2,
           "items": [["1 B7 8 Em 8 Cm_3fr 8", "1 G 4 E7 4 Am7 8 D 8"]]

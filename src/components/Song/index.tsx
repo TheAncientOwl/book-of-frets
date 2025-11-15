@@ -85,7 +85,7 @@ export const Song = (props: TSongProps) => {
         padding={['1.5rem 10px', '1.5rem 1rem']}
         borderRadius='1rem'
         // [*] theme colors
-        backgroundColor={theme.chunks.background}
+        backgroundColor={theme.items.background}
       >
         <SongChordsList chordIDs={props.chordIDs} />
 

@@ -68,9 +68,9 @@
         "additionalProperties": false,
         "properties": {
           "name": { "type": "string" },
-          "type": { "type": "string", "enum": ["chords", "strings", "tabs"] },
+          "type": { "type": "string", "enum": ["str", "fs", "tabs"] },
           "times": { "type": "number", "default": 1, "minimum": 1 },
-          "chunks": {
+          "items": {
             "type": "array",
             "items": {
               "type": "object",
@@ -106,7 +106,7 @@
             }
           }
         },
-        "required": ["name", "type", "times", "chunks"]
+        "required": ["name", "type", "times", "items"]
       }
     },
     "order": {

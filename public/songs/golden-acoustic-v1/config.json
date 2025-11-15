@@ -11,9 +11,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 C 1 G 1 D 1 Em 1", "0 C 1 G 1 D 1"]]
@@ -26,9 +26,9 @@
     },
     "v1": {
       "name": "verse 1",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 4,
           "items": [["0 C 1 G 1 D 1 Em 1"]]
@@ -37,9 +37,9 @@
     },
     "p1": {
       "name": "prechorus 1",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 C 1 G 1 D 1 Em 1", "0 C 1 G 1 D 1 D 1", "0 C 1"]]
@@ -48,9 +48,9 @@
     },
     "c1": {
       "name": "chorus 1",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 3,
           "items": [["0 D 1", "2 G 1 D 1", "0 Em 1 C 1"]]
@@ -63,9 +63,9 @@
     },
     "v2": {
       "name": "verse 2",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [
@@ -77,9 +77,9 @@
     },
     "p2": {
       "name": "prechorus 2",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 Em 1 D 1 Bm 1 C 1", "0 Em 1 Bm 1 D 1 C 1"]]
@@ -88,9 +88,9 @@
     },
     "c2": {
       "name": "chorus 2",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 3,
           "items": [["0 D 1", "2 G 1 D 1", "0 Em 1 C 1"]]
@@ -103,9 +103,9 @@
     },
     "po": {
       "name": "post chorus",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 2,
           "items": [["0 C 1 D 1", "2 G 1 D 1", "0 Em 1"]]
@@ -114,9 +114,9 @@
     },
     "o": {
       "name": "outro",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 2,
           "items": [["0 C 1 G 1 D 1 Em 1", "0 C 1 G 1 D 1"]]

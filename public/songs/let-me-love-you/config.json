@@ -18,9 +18,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 Am 1 C 1 F 2"]]
@@ -29,9 +29,9 @@
     },
     "v": {
       "name": "verse",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["1 Am 1 C 1"]]
@@ -44,9 +44,9 @@
     },
     "p": {
       "name": "prechorus",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["4 F 1 Am 1 G 1 Dm 1"]]
@@ -55,9 +55,9 @@
     },
     "c": {
       "name": "chorus",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["1 Am 1 C 1"]]
@@ -70,9 +70,9 @@
     },
     "d": {
       "name": "dance break",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["5 Am 1 C 1"]]

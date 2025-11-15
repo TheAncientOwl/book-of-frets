@@ -19,9 +19,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 D 4"]]
@@ -30,9 +30,9 @@
     },
     "v": {
       "name": "verse",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "items": [
         {
           "times": 2,
           "items": [["0 D 2 G 1", "1 C 1 G 1"]]
@@ -45,9 +45,9 @@
     },
     "c1": {
       "name": "chorus 1",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 G 2"], ["2 C 1"], ["0 G 1"]]
@@ -60,9 +60,9 @@
     },
     "c2": {
       "name": "chorus 2",
-      "type": "strings",
+      "type": "fs",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": "- - - - A5 - A4 - A3 - - | - - - - E5 - E4 - E3 - - | - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - | - G2 - G2 - G0 - G0 - D4 - D4 - D2 - D2 -"
@@ -71,9 +71,9 @@
     },
     "s1": {
       "name": "solo 1",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [
@@ -92,9 +92,9 @@
     },
     "s2": {
       "name": "solo 2",
-      "type": "strings",
+      "type": "fs",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": "- - - - A5 - A4 - A3 - - | - - - - E5 - E4 - E3 - - | - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - | - A0+D2+G2+B2 - - - - - - - - - - - - - - -"
@@ -103,9 +103,9 @@
     },
     "o": {
       "name": "outro",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 2,
           "items": [["0 D 2 G 1", "1 C 1 G 1"]]

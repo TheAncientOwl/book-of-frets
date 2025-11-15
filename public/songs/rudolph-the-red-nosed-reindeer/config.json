@@ -11,9 +11,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 2,
           "items": [["0 C 1 G/B 1"], ["0 Am 1 G 1"]]
@@ -26,9 +26,9 @@
     },
     "r1": {
       "name": "riff 1",
-      "type": "strings",
+      "type": "fs",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": "- - - A5 - A3 - - - A2 - - - A0 - - -"
@@ -37,9 +37,9 @@
     },
     "v1": {
       "name": "verse 1",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["1 G 1 G 1 G 1 D 1", "1 D 1 D 1 D 1 G 1"]]
@@ -48,9 +48,9 @@
     },
     "c": {
       "name": "chorus",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["1 C 1 G 1 D7 1 G 1", "1 A7 1 A7 1"], ["0 D7 1"]]
@@ -59,9 +59,9 @@
     },
     "v2": {
       "name": "verse 2",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["1 G 1 G 1 G 1 D 1", "1 D 1 D 1 D 1 G 1"]]
@@ -70,9 +70,9 @@
     },
     "s": {
       "name": "solo",
-      "type": "strings",
+      "type": "fs",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": "[C] - B8 - B10 - - B8 - G9 - - e8 - - | [C] - B10 - B8 - - - - - - | [C] - B8 - - B10 - - B8 - - B10 - - B8 - - - - B10/13 - - - | [G] - B12 - - - - - - - - - - -"
@@ -85,9 +85,9 @@
     },
     "v3": {
       "name": "verse 3",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["1 G 1 G 1 G 1 D 1", "1 D 1 D 1 D 1 G 1"]]
@@ -96,9 +96,9 @@
     },
     "v4": {
       "name": "verse 4",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["1 G 1 G 1 G 1 D 1", "1 D 1 D 1 D 1 G 1"]]
@@ -107,9 +107,9 @@
     },
     "o1": {
       "name": "outro pt.1",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 D 1"]]
@@ -118,9 +118,9 @@
     },
     "r2": {
       "name": "riff 2",
-      "type": "strings",
+      "type": "fs",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": "- G7+e7 - - - G5+e5 - - - G4+e3 - - - - - - - | - D5+B5 - - - D4+B3 - - - D2+B1 - - - B3 - - -"
@@ -129,9 +129,9 @@
     },
     "o2": {
       "name": "outro pt.2",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 G 1"]]

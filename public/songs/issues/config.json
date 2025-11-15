@@ -16,9 +16,9 @@
   "sections": {
     "v1": {
       "name": "verse",
-      "type": "chords",
+      "type": "str",
       "times": 3,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 C 1 D 1 G/B 1 C 1"]]
@@ -27,9 +27,9 @@
     },
     "pr": {
       "name": "prechorus",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 C 1 D 1"]]
@@ -42,9 +42,9 @@
     },
     "c": {
       "name": "chorus",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 2,
           "items": [["0 C 1 D 1 G 1 Em 1"]]
@@ -57,9 +57,9 @@
     },
     "v2": {
       "name": "verse",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 C 1 D 1 G/B 1 C 1"]]
@@ -68,9 +68,9 @@
     },
     "b": {
       "name": "bridge",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 2,
           "items": [["0 C 1 D 1 G 1 Em 1"]]
@@ -79,9 +79,9 @@
     },
     "lc": {
       "name": "last chorus",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 4,
           "items": [["0 C 1 D 1 G 1 Em 1"]]

@@ -18,9 +18,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 - 1"]]
@@ -33,9 +33,9 @@
     },
     "c1": {
       "name": "chorus",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["1 Am 1 Ft 1 C 1 G 1"]]
@@ -44,9 +44,9 @@
     },
     "v": {
       "name": "verse",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["1 Am 1 Ft 1 C 1 G 1"]]
@@ -55,9 +55,9 @@
     },
     "pr1": {
       "name": "prechorus 1",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["1 Am 1 Ft 1 C 1"]]
@@ -70,9 +70,9 @@
     },
     "c2": {
       "name": "chorus",
-      "type": "chords",
+      "type": "str",
       "times": 4,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["1 Am 1 Ft 1 C 1 G 1"]]
@@ -81,9 +81,9 @@
     },
     "b": {
       "name": "bridge",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["3 Am 1 Ft 1 C 1"]]
@@ -96,9 +96,9 @@
     },
     "pr2": {
       "name": "prechorus 2",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["1 Am 1 Ft 1 C 1"]]
@@ -111,9 +111,9 @@
     },
     "o": {
       "name": "outro",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["3 Am 1 Ft 1 C 1 G 1"]]

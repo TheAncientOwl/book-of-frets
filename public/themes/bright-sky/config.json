@@ -213,7 +213,7 @@
       "border": "cyan.500",
       "text": "white"
     },
-    "chunks": {
+    "items": {
       "background": "blackAlpha.400",
       "divider": "white",
       "item": {

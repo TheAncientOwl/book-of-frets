@@ -18,22 +18,21 @@ export type TAlignType = 'center' | 'flex-start' | 'flex-end';
 
 export type TChordsChunkItem = string[];
 
-export type TChordsChunk = {
+export type TStrummingSectionData = {
   times: number;
   items: TChordsChunkItem[];
-  align?: TAlignType[];
 };
 
-export type TStringsChunk = {
+export type TFingerStyleSectionData = {
   times: number;
   items: string;
 };
 
 export type TSongSection = {
   name: string;
-  type: 'chords' | 'strings';
+  type: 'str' | 'fs';
   times: number;
-  chunks: TChordsChunk[] | TStringsChunk[];
+  items: TStrummingSectionData[] | TFingerStyleSectionData[];
 };
 
 export type TResource = {

@@ -52,7 +52,7 @@ const SkeletonSongChordsList = ({ theme }: { theme: TSongTheme }) => {
     <Accordion defaultOpen>
       <AccordionButton
         boxProps={{
-          borderColor: theme.chunks.divider,
+          borderColor: theme.items.divider,
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
@@ -65,7 +65,7 @@ const SkeletonSongChordsList = ({ theme }: { theme: TSongTheme }) => {
           textDecoration='underline'
           width='100%'
           // [*] theme colors
-          color={theme.chunks.item.title}
+          color={theme.items.item.title}
         >
           Chords
         </Heading>
@@ -76,7 +76,7 @@ const SkeletonSongChordsList = ({ theme }: { theme: TSongTheme }) => {
             right: '10px',
           }}
           // [*] theme colors
-          color={theme.chunks.item.title}
+          color={theme.items.item.title}
         />
       </AccordionButton>
 
@@ -108,7 +108,7 @@ const SkeletonSongSections = ({ theme }: { theme: TSongTheme }) => {
               alignItems: 'center',
               position: 'relative',
               // [*] theme colors
-              borderColor: theme.chunks.divider,
+              borderColor: theme.items.divider,
             }}
           >
             <Skeleton height='20px' width='110px' />
@@ -119,7 +119,7 @@ const SkeletonSongSections = ({ theme }: { theme: TSongTheme }) => {
                 right: '10px',
               }}
               // [*] theme colors
-              color={theme.chunks.item.title}
+              color={theme.items.item.title}
             />
           </AccordionButton>
           <AccordionPanel>
@@ -153,7 +153,7 @@ export const SkeletonSong = () => {
         padding={['1.5rem 10px', '1.5rem 1rem']}
         borderRadius='1rem'
         // [*] theme colors
-        backgroundColor={theme.chunks.background}
+        backgroundColor={theme.items.background}
       >
         <SkeletonSongChordsList theme={theme} />
         <SkeletonSongSections theme={theme} />

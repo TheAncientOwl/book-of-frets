@@ -11,9 +11,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 C 2 G 2 Am 2 F 2"]]
@@ -22,9 +22,9 @@
     },
     "v": {
       "name": "verse",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 2,
           "items": [["0 C 2 G 2 Am 2 F 2", "0 C 2 G 2 Am 2 F 1 G 1"]]
@@ -33,9 +33,9 @@
     },
     "c1": {
       "name": "chorus 1",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 3,
           "items": [["0 F 2 G 1", "1 C 1 G 1"]]
@@ -48,9 +48,9 @@
     },
     "bk": {
       "name": "break",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 C 2 G 2 Am 2 F 2"]]
@@ -59,9 +59,9 @@
     },
     "c2": {
       "name": "chorus 2",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 3,
           "items": [["0 F 2 G 1"], ["1 C 1 G 1"]]
@@ -74,9 +74,9 @@
     },
     "b": {
       "name": "bridge",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 C 2 G 2 Am 4 G 4", "0 Am 1 G 1 F 1 G 1"]]
@@ -85,9 +85,9 @@
     },
     "c2.2": {
       "name": "chorus 2",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 5,
           "items": [["0 F 2 G 1", "1 C 1 G 1"]]
@@ -100,9 +100,9 @@
     },
     "o": {
       "name": "outro",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 C 2 G 2 Am 2 F 1 G 1"]]

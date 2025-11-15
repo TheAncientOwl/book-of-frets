@@ -216,7 +216,7 @@ export type TSongTheme = {
     border: string;
     text: string;
   };
-  chunks: {
+  items: {
     background: string;
     divider: string;
     item: {

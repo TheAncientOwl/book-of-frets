@@ -14,9 +14,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords",
+      "type": "str",
       "times": 3,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 Am 1 C 1 G 1 D 1"]]
@@ -25,9 +25,9 @@
     },
     "v": {
       "name": "verse",
-      "type": "chords",
+      "type": "str",
       "times": 3,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["1 Am 1 C 1 G 1 D 1"]]

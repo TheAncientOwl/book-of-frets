@@ -21,9 +21,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 Am 1 F 1 G 1"]]
@@ -36,9 +36,9 @@
     },
     "v": {
       "name": "verse",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["0 Am 1 F 1 G 1"]]
@@ -51,9 +51,9 @@
     },
     "pr": {
       "name": "prechorus",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["2 F 1 G 1 Am 1 Am 1", "2 F 1 G 1 Am 1"]]
@@ -66,9 +66,9 @@
     },
     "c1": {
       "name": "chorus 1",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["3 Am 1 F 1 G 1"]]
@@ -81,9 +81,9 @@
     },
     "po": {
       "name": "postchorus",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["5 Am 8 G 8 C 3 G 5"]]
@@ -92,9 +92,9 @@
     },
     "c2": {
       "name": "chorus 2",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "items": [
         {
           "times": 5,
           "items": [["4 F 1 G 1 Am 1 Em 1"]]
@@ -107,9 +107,9 @@
     },
     "c1.1": {
       "name": "chorus 1",
-      "type": "chords",
+      "type": "str",
       "times": 4,
-      "chunks": [
+      "items": [
         {
           "times": 1,
           "items": [["3 Am 1 F 1 G 1"]]
