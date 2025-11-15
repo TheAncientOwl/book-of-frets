@@ -13,7 +13,7 @@
       "name": "intro",
       "type": "fs",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": "- G7+B7 - G7+B7 - G7+B7 - - - G6+B7 - G6+B7 - G6+B7 - - - | - B7 - e5 - G7 - B5 - B5/6 - B5 - G7 - G4 - | - D7 - - - - - - - - - - - - - - | - - - E5 - E3 - - - E2 - - - E0 - - -"
@@ -24,7 +24,7 @@
       "name": "verse 1",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [
@@ -42,7 +42,7 @@
       "name": "verse 2",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [
@@ -60,7 +60,7 @@
       "name": "chorus",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["1 G 4 G#dim7 4 D 8 E7 8"]]
@@ -75,7 +75,7 @@
       "name": "chorus riff",
       "type": "fs",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": "- - - E5 - E3 - - - E2 - - - E0 - - -"
@@ -86,7 +86,7 @@
       "name": "post chorus 1",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["0 D 1 DM7 1 | 0 D6 1 D 1", "0 D6 1 B7 1 | 0 G 1 Gm 1", "0 Em 1 A7 1 | 0 D 1"]]
@@ -97,7 +97,7 @@
       "name": "verse 3",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [
@@ -115,7 +115,7 @@
       "name": "post chorus 2",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [

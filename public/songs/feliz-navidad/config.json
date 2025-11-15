@@ -13,7 +13,7 @@
       "name": "intro",
       "type": "fs",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": "[D] - - - - B10 e10 - - e9 - e10 - | [G] - e7 - - - - - - | [A7] - e9 - e9 - - e7 - B10 - e7 | [D] - B10 - - - - - -"
@@ -28,7 +28,7 @@
       "name": "verse",
       "type": "str",
       "times": 2,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["0 G 1 A7 1 D 1 D 1"], ["0 G 1 A7 1 D 1", "1 D 1"]]
@@ -39,7 +39,7 @@
       "name": "chorus",
       "type": "str",
       "times": 2,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["0 G 1 A7 1 D 1 Bm 1"], ["0 G 1 A7 1 D 1", "1 D 1"]]
@@ -50,7 +50,7 @@
       "name": "verse",
       "type": "fs",
       "times": 2,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": "[G] - D9 - - G7 B8 - - G7 D9 G7 - | [A7] - D11 - - G9 B10 - - G9 D11 G9 - | [D] - D7 - - G7 B7 - - G7 D7 G7 - | [D] - D7 - - G7 B7 - - G7 D7 G7 -"
@@ -65,7 +65,7 @@
       "name": "chorus",
       "type": "fs",
       "times": 2,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": "[G] - D9 - - G7 B8 - - G7 D9 G7 - | [A7] - D11 - - G9 B10 - - G9 D11 G9 - | [D] - D7 - - G7 B7 - - G7 D7 G7 - | [Bm] - D9 - - G7 B7 - - G7 D9 G7 -"
@@ -80,7 +80,7 @@
       "name": "outro",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["1 G 1 A7 1 D 1 - 1", "1 G 1 A7 1 D 1 D 1"]]

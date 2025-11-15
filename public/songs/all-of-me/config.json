@@ -17,7 +17,7 @@
       "name": "intro",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["0 Em 1 C 1 G 1 D 1"]]
@@ -28,7 +28,7 @@
       "name": "verse",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 4,
           "items": [["0 Em 1 C 1 G 1 D 1"]]
@@ -39,7 +39,7 @@
       "name": "prechorus",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["0 Am 1 Am 1 G 1 D 1"]]
@@ -54,7 +54,7 @@
       "name": "chorus 1",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 2,
           "items": [["2 G 1 Em 1 C 1 D 1"]]
@@ -69,7 +69,7 @@
       "name": "chorus 2",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["1 G 1 Em 1 C 1 D 1"]]

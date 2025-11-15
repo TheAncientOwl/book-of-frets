@@ -17,7 +17,7 @@
       "name": "intro",
       "type": "str",
       "times": 2,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["0 Em 1 G 1 Bm 1 A 1"]]
@@ -28,7 +28,7 @@
       "name": "verse",
       "type": "str",
       "times": 4,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["0 Em 1 G 1 Bm 1 A 1"]]
@@ -39,7 +39,7 @@
       "name": "chorus",
       "type": "str",
       "times": 4,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["1 Em 1 G 1 Bm 1 A 1"]]
@@ -50,7 +50,7 @@
       "name": "bridge",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 2,
           "items": [["2 G 1 Bm 1 D 1 A 1"]]

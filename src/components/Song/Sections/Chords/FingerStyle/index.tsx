@@ -10,7 +10,7 @@
  * @description Render song strings pattern.
  */
 
-import type { TFingerStyleSectionData } from '@/common/types/song.types';
+import type { TFingerStyleChords } from '@/common/types/song.types';
 import { useAppStore } from '@/store/index';
 import { Box, Divider, Flex, Text } from '@chakra-ui/react';
 
@@ -149,7 +149,7 @@ const parseItems = (items: string): { stringsToFrets: TStringToFrets; chords: TD
   return { stringsToFrets, chords };
 };
 
-export const FingerStyleChords = (props: TFingerStyleSectionData) => {
+export const FingerStyleChords = (props: TFingerStyleChords) => {
   const theme = useAppStore(state => state.appTheme.song);
 
   const { stringsToFrets, chords } = parseItems(props.items);

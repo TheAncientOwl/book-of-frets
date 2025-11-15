@@ -13,7 +13,7 @@
 import type {
   TSongSectionLyrics,
   TStrummingPattern,
-  TStrummingSectionData,
+  TStrummingChords,
 } from '@/common/types/song.types';
 import { StrummingChordsItem } from '@/components/Song/Sections/Chords/Strumming/Item';
 import { StrummingChordsDivider } from '@/components/Song/Sections/Chords/Strumming/Divider';
@@ -28,7 +28,7 @@ const ChordsChunkLyrics = lazy(() =>
   }))
 );
 
-type TChordsChunkProps = TStrummingSectionData & {
+type TChordsChunkProps = TStrummingChords & {
   strumms: TStrummingPattern[];
   showLyrics: boolean;
   lyrics: TSongSectionLyrics;

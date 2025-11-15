@@ -16,7 +16,7 @@
       "name": "intro",
       "type": "str",
       "times": 3,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["0 Am 1 C 1 G 1 D 1"]]
@@ -27,7 +27,7 @@
       "name": "verse",
       "type": "str",
       "times": 3,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["1 Am 1 C 1 G 1 D 1"]]

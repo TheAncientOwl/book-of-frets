@@ -13,7 +13,7 @@
       "name": "main progression",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 404,
           "items": [["0 Em7 1 Cadd9 1 G 1 D 1"]]

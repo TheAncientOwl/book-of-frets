@@ -18,7 +18,7 @@
       "name": "verse / prechorus",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 3,
           "items": [["0 Am 1 Ft 1 C 1 G/B 1"]]
@@ -37,7 +37,7 @@
       "name": "chorus",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["2 Am 1"]]
@@ -52,7 +52,7 @@
       "name": "break",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["0 Am 1"]]
@@ -63,7 +63,7 @@
       "name": "verse / prechorus",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 3,
           "items": [["1 Am 1 Ft 1 C 1 G/B 1"]]
@@ -78,7 +78,7 @@
       "name": "bridge",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["0 Ft 2 C 2 G 2 C/E 1"]]

@@ -13,7 +13,7 @@
       "name": "intro / verse / chorus",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 15,
           "items": [["0 Am 1 G 1 C 2"]]
@@ -24,7 +24,7 @@
       "name": "break",
       "type": "fs",
       "times": 4,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": "- B3h5 - B5 - e3 - - - - G5 B5 - - -"
@@ -35,7 +35,7 @@
       "name": "bridge",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 2,
           "items": [["0 Am 2 G 2 C 2 Ft 2"]]
@@ -46,7 +46,7 @@
       "name": "post bridge",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 2,
           "items": [["1 Am 1 G 1 C 1"]]

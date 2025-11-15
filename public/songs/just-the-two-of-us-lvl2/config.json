@@ -21,7 +21,7 @@
       "name": "verse",
       "type": "str",
       "times": 2,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["0 CM7 1", "1 B7 2"]]
@@ -44,7 +44,7 @@
       "name": "chorus",
       "type": "str",
       "times": 2,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["3 CM7 1 B7 1"], ["1 Em7 1 Ebm7 1 Dm7 1 G7 1"]]
@@ -59,7 +59,7 @@
       "name": "bridge 1",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["0 CM7 1", "1 B7 2"]]
@@ -82,7 +82,7 @@
       "name": "bridge 2",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["0 CM7 1", "1 B7 2"]]

@@ -21,7 +21,7 @@
       "name": "intro",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["0 D 4"]]
@@ -32,7 +32,7 @@
       "name": "verse",
       "type": "str",
       "times": 2,
-      "items": [
+      "chords": [
         {
           "times": 2,
           "items": [["0 D 2 G 1", "1 C 1 G 1"]]
@@ -47,7 +47,7 @@
       "name": "chorus 1",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [["0 G 2"], ["2 C 1"], ["0 G 1"]]
@@ -62,7 +62,7 @@
       "name": "chorus 2",
       "type": "fs",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": "- - - - A5 - A4 - A3 - - | - - - - E5 - E4 - E3 - - | - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - | - G2 - G2 - G0 - G0 - D4 - D4 - D2 - D2 -"
@@ -73,7 +73,7 @@
       "name": "solo 1",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": [
@@ -94,7 +94,7 @@
       "name": "solo 2",
       "type": "fs",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": "- - - - A5 - A4 - A3 - - | - - - - E5 - E4 - E3 - - | - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - | - A0+D2+G2+B2 - - - - - - - - - - - - - - -"
@@ -105,7 +105,7 @@
       "name": "outro",
       "type": "str",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 2,
           "items": [["0 D 2 G 1", "1 C 1 G 1"]]

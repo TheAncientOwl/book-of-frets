@@ -13,7 +13,7 @@
       "name": "main 1",
       "type": "fs",
       "times": 3,
-      "items": [
+      "chords": [
         {
           "times": 3,
           "items": "- A7 - - A7 - A10 - A7 - A5 - A3 - A2 -"
@@ -24,7 +24,7 @@
       "name": "main 2",
       "type": "fs",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": "- E3+A5 - E3+A5 - E3+A5 - E3+A5 - E3+A5 - E3+A5 - E3+A5 - - | - - E5+A7 - E5+A7 - E5+A7 - E5+A7 - E5+A7 - E5+A7 - E5+A7 -"
@@ -35,7 +35,7 @@
       "name": "main 3",
       "type": "fs",
       "times": 3,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": "- A7+D9 - - A7+D9 - A10+D12 - A7+D9 - A5+D7 - A3+D5 - A2+D4 - - | - - A7+D9 - - A7+D9 - A10+D12 - A7+D9 - A5+D7 - A3+D5 - A2+D4 -"
@@ -46,7 +46,7 @@
       "name": "outro",
       "type": "fs",
       "times": 1,
-      "items": [
+      "chords": [
         {
           "times": 1,
           "items": "- A7 - - A7 - A10 - A7 - A5 - A3 - A2 -"

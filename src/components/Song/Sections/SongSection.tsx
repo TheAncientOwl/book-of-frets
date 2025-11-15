@@ -87,7 +87,7 @@ export const SongSection = (props: TSongSectionProps) => {
           padding={['1.1em 0em', '1.1em 1em']}
           overflowX={['auto', 'hidden']}
         >
-          {props.items.map((chunk, chunkIdx) => (
+          {props.chords.map((chunk, chunkIdx) => (
             <Chords
               key={chunkIdx}
               type={props.type}

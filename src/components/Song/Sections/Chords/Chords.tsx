@@ -11,9 +11,9 @@
  */
 
 import type {
-  TStrummingSectionData,
+  TStrummingChords,
   TSongSectionLyrics,
-  TFingerStyleSectionData,
+  TFingerStyleChords,
   TStrummingPattern,
 } from '@/common/types/song.types';
 import { StrummingChords } from '@/components/Song/Sections/Chords/Strumming';
@@ -24,7 +24,7 @@ type TChordsProps = {
   strumms: TStrummingPattern[];
   showLyrics: boolean;
   lyrics: TSongSectionLyrics;
-  data: TStrummingSectionData | TFingerStyleSectionData;
+  data: TStrummingChords | TFingerStyleChords;
 };
 
 export const Chords = (props: TChordsProps) => {
@@ -32,14 +32,14 @@ export const Chords = (props: TChordsProps) => {
     case 'str':
       return (
         <StrummingChords
-          {...(props.data as TStrummingSectionData)}
+          {...(props.data as TStrummingChords)}
           strumms={props.strumms}
           showLyrics={props.showLyrics}
           lyrics={props.lyrics}
         />
       );
     case 'fs':
-      return <FingerStyleChords {...(props.data as TFingerStyleSectionData)} />;
+      return <FingerStyleChords {...(props.data as TFingerStyleChords)} />;
       return null;
     default:
       console.warn(`Unimplemented chords type "${props.type}`);
