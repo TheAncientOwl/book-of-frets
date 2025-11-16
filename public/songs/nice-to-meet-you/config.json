@@ -27,11 +27,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["0 Em 2 C 2 G 2 D 2", "0 Em 2 C 2 G 2"]]
-        },
-        {
-          "times": 1,
-          "items": [["1 D 1"]]
+          "items": [["0 Em 2 C 2 G 2 D 2 / 0 Em 2 C 2 G 2"], ["1 D 1"]]
         }
       ]
     },

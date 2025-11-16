@@ -27,7 +27,7 @@
       "chords": [
         {
           "times": 2,
-          "items": [["0 C 2 G 2 Am 2 F 2", "0 C 2 G 2 Am 2 F 1 G 1"]]
+          "items": [["0 C 2 G 2 Am 2 F 2 / 0 C 2 G 2 Am 2 F 1 G 1"]]
         }
       ]
     },
@@ -79,7 +79,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["0 C 2 G 2 Am 4 G 4", "0 Am 1 G 1 F 1 G 1"]]
+          "items": [["0 C 2 G 2 Am 4 G 4 / 0 Am 1 G 1 F 1 G 1"]]
         }
       ]
     },
@@ -105,11 +105,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["0 C 2 G 2 Am 2 F 1 G 1"]]
-        },
-        {
-          "times": 1,
-          "items": [["0 C 2 G 2 Am 2 F 1"]]
+          "items": [["0 C 2 G 2 Am 2 F 1 G 1 / 0 C 2 G 2 Am 2 F 1"]]
         },
         {
           "times": 1,

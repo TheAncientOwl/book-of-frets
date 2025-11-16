@@ -6,7 +6,7 @@
  *
  * @file song.types.ts
  * @author Alexandru Delegeanu
- * @version 0.19
+ * @version 0.20
  * @description Song types for json mapping.
  */
 
@@ -16,11 +16,11 @@ export type TStrummingPattern = TStrummingMove[];
 
 export type TAlignType = 'center' | 'flex-start' | 'flex-end';
 
-export type TChordsChunkItem = string[];
+export type TStrummingChordsItem = string[];
 
 export type TStrummingChords = {
   times: number;
-  items: TChordsChunkItem[];
+  items: TStrummingChordsItem[];
 };
 
 export type TFingerStyleChords = {

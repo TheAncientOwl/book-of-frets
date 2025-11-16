@@ -29,10 +29,7 @@
           "times": 1,
           "items": [
             [
-              "0 D 1 DM7 1 | 0 D6 1 D 1",
-              "0 D6 1 D#dim7 1 | 0 Em7 1 A7 1",
-              "0 Em7 1 A7 1 | 0 Em7 1 A7 1",
-              "0 Em7 1 A7 1"
+              "0 D 1 DM7 1 | 0 D6 1 D 1 / 0 D6 1 D#dim7 1 | 0 Em7 1 A7 1 / 0 Em7 1 A7 1 | 0 Em7 1 A7 1 / 0 Em7 1 A7 1"
             ]
           ]
         }
@@ -47,10 +44,7 @@
           "times": 1,
           "items": [
             [
-              "0 D 1 DM7 1 | 0 D6 1 D 1",
-              "0 D6 1 D#dim7 1 | 0 Em7 1 A7 1",
-              "0 Em7 1 A7 1 | 0 Em7 1 A7 1",
-              "0 Em7 1 A7 1 | 0 D 1 D7 1"
+              "0 D 1 DM7 1 | 0 D6 1 D 1 / 0 D6 1 D#dim7 1 | 0 Em7 1 A7 1 / 0 Em7 1 A7 1 | 0 Em7 1 A7 1 / 0 Em7 1 A7 1 | 0 D 1 D7 1"
             ]
           ]
         }
@@ -63,11 +57,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["1 G 4 G#dim7 4 D 8 E7 8"]]
-        },
-        {
-          "times": 1,
-          "items": [["2 A 1"]]
+          "items": [["1 G 4 G#dim7 4 D 8 E7 8"], ["2 A 1"]]
         }
       ]
     },
@@ -89,7 +79,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["0 D 1 DM7 1 | 0 D6 1 D 1", "0 D6 1 B7 1 | 0 G 1 Gm 1", "0 Em 1 A7 1 | 0 D 1"]]
+          "items": [["0 D 1 DM7 1 | 0 D6 1 D 1 / 0 D6 1 B7 1 | 0 G 1 Gm 1 / 0 Em 1 A7 1 | 0 D 1"]]
         }
       ]
     },
@@ -102,10 +92,7 @@
           "times": 1,
           "items": [
             [
-              "0 D 1 DM7 1 | 0 D6 1 D 1",
-              "0 D6 1 D#dim7 1 | 0 Em7 1 A7 1",
-              "0 Em7 1 A7 1 | 0 Em7 1 A7 1",
-              "0 Em7 1 A7 1 | 0 D 1 D7 1"
+              "0 D 1 DM7 1 | 0 D6 1 D 1 / 0 D6 1 D#dim7 1 | 0 Em7 1 A7 1 / 0 Em7 1 A7 1 | 0 Em7 1 A7 1 / 0 Em7 1 A7 1 | 0 D 1 D7 1"
             ]
           ]
         }
@@ -120,10 +107,7 @@
           "times": 1,
           "items": [
             [
-              "0 D 1 DM7 1 | 0 D6 1 D 1",
-              "0 D6 1 B7 1 | 0 G 1 Gm 1",
-              "0 Em7 1 A7 1 | 0 Em7 1 A7 1",
-              "0 Em7 1 A7 1 | 0 D 1"
+              "0 D 1 DM7 1 | 0 D6 1 D 1 / 0 D6 1 B7 1 | 0 G 1 Gm 1 / 0 Em7 1 A7 1 | 0 Em7 1 A7 1 / 0 Em7 1 A7 1 | 0 D 1"
             ]
           ]
         },

@@ -6,7 +6,7 @@
  *
  * @file ChordsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.29
+ * @version 0.30
  * @description Render song chords pattern.
  */
 
@@ -63,14 +63,14 @@ export const StrummingChords = (props: TChordsChunkProps) => {
       >
         <StrummingChordsDivider display={['none', 'block']} borderStyle={['solid']} />
 
-        {props.items.map((section, sectionIndex) => (
-          <Fragment key={sectionIndex}>
-            <StrummingChordsItem data={section} strumms={props.strumms} />
+        {props.items.map((item, itemIndex) => (
+          <Fragment key={itemIndex}>
+            <StrummingChordsItem items={item} strumms={props.strumms} />
 
             <StrummingChordsDivider
               borderStyle={['none', 'solid']}
               display={[
-                sectionIndex < props.items.length - (showTimes ? 2 : 1) ? 'block' : 'none',
+                itemIndex < props.items.length - (showTimes ? 2 : 1) ? 'block' : 'none',
                 'block',
               ]}
             />
