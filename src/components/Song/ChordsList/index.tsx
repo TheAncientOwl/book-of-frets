@@ -25,7 +25,7 @@ export const SongChordsList = (props: TSongChordsList) => {
     theme: state.appTheme.song,
   }));
 
-  return (
+  return props.chordIDs.length === 1 && props.chordIDs[0] === '-' ? null : (
     <Accordion defaultOpen>
       <AccordionButton
         boxProps={{
