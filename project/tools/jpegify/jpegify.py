@@ -6,7 +6,7 @@
 
  @file jpegify.py
  @author Alexandru Delegeanu
- @version 0.1
+ @version 1.0
  @description Convert source image to jpeg
 """
 

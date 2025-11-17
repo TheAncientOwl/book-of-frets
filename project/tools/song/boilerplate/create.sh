@@ -6,7 +6,7 @@
 #
 # @file create.sh
 # @author Alexandru Delegeanu
-# @version 0.3
+# @version 1.0
 # @description Create song boilerplate
 #
 

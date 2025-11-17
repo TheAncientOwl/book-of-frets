@@ -6,7 +6,7 @@
  *
  * @file SongChordsList.tsx
  * @author Alexandru Delegeanu
- * @version 0.10
+ * @version 1.0
  * @description Song chords list component.
  */
 

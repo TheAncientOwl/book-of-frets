@@ -6,7 +6,7 @@
  *
  * @file SmartListContent.tsx
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 1.0
  * @description Render filtered, virtualized items of the SmartList.
  */
 

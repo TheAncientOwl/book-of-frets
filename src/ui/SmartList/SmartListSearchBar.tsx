@@ -6,7 +6,7 @@
  *
  * @file SmartListSearchBar.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 1.0
  * @description Filter items of SmartList.
  */
 

@@ -6,7 +6,7 @@
  *
  * @file NotFoundPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 1.0
  * @description Display 404 not found page.
  */
 

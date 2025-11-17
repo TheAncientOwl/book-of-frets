@@ -6,7 +6,7 @@
  *
  * @file Settings.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 1.0
  * @description App settings menu.
  */
 

@@ -6,7 +6,7 @@
 
  @file image_resizer.py
  @author Alexandru Delegeanu
- @version 0.1
+ @version 1.0
  @description Resize given image
 """
 

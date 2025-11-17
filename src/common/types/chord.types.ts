@@ -6,7 +6,7 @@
  *
  * @file song.types.ts
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 1.0
  * @description Chords types for json mapping.
  */
 

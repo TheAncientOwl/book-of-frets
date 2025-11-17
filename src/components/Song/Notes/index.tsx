@@ -6,7 +6,7 @@
  *
  * @file SongNotes.tsx
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 1.0
  * @description Song notes.
  */
 

@@ -6,7 +6,7 @@
  *
  * @file song.types.ts
  * @author Alexandru Delegeanu
- * @version 0.21
+ * @version 1.0
  * @description Song types for json mapping.
  */
 

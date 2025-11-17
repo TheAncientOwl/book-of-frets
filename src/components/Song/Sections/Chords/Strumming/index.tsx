@@ -6,7 +6,7 @@
  *
  * @file ChordsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.30
+ * @version 1.0
  * @description Render song chords pattern.
  */
 

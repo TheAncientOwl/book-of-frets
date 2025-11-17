@@ -6,7 +6,7 @@
  *
  * @file SongResource.tsx
  * @author Alexandru Delegeanu
- * @version 0.11
+ * @version 1.0
  * @description Display song resource data.
  */
 

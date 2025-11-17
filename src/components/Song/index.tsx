@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.37
+ * @version 1.0
  * @description Render song based on given config.
  */
 

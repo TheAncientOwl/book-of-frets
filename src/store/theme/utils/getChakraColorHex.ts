@@ -6,7 +6,7 @@
  *
  * @file getChakraColorHex.ts
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 1.0
  * @description Utility function for parsing ChakraUI colors to hex codes.
  */
 

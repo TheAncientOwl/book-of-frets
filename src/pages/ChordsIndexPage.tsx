@@ -6,7 +6,7 @@
  *
  * @file ChordsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.20
+ * @version 1.0
  * @description Handle chords rendering.
  */
 

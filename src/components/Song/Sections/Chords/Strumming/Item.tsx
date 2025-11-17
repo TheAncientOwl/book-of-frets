@@ -6,7 +6,7 @@
  *
  * @file ChordsChunkItem.tsx
  * @author Alexandru Delegeanu
- * @version 0.31
+ * @version 1.0
  * @description Render song pattern section.
  */
 

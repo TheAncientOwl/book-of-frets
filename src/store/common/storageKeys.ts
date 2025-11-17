@@ -6,7 +6,7 @@
  *
  * @file storageKeys.ts
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 1.0
  * @description House of all local/session storage keys.
  */
 

@@ -6,7 +6,7 @@
  *
  * @file Chords.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 1.0
  * @description Chords renderer.
  */
 

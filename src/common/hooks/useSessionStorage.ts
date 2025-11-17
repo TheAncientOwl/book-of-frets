@@ -6,7 +6,7 @@
  *
  * @file useSessionStorage.ts
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 1.0
  * @description Session storage hook.
  */
 

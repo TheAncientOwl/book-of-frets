@@ -6,7 +6,7 @@
  *
  * @file Lyrics.tsx
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 1.0
  * @description Chords chunk lyrics component.
  */
 

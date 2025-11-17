@@ -6,7 +6,7 @@
  *
  * @file SongSections.tsx
  * @author Alexandru Delegeanu
- * @version 0.19
+ * @version 1.0
  * @description Render song sections data.
  */
 

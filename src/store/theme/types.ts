@@ -6,7 +6,7 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 0.18
+ * @version 1.0
  * @description App theme types
  */
 

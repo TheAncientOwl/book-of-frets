@@ -6,7 +6,7 @@
  *
  * @file Fret.tsx
  * @author Alexandru Delegeanu
- * @version 0.13
+ * @version 1.0
  * @description Render chrod based on given config.
  */
 

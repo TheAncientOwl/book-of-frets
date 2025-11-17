@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 1.0
  * @description Song display options.
  */
 

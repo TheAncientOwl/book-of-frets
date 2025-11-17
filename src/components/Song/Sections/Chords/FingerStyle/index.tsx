@@ -6,7 +6,7 @@
  *
  * @file FingerStyleChords.tsx
  * @author Alexandru Delegeanu
- * @version 0.29
+ * @version 1.0
  * @description Render song strings pattern.
  */
 

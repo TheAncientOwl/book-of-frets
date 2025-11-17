@@ -6,7 +6,7 @@
  *
  * @file ThemePicker.tsx
  * @author Alexandru Delegeanu
- * @version 0.16
+ * @version 1.0
  * @description Display app themes and handles theme setting.
  */
 

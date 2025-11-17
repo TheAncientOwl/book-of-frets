@@ -6,7 +6,7 @@
  *
  * @file Strings.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 1.0
  * @description Strings display for the guitar tuner.
  */
 
