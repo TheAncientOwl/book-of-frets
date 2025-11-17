@@ -6,13 +6,12 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description App menu component.
  */
 
 import { useSessionStorage } from '@/common/hooks/useSessionStorage';
 import { NavigationList } from '@/components/AppMenu/Navigation/List';
-import Settings from '@/components/AppMenu/Settings';
 import { SessionStorageKeys } from '@/store/common/storageKeys';
 import {
   Box,
@@ -38,12 +37,12 @@ import {
 } from '@chakra-ui/react';
 import { useRef, type PropsWithChildren } from 'react';
 import { MdCopyright } from 'react-icons/md';
-// import { SongsHistory } from '@/components/AppMenu/Navigation/SongsHistory';
 import { Loading } from '@/ui/Loading';
 import { useAppStore, useShallowAppStore } from '@/store/index';
 import { lazy, Suspense } from 'react';
 
 const GuitarTuner = lazy(() => import('@/components/AppMenu/GuitarTuner'));
+const Settings = lazy(() => import('@/components/AppMenu/Settings'));
 
 const TabHeader = (props: PropsWithChildren) => {
   const theme = useAppStore(state => state.appTheme.appMenu.tabs);
@@ -161,17 +160,22 @@ export const AppMenu = () => {
                     // [*] theme colors
                     borderColor={theme.items.navigation.routeLink}
                   />
-                  {/* <SongsHistory onItemClick={onClose} /> */}
                 </TabPanel>
 
                 <TabPanel>
-                  <Suspense fallback={<Loading />}>
-                    <GuitarTuner />
-                  </Suspense>
+                  {activeTab === 1 && (
+                    <Suspense fallback={<Loading />}>
+                      <GuitarTuner />
+                    </Suspense>
+                  )}
                 </TabPanel>
 
                 <TabPanel>
-                  <Settings />
+                  {activeTab === 2 && (
+                    <Suspense fallback={<Loading />}>
+                      <Settings />
+                    </Suspense>
+                  )}
                 </TabPanel>
               </TabPanels>
             </Tabs>
