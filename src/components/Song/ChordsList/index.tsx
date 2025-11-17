@@ -6,7 +6,7 @@
  *
  * @file SongChordsList.tsx
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @description Song chords list component.
  */
 
@@ -68,7 +68,7 @@ export const SongChordsList = (props: TSongChordsList) => {
 
             return (
               <ListItem key={chordID}>
-                <Chord {...config} containerProps={{ fontSize: ['8px', '10px', '11px'] }} />
+                <Chord {...config} containerProps={{ fontSize: ['7px', '8px', '9px'] }} />
               </ListItem>
             );
           })}
