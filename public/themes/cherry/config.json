@@ -213,7 +213,7 @@
       "border": "red.500",
       "text": "white"
     },
-    "chunks": {
+    "items": {
       "background": "blackAlpha.400",
       "divider": "white",
       "item": {
@@ -230,7 +230,7 @@
           "chord": {
             "background": "red.600",
             "color": "white",
-            "segment": {
+            "section": {
               "popover": {
                 "background": "gray.900",
                 "arrow": "white",

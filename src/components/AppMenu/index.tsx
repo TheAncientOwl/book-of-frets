@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 0.24
+ * @version 1.0
  * @description App menu component.
  */
 

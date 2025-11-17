@@ -6,14 +6,14 @@
  *
  * @file Divider.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 1.0
  * @description Divider.
  */
 
 import { useAppStore } from '@/store/index';
 import { Divider, type DividerProps } from '@chakra-ui/react';
 
-export const ChordsChunkDivider = (props: DividerProps) => {
+export const StrummingChordsDivider = (props: DividerProps) => {
   const theme = useAppStore(state => state.appTheme.song);
 
   return (
@@ -27,7 +27,7 @@ export const ChordsChunkDivider = (props: DividerProps) => {
       ml={['auto', '0px']}
       mr={['auto', '0px']}
       // [*] theme colors
-      borderColor={theme.chunks.item.chordsPattern.divider}
+      borderColor={theme.items.item.chordsPattern.divider}
       {...props}
     />
   );

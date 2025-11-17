@@ -6,7 +6,7 @@
 #
 # @file install_deps.sh
 # @author Alexandru Delegeanu
-# @version 0.1
+# @version 1.0
 # @description Install dependencies for jpegify tool
 #
 

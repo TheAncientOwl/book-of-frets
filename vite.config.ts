@@ -6,7 +6,7 @@
  *
  * @file vite.config.ts
  * @author Alexandru Delegeanu
- * @version 0.12
+ * @version 1.0
  * @description Vite configuration.
  */
 

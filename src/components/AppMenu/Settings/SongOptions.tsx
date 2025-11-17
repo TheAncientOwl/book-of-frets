@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 1.0
  * @description Song display options.
  */
 
@@ -40,25 +40,27 @@ const ThemedCheckbox = (props: CheckboxProps) => {
 export const SongOptions = () => {
   const {
     display,
-    setDisplaySegmentTimes,
+    setDisplaySectionTimes,
     setDisplayChordTimes,
     setDisplayChordTimesOne,
     setDisplayStrummingPattern,
+    setDisplayChordsFingers,
   } = useShallowAppStore(state => ({
     display: state.songSettings.display,
-    setDisplaySegmentTimes: state.setDisplaySegmentTimes,
+    setDisplaySectionTimes: state.setDisplaySectionTimes,
     setDisplayChordTimes: state.setDisplayChordTimes,
     setDisplayChordTimesOne: state.setDisplayChordTimesOne,
     setDisplayStrummingPattern: state.setDisplayStrummingPattern,
+    setDisplayChordsFingers: state.setDisplayChordsFingers,
   }));
 
   return (
     <VStack align='start' spacing={3}>
       <ThemedCheckbox
-        isChecked={display.segmentTimes}
-        onChange={() => setDisplaySegmentTimes(!display.segmentTimes)}
+        isChecked={display.sectionTimes}
+        onChange={() => setDisplaySectionTimes(!display.sectionTimes)}
       >
-        Segment Times
+        Section Times
       </ThemedCheckbox>
       <ThemedCheckbox
         isChecked={display.chordTimes}
@@ -77,6 +79,12 @@ export const SongOptions = () => {
         onChange={() => setDisplayStrummingPattern(!display.strummingPattern)}
       >
         Strumming Pattern
+      </ThemedCheckbox>
+      <ThemedCheckbox
+        isChecked={display.chordsFingers}
+        onChange={() => setDisplayChordsFingers(!display.chordsFingers)}
+      >
+        Chords Fingers
       </ThemedCheckbox>
     </VStack>
   );

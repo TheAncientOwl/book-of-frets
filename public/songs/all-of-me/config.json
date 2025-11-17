@@ -12,79 +12,79 @@
     ["D"],
     ["D", "-", "D", "U", "D", "-", "D", "U", "-", "U", "D", "-", "D", "U", "D", "U"]
   ],
-  "segments": {
+  "sections": {
     "i": {
       "name": "intro",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
-          "items": [["0 Em 1 C 1 G 1 D 1"]]
+          "items": [[["0 Em 1 C 1 G 1 D 1"]]]
         }
       ]
     },
     "v": {
       "name": "verse",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 4,
-          "items": [["0 Em 1 C 1 G 1 D 1"]]
+          "items": [[["0 Em 1 C 1 G 1 D 1"]]]
         }
       ]
     },
     "p": {
       "name": "prechorus",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
-          "items": [["0 Am 1 Am 1 G 1 D 1"]]
+          "items": [[["0 Am 1 Am 1 G 1 D 1"]]]
         },
         {
           "times": 1,
-          "items": [["0 Am 1 Am 1 G 1", "1 D 1"]]
+          "items": [[["0 Am 1 Am 1 G 1"], ["1 D 1"]]]
         }
       ]
     },
     "c1": {
       "name": "chorus 1",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 2,
-          "items": [["2 G 1 Em 1 C 1 D 1"]]
+          "items": [[["2 G 1 Em 1 C 1 D 1"]]]
         },
         {
           "times": 2,
-          "items": [["0 Em 1 C 1 G 1 D 1"]]
+          "items": [[["0 Em 1 C 1 G 1 D 1"]]]
         }
       ]
     },
     "c2": {
       "name": "chorus 2",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
-          "items": [["1 G 1 Em 1 C 1 D 1"]]
+          "items": [[["1 G 1 Em 1 C 1 D 1"]]]
         },
         {
           "times": 1,
-          "items": [["2 G 1 Em 1 C 1 D 1"]]
+          "items": [[["2 G 1 Em 1 C 1 D 1"]]]
         },
         {
           "times": 3,
-          "items": [["0 Em 1 C 1 G 1 D 1"]]
+          "items": [[["0 Em 1 C 1 G 1 D 1"]]]
         },
         {
           "times": 1,
-          "items": [["1 Em 1 C 1 G 1 D 1"]]
+          "items": [[["1 Em 1 C 1 G 1 D 1"]]]
         }
       ]
     }

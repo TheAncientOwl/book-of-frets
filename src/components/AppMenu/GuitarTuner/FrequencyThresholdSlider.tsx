@@ -6,7 +6,7 @@
  *
  * @file FrequencyThresholdSlider.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 1.0
  * @description UI display of frequency threshold.
  */
 

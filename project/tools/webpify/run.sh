@@ -6,7 +6,7 @@
 #
 # @file run.sh
 # @author Alexandru Delegeanu
-# @version 0.2
+# @version 1.0
 # @description Runs @see webpify.py
 #
 

@@ -6,7 +6,7 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 0.12
+ * @version 1.0
  * @description Render song header data.
  */
 

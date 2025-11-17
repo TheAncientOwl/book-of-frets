@@ -6,7 +6,7 @@
 #
 # @file run.sh
 # @author Alexandru Delegeanu
-# @version 0.1
+# @version 1.0
 # @description Runs @see image_resizer.py
 #
 

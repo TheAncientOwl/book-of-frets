@@ -6,7 +6,7 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 0.18
+ * @version 1.0
  * @description App theme types
  */
 
@@ -216,7 +216,7 @@ export type TSongTheme = {
     border: string;
     text: string;
   };
-  chunks: {
+  items: {
     background: string;
     divider: string;
     item: {
@@ -233,7 +233,7 @@ export type TSongTheme = {
         chord: {
           background: string;
           color: string;
-          segment: {
+          section: {
             popover: {
               background: string;
               arrow: string;

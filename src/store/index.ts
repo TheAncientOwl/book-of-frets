@@ -6,7 +6,7 @@
  *
  * @file index.ts
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 1.0
  * @description Zustand global app store.
  */
 
@@ -25,19 +25,21 @@ type TAppStore = {
   appLogoURL: string;
   songSettings: {
     display: {
-      segmentTimes: boolean;
+      sectionTimes: boolean;
       chordTimes: boolean;
       chordTimesOne: boolean;
       strummingPattern: boolean;
+      chordsFingers: boolean;
     };
   };
   updateChordsIndex: () => Promise<void>;
   setAppTheme: (theme: TAppTheme) => void;
   setAppLogoURL: (url: string) => void;
-  setDisplaySegmentTimes: (value: boolean) => void;
+  setDisplaySectionTimes: (value: boolean) => void;
   setDisplayChordTimes: (value: boolean) => void;
   setDisplayChordTimesOne: (value: boolean) => void;
   setDisplayStrummingPattern: (value: boolean) => void;
+  setDisplayChordsFingers: (value: boolean) => void;
 };
 
 export const useAppStore = create<TAppStore, [['zustand/persist', unknown]]>(
@@ -48,10 +50,11 @@ export const useAppStore = create<TAppStore, [['zustand/persist', unknown]]>(
       appLogoURL: `${import.meta.env.BASE_URL}logo.svg`,
       songSettings: {
         display: {
-          segmentTimes: true,
+          sectionTimes: true,
           chordTimes: true,
           chordTimesOne: true,
           strummingPattern: true,
+          chordsFingers: true,
         },
       },
 
@@ -75,11 +78,11 @@ export const useAppStore = create<TAppStore, [['zustand/persist', unknown]]>(
 
       setAppTheme: theme => set({ appTheme: theme }),
       setAppLogoURL: url => set({ appLogoURL: url }),
-      setDisplaySegmentTimes: value =>
+      setDisplaySectionTimes: value =>
         set(state => ({
           songSettings: {
             ...state.songSettings,
-            display: { ...state.songSettings.display, segmentTimes: value },
+            display: { ...state.songSettings.display, sectionTimes: value },
           },
         })),
       setDisplayChordTimes: value =>
@@ -101,6 +104,13 @@ export const useAppStore = create<TAppStore, [['zustand/persist', unknown]]>(
           songSettings: {
             ...state.songSettings,
             display: { ...state.songSettings.display, strummingPattern: value },
+          },
+        })),
+      setDisplayChordsFingers: value =>
+        set(state => ({
+          songSettings: {
+            ...state.songSettings,
+            display: { ...state.songSettings.display, chordsFingers: value },
           },
         })),
     }),

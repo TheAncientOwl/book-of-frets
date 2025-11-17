@@ -6,7 +6,7 @@
  *
  * @file setDocumentScrollbarColors.ts
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 1.0
  * @description Sets HTML document scrollbars theme.
  */
 

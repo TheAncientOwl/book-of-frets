@@ -6,7 +6,7 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 0.26
+ * @version 1.0
  * @description List all available songs.
  */
 

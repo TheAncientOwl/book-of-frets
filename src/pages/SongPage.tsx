@@ -6,7 +6,7 @@
  *
  * @file SongPage.tsx
  * @author Alexandru Delegeanu
- * @version 0.24
+ * @version 1.0
  * @description Handle song rendering based on url.
  */
 

@@ -6,7 +6,7 @@
  *
  * @file fetchArchivedJSON.ts
  * @author Alexandru Delegeanu
- * @version 0.4
+ * @version 1.0
  * @description Fetches archived JSON config.
  */
 

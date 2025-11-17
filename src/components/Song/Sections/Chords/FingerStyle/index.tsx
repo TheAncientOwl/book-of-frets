@@ -4,17 +4,15 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
- * @file StringsChunk.tsx
+ * @file FingerStyleChords.tsx
  * @author Alexandru Delegeanu
- * @version 0.28
+ * @version 1.0
  * @description Render song strings pattern.
  */
 
-import type { TStringsChunk } from '@/common/types/song.types';
+import type { TFingerStyleChords } from '@/common/types/song.types';
 import { useAppStore } from '@/store/index';
 import { Box, Divider, Flex, Text } from '@chakra-ui/react';
-
-type TStringsPatternProps = TStringsChunk & {};
 
 type TFretNumber = number | string;
 
@@ -35,7 +33,7 @@ const String = ({ name, frets }: TStringProps) => {
         backgroundColor='blackAlpha.700'
         px='1'
         fontWeight='bold'
-        color={theme.chunks.item.stringsPattern.stringNames}
+        color={theme.items.item.stringsPattern.stringNames}
         fontFamily='monospace'
       >
         {name}
@@ -44,7 +42,7 @@ const String = ({ name, frets }: TStringProps) => {
         backgroundColor='blackAlpha.200'
         fontFamily='monospace'
         whiteSpace='pre'
-        color={theme.chunks.item.stringsPattern.fret.text}
+        color={theme.items.item.stringsPattern.fret.text}
       >
         {frets}
       </Text>
@@ -82,7 +80,7 @@ const DisplayChords = ({ chords }: TDisplayChordsProps) => {
       ml='3ch'
       fontFamily='monospace'
       whiteSpace='pre'
-      color={theme.chunks.item.stringsPattern.stringNames}
+      color={theme.items.item.stringsPattern.stringNames}
     >
       {mappedChords}
     </Text>
@@ -151,7 +149,7 @@ const parseItems = (items: string): { stringsToFrets: TStringToFrets; chords: TD
   return { stringsToFrets, chords };
 };
 
-export const StringsChunk = (props: TStringsPatternProps) => {
+export const FingerStyleChords = (props: TFingerStyleChords) => {
   const theme = useAppStore(state => state.appTheme.song);
 
   const { stringsToFrets, chords } = parseItems(props.items);
@@ -169,7 +167,7 @@ export const StringsChunk = (props: TStringsPatternProps) => {
         <Divider
           marginTop='1em'
           // [*] theme colors
-          borderColor={theme.chunks.item.stringsPattern.divider}
+          borderColor={theme.items.item.stringsPattern.divider}
         />
       </Box>
     </Flex>

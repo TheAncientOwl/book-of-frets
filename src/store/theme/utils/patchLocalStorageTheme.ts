@@ -6,8 +6,7 @@
  *
  * @file patchLocalStorageTheme.ts
  * @author Alexandru Delegeanu
- * @version 0.6
- * @description Patch local storage for theme.
+ * @version 1.0
  */
 
 import { LocalStorageKeys } from '@/store/common/storageKeys';

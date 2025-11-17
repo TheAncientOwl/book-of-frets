@@ -6,21 +6,21 @@
  *
  * @file Lyrics.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 1.0
  * @description Chords chunk lyrics component.
  */
 
-import type { TSongSegmentLyrics } from '@/common/types/song.types';
+import type { TSongSectionLyrics } from '@/common/types/song.types';
 import { useAppStore } from '@/store/index';
 import { Box, Text } from '@chakra-ui/react';
 import { Fragment } from 'react/jsx-runtime';
 
 type TChordsChunkLyrics = {
   visible: boolean;
-  lyrics: TSongSegmentLyrics;
+  lyrics: TSongSectionLyrics;
 };
 
-export const ChordsChunkLyrics = (props: TChordsChunkLyrics) => {
+export const StrummingChordsLyrics = (props: TChordsChunkLyrics) => {
   const theme = useAppStore(state => state.appTheme.song);
 
   return (
@@ -34,7 +34,7 @@ export const ChordsChunkLyrics = (props: TChordsChunkLyrics) => {
           fontFamily='monospace'
           // [*] theme colors
           // TODO: add separate theme entry for lyrics
-          color={theme.chunks.item.chordsPattern.times}
+          color={theme.items.item.chordsPattern.times}
         >
           {props.lyrics.map((lyrics, index) => (
             <Fragment key={index}>
@@ -51,4 +51,4 @@ export const ChordsChunkLyrics = (props: TChordsChunkLyrics) => {
   );
 };
 
-export default ChordsChunkLyrics;
+export default StrummingChordsLyrics;

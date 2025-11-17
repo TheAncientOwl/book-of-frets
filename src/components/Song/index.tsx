@@ -6,17 +6,17 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.37
+ * @version 1.0
  * @description Render song based on given config.
  */
 
 import { useSessionStorage } from '@/common/hooks/useSessionStorage';
-import type { TSong, TSongSegmentLyrics } from '@/common/types/song.types';
+import type { TSong, TSongSectionLyrics } from '@/common/types/song.types';
 import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
 import { SongChordsList } from '@/components/Song/ChordsList';
 import { SongHeader } from '@/components/Song/Header';
 import { FetchLyricsButton } from '@/components/Song/Lyrics/FetchLyricsButton';
-import { SongSegments } from '@/components/Song/Segments/SongSegments';
+import { SongSections } from '@/components/Song/Sections/SongSections';
 import { useAppStore } from '@/store/index';
 import { Loading } from '@/ui/Loading';
 import { Box, Container } from '@chakra-ui/react';
@@ -45,7 +45,7 @@ export const Song = (props: TSongProps) => {
         `${import.meta.env.BASE_URL}songs/${props.directory}/lyrics.min.json.gz.bin`,
         `${import.meta.env.BASE_URL}songs/${props.directory}/lyrics.min.json`,
         `${import.meta.env.BASE_URL}songs/${props.directory}/lyrics.json`,
-        json => setLyrics((json as { lyrics: TSongSegmentLyrics[] }).lyrics),
+        json => setLyrics((json as { lyrics: TSongSectionLyrics[] }).lyrics),
         error => {
           console.error('Failed to fetch song lyrics:', error);
         }
@@ -85,12 +85,12 @@ export const Song = (props: TSongProps) => {
         padding={['1.5rem 10px', '1.5rem 1rem']}
         borderRadius='1rem'
         // [*] theme colors
-        backgroundColor={theme.chunks.background}
+        backgroundColor={theme.items.background}
       >
         <SongChordsList chordIDs={props.chordIDs} />
 
-        <SongSegments
-          segments={props.segments}
+        <SongSections
+          sections={props.sections}
           order={props.order}
           strumms={props.strumms}
           showLyrics={showLyrics && lyrics.length > 0}

@@ -6,7 +6,7 @@
  *
  * @file common.types.ts
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 1.0
  * @description Common types for json mapping.
  */
 

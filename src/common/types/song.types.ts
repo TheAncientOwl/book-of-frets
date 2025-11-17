@@ -6,7 +6,7 @@
  *
  * @file song.types.ts
  * @author Alexandru Delegeanu
- * @version 0.18
+ * @version 1.0
  * @description Song types for json mapping.
  */
 
@@ -16,24 +16,23 @@ export type TStrummingPattern = TStrummingMove[];
 
 export type TAlignType = 'center' | 'flex-start' | 'flex-end';
 
-export type TChordsChunkItem = string[];
+export type TStrummingChordsItem = string[][];
 
-export type TChordsChunk = {
+export type TStrummingChords = {
   times: number;
-  items: TChordsChunkItem[];
-  align?: TAlignType[];
+  items: TStrummingChordsItem[];
 };
 
-export type TStringsChunk = {
+export type TFingerStyleChords = {
   times: number;
   items: string;
 };
 
-export type TSongSegment = {
+export type TSongSection = {
   name: string;
-  type: 'chords' | 'strings';
+  type: 'str' | 'fs';
   times: number;
-  chunks: TChordsChunk[] | TStringsChunk[];
+  chords: TStrummingChords[] | TFingerStyleChords[];
 };
 
 export type TResource = {
@@ -48,7 +47,7 @@ export type TSong = {
   capo: number;
   chordIDs: string[];
   strumms: TStrummingPattern[];
-  segments: Record<string, TSongSegment>;
+  sections: Record<string, TSongSection>;
   order: string[];
   lyrics: boolean;
   res: TResource[];
@@ -65,4 +64,4 @@ export type TSongsIndexEntry = {
   type: string[];
 };
 
-export type TSongSegmentLyrics = string[];
+export type TSongSectionLyrics = string[];

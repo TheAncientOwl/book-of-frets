@@ -6,7 +6,7 @@
  *
  * @file index.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 1.0
  * @description SmartList index file.
  */
 

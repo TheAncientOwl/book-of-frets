@@ -6,7 +6,7 @@
  *
  * @file NavigationList.tsx
  * @author Alexandru Delegeanu
- * @version 0.5
+ * @version 1.0
  * @description Navigation links.
  */
 

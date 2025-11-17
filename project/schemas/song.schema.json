@@ -61,16 +61,16 @@
         "minItems": 1
       }
     },
-    "segments": {
+    "sections": {
       "type": "object",
       "additionalProperties": {
         "type": "object",
         "additionalProperties": false,
         "properties": {
           "name": { "type": "string" },
-          "type": { "type": "string", "enum": ["chords", "strings", "tabs"] },
+          "type": { "type": "string", "enum": ["str", "fs", "tabs"] },
           "times": { "type": "number", "default": 1, "minimum": 1 },
-          "chunks": {
+          "chords": {
             "type": "array",
             "items": {
               "type": "object",
@@ -92,8 +92,11 @@
                           {
                             "type": "array",
                             "items": {
-                              "type": "string",
-                              "pattern": "^[0-9]+(?: [A-Za-z0-9#/()_+-|]+ [0-9]+)+$"
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "pattern": "^[0-9]+(?: [A-Za-z0-9#/()_+-|]+ [0-9]+)+$"
+                              }
                             }
                           }
                         ]
@@ -106,7 +109,7 @@
             }
           }
         },
-        "required": ["name", "type", "times", "chunks"]
+        "required": ["name", "type", "times", "chords"]
       }
     },
     "order": {
@@ -153,7 +156,7 @@
     "capo",
     "chordIDs",
     "strumms",
-    "segments",
+    "sections",
     "order",
     "lyrics",
     "res"

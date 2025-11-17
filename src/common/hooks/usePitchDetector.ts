@@ -6,7 +6,7 @@
  *
  * @file usePitchDetector.ts
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 1.0
  * @description Pitch detector hook.
  */
 

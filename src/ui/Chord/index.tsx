@@ -6,7 +6,7 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 0.19
+ * @version 1.0
  * @description Render chrod based on given config.
  */
 

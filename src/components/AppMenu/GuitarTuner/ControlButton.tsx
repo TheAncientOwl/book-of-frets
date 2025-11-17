@@ -6,7 +6,7 @@
  *
  * @file ControlButton.tsx
  * @author Alexandru Delegeanu
- * @version 0.3
+ * @version 1.0
  * @description Turn the tuner ON / OFF.
  */
 

@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Sweater Weather",
   "artists": ["The Neighbourhood"],
@@ -14,89 +14,89 @@
     ["D", "-", "D", "-", "-", "U", "D", "U"],
     ["D", "-", "D", "-", "D", "U", "D", "U"]
   ],
-  "segments": {
+  "sections": {
     "v": {
       "name": "verse",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 4,
-          "items": [["0 C 1 Am 1 Em 1", "1 Am 1 G 1"]]
+          "items": [[["0 C 1 Am 1 Em 1"], ["1 Am 1 G 1"]]]
         }
       ]
     },
     "pr": {
       "name": "prechorus",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 2,
-          "items": [["0 C 1 Am 1 Em 1 G 1"]]
+          "items": [[["0 C 1 Am 1 Em 1 G 1"]]]
         }
       ]
     },
     "c1": {
       "name": "chorus",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 3,
-          "items": [["2 C 1 Am 1 Em 1 G 1"]]
+          "items": [[["2 C 1 Am 1 Em 1 G 1"]]]
         }
       ]
     },
     "c2": {
       "name": "chorus 2",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 4,
-          "items": [["2 C 1 Am 1 Em 1 G 1"]]
+          "items": [[["2 C 1 Am 1 Em 1 G 1"]]]
         },
         {
           "times": 1,
-          "items": [["2 D 1"]]
+          "items": [[["2 D 1"]]]
         }
       ]
     },
     "b": {
       "name": "bridge",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 2,
-          "items": [["3 Am 1 G 1 D 1 D 1"]]
+          "items": [[["3 Am 1 G 1 D 1 D 1"]]]
         },
         {
           "times": 4,
-          "items": [["3 Am 1 G 1 D 1 D 1"]]
+          "items": [[["3 Am 1 G 1 D 1 D 1"]]]
         }
       ]
     },
     "c3": {
       "name": "chorus 3",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 4,
-          "items": [["4 C 1 Am 1 Em 1 G 1"]]
+          "items": [[["4 C 1 Am 1 Em 1 G 1"]]]
         }
       ]
     },
     "o": {
       "name": "outro",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 4,
-          "items": [["2 C 1 Am 1 Em 1 G 1"]]
+          "items": [[["2 C 1 Am 1 Em 1 G 1"]]]
         }
       ]
     }

@@ -6,7 +6,7 @@
 #
 # @file create.sh
 # @author Alexandru Delegeanu
-# @version 0.3
+# @version 1.0
 # @description Create song boilerplate
 #
 
@@ -55,7 +55,7 @@ cat > "$output_file" <<EOF
   "capo": ${capo},
   "chordIDs": [],
   "strumms": [],
-  "segments": {},
+  "sections": {},
   "order": [],
   "res": ${res_json}
 }

@@ -6,41 +6,41 @@
  *
  * @file ChordsChunk.tsx
  * @author Alexandru Delegeanu
- * @version 0.28
+ * @version 1.0
  * @description Render song chords pattern.
  */
 
 import type {
-  TChordsChunk,
-  TSongSegmentLyrics,
+  TSongSectionLyrics,
   TStrummingPattern,
+  TStrummingChords,
 } from '@/common/types/song.types';
-import { ChordsChunkItem } from '@/components/Song/Segments/Chunk/Chords/ChordsChunkItem';
-import { ChordsChunkDivider } from '@/components/Song/Segments/Chunk/Chords/Divider';
+import { StrummingChordsItem } from '@/components/Song/Sections/Chords/Strumming/Item';
+import { StrummingChordsDivider } from '@/components/Song/Sections/Chords/Strumming/Divider';
 import { useShallowAppStore } from '@/store/index';
 import { Loading } from '@/ui/Loading/index';
 import { Box, Text, Tooltip } from '@chakra-ui/react';
 import { Fragment, lazy, Suspense } from 'react';
 
-const ChordsChunkLyrics = lazy(() =>
-  import('@/components/Song/Segments/Chunk/Chords/Lyrics').then(mod => ({
-    default: mod.ChordsChunkLyrics,
+const StrummingChordsLyrics = lazy(() =>
+  import('@/components/Song/Sections/Chords/Strumming/Lyrics').then(mod => ({
+    default: mod.StrummingChordsLyrics,
   }))
 );
 
-type TChordsChunkProps = TChordsChunk & {
+type TChordsChunkProps = TStrummingChords & {
   strumms: TStrummingPattern[];
   showLyrics: boolean;
-  lyrics: TSongSegmentLyrics;
+  lyrics: TSongSectionLyrics;
 };
 
-export const ChordsChunk = (props: TChordsChunkProps) => {
-  const { theme, settingsDisplaySegmentTimes } = useShallowAppStore(state => ({
+export const StrummingChords = (props: TChordsChunkProps) => {
+  const { theme, settingsDisplaySectionTimes } = useShallowAppStore(state => ({
     theme: state.appTheme.song,
-    settingsDisplaySegmentTimes: state.songSettings.display.segmentTimes,
+    settingsDisplaySectionTimes: state.songSettings.display.sectionTimes,
   }));
 
-  const showTimes = settingsDisplaySegmentTimes && props.times > 1;
+  const showTimes = settingsDisplaySectionTimes && props.times > 1;
 
   return (
     <Fragment>
@@ -59,18 +59,18 @@ export const ChordsChunk = (props: TChordsChunkProps) => {
         borderRight={[showTimes ? '1px solid red' : 'none', 'none']}
         paddingRight={[showTimes ? '1em' : '0em', '0em']}
         // [*] theme colors
-        borderColor={theme.chunks.item.chordsPattern.divider}
+        borderColor={theme.items.item.chordsPattern.divider}
       >
-        <ChordsChunkDivider display={['none', 'block']} borderStyle={['solid']} />
+        <StrummingChordsDivider display={['none', 'block']} borderStyle={['solid']} />
 
-        {props.items.map((segment, segmentIndex) => (
-          <Fragment key={segmentIndex}>
-            <ChordsChunkItem data={segment} strumms={props.strumms} />
+        {props.items.map((item, itemIndex) => (
+          <Fragment key={itemIndex}>
+            <StrummingChordsItem items={item} strumms={props.strumms} />
 
-            <ChordsChunkDivider
+            <StrummingChordsDivider
               borderStyle={['none', 'solid']}
               display={[
-                segmentIndex < props.items.length - (showTimes ? 2 : 1) ? 'block' : 'none',
+                itemIndex < props.items.length - (showTimes ? 2 : 1) ? 'block' : 'none',
                 'block',
               ]}
             />
@@ -81,7 +81,7 @@ export const ChordsChunk = (props: TChordsChunkProps) => {
           <Tooltip
             label={`Repeat ${props.times} times`}
             // [*] theme colors
-            borderColor={theme.chunks.item.chordsPattern.divider}
+            borderColor={theme.items.item.chordsPattern.divider}
           >
             <Text
               size='sm'
@@ -92,7 +92,7 @@ export const ChordsChunk = (props: TChordsChunkProps) => {
               transform='translate(150%, -50%)'
               zIndex={1}
               // [*] theme colors
-              color={theme.chunks.item.chordsPattern.chord.times.color}
+              color={theme.items.item.chordsPattern.chord.times.color}
             >
               x{props.times}
             </Text>
@@ -101,7 +101,7 @@ export const ChordsChunk = (props: TChordsChunkProps) => {
       </Box>
 
       <Suspense fallback={<Loading />}>
-        <ChordsChunkLyrics visible={props.showLyrics} lyrics={props.lyrics} />
+        <StrummingChordsLyrics visible={props.showLyrics} lyrics={props.lyrics} />
       </Suspense>
     </Fragment>
   );
