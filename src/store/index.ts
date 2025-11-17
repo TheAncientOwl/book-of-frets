@@ -6,7 +6,7 @@
  *
  * @file index.ts
  * @author Alexandru Delegeanu
- * @version 0.2
+ * @version 0.3
  * @description Zustand global app store.
  */
 
@@ -29,6 +29,7 @@ type TAppStore = {
       chordTimes: boolean;
       chordTimesOne: boolean;
       strummingPattern: boolean;
+      chordsFingers: boolean;
     };
   };
   updateChordsIndex: () => Promise<void>;
@@ -38,6 +39,7 @@ type TAppStore = {
   setDisplayChordTimes: (value: boolean) => void;
   setDisplayChordTimesOne: (value: boolean) => void;
   setDisplayStrummingPattern: (value: boolean) => void;
+  setDisplayChordsFingers: (value: boolean) => void;
 };
 
 export const useAppStore = create<TAppStore, [['zustand/persist', unknown]]>(
@@ -52,6 +54,7 @@ export const useAppStore = create<TAppStore, [['zustand/persist', unknown]]>(
           chordTimes: true,
           chordTimesOne: true,
           strummingPattern: true,
+          chordsFingers: true,
         },
       },
 
@@ -101,6 +104,13 @@ export const useAppStore = create<TAppStore, [['zustand/persist', unknown]]>(
           songSettings: {
             ...state.songSettings,
             display: { ...state.songSettings.display, strummingPattern: value },
+          },
+        })),
+      setDisplayChordsFingers: value =>
+        set(state => ({
+          songSettings: {
+            ...state.songSettings,
+            display: { ...state.songSettings.display, chordsFingers: value },
           },
         })),
     }),

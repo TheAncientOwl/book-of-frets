@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 0.8
+ * @version 0.9
  * @description Song display options.
  */
 
@@ -44,12 +44,14 @@ export const SongOptions = () => {
     setDisplayChordTimes,
     setDisplayChordTimesOne,
     setDisplayStrummingPattern,
+    setDisplayChordsFingers,
   } = useShallowAppStore(state => ({
     display: state.songSettings.display,
     setDisplaySectionTimes: state.setDisplaySectionTimes,
     setDisplayChordTimes: state.setDisplayChordTimes,
     setDisplayChordTimesOne: state.setDisplayChordTimesOne,
     setDisplayStrummingPattern: state.setDisplayStrummingPattern,
+    setDisplayChordsFingers: state.setDisplayChordsFingers,
   }));
 
   return (
@@ -77,6 +79,12 @@ export const SongOptions = () => {
         onChange={() => setDisplayStrummingPattern(!display.strummingPattern)}
       >
         Strumming Pattern
+      </ThemedCheckbox>
+      <ThemedCheckbox
+        isChecked={display.chordsFingers}
+        onChange={() => setDisplayChordsFingers(!display.chordsFingers)}
+      >
+        Chords Fingers
       </ThemedCheckbox>
     </VStack>
   );

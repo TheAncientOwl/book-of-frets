@@ -6,12 +6,12 @@
  *
  * @file Fret.tsx
  * @author Alexandru Delegeanu
- * @version 0.12
+ * @version 0.13
  * @description Render chrod based on given config.
  */
 
 import type { TGuitarString } from '@/common/types/common.types';
-import { useAppStore } from '@/store/index';
+import { useShallowAppStore } from '@/store/index';
 import { Circle, Divider, Flex, Icon, Spacer } from '@chakra-ui/react';
 import { Fragment } from 'react';
 import { IoCloseSharp } from 'react-icons/io5';
@@ -26,7 +26,12 @@ const MUTED_STRING_ID = -1;
 const DISTANCE_BETWEEN_CHORDS = 20;
 
 export const Fret = (props: TFretProps) => {
-  const theme = useAppStore(state => state.appTheme.fret);
+  const { theme, showFinger } = useShallowAppStore(state => ({
+    theme: state.appTheme.fret,
+    showFinger: state.songSettings.display.chordsFingers,
+  }));
+
+  const circleColor = showFinger ? theme.finger.background : theme.finger.border;
 
   return (
     <Flex
@@ -87,11 +92,11 @@ export const Fret = (props: TFretProps) => {
                 padding='0.75em'
                 zIndex='1'
                 // [*] theme colors
-                backgroundColor={theme.finger.background}
+                backgroundColor={circleColor}
                 borderColor={theme.finger.border}
                 color={theme.finger.color}
               >
-                {finger === THUMB_STRING_ID ? 'T' : finger}
+                {showFinger && <>{finger === THUMB_STRING_ID ? 'T' : finger}</>}
               </Circle>
             )}
           </Fragment>
