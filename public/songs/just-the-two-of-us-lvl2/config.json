@@ -24,19 +24,19 @@
       "chords": [
         {
           "times": 1,
-          "items": [["0 CM7 1", "1 B7 2"]]
+          "items": [[["0 CM7 1"], ["1 B7 2"]]]
         },
         {
           "times": 1,
-          "items": [["0 Em 1", "1 Dm7 1 G7 1"]]
+          "items": [[["0 Em 1"], ["1 Dm7 1 G7 1"]]]
         },
         {
           "times": 1,
-          "items": [["0 CM7 1", "1 B7 2"]]
+          "items": [[["0 CM7 1"], ["1 B7 2"]]]
         },
         {
           "times": 1,
-          "items": [["2 Em 1"]]
+          "items": [[["2 Em 1"]]]
         }
       ]
     },
@@ -47,11 +47,11 @@
       "chords": [
         {
           "times": 1,
-          "items": [["3 CM7 1 B7 1"], ["1 Em7 1 Ebm7 1 Dm7 1 G7 1"]]
+          "items": [[["3 CM7 1 B7 1"], ["1 Em7 1 Ebm7 1 Dm7 1 G7 1"]]]
         },
         {
           "times": 1,
-          "items": [["3 CM7 1 B7 1"], ["2 Em 1"]]
+          "items": [[["3 CM7 1 B7 1"], ["2 Em 1"]]]
         }
       ]
     },
@@ -62,19 +62,19 @@
       "chords": [
         {
           "times": 1,
-          "items": [["0 CM7 1", "1 B7 2"]]
+          "items": [[["0 CM7 1"], ["1 B7 2"]]]
         },
         {
           "times": 1,
-          "items": [["0 BbM7 1", "1 A7 2"]]
+          "items": [[["0 BbM7 1"], ["1 A7 2"]]]
         },
         {
           "times": 1,
-          "items": [["0 AbM7 1", "1 G7 2"]]
+          "items": [[["0 AbM7 1"], ["1 G7 2"]]]
         },
         {
           "times": 1,
-          "items": [["4 CM7 1", "5 F13 1"]]
+          "items": [[["4 CM7 1"], ["5 F13 1"]]]
         }
       ]
     },
@@ -85,19 +85,19 @@
       "chords": [
         {
           "times": 1,
-          "items": [["0 CM7 1", "1 B7 2"]]
+          "items": [[["0 CM7 1"], ["1 B7 2"]]]
         },
         {
           "times": 1,
-          "items": [["0 BbM7 1", "1 A7 2"]]
+          "items": [[["0 BbM7 1"], ["1 A7 2"]]]
         },
         {
           "times": 1,
-          "items": [["0 AbM7 1", "1 G7 2"]]
+          "items": [[["0 AbM7 1"], ["1 G7 2"]]]
         },
         {
           "times": 1,
-          "items": [["4 CM7 1", "6 F13 1"]]
+          "items": [[["4 CM7 1"], ["6 F13 1"]]]
         }
       ]
     }

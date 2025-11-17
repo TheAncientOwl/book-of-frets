@@ -20,7 +20,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["0 Em 1 G 1 Bm 1 A 1"]]
+          "items": [[["0 Em 1 G 1 Bm 1 A 1"]]]
         }
       ]
     },
@@ -31,7 +31,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["0 Em 1 G 1 Bm 1 A 1"]]
+          "items": [[["0 Em 1 G 1 Bm 1 A 1"]]]
         }
       ]
     },
@@ -42,7 +42,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["1 Em 1 G 1 Bm 1 A 1"]]
+          "items": [[["1 Em 1 G 1 Bm 1 A 1"]]]
         }
       ]
     },
@@ -53,11 +53,11 @@
       "chords": [
         {
           "times": 2,
-          "items": [["2 G 1 Bm 1 D 1 A 1"]]
+          "items": [[["2 G 1 Bm 1 D 1 A 1"]]]
         },
         {
           "times": 2,
-          "items": [["2 Em 1 Bm 1 D 1 A 1"]]
+          "items": [[["2 Em 1 Bm 1 D 1 A 1"]]]
         }
       ]
     }

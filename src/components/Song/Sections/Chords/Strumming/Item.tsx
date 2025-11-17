@@ -6,7 +6,7 @@
  *
  * @file ChordsChunkItem.tsx
  * @author Alexandru Delegeanu
- * @version 0.30
+ * @version 0.31
  * @description Render song pattern section.
  */
 
@@ -27,7 +27,6 @@ import {
   Text,
   Tooltip,
 } from '@chakra-ui/react';
-import { Fragment } from 'react/jsx-runtime';
 
 type TChordsChunkItemProps = {
   items: TStrummingChordsItem;
@@ -51,7 +50,6 @@ const mapPairs = <T, R>(array: T[], callback: (a: T, b: T, index: number) => R):
 type TItemLineProps = {
   data: string[][];
   strummingPattern: TStrummingPattern;
-  // showPattern: boolean;
 };
 
 const ItemLine = (props: TItemLineProps) => {
@@ -70,6 +68,7 @@ const ItemLine = (props: TItemLineProps) => {
               if (chordId === SEPARATOR_CHORD_CHAR) {
                 return (
                   <Divider
+                    key={index}
                     height='22px'
                     width='0px'
                     borderWidth='thin'
@@ -80,7 +79,7 @@ const ItemLine = (props: TItemLineProps) => {
               }
 
               if (chordId === SEPARATOR_BREAK_LINE) {
-                return <br />;
+                return <br key={index} />;
               }
 
               const chordConfig = chordsIndex[chordId];
@@ -90,77 +89,74 @@ const ItemLine = (props: TItemLineProps) => {
               }
 
               return (
-                <Box as='div' key={index} margin='10px min(auto,'>
-                  <Popover isLazy>
-                    <PopoverTrigger>
-                      <Tag
-                        as='button'
-                        fontWeight='bold'
-                        cursor='pointer'
-                        position='relative'
-                        whiteSpace='nowrap'
-                        // [*] theme colors
-                        backgroundColor={theme.items.item.chordsPattern.chord.background}
-                        color={theme.items.item.chordsPattern.chord.color}
-                      >
-                        {chordId !== NO_CHORD_ID && chordConfig !== undefined
-                          ? chordConfig.name
-                          : '-'}
-                        {songSettings.display.chordTimes &&
-                          (times !== '1' || songSettings.display.chordTimesOne) && (
-                            <Tooltip label={`Strum ${times} times`}>
-                              <Text
-                                position='absolute'
-                                top='-10px'
-                                right='0'
-                                transform='translateX(100%)'
-                                fontSize='xs'
-                                fontWeight='bold'
-                                // [*] theme colors
-                                color={theme.items.item.chordsPattern.chord.section.times}
-                              >
-                                {times}
-                              </Text>
-                            </Tooltip>
-                          )}
-                      </Tag>
-                    </PopoverTrigger>
+                <Popover isLazy key={index}>
+                  <PopoverTrigger>
+                    <Tag
+                      as='button'
+                      fontWeight='bold'
+                      cursor='pointer'
+                      position='relative'
+                      whiteSpace='nowrap'
+                      // [*] theme colors
+                      backgroundColor={theme.items.item.chordsPattern.chord.background}
+                      color={theme.items.item.chordsPattern.chord.color}
+                    >
+                      {chordId !== NO_CHORD_ID && chordConfig !== undefined
+                        ? chordConfig.name
+                        : '-'}
+                      {songSettings.display.chordTimes &&
+                        (times !== '1' || songSettings.display.chordTimesOne) && (
+                          <Tooltip label={`Strum ${times} times`}>
+                            <Text
+                              position='absolute'
+                              top='-10px'
+                              right='0'
+                              transform='translateX(100%)'
+                              fontSize='xs'
+                              fontWeight='bold'
+                              // [*] theme colors
+                              color={theme.items.item.chordsPattern.chord.section.times}
+                            >
+                              {times}
+                            </Text>
+                          </Tooltip>
+                        )}
+                    </Tag>
+                  </PopoverTrigger>
 
-                    <Portal>
-                      {chordConfig && (
-                        <PopoverContent
+                  <Portal>
+                    {chordConfig && (
+                      <PopoverContent
+                        // [*] theme colors
+                        zIndex={1}
+                        backgroundColor={
+                          theme.items.item.chordsPattern.chord.section.popover.background
+                        }
+                        borderColor={theme.items.item.chordsPattern.chord.section.popover.border}
+                      >
+                        <PopoverArrow
                           // [*] theme colors
-                          zIndex={1}
                           backgroundColor={
-                            theme.items.item.chordsPattern.chord.section.popover.background
+                            theme.items.item.chordsPattern.chord.section.popover.arrow
                           }
-                          borderColor={theme.items.item.chordsPattern.chord.section.popover.border}
-                        >
-                          <PopoverArrow
-                            // [*] theme colors
-                            backgroundColor={
-                              theme.items.item.chordsPattern.chord.section.popover.arrow
-                            }
-                          />
-                          <PopoverCloseButton
-                            // [*] theme colors
-                            color={theme.items.item.chordsPattern.chord.section.popover.closeButton}
-                          />
-                          <Flex justifyContent='center' padding='25px'>
-                            <Chord {...chordConfig} />
-                          </Flex>
-                        </PopoverContent>
-                      )}
-                    </Portal>
-                  </Popover>
-                </Box>
+                        />
+                        <PopoverCloseButton
+                          // [*] theme colors
+                          color={theme.items.item.chordsPattern.chord.section.popover.closeButton}
+                        />
+                        <Flex justifyContent='center' padding='25px'>
+                          <Chord {...chordConfig} />
+                        </Flex>
+                      </PopoverContent>
+                    )}
+                  </Portal>
+                </Popover>
               );
             })}
           </Flex>
         ))}
       </Flex>
 
-      {/* {props.showPattern && songSettings.display.strummingPattern && ( */}
       {songSettings.display.strummingPattern && (
         <Box position='relative' mt='0.4em'>
           <Flex
@@ -193,14 +189,10 @@ export const StrummingChordsItem = (props: TChordsChunkItemProps) => {
     state => state.songSettings.display.chordTimesOne
   );
 
-  const linesData = props.items.map(lineData => lineData.split(' / ').map(data => data.split(' ')));
-
-  // const samePattern =
-  //   linesData.length === 0 || linesData.every(lineData => lineData[0] === linesData[0][0]);
+  const linesData = props.items.map(lineData => lineData.map(data => data.split(' ')));
 
   return (
     <Flex
-      // direction={samePattern ? 'column' : 'row'}
       direction='row'
       alignItems='flex-end'
       justifyContent='center'
@@ -217,18 +209,7 @@ export const StrummingChordsItem = (props: TChordsChunkItemProps) => {
           return null;
         }
 
-        return (
-          <Fragment>
-            <ItemLine
-              key={index}
-              data={lineData}
-              strummingPattern={props.strumms[strumm]}
-              // showPattern={
-              //   index === linesData.length - 1 ? true : strumm !== Number(linesData[index + 1][0])
-              // }
-            />
-          </Fragment>
-        );
+        return <ItemLine key={index} data={lineData} strummingPattern={props.strumms[strumm]} />;
       })}
     </Flex>
   );

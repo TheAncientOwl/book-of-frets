@@ -16,7 +16,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["0 G 1 G 1 G 1"]]
+          "items": [[["0 G 1 G 1 G 1"]]]
         }
       ]
     },
@@ -29,7 +29,14 @@
           "times": 1,
           "items": [
             [
-              "0 G 1 Em 1 C 1 G 1 G 1 / 00 G 1 Em 1 C 1 D 1 / 0 G 1 Em 1 C 1 G 1 G 1 G 1 / 0 G 1 Am 1 D 1 D 1 / 0 D 1 Csus2 1 G/B 1 D 1 / 0 G 1 G 1 D 1 G 1"
+              [
+                "0 G 1 Em 1 C 1 G 1 G 1",
+                "00 G 1 Em 1 C 1 D 1",
+                "0 G 1 Em 1 C 1 G 1 G 1 G 1",
+                "0 G 1 Am 1 D 1 D 1",
+                "0 D 1 Csus2 1 G/B 1 D 1",
+                "0 G 1 G 1 D 1 G 1"
+              ]
             ]
           ]
         }
@@ -42,7 +49,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["0 G 1 Em 1 C 1 G 1 G 1 G 1 G 1"]]
+          "items": [[["0 G 1 Em 1 C 1 G 1 G 1 G 1 G 1"]]]
         }
       ]
     },
@@ -55,7 +62,14 @@
           "times": 1,
           "items": [
             [
-              "0 G 1 Em 1 C 1 G 1 G 1 / 0 G 1 Em 1 C 1 D 1 / 0 G 1 Em 1 C 1 G 1 G 1 / 0 G 1 Am 1 D 1 D 1 / 0 D 1 Csus2 1 G/B 1 D 1 / 0 G 1 G 1 D 1"
+              [
+                "0 G 1 Em 1 C 1 G 1 G 1",
+                "0 G 1 Em 1 C 1 D 1",
+                "0 G 1 Em 1 C 1 G 1 G 1",
+                "0 G 1 Am 1 D 1 D 1",
+                "0 D 1 Csus2 1 G/B 1 D 1",
+                "0 G 1 G 1 D 1"
+              ]
             ]
           ]
         }
@@ -68,7 +82,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["0 G 1 Em 1 C 1 G 1 G 1 / 0 D 1 Csus2 1 G/B 1 D 1 / 0 D 1 D 1 D 1"]]
+          "items": [[["0 G 1 Em 1 C 1 G 1 G 1", "0 D 1 Csus2 1 G/B 1 D 1", "0 D 1 D 1 D 1"]]]
         }
       ]
     },
@@ -81,7 +95,14 @@
           "times": 1,
           "items": [
             [
-              "0 G 1 Em 1 C 1 G 1 G 1 / 0 G 1 Em 1 C 1 D 1 / 0 G 1 Em 1 C 1 G 1 G 1 / 0 G 1 Am 1 D 1 D 1 / 0 D 1 Csus2 1 G/B 1 D 1 / 0 G 1 C 1 D 1 G 1"
+              [
+                "0 G 1 Em 1 C 1 G 1 G 1",
+                "0 G 1 Em 1 C 1 D 1",
+                "0 G 1 Em 1 C 1 G 1 G 1",
+                "0 G 1 Am 1 D 1 D 1",
+                "0 D 1 Csus2 1 G/B 1 D 1",
+                "0 G 1 C 1 D 1 G 1"
+              ]
             ]
           ]
         }
@@ -94,7 +115,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["0 G 1 D 1 Csus2 1 D 1 G 1 G 1"]]
+          "items": [[["0 G 1 D 1 Csus2 1 D 1 G 1 G 1"]]]
         }
       ]
     },
@@ -107,7 +128,14 @@
           "times": 1,
           "items": [
             [
-              "0 G 1 Em 1 C 1 G 1 G 1 / 0 G 1 Em 1 C 1 D 1 / 0 G 1 Em 1 C 1 G 1 G 1 / 0 G 1 Am 1 D 1 D 1 / 0 G 1 Csus2 1 G/B 1 D 1 / 0 G 1 C 1 D 1 G 1"
+              [
+                "0 G 1 Em 1 C 1 G 1 G 1",
+                "0 G 1 Em 1 C 1 D 1",
+                "0 G 1 Em 1 C 1 G 1 G 1",
+                "0 G 1 Am 1 D 1 D 1",
+                "0 G 1 Csus2 1 G/B 1 D 1",
+                "0 G 1 C 1 D 1 G 1"
+              ]
             ]
           ]
         }
@@ -122,7 +150,12 @@
           "times": 1,
           "items": [
             [
-              "0 G 1 Em 1 C 1 G 1 G 1 / 0 D 1 Csus2 1 G/B 1 D 1 D 1 / 0 G 1 C 1 D 1 G 1 / 0 G 1 G 1 G 1"
+              [
+                "0 G 1 Em 1 C 1 G 1 G 1",
+                "0 D 1 Csus2 1 G/B 1 D 1 D 1",
+                "0 G 1 C 1 D 1 G 1",
+                "0 G 1 G 1 G 1"
+              ]
             ]
           ]
         }
@@ -137,7 +170,14 @@
           "times": 1,
           "items": [
             [
-              "0 G 1 Em 1 C 1 G 1 G 1 / 0 G 1 Em 1 C 1 D 1 / 0 G 1 Em 1 C 1 G 1 G 1 / 0 G 1 Em 1 C 1 G 1 G 1 / 0 D 1 Csus2 1 G/B 1 D 1 / 0 G 1 C 1 D 1 G 1"
+              [
+                "0 G 1 Em 1 C 1 G 1 G 1",
+                "0 G 1 Em 1 C 1 D 1",
+                "0 G 1 Em 1 C 1 G 1 G 1",
+                "0 G 1 Em 1 C 1 G 1 G 1",
+                "0 D 1 Csus2 1 G/B 1 D 1",
+                "0 G 1 C 1 D 1 G 1"
+              ]
             ]
           ]
         }
@@ -150,7 +190,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["0 G 1 Em 1 C 1 G 1"]]
+          "items": [[["0 G 1 Em 1 C 1 G 1"]]]
         }
       ]
     }

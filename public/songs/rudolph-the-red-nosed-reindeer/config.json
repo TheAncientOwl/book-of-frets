@@ -16,11 +16,11 @@
       "chords": [
         {
           "times": 2,
-          "items": [["0 C 1 G/B 1"], ["0 Am 1 G 1"]]
+          "items": [[["0 C 1 G/B 1"], ["0 Am 1 G 1"]]]
         },
         {
           "times": 1,
-          "items": [["0 Em 1"], ["0 Am 1"], ["0 C 1 Am 1"], ["0 D 1"]]
+          "items": [[["0 Em 1"], ["0 Am 1"], ["0 C 1 Am 1"], ["0 D 1"]]]
         }
       ]
     },
@@ -42,7 +42,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["1 G 1 G 1 G 1 D 1 / 0 D 1 D 1 D 1 G 1"]]
+          "items": [[["1 G 1 G 1 G 1 D 1", "0 D 1 D 1 D 1 G 1"]]]
         }
       ]
     },
@@ -53,7 +53,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["1 C 1 G 1 D7 1 G 1 / 0 A7 1 A7 1"], ["0 D7 1"]]
+          "items": [[["1 C 1 G 1 D7 1 G 1", "0 A7 1 A7 1"], ["0 D7 1"]]]
         }
       ]
     },
@@ -64,7 +64,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["1 G 1 G 1 G 1 D 1 / 0 D 1 D 1 D 1 G 1"]]
+          "items": [[["1 G 1 G 1 G 1 D 1", "0 D 1 D 1 D 1 G 1"]]]
         }
       ]
     },
@@ -90,7 +90,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["1 G 1 G 1 G 1 D 1 / 0 D 1 D 1 D 1 G 1"]]
+          "items": [[["1 G 1 G 1 G 1 D 1", "0 D 1 D 1 D 1 G 1"]]]
         }
       ]
     },
@@ -101,7 +101,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["1 G 1 G 1 G 1 D 1 / 0 D 1 D 1 D 1 G 1"]]
+          "items": [[["1 G 1 G 1 G 1 D 1", "0 D 1 D 1 D 1 G 1"]]]
         }
       ]
     },
@@ -112,7 +112,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["0 D 1"]]
+          "items": [[["0 D 1"]]]
         }
       ]
     },
@@ -134,7 +134,7 @@
       "chords": [
         {
           "times": 1,
-          "items": [["0 G 1"]]
+          "items": [[["0 G 1"]]]
         }
       ]
     }
