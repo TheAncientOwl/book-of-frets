@@ -8,12 +8,12 @@
   "capo": 1,
   "chordIDs": ["Am", "D7", "G", "Em", "D/F#"],
   "strumms": [["D"]],
-  "segments": {
+  "sections": {
     "i": {
       "name": "intro",
-      "type": "strings",
+      "type": "fs",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
           "items": "[Am] - A0+G2+B1+e0 - - - - - - - e2/3 - | [D7] - D0+G2+B1+e2 - - - - - - - e3/5 - | [G] - E3+G0+B3+e3 - - - - - e2 - - - - - | [Em] - E0+B0+e0 - - - - - - - - - - -"
@@ -26,9 +26,9 @@
     },
     "v1": {
       "name": "verse 1",
-      "type": "strings",
+      "type": "fs",
       "times": 2,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
           "items": "[Em] - E0+G0+B0 - - - E0 - G0+B0 - - - E0 - | - G0+B0 - - - E0 - G0+B0 - - - E0 - | [Am] - A0+G2+B1 - - - A0 - G2+B1 - - - A0 - | - G2+B1 - - A0 - - G2+B1 - - - A0 -"
@@ -41,9 +41,9 @@
     },
     "p": {
       "name": "prechorus",
-      "type": "strings",
+      "type": "fs",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
           "items": "[Am] - A0+G5+B5 - - - - - B7 - - - - - | - B8 - - - - - - - - - - - | [D7] - D0+G5+B5 - - - - - B7 - - - - - | - D0+G5+B7+e8 - - - - - - - - - - -"
@@ -52,9 +52,9 @@
     },
     "c1": {
       "name": "chorus",
-      "type": "strings",
+      "type": "fs",
       "times": 3,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
           "items": "[Am] - A0+G2+B1 - - - A0 - G2+B1 - - - A0 - | [D7] - D0+G2+B1 - - - D0 - G2+B1 - - - D0 - | [G] - E3+G0+B3 - - - E3 [D/F#] - E2+G2+B3 - - - E2 - | [Em] - E0+G0+B0 - - - E0 - G0+B0 - - - E0 -"
@@ -63,20 +63,20 @@
     },
     "c2": {
       "name": "chorus",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
-          "items": [["0 Am 1 D 1"]]
+          "items": [[["0 Am 1 D 1"]]]
         }
       ]
     },
     "b": {
       "name": "break",
-      "type": "strings",
+      "type": "fs",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
           "items": "[Em7] - E0+G0+B3 - - - E0 - G0+B3 - - - E0 - | - G0+B3 - - - E0 - G0+B3 - - - E0 -"
@@ -85,9 +85,9 @@
     },
     "v2": {
       "name": "verse 2",
-      "type": "strings",
+      "type": "fs",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
           "items": "[Em] - E0+G0+B0 - - - E0 - G0+B0 - - - E0 - | - G0+B0 - - - E0 - G0+B0 - - - E0 - | [Am] - A0+G2+B1 - - - A0 - G2+B1 - - - A0 - | - G2+B1 - - A0 - - G2+B1 - - - A0 -"
@@ -108,9 +108,9 @@
     },
     "bg": {
       "name": "bridge",
-      "type": "strings",
+      "type": "fs",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
           "items": "[Am] - A0+G2+B1 - - - A0 - G2+B1 - - - A0 - | [D7] - D0+G2+B1 - - - D0 - G2+B1 - - - D0 - | [G] - E3+G0+B1 - - - E3 - G0+B0 - - - E3 - | [Em] - E0+G0+B0 - - - E0 - G0+B0 - - - E0 -"
@@ -123,12 +123,12 @@
     },
     "o": {
       "name": "outro",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
-          "items": [["0 Am 1 D7 1 G 1 D/F# 1 Em 1", "0 Am 1 D7 1"]]
+          "items": [[["0 Am 1 D7 1 G 1 D/F# 1 Em 1", "0 Am 1 D7 1"]]]
         }
       ]
     }

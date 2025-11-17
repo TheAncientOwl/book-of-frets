@@ -213,7 +213,7 @@
       "border": "yellow.500",
       "text": "#6b3e26"
     },
-    "chunks": {
+    "items": {
       "background": "blackAlpha.100",
       "divider": "#6b3e26",
       "item": {
@@ -230,7 +230,7 @@
           "chord": {
             "background": "yellow.500",
             "color": "#6b3e26",
-            "segment": {
+            "section": {
               "popover": {
                 "background": "gray.900",
                 "arrow": "#6b3e26",

@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Never Gonna Give You Up",
   "artists": ["Rick Astley"],
@@ -12,56 +12,56 @@
     ["D", "-", "U", "D", "D", "D", "U"],
     ["D", "-", "U", "D", "-", "D", "-", "U", "D", "D", "D", "U"]
   ],
-  "segments": {
+  "sections": {
     "i": {
       "name": "intro",
-      "type": "chords",
+      "type": "str",
       "times": 4,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
-          "items": [["0 Ft 1", "1 G 1"]]
+          "items": [[["0 Ft 1"], ["1 G 1"]]]
         },
         {
           "times": 1,
-          "items": [["0 Em 1", "1 Am 1"]]
+          "items": [[["0 Em 1"], ["1 Am 1"]]]
         }
       ]
     },
     "v": {
       "name": "verse",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 4,
-          "items": [["2 Ft 1 G 1"]]
+          "items": [[["2 Ft 1 G 1"]]]
         }
       ]
     },
     "pr": {
       "name": "prechorus",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
-          "items": [["2 Ft 1 G 1"]]
+          "items": [[["2 Ft 1 G 1"]]]
         }
       ]
     },
     "c": {
       "name": "chorus",
-      "type": "chords",
+      "type": "str",
       "times": 4,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
-          "items": [["0 Ft 1", "1 G 1"]]
+          "items": [[["0 Ft 1"], ["1 G 1"]]]
         },
         {
           "times": 1,
-          "items": [["0 Em 1", "1 Am 1"]]
+          "items": [[["0 Em 1"], ["1 Am 1"]]]
         }
       ]
     }

@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Flowers Need Rain",
   "artists": ["Preston Pablo"],
@@ -8,12 +8,12 @@
   "capo": 0,
   "chordIDs": ["-"],
   "strumms": [],
-  "segments": {
+  "sections": {
     "m": {
       "name": "main",
-      "type": "strings",
+      "type": "fs",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 404,
           "items": "- E9 - - A9 - - E9 - - A9 - - E9 - - A9 - - E9 - - A9 - | - E5 - - A6 - - E5 - - A6 - - E5 - - A6 - - E5 - - A6 - | - E12 - - A13 - - E12 - - A13 - - E12 - - A13 - - E12 - - A13 - | - E7 - - A8 - - E7 - - A8 - - E7 - - A8 - - E7 - - A8 -"

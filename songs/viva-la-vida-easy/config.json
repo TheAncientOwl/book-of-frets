@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Viva La Vida ~ Easy",
   "artists": ["Coldplay"],
@@ -14,105 +14,105 @@
     ["U", "-", "U", "D", "U", "-", "U", "D", "U"],
     ["D"]
   ],
-  "segments": {
+  "sections": {
     "vm": {
       "name": "verse palm muted",
-      "type": "chords",
+      "type": "str",
       "times": 2,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
-          "items": [["0 C 1", "1 D_3fr 1"]]
+          "items": [[["0 C 1"], ["1 D_3fr 1"]]]
         },
         {
           "times": 1,
-          "items": [["0 G 1", "1 Em 1"]]
+          "items": [[["0 G 1"], ["1 Em 1"]]]
         }
       ]
     },
     "v1": {
       "name": "verse",
-      "type": "chords",
+      "type": "str",
       "times": 8,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
-          "items": [["2 C 1", "3 D_3fr 1"]]
+          "items": [[["2 C 1"], ["3 D_3fr 1"]]]
         },
         {
           "times": 1,
-          "items": [["2 G 1", "3 Em 1"]]
+          "items": [[["2 G 1"], ["3 Em 1"]]]
         }
       ]
     },
     "c": {
       "name": "chorus",
-      "type": "chords",
+      "type": "str",
       "times": 4,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
-          "items": [["2 C 1", "3 D_3fr 1"]]
+          "items": [[["2 C 1"], ["3 D_3fr 1"]]]
         },
         {
           "times": 1,
-          "items": [["2 G 1", "3 Em 1"]]
+          "items": [[["2 G 1"], ["3 Em 1"]]]
         }
       ]
     },
     "v2": {
       "name": "verse",
-      "type": "chords",
+      "type": "str",
       "times": 6,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
-          "items": [["2 C 1", "3 D_3fr 1"]]
+          "items": [[["2 C 1"], ["3 D_3fr 1"]]]
         },
         {
           "times": 1,
-          "items": [["2 G 1", "3 Em 1"]]
+          "items": [[["2 G 1"], ["3 Em 1"]]]
         }
       ]
     },
     "bu": {
       "name": "build up",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 3,
-          "items": [["2 C 1", "3 Em 1"]]
+          "items": [[["2 C 1"], ["3 Em 1"]]]
         },
         {
           "times": 1,
-          "items": [["2 D_3fr 1", "3 D_3fr 1"]]
+          "items": [[["2 D_3fr 1"], ["3 D_3fr 1"]]]
         }
       ]
     },
     "c2": {
       "name": "chorus",
-      "type": "chords",
+      "type": "str",
       "times": 5,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
-          "items": [["2 C 1", "3 D_3fr 1"]]
+          "items": [[["2 C 1"], ["3 D_3fr 1"]]]
         },
         {
           "times": 1,
-          "items": [["2 G 1", "3 Em 1"]]
+          "items": [[["2 G 1"], ["3 Em 1"]]]
         }
       ]
     },
     "o": {
       "name": "outro",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
-          "items": [["4 C 1 D_3fr 1 G 1 Em 1"]]
+          "items": [[["4 C 1 D_3fr 1 G 1 Em 1"]]]
         }
       ]
     }

@@ -213,7 +213,7 @@
       "border": "purple.800",
       "text": "#E1B55C"
     },
-    "chunks": {
+    "items": {
       "background": "blackAlpha.400",
       "divider": "#E1B55C",
       "item": {
@@ -230,7 +230,7 @@
           "chord": {
             "background": "purple.800",
             "color": "#E1B55C",
-            "segment": {
+            "section": {
               "popover": {
                 "background": "gray.900",
                 "arrow": "#E1B55C",

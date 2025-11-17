@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Nice to Meet You",
   "artists": ["Myles Smith"],
@@ -8,63 +8,59 @@
   "capo": 1,
   "chordIDs": ["Em", "C", "G", "D"],
   "strumms": [["D", "-", "D", "-", "U", "D", "U"], ["D"]],
-  "segments": {
+  "sections": {
     "v": {
       "name": "verse",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 2,
-          "items": [["0 Em 2 C 2 G 4"]]
+          "items": [[["0 Em 2 C 2 G 4"]]]
         }
       ]
     },
     "pr": {
       "name": "prechorus",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
-          "items": [["0 Em 2 C 2 G 2 D 2", "0 Em 2 C 2 G 2"]]
-        },
-        {
-          "times": 1,
-          "items": [["1 D 1"]]
+          "items": [[["0 Em 2 C 2 G 2 D 2", "0 Em 2 C 2 G 2"], ["1 D 1"]]]
         }
       ]
     },
     "c": {
       "name": "chorus",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 4,
-          "items": [["0 Em 2 C 2 G 2 D 2"]]
+          "items": [[["0 Em 2 C 2 G 2 D 2"]]]
         }
       ]
     },
     "po": {
       "name": "post chorus",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
-          "items": [["0 Em 1 C 1 G 1 D 1"]]
+          "items": [[["0 Em 1 C 1 G 1 D 1"]]]
         }
       ]
     },
     "outro": {
       "name": "outro",
-      "type": "chords",
+      "type": "str",
       "times": 1,
-      "chunks": [
+      "chords": [
         {
           "times": 1,
-          "items": [["1 Em 1 C 1 G 1 D 1"]]
+          "items": [[["1 Em 1 C 1 G 1 D 1"]]]
         }
       ]
     }
