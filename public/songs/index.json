@@ -8,6 +8,13 @@
       "type": ["acoustic"]
     },
     {
+      "title": "Sweater Weather",
+      "artists": ["The Neighbourhood"],
+      "directory": "sweater-weather",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "Am", "Em", "G", "D"]
+    },
+    {
       "title": "Without You",
       "artists": ["The Kid LAROI"],
       "directory": "without-you",
@@ -20,6 +27,20 @@
       "directory": "glimpse-of-us",
       "type": ["acoustic"],
       "chordIDs": ["Am", "D7", "G", "Em", "D/F#"]
+    },
+    {
+      "title": "All Of Me",
+      "artists": ["John Legend"],
+      "directory": "all-of-me",
+      "type": ["acoustic"],
+      "chordIDs": ["Em", "C", "G", "D", "Am"]
+    },
+    {
+      "title": "Save Your Tears",
+      "artists": ["The Weekend", "Ariana Grande"],
+      "directory": "save-your-tears",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "Am", "Em", "G"]
     },
     {
       "title": "Before You Go",
@@ -36,18 +57,18 @@
       "chordIDs": ["C", "G", "Am", "F", "Dm"]
     },
     {
-      "title": "Save Your Tears",
-      "artists": ["The Weekend", "Ariana Grande"],
-      "directory": "save-your-tears",
+      "title": "Viva La Vida | Easy",
+      "artists": ["Coldplay"],
+      "directory": "viva-la-vida-easy",
       "type": ["acoustic"],
-      "chordIDs": ["C", "Am", "Em", "G"]
+      "chordIDs": ["C", "D_3fr", "D", "G", "Em"]
     },
     {
-      "title": "All Of Me",
-      "artists": ["John Legend"],
-      "directory": "all-of-me",
+      "title": "Adore You",
+      "artists": ["Harry Styles"],
+      "directory": "adore-you",
       "type": ["acoustic"],
-      "chordIDs": ["Em", "C", "G", "D", "Am"]
+      "chordIDs": ["Am7", "C", "Ft", "G"]
     },
     {
       "title": "Golden",
@@ -71,13 +92,6 @@
       "chordIDs": ["C", "G", "Am", "F"]
     },
     {
-      "title": "Sweater Weather",
-      "artists": ["The Neighbourhood"],
-      "directory": "sweater-weather",
-      "type": ["acoustic"],
-      "chordIDs": ["C", "Am", "Em", "G", "D"]
-    },
-    {
       "title": "Nice to Meet You",
       "artists": ["Myles Smith"],
       "directory": "nice-to-meet-you",
@@ -90,13 +104,6 @@
       "directory": "mercy",
       "type": ["acoustic"],
       "chordIDs": ["Em", "G", "Bm", "A", "D"]
-    },
-    {
-      "title": "Adore You",
-      "artists": ["Harry Styles"],
-      "directory": "adore-you",
-      "type": ["acoustic"],
-      "chordIDs": ["Am7", "C", "Ft", "G"]
     },
     {
       "title": "Beautiful People",
@@ -153,13 +160,6 @@
       "directory": "never-gonna-give-you-up",
       "type": ["acoustic"],
       "chordIDs": ["Ft", "G", "Em", "Am"]
-    },
-    {
-      "title": "Viva La Vida | Easy",
-      "artists": ["Coldplay"],
-      "directory": "viva-la-vida-easy",
-      "type": ["acoustic"],
-      "chordIDs": ["C", "D_3fr", "D", "G", "Em"]
     },
     {
       "title": "Issues",
