@@ -75,7 +75,7 @@
       "artists": ["Charlie Puth"],
       "directory": "how-long",
       "type": ["acoustic"],
-      "chordIDs": []
+      "chordIDs": ["Dm", "Em", "Am", "Esus4", "E"]
     },
     {
       "title": "Golden",
