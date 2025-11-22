@@ -64,6 +64,13 @@
       "chordIDs": ["C", "D_3fr", "D", "G", "Em"]
     },
     {
+      "title": "Flake",
+      "artists": ["Jack Johnson"],
+      "directory": "flake",
+      "type": ["acoustic"],
+      "chordIDs": ["Dm_5fr", "F_1fr", "Bb_6fr", "C_8fr", "C_3fr", "A_5fr", "Bb_1fr"]
+    },
+    {
       "title": "Adore You",
       "artists": ["Harry Styles"],
       "directory": "adore-you",
@@ -75,7 +82,7 @@
       "artists": ["Charlie Puth"],
       "directory": "how-long",
       "type": ["acoustic"],
-      "chordIDs": []
+      "chordIDs": ["Dm", "Em", "Am", "Esus4", "E"]
     },
     {
       "title": "Golden",
