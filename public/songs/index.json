@@ -71,6 +71,13 @@
       "chordIDs": ["Am7", "C", "Ft", "G"]
     },
     {
+      "title": "How Long",
+      "artists": ["Charlie Puth"],
+      "directory": "how-long",
+      "type": ["acoustic"],
+      "chordIDs": []
+    },
+    {
       "title": "Golden",
       "artists": ["HUNTR/X"],
       "directory": "golden-acoustic-v1",

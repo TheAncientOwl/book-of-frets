@@ -182,6 +182,10 @@
       "name": "Dadd11",
       "startFret": 3,
       "frets": [{ "B": 1 }, { "D": 2 }, { "A": 3 }]
+    },
+    "Esus4": {
+      "name": "Esus4",
+      "frets": [{}, { "A": 2, "D": 3, "G": 4 }, {}]
     }
   }
 }
