@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "1.0.1",
   "contributors": ["TheAncientOwl"],
   "title": "How Long",
   "artists": ["Charlie Puth"],
@@ -21,7 +21,7 @@
       ]
     },
     "pc": {
-      "name": "pcechorus",
+      "name": "prechorus",
       "type": "str",
       "times": 1,
       "chords": [
