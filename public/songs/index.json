@@ -64,6 +64,13 @@
       "chordIDs": ["C", "D_3fr", "D", "G", "Em"]
     },
     {
+      "title": "Until I Found You",
+      "artists": ["Stephen Sanchez"],
+      "directory": "until-i-found-you",
+      "type": ["acoustic", "electric"],
+      "chordIDs": ["C", "Em", "F", "Fm", "G", "C7"]
+    },
+    {
       "title": "Flake",
       "artists": ["Jack Johnson"],
       "directory": "flake",
