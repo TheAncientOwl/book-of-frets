@@ -6,7 +6,7 @@
  *
  * @file FingerStyleChords.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Render song strings pattern.
  */
 
@@ -110,37 +110,47 @@ const parseItems = (items: string): { stringsToFrets: TStringToFrets; chords: TD
   const asValues = Object.values(stringsToFrets);
 
   let chordOffset: number = 0;
-  items.split(' ').map(item => {
-    if (item === '-' || item === '|') {
-      asValues.forEach(entry => entry.push(item));
-      chordOffset += 1;
-      return;
-    }
+  items.split(' ').map((item, index) => {
+    try {
+      if (item === '-' || item === '|') {
+        asValues.forEach(entry => entry.push(item));
+        chordOffset += 1;
+        return;
+      }
 
-    if (item.charAt(0) === '[') {
-      chords.push({ name: item.slice(1, item.length - 1), offset: chordOffset });
-      return;
-    }
+      if (item.charAt(0) === '[') {
+        chords.push({ name: item.slice(1, item.length - 1), offset: chordOffset });
+        return;
+      }
 
-    let newStringSize: number | undefined = undefined;
-    let fillLength: number = 0;
-    item.split('+').map(chord => {
-      const arr = stringsToFrets[chord.charAt(0) as keyof typeof stringsToFrets];
+      let newStringSize: number | undefined = undefined;
+      let fillLength: number = 0;
+      item.split('+').map((chord, idx) => {
+        try {
+          const arr = stringsToFrets[chord.charAt(0) as keyof typeof stringsToFrets];
 
-      const fret = chord.slice(1);
-      fillLength = Math.max(fillLength, fret.length);
+          const fret = chord.slice(1);
+          fillLength = Math.max(fillLength, fret.length);
 
-      arr.push(fret);
-      newStringSize = arr.length;
-    });
-
-    if (newStringSize !== undefined) {
-      asValues.forEach(entry => {
-        if (entry.length < (newStringSize as number)) {
-          entry.push('-'.repeat(fillLength));
+          arr.push(fret);
+          newStringSize = arr.length;
+        } catch (err) {
+          console.log(`item-${index}+${idx}: "${item}" | "${chord}"`);
+          console.error(err);
         }
       });
-      chordOffset += fillLength;
+
+      if (newStringSize !== undefined) {
+        asValues.forEach(entry => {
+          if (entry.length < (newStringSize as number)) {
+            entry.push('-'.repeat(fillLength));
+          }
+        });
+        chordOffset += fillLength;
+      }
+    } catch (err) {
+      console.log(`item-${index}: ${item}`);
+      console.error(err);
     }
   });
 
