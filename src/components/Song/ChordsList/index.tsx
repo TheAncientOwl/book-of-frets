@@ -6,7 +6,7 @@
  *
  * @file SongChordsList.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Song chords list component.
  */
 
@@ -25,7 +25,8 @@ export const SongChordsList = (props: TSongChordsList) => {
     theme: state.appTheme.song,
   }));
 
-  return props.chordIDs.length === 1 && props.chordIDs[0] === '-' ? null : (
+  return (props.chordIDs.length === 1 && props.chordIDs[0] === '-') ||
+    props.chordIDs.length === 0 ? null : (
     <Accordion defaultOpen>
       <AccordionButton
         boxProps={{
