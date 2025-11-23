@@ -7,7 +7,7 @@
     "version": {
       "type": "string",
       "pattern": "^\\d+\\.\\d+\\.\\d+$",
-      "default": "0.1.0"
+      "default": "1.0.0"
     },
     "contributors": {
       "type": "array",
@@ -68,7 +68,7 @@
         "additionalProperties": false,
         "properties": {
           "name": { "type": "string" },
-          "type": { "type": "string", "enum": ["str", "fs", "tabs"] },
+          "type": { "type": "string", "enum": ["str", "fs"] },
           "times": { "type": "number", "default": 1, "minimum": 1 },
           "chords": {
             "type": "array",
