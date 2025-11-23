@@ -6,7 +6,7 @@
 #
 # @file create.sh
 # @author Alexandru Delegeanu
-# @version 1.0
+# @version 1.1
 # @description Create song boilerplate
 #
 
@@ -46,7 +46,7 @@ output_file="${output_dir}/config.json"
 # Generate JSON boilerplate
 cat > "$output_file" <<EOF
 {
-  "version": "0.1.0",
+  "version": "1.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "${title}",
   "artists": [$(echo "$artists" | awk -F',' '{for(i=1;i<=NF;i++){gsub(/^ *| *$/,"",$i); printf "\"%s\"%s", $i, (i==NF?"":", ")}}')],
@@ -57,6 +57,7 @@ cat > "$output_file" <<EOF
   "strumms": [],
   "sections": {},
   "order": [],
+  "lyrics": false,
   "res": ${res_json}
 }
 EOF
