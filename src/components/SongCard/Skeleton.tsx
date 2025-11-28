@@ -6,7 +6,7 @@
  *
  * @file SongsSkeletonList.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Render songs skeleton list.
  */
 
@@ -22,7 +22,7 @@ const SkeletonSongCard = () => {
 
   return (
     <SimpleGrid
-      gridTemplateColumns={['26px 90px 1000fr 1fr', '26px 100px 1000fr 1fr']}
+      gridTemplateColumns={['27px 90px 1000fr 1fr', '27px 100px 1000fr 1fr']}
       borderStyle='solid'
       borderWidth='1px'
       padding={['8px']}

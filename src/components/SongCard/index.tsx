@@ -6,7 +6,7 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description List all available songs.
  */
 
@@ -56,7 +56,7 @@ export const SongCard = (props: SongProps) => {
 
   return (
     <SimpleGrid
-      gridTemplateColumns={['26px 90px 1000fr 1fr', '26px 100px 1000fr 1fr']}
+      gridTemplateColumns={['27px 90px 1000fr 1fr', '27px 100px 1000fr 1fr']}
       columns={{ base: 3 }}
       cursor='pointer'
       borderStyle='solid'
