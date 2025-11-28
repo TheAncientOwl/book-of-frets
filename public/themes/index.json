@@ -16,6 +16,11 @@
       "mainColor": "#181426"
     },
     {
+      "title": "Hazbin",
+      "directory": "hazbin",
+      "mainColor": "#340000"
+    },
+    {
       "title": "Catpuccin",
       "directory": "catpuccin",
       "mainColor": "#585b70"
