@@ -8,6 +8,13 @@
       "type": ["acoustic"]
     },
     {
+      "title": "No Surprises",
+      "artists": ["Radiohead"],
+      "directory": "no-surprises",
+      "type": ["acoustic", "electric"],
+      "chordIDs": ["D", "Gm6", "G6/B", "A", "Asus4"]
+    },
+    {
       "title": "Sweater Weather",
       "artists": ["The Neighbourhood"],
       "directory": "sweater-weather",
