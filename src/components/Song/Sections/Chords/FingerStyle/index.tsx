@@ -6,7 +6,7 @@
  *
  * @file FingerStyleChords.tsx
  * @author Alexandru Delegeanu
- * @version 1.1
+ * @version 1.2
  * @description Render song strings pattern.
  */
 
@@ -125,9 +125,11 @@ const parseItems = (items: string): { stringsToFrets: TStringToFrets; chords: TD
 
       let newStringSize: number | undefined = undefined;
       let fillLength: number = 0;
+      const pushed = new Set<TFretNumber[]>();
       item.split('+').map((chord, idx) => {
         try {
           const arr = stringsToFrets[chord.charAt(0) as keyof typeof stringsToFrets];
+          pushed.add(arr);
 
           const fret = chord.slice(1);
           fillLength = Math.max(fillLength, fret.length);
@@ -142,7 +144,12 @@ const parseItems = (items: string): { stringsToFrets: TStringToFrets; chords: TD
 
       if (newStringSize !== undefined) {
         asValues.forEach(entry => {
-          if (entry.length < (newStringSize as number)) {
+          if (pushed.has(entry)) {
+            const localFilled = fillLength - entry[entry.length - 1].toString().length;
+            if (localFilled > 0) {
+              entry.push('-'.repeat(localFilled));
+            }
+          } else {
             entry.push('-'.repeat(fillLength));
           }
         });
