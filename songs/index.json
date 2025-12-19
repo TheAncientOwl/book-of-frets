@@ -1,6 +1,13 @@
 {
   "index": [
     {
+      "title": "Poison",
+      "artists": ["Blake Roman", "Sam Haft", "Andrew Underberg"],
+      "directory": "poison",
+      "type": ["electric"],
+      "chordIDs": []
+    },
+    {
       "title": "Run Away To Mars",
       "artists": ["TALK"],
       "directory": "run-away-to-mars",
