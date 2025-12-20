@@ -1,6 +1,13 @@
 {
   "index": [
     {
+      "title": "Vox Populi (Lucifer's Part)",
+      "artists": ["Jeremy Jordan", "Christian Borle", "Sam Haft", "Andrew Underberg"],
+      "directory": "vox-populi-lucifer",
+      "type": ["electric"],
+      "chordIDs": []
+    },
+    {
       "title": "Poison",
       "artists": ["Blake Roman", "Sam Haft", "Andrew Underberg"],
       "directory": "poison",
