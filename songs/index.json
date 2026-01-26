@@ -1,6 +1,41 @@
 {
   "index": [
     {
+      "title": "Sweater Weather",
+      "artists": ["The Neighbourhood"],
+      "directory": "sweater-weather",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "Am", "Em", "G", "D"]
+    },
+    {
+      "title": "Run Away To Mars",
+      "artists": ["TALK"],
+      "directory": "run-away-to-mars",
+      "chordIDs": ["G", "D/F#", "Em7", "Cadd9", "Am7", "D", "Dsus4"],
+      "type": ["acoustic"]
+    },
+    {
+      "title": "No Surprises",
+      "artists": ["Radiohead"],
+      "directory": "no-surprises",
+      "type": ["acoustic", "electric"],
+      "chordIDs": ["D", "Gm6", "G6/B", "A", "Asus4"]
+    },
+    {
+      "title": "Without You",
+      "artists": ["The Kid LAROI"],
+      "directory": "without-you",
+      "type": ["acoustic"],
+      "chordIDs": ["Am", "Ft", "C", "G", "E"]
+    },
+    {
+      "title": "Viva La Vida | Easy",
+      "artists": ["Coldplay"],
+      "directory": "viva-la-vida-easy",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "D_3fr", "D", "G", "Em"]
+    },
+    {
       "title": "Vox Populi (Lucifer's Part)",
       "artists": ["Jeremy Jordan", "Christian Borle", "Sam Haft", "Andrew Underberg"],
       "directory": "vox-populi-lucifer",
@@ -21,34 +56,7 @@
       "type": ["electric"],
       "chordIDs": []
     },
-    {
-      "title": "Run Away To Mars",
-      "artists": ["TALK"],
-      "directory": "run-away-to-mars",
-      "chordIDs": ["G", "D/F#", "Em7", "Cadd9", "Am7", "D", "Dsus4"],
-      "type": ["acoustic"]
-    },
-    {
-      "title": "No Surprises",
-      "artists": ["Radiohead"],
-      "directory": "no-surprises",
-      "type": ["acoustic", "electric"],
-      "chordIDs": ["D", "Gm6", "G6/B", "A", "Asus4"]
-    },
-    {
-      "title": "Sweater Weather",
-      "artists": ["The Neighbourhood"],
-      "directory": "sweater-weather",
-      "type": ["acoustic"],
-      "chordIDs": ["C", "Am", "Em", "G", "D"]
-    },
-    {
-      "title": "Without You",
-      "artists": ["The Kid LAROI"],
-      "directory": "without-you",
-      "type": ["acoustic"],
-      "chordIDs": ["Am", "Ft", "C", "G", "E"]
-    },
+
     {
       "title": "Glimpse Of Us",
       "artists": ["Joji"],
@@ -84,13 +92,7 @@
       "type": ["acoustic"],
       "chordIDs": ["C", "G", "Am", "F", "Dm"]
     },
-    {
-      "title": "Viva La Vida | Easy",
-      "artists": ["Coldplay"],
-      "directory": "viva-la-vida-easy",
-      "type": ["acoustic"],
-      "chordIDs": ["C", "D_3fr", "D", "G", "Em"]
-    },
+
     {
       "title": "Until I Found You",
       "artists": ["Stephen Sanchez"],
@@ -274,34 +276,6 @@
       "chordIDs": ["Am", "C", "G", "D"]
     },
     {
-      "title": "Jingle Bell Rock",
-      "artists": ["Bobby Helms"],
-      "directory": "jingle-bell-rock",
-      "type": ["acoustic"],
-      "chordIDs": ["D", "DM7", "D6", "D#dim7", "Em7", "A7", "D7", "G#dim7", "E7", "A", "G", "Gm"]
-    },
-    {
-      "title": "Rudolph The Red Nosed Reindeer",
-      "artists": ["Gene Autry"],
-      "directory": "rudolph-the-red-nosed-reindeer",
-      "type": ["acoustic"],
-      "chordIDs": ["C", "G/B", "Am", "G", "Em", "D", "D7", "A7"]
-    },
-    {
-      "title": "Feliz Navidad",
-      "artists": ["José Feliciano"],
-      "directory": "feliz-navidad",
-      "type": ["acoustic"],
-      "chordIDs": ["G", "A7", "D", "Bm"]
-    },
-    {
-      "title": "All I Want For Christmas Is You",
-      "artists": ["Mariah Carey"],
-      "directory": "all-i-want-for-christmas-is-you",
-      "type": ["acoustic"],
-      "chordIDs": ["G", "Em", "C", "D", "G/B", "Cm_3fr", "B7", "D7", "E7", "Am7"]
-    },
-    {
       "title": "The Times They Are A Changin'",
       "artists": ["Bob Dylan"],
       "directory": "the-times-they-are-a-changin",
@@ -328,6 +302,34 @@
       "directory": "seven-nation-army-1string",
       "type": ["acoustic", "electric"],
       "chordIDs": ["-"]
+    },
+    {
+      "title": "Jingle Bell Rock",
+      "artists": ["Bobby Helms"],
+      "directory": "jingle-bell-rock",
+      "type": ["acoustic"],
+      "chordIDs": ["D", "DM7", "D6", "D#dim7", "Em7", "A7", "D7", "G#dim7", "E7", "A", "G", "Gm"]
+    },
+    {
+      "title": "Rudolph The Red Nosed Reindeer",
+      "artists": ["Gene Autry"],
+      "directory": "rudolph-the-red-nosed-reindeer",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "G/B", "Am", "G", "Em", "D", "D7", "A7"]
+    },
+    {
+      "title": "Feliz Navidad",
+      "artists": ["José Feliciano"],
+      "directory": "feliz-navidad",
+      "type": ["acoustic"],
+      "chordIDs": ["G", "A7", "D", "Bm"]
+    },
+    {
+      "title": "All I Want For Christmas Is You",
+      "artists": ["Mariah Carey"],
+      "directory": "all-i-want-for-christmas-is-you",
+      "type": ["acoustic"],
+      "chordIDs": ["G", "Em", "C", "D", "G/B", "Cm_3fr", "B7", "D7", "E7", "Am7"]
     }
   ]
 }
