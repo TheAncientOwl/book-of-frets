@@ -16,7 +16,7 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -62,7 +62,7 @@
     },
     "b": {
       "name": "bridge",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -77,7 +77,7 @@
     },
     "fc1": {
       "name": "final chorus pt.1",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {

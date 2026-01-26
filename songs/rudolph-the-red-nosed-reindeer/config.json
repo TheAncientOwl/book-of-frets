@@ -26,7 +26,7 @@
     },
     "r1": {
       "name": "riff 1",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -70,7 +70,7 @@
     },
     "s": {
       "name": "solo",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -118,7 +118,7 @@
     },
     "r2": {
       "name": "riff 2",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {

@@ -11,7 +11,7 @@
   "sections": {
     "mv1": {
       "name": "main riff var.",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -22,7 +22,7 @@
     },
     "m1": {
       "name": "main riff",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -33,7 +33,7 @@
     },
     "m2": {
       "name": "main riff",
-      "type": "fs",
+      "type": "tab",
       "times": 3,
       "chords": [
         {
@@ -44,7 +44,7 @@
     },
     "m3": {
       "name": "main riff",
-      "type": "fs",
+      "type": "tab",
       "times": 4,
       "chords": [
         {
@@ -55,7 +55,7 @@
     },
     "b": {
       "name": "bridge",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -70,7 +70,7 @@
     },
     "sc": {
       "name": "soft chorus",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -85,7 +85,7 @@
     },
     "o": {
       "name": "outro",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {

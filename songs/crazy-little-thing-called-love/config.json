@@ -60,7 +60,7 @@
     },
     "c2": {
       "name": "chorus 2",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -86,7 +86,7 @@
     },
     "s2": {
       "name": "solo 2",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
