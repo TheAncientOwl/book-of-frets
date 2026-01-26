@@ -11,7 +11,7 @@
   "sections": {
     "m1": {
       "name": "main 1",
-      "type": "fs",
+      "type": "tab",
       "times": 3,
       "chords": [
         {
@@ -22,7 +22,7 @@
     },
     "m2": {
       "name": "main 2",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -33,7 +33,7 @@
     },
     "m3": {
       "name": "main 3",
-      "type": "fs",
+      "type": "tab",
       "times": 3,
       "chords": [
         {
@@ -44,7 +44,7 @@
     },
     "o": {
       "name": "outro",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {

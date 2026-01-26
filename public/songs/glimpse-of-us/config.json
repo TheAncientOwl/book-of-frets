@@ -11,7 +11,7 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -26,7 +26,7 @@
     },
     "v1": {
       "name": "verse 1",
-      "type": "fs",
+      "type": "tab",
       "times": 2,
       "chords": [
         {
@@ -41,7 +41,7 @@
     },
     "p": {
       "name": "prechorus",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -52,7 +52,7 @@
     },
     "c1": {
       "name": "chorus",
-      "type": "fs",
+      "type": "tab",
       "times": 3,
       "chords": [
         {
@@ -74,7 +74,7 @@
     },
     "b": {
       "name": "break",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -85,7 +85,7 @@
     },
     "v2": {
       "name": "verse 2",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -108,7 +108,7 @@
     },
     "bg": {
       "name": "bridge",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {

@@ -67,7 +67,7 @@
         "additionalProperties": false,
         "properties": {
           "name": { "type": "string" },
-          "type": { "type": "string", "enum": ["str", "fs"] },
+          "type": { "type": "string", "enum": ["str", "tab"] },
           "times": { "type": "number", "default": 1, "minimum": 1 },
           "chords": {
             "type": "array",

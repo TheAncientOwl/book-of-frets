@@ -11,7 +11,7 @@
   "sections": {
     "vr": {
       "name": "verse riff",
-      "type": "fs",
+      "type": "tab",
       "times": 2,
       "chords": [
         {
@@ -37,7 +37,7 @@
     },
     "cr": {
       "name": "chorus riff",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {

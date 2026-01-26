@@ -23,7 +23,7 @@ export type TStrummingChords = {
   items: TStrummingChordsItem[];
 };
 
-export type TFingerStyleChords = {
+export type TTabChords = {
   times: number;
   items: string;
 };
@@ -32,7 +32,7 @@ export type TSongSection = {
   name: string;
   type: 'str' | 'fs';
   times: number;
-  chords: TStrummingChords[] | TFingerStyleChords[];
+  chords: TStrummingChords[] | TTabChords[];
 };
 
 export type TResource = {

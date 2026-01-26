@@ -22,7 +22,7 @@
     },
     "bk": {
       "name": "break",
-      "type": "fs",
+      "type": "tab",
       "times": 4,
       "chords": [
         {

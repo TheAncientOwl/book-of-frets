@@ -11,7 +11,7 @@
   "sections": {
     "00": {
       "name": "intro",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -26,7 +26,7 @@
     },
     "01": {
       "name": "main",
-      "type": "fs",
+      "type": "tab",
       "times": 2,
       "chords": [
         {
@@ -53,7 +53,7 @@
     },
     "02": {
       "name": "outro",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {

@@ -11,7 +11,7 @@
   "sections": {
     "00": {
       "name": "intro",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -42,7 +42,7 @@
     },
     "01": {
       "name": "riff 1",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -65,7 +65,7 @@
     },
     "02": {
       "name": "riff 2",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -100,7 +100,7 @@
     },
     "03": {
       "name": "riff 3",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {

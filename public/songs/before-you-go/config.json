@@ -11,7 +11,7 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -22,7 +22,7 @@
     },
     "vp1": {
       "name": "verse picked 1",
-      "type": "fs",
+      "type": "tab",
       "times": 2,
       "chords": [
         {
@@ -37,7 +37,7 @@
     },
     "cp": {
       "name": "chorus picked",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -64,7 +64,7 @@
     },
     "bk": {
       "name": "break",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {
@@ -134,7 +134,7 @@
     },
     "vp2": {
       "name": "verse picked 2",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": [
         {

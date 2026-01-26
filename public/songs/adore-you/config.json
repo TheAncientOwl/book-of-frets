@@ -33,7 +33,7 @@
     },
     "po1": {
       "name": "post chorus 1",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": []
     },
@@ -50,13 +50,13 @@
     },
     "po2": {
       "name": "post chorus 2",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": []
     },
     "s": {
       "name": "solo",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": []
     },
@@ -73,7 +73,7 @@
     },
     "po3": {
       "name": "post chorus 2",
-      "type": "fs",
+      "type": "tab",
       "times": 1,
       "chords": []
     }

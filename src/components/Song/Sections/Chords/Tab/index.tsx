@@ -4,13 +4,13 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
- * @file FingerStyleChords.tsx
+ * @file TabChords.tsx
  * @author Alexandru Delegeanu
  * @version 1.2
  * @description Render song strings pattern.
  */
 
-import type { TFingerStyleChords } from '@/common/types/song.types';
+import type { TTabChords } from '@/common/types/song.types';
 import { useAppStore } from '@/store/index';
 import { Box, Divider, Flex, Text } from '@chakra-ui/react';
 
@@ -166,7 +166,7 @@ const parseItems = (items: string): { stringsToFrets: TStringToFrets; chords: TD
   return { stringsToFrets, chords };
 };
 
-export const FingerStyleChords = (props: TFingerStyleChords) => {
+export const TabChords = (props: TTabChords) => {
   const theme = useAppStore(state => state.appTheme.song);
 
   const { stringsToFrets, chords } = parseItems(props.items);

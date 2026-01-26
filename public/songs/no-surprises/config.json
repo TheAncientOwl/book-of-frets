@@ -16,7 +16,7 @@
   "sections": {
     "r": {
       "name": "riff",
-      "type": "fs",
+      "type": "tab",
       "times": 2,
       "chords": [
         {
