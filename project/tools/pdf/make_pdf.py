@@ -87,11 +87,12 @@ def render_song_pdf(config_path: str, out_path: str):
                         chords_with_numbers = ""
                         for j in range(1, len(parts), 2):
                             chord = parts[j]
+                            print(chord)
                             number = parts[j + 1] if j + 1 < len(parts) else ""
                             if number == "1":
-                                chords_with_numbers += f"{chord} "
+                                chords_with_numbers += f"{chord} &nbsp;"
                             else:
-                                chords_with_numbers += f"{chord}<super><font size=8>{number}</font></super> "
+                                chords_with_numbers += f"{chord}<super><font size=8>{number}</font></super> &nbsp;"
                         group_chords.append(chords_with_numbers.strip())
                     line_chords.append("  ".join(group_chords))
                     if strum_index is not None:
