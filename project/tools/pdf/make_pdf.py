@@ -78,7 +78,7 @@ def render_song_pdf(config_path: str, out_path: str):
     story.append(Spacer(1, 16))
 
     # ── Sections ──────────────────────────
-    for section_id in song["order"]:
+    for i, section_id in enumerate(song["order"]):
         section = song["sections"][section_id]
 
         story.append(
@@ -89,34 +89,32 @@ def render_song_pdf(config_path: str, out_path: str):
             times = block["times"]
             for _ in range(times):
                 for line in block["items"]:
-                    # line is Array<Array<String>>
                     line_chords = []
                     line_strums = []
                     for group in line:
-                        # group is Array<String>, but may be Array<Array<String>> (see config)
                         group_chords = []
                         strum_index = None
                         for raw in group:
                             parts = raw.split()
                             strum_index = int(parts[0])
                             chords_with_numbers = ""
-                            for i in range(1, len(parts), 2):
-                                chord = parts[i]
-                                number = parts[i+1] if i+1 < len(parts) else ""
+                            for j in range(1, len(parts), 2):
+                                chord = parts[j]
+                                number = parts[j+1] if j+1 < len(parts) else ""
                                 if number == "1":
                                     chords_with_numbers += f"{chord} "
                                 else:
                                     chords_with_numbers += f"{chord}<super><font size=8>{number}</font></super> "
                             group_chords.append(chords_with_numbers.strip())
-                        # join each inner array with two spaces
                         line_chords.append("  ".join(group_chords))
                         if strum_index is not None:
                             line_strums.append(" ".join(song["strumms"][strum_index]))
-                    # join groups for the line with more spacing
                     story.append(Paragraph("   ".join(line_chords), styles["Normal"]))
                     story.append(Paragraph("   ".join(line_strums), styles["Normal"]))
 
-        story.append(Spacer(1, 12))
+        # Only add spacer if not the last section
+        if i < len(song["order"]) - 1:
+            story.append(Spacer(1, 12))
 
     doc.build(story, onFirstPage=draw_dark_background, onLaterPages=draw_dark_background)
 
