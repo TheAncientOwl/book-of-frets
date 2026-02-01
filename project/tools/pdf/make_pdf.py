@@ -6,14 +6,12 @@
 
  @file make_pdf.py
  @author Alexandru Delegeanu
- @version 1.0
+ @version 1.1
  @description Convert song config to pdf
 """
 
 import json
-from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
-)
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
@@ -26,6 +24,7 @@ def draw_dark_background(canvas, doc):
     canvas.setFillColor(colors.HexColor("#121212"))
     canvas.rect(0, 0, A4[0], A4[1], fill=1)
     canvas.restoreState()
+
 
 def render_song_pdf(config_path: str, out_path: str):
     with open(config_path) as f:
@@ -56,34 +55,23 @@ def render_song_pdf(config_path: str, out_path: str):
 
     # ── Title ─────────────────────────────
     story.append(Paragraph(f"<b>{song['title']}</b>", styles["Title"]))
-    story.append(Paragraph(
-        ", ".join(song["artists"]),
-        styles["Italic"]
-    ))
+    story.append(Paragraph(", ".join(song["artists"]), styles["Italic"]))
     story.append(Spacer(1, 16))
 
     # ── Meta info ─────────────────────────
-    story.append(Paragraph(
-        f"Capo: {song['capo']}",
-        styles["Normal"]
-    ))
+    story.append(Paragraph(f"Capo: {song['capo']}", styles["Normal"]))
     story.append(Spacer(1, 12))
 
     # ── Chords list ───────────────────────
     story.append(Paragraph("<b>Chords</b>", styles["Heading2"]))
-    story.append(Paragraph(
-        ", ".join(song["chordIDs"]),
-        styles["Normal"]
-    ))
+    story.append(Paragraph(", ".join(song["chordIDs"]), styles["Normal"]))
     story.append(Spacer(1, 16))
 
     # ── Sections ──────────────────────────
     for i, section_id in enumerate(song["order"]):
         section = song["sections"][section_id]
 
-        story.append(
-            Paragraph(section["name"].capitalize(), styles["Heading3"])
-        )
+        story.append(Paragraph(section["name"].capitalize(), styles["Heading3"]))
 
         for block in section["chords"]:
             times = block["times"]
@@ -100,7 +88,7 @@ def render_song_pdf(config_path: str, out_path: str):
                             chords_with_numbers = ""
                             for j in range(1, len(parts), 2):
                                 chord = parts[j]
-                                number = parts[j+1] if j+1 < len(parts) else ""
+                                number = parts[j + 1] if j + 1 < len(parts) else ""
                                 if number == "1":
                                     chords_with_numbers += f"{chord} "
                                 else:
@@ -116,24 +104,20 @@ def render_song_pdf(config_path: str, out_path: str):
         if i < len(song["order"]) - 1:
             story.append(Spacer(1, 12))
 
-    doc.build(story, onFirstPage=draw_dark_background, onLaterPages=draw_dark_background)
+    doc.build(
+        story, onFirstPage=draw_dark_background, onLaterPages=draw_dark_background
+    )
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Render a song PDF from a config.json file")
-    parser.add_argument(
-        "config_path",
-        help="Path to the song config.json file"
+    parser = argparse.ArgumentParser(
+        description="Render a song PDF from a config.json file"
     )
+    parser.add_argument("config_path", help="Path to the song config.json file")
     parser.add_argument(
-        "-o", "--output",
-        default="song.pdf",
-        help="Output PDF path (default: song.pdf)"
+        "-o", "--output", default="song.pdf", help="Output PDF path (default: song.pdf)"
     )
 
     args = parser.parse_args()
 
-    render_song_pdf(
-        args.config_path,
-        args.output
-    )
+    render_song_pdf(args.config_path, args.output)
