@@ -6,7 +6,7 @@
 
  @file make_pdf.py
  @author Alexandru Delegeanu
- @version 1.1
+ @version 1.2
  @description Convert song config to pdf
 """
 
@@ -17,6 +17,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER
 import argparse
+import os
 
 
 def draw_dark_background(canvas, doc):
@@ -74,31 +75,29 @@ def render_song_pdf(config_path: str, out_path: str):
         story.append(Paragraph(section["name"].capitalize(), styles["Heading3"]))
 
         for block in section["chords"]:
-            times = block["times"]
-            for _ in range(times):
-                for line in block["items"]:
-                    line_chords = []
-                    line_strums = []
-                    for group in line:
-                        group_chords = []
-                        strum_index = None
-                        for raw in group:
-                            parts = raw.split()
-                            strum_index = int(parts[0])
-                            chords_with_numbers = ""
-                            for j in range(1, len(parts), 2):
-                                chord = parts[j]
-                                number = parts[j + 1] if j + 1 < len(parts) else ""
-                                if number == "1":
-                                    chords_with_numbers += f"{chord} "
-                                else:
-                                    chords_with_numbers += f"{chord}<super><font size=8>{number}</font></super> "
-                            group_chords.append(chords_with_numbers.strip())
-                        line_chords.append("  ".join(group_chords))
-                        if strum_index is not None:
-                            line_strums.append(" ".join(song["strumms"][strum_index]))
-                    story.append(Paragraph("   ".join(line_chords), styles["Normal"]))
-                    story.append(Paragraph("   ".join(line_strums), styles["Normal"]))
+            for line in block["items"]:
+                line_chords = []
+                line_strums = []
+                for group in line:
+                    group_chords = []
+                    strum_index = None
+                    for raw in group:
+                        parts = raw.split()
+                        strum_index = int(parts[0])
+                        chords_with_numbers = ""
+                        for j in range(1, len(parts), 2):
+                            chord = parts[j]
+                            number = parts[j + 1] if j + 1 < len(parts) else ""
+                            if number == "1":
+                                chords_with_numbers += f"{chord} "
+                            else:
+                                chords_with_numbers += f"{chord}<super><font size=8>{number}</font></super> "
+                        group_chords.append(chords_with_numbers.strip())
+                    line_chords.append("  ".join(group_chords))
+                    if strum_index is not None:
+                        line_strums.append(" ".join(song["strumms"][strum_index]))
+                story.append(Paragraph("   ".join(line_chords), styles["Normal"]))
+                story.append(Paragraph("   ".join(line_strums), styles["Normal"]))
 
         # Only add spacer if not the last section
         if i < len(song["order"]) - 1:
@@ -114,10 +113,11 @@ if __name__ == "__main__":
         description="Render a song PDF from a config.json file"
     )
     parser.add_argument("config_path", help="Path to the song config.json file")
-    parser.add_argument(
-        "-o", "--output", default="song.pdf", help="Output PDF path (default: song.pdf)"
-    )
 
     args = parser.parse_args()
 
-    render_song_pdf(args.config_path, args.output)
+    config_dir = os.path.dirname(args.config_path)
+    folder_name = os.path.basename(config_dir)
+    output_path = os.path.join(config_dir, f"{folder_name}.pdf")
+
+    render_song_pdf(args.config_path, output_path)
