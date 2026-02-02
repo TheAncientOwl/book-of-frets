@@ -288,7 +288,11 @@ def render_song_pdf(config_path: str, out_path: str, chords_map=None, theme=None
         section = song["sections"][section_id]
         section_type = section.get("type", "str")
 
-        story.append(Paragraph(section["name"].capitalize(), styles["Heading3"]))
+        # Section title with times, if > 1
+        section_title = section["name"].capitalize()
+        if section.get("times", 1) > 1:
+            section_title += f"  x{section['times']}"
+        story.append(Paragraph(section_title, styles["Heading3"]))
 
         if section_type == "str":
             # Render strummed sections as before
