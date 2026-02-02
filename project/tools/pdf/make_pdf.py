@@ -6,7 +6,7 @@
 
  @file make_pdf.py
  @author Alexandru Delegeanu
- @version 1.2
+ @version 1.3
  @description Convert song config to pdf
 """
 
@@ -18,6 +18,7 @@ from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER
 import argparse
 import os
+from reportlab.pdfbase.pdfmetrics import stringWidth
 
 
 def draw_dark_background(canvas, doc):
@@ -89,10 +90,25 @@ def render_song_pdf(config_path: str, out_path: str):
 
             group_chords.append(chords_with_numbers.strip())
 
+        # Remove HTML tags and &nbsp; for width calculation
+        from re import sub
+
+        chords_text_plain = sub(r"<.*?>", "", " ".join(group_chords)).replace(
+            "&nbsp;", " "
+        )
+        strums_text_plain = sub(
+            r"<.*?>", "", " ".join(song["strumms"][strum_index])
+        ).replace("&nbsp;", " ")
+
         chords_p = Paragraph(" ".join(group_chords), styles["Normal"])
         strums_p = Paragraph(" ".join(song["strumms"][strum_index]), styles["Normal"])
 
-        return [chords_p, strums_p]
+        return {
+            "chords_p": chords_p,
+            "strums_p": strums_p,
+            "chords_text": chords_text_plain,
+            "strums_text": strums_text_plain,
+        }
 
     # ── Sections ──────────────────────────
     for i, section_id in enumerate(song["order"]):
@@ -103,12 +119,31 @@ def render_song_pdf(config_path: str, out_path: str):
         for block in section["chords"]:
             for line in block["items"]:
                 row = []
+                width_sources = []
+
                 for group in line:
                     cell = make_group_cell(group, song, styles)
-                    row.append(cell)
+                    row.append([cell["chords_p"], cell["strums_p"]])
+                    width_sources.append(cell)
+
+                col_widths = []
+                for cell in width_sources:
+                    chord_w = stringWidth(
+                        cell["chords_text"],
+                        styles["Normal"].fontName,
+                        styles["Normal"].fontSize,
+                    )
+                    strum_w = stringWidth(
+                        cell["strums_text"],
+                        styles["Normal"].fontName,
+                        styles["Normal"].fontSize,
+                    )
+
+                    col_widths.append(max(chord_w, strum_w) + 20)
 
                 table = Table(
                     [row],
+                    colWidths=col_widths,
                     hAlign="CENTER",
                     style=TableStyle(
                         [
