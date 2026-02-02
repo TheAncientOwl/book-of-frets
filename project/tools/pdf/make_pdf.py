@@ -11,17 +11,24 @@
 """
 
 import json
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+from reportlab.platypus import (
+    SimpleDocTemplate,
+    Paragraph,
+    Spacer,
+    Table,
+    TableStyle,
+    Image,
+)
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
-from reportlab.lib.enums import TA_CENTER
+from reportlab.lib.enums import TA_CENTER, TA_LEFT
 import argparse
 import os
 from reportlab.pdfbase.pdfmetrics import stringWidth
 import logging
 
-logging.basicConfig(level=logging.DEBUG)
+# logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 
@@ -59,20 +66,114 @@ def render_song_pdf(config_path: str, out_path: str, chords_map=None):
     styles["Normal"].textColor = colors.whitesmoke
     story = []
 
+    # ── Cover Section ─────────────────────
+    config_dir = os.path.dirname(config_path)
+    cover_path = os.path.join(config_dir, "cover.webp")
+    if os.path.isfile(cover_path):
+        try:
+            cover_img = Image(cover_path)
+            cover_img.drawHeight = 64
+            cover_img.drawWidth = 64
+        except Exception as e:
+            logger.warning(f"Failed to load cover image: {e}")
+            cover_img = None
+    else:
+        cover_img = None
+
+    # Create left-aligned styles for cover section text
+    cover_title_style = styles["Title"].clone("cover_title")
+    cover_title_style.alignment = TA_LEFT
+    cover_artists_style = styles["Italic"].clone("cover_artists")
+    cover_artists_style.alignment = TA_LEFT
+    cover_capo_style = styles["Normal"].clone("cover_capo")
+    cover_capo_style.alignment = TA_LEFT
+
+    title_paragraph = Paragraph(f"<b>{song['title']}</b>", cover_title_style)
+    artists_paragraph = Paragraph(", ".join(song["artists"]), cover_artists_style)
+    capo_paragraph = Paragraph(f"Capo: {song['capo']}", cover_capo_style)
+
+    if cover_img:
+        # Make a minimal-width text column (right), fixed image width (left)
+        text_table = Table(
+            [
+                [title_paragraph],
+                [Spacer(1, 1)],
+                [artists_paragraph],
+                [Spacer(1, 1)],
+                [capo_paragraph],
+            ],
+            # Set colWidths to None for minimal width
+            style=TableStyle(
+                [
+                    ("LEFTPADDING", (0, 0), (-1, -1), 2),
+                    ("RIGHTPADDING", (0, 0), (-1, -1), 2),
+                    ("TOPPADDING", (0, 0), (-1, -1), 2),
+                    ("BOTTOMPADDING", (0, 0), (-1, -1), 2),
+                ]
+            ),
+        )
+        # Calculate minimal width for text_table based on widest paragraph
+        max_text_width = (
+            max(
+                stringWidth(
+                    song["title"],
+                    cover_title_style.fontName,
+                    cover_title_style.fontSize,
+                ),
+                max(
+                    stringWidth(
+                        ", ".join(song["artists"]),
+                        cover_artists_style.fontName,
+                        cover_artists_style.fontSize,
+                    ),
+                    stringWidth(
+                        f"Capo: {song['capo']}",
+                        cover_capo_style.fontName,
+                        cover_capo_style.fontSize,
+                    ),
+                ),
+            )
+            + 10
+        )  # small padding
+
+        cover_table = Table(
+            [
+                [
+                    cover_img,
+                    Spacer(10, 1),
+                    text_table,
+                ]
+            ],
+            colWidths=[64, 10, max_text_width],
+            hAlign="CENTER",
+            style=TableStyle(
+                [
+                    ("VALIGN", (0, 0), (0, 0), "MIDDLE"),
+                    ("VALIGN", (2, 0), (2, 0), "TOP"),
+                    ("LEFTPADDING", (0, 0), (-1, -1), 2),
+                    ("RIGHTPADDING", (0, 0), (-1, -1), 2),
+                    ("TOPPADDING", (0, 0), (-1, -1), 2),
+                    ("BOTTOMPADDING", (0, 0), (-1, -1), 2),
+                ]
+            ),
+        )
+        story.append(cover_table)
+        story.append(Spacer(1, 4))
+    else:
+        # If no cover image, fallback to original title/artist display
+        story.append(title_paragraph)
+        story.append(artists_paragraph)
+        story.append(capo_paragraph)
+        story.append(Spacer(1, 24))
+
     def get_chord_name(chord_id):
         if chords_map and chord_id in chords_map:
             chord_name = chords_map[chord_id].get("name", chord_id)
             return chord_name
         return chord_id
 
-    # ── Title ─────────────────────────────
-    story.append(Paragraph(f"<b>{song['title']}</b>", styles["Title"]))
-    story.append(Paragraph(", ".join(song["artists"]), styles["Italic"]))
-    story.append(Spacer(1, 16))
-
     # ── Meta info ─────────────────────────
-    story.append(Paragraph(f"Capo: {song['capo']}", styles["Normal"]))
-    story.append(Spacer(1, 12))
+    # Removed original title, artists, capo here since moved to cover section
 
     # ── Chords list ───────────────────────
     chord_names_list = [get_chord_name(chord_id) for chord_id in song["chordIDs"]]
@@ -162,10 +263,10 @@ def render_song_pdf(config_path: str, out_path: str, chords_map=None):
                         [
                             ("ALIGN", (0, 0), (-1, -1), "CENTER"),
                             ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-                            ("LEFTPADDING", (0, 0), (-1, -1), 6),
-                            ("RIGHTPADDING", (0, 0), (-1, -1), 6),
-                            ("TOPPADDING", (0, 0), (-1, -1), 4),
-                            ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
+                            ("LEFTPADDING", (0, 0), (-1, -1), 2),
+                            ("RIGHTPADDING", (0, 0), (-1, -1), 2),
+                            ("TOPPADDING", (0, 0), (-1, -1), 2),
+                            ("BOTTOMPADDING", (0, 0), (-1, -1), 2),
                         ]
                     ),
                 )
