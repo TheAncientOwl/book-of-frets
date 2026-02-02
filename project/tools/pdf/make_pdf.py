@@ -68,6 +68,32 @@ def render_song_pdf(config_path: str, out_path: str):
     story.append(Paragraph(", ".join(song["chordIDs"]), styles["Normal"]))
     story.append(Spacer(1, 16))
 
+    def make_group_cell(group, song, styles):
+        group_chords = []
+        strum_index = None
+
+        for raw in group:
+            parts = raw.split()
+            strum_index = int(parts[0])
+
+            chords_with_numbers = ""
+            for j in range(1, len(parts), 2):
+                chord = parts[j]
+                number = parts[j + 1] if j + 1 < len(parts) else ""
+                if number == "1":
+                    chords_with_numbers += f"{chord} &nbsp;"
+                else:
+                    chords_with_numbers += (
+                        f"{chord}<super><font size=8>{number}</font></super> &nbsp;"
+                    )
+
+            group_chords.append(chords_with_numbers.strip())
+
+        chords_p = Paragraph(" ".join(group_chords), styles["Normal"])
+        strums_p = Paragraph(" ".join(song["strumms"][strum_index]), styles["Normal"])
+
+        return [chords_p, strums_p]
+
     # ── Sections ──────────────────────────
     for i, section_id in enumerate(song["order"]):
         section = song["sections"][section_id]
@@ -76,29 +102,27 @@ def render_song_pdf(config_path: str, out_path: str):
 
         for block in section["chords"]:
             for line in block["items"]:
-                line_chords = []
-                line_strums = []
+                row = []
                 for group in line:
-                    group_chords = []
-                    strum_index = None
-                    for raw in group:
-                        parts = raw.split()
-                        strum_index = int(parts[0])
-                        chords_with_numbers = ""
-                        for j in range(1, len(parts), 2):
-                            chord = parts[j]
-                            print(chord)
-                            number = parts[j + 1] if j + 1 < len(parts) else ""
-                            if number == "1":
-                                chords_with_numbers += f"{chord} &nbsp;"
-                            else:
-                                chords_with_numbers += f"{chord}<super><font size=8>{number}</font></super> &nbsp;"
-                        group_chords.append(chords_with_numbers.strip())
-                    line_chords.append("  ".join(group_chords))
-                    if strum_index is not None:
-                        line_strums.append(" ".join(song["strumms"][strum_index]))
-                story.append(Paragraph("   ".join(line_chords), styles["Normal"]))
-                story.append(Paragraph("   ".join(line_strums), styles["Normal"]))
+                    cell = make_group_cell(group, song, styles)
+                    row.append(cell)
+
+                table = Table(
+                    [row],
+                    hAlign="CENTER",
+                    style=TableStyle(
+                        [
+                            ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+                            ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+                            ("LEFTPADDING", (0, 0), (-1, -1), 6),
+                            ("RIGHTPADDING", (0, 0), (-1, -1), 6),
+                            ("TOPPADDING", (0, 0), (-1, -1), 4),
+                            ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
+                        ]
+                    ),
+                )
+
+                story.append(table)
 
         # Only add spacer if not the last section
         if i < len(song["order"]) - 1:
