@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Render song based on given config.
  */
 
@@ -19,14 +19,14 @@ import { FetchLyricsButton } from '@/components/Song/Lyrics/FetchLyricsButton';
 import { SongSections } from '@/components/Song/Sections/SongSections';
 import { useAppStore } from '@/store/index';
 import { Loading } from '@/ui/Loading';
-import { Box, Container } from '@chakra-ui/react';
+import { Box, Container, Button } from '@chakra-ui/react';
 import { lazy, Suspense } from 'react';
 
 const SongNotes = lazy(() => import('@/components/Song/Notes'));
 const SongResources = lazy(() => import('@/components/Song/Resources'));
 
 const InView = lazy(() =>
-  import('react-intersection-observer').then(mod => ({ default: mod.InView }))
+  import('react-intersection-observer').then(mod => ({ default: mod.InView })),
 );
 
 type TSongProps = TSong & {
@@ -35,6 +35,7 @@ type TSongProps = TSong & {
 
 export const Song = (props: TSongProps) => {
   const theme = useAppStore(state => state.appTheme.song);
+  const themeId = useAppStore(state => state.appTheme.id);
 
   const [showLyrics, setShowLyrics] = useSessionStorage(props.title + '-show-lyrics', false);
   const [lyrics, setLyrics] = useSessionStorage(props.title + '-lyrics', [] as string[][]);
@@ -48,7 +49,7 @@ export const Song = (props: TSongProps) => {
         json => setLyrics((json as { lyrics: TSongSectionLyrics[] }).lyrics),
         error => {
           console.error('Failed to fetch song lyrics:', error);
-        }
+        },
       );
     }
   };
@@ -72,14 +73,30 @@ export const Song = (props: TSongProps) => {
         contributors={props.contributors}
       />
 
-      <FetchLyricsButton
-        available={props.lyrics}
-        lyricsShown={showLyrics}
-        onClick={() => {
-          setShowLyrics(!showLyrics);
-          fetchLyrics();
-        }}
-      />
+      <Box display='flex' justifyContent='center' mb='1em' gap='10px'>
+        <FetchLyricsButton
+          available={props.lyrics}
+          lyricsShown={showLyrics}
+          onClick={() => {
+            setShowLyrics(!showLyrics);
+            fetchLyrics();
+          }}
+        />
+
+        <Button
+          size='sm'
+          onClick={() => {
+            window.open(
+              `${import.meta.env.BASE_URL}songs/${props.directory}/pdf/${props.directory}.${themeId}.pdf`,
+              '_blank',
+            );
+          }}
+          // [*] theme colors
+          colorScheme={'purple'}
+        >
+          Open PDF
+        </Button>
+      </Box>
 
       <Box
         padding={['1.5rem 10px', '1.5rem 1rem']}

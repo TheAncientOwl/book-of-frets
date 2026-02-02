@@ -6,7 +6,7 @@
 
  @file make_pdf.py
  @author Alexandru Delegeanu
- @version 1.7
+ @version 1.8
  @description Convert song config to pdf
 """
 
@@ -343,9 +343,13 @@ def render_song_pdf(config_path: str, out_path: str, chords_map=None, theme=None
         if i < len(song["order"]) - 1:
             story.append(Spacer(1, 1))
 
+    def first_page_with_title(canvas, doc):
+        canvas.setTitle(song["title"])
+        draw_dark_background(canvas, doc, bg_color)
+
     doc.build(
         story,
-        onFirstPage=lambda canvas, doc: draw_dark_background(canvas, doc, bg_color),
+        onFirstPage=first_page_with_title,
         onLaterPages=lambda canvas, doc: draw_dark_background(canvas, doc, bg_color),
     )
 
