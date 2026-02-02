@@ -6,7 +6,7 @@
 
  @file make_pdf.py
  @author Alexandru Delegeanu
- @version 1.6
+ @version 1.7
  @description Convert song config to pdf
 """
 
@@ -381,6 +381,10 @@ if __name__ == "__main__":
     config_dir = os.path.dirname(args.config_path)
     folder_name = os.path.basename(config_dir)
 
+    # Create a 'pdf' subdirectory in the same directory as config.json
+    pdf_dir = os.path.join(config_dir, "pdf")
+    os.makedirs(pdf_dir, exist_ok=True)
+
     if args.theme:
         theme_dir = os.path.dirname(args.theme)
         theme_folder_name = os.path.basename(theme_dir)
@@ -388,6 +392,6 @@ if __name__ == "__main__":
     else:
         output_filename = f"{folder_name}.pdf"
 
-    output_path = os.path.join(config_dir, output_filename)
+    output_path = os.path.join(pdf_dir, output_filename)
 
     render_song_pdf(args.config_path, output_path, chords_map=chords_map, theme=theme)
