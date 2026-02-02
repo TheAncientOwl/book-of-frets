@@ -6,7 +6,7 @@
 
  @file make_pdf.py
  @author Alexandru Delegeanu
- @version 1.8
+ @version 1.9
  @description Convert song config to pdf
 """
 
@@ -290,55 +290,99 @@ def render_song_pdf(config_path: str, out_path: str, chords_map=None, theme=None
 
         # Section title with times, if > 1
         section_title = section["name"].capitalize()
-        if section.get("times", 1) > 1:
-            section_title += f"  x{section['times']}"
+        times = section.get("times", 1)
+        if times > 1:
+            section_title += f"  x{times}"
         story.append(Paragraph(section_title, styles["Heading3"]))
 
         if section_type == "str":
             # Render strummed sections as before
             for block in section["chords"]:
+                block_times = block.get("times", times)
+                # For each block, collect all lines
+                block_rows = []
+                block_width_sources = []
                 for line in block["items"]:
                     row = []
                     width_sources = []
-
                     for group in line:
                         cell = make_group_cell(group, song, styles, chords_map)
                         row.append([cell["chords_p"], cell["strums_p"]])
                         width_sources.append(cell)
+                    block_rows.append(row)
+                    block_width_sources.append(width_sources)
 
-                    col_widths = []
-                    for cell in width_sources:
-                        chord_w = stringWidth(
-                            cell["chords_text"],
+                # Calculate col_widths for the main columns
+                # Assume all rows have the same number of groups
+                max_widths = []
+                num_groups = max((len(r) for r in block_rows), default=0)
+                for gi in range(num_groups):
+                    # Find max width for this group across all rows
+                    maxw = 0
+                    for row_idx, width_sources in enumerate(block_width_sources):
+                        if gi < len(width_sources):
+                            cell = width_sources[gi]
+                            chord_w = stringWidth(
+                                cell["chords_text"],
+                                styles["Normal"].fontName,
+                                styles["Normal"].fontSize,
+                            )
+                            strum_w = stringWidth(
+                                cell["strums_text"],
+                                styles["Normal"].fontName,
+                                styles["Normal"].fontSize,
+                            )
+                            maxw = max(maxw, max(chord_w, strum_w) + 20)
+                    max_widths.append(maxw)
+
+                # If block_times > 1, add extra column with "x{block_times}" text as a single right column spanning all rows
+                col_widths = list(max_widths)
+                if block_times > 1:
+                    times_width = (
+                        stringWidth(
+                            f"x{block_times}",
                             styles["Normal"].fontName,
                             styles["Normal"].fontSize,
                         )
-                        strum_w = stringWidth(
-                            cell["strums_text"],
-                            styles["Normal"].fontName,
-                            styles["Normal"].fontSize,
-                        )
-
-                        col_widths.append(max(chord_w, strum_w) + 20)
-
-                    table = Table(
-                        [row],
-                        colWidths=col_widths,
-                        hAlign="CENTER",
-                        style=TableStyle(
-                            [
-                                ("ALIGN", (0, 0), (-1, -1), "CENTER"),
-                                ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-                                ("LEFTPADDING", (0, 0), (-1, -1), 2),
-                                ("RIGHTPADDING", (0, 0), (-1, -1), 2),
-                                ("TOPPADDING", (0, 0), (-1, -1), 2),
-                                ("BOTTOMPADDING", (0, 0), (-1, -1), 2),
-                                ("TEXTCOLOR", (0, 0), (-1, -1), chord_text_color),
-                            ]
-                        ),
+                        + 20
                     )
+                    col_widths.append(times_width)
 
-                    story.append(table)
+                    # Add the "x{block_times}" column to the far right, only in the first row, and span all rows
+                    for row in block_rows:
+                        row.append("")  # Placeholder for all rows
+                    times_paragraph = Paragraph(f"x{block_times}", styles["Normal"])
+                    if block_rows:
+                        block_rows[0][-1] = times_paragraph
+                    # TableStyle for span: ('SPAN', (lastcol, 0), (lastcol, nrows-1))
+                    span_style = [
+                        (
+                            "SPAN",
+                            (len(col_widths) - 1, 0),
+                            (len(col_widths) - 1, len(block_rows) - 1),
+                        )
+                    ]
+                else:
+                    span_style = []
+
+                table = Table(
+                    block_rows,
+                    colWidths=col_widths,
+                    hAlign="CENTER",
+                    style=TableStyle(
+                        [
+                            ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+                            ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+                            ("LEFTPADDING", (0, 0), (-1, -1), 2),
+                            ("RIGHTPADDING", (0, 0), (-1, -1), 2),
+                            ("TOPPADDING", (0, 0), (-1, -1), 2),
+                            ("BOTTOMPADDING", (0, 0), (-1, -1), 2),
+                            ("TEXTCOLOR", (0, 0), (-1, -1), chord_text_color),
+                        ]
+                        + span_style
+                    ),
+                )
+                story.append(table)
         else:
             # For non-strummed types (e.g., "tab"), display "Coming soon..."
             story.append(Paragraph("Coming soon...", styles["Normal"]))
