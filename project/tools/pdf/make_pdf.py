@@ -6,7 +6,7 @@
 
  @file make_pdf.py
  @author Alexandru Delegeanu
- @version 1.4
+ @version 1.5
  @description Convert song config to pdf
 """
 
@@ -19,6 +19,10 @@ from reportlab.lib.enums import TA_CENTER
 import argparse
 import os
 from reportlab.pdfbase.pdfmetrics import stringWidth
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 
 def draw_dark_background(canvas, doc):
@@ -28,7 +32,7 @@ def draw_dark_background(canvas, doc):
     canvas.restoreState()
 
 
-def render_song_pdf(config_path: str, out_path: str):
+def render_song_pdf(config_path: str, out_path: str, chords_map=None):
     with open(config_path) as f:
         song = json.load(f)
 
@@ -55,6 +59,12 @@ def render_song_pdf(config_path: str, out_path: str):
     styles["Normal"].textColor = colors.whitesmoke
     story = []
 
+    def get_chord_name(chord_id):
+        if chords_map and chord_id in chords_map:
+            chord_name = chords_map[chord_id].get("name", chord_id)
+            return chord_name
+        return chord_id
+
     # ── Title ─────────────────────────────
     story.append(Paragraph(f"<b>{song['title']}</b>", styles["Title"]))
     story.append(Paragraph(", ".join(song["artists"]), styles["Italic"]))
@@ -65,11 +75,12 @@ def render_song_pdf(config_path: str, out_path: str):
     story.append(Spacer(1, 12))
 
     # ── Chords list ───────────────────────
+    chord_names_list = [get_chord_name(chord_id) for chord_id in song["chordIDs"]]
     story.append(Paragraph("<b>Chords</b>", styles["Heading2"]))
-    story.append(Paragraph(", ".join(song["chordIDs"]), styles["Normal"]))
+    story.append(Paragraph(", ".join(chord_names_list), styles["Normal"]))
     story.append(Spacer(1, 16))
 
-    def make_group_cell(group, song, styles):
+    def make_group_cell(group, song, styles, chords_map):
         group_chords = []
         strum_index = None
 
@@ -81,12 +92,14 @@ def render_song_pdf(config_path: str, out_path: str):
             for j in range(1, len(parts), 2):
                 chord = parts[j]
                 number = parts[j + 1] if j + 1 < len(parts) else ""
-                if number == "1":
-                    chords_with_numbers += f"{chord} &nbsp;"
+                if chords_map and chord in chords_map:
+                    chord_name = chords_map[chord].get("name", chord)
                 else:
-                    chords_with_numbers += (
-                        f"{chord}<super><font size=8>{number}</font></super> &nbsp;"
-                    )
+                    chord_name = chord
+                if number == "1":
+                    chords_with_numbers += f"{chord_name} &nbsp;"
+                else:
+                    chords_with_numbers += f"{chord_name}<super><font size=8>{number}</font></super> &nbsp;"
 
             group_chords.append(chords_with_numbers.strip())
 
@@ -122,7 +135,7 @@ def render_song_pdf(config_path: str, out_path: str):
                 width_sources = []
 
                 for group in line:
-                    cell = make_group_cell(group, song, styles)
+                    cell = make_group_cell(group, song, styles, chords_map)
                     row.append([cell["chords_p"], cell["strums_p"]])
                     width_sources.append(cell)
 
@@ -173,11 +186,21 @@ if __name__ == "__main__":
         description="Render a song PDF from a config.json file"
     )
     parser.add_argument("config_path", help="Path to the song config.json file")
+    parser.add_argument(
+        "--chords",
+        help="Optional path to a JSON file mapping chord IDs to chord info",
+        default=None,
+    )
 
     args = parser.parse_args()
+
+    chords_map = None
+    if args.chords:
+        with open(args.chords) as f:
+            chords_map = json.load(f)["index"]
 
     config_dir = os.path.dirname(args.config_path)
     folder_name = os.path.basename(config_dir)
     output_path = os.path.join(config_dir, f"{folder_name}.pdf")
 
-    render_song_pdf(args.config_path, output_path)
+    render_song_pdf(args.config_path, output_path, chords_map=chords_map)
