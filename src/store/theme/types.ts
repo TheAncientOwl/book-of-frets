@@ -6,7 +6,7 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description App theme types
  */
 
@@ -303,6 +303,7 @@ type TScrollbarTheme = {
 };
 
 export type TAppTheme = {
+  id: string;
   name: string;
   homePage: THomePageTheme;
   appMenu: TAppMenuTheme;
