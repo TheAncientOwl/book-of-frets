@@ -6,7 +6,7 @@
 
  @file make_pdf.py
  @author Alexandru Delegeanu
- @version 1.3
+ @version 1.4
  @description Convert song config to pdf
 """
 
@@ -161,7 +161,7 @@ def render_song_pdf(config_path: str, out_path: str):
 
         # Only add spacer if not the last section
         if i < len(song["order"]) - 1:
-            story.append(Spacer(1, 12))
+            story.append(Spacer(1, 1))
 
     doc.build(
         story, onFirstPage=draw_dark_background, onLaterPages=draw_dark_background
