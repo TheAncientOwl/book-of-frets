@@ -36,6 +36,13 @@
       "chordIDs": []
     },
     {
+      "title": "Zombie",
+      "artists": ["Yungblud"],
+      "directory": "zombie",
+      "type": ["acoustic"],
+      "chordIDs": ["Bsus4_2fr", "C#m7_4fr", "Aadd9_5fr", "E5_7fr", "Asus2_2fr", "E"]
+    },
+    {
       "title": "Cover Me In Sunshine",
       "artists": ["P!nk"],
       "directory": "cover-me-in-sunshine",
