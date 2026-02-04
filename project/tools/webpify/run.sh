@@ -17,12 +17,12 @@ fi
 
 home=$BOOK_OF_FRETS_ROOT/project/tools/webpify
 
-if [ ! -d "$home/.venv" ]; then
-    $home/install_deps.sh
-fi
+# if [ ! -d "$home/.venv" ]; then
+#     $home/install_deps.sh
+# fi
 
-source $home/.venv/bin/activate
+# source $home/.venv/bin/activate
 
 python3 $home/webpify.py "$@"
 
-deactivate
+# deactivate

@@ -6,7 +6,7 @@
 #
 # @file run.sh
 # @author Alexandru Delegeanu
-# @version 1.0
+# @version 1.1
 # @description Runs @see jpegify.py
 #
 
@@ -21,8 +21,8 @@ if [ ! -d "$home/.venv" ]; then
     $home/install_deps.sh
 fi
 
-source $home/.venv/bin/activate
+# source $home/.venv/bin/activate
 
 python3 $home/jpegify.py "$1"
 
-deactivate
+# deactivate

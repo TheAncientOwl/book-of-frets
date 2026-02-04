@@ -6,7 +6,7 @@
 #
 # @file run.sh
 # @author Alexandru Delegeanu
-# @version 1.0
+# @version 1.1
 # @description Runs @see image_resizer.py
 #
 
@@ -17,12 +17,12 @@ fi
 
 home=$BOOK_OF_FRETS_ROOT/project/tools/image-resizer
 
-if [ ! -d "$home/.venv" ]; then
-    $home/install_deps.sh
-fi
+# if [ ! -d "$home/.venv" ]; then
+#     $home/install_deps.sh
+# fi
 
-source $home/.venv/bin/activate
+# source $home/.venv/bin/activate
 
 python3 $home/image_resizer.py "$@"
 
-deactivate
+# deactivate
