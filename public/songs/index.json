@@ -8,13 +8,6 @@
       "chordIDs": ["C", "Am", "Em", "G", "D"]
     },
     {
-      "title": "Cover Me In Sunshine",
-      "artists": ["P!nk"],
-      "directory": "cover-me-in-sunshine",
-      "type": ["acoustic"],
-      "chordIDs": ["Em", "G", "D", "A"]
-    },
-    {
       "title": "Run Away To Mars",
       "artists": ["TALK"],
       "directory": "run-away-to-mars",
@@ -34,6 +27,20 @@
       "directory": "without-you",
       "type": ["acoustic"],
       "chordIDs": ["Am", "Ft", "C", "G", "E"]
+    },
+    {
+      "title": "Stay",
+      "artists": ["The Kid LAROI", "Justin Bieber"],
+      "directory": "stay",
+      "type": ["electric"],
+      "chordIDs": []
+    },
+    {
+      "title": "Cover Me In Sunshine",
+      "artists": ["P!nk"],
+      "directory": "cover-me-in-sunshine",
+      "type": ["acoustic"],
+      "chordIDs": ["Em", "G", "D", "A"]
     },
     {
       "title": "Viva La Vida | Easy",

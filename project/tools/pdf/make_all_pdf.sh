@@ -1,6 +1,6 @@
 # !/bin/bash
 # -----------------------------------------------------------------------------
-#                     Copyright (c) by BookOfFrets 2025
+#                     Copyright (c) by BookOfFrets 2026
 # -----------------------------------------------------------------------------
 # @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
 #
