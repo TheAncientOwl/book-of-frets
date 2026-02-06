@@ -43,6 +43,13 @@
       "chordIDs": ["Bsus4_2fr", "C#m7_4fr", "Aadd9_5fr", "E5_7fr", "Asus2_2fr", "E"]
     },
     {
+      "title": "Complicated",
+      "artists": ["Avril Lavigne"],
+      "directory": "complicated",
+      "type": ["acoustic"],
+      "chordIDs": ["Am", "F", "C", "G", "Dm"]
+    },
+    {
       "title": "Cover Me In Sunshine",
       "artists": ["P!nk"],
       "directory": "cover-me-in-sunshine",
