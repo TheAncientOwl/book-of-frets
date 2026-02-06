@@ -67,9 +67,9 @@
         "additionalProperties": false,
         "properties": {
           "name": { "type": "string" },
-          "type": { "type": "string", "enum": ["str", "tab"] },
+          "type": { "type": "string", "enum": ["chords-v1", "gtab-v1"] },
           "times": { "type": "number", "default": 1, "minimum": 1 },
-          "chords": {
+          "data": {
             "type": "array",
             "items": {
               "type": "object",
@@ -108,7 +108,7 @@
             }
           }
         },
-        "required": ["name", "type", "times", "chords"]
+        "required": ["name", "type", "times", "data"]
       }
     },
     "order": {

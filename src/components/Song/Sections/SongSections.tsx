@@ -32,7 +32,7 @@ export const SongSections = (props: TSongSectionsProps) => {
         const songSectionData = props.sections[songSectionName];
         console.assert(
           songSectionData !== undefined,
-          `Failed to find song section data for "${songSectionName}"`
+          `Failed to find song section data for "${songSectionName}"`,
         );
 
         return (

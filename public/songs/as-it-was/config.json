@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "As It Was",
   "artists": ["Harry Styles"],
@@ -11,9 +11,9 @@
   "sections": {
     "m": {
       "name": "main progression",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 404,
           "items": [[["0 Dsus2 1 Bm7 1 E 1 A 1"]]]

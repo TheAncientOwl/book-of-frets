@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Radioactive",
   "artists": ["Imagine Dragons"],
@@ -14,9 +14,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "str",
+      "type": "chords-v1",
       "times": 3,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Am 1 C 1 G 1 D 1"]]]
@@ -25,9 +25,9 @@
     },
     "v": {
       "name": "verse",
-      "type": "str",
+      "type": "chords-v1",
       "times": 3,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["1 Am 1 C 1 G 1 D 1"]]]

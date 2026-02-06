@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Arcane ~ Come Play",
   "artists": ["Stray Kids", "Young Miko", "Tom Morello"],
@@ -11,9 +11,9 @@
   "sections": {
     "00": {
       "name": "intro",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- G11 - G11 - G11 - G11 - - e14 - - G11 - G11 - G11 - G11 - e14 - - G11 - G11 - e14 - - - - - - - - - - - - - - - -"
@@ -42,9 +42,9 @@
     },
     "01": {
       "name": "riff 1",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - | - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - -"
@@ -65,9 +65,9 @@
     },
     "02": {
       "name": "riff 2",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- - G6 - - D8 - - - G7 - G6 - D9 - - G6 - G7 - - - D9 - - - G9 - G7 - G6 - - - D9 - - - - - - - - -"
@@ -100,9 +100,9 @@
     },
     "03": {
       "name": "riff 3",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- - E2+A4 - - E2+A4 - - E2+A4 - - E2+A4 - - - - E2+A4 - - - - E2+A4 - - E2+A4 - - E2+A4 - - E2+A4 - - - A9+G11 - - - - - - - - - - - - - -"

@@ -166,27 +166,37 @@ const parseItems = (items: string): { stringsToFrets: TStringToFrets; chords: TD
   return { stringsToFrets, chords };
 };
 
-export const TabChords = (props: TTabChords) => {
+type TGuitarTabsV1Props = {
+  data: TTabChords[];
+};
+
+export const GuitarTabsV1 = (props: TGuitarTabsV1Props) => {
   const theme = useAppStore(state => state.appTheme.song);
 
-  const { stringsToFrets, chords } = parseItems(props.items);
-
   return (
-    <Flex direction='column' width='100%' overflowX='auto' fontSize={['1.2em']}>
-      <Box minWidth='max-content'>
-        {chords.length > 0 && <DisplayChords chords={chords} />}
-        <String name='e' frets={stringsToFrets.e} />
-        <String name='B' frets={stringsToFrets.B} />
-        <String name='G' frets={stringsToFrets.G} />
-        <String name='D' frets={stringsToFrets.D} />
-        <String name='A' frets={stringsToFrets.A} />
-        <String name='E' frets={stringsToFrets.E} />
-        <Divider
-          marginTop='1em'
-          // [*] theme colors
-          borderColor={theme.items.item.stringsPattern.divider}
-        />
-      </Box>
-    </Flex>
+    <>
+      {props.data.map((item, idx) => {
+        const { stringsToFrets, chords } = parseItems(item.items);
+
+        return (
+          <Flex key={idx} direction='column' width='100%' overflowX='auto' fontSize={['1.2em']}>
+            <Box minWidth='max-content'>
+              {chords.length > 0 && <DisplayChords chords={chords} />}
+              <String name='e' frets={stringsToFrets.e} />
+              <String name='B' frets={stringsToFrets.B} />
+              <String name='G' frets={stringsToFrets.G} />
+              <String name='D' frets={stringsToFrets.D} />
+              <String name='A' frets={stringsToFrets.A} />
+              <String name='E' frets={stringsToFrets.E} />
+              <Divider
+                marginTop='1em'
+                // [*] theme colors
+                borderColor={theme.items.item.stringsPattern.divider}
+              />
+            </Box>
+          </Flex>
+        );
+      })}
+    </>
   );
 };

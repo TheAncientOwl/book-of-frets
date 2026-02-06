@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Stay",
   "artists": ["The Kid LAROI", "Justin Bieber"],
@@ -11,9 +11,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- G5/6 - G6 - B9 - - - - - G6 - G6 - | - G5 - G5 - G5 - G5 - G5 - G6 - G6 - - - | - G5/6 - G6 - B9 - - - - - G6 - G6 - | - G5 - G5 - G5 - G5 - G5 - G6 - G6 - - -"
@@ -26,9 +26,9 @@
     },
     "v1": {
       "name": "verse 1",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- - - G10\\ - - G6/8 - - - G8 - - | - - - - G8 - - G6 - G8 - - G8 - - - - | - D8 - G10\\ - - G6/8 - - - G8 - - | - - - G8 - - - G6 - G8 - - - G8 - - -"
@@ -41,9 +41,9 @@
     },
     "pc": {
       "name": "prechorus",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- G5/6 - - - - D8 - G8/10 - - - | - G10 - - - - - - - - - - - - - - | - G5/6 - - - - D8 - G8/10 - - - | - G10 - - - - - - - - - - - - - -"
@@ -56,9 +56,9 @@
     },
     "c": {
       "name": "chorus",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- G5/6 - G6 - B9 - - - - - G6 - G6 - | - G5 - G5 - G5 - G5 - G5 - G6 - G6 - - - | - G5/6 - G6 - B9 - - - - - G6 - G6 - | - G5 - G5 - G5 - G5 - G5 - G6 - G6 - - -"
@@ -71,9 +71,9 @@
     },
     "v2": {
       "name": "verse 2",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- - B6 - B6 - B6 - B6 - G6 - G6 - G6 - - | - G6 - G8 - G8~ - - - - - - - - - - | - - B6 - B6 - B6 - B6 - G6 - G6 - G6 - - | - G6 - G8 - G8 - - - - G6 - G8 - G6 - -"
@@ -94,9 +94,9 @@
     },
     "o": {
       "name": "outro",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- G- - - - - - - - - - - - - - - - | - G- - - - - - - - - - - - - - - - |  - G5/6 - G6 - B9 - - - - - G6/8 - | - G8 - e8 - - - - - B9~ - - - - - -"

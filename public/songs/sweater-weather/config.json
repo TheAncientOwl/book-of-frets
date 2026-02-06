@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Sweater Weather",
   "artists": ["The Neighbourhood"],
@@ -17,9 +17,9 @@
   "sections": {
     "v": {
       "name": "verse",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 4,
           "items": [[["0 C 1 Am 1 Em 1"], ["1 Am 1 G 1"]]]
@@ -28,9 +28,9 @@
     },
     "pr": {
       "name": "prechorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 2,
           "items": [[["0 C 1 Am 1 Em 1 G 1"]]]
@@ -39,9 +39,9 @@
     },
     "c1": {
       "name": "chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 3,
           "items": [[["2 C 1 Am 1 Em 1 G 1"]]]
@@ -50,9 +50,9 @@
     },
     "c2": {
       "name": "chorus 2",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 4,
           "items": [[["2 C 1 Am 1 Em 1 G 1"]]]
@@ -65,9 +65,9 @@
     },
     "b": {
       "name": "bridge",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 2,
           "items": [[["3 Am 1 G 1 D 1 D 1"]]]
@@ -80,9 +80,9 @@
     },
     "c3": {
       "name": "chorus 3",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 4,
           "items": [[["4 C 1 Am 1 Em 1 G 1"]]]
@@ -91,9 +91,9 @@
     },
     "o": {
       "name": "outro",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 4,
           "items": [[["2 C 1 Am 1 Em 1 G 1"]]]

@@ -13,7 +13,7 @@
 import { useAppStore } from '@/store/index';
 import { Divider, type DividerProps } from '@chakra-ui/react';
 
-export const StrummingChordsDivider = (props: DividerProps) => {
+export const ChordsV1Divider = (props: DividerProps) => {
   const theme = useAppStore(state => state.appTheme.song);
 
   return (

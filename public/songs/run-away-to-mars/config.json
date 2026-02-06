@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Run Away To Mars",
   "artists": ["TALK"],
@@ -16,9 +16,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 G 2 D/F# 2 Em7 2 Cadd9 2"]]]
@@ -27,9 +27,9 @@
     },
     "v": {
       "name": "verse",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 G 2 D/F# 2 Em7 2 Cadd9 2"]]]
@@ -38,9 +38,9 @@
     },
     "pr": {
       "name": "prechorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Am7 2 D 2"]]]
@@ -49,9 +49,9 @@
     },
     "c": {
       "name": "chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 4,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Em 2 C 2 G 1"], ["1 G 1"], ["2 D/F# 2"]]]
@@ -60,9 +60,9 @@
     },
     "b": {
       "name": "bridge",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Am7 2 Dsus4 2 D 2"]]]
@@ -71,9 +71,9 @@
     },
     "o": {
       "name": "outro",
-      "type": "str",
+      "type": "chords-v1",
       "times": 3,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["3 Em 1 C 1 G 1", "3 D/F# 1 Em 1 C 1 G 1"]]]

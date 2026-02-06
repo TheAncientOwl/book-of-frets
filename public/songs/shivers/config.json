@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Shivers",
   "artists": ["Ed Sheeran"],
@@ -17,9 +17,9 @@
   "sections": {
     "v": {
       "name": "verse",
-      "type": "str",
+      "type": "chords-v1",
       "times": 3,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Bm 1 G 1 D 1 A 1"]]]
@@ -28,9 +28,9 @@
     },
     "c1": {
       "name": "chorus 1",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["1 Bm 2 G 2 D 2 A 1"]]]
@@ -39,9 +39,9 @@
     },
     "bridge": {
       "name": "bridge",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["2 Bm 1 G 1 D 1 A 1"]]]
@@ -54,9 +54,9 @@
     },
     "c2": {
       "name": "chorus 2",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["4 Bm 1"]]]

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Just the Two of Us | Lvl 2",
   "artists": ["Grover Washington Jr."],
@@ -19,9 +19,9 @@
   "sections": {
     "v": {
       "name": "verse",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 CM7 1"], ["1 B7 2"]]]
@@ -42,9 +42,9 @@
     },
     "c": {
       "name": "chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["3 CM7 1 B7 1"], ["1 Em7 1 Ebm7 1 Dm7 1 G7 1"]]]
@@ -57,9 +57,9 @@
     },
     "b1": {
       "name": "bridge 1",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 CM7 1"], ["1 B7 2"]]]
@@ -80,9 +80,9 @@
     },
     "b2": {
       "name": "bridge 2",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 CM7 1"], ["1 B7 2"]]]

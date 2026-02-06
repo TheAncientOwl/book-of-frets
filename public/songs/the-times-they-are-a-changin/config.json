@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "The Times They Are A Changin'",
   "artists": ["Bob Dylan"],
@@ -11,9 +11,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 G 1 G 1 G 1"]]]
@@ -22,9 +22,9 @@
     },
     "v1": {
       "name": "verse 1",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [
@@ -44,9 +44,9 @@
     },
     "b1": {
       "name": "break 1",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 G 1 Em 1 C 1 G 1 G 1 G 1 G 1"]]]
@@ -55,9 +55,9 @@
     },
     "v2": {
       "name": "verse 2",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [
@@ -77,9 +77,9 @@
     },
     "b2": {
       "name": "break 2",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 G 1 Em 1 C 1 G 1 G 1", "0 D 1 Csus2 1 G/B 1 D 1", "0 D 1 D 1 D 1"]]]
@@ -88,9 +88,9 @@
     },
     "v3": {
       "name": "verse 3",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [
@@ -110,9 +110,9 @@
     },
     "b3": {
       "name": "break 3",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 G 1 D 1 Csus2 1 D 1 G 1 G 1"]]]
@@ -121,9 +121,9 @@
     },
     "v4": {
       "name": "verse 4",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [
@@ -143,9 +143,9 @@
     },
     "b4": {
       "name": "break 4",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [
@@ -163,9 +163,9 @@
     },
     "v5": {
       "name": "verse 5",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [
@@ -185,9 +185,9 @@
     },
     "o": {
       "name": "outro",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 G 1 Em 1 C 1 G 1"]]]

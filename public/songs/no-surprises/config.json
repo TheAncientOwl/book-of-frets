@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "No Surprises",
   "artists": ["Radiohead"],
@@ -16,9 +16,9 @@
   "sections": {
     "r": {
       "name": "riff",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- [D] e2 - G2 - B3 - G2 - e2 - G2 - B3 - G2 - | - e2 - G2 - B3 - G2 - [Gm6] E3 - G3 - B3 - e0 -"
@@ -27,9 +27,9 @@
     },
     "br": {
       "name": "break",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 D 1 D 1 | 0 D 1"], ["1 Gm6 1"]]]
@@ -38,9 +38,9 @@
     },
     "v1": {
       "name": "verse",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 D 1 D 1 | 0 D 1 D 1"]]]
@@ -57,9 +57,9 @@
     },
     "br_x1": {
       "name": "break",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 D 1 D 1 | 0 D 1"], ["1 Gm6 1"]]]
@@ -68,9 +68,9 @@
     },
     "v2": {
       "name": "verse variation",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 D 1 D 1 | 0 D 1 D 1"]]]
@@ -83,9 +83,9 @@
     },
     "c": {
       "name": "chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 2,
           "items": [[["2 Em 1 Em 1 | 0 A 1 A 1"]]]
@@ -98,9 +98,9 @@
     },
     "bdg": {
       "name": "bridge",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 2,
           "items": [[["2 A 1 Asus4 1", "2 Gm6 1"], ["1 Gm6 1"]]]
