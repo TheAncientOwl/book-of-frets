@@ -17,7 +17,6 @@ import type {
   TStrummingPattern,
 } from '@/common/types/song.types';
 import { ChordsV1StrummingPattern } from '@/components/Song/Sections/Renderers/Chords/v1/Item';
-import ChordsV1Lyrics from '@/components/Song/Sections/Renderers/Chords/v1/Lyrics';
 import { useShallowAppStore } from '@/store/index';
 import { Chord as ChordCard } from '@/ui/Chord/index';
 import { Loading } from '@/ui/Loading/index';
@@ -35,7 +34,13 @@ import {
   Text,
   Tooltip,
 } from '@chakra-ui/react';
-import { Fragment, Suspense, type JSX } from 'react';
+import { Fragment, lazy, Suspense, type JSX } from 'react';
+
+const ChordsV1Lyrics = lazy(() =>
+  import('@/components/Song/Sections/Renderers/Chords/v1/Lyrics').then(mod => ({
+    default: mod.ChordsV1Lyrics,
+  })),
+);
 
 type TChordsSectionProps = {
   data: TChordsSectionItem[];
