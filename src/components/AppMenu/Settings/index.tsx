@@ -6,7 +6,7 @@
  *
  * @file Settings.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description App settings menu.
  */
 
@@ -70,17 +70,15 @@ export const Settings = () => {
         <SongOptions />
       </SettingsAccordionItem>
 
-      <SettingsAccordionItem title='General'>
-        <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loading />}>
+        <SettingsAccordionItem title='General'>
           <Refresh />
-        </Suspense>
-      </SettingsAccordionItem>
+        </SettingsAccordionItem>
 
-      <SettingsAccordionItem title='Theme'>
-        <Suspense fallback={<Loading />}>
+        <SettingsAccordionItem title='Theme'>
           <ThemePicker />
-        </Suspense>
-      </SettingsAccordionItem>
+        </SettingsAccordionItem>
+      </Suspense>
     </Accordion>
   );
 };
