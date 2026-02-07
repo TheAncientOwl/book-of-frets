@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Proto",
   "artists": ["Dunno"],
@@ -56,10 +56,16 @@
       "data": ["x1 Am 2 C 2 ! 0 F 2 G 1", "x2 Am 1 ! 0 F 1", "> 1 2"]
     },
     "ch-4.1": {
-      "name": "ch 5.1",
+      "name": "ch 4.1",
       "type": "chords-v2",
       "times": 1,
       "data": ["x1 Am 2 C 2 F 2 C 3 / 0 G 1 Am 1 F 1 C 1", "> 0"]
+    },
+    "ch-4.1*": {
+      "name": "ch 4.1*",
+      "type": "chords-v2",
+      "times": 1,
+      "data": ["x2 Am 2 C 2 F 2 C 3 / 0 G 1 Am 1 F 1 C 1", "> 0"]
     }
   },
   "order": [
@@ -68,8 +74,10 @@
     "ch-2.1",
     "ch-2.2",
     "ch-3.1",
+    "ch-3.1*",
     "ch-3.2",
-    "ch-4.1"
+    "ch-4.1",
+    "ch-4.1*"
   ],
   "lyrics": false,
   "res": []

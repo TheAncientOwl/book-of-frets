@@ -6,7 +6,7 @@
  *
  * @file index.tsx
  * @author Alexandru Delegeanu
- * @version 0.1
+ * @version 1.1
  * @description Render song chords section.
  */
 
@@ -43,13 +43,11 @@ const mapPairs = <T, R>(array: T[], callback: (a: T, b: T, index: number) => R):
   return result;
 };
 
-type TChordsLineProps = {
-  data: string[];
-};
-
 const NO_CHORD_ID = '-';
 const SEPARATOR_CHORD_CHAR = '|';
 const SEPARATOR_CHORD_NEWLINE = '/';
+
+const GAP_BETWEEN_CHORD_LINES = '1em';
 
 type TChordProps = {
   chordId: string;
@@ -67,7 +65,6 @@ const Chord = (props: TChordProps) => {
     <Popover isLazy>
       <PopoverTrigger>
         <Tag
-        mt='0.85em'
           as='button'
           fontWeight='bold'
           cursor='pointer'
@@ -140,6 +137,52 @@ const splitByNewline = (data: string[]): string[][] => {
   return lines;
 };
 
+type TChordsLineProps = {
+  data: string[];
+  times: string | undefined;
+  marginTop: string | undefined;
+};
+
+const ChordLineTimes = (props: Pick<TChordsLineProps, 'times'>) => {
+  const { theme, settingsDisplaySectionTimes } = useShallowAppStore(state => ({
+    theme: state.appTheme.song,
+    settingsDisplaySectionTimes: state.songSettings.display.sectionTimes,
+  }));
+
+  if (props.times === undefined) {
+    return null;
+  }
+
+  const showTimes = settingsDisplaySectionTimes && props.times !== 'x1';
+
+  return (
+    <>
+      {showTimes && (
+        <Tooltip label={`Repeat ${props.times} times`}>
+          <Text
+            size='sm'
+            fontWeight='bold'
+            zIndex={1}
+            position='absolute'
+            right='-3em'
+            height='100%'
+            display='flex'
+            justifyContent='center'
+            alignItems='center'
+            borderLeft='1.5px solid'
+            paddingLeft='0.5em'
+            // [*] theme colors
+            color={theme.items.item.chordsPattern.chord.times.color}
+            borderColor={theme.items.item.chordsPattern.divider}
+          >
+            {props.times}
+          </Text>
+        </Tooltip>
+      )}
+    </>
+  );
+};
+
 const ChordsLine = (props: TChordsLineProps) => {
   const { theme, chordsIndex } = useShallowAppStore(state => ({
     theme: state.appTheme.song,
@@ -149,34 +192,47 @@ const ChordsLine = (props: TChordsLineProps) => {
   const lines = splitByNewline(props.data);
 
   return (
-    <Flex direction='column' gap='0.85em'>
-      {lines.map((line, lineIdx) => (
-        <Flex key={lineIdx} direction='row' gap='1em' justifyContent='center'>
-          {mapPairs(line, (chordId, times, index) => {
-            if (chordId === SEPARATOR_CHORD_CHAR) {
+    <Flex direction='row' justifyContent='center' position='relative' marginTop={props.marginTop}>
+      <Flex direction='column' gap={GAP_BETWEEN_CHORD_LINES}>
+        {lines.map((line, lineIdx) => (
+          <Flex
+            key={lineIdx}
+            direction='row'
+            gap='1em'
+            justifyContent='center'
+            alignItems='center'
+            position='relative'
+          >
+            {mapPairs(line, (chordId, times, index) => {
+              if (chordId === SEPARATOR_CHORD_CHAR) {
+                return (
+                  <Divider
+                    key={index}
+                    height='22px'
+                    width='0px'
+                    borderWidth='thin'
+                    borderColor={theme.items.divider}
+                  />
+                );
+              }
+
+              const chordConfig = chordsIndex[chordId];
+
               return (
-                <Divider
-                  key={index}
-                  height='22px'
-                  width='0px'
-                  borderWidth='thin'
-                  borderColor={theme.items.divider}
-                />
+                <Chord key={index} chordId={chordId} chordConfig={chordConfig} times={times} />
               );
-            }
-
-            const chordConfig = chordsIndex[chordId];
-
-            return <Chord key={index} chordId={chordId} chordConfig={chordConfig} times={times} />;
-          })}
-        </Flex>
-      ))}
+            })}
+          </Flex>
+        ))}
+      </Flex>
+      <ChordLineTimes times={props.times} />
     </Flex>
   );
 };
 
 export const ChordsSection = (props: TChordsSectionProps) => {
   const colsData = new Array<Array<string>>();
+  const times = new Array<string>();
 
   props.data.forEach(item => {
     switch (item[0]) {
@@ -201,6 +257,7 @@ export const ChordsSection = (props: TChordsSectionProps) => {
           }
           colsData[0].push(item);
         }
+        times.push(item.substring(0, item.indexOf(' ')));
         break;
       }
       case '>': {
@@ -214,6 +271,7 @@ export const ChordsSection = (props: TChordsSectionProps) => {
 
             colsData[idx].push(`> ${patternId}`);
           });
+        times.push(' ');
         break;
       }
       default: {
@@ -226,21 +284,23 @@ export const ChordsSection = (props: TChordsSectionProps) => {
   return (
     <Box color='white'>
       <Flex direction='row' gap='1em'>
-        {colsData.map((colData, idx) => (
-          <Flex key={idx} direction='column'>
-            {colData.map((item, idx) => {
-              if (item[0] != '>') {
-                const data = item.split(' ');
-                // TODO: Display times
-                // const times = data[0];
-                const chordIds = data.slice(0);
-
-                return <ChordsLine key={idx} data={chordIds} />;
+        {colsData.map((column, colIdx) => (
+          <Flex key={colIdx} direction='column'>
+            {column.map((line, lineIdx) => {
+              if (line[0] != '>') {
+                return (
+                  <ChordsLine
+                    marginTop={lineIdx !== 0 ? GAP_BETWEEN_CHORD_LINES : '0'}
+                    key={lineIdx}
+                    data={line.split(' ').slice(0)}
+                    times={colIdx === colsData.length - 1 ? times[lineIdx] : undefined}
+                  />
+                );
               } else {
                 return (
                   <ChordsV1StrummingPattern
-                    key={idx}
-                    pattern={props.strummingPatterns[Number(item.substring(1))]}
+                    key={lineIdx}
+                    pattern={props.strummingPatterns[Number(line.substring(1))]}
                   />
                 );
               }
