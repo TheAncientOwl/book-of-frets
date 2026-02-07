@@ -28,11 +28,15 @@ export type TTabChords = {
   items: string;
 };
 
+export type TChordsSectionItem = string;
+
+export type TSongSectionType = 'chords-v1' | 'chords-v2' | 'gtab-v1';
+
 export type TSongSection = {
   name: string;
-  type: 'str' | 'fs';
+  type: TSongSectionType;
   times: number;
-  chords: TStrummingChords[] | TTabChords[];
+  data: TStrummingChords[] | TTabChords[] | TChordsSectionItem[];
 };
 
 export type TResource = {

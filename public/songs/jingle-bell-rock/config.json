@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Jingle Bell Rock",
   "artists": ["Bobby Helms"],
@@ -11,9 +11,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- G7+B7 - G7+B7 - G7+B7 - - - G6+B7 - G6+B7 - G6+B7 - - - | - B7 - e5 - G7 - B5 - B5/6 - B5 - G7 - G4 - | - D7 - - - - - - - - - - - - - - | - - - E5 - E3 - - - E2 - - - E0 - - -"
@@ -22,9 +22,9 @@
     },
     "v1": {
       "name": "verse 1",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [
@@ -42,9 +42,9 @@
     },
     "v2": {
       "name": "verse 2",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [
@@ -62,9 +62,9 @@
     },
     "c": {
       "name": "chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["1 G 4 G#dim7 4 D 8 E7 8"], ["2 A 1"]]]
@@ -73,9 +73,9 @@
     },
     "cr": {
       "name": "chorus riff",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- - - E5 - E3 - - - E2 - - - E0 - - -"
@@ -84,9 +84,9 @@
     },
     "pc1": {
       "name": "post chorus 1",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [
@@ -97,9 +97,9 @@
     },
     "v3": {
       "name": "verse 3",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [
@@ -117,9 +117,9 @@
     },
     "pc2": {
       "name": "post chorus 2",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [

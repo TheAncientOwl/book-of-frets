@@ -34,10 +34,27 @@ export const SongsIndexPage = () => {
       `${import.meta.env.BASE_URL}songs/index.min.json.gz.bin`,
       `${import.meta.env.BASE_URL}songs/index.min.json`,
       `${import.meta.env.BASE_URL}songs/index.json`,
-      json => setSongsIndex((json as { index: TSongsIndexEntry[] }).index),
+      json => {
+        const fetchedIndex = (json as { index: TSongsIndexEntry[] }).index;
+
+        if (import.meta.env.DEV) {
+          setSongsIndex([
+            ...fetchedIndex,
+            {
+              title: 'Proto',
+              artists: ['Dunno'],
+              directory: '_proto',
+              type: ['acoustic', 'electric'],
+              chordIDs: ['Em', 'Am', 'G', 'C', 'D'],
+            },
+          ]);
+        } else {
+          setSongsIndex([...fetchedIndex]);
+        }
+      },
       error => {
         console.error('Failed to fetch songs index:', error);
-      }
+      },
     );
   }, []);
 

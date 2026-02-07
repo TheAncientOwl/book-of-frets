@@ -286,7 +286,7 @@ def render_song_pdf(config_path: str, out_path: str, chords_map=None, theme=None
     # ── Sections ──────────────────────────
     for i, section_id in enumerate(song["order"]):
         section = song["sections"][section_id]
-        section_type = section.get("type", "str")
+        section_type = section.get("type", "chords-v1")
 
         # Section title with times, if > 1
         section_title = section["name"].capitalize()
@@ -295,9 +295,9 @@ def render_song_pdf(config_path: str, out_path: str, chords_map=None, theme=None
             section_title += f"  x{times}"
         story.append(Paragraph(section_title, styles["Heading3"]))
 
-        if section_type == "str":
+        if section_type == "chords-v1":
             # Render strummed sections as before
-            for block in section["chords"]:
+            for block in section["data"]:
                 block_times = block.get("times", times)
                 # For each block, collect all lines
                 block_rows = []
@@ -384,7 +384,7 @@ def render_song_pdf(config_path: str, out_path: str, chords_map=None, theme=None
                 )
                 story.append(table)
         else:
-            # For non-strummed types (e.g., "tab"), display "Coming soon..."
+            # For non-strummed types (e.g., "gtab-v1"), display "Coming soon..."
             story.append(Paragraph("Coming soon...", styles["Normal"]))
 
         # Only add spacer if not the last section

@@ -15,12 +15,12 @@ import { useAppStore } from '@/store/index';
 import { Box, Text } from '@chakra-ui/react';
 import { Fragment } from 'react/jsx-runtime';
 
-type TChordsChunkLyrics = {
+type TChordsV1LyricsProps = {
   visible: boolean;
   lyrics: TSongSectionLyrics;
 };
 
-export const StrummingChordsLyrics = (props: TChordsChunkLyrics) => {
+export const ChordsV1Lyrics = (props: TChordsV1LyricsProps) => {
   const theme = useAppStore(state => state.appTheme.song);
 
   return (
@@ -51,4 +51,4 @@ export const StrummingChordsLyrics = (props: TChordsChunkLyrics) => {
   );
 };
 
-export default StrummingChordsLyrics;
+export default ChordsV1Lyrics;

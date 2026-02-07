@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Cover Me In Sunshine",
   "artists": ["P!nk"],
@@ -16,9 +16,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- [Dsus2] D0 - G2 - B3 - G2 - e0 - B3 - G2 - B3 - | - [Dmaj7] D0 - G2 - B2 - G2 - e2 - B2 - G2 - B2 - | - [Dsus2] D0 - G2 - B3 - G2 - e0 - B3 - G2 - B3 - | - [Dmaj7] D0 - G2 - B2 - G2 - e2 - B2 - G2 - B2 -"
@@ -27,9 +27,9 @@
     },
     "v1": {
       "name": "verse",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- [Dsus2] D0 - G2 - B3 - G2 - e0 - B3 - G2 - B3 - | - [Dmaj7] D0 - G2 - B2 - G2 - e2 - B2 - G2 - B2 - | - [Dsus2] D0 - G2 - B3 - G2 - e0 - B3 - G2 - B3 - | - [Dmaj7] D0 - G2 - B2 - G2 - e2 - B2 - G2 - B2 -"
@@ -42,9 +42,9 @@
     },
     "pc": {
       "name": "prechorus",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- [G] E3 - D0 - G0 - D0 - B0 - G0 - D0 -  B0 - | - E3 - D0 - G0 - D0 - B0 - G0 - D0 -  B0 - | - [A7] A0 - D2 - G0 - D2 - B2 - G0 - D2 - G0 - B2 - - - - - - - - - - - - - - - - -"
@@ -53,9 +53,9 @@
     },
     "c1": {
       "name": "chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 2,
           "items": [
@@ -71,9 +71,9 @@
     },
     "c2": {
       "name": "chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 4,
           "items": [
@@ -85,9 +85,9 @@
     },
     "pb1": {
       "name": "pre-bridge",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Em 1"], ["2 G 1"]]]
@@ -96,9 +96,9 @@
     },
     "pb2": {
       "name": "pre-bridge",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- [A7] A0 - D2 - G0 - D2 - B2 - G0 - D2 - G0 - B2 - - - - - - - - - - - - - - - - -"
@@ -107,9 +107,9 @@
     },
     "b": {
       "name": "bridge",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [
@@ -125,9 +125,9 @@
     },
     "c3": {
       "name": "chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 2,
           "items": [
@@ -139,9 +139,9 @@
     },
     "o": {
       "name": "outro",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- [Em] E0 - D2 - G0 - D2 - B0 - G0 - | - E2 - - - E3 - - - - - - - - -"

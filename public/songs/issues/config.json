@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Issues",
   "artists": ["Julia Michaels"],
@@ -16,9 +16,9 @@
   "sections": {
     "v1": {
       "name": "verse",
-      "type": "str",
+      "type": "chords-v1",
       "times": 3,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 C 1 D 1 G/B 1 C 1"]]]
@@ -27,9 +27,9 @@
     },
     "pr": {
       "name": "prechorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 C 1 D 1"]]]
@@ -42,9 +42,9 @@
     },
     "c": {
       "name": "chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 2,
           "items": [[["0 C 1 D 1 G 1 Em 1"]]]
@@ -57,9 +57,9 @@
     },
     "v2": {
       "name": "verse",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 C 1 D 1 G/B 1 C 1"]]]
@@ -68,9 +68,9 @@
     },
     "b": {
       "name": "bridge",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 2,
           "items": [[["0 C 1 D 1 G 1 Em 1"]]]
@@ -79,9 +79,9 @@
     },
     "lc": {
       "name": "last chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 4,
           "items": [[["0 C 1 D 1 G 1 Em 1"]]]

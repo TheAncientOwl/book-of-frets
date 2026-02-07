@@ -39,6 +39,45 @@ const SEPARATOR_CHORD_CHAR = '|';
 const SEPARATOR_BREAK_LINE = '/';
 const NO_CHORD_ID = '-';
 
+type TChordsV1StrummingPatternProps = {
+  pattern: TStrummingPattern;
+};
+
+export const ChordsV1StrummingPattern = (props: TChordsV1StrummingPatternProps) => {
+  const { theme, songSettings } = useShallowAppStore(state => ({
+    theme: state.appTheme.song,
+    songSettings: state.songSettings,
+  }));
+
+  return (
+    <>
+      {songSettings.display.strummingPattern && (
+        <Box position='relative' mt='0.4em'>
+          <Flex
+            direction='row'
+            gap='0.5em'
+            justifyContent='center'
+            // [*] theme colors
+            color={theme.items.item.chordsPattern.chord.section.pattern}
+          >
+            {props.pattern.map((pattern, index) => {
+              return (
+                <Text
+                  key={index}
+                  fontWeight='bold'
+                  textDecoration={EMPHASIZE_STRUMS.includes(pattern) ? 'underline' : 'none'}
+                >
+                  {pattern.replace(EMPHASIZE_STRUM_CHAR, '')}
+                </Text>
+              );
+            })}
+          </Flex>
+        </Box>
+      )}
+    </>
+  );
+};
+
 const mapPairs = <T, R>(array: T[], callback: (a: T, b: T, index: number) => R): R[] => {
   const result: R[] = [];
   for (let idx = 2; idx < array.length; idx += 2) {
@@ -47,12 +86,12 @@ const mapPairs = <T, R>(array: T[], callback: (a: T, b: T, index: number) => R):
   return result;
 };
 
-type TItemLineProps = {
+type TChordsV1ItemLineProps = {
   data: string[][];
   strummingPattern: TStrummingPattern;
 };
 
-const ItemLine = (props: TItemLineProps) => {
+const ChordsV1ItemLine = (props: TChordsV1ItemLineProps) => {
   const { theme, chordsIndex, songSettings } = useShallowAppStore(state => ({
     theme: state.appTheme.song,
     chordsIndex: state.chordsIndex,
@@ -157,36 +196,14 @@ const ItemLine = (props: TItemLineProps) => {
         ))}
       </Flex>
 
-      {songSettings.display.strummingPattern && (
-        <Box position='relative' mt='0.4em'>
-          <Flex
-            direction='row'
-            gap='0.5em'
-            alignItems='end'
-            // [*] theme colors
-            color={theme.items.item.chordsPattern.chord.section.pattern}
-          >
-            {props.strummingPattern.map((pattern, index) => {
-              return (
-                <Text
-                  key={index}
-                  fontWeight='bold'
-                  textDecoration={EMPHASIZE_STRUMS.includes(pattern) ? 'underline' : 'none'}
-                >
-                  {pattern.replace(EMPHASIZE_STRUM_CHAR, '')}
-                </Text>
-              );
-            })}
-          </Flex>
-        </Box>
-      )}
+      <ChordsV1StrummingPattern pattern={props.strummingPattern} />
     </Flex>
   );
 };
 
-export const StrummingChordsItem = (props: TChordsChunkItemProps) => {
+export const ChordsV1Item = (props: TChordsChunkItemProps) => {
   const settingsDisplayChordTimesOne = useAppStore(
-    state => state.songSettings.display.chordTimesOne
+    state => state.songSettings.display.chordTimesOne,
   );
 
   const linesData = props.items.map(lineData => lineData.map(data => data.split(' ')));
@@ -209,7 +226,9 @@ export const StrummingChordsItem = (props: TChordsChunkItemProps) => {
           return null;
         }
 
-        return <ItemLine key={index} data={lineData} strummingPattern={props.strumms[strumm]} />;
+        return (
+          <ChordsV1ItemLine key={index} data={lineData} strummingPattern={props.strumms[strumm]} />
+        );
       })}
     </Flex>
   );

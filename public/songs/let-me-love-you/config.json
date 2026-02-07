@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Let Me Love You",
   "artists": ["DJ Snake", "Justin Bieber"],
@@ -18,9 +18,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Am 1 C 1 F 2"]]]
@@ -29,9 +29,9 @@
     },
     "v": {
       "name": "verse",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["1 Am 1 C 1"]]]
@@ -44,9 +44,9 @@
     },
     "p": {
       "name": "prechorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["4 F 1 Am 1 G 1 Dm 1"]]]
@@ -55,9 +55,9 @@
     },
     "c": {
       "name": "chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["1 Am 1 C 1"]]]
@@ -70,9 +70,9 @@
     },
     "d": {
       "name": "dance break",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["5 Am 1 C 1"]]]

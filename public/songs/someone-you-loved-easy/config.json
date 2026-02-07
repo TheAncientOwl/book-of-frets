@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Someone You Loved | Easy",
   "artists": ["Lewis Capaldi"],
@@ -11,9 +11,9 @@
   "sections": {
     "m1": {
       "name": "main progression",
-      "type": "str",
+      "type": "chords-v1",
       "times": 13,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 C 1 G 1 Am 1 F 1"]]]
@@ -22,9 +22,9 @@
     },
     "b": {
       "name": "bridge",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Dm 1 Am 1 G 1"], ["1 G 1 Am 1"], ["0 Dm 1 Am 1 G 1"]]]
@@ -33,9 +33,9 @@
     },
     "m2": {
       "name": "main progression",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["2 C 1 G 1 Am 1 F 1"]]]

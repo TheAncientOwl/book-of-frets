@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Dusk Till Dawn",
   "artists": ["Zayn", "Sia"],
@@ -16,9 +16,9 @@
   "sections": {
     "vpi": {
       "name": "verse / prechorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 3,
           "items": [[["0 Am 1 Ft 1 C 1 G/B 1"]]]
@@ -35,9 +35,9 @@
     },
     "c": {
       "name": "chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["2 Am 1"]]]
@@ -50,9 +50,9 @@
     },
     "bk": {
       "name": "break",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Am 1"]]]
@@ -61,9 +61,9 @@
     },
     "vp": {
       "name": "verse / prechorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 3,
           "items": [[["1 Am 1 Ft 1 C 1 G/B 1"]]]
@@ -76,9 +76,9 @@
     },
     "b": {
       "name": "bridge",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [

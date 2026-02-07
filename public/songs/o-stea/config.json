@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "O Stea",
   "artists": ["Deepcentral"],
@@ -11,9 +11,9 @@
   "sections": {
     "m": {
       "name": "main progression",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 404,
           "items": [[["0 Em7 1 Cadd9 1 G 1 D 1"]]]

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Never Gonna Give You Up",
   "artists": ["Rick Astley"],
@@ -15,9 +15,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "str",
+      "type": "chords-v1",
       "times": 4,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Ft 1"], ["1 G 1"]]]
@@ -30,9 +30,9 @@
     },
     "v": {
       "name": "verse",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 4,
           "items": [[["2 Ft 1 G 1"]]]
@@ -41,9 +41,9 @@
     },
     "pr": {
       "name": "prechorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["2 Ft 1 G 1"]]]
@@ -52,9 +52,9 @@
     },
     "c": {
       "name": "chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 4,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Ft 1"], ["1 G 1"]]]

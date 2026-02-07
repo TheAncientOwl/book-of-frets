@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Flake",
   "artists": ["Jack Johnson"],
@@ -16,9 +16,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 2,
           "items": [[["0 Dm_5fr 1 F_1fr 1 Bb_6fr 1 F_1fr 1"]]]
@@ -27,9 +27,9 @@
     },
     "v": {
       "name": "verse",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 3,
           "items": [[["0 Dm_5fr 1 F_1fr 1 Bb_6fr 1 F_1fr 1"]]]
@@ -42,9 +42,9 @@
     },
     "c1": {
       "name": "chorus 1",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 2,
           "items": [[["0 F_1fr 1 C_3fr 1 Dm_5fr 1 A_5fr 1", "0 Bb_6fr 1 C_8fr 1 F_1fr 1 C_8fr 1"]]]
@@ -53,9 +53,9 @@
     },
     "v2": {
       "name": "verse",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 2,
           "items": [[["1 Dm_5fr 1 F_1fr 1 Bb_6fr 1 F_1fr 1"]]]
@@ -72,9 +72,9 @@
     },
     "c2": {
       "name": "chorus 2",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 3,
           "items": [[["0 F_1fr 1 C_3fr 1 Dm_5fr 1 A_5fr 1", "0 Bb_6fr 1 C_8fr 1 F_1fr 1 C_8fr 1"]]]
@@ -83,9 +83,9 @@
     },
     "o1": {
       "name": "outro pt.1",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["2 F_1fr 8"]]]
@@ -94,9 +94,9 @@
     },
     "o2": {
       "name": "outro pt.2",
-      "type": "str",
+      "type": "chords-v1",
       "times": 3,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["2 F_1fr 1 Bb_1fr 1 F_1fr 1 C_3fr 1", "2 F_1fr 1 Bb_1fr 1"]]]

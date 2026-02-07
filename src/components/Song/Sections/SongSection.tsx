@@ -15,7 +15,7 @@ import type {
   TSongSectionLyrics,
   TStrummingPattern,
 } from '@/common/types/song.types';
-import { Chords } from '@/components/Song/Sections/Chords';
+import { SectionRenderer } from '@/components/Song/Sections/Renderers';
 import { useAppStore } from '@/store/index';
 import { Accordion, AccordionButton, AccordionIcon, AccordionPanel } from '@/ui/Accordion';
 import { Flex, Heading, Tag, Text } from '@chakra-ui/react';
@@ -87,16 +87,13 @@ export const SongSection = (props: TSongSectionProps) => {
           padding={['1.1em 0em', '1.1em 1em']}
           overflowX={['auto', 'hidden']}
         >
-          {props.chords.map((chunk, chunkIdx) => (
-            <Chords
-              key={chunkIdx}
-              type={props.type}
-              data={chunk}
-              strumms={props.strumms}
-              showLyrics={props.showLyrics}
-              lyrics={props.lyrics}
-            />
-          ))}
+          <SectionRenderer
+            type={props.type}
+            data={props.data}
+            strumms={props.strumms}
+            showLyrics={props.showLyrics}
+            lyrics={props.lyrics}
+          />
         </Flex>
       </AccordionPanel>
     </Accordion>

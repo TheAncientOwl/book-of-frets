@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Without You",
   "artists": ["The Kid LAROI"],
@@ -18,9 +18,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 - 1"]]]
@@ -33,9 +33,9 @@
     },
     "c1": {
       "name": "chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["1 Am 1 Ft 1 C 1 G 1"]]]
@@ -44,9 +44,9 @@
     },
     "v": {
       "name": "verse",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["1 Am 1 Ft 1 C 1 G 1"]]]
@@ -55,9 +55,9 @@
     },
     "pr1": {
       "name": "prechorus 1",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["1 Am 1 Ft 1 C 1"]]]
@@ -70,9 +70,9 @@
     },
     "c2": {
       "name": "chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 4,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["1 Am 1 Ft 1 C 1 G 1"]]]
@@ -81,9 +81,9 @@
     },
     "b": {
       "name": "bridge",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["3 Am 1 Ft 1 C 1"]]]
@@ -96,9 +96,9 @@
     },
     "pr2": {
       "name": "prechorus 2",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["1 Am 1 Ft 1 C 1"]]]
@@ -111,9 +111,9 @@
     },
     "o": {
       "name": "outro",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["3 Am 1 Ft 1 C 1 G 1"]]]
