@@ -29,6 +29,7 @@ import {
   Text,
   Tooltip,
 } from '@chakra-ui/react';
+import { Fragment, type JSX } from 'react';
 
 type TChordsSectionProps = {
   data: TChordsSectionItem[];
@@ -141,6 +142,38 @@ type TChordsLineProps = {
   data: string[];
   times: string | undefined;
   marginTop: string | undefined;
+  isFirst: boolean;
+  isLast: boolean;
+};
+
+type TChordLineDelimiter = {
+  positioning: 'begin' | 'end' | 'between';
+};
+
+const ChordLineDelimiter = (props: TChordLineDelimiter) => {
+  const { theme } = useShallowAppStore(state => ({
+    theme: state.appTheme.song,
+  }));
+
+  return (
+    <Box
+      zIndex={1}
+      position={props.positioning !== 'between' ? 'absolute' : 'relative'}
+      alignSelf='stretch'
+      height='100%'
+      display='flex'
+      justifyContent='center'
+      alignItems='center'
+      left={props.positioning === 'begin' ? '-1.5em' : undefined}
+      right={props.positioning === 'end' ? '-1.5em' : undefined}
+      borderRight={
+        props.positioning === 'begin' || props.positioning === 'between' ? '1.5px solid' : 'none'
+      }
+      borderLeft={props.positioning === 'end' ? '1.5px solid' : 'none'}
+      // [*] theme colors
+      borderColor={theme.items.item.chordsPattern.divider}
+    ></Box>
+  );
 };
 
 const ChordLineTimes = (props: Pick<TChordsLineProps, 'times'>) => {
@@ -149,37 +182,26 @@ const ChordLineTimes = (props: Pick<TChordsLineProps, 'times'>) => {
     settingsDisplaySectionTimes: state.songSettings.display.sectionTimes,
   }));
 
-  if (props.times === undefined) {
-    return null;
-  }
-
   const showTimes = settingsDisplaySectionTimes && props.times !== 'x1';
 
   return (
-    <>
-      {showTimes && (
-        <Tooltip label={`Repeat ${props.times} times`}>
-          <Text
-            size='sm'
-            fontWeight='bold'
-            zIndex={1}
-            position='absolute'
-            right='-3em'
-            height='100%'
-            display='flex'
-            justifyContent='center'
-            alignItems='center'
-            borderLeft='1.5px solid'
-            paddingLeft='0.5em'
-            // [*] theme colors
-            color={theme.items.item.chordsPattern.chord.times.color}
-            borderColor={theme.items.item.chordsPattern.divider}
-          >
-            {props.times}
-          </Text>
-        </Tooltip>
-      )}
-    </>
+    <Tooltip label={`Repeat ${props.times} times`}>
+      <Text
+        size='sm'
+        fontWeight='bold'
+        zIndex={1}
+        position='absolute'
+        right='-3.25em'
+        height='100%'
+        display='flex'
+        justifyContent='center'
+        alignItems='center'
+        // [*] theme colors
+        color={theme.items.item.chordsPattern.chord.times.color}
+      >
+        {showTimes && <>{props.times}</>}
+      </Text>
+    </Tooltip>
   );
 };
 
@@ -193,6 +215,9 @@ const ChordsLine = (props: TChordsLineProps) => {
 
   return (
     <Flex direction='row' justifyContent='center' position='relative' marginTop={props.marginTop}>
+      {props.isFirst && <ChordLineDelimiter positioning='begin' />}
+      {props.isLast && <ChordLineDelimiter positioning='end' />}
+
       <Flex direction='column' gap={GAP_BETWEEN_CHORD_LINES}>
         {lines.map((line, lineIdx) => (
           <Flex
@@ -225,6 +250,7 @@ const ChordsLine = (props: TChordsLineProps) => {
           </Flex>
         ))}
       </Flex>
+
       <ChordLineTimes times={props.times} />
     </Flex>
   );
@@ -233,6 +259,7 @@ const ChordsLine = (props: TChordsLineProps) => {
 export const ChordsSection = (props: TChordsSectionProps) => {
   const colsData = new Array<Array<string>>();
   const times = new Array<string>();
+  const betweenSeparator = new Array<JSX.Element>();
 
   props.data.forEach(item => {
     switch (item[0]) {
@@ -258,6 +285,11 @@ export const ChordsSection = (props: TChordsSectionProps) => {
           colsData[0].push(item);
         }
         times.push(item.substring(0, item.indexOf(' ')));
+
+        betweenSeparator.push(
+          <ChordLineDelimiter key={betweenSeparator.length} positioning='between' />,
+        );
+
         break;
       }
       case '>': {
@@ -271,7 +303,11 @@ export const ChordsSection = (props: TChordsSectionProps) => {
 
             colsData[idx].push(`> ${patternId}`);
           });
+
         times.push(' ');
+
+        betweenSeparator.push(<Box key={betweenSeparator.length} height='100%' />);
+
         break;
       }
       default: {
@@ -282,14 +318,16 @@ export const ChordsSection = (props: TChordsSectionProps) => {
   });
 
   return (
-    <Box color='white'>
-      <Flex direction='row' gap='1em'>
-        {colsData.map((column, colIdx) => (
-          <Flex key={colIdx} direction='column'>
+    <Flex direction='row' gap='1em'>
+      {colsData.map((column, colIdx) => (
+        <Fragment key={colIdx}>
+          <Flex direction='column'>
             {column.map((line, lineIdx) => {
               if (line[0] != '>') {
                 return (
                   <ChordsLine
+                    isFirst={colIdx === 0}
+                    isLast={colIdx === colsData.length - 1}
                     marginTop={lineIdx !== 0 ? GAP_BETWEEN_CHORD_LINES : '0'}
                     key={lineIdx}
                     data={line.split(' ').slice(0)}
@@ -306,8 +344,11 @@ export const ChordsSection = (props: TChordsSectionProps) => {
               }
             })}
           </Flex>
-        ))}
-      </Flex>
-    </Box>
+          <Flex direction='column' gap={GAP_BETWEEN_CHORD_LINES}>
+            {colIdx < colsData.length - 1 ? betweenSeparator : null}
+          </Flex>
+        </Fragment>
+      ))}
+    </Flex>
   );
 };
