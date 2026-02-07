@@ -16,70 +16,37 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords-v1",
+      "type": "chords-v2",
       "times": 1,
-      "data": [
-        {
-          "times": 1,
-          "items": [[["0 C#m7_4fr 2 Bsus4_2fr 2 Asus2_2fr 2 C#m7_4fr 2"]]]
-        }
-      ]
+      "data": [["x1 C#m7_4fr 2 Bsus4_2fr 2 Asus2_2fr 2 C#m7_4fr 2", "> 0"]]
     },
     "v1": {
       "name": "verse pt.1",
-      "type": "chords-v1",
+      "type": "chords-v2",
       "times": 1,
-      "data": [
-        {
-          "times": 1,
-          "items": [[["0 C#m7_4fr 2 Bsus4_2fr 2 Asus2_2fr 2"]]]
-        }
-      ]
+      "data": [["x1 C#m7_4fr 2 Bsus4_2fr 2 Asus2_2fr 2", "> 0"]]
     },
     "v2": {
       "name": "verse pt.2",
-      "type": "chords-v1",
+      "type": "chords-v2",
       "times": 1,
       "data": [
-        {
-          "times": 1,
-          "items": [[["0 C#m7_4fr 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["1 C#m7_4fr 1"], ["2 E5_7fr 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 Bsus4_2fr 2 Asus2_2fr 2 Bsus4_2fr 2 F#m_2fr 2 Aadd9_5fr 2"]]]
-        }
+        ["x1 C#m7_4fr 1", "> 0"],
+        ["x1 C#m7_4fr 1 ! 0 E5_7fr 1", "> 1 2"],
+        ["x1 Bsus4_2fr 2 Asus2_2fr 2 Bsus4_2fr 2 F#m_2fr 2 Aadd9_5fr 2", "> 0"]
       ]
     },
     "c1": {
       "name": "chorus 1",
-      "type": "chords-v1",
+      "type": "chords-v2",
       "times": 1,
-      "data": [
-        {
-          "times": 1,
-          "items": [[["0 E5_7fr 2 Bsus4_2fr 2 C#m7_4fr 2 Asus2_2fr 2"]]]
-        }
-      ]
+      "data": [["x1 E5_7fr 2 Bsus4_2fr 2 C#m7_4fr 2 Asus2_2fr 2", "> 0"]]
     },
     "c2": {
       "name": "chorus 2",
-      "type": "chords-v1",
+      "type": "chords-v2",
       "times": 1,
-      "data": [
-        {
-          "times": 3,
-          "items": [[["0 E5_7fr 2 Bsus4_2fr 2 C#m7_4fr 2 Asus2_2fr 2"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["3 E5_7fr 3"]]]
-        }
-      ]
+      "data": [["x1 E5_7fr 2 Bsus4_2fr 2 C#m7_4fr 2 Asus2_2fr 2", "> 0", "x1 E5_7fr 1", "> 3"]]
     }
   },
   "order": ["i", "v1", "v2", "c1", "v1", "v2", "c2"],
