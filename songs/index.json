@@ -8,6 +8,13 @@
       "chordIDs": ["C", "Am", "Em", "G", "D"]
     },
     {
+      "title": "New Heart",
+      "artists": ["Crash Adams"],
+      "directory": "new-heart",
+      "type": ["acoustic"],
+      "chordIDs": ["Am", "Dm", "G", "C", "E"]
+    },
+    {
       "title": "Run Away To Mars",
       "artists": ["TALK"],
       "directory": "run-away-to-mars",
