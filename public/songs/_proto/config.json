@@ -17,68 +17,70 @@
       "name": "ch 1.1",
       "type": "chords-v2",
       "times": 1,
-      "data": ["x1 Am 2 C 2 F 2 G 1", "> 0"]
+      "data": [["x1 Am 2 C 2 F 2 G 1", "> 0"]]
     },
     "ch-1.2": {
       "name": "ch 1.2",
       "type": "chords-v2",
       "times": 1,
-      "data": ["x2 Am 2 C 2 F 2 G 1", "x1 Am 1 C 1 F 1 G 1", "> 0"]
+      "data": [["x2 Am 2 C 2 F 2 G 1", "x1 Am 1 C 1 F 1 G 1", "> 0"]]
     },
     "ch-2.1": {
       "name": "ch 2.1",
       "type": "chords-v2",
       "times": 1,
-      "data": ["x1 Am 2 C 2 | 0 F 2 G 1", "> 0"]
+      "data": [["x1 Am 2 C 2 | 0 F 2 G 1", "> 0"]]
     },
     "ch-2.2": {
       "name": "ch 2.2",
       "type": "chords-v2",
       "times": 1,
-      "data": ["x1 Am 2 C 2 | 0 F 2 G 1", "x2 Am 1 | 0 C 1", "> 0"]
+      "data": [["x1 Am 2 C 2 | 0 F 2 G 1", "x2 Am 1 | 0 C 1", "> 0"]]
     },
     "ch-3.1": {
       "name": "ch 3.1",
       "type": "chords-v2",
       "times": 1,
-      "data": ["x2 Am 2 C 2 ! 0 F 2 G 1", "> 1 2"]
+      "data": [["x2 Am 2 C 2 ! 0 F 2 G 1", "> 1 2"]]
     },
     "ch-3.1*": {
       "name": "ch 3.1*",
       "type": "chords-v2",
       "times": 1,
-      "data": ["x1 Am 2 C 2 ! 0 F 2 G 1", "> 1 2"]
+      "data": [["x1 Am 2 C 2 ! 0 F 2 G 1", "> 1 2"]]
     },
     "ch-3.2": {
       "name": "ch 3.2",
       "type": "chords-v2",
       "times": 1,
-      "data": ["x1 Am 2 C 2 ! 0 F 2 G 1", "x2 Am 1 ! 0 F 1", "> 1 2"]
+      "data": [["x1 Am 2 C 2 ! 0 F 2 G 1", "x2 Am 1 ! 0 F 1", "> 1 2"]]
     },
     "ch-3.3": {
       "name": "ch 3.3",
       "type": "chords-v2",
       "times": 1,
       "data": [
-        "x1 Am 2 C 2 ! 0 F 2 G 1",
-        "x2 Am 1 ! 0 F 1",
-        "> 1 2",
-        "x1 Am 2 C 2 ! 0 F 2 G 1",
-        "x2 Am 1 ! 0 F 1",
-        "> 1 2"
+        [
+          "x1 Am 2 C 2 ! 0 F 2 G 1",
+          "x2 Am 1 ! 0 F 1",
+          "> 1 2",
+          "x1 Am 2 C 2 ! 0 F 2 G 1",
+          "x2 Am 1 ! 0 F 1",
+          "> 1 2"
+        ]
       ]
     },
     "ch-4.1": {
       "name": "ch 4.1",
       "type": "chords-v2",
       "times": 1,
-      "data": ["x1 Am 2 C 2 F 2 C 3 / 0 G 1 Am 1 F 1 C 1", "> 0"]
+      "data": [["x1 Am 2 C 2 F 2 C 3 / 0 G 1 Am 1 F 1 C 1", "> 0"]]
     },
     "ch-4.1*": {
       "name": "ch 4.1*",
       "type": "chords-v2",
       "times": 1,
-      "data": ["x2 Am 2 C 2 F 2 C 3 / 0 G 1 Am 1 F 1 C 1", "> 0"]
+      "data": [["x2 Am 2 C 2 F 2 C 3 / 0 G 1 Am 1 F 1 C 1", "> 0"]]
     }
   },
   "order": [

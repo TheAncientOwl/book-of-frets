@@ -28,7 +28,7 @@ export type TTabChords = {
   items: string;
 };
 
-export type TChordsSectionItem = string;
+export type TChordsSectionItem = string[];
 
 export type TSongSectionType = 'chords-v1' | 'chords-v2' | 'gtab-v1';
 

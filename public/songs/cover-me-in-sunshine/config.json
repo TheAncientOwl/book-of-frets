@@ -52,47 +52,22 @@
       ]
     },
     "c1": {
-      "name": "chorus",
-      "type": "chords-v1",
+      "name": "chorus 1",
+      "type": "chords-v2",
       "times": 1,
-      "data": [
-        {
-          "times": 2,
-          "items": [
-            [["0 Em 1"], ["1 G 1"]],
-            [["0 D 1"], ["1 A 1"]]
-          ]
-        },
-        {
-          "times": 1,
-          "items": [[["0 Em 1"], ["1 G 1"]]]
-        }
-      ]
+      "data": [["x2 Em 1 / 0 D 1 ? 0 G 1 / 0 A 1", "x1 Em 1 ? 0 G 1", "> 0 1"]]
     },
     "c2": {
-      "name": "chorus",
-      "type": "chords-v1",
+      "name": "chorus 2",
+      "type": "chords-v2",
       "times": 1,
-      "data": [
-        {
-          "times": 4,
-          "items": [
-            [["0 Em 1"], ["1 G 1"]],
-            [["0 D 1"], ["1 A 1"]]
-          ]
-        }
-      ]
+      "data": [["x4 Em 1 / 0 D 1 ? 0 G 1 / 0 A 1", "> 0 1"]]
     },
     "pb1": {
       "name": "pre-bridge",
-      "type": "chords-v1",
+      "type": "chords-v2",
       "times": 1,
-      "data": [
-        {
-          "times": 1,
-          "items": [[["0 Em 1"], ["2 G 1"]]]
-        }
-      ]
+      "data": [["x1 Em 1 ? 0 G 1", "> 0 2"]]
     },
     "pb2": {
       "name": "pre-bridge",
@@ -107,35 +82,18 @@
     },
     "b": {
       "name": "bridge",
-      "type": "chords-v1",
+      "type": "chords-v2",
       "times": 1,
       "data": [
-        {
-          "times": 1,
-          "items": [
-            [["0 Em 1"], ["1 G 1"]],
-            [["0 D 1"], ["1 A 1"]]
-          ]
-        },
-        {
-          "times": 1,
-          "items": [[["0 Em 1"], ["1 G 1"]], [["3 A 1"]]]
-        }
+        ["x1 Em 1 ? 0 G 1", "x1 D 1 ? 0 A 1", "x1 Em 1 ? 0 G 1", "> 0 1"],
+        ["x1 A 1", "> 3"]
       ]
     },
     "c3": {
-      "name": "chorus",
-      "type": "chords-v1",
+      "name": "chorus 3",
+      "type": "chords-v2",
       "times": 1,
-      "data": [
-        {
-          "times": 2,
-          "items": [
-            [["0 Em 1"], ["1 G 1"]],
-            [["0 D 1"], ["1 A 1"]]
-          ]
-        }
-      ]
+      "data": [["x2 Em 1 / 0 D 1 ? 0 G 1 / 0 A 1", "> 0 1"]]
     },
     "o": {
       "name": "outro",

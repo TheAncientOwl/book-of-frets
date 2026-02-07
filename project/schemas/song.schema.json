@@ -74,15 +74,18 @@
             "items": {
               "oneOf": [
                 {
-                  "type": "string",
-                  "oneOf": [
-                    {
-                      "pattern": "^x\\d+(?: [A-Za-z0-9#/()_+-|!]+ [0-9]+)+$"
-                    },
-                    {
-                      "pattern": "^>\\s*(?:\\d+\\s*)+$"
-                    }
-                  ]
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "oneOf": [
+                      {
+                        "pattern": "^x\\d+(?: [A-Za-z0-9#/()_+-|!]+ [0-9]+)+$"
+                      },
+                      {
+                        "pattern": "^>\\s*(?:\\d+\\s*)+$"
+                      }
+                    ]
+                  }
                 },
                 {
                   "type": "object",
