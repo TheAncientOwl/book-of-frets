@@ -67,44 +67,59 @@
         "additionalProperties": false,
         "properties": {
           "name": { "type": "string" },
-          "type": { "type": "string", "enum": ["chords-v1", "gtab-v1"] },
+          "type": { "type": "string", "enum": ["chords-v1", "chords-v2", "gtab-v1"] },
           "times": { "type": "number", "default": 1, "minimum": 1 },
           "data": {
             "type": "array",
             "items": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "times": {
-                  "type": "integer",
-                  "minimum": 1
-                },
-                "items": {
+              "oneOf": [
+                {
+                  "type": "string",
                   "oneOf": [
                     {
-                      "type": "string"
+                      "pattern": "^x\\d+(?: [A-Za-z0-9#/()_+-|!]+ [0-9]+)+$"
                     },
                     {
-                      "type": "array",
-                      "items": {
-                        "oneOf": [
-                          {
-                            "type": "array",
-                            "items": {
-                              "type": "array",
-                              "items": {
-                                "type": "string",
-                                "pattern": "^[0-9]+(?: [A-Za-z0-9#/()_+-|]+ [0-9]+)+$"
-                              }
-                            }
-                          }
-                        ]
-                      }
+                      "pattern": "^>\\s*(?:\\d+\\s*)+$"
                     }
                   ]
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "times": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "items": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "oneOf": [
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string",
+                                    "pattern": "^[0-9]+(?: [A-Za-z0-9#/()_+-|]+ [0-9]+)+$"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "required": ["times", "items"]
                 }
-              },
-              "required": ["times", "items"]
+              ]
             }
           }
         },
