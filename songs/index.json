@@ -22,6 +22,13 @@
       "type": ["acoustic"]
     },
     {
+      "title": "California Dreamin'",
+      "artists": ["The Mamas & The Papas"],
+      "directory": "california-dreaming",
+      "type": ["acoustic"],
+      "chordIDs": ["Am", "C", "F", "G", "E7", "E7sus4"]
+    },
+    {
       "title": "No Surprises",
       "artists": ["Radiohead"],
       "directory": "no-surprises",
