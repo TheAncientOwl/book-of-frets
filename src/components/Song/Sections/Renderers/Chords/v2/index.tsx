@@ -6,15 +6,21 @@
  *
  * @file index.tsx
  * @author Alexandru Delegeanu
- * @version 1.1
+ * @version 1.2
  * @description Render song chords section.
  */
 
 import type { TChord } from '@/common/types/chord.types';
-import type { TChordsSectionItem, TStrummingPattern } from '@/common/types/song.types';
+import type {
+  TChordsSectionItem,
+  TSongSectionLyrics,
+  TStrummingPattern,
+} from '@/common/types/song.types';
 import { ChordsV1StrummingPattern } from '@/components/Song/Sections/Renderers/Chords/v1/Item';
+import ChordsV1Lyrics from '@/components/Song/Sections/Renderers/Chords/v1/Lyrics';
 import { useShallowAppStore } from '@/store/index';
 import { Chord as ChordCard } from '@/ui/Chord/index';
+import { Loading } from '@/ui/Loading/index';
 import {
   Box,
   Divider,
@@ -29,11 +35,13 @@ import {
   Text,
   Tooltip,
 } from '@chakra-ui/react';
-import { Fragment, type JSX } from 'react';
+import { Fragment, Suspense, type JSX } from 'react';
 
 type TChordsSectionProps = {
   data: TChordsSectionItem[];
   strummingPatterns: TStrummingPattern[];
+  showLyrics: boolean;
+  lyrics: TSongSectionLyrics;
 };
 
 const mapPairs = <T, R>(array: T[], callback: (a: T, b: T, index: number) => R): R[] => {
@@ -318,37 +326,43 @@ export const ChordsSection = (props: TChordsSectionProps) => {
   });
 
   return (
-    <Flex direction='row' gap='1em'>
-      {colsData.map((column, colIdx) => (
-        <Fragment key={colIdx}>
-          <Flex direction='column'>
-            {column.map((line, lineIdx) => {
-              if (line[0] != '>') {
-                return (
-                  <ChordsLine
-                    isFirst={colIdx === 0}
-                    isLast={colIdx === colsData.length - 1}
-                    marginTop={lineIdx !== 0 ? GAP_BETWEEN_CHORD_LINES : '0'}
-                    key={lineIdx}
-                    data={line.split(' ').slice(0)}
-                    times={colIdx === colsData.length - 1 ? times[lineIdx] : undefined}
-                  />
-                );
-              } else {
-                return (
-                  <ChordsV1StrummingPattern
-                    key={lineIdx}
-                    pattern={props.strummingPatterns[Number(line.substring(1))]}
-                  />
-                );
-              }
-            })}
-          </Flex>
-          <Flex direction='column' gap={GAP_BETWEEN_CHORD_LINES}>
-            {colIdx < colsData.length - 1 ? betweenSeparator : null}
-          </Flex>
-        </Fragment>
-      ))}
+    <Flex direction='column' justifyContent='center' alignItems='center' gap='1em'>
+      <Flex direction='row' gap='1em'>
+        {colsData.map((column, colIdx) => (
+          <Fragment key={colIdx}>
+            <Flex direction='column'>
+              {column.map((line, lineIdx) => {
+                if (line[0] != '>') {
+                  return (
+                    <ChordsLine
+                      isFirst={colIdx === 0}
+                      isLast={colIdx === colsData.length - 1}
+                      marginTop={lineIdx !== 0 ? GAP_BETWEEN_CHORD_LINES : '0'}
+                      key={lineIdx}
+                      data={line.split(' ').slice(0)}
+                      times={colIdx === colsData.length - 1 ? times[lineIdx] : undefined}
+                    />
+                  );
+                } else {
+                  return (
+                    <ChordsV1StrummingPattern
+                      key={lineIdx}
+                      pattern={props.strummingPatterns[Number(line.substring(1))]}
+                    />
+                  );
+                }
+              })}
+            </Flex>
+            <Flex direction='column' gap={GAP_BETWEEN_CHORD_LINES}>
+              {colIdx < colsData.length - 1 ? betweenSeparator : null}
+            </Flex>
+          </Fragment>
+        ))}
+      </Flex>
+
+      <Suspense fallback={<Loading />}>
+        <ChordsV1Lyrics visible={props.showLyrics} lyrics={props.lyrics} />
+      </Suspense>
     </Flex>
   );
 };

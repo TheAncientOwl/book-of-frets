@@ -6,7 +6,7 @@
  *
  * @file Chords.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Chords renderer.
  */
 
@@ -46,6 +46,8 @@ export const SectionRenderer = (props: TChordsProps) => {
         <ChordsSection
           data={props.data as TChordsSectionItem[]}
           strummingPatterns={props.strumms}
+          showLyrics={props.showLyrics}
+          lyrics={props.lyrics}
         />
       );
     case 'gtab-v1':
