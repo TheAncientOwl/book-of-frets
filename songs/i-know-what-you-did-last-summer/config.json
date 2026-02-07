@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "I Know What You Did Last Summer",
   "artists": ["Shawn Mendes", "Camila Cabello"],
@@ -21,9 +21,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Am 1 F 1 G 1"]]]
@@ -36,9 +36,9 @@
     },
     "v": {
       "name": "verse",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Am 1 F 1 G 1"]]]
@@ -51,9 +51,9 @@
     },
     "pr": {
       "name": "prechorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["2 F 1 G 1 Am 1 Am 1", "2 F 1 G 1 Am 1"]]]
@@ -66,9 +66,9 @@
     },
     "c1": {
       "name": "chorus 1",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["3 Am 1 F 1 G 1"]]]
@@ -81,9 +81,9 @@
     },
     "po": {
       "name": "postchorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["5 Am 8 G 8 C 3 G 5"]]]
@@ -92,9 +92,9 @@
     },
     "c2": {
       "name": "chorus 2",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 5,
           "items": [[["4 F 1 G 1 Am 1 Em 1"]]]
@@ -107,9 +107,9 @@
     },
     "c1.1": {
       "name": "chorus 1",
-      "type": "str",
+      "type": "chords-v1",
       "times": 4,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["3 Am 1 F 1 G 1"]]]

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "How Long",
   "artists": ["Charlie Puth"],
@@ -11,9 +11,9 @@
   "sections": {
     "vr": {
       "name": "verse riff",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- E5 - - - E5 - E3 - - - E3 - E1 - - - E1 - - E3 - - E3 - - E4 - | - E5 - - - E5 - E3 - - - E3 - E1 - - - E1 - E0 - E3 - E4 - E0 -"
@@ -22,9 +22,9 @@
     },
     "pc": {
       "name": "prechorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Dm 1 Dm 1 | 1 Em 1 Em 1", "0 Dm 1 Dm 1 | 1 Em 1 Am 1"]]]
@@ -37,9 +37,9 @@
     },
     "cr": {
       "name": "chorus riff",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "- E5 - - - E5 - - - E3 - - - E3 - - - E1 - - - E1 - E3 - - - -"
@@ -48,9 +48,9 @@
     },
     "c": {
       "name": "chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Am 1 G 1 F 1 E 1"]]]
@@ -63,9 +63,9 @@
     },
     "v": {
       "name": "verse",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 2,
           "items": [[["0 Am 1 G 1 F 1 G 1", "0 Am 1 G 1 F 1 E 1"]]]
@@ -74,9 +74,9 @@
     },
     "c2": {
       "name": "chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Am 1 G 1 F 1 E 1"]]]
@@ -89,9 +89,9 @@
     },
     "fpc": {
       "name": "final prechorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [

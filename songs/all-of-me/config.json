@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "All Of Me",
   "artists": ["John Legend"],
@@ -15,9 +15,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Em 1 C 1 G 1 D 1"]]]
@@ -26,9 +26,9 @@
     },
     "v": {
       "name": "verse",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 4,
           "items": [[["0 Em 1 C 1 G 1 D 1"]]]
@@ -37,9 +37,9 @@
     },
     "p": {
       "name": "prechorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Am 1 Am 1 G 1 D 1"]]]
@@ -52,9 +52,9 @@
     },
     "c1": {
       "name": "chorus 1",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 2,
           "items": [[["2 G 1 Em 1 C 1 D 1"]]]
@@ -67,9 +67,9 @@
     },
     "c2": {
       "name": "chorus 2",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["1 G 1 Em 1 C 1 D 1"]]]

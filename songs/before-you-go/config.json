@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Before You go",
   "artists": ["Lewis Capaldi"],
@@ -11,9 +11,9 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "[C] - - - A3 - - - - - B1 - - - - - A3 - - - - - B1 - - - - - A3 - - - - - B1 - - - | - - - A3 - - - - - B1 - - - - - A3 - - - - - B1 - - - - - A3 - - - - - B1 - - - - -"
@@ -22,9 +22,9 @@
     },
     "vp1": {
       "name": "verse picked 1",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 2,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "[C] - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - | - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - | [Am] - E0 - B1 - E0 - B1 - E0 - B1 - E0 - B1 - E0 - B1 - E0 - B1 - | - E0 - B1 - E0 - B1 - E0 - B1 - E0 - B1 - E0 - B1 - E0 - B1 -"
@@ -37,9 +37,9 @@
     },
     "cp": {
       "name": "chorus picked",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "[C] - A3 - B1 - A3 - e0 - A3 - B1 - A3 - B1 - A3 - e0 - A3 - B1 - | - A3 - B1 - A3 - e0 - A3 - B1 - A3 - B1 - A3 - e0 - A3 - B1 - | [Cadd11] - E3 - B1 - E3 - e0 - E3 - B1 - E3 - B1 - E3 - e0 - E3 - B1 - | - E3 - B1 - E3 - e0 - E3 - B1 - E3 - B1 - E3 - e0 - E3 - B1 -"
@@ -64,9 +64,9 @@
     },
     "bk": {
       "name": "break",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "[C] - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - | - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 - A3 - B1 -"
@@ -75,9 +75,9 @@
     },
     "vs": {
       "name": "verse strummed",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 2,
           "items": [[["0 C 4 Am 4 Ft 4 G 4"]]]
@@ -86,9 +86,9 @@
     },
     "cs": {
       "name": "chorus strummed",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 2,
           "items": [[["0 C 4 G 4 Am 4 Ft 4"]]]
@@ -101,9 +101,9 @@
     },
     "b": {
       "name": "bridge",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 Am 2 Ft 2 C 2 G 2", "0 Am 2 Ft 2 G 4"]]]
@@ -112,9 +112,9 @@
     },
     "fc1": {
       "name": "final chorus",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 C 4 G 4 Am 4 Ft 4"]]]
@@ -123,9 +123,9 @@
     },
     "fc2": {
       "name": "final chorus 2",
-      "type": "str",
+      "type": "chords-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": [[["0 C 4 G 4 Am 4 Ft 3"]]]
@@ -134,9 +134,9 @@
     },
     "vp2": {
       "name": "verse picked 2",
-      "type": "tab",
+      "type": "gtab-v1",
       "times": 1,
-      "chords": [
+      "data": [
         {
           "times": 1,
           "items": "[G] - E3 - G0 - E3 - B3 - E3 - G0 - E3 - G0 - E3 - B3 - E3 - G0 - | - E3 - - - - - - - - - - - - - - - - - - - - - - -"
