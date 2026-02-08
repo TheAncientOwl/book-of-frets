@@ -29,6 +29,13 @@
       "chordIDs": ["Am", "C", "F", "G", "E7", "E7sus4"]
     },
     {
+      "title": "I Miss You (Solo Acoustic)",
+      "artists": ["Blink-182"],
+      "directory": "i-miss-you-solo-ac",
+      "type": ["acoustic"],
+      "chordIDs": ["G", "G/F#", "Em7", "A7sus4", "C", "Dsus2"]
+    },
+    {
       "title": "No Surprises",
       "artists": ["Radiohead"],
       "directory": "no-surprises",
