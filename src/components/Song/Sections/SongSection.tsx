@@ -6,7 +6,7 @@
  *
  * @file SongSection.tsx
  * @author Alexandru Delegeanu
- * @version 2.0
+ * @version 2.1
  * @description Render song section.
  */
 
@@ -80,7 +80,7 @@ export const SongSection = (props: TSongSectionProps) => {
       </AccordionButton>
 
       <AccordionPanel>
-        <Flex direction='column' gap='1em'>
+        <Flex direction='column' gap='0.25em'>
           {props.entries.map((entry, idx) => (
             <SongSectionEntry
               key={idx}

@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Proto",
   "artists": ["Dunno"],
@@ -20,7 +20,7 @@
       "entries": [
         {
           "renderer": "chords-v2",
-          "data": [["x1 Am 2 C 2 F 2 G 1", "> 0"]]
+          "data": ["x1 Am 2 C 2 F 2 G 1", "> 0"]
         }
       ]
     },
@@ -30,7 +30,7 @@
       "entries": [
         {
           "renderer": "chords-v2",
-          "data": [["x2 Am 2 C 2 F 2 G 1", "x1 Am 1 C 1 F 1 G 1", "> 0"]]
+          "data": ["x2 Am 2 C 2 F 2 G 1", "x1 Am 1 C 1 F 1 G 1", "> 0"]
         }
       ]
     },
@@ -40,7 +40,7 @@
       "entries": [
         {
           "renderer": "chords-v2",
-          "data": [["x1 Am 2 C 2 | 0 F 2 G 1", "> 0"]]
+          "data": ["x1 Am 2 C 2 | 0 F 2 G 1", "> 0"]
         }
       ]
     },
@@ -50,7 +50,7 @@
       "entries": [
         {
           "renderer": "chords-v2",
-          "data": [["x1 Am 2 C 2 | 0 F 2 G 1", "x2 Am 1 | 0 C 1", "> 0"]]
+          "data": ["x1 Am 2 C 2 | 0 F 2 G 1", "x2 Am 1 | 0 C 1", "> 0"]
         }
       ]
     },
@@ -60,7 +60,7 @@
       "entries": [
         {
           "renderer": "chords-v2",
-          "data": [["x2 Am 2 C 2 ! 0 F 2 G 1", "> 1 2"]]
+          "data": ["x2 Am 2 C 2 ! 0 F 2 G 1", "> 1 2"]
         }
       ]
     },
@@ -70,7 +70,7 @@
       "entries": [
         {
           "renderer": "chords-v2",
-          "data": [["x1 Am 2 C 2 ! 0 F 2 G 1", "> 1 2"]]
+          "data": ["x1 Am 2 C 2 ! 0 F 2 G 1", "> 1 2"]
         }
       ]
     },
@@ -80,7 +80,7 @@
       "entries": [
         {
           "renderer": "chords-v2",
-          "data": [["x1 Am 2 C 2 ! 0 F 2 G 1", "x2 Am 1 ! 0 F 1", "> 1 2"]]
+          "data": ["x1 Am 2 C 2 ! 0 F 2 G 1", "x2 Am 1 ! 0 F 1", "> 1 2"]
         }
       ]
     },
@@ -91,14 +91,12 @@
         {
           "renderer": "chords-v2",
           "data": [
-            [
-              "x1 Am 2 C 2 ! 0 F 2 G 1",
-              "x2 Am 1 ! 0 F 1",
-              "> 1 2",
-              "x1 Am 2 C 2 ! 0 F 2 G 1",
-              "x2 Am 1 ! 0 F 1",
-              "> 1 2"
-            ]
+            "x1 Am 2 C 2 ! 0 F 2 G 1",
+            "x2 Am 1 ! 0 F 1",
+            "> 1 2",
+            "x1 Am 2 C 2 ! 0 F 2 G 1",
+            "x2 Am 1 ! 0 F 1",
+            "> 1 2"
           ]
         }
       ]
@@ -109,7 +107,7 @@
       "entries": [
         {
           "renderer": "chords-v2",
-          "data": [["x1 Am 2 C 2 F 2 C 3 / 0 G 1 Am 1 F 1 C 1", "> 0"]]
+          "data": ["x1 Am 2 C 2 F 2 C 3 / 0 G 1 Am 1 F 1 C 1", "> 0"]
         }
       ]
     },
@@ -119,7 +117,7 @@
       "entries": [
         {
           "renderer": "chords-v2",
-          "data": [["x2 Am 2 C 2 F 2 C 3 / 0 G 1 Am 1 F 1 C 1", "> 0"]]
+          "data": ["x2 Am 2 C 2 F 2 C 3 / 0 G 1 Am 1 F 1 C 1", "> 0"]
         }
       ]
     },
@@ -168,14 +166,12 @@
         {
           "renderer": "chords-v2",
           "data": [
-            [
-              "x1 Am 2 C 2 ! 0 F 2 G 1",
-              "x2 Am 1 ! 0 F 1",
-              "> 1 2",
-              "x1 Am 2 C 2 ! 0 F 2 G 1",
-              "x2 Am 1 ! 0 F 1",
-              "> 1 2"
-            ]
+            "x1 Am 2 C 2 ! 0 F 2 G 1",
+            "x2 Am 1 ! 0 F 1",
+            "> 1 2",
+            "x1 Am 2 C 2 ! 0 F 2 G 1",
+            "x2 Am 1 ! 0 F 1",
+            "> 1 2"
           ]
         }
       ]

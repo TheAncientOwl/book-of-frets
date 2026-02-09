@@ -6,13 +6,13 @@
  *
  * @file SongSectionEntry.tsx
  * @author Alexandru Delegeanu
- * @version 2.0
+ * @version 2.1
  * @description Chords renderer.
  */
 
 import type {
   TChordsV1SectionEntry,
-  TChordsV2SectionEntry,
+  TChordsV2SectionData,
   TGTabV1SectionData,
   TSongSectionEntry,
   TSongSectionLyrics,
@@ -44,7 +44,7 @@ const SongSectionEntryImpl = (props: TChordsProps) => {
     case 'chords-v2':
       return (
         <ChordsV2Renderer
-          data={props.entry.data as TChordsV2SectionEntry[]}
+          data={props.entry.data as TChordsV2SectionData}
           strummingPatterns={props.strumms}
           showLyrics={props.showLyrics}
           lyrics={props.lyrics}

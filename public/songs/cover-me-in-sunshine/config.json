@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Cover Me In Sunshine",
   "artists": ["P!nk"],
@@ -54,21 +54,19 @@
       "entries": [
         {
           "renderer": "chords-v2",
-          "data": [["x2 Em 1 / 0 D 1 ? 0 G 1 / 0 A 1", "x1 Em 1 ? 0 G 1", "> 0 1"]]
+          "data": ["x2 Em 1 / 0 D 1 ? 0 G 1 / 0 A 1", "x1 Em 1 ? 0 G 1", "> 0 1"]
         }
       ]
     },
     "c2": {
       "name": "chorus 2",
       "times": 1,
-      "entries": [
-        { "renderer": "chords-v2", "data": [["x4 Em 1 / 0 D 1 ? 0 G 1 / 0 A 1", "> 0 1"]] }
-      ]
+      "entries": [{ "renderer": "chords-v2", "data": ["x4 Em 1 / 0 D 1 ? 0 G 1 / 0 A 1", "> 0 1"] }]
     },
     "pb1": {
       "name": "pre-bridge",
       "times": 1,
-      "entries": [{ "renderer": "chords-v2", "data": [["x1 Em 1 ? 0 G 1", "> 0 2"]] }]
+      "entries": [{ "renderer": "chords-v2", "data": ["x1 Em 1 ? 0 G 1", "> 0 2"] }]
     },
     "pb2": {
       "name": "pre-bridge",
@@ -86,19 +84,15 @@
       "entries": [
         {
           "renderer": "chords-v2",
-          "data": [
-            ["x1 Em 1 ? 0 G 1", "x1 D 1 ? 0 A 1", "x1 Em 1 ? 0 G 1", "> 0 1"],
-            ["x1 A 1", "> 3"]
-          ]
-        }
+          "data": ["x1 Em 1 ? 0 G 1", "x1 D 1 ? 0 A 1", "x1 Em 1 ? 0 G 1", "> 0 1"]
+        },
+        { "renderer": "chords-v2", "data": ["x1 A 1", "> 3"] }
       ]
     },
     "c3": {
       "name": "chorus 3",
       "times": 1,
-      "entries": [
-        { "renderer": "chords-v2", "data": [["x2 Em 1 / 0 D 1 ? 0 G 1 / 0 A 1", "> 0 1"]] }
-      ]
+      "entries": [{ "renderer": "chords-v2", "data": ["x2 Em 1 / 0 D 1 ? 0 G 1 / 0 A 1", "> 0 1"] }]
     },
     "o": {
       "name": "outro",

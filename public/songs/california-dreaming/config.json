@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "California Dreamin'",
   "artists": ["The Mamas & The Papas"],
@@ -36,12 +36,10 @@
         {
           "renderer": "chords-v2",
           "data": [
-            [
-              "x1 Am 1 G 1 | 0 F 1 G 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 F 1",
-              "x1 C 1 E7 1 | 0 Am 1 F 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 E7 1",
-              "x2 Am 1 G 1 | 0 F 1 G 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 E7 1",
-              "> 0"
-            ]
+            "x1 Am 1 G 1 | 0 F 1 G 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 F 1",
+            "x1 C 1 E7 1 | 0 Am 1 F 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 E7 1",
+            "x2 Am 1 G 1 | 0 F 1 G 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 E7 1",
+            "> 0"
           ]
         }
       ]
@@ -53,12 +51,10 @@
         {
           "renderer": "chords-v2",
           "data": [
-            [
-              "x1 Am 1 G 1 | 0 F 1 G 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 F 1",
-              "x1 C 1 E7 1 | 0 Am 1 F 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 E7 1",
-              "x2 Am 1 G 1 | 0 F 1 G 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 E7 1",
-              "> 0"
-            ]
+            "x1 Am 1 G 1 | 0 F 1 G 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 F 1",
+            "x1 C 1 E7 1 | 0 Am 1 F 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 E7 1",
+            "x2 Am 1 G 1 | 0 F 1 G 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 E7 1",
+            "> 0"
           ]
         }
       ]
@@ -92,12 +88,10 @@
         {
           "renderer": "chords-v2",
           "data": [
-            [
-              "x1 Am 1 G 1 | 0 F 1 G 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 F 1",
-              "x1 C 1 E7 1 | 0 Am 1 F 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 E7 1",
-              "x1 Am 1 G 1 | 0 F 1 G 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 E7 1",
-              "> 0"
-            ]
+            "x1 Am 1 G 1 | 0 F 1 G 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 F 1",
+            "x1 C 1 E7 1 | 0 Am 1 F 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 E7 1",
+            "x1 Am 1 G 1 | 0 F 1 G 1 / 0 E7sus4 1 E7sus4 1 | 0 E7 1 E7 1",
+            "> 0"
           ]
         }
       ]
@@ -108,7 +102,7 @@
       "entries": [
         {
           "renderer": "chords-v2",
-          "data": [["x3 Am 1 G 1 | 0 F 1 G 1", "x1 F 1 F 1 | 0 F 1 F 1", "> 0", "x1 Am 1", "> 1"]]
+          "data": ["x3 Am 1 G 1 | 0 F 1 G 1", "x1 F 1 F 1 | 0 F 1 F 1", "> 0", "x1 Am 1", "> 1"]
         }
       ]
     }

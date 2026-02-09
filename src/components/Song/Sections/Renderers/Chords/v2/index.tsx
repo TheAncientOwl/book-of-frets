@@ -4,15 +4,15 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/oopsie-logsy/blob/main/LICENSE
  *
- * @file CgordsV2.tsx
+ * @file ChordsV2.tsx
  * @author Alexandru Delegeanu
- * @version 2.0
+ * @version 2.1
  * @description Render song chords section.
  */
 
 import type { TChord } from '@/common/types/chord.types';
 import type {
-  TChordsV2SectionEntry,
+  TChordsV2SectionData,
   TSongSectionLyrics,
   TStrummingPattern,
 } from '@/common/types/song.types';
@@ -43,7 +43,7 @@ const ChordsV1Lyrics = lazy(() =>
 );
 
 type TChordsSectionProps = {
-  data: TChordsV2SectionEntry[];
+  data: TChordsV2SectionData;
   strummingPatterns: TStrummingPattern[];
   showLyrics: boolean;
   lyrics: TSongSectionLyrics;
@@ -270,117 +270,109 @@ const ChordsLine = (props: TChordsLineProps) => {
 };
 
 export const ChordsV2Renderer = (props: TChordsSectionProps) => {
-  const renderOne = (data: string[]) => {
-    const colsData = new Array<Array<string>>();
-    const times = new Array<string>();
-    const betweenSeparator = new Array<JSX.Element>();
+  console.log(props);
 
-    data.forEach(item => {
-      switch (item[0]) {
-        case 'x': {
-          if (item.includes(' ! 0')) {
-            item.split(' ! 0 ').forEach((column, idx) => {
-              if (colsData.length <= idx) {
-                colsData.push(new Array<string>());
-              }
-              colsData[idx].push(idx === 0 ? column : `x1 ${column}`);
-            });
-            betweenSeparator.push(
-              <ChordLineDelimiter key={betweenSeparator.length} positioning='between' />,
-            );
-          } else if (item.includes(' ? 0 ')) {
-            item.split(' ? 0 ').forEach((column, idx) => {
-              if (colsData.length <= idx) {
-                colsData.push(new Array<string>());
-              }
-              colsData[idx].push(idx === 0 ? column : `x1 ${column}`);
-            });
-            betweenSeparator.push(<Box key={betweenSeparator.length} height='100%' />);
-          } else {
-            if (colsData.length === 0) {
+  const colsData = new Array<Array<string>>();
+  const times = new Array<string>();
+  const betweenSeparator = new Array<JSX.Element>();
+
+  props.data.forEach(item => {
+    switch (item[0]) {
+      case 'x': {
+        if (item.includes(' ! 0')) {
+          item.split(' ! 0 ').forEach((column, idx) => {
+            if (colsData.length <= idx) {
               colsData.push(new Array<string>());
             }
-            colsData[0].push(item);
-            betweenSeparator.push(
-              <ChordLineDelimiter key={betweenSeparator.length} positioning='between' />,
-            );
-          }
-          times.push(item.substring(0, item.indexOf(' ')));
-
-          break;
-        }
-        case '>': {
-          item
-            .split(' ')
-            .slice(1)
-            .forEach((patternId, idx) => {
-              if (colsData.length <= idx) {
-                colsData.push(new Array<string>());
-              }
-
-              colsData[idx].push(`> ${patternId}`);
-            });
-
-          times.push(' ');
-
+            colsData[idx].push(idx === 0 ? column : `x1 ${column}`);
+          });
+          betweenSeparator.push(
+            <ChordLineDelimiter key={betweenSeparator.length} positioning='between' />,
+          );
+        } else if (item.includes(' ? 0 ')) {
+          item.split(' ? 0 ').forEach((column, idx) => {
+            if (colsData.length <= idx) {
+              colsData.push(new Array<string>());
+            }
+            colsData[idx].push(idx === 0 ? column : `x1 ${column}`);
+          });
           betweenSeparator.push(<Box key={betweenSeparator.length} height='100%' />);
+        } else {
+          if (colsData.length === 0) {
+            colsData.push(new Array<string>());
+          }
+          colsData[0].push(item);
+          betweenSeparator.push(
+            <ChordLineDelimiter key={betweenSeparator.length} positioning='between' />,
+          );
+        }
+        times.push(item.substring(0, item.indexOf(' ')));
 
-          break;
-        }
-        default: {
-          console.error(`Not handled chords-v2 string "${item}"`);
-          return null;
-        }
+        break;
       }
-    });
+      case '>': {
+        item
+          .split(' ')
+          .slice(1)
+          .forEach((patternId, idx) => {
+            if (colsData.length <= idx) {
+              colsData.push(new Array<string>());
+            }
 
-    return (
-      <Flex direction='column' justifyContent='center' alignItems='center' gap='1em'>
-        <Flex direction='row' gap='1em'>
-          {colsData.map((column, colIdx) => (
-            <Fragment key={colIdx}>
-              <Flex direction='column'>
-                {column.map((line, lineIdx) => {
-                  if (line[0] != '>') {
-                    return (
-                      <ChordsLine
-                        isFirst={colIdx === 0}
-                        isLast={colIdx === colsData.length - 1}
-                        marginTop={lineIdx !== 0 ? GAP_BETWEEN_CHORD_LINES : '0'}
-                        key={lineIdx}
-                        data={line.split(' ').slice(0)}
-                        times={colIdx === colsData.length - 1 ? times[lineIdx] : undefined}
-                      />
-                    );
-                  } else {
-                    return (
-                      <ChordsV1StrummingPattern
-                        key={lineIdx}
-                        pattern={props.strummingPatterns[Number(line.substring(1))]}
-                      />
-                    );
-                  }
-                })}
-              </Flex>
-              <Flex direction='column' gap={GAP_BETWEEN_CHORD_LINES}>
-                {colIdx < colsData.length - 1 ? betweenSeparator : null}
-              </Flex>
-            </Fragment>
-          ))}
-        </Flex>
+            colsData[idx].push(`> ${patternId}`);
+          });
 
-        <Suspense fallback={<Loading />}>
-          <ChordsV1Lyrics visible={props.showLyrics} lyrics={props.lyrics} />
-        </Suspense>
-      </Flex>
-    );
-  };
+        times.push(' ');
+
+        betweenSeparator.push(<Box key={betweenSeparator.length} height='100%' />);
+
+        break;
+      }
+      default: {
+        console.error(`Not handled chords-v2 string "${item}"`);
+        return null;
+      }
+    }
+  });
 
   return (
-    <Flex direction='column' gap={GAP_BETWEEN_CHORD_LINES}>
-      {props.data.map((item, idx) => (
-        <Fragment key={idx}>{renderOne(item)}</Fragment>
-      ))}
+    <Flex direction='column' justifyContent='center' alignItems='center' gap='1em'>
+      <Flex direction='row' gap='1em'>
+        {colsData.map((column, colIdx) => (
+          <Fragment key={colIdx}>
+            <Flex direction='column'>
+              {column.map((line, lineIdx) => {
+                if (line[0] != '>') {
+                  return (
+                    <ChordsLine
+                      isFirst={colIdx === 0}
+                      isLast={colIdx === colsData.length - 1}
+                      marginTop={lineIdx !== 0 ? GAP_BETWEEN_CHORD_LINES : '0'}
+                      key={lineIdx}
+                      data={line.split(' ').slice(0)}
+                      times={colIdx === colsData.length - 1 ? times[lineIdx] : undefined}
+                    />
+                  );
+                } else {
+                  return (
+                    <ChordsV1StrummingPattern
+                      key={lineIdx}
+                      pattern={props.strummingPatterns[Number(line.substring(1))]}
+                    />
+                  );
+                }
+              })}
+            </Flex>
+            <Flex direction='column' gap={GAP_BETWEEN_CHORD_LINES}>
+              {colIdx < colsData.length - 1 ? betweenSeparator : null}
+            </Flex>
+          </Fragment>
+        ))}
+      </Flex>
+
+      <Suspense fallback={<Loading />}>
+        <ChordsV1Lyrics visible={props.showLyrics} lyrics={props.lyrics} />
+      </Suspense>
     </Flex>
   );
 };
