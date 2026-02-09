@@ -270,8 +270,6 @@ const ChordsLine = (props: TChordsLineProps) => {
 };
 
 export const ChordsV2Renderer = (props: TChordsSectionProps) => {
-  console.log(props);
-
   const colsData = new Array<Array<string>>();
   const times = new Array<string>();
   const betweenSeparator = new Array<JSX.Element>();
