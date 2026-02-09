@@ -6,7 +6,7 @@
  *
  * @file types.ts
  * @author Alexandru Delegeanu
- * @version 1.1
+ * @version 1.2
  * @description App theme types
  */
 
@@ -197,6 +197,17 @@ type TSongCardTheme = {
 };
 
 export type TSongTheme = {
+  buttons: {
+    lyrics: {
+      text: string;
+      bgShow: string;
+      bgHide: string;
+    };
+    pdf: {
+      text: string;
+      bg: string;
+    };
+  };
   background: string;
   header: {
     title: string;

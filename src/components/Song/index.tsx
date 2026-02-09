@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 1.1
+ * @version 1.2
  * @description Render song based on given config.
  */
 
@@ -92,7 +92,8 @@ export const Song = (props: TSongProps) => {
             );
           }}
           // [*] theme colors
-          colorScheme={'purple'}
+          colorScheme={theme.buttons.pdf.bg}
+          color={theme.buttons.pdf.text}
         >
           Open PDF
         </Button>

@@ -1,4 +1,5 @@
 {
+  "id": "pop-n-lock",
   "name": "Pop N'Lock",
   "homePage": {
     "title": "#947ff9",
@@ -194,6 +195,17 @@
     }
   },
   "song": {
+    "buttons": {
+      "lyrics": {
+        "text": "white",
+        "bgShow": "purple",
+        "bgHide": "red"
+      },
+      "pdf": {
+        "text": "white",
+        "bg": "purple"
+      }
+    },
     "background": "#181426",
     "header": {
       "title": "#E1B55C",

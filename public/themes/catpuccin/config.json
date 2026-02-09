@@ -195,6 +195,17 @@
     }
   },
   "song": {
+    "buttons": {
+      "lyrics": {
+        "text": "white",
+        "bgShow": "cyan",
+        "bgHide": "red"
+      },
+      "pdf": {
+        "text": "white",
+        "bg": "cyan"
+      }
+    },
     "background": "#1e1e2e",
     "header": {
       "title": "#cdd6f4",

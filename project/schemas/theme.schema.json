@@ -456,6 +456,32 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "buttons": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "lyrics": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "text": { "type": "string" },
+                "bgShow": { "type": "string" },
+                "bgHide": { "type": "string" }
+              },
+              "required": ["text", "bgShow", "bgHide"]
+            },
+            "pdf": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "text": { "type": "string" },
+                "bg": { "type": "string" }
+              },
+              "required": ["text", "bg"]
+            }
+          },
+          "required": ["lyrics"]
+        },
         "background": { "type": "string" },
         "header": {
           "type": "object",
@@ -614,7 +640,7 @@
           "required": ["title", "item"]
         }
       },
-      "required": ["background", "header", "capo", "items", "notes", "res"]
+      "required": ["buttons", "background", "header", "capo", "items", "notes", "res"]
     },
     "songsIndexPage": {
       "type": "object",

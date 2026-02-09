@@ -6,10 +6,11 @@
  *
  * @file FetchLyricsButton.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Fetch song lyrics button.
  */
 
+import { useAppStore } from '@/store/index';
 import { Box, Button } from '@chakra-ui/react';
 
 type TFetchLyricsButton = {
@@ -19,6 +20,8 @@ type TFetchLyricsButton = {
 };
 
 export const FetchLyricsButton = (props: TFetchLyricsButton) => {
+  const theme = useAppStore(state => state.appTheme.song.buttons);
+
   return (
     <>
       {props.available && (
@@ -27,7 +30,8 @@ export const FetchLyricsButton = (props: TFetchLyricsButton) => {
             size='sm'
             onClick={props.onClick}
             // [*] theme colors
-            colorScheme={props.lyricsShown ? 'red' : 'purple'}
+            colorScheme={props.lyricsShown ? theme.lyrics.bgHide : theme.lyrics.bgShow}
+            color={theme.lyrics.text}
           >
             {props.lyricsShown ? 'Hide Lyrics' : 'Show Lyrics'}
           </Button>
