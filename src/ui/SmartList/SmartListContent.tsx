@@ -6,10 +6,12 @@
  *
  * @file SmartListContent.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Render filtered, virtualized items of the SmartList.
  */
 
+import { useSessionStorage } from '@/common/hooks/useSessionStorage';
+import { SessionStorageKeys } from '@/store/common/storageKeys';
 import type { TSmartListContextUse } from '@/ui/SmartList/index';
 import { Box, type BoxProps, type ListProps, type SimpleGridProps } from '@chakra-ui/react';
 import {
@@ -37,6 +39,8 @@ export type TSmartListContentProps<T> = {
 };
 
 export const SmartListContent = <T,>(props: TSmartListContentProps<T>) => {
+  const [scrollTop, setScrollTop] = useSessionStorage(SessionStorageKeys.listScrollTop, 0);
+
   const { data } = props.useContext();
   const Wrapper = props.as ? props.as : Fragment;
 
@@ -64,6 +68,8 @@ export const SmartListContent = <T,>(props: TSmartListContentProps<T>) => {
         <AutoSizer>
           {({ height, width }: { height: number; width: number }) => (
             <List
+              scrollTop={scrollTop}
+              onScroll={({ scrollTop }: { scrollTop: number }) => setScrollTop(scrollTop)}
               overscanRowCount={props.virtualizedOverscanRowCount}
               height={height}
               width={width}

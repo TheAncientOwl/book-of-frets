@@ -6,7 +6,7 @@
  *
  * @file storageKeys.ts
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description House of all local/session storage keys.
  */
 
@@ -17,4 +17,5 @@ export const LocalStorageKeys = {
 
 export const SessionStorageKeys = {
   menuActiveTab: 'menu-active-tab',
+  listScrollTop: 'list-scroll-top',
 };

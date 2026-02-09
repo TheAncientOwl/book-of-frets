@@ -6,10 +6,12 @@
  *
  * @file NavigationList.tsx
  * @author Alexandru Delegeanu
- * @version 1.1
+ * @version 1.2
  * @description Navigation links.
  */
 
+import { useSessionStorage } from '@/common/hooks/useSessionStorage';
+import { SessionStorageKeys } from '@/store/common/storageKeys';
 import { useAppStore } from '@/store/index';
 import { Box, Heading, List, ListItem } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
@@ -19,6 +21,8 @@ type TNavigationListProps = {
 };
 
 export const NavigationList = (props: TNavigationListProps) => {
+  const [, setScrollTop] = useSessionStorage(SessionStorageKeys.listScrollTop, 0);
+
   const theme = useAppStore(state => state.appTheme.appMenu);
 
   return (
@@ -44,7 +48,12 @@ export const NavigationList = (props: TNavigationListProps) => {
         // [*] theme colors
         color={theme.items.navigation.routeLink}
       >
-        <ListItem onClick={props.onItemClick}>
+        <ListItem
+          onClick={() => {
+            setScrollTop(0);
+            props.onItemClick();
+          }}
+        >
           <Link to={`/`}>Songs</Link>
         </ListItem>
         <ListItem onClick={props.onItemClick}>
