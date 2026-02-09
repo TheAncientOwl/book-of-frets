@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 1.3
+ * @version 1.4
  * @description App menu component.
  */
 
@@ -119,7 +119,13 @@ export const AppMenu = () => {
             color={theme.closeButton.color}
           />
           <DrawerHeader>
-            <Flex direction='row' gap='5px'>
+            <Flex
+              direction='row'
+              gap='5px'
+              zIndex='100'
+              // [*] theme colors
+              backgroundColor={theme.drawer.background}
+            >
               <Image src={appLogoURL} alt='Book of Frets Logo' maxW='25px' />
               <Box
                 as='span'
@@ -143,6 +149,7 @@ export const AppMenu = () => {
               <TabList
                 position='sticky'
                 top='0'
+                zIndex='100'
                 // [*] theme colors
                 backgroundColor={theme.drawer.background}
               >
