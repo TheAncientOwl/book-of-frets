@@ -104,9 +104,11 @@ export const ChordsV1Renderer = (props: TChordsV1Props) => {
               )}
             </Box>
 
-            <Suspense fallback={<Loading />}>
-              <ChordsV1Lyrics visible={props.showLyrics} lyrics={props.lyrics} />
-            </Suspense>
+            {props.showLyrics && (
+              <Suspense fallback={<Loading />}>
+                <ChordsV1Lyrics visible={props.showLyrics} lyrics={props.lyrics} />
+              </Suspense>
+            )}
           </Fragment>
         );
       })}
