@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Until I Found You",
   "artists": ["Stephen Sanchez"],
@@ -16,88 +16,98 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "gtab-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "- [C] A3+D2+G0+B1+e0 - - - - - e0 - B1 - G0 - - | - [Em] E0+A2+D2+G0+B0+e0 - - - - - e3 - e0 - B0 - - G0 - - B0 - - - | - [Fm] D3+G1+B1 - D3+G1+B1 - D3+G1+B1 - D3+G1+B1 - D3+G1+B1 - D3+G1+B1 - | - [Fmadd9] D3+G1+B1+e3 - D3+G1+B1+e3 - D3+G1+B1+e3 - - [Fm6] D3+G1+B3 - D3+G1+B3 - D3+G1+B3 - -"
+          "renderer": "gtab-v1",
+          "data": "- [C] A3+D2+G0+B1+e0 - - - - - e0 - B1 - G0 - - | - [Em] E0+A2+D2+G0+B0+e0 - - - - - e3 - e0 - B0 - - G0 - - B0 - - - | - [Fm] D3+G1+B1 - D3+G1+B1 - D3+G1+B1 - D3+G1+B1 - D3+G1+B1 - D3+G1+B1 - | - [Fmadd9] D3+G1+B1+e3 - D3+G1+B1+e3 - D3+G1+B1+e3 - - [Fm6] D3+G1+B3 - D3+G1+B3 - D3+G1+B3 - -"
         }
       ]
     },
     "v": {
       "name": "verse",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 3,
-          "items": [[["0 C 1 C 1 Em 1"], ["1 F 1"], ["2 Fm 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 C 1 C 1"], ["3 G 1 G 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 3,
+              "items": [[["0 C 1 C 1 Em 1"], ["1 F 1"], ["2 Fm 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 C 1 C 1"], ["3 G 1 G 1"]]]
+            }
+          ]
         }
       ]
     },
     "c": {
       "name": "chorus",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [
-            [
-              [
-                "3 F 1 G 1 C 1 Em 1",
-                "3 F 1 G 1 C 1 C7 1",
-                "3 F 1 G 1 C 1 Em 1",
-                "3 F 1 F 1 Fm 1 Fm 1"
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [
+                [
+                  [
+                    "3 F 1 G 1 C 1 Em 1",
+                    "3 F 1 G 1 C 1 C7 1",
+                    "3 F 1 G 1 C 1 Em 1",
+                    "3 F 1 F 1 Fm 1 Fm 1"
+                  ]
+                ]
               ]
-            ]
+            }
           ]
         }
       ]
     },
     "b": {
       "name": "bridge",
-      "type": "gtab-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "- [C] A3+D2+G0+B1+e0 - - - A3+D2+G0+B1+e0 - - - A3+D2+G0+B1+e0 - - - A3+D2+G0+B1+e0 - - - B1/3 - B1 - - - - | - [C] A3+D2+G0+B1+e0 - - - A3+D2+G0+B1+e0 - - - A3+D2+G0+B1+e0 - - - A3+D2+G0+B1+e0 - - - B1/3 - B1 - - - - | - [Em] E0+A2+D2+G0+B0+e0 - - - E0+A2+D2+G0+B0+e0 - - - E0+A2+D2+G0+B0+e0 - - - E0+A2+D2+G0+B0+e0 - - - B1/3 - B1 - - - - | - [Em] E0+A2+D2+G0+B0+e0 - - - E0+A2+D2+G0+B0+e0 - - - E0+A2+D2+G0+B0+e0 - - - E0+A2+D2+G0+B0+e0 - - - B3/5 - B3 - - - -"
+          "renderer": "gtab-v1",
+          "data": "- [C] A3+D2+G0+B1+e0 - - - A3+D2+G0+B1+e0 - - - A3+D2+G0+B1+e0 - - - A3+D2+G0+B1+e0 - - - B1/3 - B1 - - - - | - [C] A3+D2+G0+B1+e0 - - - A3+D2+G0+B1+e0 - - - A3+D2+G0+B1+e0 - - - A3+D2+G0+B1+e0 - - - B1/3 - B1 - - - - | - [Em] E0+A2+D2+G0+B0+e0 - - - E0+A2+D2+G0+B0+e0 - - - E0+A2+D2+G0+B0+e0 - - - E0+A2+D2+G0+B0+e0 - - - B1/3 - B1 - - - - | - [Em] E0+A2+D2+G0+B0+e0 - - - E0+A2+D2+G0+B0+e0 - - - E0+A2+D2+G0+B0+e0 - - - E0+A2+D2+G0+B0+e0 - - - B3/5 - B3 - - - -"
         },
         {
-          "times": 1,
-          "items": "- [F] D3+G2+B1 - - - D3+G2+B1 - - - D3+G2+B1 - - - D3+G2+B1 - - - B3/5 - B3 - - - - | - [F] D3+G2+B1 - - - D3+G2+B1 - - - D3+G2+B1 - - - D3+G2+B1 - - - B3/5 - B3 - - - - | - [Fm] D3+G1+B1 - - - D3+G1+B1 - - - D3+G1+B1 - - - D3+G1+B1 - - - D3+G1+B1 - - - D3+G1+B1 - - - | - [Fmadd9] D3+G1+B1+e3 - - - D3+G1+B1+e3 - - - D3+G1+B1+e3 - - - [Fm6] D3+G1+B3 - - - D3+G1+B3 - - - D3+G1+B3 - - - -"
+          "renderer": "gtab-v1",
+
+          "data": "- [F] D3+G2+B1 - - - D3+G2+B1 - - - D3+G2+B1 - - - D3+G2+B1 - - - B3/5 - B3 - - - - | - [F] D3+G2+B1 - - - D3+G2+B1 - - - D3+G2+B1 - - - D3+G2+B1 - - - B3/5 - B3 - - - - | - [Fm] D3+G1+B1 - - - D3+G1+B1 - - - D3+G1+B1 - - - D3+G1+B1 - - - D3+G1+B1 - - - D3+G1+B1 - - - | - [Fmadd9] D3+G1+B1+e3 - - - D3+G1+B1+e3 - - - D3+G1+B1+e3 - - - [Fm6] D3+G1+B3 - - - D3+G1+B3 - - - D3+G1+B3 - - - -"
         }
       ]
     },
     "fc1": {
       "name": "final chorus pt.1",
-      "type": "gtab-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "- [F] D3 - - - G2 - - - B1 - - - e1 - - - B1 - - - G2 - - - - | - [G] E3 - - - G0 - - - B0 - - - e3 - - - B0 - - - G0 - - - - | - [C] A3 - - - G0 - - - B1 - - - e0 - - - B1 - - - G0 - - - - | - [Em] E0 - - - G0 - - - B0 - - - e0 - - - B0 - - - G0 - - - -"
+          "renderer": "gtab-v1",
+          "data": "- [F] D3 - - - G2 - - - B1 - - - e1 - - - B1 - - - G2 - - - - | - [G] E3 - - - G0 - - - B0 - - - e3 - - - B0 - - - G0 - - - - | - [C] A3 - - - G0 - - - B1 - - - e0 - - - B1 - - - G0 - - - - | - [Em] E0 - - - G0 - - - B0 - - - e0 - - - B0 - - - G0 - - - -"
         },
         {
-          "times": 1,
-          "items": "- [F] D3 - - - G2 - - - B1 - - - e1 - - - B1 - - - G2 - - - - | - [G] E3 - - - G0 - - - B0 - - - e3 - - - B0 - - - G0 - - - - | - [C] A3 - - - G0 - - - B1 - - - e0 - - - B1 - - - G0 - - - - | - [C7] A3+D2+G3+B1+e0 - - - A3+D2+G3+B1+e0 - - - A3+D2+G3+B1+e0 - - - A3+D2+G3+B1+e0 - - - A3+D2+G3+B1+e0 - - - A3+D2+G3+B1+e0 - - - -"
+          "renderer": "gtab-v1",
+          "data": "- [F] D3 - - - G2 - - - B1 - - - e1 - - - B1 - - - G2 - - - - | - [G] E3 - - - G0 - - - B0 - - - e3 - - - B0 - - - G0 - - - - | - [C] A3 - - - G0 - - - B1 - - - e0 - - - B1 - - - G0 - - - - | - [C7] A3+D2+G3+B1+e0 - - - A3+D2+G3+B1+e0 - - - A3+D2+G3+B1+e0 - - - A3+D2+G3+B1+e0 - - - A3+D2+G3+B1+e0 - - - A3+D2+G3+B1+e0 - - - -"
         }
       ]
     },
     "fc2": {
       "name": "final chorus pt.2",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["3 F 1 G 1 C 1 Em 1", "3 F 1 F 1 Fm 1 Fm 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["3 F 1 G 1 C 1 Em 1", "3 F 1 F 1 Fm 1 Fm 1"]]]
+            }
+          ]
         }
       ]
     }

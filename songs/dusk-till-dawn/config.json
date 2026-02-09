@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Dusk Till Dawn",
   "artists": ["Zayn", "Sia"],
@@ -16,78 +16,98 @@
   "sections": {
     "vpi": {
       "name": "verse / prechorus",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 3,
-          "items": [[["0 Am 1 Ft 1 C 1 G/B 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["1 Am 1 Ft 1 C 1 G/B 1"]]]
-        },
-        {
-          "times": 2,
-          "items": [[["0 Am 1 Ft 1 C 1 G/B 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 3,
+              "items": [[["0 Am 1 Ft 1 C 1 G/B 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["1 Am 1 Ft 1 C 1 G/B 1"]]]
+            },
+            {
+              "times": 2,
+              "items": [[["0 Am 1 Ft 1 C 1 G/B 1"]]]
+            }
+          ]
         }
       ]
     },
     "c": {
       "name": "chorus",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["2 Am 1"]]]
-        },
-        {
-          "times": 4,
-          "items": [[["3 Am 2 Ft 2 C 2 Em 2"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["2 Am 1"]]]
+            },
+            {
+              "times": 4,
+              "items": [[["3 Am 2 Ft 2 C 2 Em 2"]]]
+            }
+          ]
         }
       ]
     },
     "bk": {
       "name": "break",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 Am 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 Am 1"]]]
+            }
+          ]
         }
       ]
     },
     "vp": {
       "name": "verse / prechorus",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 3,
-          "items": [[["1 Am 1 Ft 1 C 1 G/B 1"]]]
-        },
-        {
-          "times": 2,
-          "items": [[["0 Am 1 Ft 1 C 1 G/B 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 3,
+              "items": [[["1 Am 1 Ft 1 C 1 G/B 1"]]]
+            },
+            {
+              "times": 2,
+              "items": [[["0 Am 1 Ft 1 C 1 G/B 1"]]]
+            }
+          ]
         }
       ]
     },
     "b": {
       "name": "bridge",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [
-            [
-              [
-                "0 Ft 1 | 0 Ft 1 C 1 | 0 C 1 G 1 | 0 G 1 C/E 1",
-                "0 Ft 1 | 0 Ft 1 C 1 | 0 C 1 G 1 | 0 G 1 G 1"
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [
+                [
+                  [
+                    "0 Ft 1 | 0 Ft 1 C 1 | 0 C 1 G 1 | 0 G 1 C/E 1",
+                    "0 Ft 1 | 0 Ft 1 C 1 | 0 C 1 G 1 | 0 G 1 G 1"
+                  ]
+                ]
               ]
-            ]
+            }
           ]
         }
       ]

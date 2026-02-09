@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Wake Me Up",
   "artists": ["Avicii"],
@@ -14,57 +14,73 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 Am 1 Ft 1 C/G 2"], ["1 G 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 Am 1 Ft 1 C/G 2"], ["1 E 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 Am 1 Ft 1 C/G 2"], ["1 G 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 Am 1 Ft 1 C/G 2"], ["1 E 1"]]]
+            }
+          ]
         }
       ]
     },
     "c": {
       "name": "chorus",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 Am 1 Ft 1 C/G 2"], ["1 G 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 Am 1 Ft 1 C/G 2"], ["1 E 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 Am 1 Ft 1 C/G 2"], ["1 G 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 Am 1 Ft 1 C/G 2"], ["1 E 1"]]]
+            }
+          ]
         }
       ]
     },
     "d": {
       "name": "dance",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 Am 1 Ft 1 C/G 2"], ["1 G 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 Am 1 Ft 1 C/G 2"], ["1 E 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 Am 1 Ft 1 C/G 2"], ["1 G 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 Am 1 Ft 1 C/G 2"], ["1 E 1"]]]
+            }
+          ]
         }
       ]
     },
     "v": {
       "name": "verse",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 Am 1 Ft 1 C/G 2"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 Am 1 Ft 1 C/G 2"]]]
+            }
+          ]
         }
       ]
     }

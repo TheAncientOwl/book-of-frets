@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Adore You",
   "artists": ["Harry Styles"],
@@ -11,71 +11,83 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 Am7 1 - 1 C 1 - 1", "0 Ft 1 - 1 - 1 G 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 Am7 1 - 1 C 1 - 1", "0 Ft 1 - 1 - 1 G 1"]]]
+            }
+          ]
         }
       ]
     },
     "m1": {
       "name": "main progression",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 6,
-          "items": [[["1 Am7 2 C 2 Ft 3 G 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 6,
+              "items": [[["1 Am7 2 C 2 Ft 3 G 1"]]]
+            }
+          ]
         }
       ]
     },
     "po1": {
       "name": "post chorus 1",
-      "type": "gtab-v1",
       "times": 1,
-      "data": []
+      "entries": [{ "renderer": "gtab-v1", "data": "" }]
     },
     "m2": {
       "name": "main progression",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 5,
-          "items": [[["1 Am7 2 C 2 Ft 3 G 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 5,
+              "items": [[["1 Am7 2 C 2 Ft 3 G 1"]]]
+            }
+          ]
         }
       ]
     },
     "po2": {
       "name": "post chorus 2",
-      "type": "gtab-v1",
       "times": 1,
-      "data": []
+      "entries": [{ "renderer": "gtab-v1", "data": "" }]
     },
     "s": {
       "name": "solo",
-      "type": "gtab-v1",
       "times": 1,
-      "data": []
+      "entries": [{ "renderer": "gtab-v1", "data": "" }]
     },
     "m3": {
       "name": "main progression",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 4,
-          "items": [[["1 Am7 2 C 2 Ft 3 G 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 4,
+              "items": [[["1 Am7 2 C 2 Ft 3 G 1"]]]
+            }
+          ]
         }
       ]
     },
     "po3": {
       "name": "post chorus 2",
-      "type": "gtab-v1",
       "times": 1,
-      "data": []
+      "entries": [{ "renderer": "gtab-v1", "data": "" }]
     }
   },
   "order": ["i", "m1", "po1", "m2", "po2", "s", "m3", "po3"],

@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Let Me Love You",
   "artists": ["DJ Snake", "Justin Bieber"],
@@ -18,68 +18,88 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 Am 1 C 1 F 2"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 Am 1 C 1 F 2"]]]
+            }
+          ]
         }
       ]
     },
     "v": {
       "name": "verse",
-      "type": "chords-v1",
       "times": 2,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["1 Am 1 C 1"]]]
-        },
-        {
-          "times": 2,
-          "items": [[["2 Em 1"], ["3 F 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["1 Am 1 C 1"]]]
+            },
+            {
+              "times": 2,
+              "items": [[["2 Em 1"], ["3 F 1"]]]
+            }
+          ]
         }
       ]
     },
     "p": {
       "name": "prechorus",
-      "type": "chords-v1",
       "times": 2,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["4 F 1 Am 1 G 1 Dm 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["4 F 1 Am 1 G 1 Dm 1"]]]
+            }
+          ]
         }
       ]
     },
     "c": {
       "name": "chorus",
-      "type": "chords-v1",
       "times": 2,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["1 Am 1 C 1"]]]
-        },
-        {
-          "times": 2,
-          "items": [[["2 Em 1"], ["3 F 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["1 Am 1 C 1"]]]
+            },
+            {
+              "times": 2,
+              "items": [[["2 Em 1"], ["3 F 1"]]]
+            }
+          ]
         }
       ]
     },
     "d": {
       "name": "dance break",
-      "type": "chords-v1",
       "times": 2,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["5 Am 1 C 1"]]]
-        },
-        {
-          "times": 2,
-          "items": [[["2 Em 1"], ["3 F 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["5 Am 1 C 1"]]]
+            },
+            {
+              "times": 2,
+              "items": [[["2 Em 1"], ["3 F 1"]]]
+            }
+          ]
         }
       ]
     }

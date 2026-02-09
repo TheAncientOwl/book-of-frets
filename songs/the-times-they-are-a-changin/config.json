@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "The Times They Are A Changin'",
   "artists": ["Bob Dylan"],
@@ -11,186 +11,230 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 G 1 G 1 G 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 G 1 G 1 G 1"]]]
+            }
+          ]
         }
       ]
     },
     "v1": {
       "name": "verse 1",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [
-            [
-              [
-                "0 G 1 Em 1 C 1 G 1 G 1",
-                "00 G 1 Em 1 C 1 D 1",
-                "0 G 1 Em 1 C 1 G 1 G 1 G 1",
-                "0 G 1 Am 1 D 1 D 1",
-                "0 D 1 Csus2 1 G/B 1 D 1",
-                "0 G 1 G 1 D 1 G 1"
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [
+                [
+                  [
+                    "0 G 1 Em 1 C 1 G 1 G 1",
+                    "00 G 1 Em 1 C 1 D 1",
+                    "0 G 1 Em 1 C 1 G 1 G 1 G 1",
+                    "0 G 1 Am 1 D 1 D 1",
+                    "0 D 1 Csus2 1 G/B 1 D 1",
+                    "0 G 1 G 1 D 1 G 1"
+                  ]
+                ]
               ]
-            ]
+            }
           ]
         }
       ]
     },
     "b1": {
       "name": "break 1",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 G 1 Em 1 C 1 G 1 G 1 G 1 G 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 G 1 Em 1 C 1 G 1 G 1 G 1 G 1"]]]
+            }
+          ]
         }
       ]
     },
     "v2": {
       "name": "verse 2",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [
-            [
-              [
-                "0 G 1 Em 1 C 1 G 1 G 1",
-                "0 G 1 Em 1 C 1 D 1",
-                "0 G 1 Em 1 C 1 G 1 G 1",
-                "0 G 1 Am 1 D 1 D 1",
-                "0 D 1 Csus2 1 G/B 1 D 1",
-                "0 G 1 G 1 D 1"
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [
+                [
+                  [
+                    "0 G 1 Em 1 C 1 G 1 G 1",
+                    "0 G 1 Em 1 C 1 D 1",
+                    "0 G 1 Em 1 C 1 G 1 G 1",
+                    "0 G 1 Am 1 D 1 D 1",
+                    "0 D 1 Csus2 1 G/B 1 D 1",
+                    "0 G 1 G 1 D 1"
+                  ]
+                ]
               ]
-            ]
+            }
           ]
         }
       ]
     },
     "b2": {
       "name": "break 2",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 G 1 Em 1 C 1 G 1 G 1", "0 D 1 Csus2 1 G/B 1 D 1", "0 D 1 D 1 D 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 G 1 Em 1 C 1 G 1 G 1", "0 D 1 Csus2 1 G/B 1 D 1", "0 D 1 D 1 D 1"]]]
+            }
+          ]
         }
       ]
     },
     "v3": {
       "name": "verse 3",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [
-            [
-              [
-                "0 G 1 Em 1 C 1 G 1 G 1",
-                "0 G 1 Em 1 C 1 D 1",
-                "0 G 1 Em 1 C 1 G 1 G 1",
-                "0 G 1 Am 1 D 1 D 1",
-                "0 D 1 Csus2 1 G/B 1 D 1",
-                "0 G 1 C 1 D 1 G 1"
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [
+                [
+                  [
+                    "0 G 1 Em 1 C 1 G 1 G 1",
+                    "0 G 1 Em 1 C 1 D 1",
+                    "0 G 1 Em 1 C 1 G 1 G 1",
+                    "0 G 1 Am 1 D 1 D 1",
+                    "0 D 1 Csus2 1 G/B 1 D 1",
+                    "0 G 1 C 1 D 1 G 1"
+                  ]
+                ]
               ]
-            ]
+            }
           ]
         }
       ]
     },
     "b3": {
       "name": "break 3",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 G 1 D 1 Csus2 1 D 1 G 1 G 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 G 1 D 1 Csus2 1 D 1 G 1 G 1"]]]
+            }
+          ]
         }
       ]
     },
     "v4": {
       "name": "verse 4",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [
-            [
-              [
-                "0 G 1 Em 1 C 1 G 1 G 1",
-                "0 G 1 Em 1 C 1 D 1",
-                "0 G 1 Em 1 C 1 G 1 G 1",
-                "0 G 1 Am 1 D 1 D 1",
-                "0 G 1 Csus2 1 G/B 1 D 1",
-                "0 G 1 C 1 D 1 G 1"
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [
+                [
+                  [
+                    "0 G 1 Em 1 C 1 G 1 G 1",
+                    "0 G 1 Em 1 C 1 D 1",
+                    "0 G 1 Em 1 C 1 G 1 G 1",
+                    "0 G 1 Am 1 D 1 D 1",
+                    "0 G 1 Csus2 1 G/B 1 D 1",
+                    "0 G 1 C 1 D 1 G 1"
+                  ]
+                ]
               ]
-            ]
+            }
           ]
         }
       ]
     },
     "b4": {
       "name": "break 4",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [
-            [
-              [
-                "0 G 1 Em 1 C 1 G 1 G 1",
-                "0 D 1 Csus2 1 G/B 1 D 1 D 1",
-                "0 G 1 C 1 D 1 G 1",
-                "0 G 1 G 1 G 1"
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [
+                [
+                  [
+                    "0 G 1 Em 1 C 1 G 1 G 1",
+                    "0 D 1 Csus2 1 G/B 1 D 1 D 1",
+                    "0 G 1 C 1 D 1 G 1",
+                    "0 G 1 G 1 G 1"
+                  ]
+                ]
               ]
-            ]
+            }
           ]
         }
       ]
     },
     "v5": {
       "name": "verse 5",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [
-            [
-              [
-                "0 G 1 Em 1 C 1 G 1 G 1",
-                "0 G 1 Em 1 C 1 D 1",
-                "0 G 1 Em 1 C 1 G 1 G 1",
-                "0 G 1 Em 1 C 1 G 1 G 1",
-                "0 D 1 Csus2 1 G/B 1 D 1",
-                "0 G 1 C 1 D 1 G 1"
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [
+                [
+                  [
+                    "0 G 1 Em 1 C 1 G 1 G 1",
+                    "0 G 1 Em 1 C 1 D 1",
+                    "0 G 1 Em 1 C 1 G 1 G 1",
+                    "0 G 1 Em 1 C 1 G 1 G 1",
+                    "0 D 1 Csus2 1 G/B 1 D 1",
+                    "0 G 1 C 1 D 1 G 1"
+                  ]
+                ]
               ]
-            ]
+            }
           ]
         }
       ]
     },
     "o": {
       "name": "outro",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 G 1 Em 1 C 1 G 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 G 1 Em 1 C 1 G 1"]]]
+            }
+          ]
         }
       ]
     }

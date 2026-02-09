@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Riptide",
   "artists": ["Vance Joy"],
@@ -11,45 +11,56 @@
   "sections": {
     "ivc": {
       "name": "intro / verse / chorus",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 15,
-          "items": [[["0 Am 1 G 1 C 2"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 15,
+              "items": [[["0 Am 1 G 1 C 2"]]]
+            }
+          ]
         }
       ]
     },
     "bk": {
       "name": "break",
-      "type": "gtab-v1",
       "times": 4,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "- B3h5 - B5 - e3 - - - - G5 B5 - - -"
+          "renderer": "gtab-v1",
+          "data": "- B3h5 - B5 - e3 - - - - G5 B5 - - -"
         }
       ]
     },
     "b": {
       "name": "bridge",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 2,
-          "items": [[["0 Am 2 G 2 C 2 Ft 2"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 2,
+              "items": [[["0 Am 2 G 2 C 2 Ft 2"]]]
+            }
+          ]
         }
       ]
     },
     "pb": {
       "name": "post bridge",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 2,
-          "items": [[["1 Am 1 G 1 C 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 2,
+              "items": [[["1 Am 1 G 1 C 1"]]]
+            }
+          ]
         }
       ]
     }

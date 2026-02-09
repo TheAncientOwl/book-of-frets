@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Run Away To Mars",
   "artists": ["TALK"],
@@ -16,39 +16,37 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords-v2",
       "times": 1,
-      "data": [["x1 G 2 D/F# 2 Em7 2 Cadd9 2", "> 0"]]
+      "entries": [{ "renderer": "chords-v2", "data": [["x1 G 2 D/F# 2 Em7 2 Cadd9 2", "> 0"]] }]
     },
     "v": {
       "name": "verse",
-      "type": "chords-v2",
       "times": 1,
-      "data": [["x2 G 2 D/F# 2 Em7 2 Cadd9 2", "> 0"]]
+      "entries": [{ "renderer": "chords-v2", "data": [["x2 G 2 D/F# 2 Em7 2 Cadd9 2", "> 0"]] }]
     },
     "pr": {
       "name": "prechorus",
-      "type": "chords-v2",
       "times": 1,
-      "data": [["x1 Am7 2 D 2", "> 0"]]
+      "entries": [{ "renderer": "chords-v2", "data": [["x1 Am7 2 D 2", "> 0"]] }]
     },
     "c": {
       "name": "chorus",
-      "type": "chords-v2",
       "times": 1,
-      "data": [["x4 Em 2 C 2 G 1 ! 0 G 1 ! 0 D/F# 2", "> 0 1 2"]]
+      "entries": [
+        { "renderer": "chords-v2", "data": [["x4 Em 2 C 2 G 1 ! 0 G 1 ! 0 D/F# 2", "> 0 1 2"]] }
+      ]
     },
     "b": {
       "name": "bridge",
-      "type": "chords-v2",
       "times": 1,
-      "data": [["x2 Am7 2 Dsus4 1 D 1", "> 0"]]
+      "entries": [{ "renderer": "chords-v2", "data": [["x2 Am7 2 Dsus4 1 D 1", "> 0"]] }]
     },
     "o": {
       "name": "outro",
-      "type": "chords-v2",
       "times": 1,
-      "data": [["x3 Em 1 C 1 G 1 / 0 D/F# 1 Em 1 C 1 G 1", "> 3"]]
+      "entries": [
+        { "renderer": "chords-v2", "data": [["x3 Em 1 C 1 G 1 / 0 D/F# 1 Em 1 C 1 G 1", "> 3"]] }
+      ]
     }
   },
   "order": ["i", "v", "pr", "c", "v", "pr", "c", "b", "o"],

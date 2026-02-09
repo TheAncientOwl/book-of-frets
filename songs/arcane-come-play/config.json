@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Arcane ~ Come Play",
   "artists": ["Stray Kids", "Young Miko", "Tom Morello"],
@@ -11,113 +11,109 @@
   "sections": {
     "00": {
       "name": "intro",
-      "type": "gtab-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "- G11 - G11 - G11 - G11 - - e14 - - G11 - G11 - G11 - G11 - e14 - - G11 - G11 - e14 - - - - - - - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- G11 - G11 - G11 - G11 - - e14 - - G11 - G11 - G11 - G11 - e14 - - G11 - G11 - e14 - - - - - - - - - - - - - - - -"
         },
         {
-          "times": 1,
-          "items": "- e14 - e14 - e14 - e13 - e13- e13 - - - B15 - B15 - B15 - B14 - B14 - B14 - - - B12 - - - G14 - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- e14 - e14 - e14 - e13 - e13- e13 - - - B15 - B15 - B15 - B14 - B14 - B14 - - - B12 - - - G14 - - - - - - - - - -"
         },
         {
-          "times": 1,
-          "items": "- G11 - G11 - G11 - G11 - - e14 - - G11 - G11 - G11 - G11 - e14 - - G11 - - - - - - - - - - - - - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- G11 - G11 - G11 - G11 - - e14 - - G11 - G11 - G11 - G11 - e14 - - G11 - - - - - - - - - - - - - - - - - - - - - -"
         },
         {
-          "times": 1,
-          "items": "- G11 - G11 - G11 - G11 - - e14 - - G11 - G11 - G11 - G11 - e14 - - G11 - G11 - e14 - - - - - - - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- G11 - G11 - G11 - G11 - - e14 - - G11 - G11 - G11 - G11 - e14 - - G11 - G11 - e14 - - - - - - - - - - - - - - - -"
         },
         {
-          "times": 1,
-          "items": "- G11 - G11 - G11 - G11 - - e14 - - G11 - G11 - G11 - G11 - e14 - - G11 - - - - - - - - - - - - - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- G11 - G11 - G11 - G11 - - e14 - - G11 - G11 - G11 - G11 - e14 - - G11 - - - - - - - - - - - - - - - - - - - - - -"
         },
         {
-          "times": 1,
-          "items": "- e14 - e14 - e14 - e13 - e13- e13 - - - B15 - B15 - B15 - B14 - B14 - B14 - - - B12 - - - G14 - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- e14 - e14 - e14 - e13 - e13- e13 - - - B15 - B15 - B15 - B14 - B14 - B14 - - - B12 - - - G14 - - - - - - - - - -"
         }
       ]
     },
     "01": {
       "name": "riff 1",
-      "type": "gtab-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "- - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - | - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - -"
+          "renderer": "gtab-v1",
+          "data": "- - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - | - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - -"
         },
         {
-          "times": 1,
-          "items": "- - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - | - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - - - - - - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - | - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - - - - - - - - - - - - - - -"
         },
         {
-          "times": 1,
-          "items": "- - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - | - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - -"
+          "renderer": "gtab-v1",
+          "data": "- - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - | - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - -"
         },
         {
-          "times": 1,
-          "items": "- - A5+G7 - - - - A5+G7 - - A5+G7 - - AX+GX - - A5+G7 - - - - A5+G7 - - A5+G7 - - AX+GX - - A5+G7 - - - - |  - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - -"
+          "renderer": "gtab-v1",
+          "data": "- - A5+G7 - - - - A5+G7 - - A5+G7 - - AX+GX - - A5+G7 - - - - A5+G7 - - A5+G7 - - AX+GX - - A5+G7 - - - - |  - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - -"
         }
       ]
     },
     "02": {
       "name": "riff 2",
-      "type": "gtab-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "- - G6 - - D8 - - - G7 - G6 - D9 - - G6 - G7 - - - D9 - - - G9 - G7 - G6 - - - D9 - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- - G6 - - D8 - - - G7 - G6 - D9 - - G6 - G7 - - - D9 - - - G9 - G7 - G6 - - - D9 - - - - - - - - -"
         },
         {
-          "times": 1,
-          "items": "- - G6 - - D8 - - - G7 - G6 - D9 - - G6 - G7 - - - D9 - - - G9 - G7 - G6 - - - D9 - D8 - D9 - D11 - -"
+          "renderer": "gtab-v1",
+          "data": "- - G6 - - D8 - - - G7 - G6 - D9 - - G6 - G7 - - - D9 - - - G9 - G7 - G6 - - - D9 - D8 - D9 - D11 - -"
         },
         {
-          "times": 1,
-          "items": "- - D11 - - D11 - - D11 - - D11 - - D11 - - - - - D9 - - - D11 - - - D12 - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- - D11 - - D11 - - D11 - - D11 - - D11 - - - - - D9 - - - D11 - - - D12 - - - - - - - -"
         },
         {
-          "times": 1,
-          "items": "- G11 - G11 - G11 - G11 - - e14 - - G11 - G11 - G11 - G11 - e14 - - G11 - - - - - - - - - - - - - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- G11 - G11 - G11 - G11 - - e14 - - G11 - G11 - G11 - G11 - e14 - - G11 - - - - - - - - - - - - - - - - - - - - - -"
         },
         {
-          "times": 1,
-          "items": "- G11 - G11 - G11 - G11 - - e14 - - G11 - G11 - G11 - G11 - e14 - - G11 - G11 - e14 - - - - - - - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- G11 - G11 - G11 - G11 - - e14 - - G11 - G11 - G11 - G11 - e14 - - G11 - G11 - e14 - - - - - - - - - - - - - - - -"
         },
         {
-          "times": 1,
-          "items": "- G11 - G11 - G11 - G11 - - e14 - - G11 - G11 - G11 - G11 - e14 - - G11 - - - - - - - - - - - - - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- G11 - G11 - G11 - G11 - - e14 - - G11 - G11 - G11 - G11 - e14 - - G11 - - - - - - - - - - - - - - - - - - - - - -"
         },
         {
-          "times": 1,
-          "items": "- G11 - G11 - G11 - G11 - - e14 - - G11 - G11 - G11 - G11 - e14 - - - - - A\\ E14 - - - - - - - - - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- G11 - G11 - G11 - G11 - - e14 - - G11 - G11 - G11 - G11 - e14 - - - - - A\\ E14 - - - - - - - - - - - - - - - - - -"
         }
       ]
     },
     "03": {
       "name": "riff 3",
-      "type": "gtab-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "- - E2+A4 - - E2+A4 - - E2+A4 - - E2+A4 - - - - E2+A4 - - - - E2+A4 - - E2+A4 - - E2+A4 - - E2+A4 - - - A9+G11 - - - - - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- - E2+A4 - - E2+A4 - - E2+A4 - - E2+A4 - - - - E2+A4 - - - - E2+A4 - - E2+A4 - - E2+A4 - - E2+A4 - - - A9+G11 - - - - - - - - - - - - - -"
         },
         {
-          "times": 1,
-          "items": "- - E2+A4 - - E2+A4 - - E2+A4 - - E2+A4 - - - - E2+A4 - - - - E2+A4 - - E2+A4 - - E2+A4 - - E2+A4 - - - A9+G11 - - - - - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- - E2+A4 - - E2+A4 - - E2+A4 - - E2+A4 - - - - E2+A4 - - - - E2+A4 - - E2+A4 - - E2+A4 - - E2+A4 - - - A9+G11 - - - - - - - - - - - - - -"
         },
         {
-          "times": 1,
-          "items": "- - A5+G7 - - A5+G7 - - A5+G7 - - A5+G7 - - - - A5+G7 - - - - A5+G7 - - A5+G7 - - A5+G7 - - A5+G7 - - A5+G7 - - - - A5+G7 - - A5+G7 - - A5+G7 - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- - A5+G7 - - A5+G7 - - A5+G7 - - A5+G7 - - - - A5+G7 - - - - A5+G7 - - A5+G7 - - A5+G7 - - A5+G7 - - A5+G7 - - - - A5+G7 - - A5+G7 - - A5+G7 - - - - -"
         },
         {
-          "times": 1,
-          "items": "- - E2+A4 - - E2+A4 - - E2+A4 - - E2+A4 - - - - E2+A4 - - - - E2+A4 - - E2+A4 - - E2+A4 - - E2+A4 - - - - - - - - - - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- - E2+A4 - - E2+A4 - - E2+A4 - - E2+A4 - - - - E2+A4 - - - - E2+A4 - - E2+A4 - - E2+A4 - - E2+A4 - - - - - - - - - - - - - - - - - - -"
         }
       ]
     }

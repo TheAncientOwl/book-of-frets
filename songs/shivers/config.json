@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Shivers",
   "artists": ["Ed Sheeran"],
@@ -17,53 +17,69 @@
   "sections": {
     "v": {
       "name": "verse",
-      "type": "chords-v1",
       "times": 3,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 Bm 1 G 1 D 1 A 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 Bm 1 G 1 D 1 A 1"]]]
+            }
+          ]
         }
       ]
     },
     "c1": {
       "name": "chorus 1",
-      "type": "chords-v1",
       "times": 2,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["1 Bm 2 G 2 D 2 A 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["1 Bm 2 G 2 D 2 A 1"]]]
+            }
+          ]
         }
       ]
     },
     "bridge": {
       "name": "bridge",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["2 Bm 1 G 1 D 1 A 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["3 Bm 4 G 4 D 4 A 4"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["2 Bm 1 G 1 D 1 A 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["3 Bm 4 G 4 D 4 A 4"]]]
+            }
+          ]
         }
       ]
     },
     "c2": {
       "name": "chorus 2",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["4 Bm 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["1 G 2 D 2 A 1", "1 Bm 2 G 2 D 2 A 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["4 Bm 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["1 G 2 D 2 A 1", "1 Bm 2 G 2 D 2 A 1"]]]
+            }
+          ]
         }
       ]
     }

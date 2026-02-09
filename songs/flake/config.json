@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Flake",
   "artists": ["Jack Johnson"],
@@ -16,98 +16,130 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords-v1",
       "times": 2,
-      "data": [
+      "entries": [
         {
-          "times": 2,
-          "items": [[["0 Dm_5fr 1 F_1fr 1 Bb_6fr 1 F_1fr 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 2,
+              "items": [[["0 Dm_5fr 1 F_1fr 1 Bb_6fr 1 F_1fr 1"]]]
+            }
+          ]
         }
       ]
     },
     "v": {
       "name": "verse",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 3,
-          "items": [[["0 Dm_5fr 1 F_1fr 1 Bb_6fr 1 F_1fr 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 Dm_5fr 1 F_1fr 1 Bb_6fr 1 C_8fr 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 3,
+              "items": [[["0 Dm_5fr 1 F_1fr 1 Bb_6fr 1 F_1fr 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 Dm_5fr 1 F_1fr 1 Bb_6fr 1 C_8fr 1"]]]
+            }
+          ]
         }
       ]
     },
     "c1": {
       "name": "chorus 1",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 2,
-          "items": [[["0 F_1fr 1 C_3fr 1 Dm_5fr 1 A_5fr 1", "0 Bb_6fr 1 C_8fr 1 F_1fr 1 C_8fr 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 2,
+              "items": [
+                [["0 F_1fr 1 C_3fr 1 Dm_5fr 1 A_5fr 1", "0 Bb_6fr 1 C_8fr 1 F_1fr 1 C_8fr 1"]]
+              ]
+            }
+          ]
         }
       ]
     },
     "v2": {
       "name": "verse",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 2,
-          "items": [[["1 Dm_5fr 1 F_1fr 1 Bb_6fr 1 F_1fr 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 Dm_5fr 1 F_1fr 1 Bb_6fr 1 F_1fr 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 Dm_5fr 1 F_1fr 1 Bb_6fr 1 C_8fr 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 2,
+              "items": [[["1 Dm_5fr 1 F_1fr 1 Bb_6fr 1 F_1fr 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 Dm_5fr 1 F_1fr 1 Bb_6fr 1 F_1fr 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 Dm_5fr 1 F_1fr 1 Bb_6fr 1 C_8fr 1"]]]
+            }
+          ]
         }
       ]
     },
     "c2": {
       "name": "chorus 2",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 3,
-          "items": [[["0 F_1fr 1 C_3fr 1 Dm_5fr 1 A_5fr 1", "0 Bb_6fr 1 C_8fr 1 F_1fr 1 C_8fr 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 3,
+              "items": [
+                [["0 F_1fr 1 C_3fr 1 Dm_5fr 1 A_5fr 1", "0 Bb_6fr 1 C_8fr 1 F_1fr 1 C_8fr 1"]]
+              ]
+            }
+          ]
         }
       ]
     },
     "o1": {
       "name": "outro pt.1",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["2 F_1fr 8"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["2 F_1fr 8"]]]
+            }
+          ]
         }
       ]
     },
     "o2": {
       "name": "outro pt.2",
-      "type": "chords-v1",
       "times": 3,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["2 F_1fr 1 Bb_1fr 1 F_1fr 1 C_3fr 1", "2 F_1fr 1 Bb_1fr 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["3 C_3fr 1 Bb_1fr 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["2 F_1fr 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["2 F_1fr 1 Bb_1fr 1 F_1fr 1 C_3fr 1", "2 F_1fr 1 Bb_1fr 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["3 C_3fr 1 Bb_1fr 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["2 F_1fr 1"]]]
+            }
+          ]
         }
       ]
     }

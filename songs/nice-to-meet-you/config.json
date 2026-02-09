@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Nice to Meet You",
   "artists": ["Myles Smith"],
@@ -11,56 +11,76 @@
   "sections": {
     "v": {
       "name": "verse",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 2,
-          "items": [[["0 Em 2 C 2 G 4"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 2,
+              "items": [[["0 Em 2 C 2 G 4"]]]
+            }
+          ]
         }
       ]
     },
     "pr": {
       "name": "prechorus",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 Em 2 C 2 G 2 D 2", "0 Em 2 C 2 G 2"], ["1 D 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 Em 2 C 2 G 2 D 2", "0 Em 2 C 2 G 2"], ["1 D 1"]]]
+            }
+          ]
         }
       ]
     },
     "c": {
       "name": "chorus",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 4,
-          "items": [[["0 Em 2 C 2 G 2 D 2"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 4,
+              "items": [[["0 Em 2 C 2 G 2 D 2"]]]
+            }
+          ]
         }
       ]
     },
     "po": {
       "name": "post chorus",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 Em 1 C 1 G 1 D 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 Em 1 C 1 G 1 D 1"]]]
+            }
+          ]
         }
       ]
     },
     "outro": {
       "name": "outro",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["1 Em 1 C 1 G 1 D 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["1 Em 1 C 1 G 1 D 1"]]]
+            }
+          ]
         }
       ]
     }

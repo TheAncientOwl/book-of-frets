@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Just the Two of Us | Lvl 1",
   "artists": ["Grover Washington Jr."],
@@ -15,24 +15,28 @@
   "sections": {
     "m": {
       "name": "main progression",
-      "type": "chords-v1",
       "times": 404,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 CM7 1"], ["1 B7 2"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 Em 1"], ["1 Dm7 1 G7 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 CM7 1"], ["1 B7 2"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["2 Em 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 CM7 1"], ["1 B7 2"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 Em 1"], ["1 Dm7 1 G7 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 CM7 1"], ["1 B7 2"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["2 Em 1"]]]
+            }
+          ]
         }
       ]
     }
