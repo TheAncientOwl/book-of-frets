@@ -6,12 +6,11 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 1.2
+ * @version 1.3
  * @description App menu component.
  */
 
 import { useSessionStorage } from '@/common/hooks/useSessionStorage';
-import { NavigationList } from '@/components/AppMenu/Navigation/List';
 import { SessionStorageKeys } from '@/store/common/storageKeys';
 import {
   Box,
@@ -43,6 +42,7 @@ import { lazy, Suspense } from 'react';
 
 const GuitarTuner = lazy(() => import('@/components/AppMenu/GuitarTuner'));
 const Settings = lazy(() => import('@/components/AppMenu/Settings'));
+const NavigationList = lazy(() => import('@/components/AppMenu/Navigation/List'));
 
 const TabHeader = (props: PropsWithChildren) => {
   const theme = useAppStore(state => state.appTheme.appMenu.tabs);
@@ -153,13 +153,17 @@ export const AppMenu = () => {
 
               <TabPanels>
                 <TabPanel>
-                  <NavigationList onItemClick={onClose} />
-                  <Divider
-                    mt='1em'
-                    mb='1em'
-                    // [*] theme colors
-                    borderColor={theme.items.navigation.routeLink}
-                  />
+                  {activeTab === 0 && (
+                    <>
+                      <NavigationList onItemClick={onClose} />
+                      <Divider
+                        mt='1em'
+                        mb='1em'
+                        // [*] theme colors
+                        borderColor={theme.items.navigation.routeLink}
+                      />
+                    </>
+                  )}
                 </TabPanel>
 
                 <TabPanel>

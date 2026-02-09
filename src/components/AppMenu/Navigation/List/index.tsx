@@ -6,7 +6,7 @@
  *
  * @file NavigationList.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Navigation links.
  */
 
@@ -57,3 +57,5 @@ export const NavigationList = (props: TNavigationListProps) => {
     </Box>
   );
 };
+
+export default NavigationList;
