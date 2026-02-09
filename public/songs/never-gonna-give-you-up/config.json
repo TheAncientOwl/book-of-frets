@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Never Gonna Give You Up",
   "artists": ["Rick Astley"],
@@ -15,53 +15,69 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords-v1",
       "times": 4,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 Ft 1"], ["1 G 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 Em 1"], ["1 Am 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 Ft 1"], ["1 G 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 Em 1"], ["1 Am 1"]]]
+            }
+          ]
         }
       ]
     },
     "v": {
       "name": "verse",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 4,
-          "items": [[["2 Ft 1 G 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 4,
+              "items": [[["2 Ft 1 G 1"]]]
+            }
+          ]
         }
       ]
     },
     "pr": {
       "name": "prechorus",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["2 Ft 1 G 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["2 Ft 1 G 1"]]]
+            }
+          ]
         }
       ]
     },
     "c": {
       "name": "chorus",
-      "type": "chords-v1",
       "times": 4,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 Ft 1"], ["1 G 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 Em 1"], ["1 Am 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 Ft 1"], ["1 G 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 Em 1"], ["1 Am 1"]]]
+            }
+          ]
         }
       ]
     }

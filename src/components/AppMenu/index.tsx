@@ -6,7 +6,7 @@
  *
  * @file AppMenu.tsx
  * @author Alexandru Delegeanu
- * @version 1.1
+ * @version 1.2
  * @description App menu component.
  */
 
@@ -195,7 +195,7 @@ export const AppMenu = () => {
                 color={theme.copyright.color}
                 _hover={{ color: theme.copyright.hoverColor }}
               >
-                Copyright <Icon as={MdCopyright} /> 2025 BookOfFrets
+                Copyright <Icon as={MdCopyright} /> 2026 BookOfFrets
               </Text>
             </ChakraLink>
           </DrawerFooter>

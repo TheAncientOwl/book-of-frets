@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Little Thing Called Love",
   "artists": ["Queen"],
@@ -19,98 +19,116 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 D 4"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 D 4"]]]
+            }
+          ]
         }
       ]
     },
     "v": {
       "name": "verse",
-      "type": "chords-v1",
       "times": 2,
-      "data": [
+      "entries": [
         {
-          "times": 2,
-          "items": [[["0 D 2 G 1"], ["1 C 1 G 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 D 1"], ["1 Bb 1 C 1"], ["0 D 2"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 2,
+              "items": [[["0 D 2 G 1"], ["1 C 1 G 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 D 1"], ["1 Bb 1 C 1"], ["0 D 2"]]]
+            }
+          ]
         }
       ]
     },
     "c1": {
       "name": "chorus 1",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 G 2"], ["2 C 1"], ["0 G 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["3 Bb 2"], ["1 E 1 A 1"], ["6 F 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 G 2"], ["2 C 1"], ["0 G 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["3 Bb 2"], ["1 E 1 A 1"], ["6 F 1"]]]
+            }
+          ]
         }
       ]
     },
     "c2": {
       "name": "chorus 2",
-      "type": "gtab-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "- - - - A5 - A4 - A3 - - | - - - - E5 - E4 - E3 - - | - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - | - G2 - G2 - G0 - G0 - D4 - D4 - D2 - D2 -"
+          "renderer": "gtab-v1",
+          "data": "- - - - A5 - A4 - A3 - - | - - - - E5 - E4 - E3 - - | - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - | - G2 - G2 - G0 - G0 - D4 - D4 - D2 - D2 -"
         }
       ]
     },
     "s1": {
       "name": "solo 1",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["4 Bb 2"], ["5 D 1"], ["1 G 1"], ["4 D 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["4 Bb 2"], ["5 D 1"], ["1 E 1 A 1"], ["6 F 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["4 Bb 2"], ["5 D 1"], ["1 G 1"], ["4 D 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["4 Bb 2"], ["5 D 1"], ["1 E 1 A 1"], ["6 F 1"]]]
+            }
+          ]
         }
       ]
     },
     "s2": {
       "name": "solo 2",
-      "type": "gtab-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "- - - - A5 - A4 - A3 - - | - - - - E5 - E4 - E3 - - | - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - | - A0+D2+G2+B2 - - - - - - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "- - - - A5 - A4 - A3 - - | - - - - E5 - E4 - E3 - - | - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - E0+A2+D2+G1+B0 - | - A0+D2+G2+B2 - - - - - - - - - - - - - - -"
         }
       ]
     },
     "o": {
       "name": "outro",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 2,
-          "items": [[["0 D 2 G 1"], ["1 C 1 G 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 D 1"]]]
-        },
-        {
-          "times": 404,
-          "items": [[["1 Bb 1 C 1"], ["0 D 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 2,
+              "items": [[["0 D 2 G 1"], ["1 C 1 G 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 D 1"]]]
+            },
+            {
+              "times": 404,
+              "items": [[["1 Bb 1 C 1"], ["0 D 1"]]]
+            }
+          ]
         }
       ]
     }

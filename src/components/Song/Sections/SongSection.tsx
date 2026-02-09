@@ -6,7 +6,7 @@
  *
  * @file SongSection.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 2.0
  * @description Render song section.
  */
 
@@ -15,7 +15,7 @@ import type {
   TSongSectionLyrics,
   TStrummingPattern,
 } from '@/common/types/song.types';
-import { SectionRenderer } from '@/components/Song/Sections/Renderers';
+import { SongSectionEntry } from '@/components/Song/Sections/SongSectionEntry';
 import { useAppStore } from '@/store/index';
 import { Accordion, AccordionButton, AccordionIcon, AccordionPanel } from '@/ui/Accordion';
 import { Flex, Heading, Tag, Text } from '@chakra-ui/react';
@@ -80,20 +80,16 @@ export const SongSection = (props: TSongSectionProps) => {
       </AccordionButton>
 
       <AccordionPanel>
-        <Flex
-          direction='column'
-          alignItems='center'
-          gap='1em'
-          padding={['1.1em 0em', '1.1em 1em']}
-          overflowX={['auto', 'hidden']}
-        >
-          <SectionRenderer
-            type={props.type}
-            data={props.data}
-            strumms={props.strumms}
-            showLyrics={props.showLyrics}
-            lyrics={props.lyrics}
-          />
+        <Flex direction='column' gap='1em'>
+          {props.entries.map((entry, idx) => (
+            <SongSectionEntry
+              key={idx}
+              entry={entry}
+              strumms={props.strumms}
+              showLyrics={props.showLyrics}
+              lyrics={props.lyrics}
+            />
+          ))}
         </Flex>
       </AccordionPanel>
     </Accordion>

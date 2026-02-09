@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Golden",
   "artists": ["HUNTR/X"],
@@ -11,121 +11,157 @@
   "sections": {
     "i": {
       "name": "intro",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 C 1 G 1 D 1 Em 1", "0 C 1 G 1 D 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["1 Em 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 C 1 G 1 D 1 Em 1", "0 C 1 G 1 D 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["1 Em 1"]]]
+            }
+          ]
         }
       ]
     },
     "v1": {
       "name": "verse 1",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 4,
-          "items": [[["0 C 1 G 1 D 1 Em 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 4,
+              "items": [[["0 C 1 G 1 D 1 Em 1"]]]
+            }
+          ]
         }
       ]
     },
     "p1": {
       "name": "prechorus 1",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 C 1 G 1 D 1 Em 1", "0 C 1 G 1 D 1 D 1", "0 C 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 C 1 G 1 D 1 Em 1", "0 C 1 G 1 D 1 D 1", "0 C 1"]]]
+            }
+          ]
         }
       ]
     },
     "c1": {
       "name": "chorus 1",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 3,
-          "items": [[["0 D 1"], ["2 G 1 D 1"], ["0 Em 1 C 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 D 1"], ["2 G 1 D 1"], ["0 Em 3"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 3,
+              "items": [[["0 D 1"], ["2 G 1 D 1"], ["0 Em 1 C 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 D 1"], ["2 G 1 D 1"], ["0 Em 3"]]]
+            }
+          ]
         }
       ]
     },
     "v2": {
       "name": "verse 2",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [
-            [
-              ["0 Em 1", "0 D 1 Bm 1 C 1"],
-              ["0 G 1", "0 D 1 Bm 1 C 1"]
-            ]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [
+                [
+                  ["0 Em 1", "0 D 1 Bm 1 C 1"],
+                  ["0 G 1", "0 D 1 Bm 1 C 1"]
+                ]
+              ]
+            }
           ]
         }
       ]
     },
     "p2": {
       "name": "prechorus 2",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 Em 1 D 1 Bm 1 C 1", "0 Em 1 Bm 1 D 1 C 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 Em 1 D 1 Bm 1 C 1", "0 Em 1 Bm 1 D 1 C 1"]]]
+            }
+          ]
         }
       ]
     },
     "c2": {
       "name": "chorus 2",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 3,
-          "items": [[["0 D 1"], ["2 G 1 D 1"], ["0 Em 1 C 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 D 1"], ["2 G 1 D 1"], ["0 Em 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 3,
+              "items": [[["0 D 1"], ["2 G 1 D 1"], ["0 Em 1 C 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 D 1"], ["2 G 1 D 1"], ["0 Em 1"]]]
+            }
+          ]
         }
       ]
     },
     "po": {
       "name": "post chorus",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 2,
-          "items": [[["0 C 1 D 1"], ["2 G 1 D 1"], ["0 Em 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 2,
+              "items": [[["0 C 1 D 1"], ["2 G 1 D 1"], ["0 Em 1"]]]
+            }
+          ]
         }
       ]
     },
     "o": {
       "name": "outro",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 2,
-          "items": [[["0 C 1 G 1 D 1 Em 1", "0 C 1 G 1 D 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["1 Em 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 2,
+              "items": [[["0 C 1 G 1 D 1 Em 1", "0 C 1 G 1 D 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["1 Em 1"]]]
+            }
+          ]
         }
       ]
     }

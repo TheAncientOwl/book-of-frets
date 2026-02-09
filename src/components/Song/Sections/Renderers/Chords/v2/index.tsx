@@ -4,15 +4,15 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/oopsie-logsy/blob/main/LICENSE
  *
- * @file index.tsx
+ * @file CgordsV2.tsx
  * @author Alexandru Delegeanu
- * @version 1.2
+ * @version 2.0
  * @description Render song chords section.
  */
 
 import type { TChord } from '@/common/types/chord.types';
 import type {
-  TChordsSectionItem,
+  TChordsV2SectionEntry,
   TSongSectionLyrics,
   TStrummingPattern,
 } from '@/common/types/song.types';
@@ -43,7 +43,7 @@ const ChordsV1Lyrics = lazy(() =>
 );
 
 type TChordsSectionProps = {
-  data: TChordsSectionItem[];
+  data: TChordsV2SectionEntry[];
   strummingPatterns: TStrummingPattern[];
   showLyrics: boolean;
   lyrics: TSongSectionLyrics;
@@ -269,7 +269,7 @@ const ChordsLine = (props: TChordsLineProps) => {
   );
 };
 
-export const ChordsSection = (props: TChordsSectionProps) => {
+export const ChordsV2Renderer = (props: TChordsSectionProps) => {
   const renderOne = (data: string[]) => {
     const colsData = new Array<Array<string>>();
     const times = new Array<string>();

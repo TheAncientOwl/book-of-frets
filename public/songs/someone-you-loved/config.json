@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Someone You Loved",
   "artists": ["Lewis Capaldi"],
@@ -11,86 +11,79 @@
   "sections": {
     "mv1": {
       "name": "main riff var.",
-      "type": "gtab-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "[C] - A3+e0 - G0 - e0 - G0 - e0 - G0 - e0 - G0 - | [G] - E3+B0 - D0 - B0 - D0 - B0 - D0 - B0 - D0 - | [Am] - A0+B1 - D2 - B1 - D2 - B1 - D2 - B1 - D2 - | [F] - E1+G2 - A3 - G2 - A3 - G2 - A3 - G0 - A3 -"
+          "renderer": "gtab-v1",
+          "data": "[C] - A3+e0 - G0 - e0 - G0 - e0 - G0 - e0 - G0 - | [G] - E3+B0 - D0 - B0 - D0 - B0 - D0 - B0 - D0 - | [Am] - A0+B1 - D2 - B1 - D2 - B1 - D2 - B1 - D2 - | [F] - E1+G2 - A3 - G2 - A3 - G2 - A3 - G0 - A3 -"
         }
       ]
     },
     "m1": {
       "name": "main riff",
-      "type": "gtab-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "[C] - A3+e0 - G0 - e0 - G0 - e0 - G0 - e0 - G0 - | [G] - E3+B0 - D0 - B0 - D0 - B0 - D0 - B0 - D0 - | [Am] - A0+B1 - D2 - B1 - D2 - B1 - D2 - B1 - D2 - | [F] - E1+G2 - A3 - G2 - A3 - G2 - A3 - G2 - A3 -"
+          "renderer": "gtab-v1",
+          "data": "[C] - A3+e0 - G0 - e0 - G0 - e0 - G0 - e0 - G0 - | [G] - E3+B0 - D0 - B0 - D0 - B0 - D0 - B0 - D0 - | [Am] - A0+B1 - D2 - B1 - D2 - B1 - D2 - B1 - D2 - | [F] - E1+G2 - A3 - G2 - A3 - G2 - A3 - G2 - A3 -"
         }
       ]
     },
     "m2": {
       "name": "main riff",
-      "type": "gtab-v1",
       "times": 3,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "[C] - A3+e0 - G0 - e0 - G0 - e0 - G0 - e0 - G0 - | [G] - E3+B0 - D0 - B0 - D0 - B0 - D0 - B0 - D0 - | [Am] - A0+B1 - D2 - B1 - D2 - B1 - D2 - B1 - D2 - | [F] - E1+G2 - A3 - G2 - A3 - G2 - A3 - G2 - A3 -"
+          "renderer": "gtab-v1",
+          "data": "[C] - A3+e0 - G0 - e0 - G0 - e0 - G0 - e0 - G0 - | [G] - E3+B0 - D0 - B0 - D0 - B0 - D0 - B0 - D0 - | [Am] - A0+B1 - D2 - B1 - D2 - B1 - D2 - B1 - D2 - | [F] - E1+G2 - A3 - G2 - A3 - G2 - A3 - G2 - A3 -"
         }
       ]
     },
     "m3": {
       "name": "main riff",
-      "type": "gtab-v1",
       "times": 4,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "[C] - A3+e0 - G0 - e0 - G0 - e0 - G0 - e0 - G0 - | [G] - E3+B0 - D0 - B0 - D0 - B0 - D0 - B0 - D0 - | [Am] - A0+B1 - D2 - B1 - D2 - B1 - D2 - B1 - D2 - | [F] - E1+G2 - A3 - G2 - A3 - G2 - A3 - G2 - A3 -"
+          "renderer": "gtab-v1",
+          "data": "[C] - A3+e0 - G0 - e0 - G0 - e0 - G0 - e0 - G0 - | [G] - E3+B0 - D0 - B0 - D0 - B0 - D0 - B0 - D0 - | [Am] - A0+B1 - D2 - B1 - D2 - B1 - D2 - B1 - D2 - | [F] - E1+G2 - A3 - G2 - A3 - G2 - A3 - G2 - A3 -"
         }
       ]
     },
     "b": {
       "name": "bridge",
-      "type": "gtab-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "[Dm] - D0+e1 - G2 - e1 - G2 - e1 - G2 - e1 - G2 - | [Am] - A0+B1 - D2 - B1 - D2 - B1 - D2 - B1 - D2 - | [G] - E3+B0 - D0 - B0 - D0 - B0 - D0 - B0 - D0 - | [G] - E3+B0 - D0 - B0 - D0 - [Am] - A0+B1 - D2 - B1 - D2 -"
+          "renderer": "gtab-v1",
+          "data": "[Dm] - D0+e1 - G2 - e1 - G2 - e1 - G2 - e1 - G2 - | [Am] - A0+B1 - D2 - B1 - D2 - B1 - D2 - B1 - D2 - | [G] - E3+B0 - D0 - B0 - D0 - B0 - D0 - B0 - D0 - | [G] - E3+B0 - D0 - B0 - D0 - [Am] - A0+B1 - D2 - B1 - D2 -"
         },
         {
-          "times": 1,
-          "items": "[Dm] - D0+e1 - G2 - e1 - G2 - e1 - G2 - e1 - G2 - | [Am] - A0+B1 - D2 - B1 - D2 - B1 - D2 - B1 - D2 - | [G] - E3+B0 - D0 - B0 - D0 - B0 - D0 - B0 - D0 - | - - - - - - - - - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "[Dm] - D0+e1 - G2 - e1 - G2 - e1 - G2 - e1 - G2 - | [Am] - A0+B1 - D2 - B1 - D2 - B1 - D2 - B1 - D2 - | [G] - E3+B0 - D0 - B0 - D0 - B0 - D0 - B0 - D0 - | - - - - - - - - - - - - - - - - - -"
         }
       ]
     },
     "sc": {
       "name": "soft chorus",
-      "type": "gtab-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "[C] - A3+B1+e0 - - - - - - - - - - - - - - - | [G] - E3+G0+B0 - - - - - - - - - - - - - - - | [Am] - A0+G2+B1 - - - - - - - - - - - - - - - | [F] - E1+D3+G2 - - - - - - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "[C] - A3+B1+e0 - - - - - - - - - - - - - - - | [G] - E3+G0+B0 - - - - - - - - - - - - - - - | [Am] - A0+G2+B1 - - - - - - - - - - - - - - - | [F] - E1+D3+G2 - - - - - - - - - - - - - - -"
         },
         {
-          "times": 1,
-          "items": "[C] - A3+B1+e0 - - - - - - - - - - - - - - - | [G] - E3+G0+B0 - - - - - - - - - - - - - - - | [Am] - A0+B1 - D2 - B1 - D2 - B1 - D2 - B1 - D2 - | [F] - E1+G2 - A3 - G2 - A3 - G2 - A3 - G0 - A3 -"
+          "renderer": "gtab-v1",
+          "data": "[C] - A3+B1+e0 - - - - - - - - - - - - - - - | [G] - E3+G0+B0 - - - - - - - - - - - - - - - | [Am] - A0+B1 - D2 - B1 - D2 - B1 - D2 - B1 - D2 - | [F] - E1+G2 - A3 - G2 - A3 - G2 - A3 - G0 - A3 -"
         }
       ]
     },
     "o": {
       "name": "outro",
-      "type": "gtab-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "[C] A3+D2+G0+B1+e0 - - - - - - - - - - - - - - - | [G] - E3+A2+D0+G0+B0 - - - - - - - - - - - - - - - | [Am] - A0+D2+G2+B1+e0 - - - - - - - - - - - - - - - | [F] - E1+A3+D3+G2+B1 - - - - - - - - - - - - - - -"
+          "renderer": "gtab-v1",
+          "data": "[C] A3+D2+G0+B1+e0 - - - - - - - - - - - - - - - | [G] - E3+A2+D0+G0+B0 - - - - - - - - - - - - - - - | [Am] - A0+D2+G2+B1+e0 - - - - - - - - - - - - - - - | [F] - E1+A3+D3+G2+B1 - - - - - - - - - - - - - - -"
         }
       ]
     }

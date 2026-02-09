@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Just the Two of Us | Lvl 2",
   "artists": ["Grover Washington Jr."],
@@ -19,85 +19,101 @@
   "sections": {
     "v": {
       "name": "verse",
-      "type": "chords-v1",
       "times": 2,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 CM7 1"], ["1 B7 2"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 Em 1"], ["1 Dm7 1 G7 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 CM7 1"], ["1 B7 2"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["2 Em 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 CM7 1"], ["1 B7 2"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 Em 1"], ["1 Dm7 1 G7 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 CM7 1"], ["1 B7 2"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["2 Em 1"]]]
+            }
+          ]
         }
       ]
     },
     "c": {
       "name": "chorus",
-      "type": "chords-v1",
       "times": 2,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["3 CM7 1 B7 1"], ["1 Em7 1 Ebm7 1 Dm7 1 G7 1"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["3 CM7 1 B7 1"], ["2 Em 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["3 CM7 1 B7 1"], ["1 Em7 1 Ebm7 1 Dm7 1 G7 1"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["3 CM7 1 B7 1"], ["2 Em 1"]]]
+            }
+          ]
         }
       ]
     },
     "b1": {
       "name": "bridge 1",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 CM7 1"], ["1 B7 2"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 BbM7 1"], ["1 A7 2"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 AbM7 1"], ["1 G7 2"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["4 CM7 1"], ["5 F13 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 CM7 1"], ["1 B7 2"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 BbM7 1"], ["1 A7 2"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 AbM7 1"], ["1 G7 2"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["4 CM7 1"], ["5 F13 1"]]]
+            }
+          ]
         }
       ]
     },
     "b2": {
       "name": "bridge 2",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 CM7 1"], ["1 B7 2"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 BbM7 1"], ["1 A7 2"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["0 AbM7 1"], ["1 G7 2"]]]
-        },
-        {
-          "times": 1,
-          "items": [[["4 CM7 1"], ["6 F13 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 CM7 1"], ["1 B7 2"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 BbM7 1"], ["1 A7 2"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["0 AbM7 1"], ["1 G7 2"]]]
+            },
+            {
+              "times": 1,
+              "items": [[["4 CM7 1"], ["6 F13 1"]]]
+            }
+          ]
         }
       ]
     }

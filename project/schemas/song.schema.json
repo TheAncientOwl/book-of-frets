@@ -7,7 +7,7 @@
     "version": {
       "type": "string",
       "pattern": "^\\d+\\.\\d+\\.\\d+$",
-      "default": "1.0.0"
+      "default": "2.0.0"
     },
     "contributors": {
       "type": "array",
@@ -67,66 +67,81 @@
         "additionalProperties": false,
         "properties": {
           "name": { "type": "string" },
-          "type": { "type": "string", "enum": ["chords-v1", "chords-v2", "gtab-v1"] },
           "times": { "type": "number", "default": 1, "minimum": 1 },
-          "data": {
+          "entries": {
             "type": "array",
             "items": {
               "oneOf": [
                 {
-                  "type": "array",
-                  "items": {
-                    "type": "string",
-                    "oneOf": [
-                      {
-                        "pattern": "^x\\d+(?: [A-Za-z0-9#/()_+-|!]+ [0-9]+)+$"
-                      },
-                      {
-                        "pattern": "^>\\s*(?:\\d+\\s*)+$"
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "renderer": { "type": "string", "enum": ["chords-v1"] },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "times": { "type": "number", "default": 1 },
+                          "items": {
+                            "type": "array",
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "pattern": "^[0-9]+(?: [A-Za-z0-9#/()_+-|]+ [0-9]+)+$"
+                                }
+                              }
+                            }
+                          }
+                        }
                       }
-                    ]
-                  }
+                    }
+                  },
+                  "required": ["renderer", "data"]
                 },
                 {
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
-                    "times": {
-                      "type": "integer",
-                      "minimum": 1
-                    },
-                    "items": {
-                      "oneOf": [
-                        {
-                          "type": "string"
-                        },
-                        {
-                          "type": "array",
-                          "items": {
-                            "oneOf": [
-                              {
-                                "type": "array",
-                                "items": {
-                                  "type": "array",
-                                  "items": {
-                                    "type": "string",
-                                    "pattern": "^[0-9]+(?: [A-Za-z0-9#/()_+-|]+ [0-9]+)+$"
-                                  }
-                                }
-                              }
-                            ]
-                          }
+                    "renderer": { "type": "string", "enum": ["chords-v2"] },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "oneOf": [
+                            {
+                              "pattern": "^x\\d+(?: [A-Za-z0-9#/()_+-|!]+ [0-9]+)+$"
+                            },
+                            {
+                              "pattern": "^>\\s*(?:\\d+\\s*)+$"
+                            }
+                          ]
                         }
-                      ]
+                      }
                     }
                   },
-                  "required": ["times", "items"]
+                  "required": ["renderer", "data"]
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "renderer": { "type": "string", "enum": ["gtab-v1"] },
+                    "data": { "type": "string" }
+                  },
+                  "required": ["renderer", "data"]
                 }
               ]
             }
           }
         },
-        "required": ["name", "type", "times", "data"]
+        "required": ["name", "times", "entries"]
       }
     },
     "order": {

@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "All I Want For Christmas Is You",
   "artists": ["Mariah Carey"],
@@ -11,69 +11,93 @@
   "sections": {
     "ibd": {
       "name": "intro",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["0 G 1 Em 1 C 1 D 1"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["0 G 1 Em 1 C 1 D 1"]]]
+            }
+          ]
         }
       ]
     },
     "sv": {
       "name": "slow verse",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [
-            [["0 C 1 G/B 1 C 1 Cm_3fr 1", "0 G 1 B7 1 Em 1 Cm_3fr 1", "0 G 1 E7 1 Am7 1 D7 1"]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [
+                [["0 C 1 G/B 1 C 1 Cm_3fr 1", "0 G 1 B7 1 Em 1 Cm_3fr 1", "0 G 1 E7 1 Am7 1 D7 1"]]
+              ]
+            }
           ]
         }
       ]
     },
     "ibs": {
       "name": "break",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["1 G 4 Em 4 C 4 D 4"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["1 G 4 Em 4 C 4 D 4"]]]
+            }
+          ]
         }
       ]
     },
     "v": {
       "name": "verse",
-      "type": "chords-v1",
       "times": 2,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["1 G 16 C 8 Cm_3fr 8"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["1 G 16 C 8 Cm_3fr 8"]]]
+            }
+          ]
         }
       ]
     },
     "c": {
       "name": "chorus",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": [[["1 G 6 B7 2 Em 6 Cm_3fr 1", "0 G 4 E7 4 Am7 4 D7 4"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 1,
+              "items": [[["1 G 6 B7 2 Em 6 Cm_3fr 1", "0 G 4 E7 4 Am7 4 D7 4"]]]
+            }
+          ]
         }
       ]
     },
     "b": {
       "name": "bridge",
-      "type": "chords-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 2,
-          "items": [[["1 B7 8 Em 8 Cm_3fr 8", "0 G 4 E7 4 Am7 8 D 8"]]]
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 2,
+              "items": [[["1 B7 8 Em 8 Cm_3fr 8", "0 G 4 E7 4 Am7 8 D 8"]]]
+            }
+          ]
         }
       ]
     }

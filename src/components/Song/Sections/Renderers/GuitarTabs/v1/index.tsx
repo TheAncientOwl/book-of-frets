@@ -4,13 +4,13 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
- * @file TabChords.tsx
+ * @file GuitarTabsV1.tsx
  * @author Alexandru Delegeanu
- * @version 1.2
+ * @version 2.0
  * @description Render song strings pattern.
  */
 
-import type { TTabChords } from '@/common/types/song.types';
+import type { TGTabV1SectionData } from '@/common/types/song.types';
 import { useAppStore } from '@/store/index';
 import { Box, Divider, Flex, Text } from '@chakra-ui/react';
 
@@ -167,36 +167,30 @@ const parseItems = (items: string): { stringsToFrets: TStringToFrets; chords: TD
 };
 
 type TGuitarTabsV1Props = {
-  data: TTabChords[];
+  data: TGTabV1SectionData;
 };
 
-export const GuitarTabsV1 = (props: TGuitarTabsV1Props) => {
+export const GuitarTabsV1Renderer = (props: TGuitarTabsV1Props) => {
   const theme = useAppStore(state => state.appTheme.song);
 
-  return (
-    <>
-      {props.data.map((item, idx) => {
-        const { stringsToFrets, chords } = parseItems(item.items);
+  const { stringsToFrets, chords } = parseItems(props.data);
 
-        return (
-          <Flex key={idx} direction='column' width='100%' overflowX='auto' fontSize={['1.2em']}>
-            <Box minWidth='max-content'>
-              {chords.length > 0 && <DisplayChords chords={chords} />}
-              <String name='e' frets={stringsToFrets.e} />
-              <String name='B' frets={stringsToFrets.B} />
-              <String name='G' frets={stringsToFrets.G} />
-              <String name='D' frets={stringsToFrets.D} />
-              <String name='A' frets={stringsToFrets.A} />
-              <String name='E' frets={stringsToFrets.E} />
-              <Divider
-                marginTop='1em'
-                // [*] theme colors
-                borderColor={theme.items.item.stringsPattern.divider}
-              />
-            </Box>
-          </Flex>
-        );
-      })}
-    </>
+  return (
+    <Flex direction='column' width='100%' overflowX='auto' fontSize={['1.2em']}>
+      <Box minWidth='max-content'>
+        {chords.length > 0 && <DisplayChords chords={chords} />}
+        <String name='e' frets={stringsToFrets.e} />
+        <String name='B' frets={stringsToFrets.B} />
+        <String name='G' frets={stringsToFrets.G} />
+        <String name='D' frets={stringsToFrets.D} />
+        <String name='A' frets={stringsToFrets.A} />
+        <String name='E' frets={stringsToFrets.E} />
+        <Divider
+          marginTop='1em'
+          // [*] theme colors
+          borderColor={theme.items.item.stringsPattern.divider}
+        />
+      </Box>
+    </Flex>
   );
 };

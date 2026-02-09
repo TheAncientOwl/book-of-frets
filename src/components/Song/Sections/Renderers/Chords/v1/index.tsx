@@ -4,16 +4,16 @@
  * -------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
- * @file ChordsChunk.tsx
+ * @file ChordsV1.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 2.0
  * @description Render song chords pattern.
  */
 
 import type {
   TSongSectionLyrics,
   TStrummingPattern,
-  TStrummingChords,
+  TChordsV1SectionEntry,
 } from '@/common/types/song.types';
 import { ChordsV1Item } from '@/components/Song/Sections/Renderers/Chords/v1/Item';
 import { ChordsV1Divider } from '@/components/Song/Sections/Renderers/Chords/v1/Divider';
@@ -29,13 +29,13 @@ const ChordsV1Lyrics = lazy(() =>
 );
 
 type TChordsV1Props = {
-  data: TStrummingChords[];
+  data: TChordsV1SectionEntry[];
   strumms: TStrummingPattern[];
   showLyrics: boolean;
   lyrics: TSongSectionLyrics;
 };
 
-export const ChordsV1 = (props: TChordsV1Props) => {
+export const ChordsV1Renderer = (props: TChordsV1Props) => {
   const { theme, settingsDisplaySectionTimes } = useShallowAppStore(state => ({
     theme: state.appTheme.song,
     settingsDisplaySectionTimes: state.songSettings.display.sectionTimes,

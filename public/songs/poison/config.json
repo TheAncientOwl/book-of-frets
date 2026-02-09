@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "contributors": ["TheAncientOwl"],
   "title": "Poison",
   "artists": ["Blake Roman", "Sam Haft", "Andrew Underberg"],
@@ -11,58 +11,55 @@
   "sections": {
     "00": {
       "name": "intro",
-      "type": "gtab-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "- G5 - G5 - G5 - G5 - D5 - D5 - D5 - D6 - D5 - G5 - G5 - G5 - G5 - D5 - D5 - D5 - D5 - D8 D6 - D5 - A6 - - A6 - A6 - A6 - A6 - A6 -"
+          "renderer": "gtab-v1",
+          "data": "- G5 - G5 - G5 - G5 - D5 - D5 - D5 - D6 - D5 - G5 - G5 - G5 - G5 - D5 - D5 - D5 - D5 - D8 D6 - D5 - A6 - - A6 - A6 - A6 - A6 - A6 -"
         },
         {
-          "times": 1,
-          "items": "- D8 - D6 - D5 - A8 - D5 - D5 - D5 -"
+          "renderer": "gtab-v1",
+          "data": "- D8 - D6 - D5 - A8 - D5 - D5 - D5 -"
         }
       ]
     },
     "01": {
       "name": "main",
-      "type": "gtab-v1",
       "times": 2,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "- G5 - G5 - G5 - G5 - D5 - D5 - D5 - D6 - D5 - G5 - G5 - G5 - G5 - D5 - D5 - D5 - D5 - D8 D6 - D5 - A6 - - A6 - A6 - A6 - A6 - A6 -"
+          "renderer": "gtab-v1",
+          "data": "- G5 - G5 - G5 - G5 - D5 - D5 - D5 - D6 - D5 - G5 - G5 - G5 - G5 - D5 - D5 - D5 - D5 - D8 D6 - D5 - A6 - - A6 - A6 - A6 - A6 - A6 -"
         },
         {
-          "times": 1,
-          "items": "- D8 - D6 - D5 - A8 - D5 - D5 - D5 - - A8 - D5 - A8 - A6 - E8 - D5 - D5 - A8 - A6 - A8 - D5 - A8 - A6 - A8 -"
+          "renderer": "gtab-v1",
+          "data": "- D8 - D6 - D5 - A8 - D5 - D5 - D5 - - A8 - D5 - A8 - A6 - E8 - D5 - D5 - A8 - A6 - A8 - D5 - A8 - A6 - A8 -"
         },
         {
-          "times": 1,
-          "items": "- A3+G5 - A3+G5 - A3+G5 - A3+G5 - | - A8+G10 - A6+G8 - | - A3+G5 - A3+G5 - A3+G5 - A3+G5 - | - A8+G10 - A6+G8 - A6+G8 - | - A5+G7 - A5+G7 - A5+G7 - A3+G5 - | - A5+G7 - A5+G7 - A3+G5 - | - A5+G7 - A5+G7 - A3+G5 - | - A5+G7 - A6+G8 -"
+          "renderer": "gtab-v1",
+          "data": "- A3+G5 - A3+G5 - A3+G5 - A3+G5 - | - A8+G10 - A6+G8 - | - A3+G5 - A3+G5 - A3+G5 - A3+G5 - | - A8+G10 - A6+G8 - A6+G8 - | - A5+G7 - A5+G7 - A5+G7 - A3+G5 - | - A5+G7 - A5+G7 - A3+G5 - | - A5+G7 - A5+G7 - A3+G5 - | - A5+G7 - A6+G8 -"
         },
         {
-          "times": 1,
-          "items": "- A3+G5 - A3+G5 - | - A8+G10 - A6+G8 - | - A3+G5 - A3+G5 - A3+G5 - | - A8+G10 - A6+G8 - | - A5+G7 - A5+G7 - A5+G7 - A3+G5 - | - A5+G7 - A5+G7 - A3+G5 - | - A5+G7 - A5+G7 - A3+G5 - | - A5+G7 - A6+G8 - A5+G7 -"
+          "renderer": "gtab-v1",
+          "data": "- A3+G5 - A3+G5 - | - A8+G10 - A6+G8 - | - A3+G5 - A3+G5 - A3+G5 - | - A8+G10 - A6+G8 - | - A5+G7 - A5+G7 - A5+G7 - A3+G5 - | - A5+G7 - A5+G7 - A3+G5 - | - A5+G7 - A5+G7 - A3+G5 - | - A5+G7 - A6+G8 - A5+G7 -"
         },
         {
-          "times": 1,
-          "items": "- B8 - B6 B9 - B8 - B6 - B6 - B6 - B8 - B6 - G8 - G5 - D8 - | - B6 - B6 - B6 - B8 - B6 - G8 - G5 - D8 - | - B8 - B6 - B9 - B8 - B6 - B6 - B6 - B8 - B6 - G8 - G5 - D8 - D8 - D8 - B6 - G8 -"
+          "renderer": "gtab-v1",
+          "data": "- B8 - B6 B9 - B8 - B6 - B6 - B6 - B8 - B6 - G8 - G5 - D8 - | - B6 - B6 - B6 - B8 - B6 - G8 - G5 - D8 - | - B8 - B6 - B9 - B8 - B6 - B6 - B6 - B8 - B6 - G8 - G5 - D8 - D8 - D8 - B6 - G8 -"
         }
       ]
     },
     "02": {
       "name": "outro",
-      "type": "gtab-v1",
       "times": 1,
-      "data": [
+      "entries": [
         {
-          "times": 1,
-          "items": "- B6 - G8 - G5 - G5 - G5 - G5 - | - B6 - G8 - - G7 - G7 - G7 G5 - G7 - G5 - G7 - G7 - G5 - G7 - G8 - G5 - G5 -"
+          "renderer": "gtab-v1",
+          "data": "- B6 - G8 - G5 - G5 - G5 - G5 - | - B6 - G8 - - G7 - G7 - G7 G5 - G7 - G5 - G7 - G7 - G5 - G7 - G8 - G5 - G5 -"
         },
         {
-          "times": 1,
-          "items": " - B6 - G8 - G5 - G5 - G5 - G5 - | - B6 - G8 - G7 - G7 - G7 - G5 - G7 - G5 - G7 - G7 - G5 - G7 - G8 - G7 - G5 -"
+          "renderer": "gtab-v1",
+          "data": " - B6 - G8 - G5 - G5 - G5 - G5 - | - B6 - G8 - G7 - G7 - G7 - G5 - G7 - G5 - G7 - G7 - G5 - G7 - G8 - G7 - G5 -"
         }
       ]
     }

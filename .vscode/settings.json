@@ -50,6 +50,7 @@
   // [icons]
   "material-icon-theme.folders.associations": {
     "covers": "images",
-    "state": "context"
+    "state": "context",
+    "_proto2": "proto"
   }
 }
