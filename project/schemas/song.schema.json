@@ -55,7 +55,7 @@
         "type": "array",
         "items": {
           "type": "string",
-          "enum": ["D", "U", "-", "Dx", "Ux", "X", "De", "Ue"]
+          "enum": ["D", "U", "-", "Dx", "Ux", "X", "De", "Ue", "|"]
         },
         "minItems": 1
       }
