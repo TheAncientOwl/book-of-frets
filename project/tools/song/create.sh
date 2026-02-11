@@ -4,7 +4,7 @@
 # -----------------------------------------------------------------------------
 # @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
 #
-# @file run.sh
+# @file create.sh
 # @author Alexandru Delegeanu
 # @version 1.0
 # @description Helper to generate song config boilerplate + cover images
@@ -40,7 +40,7 @@ echo ""
 
 # Webpify cover image
 webp_cover_dest_path="${cover_dest_path%.*}.webp"
-$BOOK_OF_FRETS_ROOT/project/tools/webpify/run.sh "$cover_dest_path" 85
+python3 $BOOK_OF_FRETS_ROOT/project/tools/webpify/run.py "$cover_dest_path" 85
 rm $cover_dest_path
 
 # Resize cover image

@@ -16,6 +16,6 @@ if [ -z "$BOOK_OF_FRETS_ROOT" ]; then
   exit 1
 fi
 
-$BOOK_OF_FRETS_ROOT/project/tools/image-resizer/run.sh "$1" 64 64
-$BOOK_OF_FRETS_ROOT/project/tools/image-resizer/run.sh "$1" 128 128
-$BOOK_OF_FRETS_ROOT/project/tools/image-resizer/run.sh "$1" 192 192
+python3 $BOOK_OF_FRETS_ROOT/project/tools/image-resizer/run.py "$1" 64 64
+python3 $BOOK_OF_FRETS_ROOT/project/tools/image-resizer/run.py "$1" 128 128
+python3 $BOOK_OF_FRETS_ROOT/project/tools/image-resizer/run.py "$1" 192 192

@@ -10,7 +10,6 @@
  @description Resize given image
 """
 
-
 from PIL import Image
 import sys
 import os
@@ -31,4 +30,6 @@ with Image.open(input_path) as img:
     resized = img.resize((width, height), Image.LANCZOS)
     resized.save(output_path)
 
-print(f"Resized: {os.path.basename(input_path)} -> {os.path.basename(output_path)} ({width}x{height})")
+print(
+    f"Resized: {os.path.basename(input_path)} -> {os.path.basename(output_path)} ({width}x{height})"
+)
