@@ -4,11 +4,13 @@
 # -----------------------------------------------------------------------------
 # @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
 #
-# @file make_pdf_themes.sh
+# @file render_pdf_themes.sh
 # @author Alexandru Delegeanu
 # @version 1.0
 # @description Runs @see make_pdf.py for a song with all themes
 #
+
+set -eo pipefail
 
 if [ -z "$1" ]; then
     echo "Usage: $0 <config_path>"
