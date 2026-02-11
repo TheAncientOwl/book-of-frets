@@ -71,6 +71,20 @@
       "chordIDs": ["Am", "F", "C", "G", "Dm"]
     },
     {
+      "title": "Sandman",
+      "artists": ["Ed Sheeran"],
+      "directory": "sandman",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "G", "Am", "F", "Dm"]
+    },
+    {
+      "title": "Slowly",
+      "artists": ["Ed Sheeran"],
+      "directory": "slowly",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "Am7", "E+", "F5", "Fsus2"]
+    },
+    {
       "title": "Cover Me In Sunshine",
       "artists": ["P!nk"],
       "directory": "cover-me-in-sunshine",
