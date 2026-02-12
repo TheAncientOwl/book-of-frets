@@ -85,6 +85,20 @@
       "chordIDs": ["C", "Am7", "E+", "F5", "Fsus2"]
     },
     {
+      "title": "The Night We Met (Studio)",
+      "artists": ["Lord Huron"],
+      "directory": "the-night-we-met-studio",
+      "type": ["electric"],
+      "chordIDs": ["F#m_9fr", "E_8fr", "A_5fr", "D_5fr"]
+    },
+    {
+      "title": "The Night We Met (Strummed)",
+      "artists": ["Lord Huron"],
+      "directory": "the-night-we-met",
+      "type": ["acoustic"],
+      "chordIDs": ["Em", "D", "G", "C"]
+    },
+    {
       "title": "Cover Me In Sunshine",
       "artists": ["P!nk"],
       "directory": "cover-me-in-sunshine",
