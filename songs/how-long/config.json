@@ -24,16 +24,14 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
+          "renderer": "chords-v2",
           "data": [
-            {
-              "times": 1,
-              "items": [[["0 Dm 1 Dm 1 | 1 Em 1 Em 1", "0 Dm 1 Dm 1 | 1 Em 1 Am 1"]]]
-            },
-            {
-              "times": 1,
-              "items": [[["1 Dm 1 - 1 | 1 Em 1 - 1", "1 F 1 - 1 | 1 Esus4 1 E 1"]]]
-            }
+            "x1 Dm 1 Dm 1 | 0 Em 1 Em 1",
+            "x1 Dm 1 Dm 1 | 0 Em 1 Am 1",
+            "> 0",
+            "x1 Dm 1 - 1 | 0 Em 1 - 1",
+            "x1 F 1 - 1 | 0 Esus4 1 E 1",
+            "> 1"
           ]
         }
       ]
@@ -53,17 +51,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [[["0 Am 1 G 1 F 1 E 1"]]]
-            },
-            {
-              "times": 2,
-              "items": [[["0 Am 1 G 1 F 1 G 1", "0 Am 1 G 1 F 1 E 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x1 Am 1 G 1 F 1 E 1", "x2 Am 1 G 1 F 1 G 1 / 0 Am 1 G 1 F 1 E 1", "> 0"]
         }
       ]
     },
@@ -72,13 +61,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 2,
-              "items": [[["0 Am 1 G 1 F 1 G 1", "0 Am 1 G 1 F 1 E 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x2 Am 1 G 1 F 1 G 1 / 0 Am 1 G 1 F 1 E 1", "> 0"]
         }
       ]
     },
@@ -87,17 +71,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [[["0 Am 1 G 1 F 1 E 1"]]]
-            },
-            {
-              "times": 3,
-              "items": [[["0 Am 1 G 1 F 1 G 1", "0 Am 1 G 1 F 1 E 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x1 Am 1 G 1 F 1 E 1", "x3 Am 1 G 1 F 1 G 1 / 0 Am 1 G 1 F 1 E 1", "> 0"]
         }
       ]
     },
@@ -106,21 +81,13 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
+          "renderer": "chords-v2",
           "data": [
-            {
-              "times": 1,
-              "items": [
-                [
-                  [
-                    "0 Dm 1 - 1 | 1 Em 1 - 1",
-                    "0 Dm 1 - 1 | 1 Em 1 Am 1",
-                    "0 Dm 1 - 1 | 1 Em 1 - 1",
-                    "0 F 1 - 1 | 1 Esus4 1 E 1"
-                  ]
-                ]
-              ]
-            }
+            "x1 Dm 1 - 1 | 0 Em 1 - 1",
+            "x1 Dm 1 - 1 | 0 Em 1 Am 1",
+            "x1 Dm 1 - 1 | 0 Em 1 - 1",
+            "x1 F 1 - 1 | 0 Esus4 1 E 1",
+            "> 0"
           ]
         }
       ]
