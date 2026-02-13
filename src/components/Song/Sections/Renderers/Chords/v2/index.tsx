@@ -6,7 +6,7 @@
  *
  * @file ChordsV2.tsx
  * @author Alexandru Delegeanu
- * @version 2.1
+ * @version 2.2
  * @description Render song chords section.
  */
 
@@ -63,6 +63,28 @@ const SEPARATOR_CHORD_NEWLINE = '/';
 
 const GAP_BETWEEN_CHORD_LINES = '1em';
 
+type TChordDisplayProps = {
+  name: string;
+};
+
+export const ChordDisplay = (props: TChordDisplayProps) => {
+  if (props.name.length == 1) {
+    return props.name;
+  }
+
+  const chord = props.name[0];
+  const mod = props.name.substring(1);
+
+  return (
+    <Box as='span'>
+      {chord}
+      <Box as='span' fontSize='0.8em'>
+        {mod}
+      </Box>
+    </Box>
+  );
+};
+
 type TChordProps = {
   chordId: string;
   chordConfig: TChord;
@@ -88,9 +110,11 @@ const Chord = (props: TChordProps) => {
           backgroundColor={theme.items.item.chordsPattern.chord.background}
           color={theme.items.item.chordsPattern.chord.color}
         >
-          {props.chordId !== NO_CHORD_ID && props.chordConfig !== undefined
-            ? props.chordConfig.name
-            : '-'}
+          {props.chordId !== NO_CHORD_ID && props.chordConfig !== undefined ? (
+            <ChordDisplay name={props.chordConfig.name} />
+          ) : (
+            '-'
+          )}
           {songSettings.display.chordTimes &&
             (props.times !== '1' || songSettings.display.chordTimesOne) && (
               <Tooltip label={`Strum ${props.times} times`}>

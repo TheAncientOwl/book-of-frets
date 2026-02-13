@@ -6,7 +6,7 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Render chrod based on given config.
  */
 
@@ -16,6 +16,7 @@ import { Fret } from '@/ui/Chord/Fret';
 import { useShallowAppStore } from '@/store/index';
 import { Box, Circle, Divider, Flex, Heading, type BoxProps } from '@chakra-ui/react';
 import { Fragment } from 'react';
+import { ChordDisplay } from '@/components/Song/Sections/Renderers/Chords/v2/index';
 
 type TChordProps = TChord & {
   containerProps?: BoxProps;
@@ -54,7 +55,7 @@ export const Chord = (props: TChordProps) => {
         // [*] theme colors
         color={theme.title}
       >
-        {props.name}
+        <ChordDisplay name={props.name} />
 
         {props.startFret && (
           <Circle
@@ -80,7 +81,7 @@ export const Chord = (props: TChordProps) => {
         />
         {props.frets.map((fret, idx) => {
           const map = new Map<TGuitarString, number>(
-            Object.entries(fret).map(([key, value]) => [key as TGuitarString, value])
+            Object.entries(fret).map(([key, value]) => [key as TGuitarString, value]),
           );
 
           return (
