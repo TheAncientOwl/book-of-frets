@@ -99,6 +99,13 @@
       "chordIDs": ["Em", "D", "G", "C"]
     },
     {
+      "title": "Leaving On A Jet Plane (Strummed)",
+      "artists": ["John Denver"],
+      "directory": "leaving-on-a-jet-plane",
+      "type": ["acoustic"],
+      "chordIDs": ["D", "Dsus4", "G", "Cadd9"]
+    },
+    {
       "title": "Cover Me In Sunshine",
       "artists": ["P!nk"],
       "directory": "cover-me-in-sunshine",

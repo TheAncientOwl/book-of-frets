@@ -1,0 +1,107 @@
+{
+  "version": "2.0.0",
+  "contributors": ["TheAncientOwl"],
+  "title": "Leaving On A Jet Plane (Strummed)",
+  "artists": ["John Denver"],
+  "type": ["acoustic"],
+  "notes": [],
+  "capo": 0,
+  "chordIDs": ["D", "Dsus4", "G", "Cadd9"],
+  "strumms": [["D", "U", "D", "U", "-", "U", "D", "U"], ["D"]],
+  "sections": {
+    "i": {
+      "name": "intro",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x1 D 1 Dsus4 1 D 1 Dsus4 1 Dsus4 1", "> 0"]
+        }
+      ]
+    },
+    "v": {
+      "name": "verse",
+      "times": 2,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x2 G 1 Cadd9 1 G 1 Cadd9 1 / 0 G 1 Cadd9 1 D 1 D 1", "> 0"]
+        }
+      ]
+    },
+    "c1": {
+      "name": "chorus 1",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": [
+            "x1 G 1 Cadd9 1 G 1 Cadd9 1",
+            "x1 G 1 Cadd9 1 D 1 D 1",
+            "x1 G 1 Cadd9 1 G 1 Cadd9 1",
+            "x1 G 1 Cadd9 1 D 1 D 1 D 1 D 1",
+            "> 0"
+          ]
+        }
+      ]
+    },
+    "c2": {
+      "name": "chorus 2",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": [
+            "x1 G 1 Cadd9 1 G 1 Cadd9 1",
+            "x1 G 1 Cadd9 1 D 1 D 1",
+            "x1 G 1 Cadd9 1 G 1 Cadd9 1",
+            "x1 G 1 Cadd9 1 D 1 D 1 D 1 D 1",
+            "> 0"
+          ]
+        }
+      ]
+    },
+    "c3": {
+      "name": "chorus 3",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x2 G 1 Cadd9 1 G 1 Cadd9 1 / 0 G 1 Cadd9 1 D 1 D 1", "> 0"]
+        }
+      ]
+    },
+    "fc": {
+      "name": "final chorus",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": [
+            "x1 G 1 Cadd9 1 G 1 Cadd9 1",
+            "x1 G 1 Cadd9 1 Cadd9 1",
+            "x1 D 1 Dsus4 1 D 1 Dsus4 1",
+            "x1 D 1 Dsus4 1",
+            "> 0",
+            "x1 G 1",
+            "> 1"
+          ]
+        }
+      ]
+    }
+  },
+  "order": ["i", "v", "c1", "v", "c2", "v", "c3", "fc"],
+  "lyrics": false,
+  "res": [
+    {
+      "alias": "Leaving On A Jet Plane Guitar Tutorial John Denver Lesson |3 Chords + Fingerpicking + TAB|",
+      "author": "GuitarZero2Hero ~ YouTube",
+      "link": "https://youtu.be/Ff46OUFvo9c"
+    },
+    {
+      "alias": "Leaving On A Jet Plane Guitar Cover John Denver🎸|Tabs + Chords|",
+      "author": "GuitarZero2Hero Express ~ YouTube",
+      "link": "https://youtu.be/lyrKYiVJ1vc"
+    }
+  ]
+}
