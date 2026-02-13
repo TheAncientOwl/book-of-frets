@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "All Of Me",
   "artists": ["John Legend"],
@@ -18,13 +18,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [[["0 Em 1 C 1 G 1 D 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x1 Em 1 C 1 G 1 D 1", "> 0"]
         }
       ]
     },
@@ -33,13 +28,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 4,
-              "items": [[["0 Em 1 C 1 G 1 D 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x4 Em 1 C 1 G 1 D 1", "> 0"]
         }
       ]
     },
@@ -48,17 +38,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [[["0 Am 1 Am 1 G 1 D 1"]]]
-            },
-            {
-              "times": 1,
-              "items": [[["0 Am 1 Am 1 G 1"], ["1 D 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x1 Am 1 Am 1 G 1 D 1 / 0 Am 1 Am 1 G 1", "> 0", "x1 D 1", "> 1"]
         }
       ]
     },
@@ -67,17 +48,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 2,
-              "items": [[["2 G 1 Em 1 C 1 D 1"]]]
-            },
-            {
-              "times": 2,
-              "items": [[["0 Em 1 C 1 G 1 D 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x2 G 1 Em 1 C 1 D 1", "> 2", "x2 Em 1 C 1 G 1 D 1", "> 0"]
         }
       ]
     },
@@ -86,24 +58,16 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
+          "renderer": "chords-v2",
           "data": [
-            {
-              "times": 1,
-              "items": [[["1 G 1 Em 1 C 1 D 1"]]]
-            },
-            {
-              "times": 1,
-              "items": [[["2 G 1 Em 1 C 1 D 1"]]]
-            },
-            {
-              "times": 3,
-              "items": [[["0 Em 1 C 1 G 1 D 1"]]]
-            },
-            {
-              "times": 1,
-              "items": [[["1 Em 1 C 1 G 1 D 1"]]]
-            }
+            "x1 G 1 Em 1 C 1 D 1",
+            "> 1",
+            "x1 G 1 Em 1 C 1 D 1",
+            "> 2",
+            "x3 Em 1 C 1 G 1 D 1",
+            "> 0",
+            "x1 Em 1 C 1 G 1 D 1",
+            "> 1"
           ]
         }
       ]

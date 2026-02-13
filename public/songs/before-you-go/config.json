@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Before You go",
   "artists": ["Lewis Capaldi"],
@@ -74,13 +74,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 2,
-              "items": [[["0 C 4 Am 4 Ft 4 G 4"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x2 C 4 Am 4 F 4 G 4", "> 0"]
         }
       ]
     },
@@ -89,17 +84,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 2,
-              "items": [[["0 C 4 G 4 Am 4 Ft 4"]]]
-            },
-            {
-              "times": 1,
-              "items": [[["0 G 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x2 C 4 G 4 Am 4 F 4", "x1 G 1", "> 0"]
         }
       ]
     },
@@ -108,13 +94,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [[["0 Am 2 Ft 2 C 2 G 2", "0 Am 2 Ft 2 G 4"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x1 Am 2 F 2 C 2 G 2 / 0 Am 2 F 2 G 2", "> 0"]
         }
       ]
     },
@@ -123,28 +104,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [[["0 C 4 G 4 Am 4 Ft 4"]]]
-            }
-          ]
-        }
-      ]
-    },
-    "fc2": {
-      "name": "final chorus 2",
-      "times": 1,
-      "entries": [
-        {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [[["0 C 4 G 4 Am 4 Ft 3"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x1 C 4 G 4 Am 4 F 4 / 0 C 4 G 4 Am 4 F 3", "> 0"]
         }
       ]
     },
@@ -159,7 +120,7 @@
       ]
     }
   },
-  "order": ["i", "vp1", "cp", "bk", "vs", "cs", "b", "fc1", "fc2", "vp2"],
+  "order": ["i", "vp1", "cp", "bk", "vs", "cs", "b", "fc1", "vp2"],
   "lyrics": false,
   "res": [
     {

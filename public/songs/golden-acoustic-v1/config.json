@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Golden",
   "artists": ["HUNTR/X"],
@@ -14,17 +14,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [[["0 C 1 G 1 D 1 Em 1", "0 C 1 G 1 D 1"]]]
-            },
-            {
-              "times": 1,
-              "items": [[["1 Em 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x1 C 1 G 1 D 1 Em 1 / 0 C 1 G 1 D 1", "> 0", "x1 Em 1", "> 1"]
         }
       ]
     },
@@ -33,13 +24,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 4,
-              "items": [[["0 C 1 G 1 D 1 Em 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x4 C 1 G 1 D 1 Em 1", "> 0"]
         }
       ]
     },
@@ -48,13 +34,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [[["0 C 1 G 1 D 1 Em 1", "0 C 1 G 1 D 1 D 1", "0 C 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x1 C 1 G 1 D 1 Em 1", "x1 C 1 G 1 D 1 D 1", "x1 C 1", "> 0"]
         }
       ]
     },
@@ -63,17 +44,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 3,
-              "items": [[["0 D 1"], ["2 G 1 D 1"], ["0 Em 1 C 1"]]]
-            },
-            {
-              "times": 1,
-              "items": [[["0 D 1"], ["2 G 1 D 1"], ["0 Em 3"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x3 D 1 ? 0 G 1 D 1 ? 0 Em 1 C 1", "x1 D 1 ? 0 G 1 D 1 ? 0 Em 3", "> 0 2 0"]
         }
       ]
     },
@@ -82,18 +54,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [
-                [
-                  ["0 Em 1", "0 D 1 Bm 1 C 1"],
-                  ["0 G 1", "0 D 1 Bm 1 C 1"]
-                ]
-              ]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x1 Em 1 D 1 Bm 1 C 1", "x1 G 1 D 1 Bm 1 C 1", "> 0"]
         }
       ]
     },
@@ -102,13 +64,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [[["0 Em 1 D 1 Bm 1 C 1", "0 Em 1 Bm 1 D 1 C 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x1 Em 1 D 1 Bm 1 C 1", "x1 Em 1 Bm 1 D 1 C 1", "> 0"]
         }
       ]
     },
@@ -117,17 +74,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 3,
-              "items": [[["0 D 1"], ["2 G 1 D 1"], ["0 Em 1 C 1"]]]
-            },
-            {
-              "times": 1,
-              "items": [[["0 D 1"], ["2 G 1 D 1"], ["0 Em 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x3 D 1 ? 0 G 1 D 1 ? 0 Em 1 C 1", "x1 D 1 ? 0 G 1 D 1 ? 0 Em 1", "> 0 2 0"]
         }
       ]
     },
@@ -136,13 +84,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 2,
-              "items": [[["0 C 1 D 1"], ["2 G 1 D 1"], ["0 Em 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x2 C 1 D 1 ? 0 G 1 D 1 ? 0 Em 1", "> 0 2 0"]
         }
       ]
     },
@@ -151,17 +94,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 2,
-              "items": [[["0 C 1 G 1 D 1 Em 1", "0 C 1 G 1 D 1"]]]
-            },
-            {
-              "times": 1,
-              "items": [[["1 Em 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x2 C 1 G 1 D 1 Em 1 / 0 C 1 G 1 D 1", "> 0", "x1 Em 1", "> 1"]
         }
       ]
     }
