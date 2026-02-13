@@ -85,6 +85,13 @@
       "chordIDs": ["C", "Am7", "E+", "F5", "Fsus2"]
     },
     {
+      "title": "I Wanna Be Yours (Easy)",
+      "artists": ["Arctic Monkeys"],
+      "directory": "i-wanna-be-yours-easy",
+      "type": ["acoustic"],
+      "chordIDs": ["Am", "Dm", "Em", "F", "G"]
+    },
+    {
       "title": "The Night We Met (Studio)",
       "artists": ["Lord Huron"],
       "directory": "the-night-we-met-studio",

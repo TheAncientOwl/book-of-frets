@@ -1,0 +1,107 @@
+{
+  "version": "2.0.0",
+  "contributors": ["TheAncientOwl"],
+  "title": "I Wanna Be Yours (Easy)",
+  "artists": ["Arctic Monkeys"],
+  "type": ["acoustic"],
+  "notes": [],
+  "capo": 3,
+  "chordIDs": ["Am", "Dm", "Em", "F", "G"],
+  "strumms": [["D", "-", "D", "-", "D", "-", "D", "U"], ["D"]],
+  "sections": {
+    "i": {
+      "name": "intro",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x2 Am 2 Dm 2 Em 2", "> 0"]
+        }
+      ]
+    },
+    "v1": {
+      "name": "verse 1",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x4 Am 2 Dm 1 Em 1", "> 0"]
+        }
+      ]
+    },
+    "pc1": {
+      "name": "prechorus 1",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x1 Dm 1 Em 1 Am 1 Dm 1", "x1 Dm 1 Em 1 Am 1 G 1", "> 0"]
+        }
+      ]
+    },
+    "c1": {
+      "name": "chorus 1",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x1 F 2 Am 1 G 1 F 2", "> 0", "x1 Em 1", "> 1"]
+        }
+      ]
+    },
+    "v2": {
+      "name": "verse 2",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x4 Am 2 Dm 1 Em 1", "> 0"]
+        }
+      ]
+    },
+    "pc2": {
+      "name": "prechorus 2",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x1 Dm 1 Em 1 Am 1 Dm 1", "x1 Dm 1 Em 1 Am 1 G 1", "> 0"]
+        }
+      ]
+    },
+    "c2": {
+      "name": "chorus 2",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x4 F 2 Am 1 G 1", "> 0"]
+        }
+      ]
+    },
+    "o": {
+      "name": "outro",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x3 F 2 Am 2 G 2", "x1 F 2", "> 0", "x1 Em 1", "> 1"]
+        }
+      ]
+    }
+  },
+  "order": ["i", "v1", "pc1", "c1", "v2", "pc2", "c2", "o"],
+  "lyrics": false,
+  "res": [
+    {
+      "alias": "I Wanna Be Yours Guitar Tutorial Arctic Monkeys Guitar Lesson |Easy Acoustic Chords + Live Version)",
+      "author": "GuitarZero2Hero ~ YouTube",
+      "link": "https://youtu.be/JHM5KUe1EMI"
+    },
+    {
+      "alias": "I Wanna Be Yours Guitar Cover Arctic Monkeys 🎸|Tabs + Chords|",
+      "author": "GuitarZero2Hero Express ~ YouTube",
+      "link": "https://youtu.be/SfSDd0uZ9aA"
+    }
+  ]
+}
