@@ -6,7 +6,7 @@
  *
  * @file ChordsV1.tsx
  * @author Alexandru Delegeanu
- * @version 2.0
+ * @version 2.1
  * @description Render song chords pattern.
  */
 
@@ -115,3 +115,5 @@ export const ChordsV1Renderer = (props: TChordsV1Props) => {
     </>
   );
 };
+
+export default ChordsV1Renderer;

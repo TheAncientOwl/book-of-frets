@@ -6,7 +6,7 @@
  *
  * @file ChordsV2.tsx
  * @author Alexandru Delegeanu
- * @version 2.2
+ * @version 2.3
  * @description Render song chords section.
  */
 
@@ -398,3 +398,5 @@ export const ChordsV2Renderer = (props: TChordsSectionProps) => {
     </Flex>
   );
 };
+
+export default ChordsV2Renderer;

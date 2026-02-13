@@ -18,10 +18,27 @@ import type {
   TSongSectionLyrics,
   TStrummingPattern,
 } from '@/common/types/song.types';
-import { ChordsV1Renderer } from '@/components/Song/Sections/Renderers/Chords/v1';
-import { ChordsV2Renderer } from '@/components/Song/Sections/Renderers/Chords/v2/index';
-import { GuitarTabsV1Renderer } from '@/components/Song/Sections/Renderers/GuitarTabs/v1';
+import { Loading } from '@/ui/Loading/index';
 import { Box, Flex, Tooltip } from '@chakra-ui/react';
+import { lazy, Suspense } from 'react';
+
+const ChordsV1Renderer = lazy(() =>
+  import('@/components/Song/Sections/Renderers/Chords/v1/ChordsV1').then(m => ({
+    default: m.ChordsV1Renderer,
+  })),
+);
+
+const ChordsV2Renderer = lazy(() =>
+  import('@/components/Song/Sections/Renderers/Chords/v2/ChordsV2').then(m => ({
+    default: m.ChordsV2Renderer,
+  })),
+);
+
+const GuitarTabsV1Renderer = lazy(() =>
+  import('@/components/Song/Sections/Renderers/GuitarTabs/v1/GuitarTabsV1').then(m => ({
+    default: m.GuitarTabsV1Renderer,
+  })),
+);
 
 type TChordsProps = {
   strumms: TStrummingPattern[];
@@ -90,7 +107,9 @@ export const SongSectionEntry = (props: TChordsProps) => {
       padding={['1.1em 0em', '1.1em 1em']}
       overflowX={['auto', 'hidden']}
     >
-      <SongSectionEntryImpl {...props} />
+      <Suspense fallback={<Loading />}>
+        <SongSectionEntryImpl {...props} />
+      </Suspense>
     </Flex>
   );
 };

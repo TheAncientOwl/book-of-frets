@@ -6,7 +6,7 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 1.1
+ * @version 1.2
  * @description Render chrod based on given config.
  */
 
@@ -16,7 +16,7 @@ import { Fret } from '@/ui/Chord/Fret';
 import { useShallowAppStore } from '@/store/index';
 import { Box, Circle, Divider, Flex, Heading, type BoxProps } from '@chakra-ui/react';
 import { Fragment } from 'react';
-import { ChordDisplay } from '@/components/Song/Sections/Renderers/Chords/v2/index';
+import { ChordDisplay } from '@/components/Song/Sections/Renderers/Chords/v2/ChordsV2';
 
 type TChordProps = TChord & {
   containerProps?: BoxProps;

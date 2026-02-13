@@ -6,7 +6,7 @@
  *
  * @file GuitarTabsV1.tsx
  * @author Alexandru Delegeanu
- * @version 2.0
+ * @version 2.1
  * @description Render song strings pattern.
  */
 
@@ -194,3 +194,5 @@ export const GuitarTabsV1Renderer = (props: TGuitarTabsV1Props) => {
     </Flex>
   );
 };
+
+export default GuitarTabsV1Renderer;
