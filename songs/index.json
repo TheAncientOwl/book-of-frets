@@ -106,6 +106,13 @@
       "chordIDs": ["D", "Dsus4", "G", "Cadd9"]
     },
     {
+      "title": "I Still Haven't Found What I'm Looking For (Strummed)",
+      "artists": ["U2"],
+      "directory": "i-still-havent-found-what-im-looking-for",
+      "type": ["acoustic"],
+      "chordIDs": []
+    },
+    {
       "title": "Cover Me In Sunshine",
       "artists": ["P!nk"],
       "directory": "cover-me-in-sunshine",
