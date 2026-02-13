@@ -300,6 +300,10 @@
       "name": "Fsus2",
       "frets": [{ "G": 1 }, {}, { "D": 3 }]
     },
+    "Fsus2_v2": {
+      "name": "Fsus2",
+      "frets": [{ "E": 7, "G": 1, "e": -1 }, {}, { "A": 3, "D": 4 }]
+    },
     "F#m_9fr": {
       "name": "F#m",
       "startFret": 9,
