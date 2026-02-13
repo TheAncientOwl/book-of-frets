@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Adore You",
   "artists": ["Harry Styles"],
@@ -14,13 +14,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [[["0 Am7 1 - 1 C 1 - 1", "0 Ft 1 - 1 - 1 G 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x1 Am7 1 - 1 C 1 - 1 / 0 F7 1 - 1 G 1", "> 0"]
         }
       ]
     },
@@ -29,13 +24,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 6,
-              "items": [[["1 Am7 2 C 2 Ft 3 G 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x6 Am7 2 C 2 Ft 3 G 1", "> 0"]
         }
       ]
     },
@@ -49,13 +39,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 5,
-              "items": [[["1 Am7 2 C 2 Ft 3 G 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x5 Am7 2 C 2 Ft 3 G 1", "> 0"]
         }
       ]
     },
@@ -74,13 +59,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 4,
-              "items": [[["1 Am7 2 C 2 Ft 3 G 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x4 Am7 2 C 2 Ft 3 G 1", "> 0"]
         }
       ]
     },

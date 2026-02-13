@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Hey, Soul Sister",
   "artists": ["Train"],
@@ -14,13 +14,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [[["0 C 2 G 2 Am 2 F 2"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x1 C 2 G 2 Am 2 F 2", "> 0"]
         }
       ]
     },
@@ -29,13 +24,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 2,
-              "items": [[["0 C 2 G 2 Am 2 F 2", "0 C 2 G 2 Am 2 F 1 G 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x2 C 2 G 2 Am 2 F 2 / 0 C 2 G 2 Am 2 F 1 G 1", "> 0"]
         }
       ]
     },
@@ -44,17 +34,12 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 3,
-              "items": [[["0 F 2 G 1"], ["1 C 1 G 1"]]]
-            },
-            {
-              "times": 1,
-              "items": [[["0 F 2 G 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x3 F 2 G 1 ? 0 C 1 G 1", "> 0 1"]
+        },
+        {
+          "renderer": "chords-v2",
+          "data": ["x1 F 2 G 1", "> 0"]
         }
       ]
     },
@@ -63,13 +48,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [[["0 C 2 G 2 Am 2 F 2"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x1 C 2 G 2 Am 2 F 2", "> 0"]
         }
       ]
     },
@@ -78,17 +58,12 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 3,
-              "items": [[["0 F 2 G 1"], ["1 C 1 G 1"]]]
-            },
-            {
-              "times": 1,
-              "items": [[["0 F 2 G 2"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x3 F 2 G 1 ? 0 C 1 G 1", "> 0 1"]
+        },
+        {
+          "renderer": "chords-v2",
+          "data": ["x1 F 2 G 2", "> 0"]
         }
       ]
     },
@@ -97,13 +72,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [[["0 C 2 G 2 Am 4 G 4", "0 Am 1 G 1 F 1 G 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x1 C 2 G 2 Am 4 G 4", "x1 Am 1 G 1 F 1 G 1", "> 0"]
         }
       ]
     },
@@ -112,17 +82,12 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 5,
-              "items": [[["0 F 2 G 1"], ["1 C 1 G 1"]]]
-            },
-            {
-              "times": 1,
-              "items": [[["0 F 2 G 2"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x5 F 2 G 1 ? 0 C 1 G 1", "> 0 1"]
+        },
+        {
+          "renderer": "chords-v2",
+          "data": ["x1 F 2 G 2", "> 0"]
         }
       ]
     },
@@ -131,17 +96,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [[["0 C 2 G 2 Am 2 F 1 G 1", "0 C 2 G 2 Am 2 F 1"]]]
-            },
-            {
-              "times": 1,
-              "items": [[["2 G 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x1 C 2 G 2 Am 2 F 1 G 1", "x1 C 2 G 2 Am 2 F 1", "> 0", "x1 G 1", "> 2"]
         }
       ]
     }

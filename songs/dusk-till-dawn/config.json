@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Dusk Till Dawn",
   "artists": ["Zayn", "Sia"],
@@ -19,20 +19,14 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
+          "renderer": "chords-v2",
           "data": [
-            {
-              "times": 3,
-              "items": [[["0 Am 1 Ft 1 C 1 G/B 1"]]]
-            },
-            {
-              "times": 1,
-              "items": [[["1 Am 1 Ft 1 C 1 G/B 1"]]]
-            },
-            {
-              "times": 2,
-              "items": [[["0 Am 1 Ft 1 C 1 G/B 1"]]]
-            }
+            "x3 Am 1 F 1 C 1 G/B 1",
+            "> 0",
+            "x1 Am 1 F 1 C 1 G/B 1",
+            "> 1",
+            "x2 Am 1 F 1 C 1 G/B 1",
+            "> 0"
           ]
         }
       ]
@@ -42,17 +36,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [[["2 Am 1"]]]
-            },
-            {
-              "times": 4,
-              "items": [[["3 Am 2 Ft 2 C 2 Em 2"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x1 Am 1", "> 2", "x4 Am 2 F 2 C 2 Em 2", "> 3"]
         }
       ]
     },
@@ -61,13 +46,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 1,
-              "items": [[["0 Am 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x1 Am 1", "> 0"]
         }
       ]
     },
@@ -76,17 +56,8 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 3,
-              "items": [[["1 Am 1 Ft 1 C 1 G/B 1"]]]
-            },
-            {
-              "times": 2,
-              "items": [[["0 Am 1 Ft 1 C 1 G/B 1"]]]
-            }
-          ]
+          "renderer": "chords-v2",
+          "data": ["x3 Am 1 F 1 C 1 G/B 1", "> 1", "x2 Am 1 F 1 C 1 G/B 1", "> 0"]
         }
       ]
     },
@@ -95,19 +66,11 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
+          "renderer": "chords-v2",
           "data": [
-            {
-              "times": 1,
-              "items": [
-                [
-                  [
-                    "0 Ft 1 | 0 Ft 1 C 1 | 0 C 1 G 1 | 0 G 1 C/E 1",
-                    "0 Ft 1 | 0 Ft 1 C 1 | 0 C 1 G 1 | 0 G 1 G 1"
-                  ]
-                ]
-              ]
-            }
+            "x1 F 1 | 0 F 1 C 1 | 0 C 1 G 1 | 0 G 1 C/E 1",
+            "x1 F 1 | 0 F 1 C 1 | 0 C 1 G 1 | 0 G 1 G 1",
+            "> 0"
           ]
         }
       ]
