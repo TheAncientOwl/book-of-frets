@@ -127,6 +127,13 @@
       "chordIDs": ["Em", "G", "D", "A"]
     },
     {
+      "title": "Sailor Song",
+      "artists": ["Gigi Perez"],
+      "directory": "sailor-song",
+      "type": ["acoustic"],
+      "chordIDs": ["CM7/G", "Em", "G"]
+    },
+    {
       "title": "Viva La Vida | Easy",
       "artists": ["Coldplay"],
       "directory": "viva-la-vida-easy",
@@ -211,6 +218,13 @@
       "directory": "adore-you",
       "type": ["acoustic"],
       "chordIDs": ["Am7", "C", "Ft", "G"]
+    },
+    {
+      "title": "Birds Of A Feather (Easy)",
+      "artists": ["Billie Eilish"],
+      "directory": "birds-of-a-feather-easy",
+      "type": ["acoustic"],
+      "chordIDs": ["D", "Em7_v2", "Bm7", "A"]
     },
     {
       "title": "How Long",

@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "contributors": ["TheAncientOwl"],
+  "title": "Sailor Song",
+  "artists": ["Gigi Perez"],
+  "type": ["acoustic"],
+  "notes": [],
+  "capo": 4,
+  "chordIDs": ["CM7/G", "Em", "G"],
+  "strumms": [["D", "-", "D", "U", "D", "U", "D", "-", "D", "U", "D", "U", "D", "-", "D", "U"]],
+  "sections": {
+    "i": {
+      "name": "intro",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x2 CM7/G 1 CM7/G 1 Em 1 Em 1", "> 0"]
+        }
+      ]
+    },
+    "mp": {
+      "name": "main progression",
+      "times": 19,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x1 CM7/G 1 Em 1 G 1 G 1", "> 0"]
+        }
+      ]
+    }
+  },
+  "order": ["i", "mp"],
+  "lyrics": false,
+  "res": [
+    {
+      "alias": "Sailor Song Guitar Tutorial Gigi Perez Guitar Lesson |Chords + Strumming|",
+      "author": "GuitarZero2Hero ~ YouTube",
+      "link": "https://youtu.be/Iovxd60w4L4"
+    },
+    {
+      "alias": "Sailor Song Guitar Cover Gigi Perez 🎸|Tabs + Chords|",
+      "author": "GuitarZero2Hero Express ~ YouTube",
+      "link": "https://youtu.be/u7e8evgmWPg"
+    }
+  ]
+}
