@@ -134,6 +134,13 @@
       "chordIDs": ["CM7/G", "Em", "G"]
     },
     {
+      "title": "Love Someone (Strummed)",
+      "artists": ["Lukas Graham"],
+      "directory": "love-someone-strummed",
+      "type": ["acoustic"],
+      "chordIDs": ["C", "Em", "Am", "F", "Gadd11", "Dm"]
+    },
+    {
       "title": "Viva La Vida | Easy",
       "artists": ["Coldplay"],
       "directory": "viva-la-vida-easy",

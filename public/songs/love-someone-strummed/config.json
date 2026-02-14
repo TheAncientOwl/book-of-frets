@@ -1,0 +1,125 @@
+{
+  "version": "2.0.0",
+  "contributors": ["TheAncientOwl"],
+  "title": "Love Someone (Strummed)",
+  "artists": ["Lukas Graham"],
+  "type": ["acoustic"],
+  "notes": [],
+  "capo": 0,
+  "chordIDs": ["C", "Em", "Am", "F", "Gadd11", "Dm"],
+  "strumms": [
+    ["D", "-", "-", "D", "X", "-", "D", "-", "-", "-", "D", "-", "D", "-", "D", "U"],
+    ["D", "-", "-", "D", "X", "-"],
+    ["D", "-", "-", "-", "D", "-", "D", "-", "D", "U"],
+    ["D"]
+  ],
+  "sections": {
+    "v": {
+      "name": "verse",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x2 C 1 Em 1 Am 1 F 1", "> 0"]
+        }
+      ]
+    },
+    "pc": {
+      "name": "prechorus",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v1",
+          "data": [
+            {
+              "times": 3,
+              "items": [[["0 F 1"]], [["1 G 1"], ["2 Am 1"]]]
+            }
+          ]
+        },
+        {
+          "renderer": "chords-v2",
+          "data": ["x1 Em 1 F 1 Gadd11 1", "> 3"]
+        }
+      ]
+    },
+    "c": {
+      "name": "chorus",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x2 F 1 G 1 / 0 F 1 G 1 ! 0 C 1 Am 1 / 0 Am 1 Am 1"]
+        },
+        {
+          "renderer": "chords-v2",
+          "data": ["x1 F 1 G 1 ! 0 Am 1 F 1"]
+        },
+        {
+          "renderer": "chords-v2",
+          "data": ["> 1 2"]
+        }
+      ]
+    },
+    "bg": {
+      "name": "bridge",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x1 Dm 1 G 1 C 1 Am 1", "x1 Dm 1 G 1", "> 0", "x1 Am 1 Dm 1", "> 3"]
+        }
+      ]
+    },
+    "fc": {
+      "name": "chorus",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x1 F 1 G 1 / 0 F 1 G 1 ! 0 C 1 Am 1 / 0 Am 1 Am 1"]
+        },
+        {
+          "renderer": "chords-v2",
+          "data": ["> 3"]
+        },
+        {
+          "renderer": "chords-v2",
+          "data": ["x1 F 1 G 1 / 0 F 1 G 1 ! 0 C 1 Am 1 / 0 Am 1 Am 1"]
+        },
+        {
+          "renderer": "chords-v2",
+          "data": ["x1 F 1 G 1 ! 0 Am 1 F 1"]
+        },
+        {
+          "renderer": "chords-v2",
+          "data": ["> 1 2"]
+        }
+      ]
+    },
+    "o": {
+      "name": "outro",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x1 F 1 G 1 C 1", "> 3"]
+        }
+      ]
+    }
+  },
+  "order": ["v", "pc", "c", "v", "pc", "c", "bg", "fc", "o"],
+  "lyrics": false,
+  "res": [
+    {
+      "alias": "Love Someone Guitar Tutorial - Lukas Graham Guitar Lesson 🎸 |Studio Version + Easy Chords + Cover|",
+      "author": "GuitarZero2Hero ~ YouTube",
+      "link": "https://youtu.be/lnXP8mPwy34"
+    },
+    {
+      "alias": "Love Someone Guitar Cover Acoustic Lukas Graham",
+      "author": "GuitarZero2Hero Express ~ YouTube",
+      "link": "https://youtu.be/wOVNBvr33EM?list=RDwOVNBvr33EM"
+    }
+  ]
+}
