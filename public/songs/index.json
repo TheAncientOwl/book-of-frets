@@ -127,6 +127,13 @@
       "chordIDs": ["Em", "G", "D", "A"]
     },
     {
+      "title": "Sailor Song",
+      "artists": ["Gigi Perez"],
+      "directory": "sailor-song",
+      "type": ["acoustic"],
+      "chordIDs": ["CM7/G", "Em", "G"]
+    },
+    {
       "title": "Viva La Vida | Easy",
       "artists": ["Coldplay"],
       "directory": "viva-la-vida-easy",
