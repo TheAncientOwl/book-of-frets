@@ -220,6 +220,13 @@
       "chordIDs": ["Am7", "C", "Ft", "G"]
     },
     {
+      "title": "Birds Of A Feather (Easy)",
+      "artists": ["Billie Eilish"],
+      "directory": "birds-of-a-feather-easy",
+      "type": ["acoustic"],
+      "chordIDs": ["D", "Em7_v2", "Bm7", "A"]
+    },
+    {
       "title": "How Long",
       "artists": ["Charlie Puth"],
       "directory": "how-long",
