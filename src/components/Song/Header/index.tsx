@@ -6,7 +6,7 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Render song header data.
  */
 
@@ -31,6 +31,7 @@ import {
 } from '@chakra-ui/react';
 import { Fragment, useState } from 'react';
 import { GiGuitarBassHead, GiGuitarHead } from 'react-icons/gi';
+import { PiFinnTheHumanDuotone } from 'react-icons/pi';
 
 type TSongHeaderProps = Pick<TSong, 'title' | 'artists' | 'capo' | 'type' | 'contributors'> & {
   directory: string;
@@ -46,7 +47,7 @@ export const SongHeader = (props: TSongHeaderProps) => {
   const theme = useAppStore(state => state.appTheme.song);
 
   return (
-    <Flex direction='column' alignItems='center' mb='15px'>
+    <Flex direction='column' alignItems='center' mb='10px'>
       <Box position='relative' width={['70px', '80px']} height={['70px', '80px']} mb={['5px']}>
         <Skeleton isLoaded={isImageLoaded} width='100%' height='100%' borderRadius='10px'>
           <Image
@@ -87,6 +88,89 @@ export const SongHeader = (props: TSongHeaderProps) => {
             <Text fontSize='xs'>{props.capo}</Text>
           </Flex>
         </Circle>
+
+        <Flex
+          position='absolute'
+          right='-1.25em'
+          bottom='0'
+          justifyContent='center'
+          alignItems='center'
+          // [*] theme colors
+          color={theme.header.typeTags}
+          direction='column'
+        >
+          {props.type.map((item, index) => (
+            <Fragment key={index}>
+              <Tooltip label={item}>{typeToIcon[item as keyof typeof typeToIcon]}</Tooltip>
+            </Fragment>
+          ))}
+
+          <Popover isLazy>
+            <PopoverTrigger>
+              <Text
+                as='button'
+                fontSize='sm'
+                mb='10px'
+                color={theme.header.artists}
+                _hover={{ textDecoration: 'underline', cursor: 'pointer' }}
+              >
+                <Tooltip label='Contributors'>
+                  <PiFinnTheHumanDuotone />
+                </Tooltip>
+              </Text>
+            </PopoverTrigger>
+            <PopoverContent
+              overflow='hidden'
+              textAlign='center'
+              // [*] theme colors
+              borderColor={theme.header.contributors.border}
+            >
+              <PopoverArrow
+                // [*] theme colors
+                backgroundColor={theme.header.contributors.heading}
+              />
+              <PopoverCloseButton
+                // [*] theme colors
+                color={theme.header.contributors.title}
+              />
+              <PopoverHeader
+                fontWeight='bold'
+                borderBottom='1px solid'
+                // [*] theme colors
+                backgroundColor={theme.header.contributors.heading}
+                color={theme.header.contributors.title}
+                display='flex'
+                justifyContent='center'
+                alignItems='center'
+                gap='0.5em'
+              >
+                <PiFinnTheHumanDuotone />
+                Song contributed by
+              </PopoverHeader>
+              <PopoverBody
+                // [*] theme colors
+                backgroundColor={theme.header.contributors.content}
+                color={theme.header.contributors.contributor}
+              >
+                {props.contributors.length > 0 ? (
+                  props.contributors.map((contributor, index) => (
+                    <Text
+                      key={index}
+                      fontSize='sm'
+                      mb={index < props.contributors.length - 1 ? '2px' : '0'}
+                    >
+                      {contributor}
+                    </Text>
+                  ))
+                ) : (
+                  <Text fontSize='sm' fontStyle='italic'>
+                    No contributors
+                  </Text>
+                )}
+              </PopoverBody>
+            </PopoverContent>
+          </Popover>
+        </Flex>
       </Box>
 
       <Heading
@@ -117,77 +201,6 @@ export const SongHeader = (props: TSongHeaderProps) => {
           </Fragment>
         ))}
       </Heading>
-
-      <Popover isLazy>
-        <PopoverTrigger>
-          <Text
-            as='button'
-            fontSize='sm'
-            mb='10px'
-            color={theme.header.artists}
-            _hover={{ textDecoration: 'underline', cursor: 'pointer' }}
-          >
-            Contributors
-          </Text>
-        </PopoverTrigger>
-        <PopoverContent
-          overflow='hidden'
-          textAlign='center'
-          // [*] theme colors
-          borderColor={theme.header.contributors.border}
-        >
-          <PopoverArrow
-            // [*] theme colors
-            backgroundColor={theme.header.contributors.heading}
-          />
-          <PopoverCloseButton
-            // [*] theme colors
-            color={theme.header.contributors.title}
-          />
-          <PopoverHeader
-            fontWeight='bold'
-            borderBottom='1px solid'
-            // [*] theme colors
-            backgroundColor={theme.header.contributors.heading}
-            color={theme.header.contributors.title}
-          >
-            Song contributed by
-          </PopoverHeader>
-          <PopoverBody
-            // [*] theme colors
-            backgroundColor={theme.header.contributors.content}
-            color={theme.header.contributors.contributor}
-          >
-            {props.contributors.length > 0 ? (
-              props.contributors.map((contributor, index) => (
-                <Text
-                  key={index}
-                  fontSize='sm'
-                  mb={index < props.contributors.length - 1 ? '2px' : '0'}
-                >
-                  {contributor}
-                </Text>
-              ))
-            ) : (
-              <Text fontSize='sm' fontStyle='italic'>
-                No contributors
-              </Text>
-            )}
-          </PopoverBody>
-        </PopoverContent>
-      </Popover>
-
-      <Flex
-        justifyContent='center'
-        // [*] theme colors
-        color={theme.header.typeTags}
-      >
-        {props.type.map((item, index) => (
-          <Fragment key={index}>
-            <Tooltip label={item}>{typeToIcon[item as keyof typeof typeToIcon]}</Tooltip>
-          </Fragment>
-        ))}
-      </Flex>
     </Flex>
   );
 };
