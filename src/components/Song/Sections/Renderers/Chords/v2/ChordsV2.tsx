@@ -6,7 +6,7 @@
  *
  * @file ChordsV2.tsx
  * @author Alexandru Delegeanu
- * @version 2.5
+ * @version 2.6
  * @description Render song chords section.
  */
 
@@ -101,6 +101,7 @@ const Chord = (props: TChordProps) => {
     <Popover isLazy>
       <PopoverTrigger>
         <Tag
+          mt='10px'
           as='button'
           fontWeight='bold'
           cursor='pointer'
