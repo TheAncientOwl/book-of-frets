@@ -47,8 +47,15 @@ export const SongHeader = (props: TSongHeaderProps) => {
   const theme = useAppStore(state => state.appTheme.song);
 
   return (
-    <Flex direction='column' alignItems='center' mb='10px'>
-      <Box position='relative' width={['70px', '80px']} height={['70px', '80px']} mb={['5px']}>
+    <Flex direction='column' alignItems='center' mb='10px' overflowX='hidden'>
+      <Box
+        position='relative'
+        width={['70px', '80px']}
+        height={['70px', '80px']}
+        mb={['5px']}
+        mt='1em'
+        overflow='visible'
+      >
         <Skeleton isLoaded={isImageLoaded} width='100%' height='100%' borderRadius='10px'>
           <Image
             src={`${import.meta.env.BASE_URL}songs/${props.directory}/cover-192x192.webp`}
