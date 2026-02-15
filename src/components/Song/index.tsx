@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 1.2
+ * @version 1.3
  * @description Render song based on given config.
  */
 
@@ -21,6 +21,7 @@ import { useAppStore } from '@/store/index';
 import { Loading } from '@/ui/Loading';
 import { Box, Container, Button } from '@chakra-ui/react';
 import { lazy, Suspense } from 'react';
+import { FaFilePdf } from 'react-icons/fa';
 
 const SongNotes = lazy(() => import('@/components/Song/Notes'));
 const SongResources = lazy(() => import('@/components/Song/Resources'));
@@ -84,6 +85,10 @@ export const Song = (props: TSongProps) => {
         />
 
         <Button
+          display='flex'
+          gap='3px'
+          justifyContent='center'
+          alignItems='center'
           size='sm'
           onClick={() => {
             window.open(
@@ -95,7 +100,7 @@ export const Song = (props: TSongProps) => {
           colorScheme={theme.buttons.pdf.bg}
           color={theme.buttons.pdf.text}
         >
-          Open PDF
+          <FaFilePdf /> Open PDF
         </Button>
       </Box>
 
