@@ -6,13 +6,14 @@
  *
  * @file SongSectionEntry.tsx
  * @author Alexandru Delegeanu
- * @version 2.1
+ * @version 2.2
  * @description Chords renderer.
  */
 
 import type {
   TChordsV1SectionEntry,
   TChordsV2SectionData,
+  TChordsV3SectionData,
   TGTabV1SectionData,
   TSongSectionEntry,
   TSongSectionLyrics,
@@ -31,6 +32,12 @@ const ChordsV1Renderer = lazy(() =>
 const ChordsV2Renderer = lazy(() =>
   import('@/components/Song/Sections/Renderers/Chords/v2/ChordsV2').then(m => ({
     default: m.ChordsV2Renderer,
+  })),
+);
+
+const ChordsV3Renderer = lazy(() =>
+  import('@/components/Song/Sections/Renderers/Chords/v3/ChordsV3').then(m => ({
+    default: m.ChordsV3Renderer,
   })),
 );
 
@@ -62,6 +69,15 @@ const SongSectionEntryImpl = (props: TChordsProps) => {
       return (
         <ChordsV2Renderer
           data={props.entry.data as TChordsV2SectionData}
+          strummingPatterns={props.strumms}
+          showLyrics={props.showLyrics}
+          lyrics={props.lyrics}
+        />
+      );
+    case 'chords-v3':
+      return (
+        <ChordsV3Renderer
+          data={props.entry.data as TChordsV3SectionData}
           strummingPatterns={props.strumms}
           showLyrics={props.showLyrics}
           lyrics={props.lyrics}

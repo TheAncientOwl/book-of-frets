@@ -6,7 +6,7 @@
  *
  * @file song.types.ts
  * @author Alexandru Delegeanu
- * @version 2.1
+ * @version 2.2
  * @description Song types for json mapping.
  */
 
@@ -29,11 +29,18 @@ export type TGTabV1SectionData = string;
 export type TChordsV2SectionEntry = string[];
 export type TChordsV2SectionData = TChordsV2SectionEntry;
 
-export type TSongSectionEntryRendererType = 'chords-v1' | 'chords-v2' | 'gtab-v1';
+export type TChordsV3SectionEntry = {
+  times: number;
+  items: TChordsV2SectionData[];
+};
+export type TChordsV3SectionData = TChordsV3SectionEntry;
+
+export type TSongSectionEntryRendererType = 'chords-v1' | 'chords-v2' | 'chords-v3' | 'gtab-v1';
 export type TSongSectionEntryData =
   | TChordsV1SectionData
   | TGTabV1SectionData
-  | TChordsV2SectionData;
+  | TChordsV2SectionData
+  | TChordsV3SectionData;
 
 export type TSongSectionEntry = {
   renderer: TSongSectionEntryRendererType;

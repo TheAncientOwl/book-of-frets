@@ -6,7 +6,7 @@
  *
  * @file ChordsV2.tsx
  * @author Alexandru Delegeanu
- * @version 2.4
+ * @version 2.5
  * @description Render song chords section.
  */
 
@@ -61,13 +61,13 @@ const NO_CHORD_ID = '-';
 const SEPARATOR_CHORD_CHAR = '|';
 const SEPARATOR_CHORD_NEWLINE = '/';
 
-const GAP_BETWEEN_CHORD_LINES = '1em';
+export const GAP_BETWEEN_CHORD_LINES = '1em';
 
 type TChordDisplayProps = {
   name: string;
 };
 
-export const ChordDisplay = (props: TChordDisplayProps) => {
+export const ChordV2Display = (props: TChordDisplayProps) => {
   if (props.name.length == 1) {
     return props.name;
   }
@@ -111,7 +111,7 @@ const Chord = (props: TChordProps) => {
           color={theme.items.item.chordsPattern.chord.color}
         >
           {props.chordId !== NO_CHORD_ID && props.chordConfig !== undefined ? (
-            <ChordDisplay name={props.chordConfig.name} />
+            <ChordV2Display name={props.chordConfig.name} />
           ) : (
             '-'
           )}
@@ -185,12 +185,15 @@ type TChordsLineProps = {
 
 type TChordLineDelimiter = {
   positioning: 'begin' | 'end' | 'between';
+  horizontalSpacing?: string;
 };
 
-const ChordLineDelimiter = (props: TChordLineDelimiter) => {
+export const ChordsV2LineDelimiter = (props: TChordLineDelimiter) => {
   const { theme } = useShallowAppStore(state => ({
     theme: state.appTheme.song,
   }));
+
+  const horizontalSpacing = props.horizontalSpacing ?? '-1.5em';
 
   return (
     <Box
@@ -201,8 +204,8 @@ const ChordLineDelimiter = (props: TChordLineDelimiter) => {
       display='flex'
       justifyContent='center'
       alignItems='center'
-      left={props.positioning === 'begin' ? '-1.5em' : undefined}
-      right={props.positioning === 'end' ? '-1.5em' : undefined}
+      left={props.positioning === 'begin' ? horizontalSpacing : undefined}
+      right={props.positioning === 'end' ? horizontalSpacing : undefined}
       borderRight={
         props.positioning === 'begin' || props.positioning === 'between' ? '1.5px solid' : 'none'
       }
@@ -213,7 +216,7 @@ const ChordLineDelimiter = (props: TChordLineDelimiter) => {
   );
 };
 
-const ChordLineTimes = (props: Pick<TChordsLineProps, 'times'>) => {
+export const ChordsV2LineTimes = (props: Pick<TChordsLineProps, 'times'> & { right?: string }) => {
   const { theme, settingsDisplaySectionTimes } = useShallowAppStore(state => ({
     theme: state.appTheme.song,
     settingsDisplaySectionTimes: state.songSettings.display.sectionTimes,
@@ -228,7 +231,7 @@ const ChordLineTimes = (props: Pick<TChordsLineProps, 'times'>) => {
         fontWeight='bold'
         zIndex={1}
         position='absolute'
-        right='-3.25em'
+        right={props.right || '-3.25em'}
         height='100%'
         display='flex'
         justifyContent='center'
@@ -242,7 +245,7 @@ const ChordLineTimes = (props: Pick<TChordsLineProps, 'times'>) => {
   );
 };
 
-const ChordsLine = (props: TChordsLineProps) => {
+const ChordsV2Line = (props: TChordsLineProps) => {
   const { theme, chordsIndex } = useShallowAppStore(state => ({
     theme: state.appTheme.song,
     chordsIndex: state.chordsIndex,
@@ -252,8 +255,8 @@ const ChordsLine = (props: TChordsLineProps) => {
 
   return (
     <Flex direction='row' justifyContent='center' position='relative' marginTop={props.marginTop}>
-      {props.isFirst && <ChordLineDelimiter positioning='begin' />}
-      {props.isLast && <ChordLineDelimiter positioning='end' />}
+      {props.isFirst && <ChordsV2LineDelimiter positioning='begin' />}
+      {props.isLast && <ChordsV2LineDelimiter positioning='end' />}
 
       <Flex direction='column' gap={GAP_BETWEEN_CHORD_LINES}>
         {lines.map((line, lineIdx) => (
@@ -288,17 +291,17 @@ const ChordsLine = (props: TChordsLineProps) => {
         ))}
       </Flex>
 
-      <ChordLineTimes times={props.times} />
+      <ChordsV2LineTimes times={props.times} />
     </Flex>
   );
 };
 
-export const ChordsV2Renderer = (props: TChordsSectionProps) => {
+const chordsV2ParseData = (data: TChordsV2SectionData) => {
   const colsData = new Array<Array<string>>();
   const times = new Array<string>();
   const betweenSeparator = new Array<JSX.Element>();
 
-  props.data.forEach(item => {
+  data.forEach(item => {
     switch (item[0]) {
       case 'x': {
         if (item.includes(' ! 0')) {
@@ -309,7 +312,7 @@ export const ChordsV2Renderer = (props: TChordsSectionProps) => {
             colsData[idx].push(idx === 0 ? column : `x1 ${column}`);
           });
           betweenSeparator.push(
-            <ChordLineDelimiter key={betweenSeparator.length} positioning='between' />,
+            <ChordsV2LineDelimiter key={betweenSeparator.length} positioning='between' />,
           );
         } else if (item.includes(' ? 0 ')) {
           item.split(' ? 0 ').forEach((column, idx) => {
@@ -325,7 +328,7 @@ export const ChordsV2Renderer = (props: TChordsSectionProps) => {
           }
           colsData[0].push(item);
           betweenSeparator.push(
-            <ChordLineDelimiter key={betweenSeparator.length} positioning='between' />,
+            <ChordsV2LineDelimiter key={betweenSeparator.length} positioning='between' />,
           );
         }
         times.push(item.substring(0, item.indexOf(' ')));
@@ -357,42 +360,56 @@ export const ChordsV2Renderer = (props: TChordsSectionProps) => {
     }
   });
 
+  return { colsData, times, betweenSeparator };
+};
+
+type TChordsV2LineRendererProps = Pick<TChordsSectionProps, 'data' | 'strummingPatterns'>;
+
+export const ChordsV2LineRenderer = (props: TChordsV2LineRendererProps) => {
+  const { colsData, times, betweenSeparator } = chordsV2ParseData(props.data);
+
+  return (
+    <Flex direction='row' gap={GAP_BETWEEN_CHORD_LINES}>
+      {colsData.map((column, colIdx) => (
+        <Fragment key={colIdx}>
+          <Flex direction='column' flex={1}>
+            {column.map((line, lineIdx) => {
+              if (line[0] != '>') {
+                return (
+                  <ChordsV2Line
+                    isFirst={colIdx === 0}
+                    isLast={colIdx === colsData.length - 1}
+                    marginTop={lineIdx !== 0 ? GAP_BETWEEN_CHORD_LINES : '0'}
+                    key={lineIdx}
+                    data={line.split(' ').slice(0)}
+                    times={colIdx === colsData.length - 1 ? times[lineIdx] : undefined}
+                  />
+                );
+              } else {
+                return (
+                  <ChordsV1StrummingPattern
+                    key={lineIdx}
+                    pattern={props.strummingPatterns[Number(line.substring(1))]}
+                  />
+                );
+              }
+            })}
+          </Flex>
+          {colIdx < colsData.length - 1 ? (
+            <Flex direction='column' gap={GAP_BETWEEN_CHORD_LINES}>
+              {betweenSeparator}
+            </Flex>
+          ) : null}
+        </Fragment>
+      ))}
+    </Flex>
+  );
+};
+
+export const ChordsV2Renderer = (props: TChordsSectionProps) => {
   return (
     <Flex direction='column' justifyContent='center' alignItems='center' gap='1em'>
-      <Flex direction='row' gap='1em'>
-        {colsData.map((column, colIdx) => (
-          <Fragment key={colIdx}>
-            <Flex direction='column'>
-              {column.map((line, lineIdx) => {
-                if (line[0] != '>') {
-                  return (
-                    <ChordsLine
-                      isFirst={colIdx === 0}
-                      isLast={colIdx === colsData.length - 1}
-                      marginTop={lineIdx !== 0 ? GAP_BETWEEN_CHORD_LINES : '0'}
-                      key={lineIdx}
-                      data={line.split(' ').slice(0)}
-                      times={colIdx === colsData.length - 1 ? times[lineIdx] : undefined}
-                    />
-                  );
-                } else {
-                  return (
-                    <ChordsV1StrummingPattern
-                      key={lineIdx}
-                      pattern={props.strummingPatterns[Number(line.substring(1))]}
-                    />
-                  );
-                }
-              })}
-            </Flex>
-            {colIdx < colsData.length - 1 ? (
-              <Flex direction='column' gap={GAP_BETWEEN_CHORD_LINES}>
-                {betweenSeparator}
-              </Flex>
-            ) : null}
-          </Fragment>
-        ))}
-      </Flex>
+      <ChordsV2LineRenderer data={props.data} strummingPatterns={props.strummingPatterns} />
 
       <Suspense fallback={<Loading />}>
         <ChordsV1Lyrics visible={props.showLyrics} lyrics={props.lyrics} />

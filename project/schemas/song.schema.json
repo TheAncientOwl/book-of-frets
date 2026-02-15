@@ -129,6 +129,42 @@
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
+                    "renderer": { "type": "string", "enum": ["chords-v3"] },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "times": {
+                          "type": "number",
+                          "default": 1
+                        },
+                        "items": {
+                          "type": "array",
+                          "items": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "oneOf": [
+                                {
+                                  "pattern": "^x\\d+(?: [A-Za-z0-9#/()_+-|!]+ [0-9]+)+$"
+                                },
+                                {
+                                  "pattern": "^>\\s*(?:\\d+\\s*)+$"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "required": ["times", "items"]
+                    }
+                  },
+                  "required": ["renderer", "data"]
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
                     "renderer": { "type": "string", "enum": ["gtab-v1"] },
                     "data": { "type": "string" }
                   },
