@@ -6,7 +6,7 @@
  *
  * @file ChordsV2.tsx
  * @author Alexandru Delegeanu
- * @version 2.6
+ * @version 2.7
  * @description Render song chords section.
  */
 
@@ -61,7 +61,7 @@ const NO_CHORD_ID = '-';
 const SEPARATOR_CHORD_CHAR = '|';
 const SEPARATOR_CHORD_NEWLINE = '/';
 
-export const GAP_BETWEEN_CHORD_LINES = '1em';
+export const GAP_BETWEEN_CHORD_LINES = '0.75em';
 
 type TChordDisplayProps = {
   name: string;
