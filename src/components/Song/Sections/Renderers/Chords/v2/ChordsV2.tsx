@@ -6,7 +6,7 @@
  *
  * @file ChordsV2.tsx
  * @author Alexandru Delegeanu
- * @version 2.3
+ * @version 2.4
  * @description Render song chords section.
  */
 
@@ -385,9 +385,11 @@ export const ChordsV2Renderer = (props: TChordsSectionProps) => {
                 }
               })}
             </Flex>
-            <Flex direction='column' gap={GAP_BETWEEN_CHORD_LINES}>
-              {colIdx < colsData.length - 1 ? betweenSeparator : null}
-            </Flex>
+            {colIdx < colsData.length - 1 ? (
+              <Flex direction='column' gap={GAP_BETWEEN_CHORD_LINES}>
+                {betweenSeparator}
+              </Flex>
+            ) : null}
           </Fragment>
         ))}
       </Flex>
