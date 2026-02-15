@@ -6,7 +6,7 @@
  *
  * @file SongSectionEntry.tsx
  * @author Alexandru Delegeanu
- * @version 2.2
+ * @version 2.3
  * @description Chords renderer.
  */
 
@@ -116,13 +116,7 @@ const SongSectionEntryImpl = (props: TChordsProps) => {
 
 export const SongSectionEntry = (props: TChordsProps) => {
   return (
-    <Flex
-      direction='column'
-      alignItems='center'
-      gap='1em'
-      padding={['1.1em 0em', '1.1em 1em']}
-      overflowX={['auto', 'hidden']}
-    >
+    <Flex direction='column' alignItems='center' overflowX={['auto', 'hidden']}>
       <Suspense fallback={<Loading />}>
         <SongSectionEntryImpl {...props} />
       </Suspense>

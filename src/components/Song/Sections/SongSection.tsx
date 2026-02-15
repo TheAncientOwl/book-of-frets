@@ -6,7 +6,7 @@
  *
  * @file SongSection.tsx
  * @author Alexandru Delegeanu
- * @version 2.1
+ * @version 2.2
  * @description Render song section.
  */
 
@@ -15,6 +15,7 @@ import type {
   TSongSectionLyrics,
   TStrummingPattern,
 } from '@/common/types/song.types';
+import { GAP_BETWEEN_CHORD_LINES } from '@/components/Song/Sections/Renderers/Chords/v2/ChordsV2';
 import { SongSectionEntry } from '@/components/Song/Sections/SongSectionEntry';
 import { useAppStore } from '@/store/index';
 import { Accordion, AccordionButton, AccordionIcon, AccordionPanel } from '@/ui/Accordion';
@@ -80,7 +81,7 @@ export const SongSection = (props: TSongSectionProps) => {
       </AccordionButton>
 
       <AccordionPanel>
-        <Flex direction='column' gap='0.25em'>
+        <Flex direction='column' gap={GAP_BETWEEN_CHORD_LINES} pt='1em' pb='1.5em'>
           {props.entries.map((entry, idx) => (
             <SongSectionEntry
               key={idx}
