@@ -6,7 +6,7 @@
  *
  * @file ChordsChunkItem.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Render song pattern section.
  */
 
@@ -131,6 +131,7 @@ const ChordsV1ItemLine = (props: TChordsV1ItemLineProps) => {
                 <Popover isLazy key={index}>
                   <PopoverTrigger>
                     <Tag
+                      mt='10px'
                       as='button'
                       fontWeight='bold'
                       cursor='pointer'
