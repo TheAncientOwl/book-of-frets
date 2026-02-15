@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "contributors": ["TheAncientOwl"],
   "title": "Love Someone (Strummed)",
   "artists": ["Lukas Graham"],
@@ -29,13 +29,14 @@
       "times": 1,
       "entries": [
         {
-          "renderer": "chords-v1",
-          "data": [
-            {
-              "times": 3,
-              "items": [[["0 F 1"]], [["1 G 1"], ["2 Am 1"]]]
-            }
-          ]
+          "renderer": "chords-v3",
+          "data": {
+            "times": 3,
+            "items": [
+              ["x1 F 1", "> 0"],
+              ["x1 G 1 ? 0 Am 1", "> 1 2"]
+            ]
+          }
         },
         {
           "renderer": "chords-v2",
