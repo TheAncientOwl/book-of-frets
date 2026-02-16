@@ -6,7 +6,7 @@
  *
  * @file Fret.tsx
  * @author Alexandru Delegeanu
- * @version 1.1
+ * @version 1.2
  * @description Render chrod based on given config.
  */
 
@@ -16,11 +16,14 @@ import { Circle, Divider, Flex, Icon, Spacer } from '@chakra-ui/react';
 import { Fragment } from 'react';
 import { IoCloseSharp } from 'react-icons/io5';
 
+export type TIsOpenFret = [boolean, boolean, boolean, boolean, boolean, boolean];
+
 type TFretProps = {
   stringsToFingers: Map<TGuitarString, number>;
+  isOpenFret?: TIsOpenFret;
 };
 
-const GuitarStrings: TGuitarString[] = ['E', 'A', 'D', 'G', 'B', 'e'] as const;
+export const GuitarStrings: TGuitarString[] = ['E', 'A', 'D', 'G', 'B', 'e'] as const;
 const GuitarStringsWidths: string[] = ['3.5px', '3px', '2.5px', '2px', '1.5px', '1px'] as const;
 const THUMB_STRING_ID = 7;
 const MUTED_STRING_ID = -1;
@@ -47,6 +50,7 @@ export const Fret = (props: TFretProps) => {
 
         const hasFinger = finger !== undefined && finger !== MUTED_STRING_ID;
         const muted = finger === MUTED_STRING_ID;
+        const isOpen = props.isOpenFret && props.isOpenFret[stringIdx];
 
         const leftPercent = stringIdx * DISTANCE_BETWEEN_CHORDS;
 
@@ -58,7 +62,7 @@ export const Fret = (props: TFretProps) => {
                 fontWeight='bold'
                 borderWidth='thin'
                 position='absolute'
-                top='-35%'
+                top='-45%'
                 left={`${leftPercent}%`}
                 transform='translateX(-50%)'
                 padding='0.75em'
@@ -70,6 +74,24 @@ export const Fret = (props: TFretProps) => {
               >
                 <Icon as={IoCloseSharp} />
               </Circle>
+            )}
+
+            {isOpen && (
+              <Circle
+                size='1.5em'
+                fontWeight='bold'
+                borderWidth='thin'
+                position='absolute'
+                top='-45%'
+                left={`${leftPercent}%`}
+                transform='translateX(-50%)'
+                padding='0.75em'
+                zIndex='1'
+                // [*] theme colors
+                // backgroundColor={circleColor}
+                borderColor={theme.finger.border}
+                color={theme.finger.color}
+              ></Circle>
             )}
 
             <Divider

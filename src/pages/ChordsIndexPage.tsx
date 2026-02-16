@@ -6,15 +6,15 @@
  *
  * @file ChordsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Handle chords rendering.
  */
 
 import type { TChord } from '@/common/types/chord.types';
+import { useShallowAppStore } from '@/store/index';
+import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
 import { Chord } from '@/ui/Chord';
 import { createSmartList } from '@/ui/SmartList/index';
-import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
-import { useShallowAppStore } from '@/store/index';
 import { Box, Container, Flex, SimpleGrid } from '@chakra-ui/react';
 import { Fragment, useLayoutEffect } from 'react';
 

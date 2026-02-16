@@ -6,13 +6,13 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 1.4
+ * @version 1.5
  * @description Render chrod based on given config.
  */
 
-import type { TChord } from '@/common/types/chord.types';
+import type { TChord, TFret } from '@/common/types/chord.types';
 import type { TGuitarString } from '@/common/types/common.types';
-import { Fret } from '@/ui/Chord/Fret';
+import { Fret, GuitarStrings, type TIsOpenFret } from '@/ui/Chord/Fret';
 import { useShallowAppStore } from '@/store/index';
 import { Box, Circle, Divider, Flex, Heading, type BoxProps } from '@chakra-ui/react';
 import { Fragment } from 'react';
@@ -20,6 +20,21 @@ import { ChordV2Display } from '@/components/Song/Sections/Renderers/Chords/v2/C
 
 type TChordProps = TChord & {
   containerProps?: BoxProps;
+};
+
+const computeOpenFrets = (frets: TFret[]): TIsOpenFret => {
+  const out = [true, true, true, true, true, true] as TIsOpenFret;
+
+  GuitarStrings.forEach((stringName, stringIdx) => {
+    for (const fret of frets) {
+      if (fret[stringName] !== undefined) {
+        out[stringIdx] = false;
+        break;
+      }
+    }
+  });
+
+  return out;
 };
 
 export const Chord = (props: TChordProps) => {
@@ -73,7 +88,7 @@ export const Chord = (props: TChordProps) => {
         )}
       </Heading>
 
-      <Box width='11em' mt='5px'>
+      <Box width='11em' mt='1.5em'>
         <Divider
           borderWidth='thin'
           // [*] theme colors
@@ -86,7 +101,10 @@ export const Chord = (props: TChordProps) => {
 
           return (
             <Fragment key={idx}>
-              <Fret stringsToFingers={map} />
+              <Fret
+                stringsToFingers={map}
+                isOpenFret={idx !== 0 ? undefined : computeOpenFrets(props.frets)}
+              />
               {idx < props.frets.length && (
                 <Divider
                   borderWidth='thin'
