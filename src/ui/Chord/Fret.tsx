@@ -6,7 +6,7 @@
  *
  * @file Fret.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Render chrod based on given config.
  */
 
@@ -21,6 +21,7 @@ type TFretProps = {
 };
 
 const GuitarStrings: TGuitarString[] = ['E', 'A', 'D', 'G', 'B', 'e'] as const;
+const GuitarStringsWidths: string[] = ['3.5px', '3px', '2.5px', '2px', '1.5px', '1px'] as const;
 const THUMB_STRING_ID = 7;
 const MUTED_STRING_ID = -1;
 const DISTANCE_BETWEEN_CHORDS = 20;
@@ -57,7 +58,7 @@ export const Fret = (props: TFretProps) => {
                 fontWeight='bold'
                 borderWidth='thin'
                 position='absolute'
-                top='-10%'
+                top='-35%'
                 left={`${leftPercent}%`}
                 transform='translateX(-50%)'
                 padding='0.75em'
@@ -73,9 +74,10 @@ export const Fret = (props: TFretProps) => {
 
             <Divider
               orientation='vertical'
-              borderWidth='thin'
+              borderLeft={`${GuitarStringsWidths[stringIdx]} solid`}
               // [*] theme colors
               borderColor={theme.dividers}
+              // border='1px solid red'
             />
 
             {stringIdx < GuitarStrings.length - 1 && <Spacer />}

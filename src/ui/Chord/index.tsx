@@ -6,7 +6,7 @@
  *
  * @file Chord.tsx
  * @author Alexandru Delegeanu
- * @version 1.3
+ * @version 1.4
  * @description Render chrod based on given config.
  */
 
@@ -73,7 +73,7 @@ export const Chord = (props: TChordProps) => {
         )}
       </Heading>
 
-      <Box width='11em'>
+      <Box width='11em' mt='5px'>
         <Divider
           borderWidth='thin'
           // [*] theme colors
