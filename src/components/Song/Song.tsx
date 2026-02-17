@@ -6,20 +6,20 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 1.3
+ * @version 1.4
  * @description Render song based on given config.
  */
 
 import { useSessionStorage } from '@/common/hooks/useSessionStorage';
 import type { TSong, TSongSectionLyrics } from '@/common/types/song.types';
 import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
+import { FetchLyricsButton } from '@/components/Song/Buttons/FetchLyricsButton';
 import { SongChordsList } from '@/components/Song/ChordsList';
 import { SongHeader } from '@/components/Song/Header';
-import { FetchLyricsButton } from '@/components/Song/FetchLyricsButton';
 import { SongSections } from '@/components/Song/Sections/SongSections';
 import { useAppStore } from '@/store/index';
 import { Loading } from '@/ui/Loading';
-import { Box, Container, Button } from '@chakra-ui/react';
+import { Box, Button, Container } from '@chakra-ui/react';
 import { lazy, Suspense } from 'react';
 import { FaFilePdf } from 'react-icons/fa';
 
