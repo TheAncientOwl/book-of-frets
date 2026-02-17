@@ -6,7 +6,7 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 1.2
+ * @version 1.3
  * @description Render song header data.
  */
 
@@ -16,9 +16,16 @@ import { Box, Circle, Flex, Heading, Image, Skeleton, Text, Tooltip } from '@cha
 import { Fragment, useState } from 'react';
 import { GiGuitarBassHead, GiGuitarHead } from 'react-icons/gi';
 import { PiFinnTheHumanDuotone } from 'react-icons/pi';
+import { FetchLyricsButton } from '@/components/Song/Buttons/FetchLyricsButton';
+import { OpenPDFButton } from '@/components/Song/Buttons/OpenPDFButton';
 
-type TSongHeaderProps = Pick<TSong, 'title' | 'artists' | 'capo' | 'type' | 'contributors'> & {
+type TSongHeaderProps = Pick<
+  TSong,
+  'title' | 'artists' | 'capo' | 'type' | 'contributors' | 'lyrics'
+> & {
   directory: string;
+  lyricsShown: boolean;
+  onToggleLyrics: () => void;
 };
 
 const typeToIcon = {
@@ -118,6 +125,24 @@ export const SongHeader = (props: TSongHeaderProps) => {
           >
             <PiFinnTheHumanDuotone />
           </Tooltip>
+        </Flex>
+
+        <Flex
+          flexDirection='column'
+          top='0'
+          left={['7em', '8em']}
+          position='absolute'
+          justifyContent='center'
+          alignItems='center'
+          gap='10px'
+          height='100%'
+        >
+          <OpenPDFButton directory={props.directory} />
+          <FetchLyricsButton
+            available={props.lyrics}
+            lyricsShown={props.lyricsShown}
+            onClick={props.onToggleLyrics}
+          />
         </Flex>
       </Box>
 

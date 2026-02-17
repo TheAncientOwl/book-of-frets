@@ -6,22 +6,20 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 1.4
+ * @version 1.5
  * @description Render song based on given config.
  */
 
 import { useSessionStorage } from '@/common/hooks/useSessionStorage';
 import type { TSong, TSongSectionLyrics } from '@/common/types/song.types';
 import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
-import { FetchLyricsButton } from '@/components/Song/Buttons/FetchLyricsButton';
 import { SongChordsList } from '@/components/Song/ChordsList';
 import { SongHeader } from '@/components/Song/Header';
 import { SongSections } from '@/components/Song/Sections/SongSections';
 import { useAppStore } from '@/store/index';
 import { Loading } from '@/ui/Loading';
-import { Box, Button, Container } from '@chakra-ui/react';
+import { Box, Container } from '@chakra-ui/react';
 import { lazy, Suspense } from 'react';
-import { FaFilePdf } from 'react-icons/fa';
 
 const SongNotes = lazy(() => import('@/components/Song/Notes'));
 const SongResources = lazy(() => import('@/components/Song/SongResources'));
@@ -36,7 +34,6 @@ type TSongProps = TSong & {
 
 export const Song = (props: TSongProps) => {
   const theme = useAppStore(state => state.appTheme.song);
-  const themeId = useAppStore(state => state.appTheme.id);
 
   const [showLyrics, setShowLyrics] = useSessionStorage(props.title + '-show-lyrics', false);
   const [lyrics, setLyrics] = useSessionStorage(props.title + '-lyrics', [] as string[][]);
@@ -72,37 +69,13 @@ export const Song = (props: TSongProps) => {
         capo={props.capo}
         type={props.type}
         contributors={props.contributors}
+        lyrics={props.lyrics}
+        lyricsShown={showLyrics}
+        onToggleLyrics={() => {
+          setShowLyrics(!showLyrics);
+          fetchLyrics();
+        }}
       />
-
-      <Box display='flex' justifyContent='center' mb='1em' gap='10px'>
-        <FetchLyricsButton
-          available={props.lyrics}
-          lyricsShown={showLyrics}
-          onClick={() => {
-            setShowLyrics(!showLyrics);
-            fetchLyrics();
-          }}
-        />
-
-        <Button
-          display='flex'
-          gap='3px'
-          justifyContent='center'
-          alignItems='center'
-          size='sm'
-          onClick={() => {
-            window.open(
-              `${import.meta.env.BASE_URL}songs/${props.directory}/pdf/${props.directory}.${themeId}.pdf`,
-              '_blank',
-            );
-          }}
-          // [*] theme colors
-          colorScheme={theme.buttons.pdf.bg}
-          color={theme.buttons.pdf.text}
-        >
-          <FaFilePdf /> Open PDF
-        </Button>
-      </Box>
 
       <Box
         padding={['1.5rem 10px', '1.5rem 1rem']}
