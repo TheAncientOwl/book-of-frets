@@ -6,7 +6,7 @@
  *
  * @file SongsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 1.1
+ * @version 1.2
  * @description List all available songs.
  */
 
@@ -73,7 +73,8 @@ export const SongsIndexPage = () => {
         context={SongsList.context}
         setup={{
           data: songsIndex,
-          getKey: song => song.title + ' ' + song.artists.join(' '),
+          getKey: song =>
+            song.type.map(type => `@${type}`).join('') + song.title + ' ' + song.artists.join(' '),
         }}
       >
         <Flex justifyContent='center' mx='auto' mb='20px' width={['250px', '300px', '400px']}>
