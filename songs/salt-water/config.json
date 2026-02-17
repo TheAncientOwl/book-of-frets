@@ -1,0 +1,100 @@
+{
+  "version": "2.0.0",
+  "contributors": ["TheAncientOwl"],
+  "title": "Salt Water",
+  "artists": ["Ed Sheeran"],
+  "type": ["acoustic"],
+  "notes": [],
+  "capo": 4,
+  "chordIDs": ["Am", "F", "C", "G", "Dm"],
+  "strumms": [
+    ["D", "-", "-", "-", "D", "-", "D", "U", "-", "U", "D", "U", "D", "U", "D", "U"],
+    ["D"]
+  ],
+  "sections": {
+    "v1": {
+      "name": "verse 1",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x4 Am 1 F 1 C 1 G 1", "> 0"]
+        }
+      ]
+    },
+    "pc": {
+      "name": "prechorus",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x1 F 1", "> 1"]
+        }
+      ]
+    },
+    "c": {
+      "name": "chorus",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x2 C 1 F 1 C 1 G 1", "> 0"]
+        }
+      ]
+    },
+    "v2": {
+      "name": "verse 2",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x2 Am 1 F 1 C 1 G 1", "> 0"]
+        }
+      ]
+    },
+    "bg": {
+      "name": "bridge",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x1 Dm 1 G 1 Am 1 F 1", "x1 Dm 1 G 1 C 1 F 1", "> 0"]
+        }
+      ]
+    },
+    "v3": {
+      "name": "verse 3",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "chords-v2",
+          "data": ["x2 Am 1 F 1 C 1 G 1", "> 1"]
+        }
+      ]
+    },
+    "o": {
+      "name": "outro",
+      "times": 1,
+      "entries": [
+        {
+          "renderer": "gtab-v1",
+          "data": "[C] - A3 - G0 - e0 - - - G0 - e0 - B1 - - e0 - - - - | [Fmaj7sus2] - D3 - G0 - e0 - - G0 - e0 - B1 - - B3 - - - - | [C] - A3 - G0 - e0 - - G0 - e0 - B1 - - - - B3 - - B1 - - | [G] - E3+B3 - - - B0 - - - B3/5/3 - -"
+        }
+      ]
+    }
+  },
+  "order": ["v1", "pc", "c", "v2", "c", "bg", "v3", "pc", "c", "o"],
+  "lyrics": false,
+  "res": [
+    {
+      "alias": "Salt Water Guitar Tutorial - Ed Sheeran Guitar Lesson |Chords + Strumming|",
+      "author": "GuitarZero2Hero ~ YouTube",
+      "link": "https://youtu.be/7wFK1NGow0Y"
+    },
+    {
+      "alias": "Salt Water Guitar Cover Ed Sheeran 🎸|Tabs + Chords|",
+      "author": "GuitarZero2Hero Express ~ YouTube",
+      "link": "https://youtu.be/pbQfSLrVyK4"
+    }
+  ]
+}

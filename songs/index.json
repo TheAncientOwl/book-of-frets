@@ -85,6 +85,13 @@
       "chordIDs": ["C", "Am7", "E+", "F5", "Fsus2"]
     },
     {
+      "title": "Salt Water",
+      "artists": ["Ed Sheeran"],
+      "directory": "salt-water",
+      "type": ["acoustic"],
+      "chordIDs": ["Am", "F", "C", "G", "Dm"]
+    },
+    {
       "title": "I Wanna Be Yours (Easy)",
       "artists": ["Arctic Monkeys"],
       "directory": "i-wanna-be-yours-easy",
