@@ -6,28 +6,61 @@
  *
  * @file Fret.tsx
  * @author Alexandru Delegeanu
- * @version 1.2
+ * @version 1.3
  * @description Render chrod based on given config.
  */
 
 import type { TGuitarString } from '@/common/types/common.types';
 import { useShallowAppStore } from '@/store/index';
-import { Circle, Divider, Flex, Icon, Spacer } from '@chakra-ui/react';
+import { Box, Circle, Divider, Flex, Icon, Spacer } from '@chakra-ui/react';
 import { Fragment } from 'react';
 import { IoCloseSharp } from 'react-icons/io5';
-
-export type TIsOpenFret = [boolean, boolean, boolean, boolean, boolean, boolean];
-
-type TFretProps = {
-  stringsToFingers: Map<TGuitarString, number>;
-  isOpenFret?: TIsOpenFret;
-};
 
 export const GuitarStrings: TGuitarString[] = ['E', 'A', 'D', 'G', 'B', 'e'] as const;
 const GuitarStringsWidths: string[] = ['3.5px', '3px', '2.5px', '2px', '1.5px', '1px'] as const;
 const THUMB_STRING_ID = 7;
 const MUTED_STRING_ID = -1;
 const DISTANCE_BETWEEN_CHORDS = 20;
+
+export type TIsOpenFret = [boolean, boolean, boolean, boolean, boolean, boolean];
+
+export type TBarreChordLine = {
+  begin: number;
+  span: number;
+  finger: number;
+};
+
+type TStringsToFingersMap = Map<TGuitarString, number>;
+
+const getBarreChordLine = (stringsToFingers: TStringsToFingersMap): TBarreChordLine | undefined => {
+  const barre: TBarreChordLine = { begin: -1, span: -1, finger: -1 };
+
+  let lastIdx = -1;
+  GuitarStrings.forEach((stringName, stringIdx) => {
+    const fingerId = stringsToFingers.get(stringName);
+
+    if (fingerId !== undefined && fingerId !== MUTED_STRING_ID) {
+      if (barre.begin === -1) {
+        barre.begin = stringIdx;
+        barre.finger = fingerId;
+        barre.span = 1;
+        lastIdx = stringIdx;
+      } else if (barre.finger === fingerId && lastIdx == stringIdx - 1) {
+        barre.span += 1;
+        lastIdx = stringIdx;
+      } else {
+        return undefined;
+      }
+    }
+  });
+
+  return barre.span > 1 ? barre : undefined;
+};
+
+type TFretProps = {
+  stringsToFingers: TStringsToFingersMap;
+  isOpenFret?: TIsOpenFret;
+};
 
 export const Fret = (props: TFretProps) => {
   const { theme, showFinger } = useShallowAppStore(state => ({
@@ -37,6 +70,8 @@ export const Fret = (props: TFretProps) => {
 
   const circleColor = showFinger ? theme.finger.background : theme.finger.border;
 
+  const barre = getBarreChordLine(props.stringsToFingers);
+
   return (
     <Flex
       direction='row'
@@ -45,6 +80,31 @@ export const Fret = (props: TFretProps) => {
       // [*] theme colors
       backgroundColor={theme.background}
     >
+      {barre && (
+        <Box
+          position='absolute'
+          top='50%'
+          left={`${barre.begin * DISTANCE_BETWEEN_CHORDS - 7}%`}
+          width={`${barre.span * DISTANCE_BETWEEN_CHORDS * 0.95}%`}
+          fontWeight='bold'
+          height='1.5em'
+          transform='translateY(-50%)'
+          zIndex='10'
+          border={`1px solid ${theme.finger.border}`}
+          borderRadius='999px'
+          textAlign='center'
+          display='flex'
+          justifyContent='center'
+          alignItems='center'
+          // [*] theme colors
+          backgroundColor={circleColor}
+          borderColor={theme.finger.border}
+          color={theme.finger.color}
+        >
+          {barre.finger}
+        </Box>
+      )}
+
       {GuitarStrings.map((string, stringIdx) => {
         const finger = props.stringsToFingers.get(string);
 
@@ -99,12 +159,11 @@ export const Fret = (props: TFretProps) => {
               borderLeft={`${GuitarStringsWidths[stringIdx]} solid`}
               // [*] theme colors
               borderColor={theme.dividers}
-              // border='1px solid red'
             />
 
             {stringIdx < GuitarStrings.length - 1 && <Spacer />}
 
-            {hasFinger && (
+            {!barre && hasFinger && (
               <Circle
                 size='1.5em'
                 fontWeight='bold'
@@ -114,7 +173,7 @@ export const Fret = (props: TFretProps) => {
                 left={`${leftPercent}%`}
                 transform='translate(-50%, -50%)'
                 padding='0.75em'
-                zIndex='1'
+                zIndex='100'
                 // [*] theme colors
                 backgroundColor={circleColor}
                 borderColor={theme.finger.border}
