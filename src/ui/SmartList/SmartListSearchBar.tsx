@@ -10,7 +10,7 @@
  * @description Filter items of SmartList.
  */
 
-import type { TSmartListContextUse } from '@/ui/SmartList/index';
+import type { TSmartListContextUse } from '@/ui/SmartList/SmartList';
 import { Icon, Input, InputGroup, InputRightElement, type InputProps } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
@@ -32,7 +32,7 @@ export const SmartListSearchBar = <T,>(props: TSmartListSearchBarProps<T>) => {
     }
 
     const filtered = originalData.filter(item =>
-      getKey(item).toLowerCase().includes(search.toLowerCase())
+      getKey(item).toLowerCase().includes(search.toLowerCase()),
     );
     setData(filtered);
   }, [search, getKey, setData, resetData, originalData]);

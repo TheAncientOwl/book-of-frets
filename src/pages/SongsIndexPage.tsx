@@ -12,11 +12,11 @@
 
 import type { TSongsIndexEntry } from '@/common/types/song.types';
 import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
-import { SongCard } from '@/components/SongCard';
+import { SongCard } from '@/components/SongCard/SongCard';
 import { SongsSkeletonList } from '@/components/SongCard/Skeleton';
 import { useAppStore } from '@/store/index';
 import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
-import { createSmartList } from '@/ui/SmartList/index';
+import { createSmartList } from '@/ui/SmartList/SmartList';
 import { Box, Container, Flex } from '@chakra-ui/react';
 import { useEffect, useLayoutEffect, useState } from 'react';
 

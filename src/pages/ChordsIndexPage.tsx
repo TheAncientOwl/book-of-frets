@@ -13,8 +13,8 @@
 import type { TChord } from '@/common/types/chord.types';
 import { useShallowAppStore } from '@/store/index';
 import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
-import { Chord } from '@/ui/Chord';
-import { createSmartList } from '@/ui/SmartList/index';
+import { Chord } from '@/ui/Chord/Chord';
+import { createSmartList } from '@/ui/SmartList/SmartList';
 import { Box, Container, Flex, SimpleGrid } from '@chakra-ui/react';
 import { Fragment, useLayoutEffect } from 'react';
 

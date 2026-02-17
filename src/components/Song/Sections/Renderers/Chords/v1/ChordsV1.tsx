@@ -18,7 +18,7 @@ import type {
 import { ChordsV1Item } from '@/components/Song/Sections/Renderers/Chords/v1/Item';
 import { ChordsV1Divider } from '@/components/Song/Sections/Renderers/Chords/v1/Divider';
 import { useShallowAppStore } from '@/store/index';
-import { Loading } from '@/ui/Loading/index';
+import { Loading } from '@/ui/Loading';
 import { Box, Text, Tooltip } from '@chakra-ui/react';
 import { Fragment, lazy, Suspense } from 'react';
 

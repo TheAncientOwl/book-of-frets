@@ -10,7 +10,7 @@
  * @description Provide context for SmartList.
  */
 
-import type { TSmartListContext, TSmartListContextData } from '@/ui/SmartList/index';
+import type { TSmartListContext, TSmartListContextData } from '@/ui/SmartList/SmartList';
 import { useCallback, useEffect, useMemo, useState, type PropsWithChildren } from 'react';
 
 export type TSmartListWrapperProps<T> = PropsWithChildren & {
@@ -28,7 +28,7 @@ export const SmartListWrapper = <T,>(props: TSmartListWrapperProps<T>) => {
 
   const resetData = useCallback(() => {
     setData(
-      props.setup.defaultSorted ? [...props.setup.data].sort(props.setup.cmp) : props.setup.data
+      props.setup.defaultSorted ? [...props.setup.data].sort(props.setup.cmp) : props.setup.data,
     );
   }, [props.setup.data, props.setup.cmp, props.setup.defaultSorted]);
 
@@ -44,7 +44,7 @@ export const SmartListWrapper = <T,>(props: TSmartListWrapperProps<T>) => {
       resetData,
       getKey: props.setup.getKey,
     }),
-    [props.setup.data, data, resetData, props.setup.getKey]
+    [props.setup.data, data, resetData, props.setup.getKey],
   );
 
   return <props.context.Context value={contextValue}>{props.children}</props.context.Context>;

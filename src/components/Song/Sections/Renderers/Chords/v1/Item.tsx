@@ -12,7 +12,7 @@
 
 import type { TStrummingChordsItem, TStrummingPattern } from '@/common/types/song.types';
 import { useAppStore, useShallowAppStore } from '@/store/index';
-import { Chord } from '@/ui/Chord';
+import { Chord } from '@/ui/Chord/Chord';
 import {
   Box,
   Divider,

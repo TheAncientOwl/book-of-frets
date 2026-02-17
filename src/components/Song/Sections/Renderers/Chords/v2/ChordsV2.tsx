@@ -18,8 +18,8 @@ import type {
 } from '@/common/types/song.types';
 import { ChordsV1StrummingPattern } from '@/components/Song/Sections/Renderers/Chords/v1/Item';
 import { useShallowAppStore } from '@/store/index';
-import { Chord as ChordCard } from '@/ui/Chord/index';
-import { Loading } from '@/ui/Loading/index';
+import { Chord as ChordCard } from '@/ui/Chord/Chord';
+import { Loading } from '@/ui/Loading';
 import {
   Box,
   Divider,

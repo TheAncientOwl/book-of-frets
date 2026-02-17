@@ -19,7 +19,7 @@ import type {
   TSongSectionLyrics,
   TStrummingPattern,
 } from '@/common/types/song.types';
-import { Loading } from '@/ui/Loading/index';
+import { Loading } from '@/ui/Loading';
 import { Box, Flex, Tooltip } from '@chakra-ui/react';
 import { lazy, Suspense } from 'react';
 

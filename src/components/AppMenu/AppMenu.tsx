@@ -40,9 +40,9 @@ import { Loading } from '@/ui/Loading';
 import { useAppStore, useShallowAppStore } from '@/store/index';
 import { lazy, Suspense } from 'react';
 
-const GuitarTuner = lazy(() => import('@/components/AppMenu/GuitarTuner'));
-const Settings = lazy(() => import('@/components/AppMenu/Settings'));
-const NavigationList = lazy(() => import('@/components/AppMenu/Navigation/List'));
+const GuitarTuner = lazy(() => import('@/components/AppMenu/GuitarTuner/GuitarTuner'));
+const Settings = lazy(() => import('@/components/AppMenu/Settings/Settings'));
+const NavigationList = lazy(() => import('@/components/AppMenu/Navigation/List/NavigationList'));
 
 const TabHeader = (props: PropsWithChildren) => {
   const theme = useAppStore(state => state.appTheme.appMenu.tabs);

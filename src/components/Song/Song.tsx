@@ -15,7 +15,7 @@ import type { TSong, TSongSectionLyrics } from '@/common/types/song.types';
 import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
 import { SongChordsList } from '@/components/Song/ChordsList';
 import { SongHeader } from '@/components/Song/Header';
-import { FetchLyricsButton } from '@/components/Song/Lyrics/FetchLyricsButton';
+import { FetchLyricsButton } from '@/components/Song/FetchLyricsButton';
 import { SongSections } from '@/components/Song/Sections/SongSections';
 import { useAppStore } from '@/store/index';
 import { Loading } from '@/ui/Loading';
@@ -24,7 +24,7 @@ import { lazy, Suspense } from 'react';
 import { FaFilePdf } from 'react-icons/fa';
 
 const SongNotes = lazy(() => import('@/components/Song/Notes'));
-const SongResources = lazy(() => import('@/components/Song/Resources'));
+const SongResources = lazy(() => import('@/components/Song/SongResources'));
 
 const InView = lazy(() =>
   import('react-intersection-observer').then(mod => ({ default: mod.InView })),

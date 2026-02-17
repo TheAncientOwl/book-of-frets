@@ -19,7 +19,7 @@ import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor
 import { lazy, Suspense, useEffect, useLayoutEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const Song = lazy(() => import('@/components/Song'));
+const Song = lazy(() => import('@/components/Song/Song'));
 
 export const SongPage = () => {
   const [songConfig, setSongConfig] = useState<{ data: TSong; directory: string } | null>(null);

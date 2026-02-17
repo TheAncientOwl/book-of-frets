@@ -11,7 +11,7 @@
  */
 
 import { Accordion, AccordionButton, AccordionIcon, AccordionPanel } from '@/ui/Accordion';
-import { Chord } from '@/ui/Chord';
+import { Chord } from '@/ui/Chord/Chord';
 import { useShallowAppStore } from '@/store/index';
 import { Heading, List, ListItem } from '@chakra-ui/react';
 

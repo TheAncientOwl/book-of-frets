@@ -21,7 +21,7 @@ import {
   ChordsV2LineTimes,
   GAP_BETWEEN_CHORD_LINES,
 } from '@/components/Song/Sections/Renderers/Chords/v2/ChordsV2';
-import { Loading } from '@/ui/Loading/index';
+import { Loading } from '@/ui/Loading';
 import { Flex } from '@chakra-ui/react';
 import { lazy, Suspense } from 'react';
 

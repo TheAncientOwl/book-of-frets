@@ -12,7 +12,7 @@
 
 import { useSessionStorage } from '@/common/hooks/useSessionStorage';
 import { SessionStorageKeys } from '@/store/common/storageKeys';
-import type { TSmartListContextUse } from '@/ui/SmartList/index';
+import type { TSmartListContextUse } from '@/ui/SmartList/SmartList';
 import { Box, type BoxProps, type ListProps, type SimpleGridProps } from '@chakra-ui/react';
 import {
   Fragment,
