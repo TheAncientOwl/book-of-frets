@@ -6,7 +6,7 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 1.3
+ * @version 1.4
  * @description Render song header data.
  */
 
@@ -18,10 +18,11 @@ import { GiGuitarBassHead, GiGuitarHead } from 'react-icons/gi';
 import { PiFinnTheHumanDuotone } from 'react-icons/pi';
 import { FetchLyricsButton } from '@/components/Song/Buttons/FetchLyricsButton';
 import { OpenPDFButton } from '@/components/Song/Buttons/OpenPDFButton';
+import YoutubeButton from '@/components/Song/Buttons/YoutubeButton';
 
 type TSongHeaderProps = Pick<
   TSong,
-  'title' | 'artists' | 'capo' | 'type' | 'contributors' | 'lyrics'
+  'title' | 'artists' | 'capo' | 'type' | 'contributors' | 'lyrics' | 'res'
 > & {
   directory: string;
   lyricsShown: boolean;
@@ -143,6 +144,28 @@ export const SongHeader = (props: TSongHeaderProps) => {
             lyricsShown={props.lyricsShown}
             onClick={props.onToggleLyrics}
           />
+        </Flex>
+        <Flex
+          flexDirection='column'
+          top='0'
+          right={['7em', '8em']}
+          position='absolute'
+          justifyContent='center'
+          alignItems='center'
+          gap='10px'
+          height='100%'
+        >
+          {props.res.map((res, resIdx) => (
+            <YoutubeButton
+              key={resIdx}
+              title={
+                <>
+                  Open in Youtube ⇒ {res.alias} by {res.author}
+                </>
+              }
+              link={res.link}
+            />
+          ))}
         </Flex>
       </Box>
 

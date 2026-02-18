@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 1.5
+ * @version 1.6
  * @description Render song based on given config.
  */
 
@@ -75,6 +75,7 @@ export const Song = (props: TSongProps) => {
           setShowLyrics(!showLyrics);
           fetchLyrics();
         }}
+        res={props.res}
       />
 
       <Box
