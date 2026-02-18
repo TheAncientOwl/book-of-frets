@@ -197,13 +197,13 @@
   "song": {
     "buttons": {
       "lyrics": {
-        "text": "white",
-        "bgShow": "red",
-        "bgHide": "orange"
+        "text": "#D7B19D",
+        "bgShow": "#D7B19D",
+        "bgHide": "red"
       },
       "pdf": {
-        "text": "white",
-        "bg": "red"
+        "text": "#D7B19D",
+        "bg": "#D7B19D"
       }
     },
     "background": "#490106",
