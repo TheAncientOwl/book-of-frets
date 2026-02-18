@@ -6,12 +6,12 @@
  *
  * @file OpenPDFButton.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Opens the PDF attached to current song.
  */
 
 import { useAppStore } from '@/store/index';
-import { IconButton } from '@chakra-ui/react';
+import { IconButton, Tooltip } from '@chakra-ui/react';
 import { FaFilePdf } from 'react-icons/fa';
 
 type TOpenPDFButtonProps = {
@@ -23,29 +23,31 @@ export const OpenPDFButton = ({ directory }: TOpenPDFButtonProps) => {
   const themeId = useAppStore(state => state.appTheme.id);
 
   return (
-    <IconButton
-      aria-label='open-pdf-button'
-      icon={<FaFilePdf color={theme.buttons.pdf.text} />}
-      display='flex'
-      gap='3px'
-      justifyContent='center'
-      alignItems='center'
-      size='sm'
-      onClick={() => {
-        window.open(
-          `${import.meta.env.BASE_URL}songs/${directory}/pdf/${directory}.${themeId}.pdf`,
-          '_blank',
-        );
-      }}
-      variant='outline'
-      // [*] theme colors
-      colorScheme={theme.buttons.pdf.bg}
-      color={theme.buttons.pdf.text}
-      borderColor={theme.buttons.pdf.bg}
-      _hover={{
-        backgroundColor: 'black',
-      }}
-    />
+    <Tooltip label='Open PDF' hasArrow>
+      <IconButton
+        aria-label='open-pdf-button'
+        icon={<FaFilePdf color={theme.buttons.pdf.text} />}
+        display='flex'
+        gap='3px'
+        justifyContent='center'
+        alignItems='center'
+        size='sm'
+        onClick={() => {
+          window.open(
+            `${import.meta.env.BASE_URL}songs/${directory}/pdf/${directory}.${themeId}.pdf`,
+            '_blank',
+          );
+        }}
+        variant='outline'
+        // [*] theme colors
+        colorScheme={theme.buttons.pdf.bg}
+        color={theme.buttons.pdf.text}
+        borderColor={theme.buttons.pdf.bg}
+        _hover={{
+          backgroundColor: 'black',
+        }}
+      />
+    </Tooltip>
   );
 };
 
