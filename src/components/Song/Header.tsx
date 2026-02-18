@@ -6,7 +6,7 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 1.7
+ * @version 1.8
  * @description Render song header data.
  */
 
@@ -168,18 +168,24 @@ export const SongHeader = (props: TSongHeaderProps) => {
         >
           {props.type.map((item, index) => (
             <Fragment key={index}>
-              <Tooltip label={item}>{typeToIcon[item as keyof typeof typeToIcon]}</Tooltip>
+              <Tooltip
+                label={item}
+                padding='0.25em 0.5em'
+                borderRadius='0.5em'
+                borderStyle='solid'
+                borderWidth='thin'
+                // [*] theme colors
+                color={theme.header.typeTags}
+                backgroundColor={theme.background}
+                borderColor={theme.header.typeTags}
+              >
+                {typeToIcon[item as keyof typeof typeToIcon]}
+              </Tooltip>
             </Fragment>
           ))}
           <Tooltip
             label={
-              <Flex
-                justify='center'
-                alignItems='center'
-                gap='5px'
-                // [*] theme colors
-                color={theme.header.contributors.contributor}
-              >
+              <Flex justify='center' alignItems='center' gap='5px'>
                 <PiFinnTheHumanDuotone />
                 <Box as='span' fontWeight='bold'>
                   Contributors:
@@ -191,6 +197,14 @@ export const SongHeader = (props: TSongHeaderProps) => {
                 </Box>
               </Flex>
             }
+            padding='0.25em 0.5em'
+            borderRadius='0.5em'
+            borderStyle='solid'
+            borderWidth='thin'
+            // [*] theme colors
+            color={theme.header.contributors.contributor}
+            backgroundColor={theme.background}
+            borderColor={theme.header.contributors.contributor}
           >
             <PiFinnTheHumanDuotone />
           </Tooltip>

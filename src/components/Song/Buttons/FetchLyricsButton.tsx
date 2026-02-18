@@ -6,7 +6,7 @@
  *
  * @file FetchLyricsButton.tsx
  * @author Alexandru Delegeanu
- * @version 1.4
+ * @version 1.5
  * @description Fetch song lyrics button.
  */
 
@@ -21,17 +21,31 @@ type TFetchLyricsButton = {
 };
 
 export const FetchLyricsButton = (props: TFetchLyricsButton) => {
-  const theme = useAppStore(state => state.appTheme.song.buttons);
+  const theme = useAppStore(state => state.appTheme.song);
 
   return (
     <>
       {props.available && (
-        <Tooltip label={props.lyricsShown ? 'Hide Lyrics' : 'Show Lyrics'} hasArrow>
+        <Tooltip
+          label={props.lyricsShown ? 'Hide Lyrics' : 'Show Lyrics'}
+          padding='0.25em 0.5em'
+          borderRadius='0.5em'
+          borderStyle='solid'
+          borderWidth='thin'
+          // [*] theme colors
+          color={theme.buttons.pdf.text}
+          backgroundColor={theme.background}
+          borderColor={theme.buttons.pdf.text}
+        >
           <IconButton
             variant='outline'
             aria-label='show-lyrics-button'
             icon={
-              <MdLyrics color={props.lyricsShown ? theme.lyrics.bgHide : theme.lyrics.bgShow} />
+              <MdLyrics
+                color={
+                  props.lyricsShown ? theme.buttons.lyrics.bgHide : theme.buttons.lyrics.bgShow
+                }
+              />
             }
             display='flex'
             gap='3px'
@@ -40,9 +54,13 @@ export const FetchLyricsButton = (props: TFetchLyricsButton) => {
             size='sm'
             onClick={props.onClick}
             // [*] theme colors
-            colorScheme={props.lyricsShown ? theme.lyrics.bgHide : theme.lyrics.bgShow}
-            color={theme.lyrics.text}
-            borderColor={props.lyricsShown ? theme.lyrics.bgHide : theme.lyrics.bgShow}
+            colorScheme={
+              props.lyricsShown ? theme.buttons.lyrics.bgHide : theme.buttons.lyrics.bgShow
+            }
+            color={theme.buttons.lyrics.text}
+            borderColor={
+              props.lyricsShown ? theme.buttons.lyrics.bgHide : theme.buttons.lyrics.bgShow
+            }
             _hover={{
               backgroundColor: 'black',
             }}

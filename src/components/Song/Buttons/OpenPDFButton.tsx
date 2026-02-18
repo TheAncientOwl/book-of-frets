@@ -6,7 +6,7 @@
  *
  * @file OpenPDFButton.tsx
  * @author Alexandru Delegeanu
- * @version 1.1
+ * @version 1.2
  * @description Opens the PDF attached to current song.
  */
 
@@ -23,7 +23,17 @@ export const OpenPDFButton = ({ directory }: TOpenPDFButtonProps) => {
   const themeId = useAppStore(state => state.appTheme.id);
 
   return (
-    <Tooltip label='Open PDF' hasArrow>
+    <Tooltip
+      label='Open PDF'
+      padding='0.25em 0.5em'
+      borderRadius='0.5em'
+      borderStyle='solid'
+      borderWidth='thin'
+      // [*] theme colors
+      color={theme.buttons.pdf.text}
+      backgroundColor={theme.background}
+      borderColor={theme.buttons.pdf.text}
+    >
       <IconButton
         aria-label='open-pdf-button'
         icon={<FaFilePdf color={theme.buttons.pdf.text} />}

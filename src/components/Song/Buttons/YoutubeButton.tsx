@@ -6,7 +6,7 @@
  *
  * @file YoutubeButton.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Open youtube link button.
  */
 
@@ -23,7 +23,17 @@ export const YoutubeButton = (props: TYoutubeButtonProps) => {
   const theme = useAppStore(state => state.appTheme.song);
 
   return (
-    <Tooltip label={props.title} hasArrow>
+    <Tooltip
+      label={props.title}
+      padding='0.25em 0.5em'
+      borderRadius='0.5em'
+      borderStyle='solid'
+      borderWidth='thin'
+      // [*] theme colors
+      color={theme.buttons.pdf.text}
+      backgroundColor={theme.background}
+      borderColor={theme.buttons.pdf.text}
+    >
       <IconButton
         aria-label='open-youtube-button'
         icon={<FaYoutube color={theme.buttons.pdf.text} />}
