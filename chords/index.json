@@ -253,17 +253,17 @@
     "C#m7_4fr": {
       "name": "C#m7",
       "startFret": 4,
-      "frets": [{ "A": 1 }, {}, { "D": 3, "G": 4 }]
+      "frets": [{ "E": -1, "A": 1 }, {}, { "D": 3, "G": 4 }]
     },
     "Bsus4_2fr": {
       "name": "Bsus4",
       "startFret": 2,
-      "frets": [{ "A": 1 }, {}, { "D": 3, "G": 4 }]
+      "frets": [{ "E": -1, "A": 1 }, {}, { "D": 3, "G": 4 }]
     },
     "Asus2_2fr": {
       "name": "Asus2",
       "startFret": 2,
-      "frets": [{ "D": 1 }, {}, { "G": 4 }]
+      "frets": [{ "E": -1, "D": 1 }, {}, { "G": 4 }]
     },
     "E5_7fr": {
       "name": "E5",

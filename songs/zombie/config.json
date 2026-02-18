@@ -1,12 +1,12 @@
 {
-  "version": "2.1.0",
+  "version": "2.1.1",
   "contributors": ["TheAncientOwl"],
   "title": "Zombie",
   "artists": ["Yungblud"],
   "type": ["acoustic"],
   "notes": [],
   "capo": 0,
-  "chordIDs": ["Bsus4_2fr", "C#m7_4fr", "Aadd9_5fr", "E5_7fr", "Asus2_2fr", "E"],
+  "chordIDs": ["Bsus4_2fr", "C#m7_4fr", "Aadd9_5fr", "E5_7fr", "Asus2_2fr", "E", "F#m_2fr"],
   "strumms": [
     ["D", "-", "D", "-", "D", "-", "D", "U", "-", "U", "D", "-", "D", "-", "D", "U"],
     ["D", "-", "D", "-", "D", "-", "D", "U"],
