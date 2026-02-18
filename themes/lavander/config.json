@@ -198,12 +198,12 @@
     "buttons": {
       "lyrics": {
         "text": "white",
-        "bgShow": "purple",
+        "bgShow": "white",
         "bgHide": "red"
       },
       "pdf": {
         "text": "white",
-        "bg": "purple"
+        "bg": "white"
       }
     },
     "background": "#575799",
