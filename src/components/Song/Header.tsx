@@ -6,19 +6,30 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 1.4
+ * @version 1.5
  * @description Render song header data.
  */
 
 import type { TSong } from '@/common/types/song.types';
-import { useAppStore } from '@/store/index';
-import { Box, Circle, Flex, Heading, Image, Skeleton, Text, Tooltip } from '@chakra-ui/react';
-import { Fragment, useState } from 'react';
-import { GiGuitarBassHead, GiGuitarHead } from 'react-icons/gi';
-import { PiFinnTheHumanDuotone } from 'react-icons/pi';
 import { FetchLyricsButton } from '@/components/Song/Buttons/FetchLyricsButton';
 import { OpenPDFButton } from '@/components/Song/Buttons/OpenPDFButton';
 import YoutubeButton from '@/components/Song/Buttons/YoutubeButton';
+import { useAppStore } from '@/store/index';
+import {
+  Box,
+  Circle,
+  Flex,
+  Heading,
+  Image,
+  Skeleton,
+  Text,
+  Tooltip,
+  useToast,
+} from '@chakra-ui/react';
+import { Fragment, useState } from 'react';
+import { FiShare2 } from 'react-icons/fi';
+import { GiGuitarBassHead, GiGuitarHead } from 'react-icons/gi';
+import { PiFinnTheHumanDuotone } from 'react-icons/pi';
 
 type TSongHeaderProps = Pick<
   TSong,
@@ -37,24 +48,62 @@ const typeToIcon = {
 export const SongHeader = (props: TSongHeaderProps) => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   const theme = useAppStore(state => state.appTheme.song);
+  const toast = useToast();
+
+  const handleShare = async () => {
+    const url = window.location.href;
+
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(url);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = url;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+      }
+
+      toast({
+        title: 'Link copied to clipboard',
+        status: 'success',
+        duration: 2000,
+        isClosable: true,
+      });
+    } catch {
+      toast({
+        title: 'Failed to copy link',
+        status: 'error',
+        duration: 2000,
+        isClosable: true,
+      });
+    }
+  };
 
   return (
     <Flex direction='column' alignItems='center' mb='10px' overflowX='hidden'>
       <Box
         position='relative'
+        cursor='pointer'
+        onClick={handleShare}
         width={['70px', '80px']}
         height={['70px', '80px']}
         mb={['5px']}
         mt='1em'
         overflow='visible'
+        role='group'
       >
         <Skeleton isLoaded={isImageLoaded} width='100%' height='100%' borderRadius='10px'>
           <Image
             src={`${import.meta.env.BASE_URL}songs/${props.directory}/cover-192x192.webp`}
             srcSet={`
-              ${import.meta.env.BASE_URL}songs/${props.directory}/cover-64x64.webp   64w,
-              ${import.meta.env.BASE_URL}songs/${props.directory}/cover-128x128.webp 128w,
-              ${import.meta.env.BASE_URL}songs/${props.directory}/cover-192x192.webp 192w`}
+                ${import.meta.env.BASE_URL}songs/${props.directory}/cover-64x64.webp   64w,
+                ${import.meta.env.BASE_URL}songs/${props.directory}/cover-128x128.webp 128w,
+                ${import.meta.env.BASE_URL}songs/${props.directory}/cover-192x192.webp 192w`}
             alt={`${props.title} cover`}
             width='100%'
             height='100%'
@@ -69,6 +118,7 @@ export const SongHeader = (props: TSongHeaderProps) => {
         </Skeleton>
 
         <Circle
+          zIndex={10}
           position='absolute'
           right='0'
           top='0'
@@ -167,6 +217,24 @@ export const SongHeader = (props: TSongHeaderProps) => {
             />
           ))}
         </Flex>
+        <Box
+          position='absolute'
+          inset='0'
+          borderRadius='10px'
+          background='blackAlpha.800'
+          opacity={0}
+          _groupHover={{ opacity: 1 }}
+          _active={{ opacity: 1 }}
+          display='flex'
+          alignItems='center'
+          justifyContent='center'
+          pointerEvents='none'
+          borderStyle='solid'
+          borderWidth='thin'
+          borderColor={theme.header.coverBorder}
+        >
+          <FiShare2 size={22} color={theme.capo.text} />
+        </Box>
       </Box>
 
       <Heading
