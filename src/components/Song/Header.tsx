@@ -6,7 +6,7 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 1.6
+ * @version 1.7
  * @description Render song header data.
  */
 
@@ -73,6 +73,7 @@ export const SongHeader = (props: TSongHeaderProps) => {
         status: 'success',
         duration: 2000,
         isClosable: true,
+        position: 'top',
       });
     } catch {
       toast({
@@ -80,6 +81,7 @@ export const SongHeader = (props: TSongHeaderProps) => {
         status: 'error',
         duration: 2000,
         isClosable: true,
+        position: 'top',
       });
     }
   };
