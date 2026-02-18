@@ -6,7 +6,7 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 1.5
+ * @version 1.6
  * @description Render song header data.
  */
 
@@ -89,13 +89,11 @@ export const SongHeader = (props: TSongHeaderProps) => {
       <Box
         position='relative'
         cursor='pointer'
-        onClick={handleShare}
         width={['70px', '80px']}
         height={['70px', '80px']}
         mb={['5px']}
         mt='1em'
         overflow='visible'
-        role='group'
       >
         <Skeleton isLoaded={isImageLoaded} width='100%' height='100%' borderRadius='10px'>
           <Image
@@ -115,6 +113,24 @@ export const SongHeader = (props: TSongHeaderProps) => {
             // [*] theme colors
             borderColor={theme.header.coverBorder}
           />
+          <Box
+            position='absolute'
+            inset='0'
+            borderRadius='10px'
+            background='blackAlpha.800'
+            opacity={0}
+            _hover={{ opacity: 1, cursor: 'pointer' }}
+            display='flex'
+            alignItems='center'
+            justifyContent='center'
+            pointerEvents='auto'
+            borderStyle='solid'
+            borderWidth='thin'
+            borderColor={theme.header.coverBorder}
+            onClick={handleShare}
+          >
+            <FiShare2 size={22} color={theme.capo.text} />
+          </Box>
         </Skeleton>
 
         <Circle
@@ -217,24 +233,6 @@ export const SongHeader = (props: TSongHeaderProps) => {
             />
           ))}
         </Flex>
-        <Box
-          position='absolute'
-          inset='0'
-          borderRadius='10px'
-          background='blackAlpha.800'
-          opacity={0}
-          _groupHover={{ opacity: 1 }}
-          _active={{ opacity: 1 }}
-          display='flex'
-          alignItems='center'
-          justifyContent='center'
-          pointerEvents='none'
-          borderStyle='solid'
-          borderWidth='thin'
-          borderColor={theme.header.coverBorder}
-        >
-          <FiShare2 size={22} color={theme.capo.text} />
-        </Box>
       </Box>
 
       <Heading
