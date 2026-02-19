@@ -1,10 +1,10 @@
 {
-  "version": "2.1.0",
+  "version": "2.2.0",
   "contributors": ["TheAncientOwl"],
   "title": "Proto",
   "artists": ["Dunno"],
   "type": ["acoustic", "electric"],
-  "notes": [],
+  "notes": ["Note 1", "Note 2", "Some other note"],
   "capo": 0,
   "chordIDs": ["Em", "Am", "C", "F", "G", "D"],
   "strumms": [
