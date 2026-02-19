@@ -6,7 +6,7 @@
  *
  * @file SongsSkeletonList.tsx
  * @author Alexandru Delegeanu
- * @version 1.1
+ * @version 1.2
  * @description Render songs skeleton list.
  */
 
@@ -37,8 +37,8 @@ const SkeletonSongCard = () => {
       <Box
         justifySelf='center'
         position='relative'
-        width={['70px', '80px']}
-        height={['70px', '80px']}
+        width={['70px', '70px']}
+        height={['70px', '70px']}
         borderRadius='10px'
         overflow='hidden'
         cursor='pointer'

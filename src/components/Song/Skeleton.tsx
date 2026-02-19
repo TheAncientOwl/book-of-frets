@@ -6,7 +6,7 @@
  *
  * @file SkeletonSong.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Display skeleton of song.
  */
 
@@ -17,32 +17,85 @@ import { Box, Container, Flex, Heading, List, Skeleton, VStack } from '@chakra-u
 
 const SkeletonHeader = ({ theme }: { theme: TSongTheme }) => {
   return (
-    <Flex direction='column' alignItems='center' mb='15px'>
-      <Box position='relative' width={['70px', '80px']} height={['70px', '80px']} mb={['5px']}>
+    <Flex direction='column' alignItems='center' mb='0.5em' overflowX='hidden'>
+      <Box
+        position='relative'
+        width={['70px', '80px']}
+        height={['70px', '80px']}
+        mb={['5px']}
+        mt='1em'
+        overflow='visible'
+      >
+        {/* Cover */}
         <Skeleton
           height='100%'
           width='100%'
           borderRadius='10px'
           borderWidth='thin'
-          // [*] theme colors
           borderColor={theme.header.coverBorder}
         />
 
+        {/* Capo circle */}
         <Skeleton
-          height='26px'
-          width='26px'
-          borderRadius='13px'
           position='absolute'
           right='0'
           top='0'
           transform='translate(50%, -50%)'
+          borderRadius='full'
+          width='2em'
+          height='2em'
+          borderWidth='thin'
         />
+
+        {/* Right buttons column (PDF / Lyrics) */}
+        <Flex
+          flexDirection='column'
+          top='0'
+          left={['7em', '8em']}
+          position='absolute'
+          justifyContent='center'
+          alignItems='center'
+          gap='10px'
+          height='100%'
+        >
+          <Skeleton width='32px' height='32px' borderRadius='md' />
+        </Flex>
+
+        {/* Left buttons column (YouTube) */}
+        <Flex
+          flexDirection='column'
+          top='0'
+          right={['7em', '8em']}
+          position='absolute'
+          justifyContent='center'
+          alignItems='center'
+          gap='10px'
+          height='100%'
+        >
+          <Skeleton width='32px' height='32px' borderRadius='md' />
+          <Skeleton width='32px' height='32px' borderRadius='md' />
+        </Flex>
+
+        {/* Type + contributors column */}
+        <Flex
+          position='absolute'
+          right='-1.25em'
+          bottom='0'
+          direction='column'
+          gap='4px'
+          justifyContent='center'
+          alignItems='center'
+        >
+          <Skeleton width='14px' height='14px' borderRadius='sm' />
+          <Skeleton width='15px' height='15px' borderRadius='sm' />
+        </Flex>
       </Box>
 
-      <Skeleton mb='5px' height='24px' width='min(70vw, 150px)' />
-      <Skeleton mb='5px' height='20px' width='min(50vw, 100px)' />
-      <Skeleton mb='10px' height='18px' width='min(30vw, 80px)' />
-      <Skeleton height='15px' width='13px' borderRadius='5px' />
+      {/* Title */}
+      <Skeleton mb='5px' height='24px' width='min(70vw, 200px)' />
+
+      {/* Artists */}
+      <Skeleton mb='5px' height='20px' width='min(50vw, 150px)' />
     </Flex>
   );
 };
@@ -62,7 +115,8 @@ const SkeletonSongChordsList = ({ theme }: { theme: TSongTheme }) => {
         <Heading
           as='h3'
           size='md'
-          textDecoration='underline'
+          fontSize='lg'
+          // textDecoration='underline'
           width='100%'
           // [*] theme colors
           color={theme.items.item.title}
@@ -82,14 +136,31 @@ const SkeletonSongChordsList = ({ theme }: { theme: TSongTheme }) => {
 
       <AccordionPanel>
         <List display='flex' gap='10px' overflowX='auto' padding={['1.1em 0em', '1.1em 1em']}>
-          {Array.from({ length: 3 }).map((_, index) => (
+          {Array.from({ length: 4 }).map((_, index) => (
             <Skeleton
               key={index}
-              width={['8em', '9em']}
-              height={['10.5em', '15em']}
+              width={['5.8em', '6.5em']}
+              height={['9.5em', '11.4em']}
               borderRadius='lg'
             />
           ))}
+          <Box
+            display='flex'
+            alignItems='center'
+            justifyContent='center'
+            sx={{
+              '@keyframes pulseDots': {
+                '0%': { opacity: 0.3 },
+                '50%': { opacity: 1 },
+                '100%': { opacity: 0.3 },
+              },
+              animation: 'pulseDots 1.2s ease-in-out infinite',
+            }}
+          >
+            <Skeleton borderRadius='full' width='0.85em' height='0.85em' borderWidth='thin' />
+            <Skeleton borderRadius='full' width='0.85em' height='0.85em' borderWidth='thin' />
+            <Skeleton borderRadius='full' width='0.85em' height='0.85em' borderWidth='thin' />
+          </Box>
         </List>
       </AccordionPanel>
     </Accordion>
@@ -99,7 +170,7 @@ const SkeletonSongChordsList = ({ theme }: { theme: TSongTheme }) => {
 const SkeletonSongSections = ({ theme }: { theme: TSongTheme }) => {
   return (
     <>
-      {Array.from({ length: 3 }).map((_, index) => (
+      {Array.from({ length: 5 }).map((_, index) => (
         <Accordion key={index} defaultOpen>
           <AccordionButton
             boxProps={{
@@ -123,9 +194,9 @@ const SkeletonSongSections = ({ theme }: { theme: TSongTheme }) => {
             />
           </AccordionButton>
           <AccordionPanel>
-            <VStack mt='1em' mb='3px'>
-              <Skeleton height='20px' width='100px' mb='1em' />
-              <Skeleton height='20px' width='100px' mb='1em' />
+            <VStack mt='1em' mb='3px' gap='0.2em'>
+              <Skeleton height='20px' width='200px' mb='1em' />
+              <Skeleton height='20px' width='200px' mb='1em' />
             </VStack>
           </AccordionPanel>
         </Accordion>
@@ -140,7 +211,7 @@ export const SkeletonSong = () => {
   return (
     <Container
       maxW={['100vw', '5xl']}
-      padding={['25px 0px', '2em 1em']}
+      padding={['0.5em 0px', '1em']}
       borderRadius={['0em', '0.5em']}
       height='100%'
       overflowY='scroll'
@@ -150,7 +221,7 @@ export const SkeletonSong = () => {
       <SkeletonHeader theme={theme} />
 
       <Box
-        padding={['1.5rem 10px', '1.5rem 1rem']}
+        padding={['1em 5px', '1em 1em']}
         borderRadius='1rem'
         // [*] theme colors
         backgroundColor={theme.items.background}

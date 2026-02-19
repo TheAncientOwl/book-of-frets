@@ -6,7 +6,7 @@
  *
  * @file SongChordsList.tsx
  * @author Alexandru Delegeanu
- * @version 1.1
+ * @version 1.2
  * @description Song chords list component.
  */
 
@@ -40,7 +40,8 @@ export const SongChordsList = (props: TSongChordsList) => {
         <Heading
           as='h3'
           size='md'
-          textDecoration='underline'
+          fontSize='lg'
+          // textDecoration='underline'
           width='100%'
           // [*] theme colors
           color={theme.items.item.title}
@@ -59,7 +60,7 @@ export const SongChordsList = (props: TSongChordsList) => {
       </AccordionButton>
 
       <AccordionPanel>
-        <List display='flex' gap='10px' overflowX='auto' padding={['1.1em 0em', '1.1em 1em']}>
+        <List display='flex' gap='0.5em' overflowX='auto' padding={['1.1em 0em', '1.1em 1em']}>
           {props.chordIDs.map(chordID => {
             const config = chordsIndex[chordID];
             if (config === undefined) {
@@ -69,7 +70,7 @@ export const SongChordsList = (props: TSongChordsList) => {
 
             return (
               <ListItem key={chordID}>
-                <Chord {...config} containerProps={{ fontSize: ['7px', '8px', '9px'] }} />
+                <Chord {...config} containerProps={{ fontSize: ['7px', '8px', '8px'] }} />
               </ListItem>
             );
           })}

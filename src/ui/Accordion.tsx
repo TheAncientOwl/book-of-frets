@@ -6,7 +6,7 @@
  *
  * @file Accordion.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Accordion components.
  */
 
@@ -55,14 +55,12 @@ export const AccordionButton = (props: TAccordionButtonProps) => {
       cursor='pointer'
       width='100%'
       onClick={context.toggle}
-      padding='0.5em 1em'
       borderTop='solid'
       borderTopWidth='thin'
       borderBottomRadius='5px'
       backgroundColor='blackAlpha.100'
-      pt={['10px', '15px']}
-      pb={['10px', '15px']}
-      mb={['0px', '5px']}
+      pt={['7px', '8px']}
+      pb={['7px', '8px']}
       {...props.boxProps}
     >
       {props.children}

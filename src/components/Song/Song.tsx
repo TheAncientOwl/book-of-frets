@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 1.6
+ * @version 1.7
  * @description Render song based on given config.
  */
 
@@ -16,7 +16,7 @@ import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
 import { SongChordsList } from '@/components/Song/ChordsList';
 import { SongHeader } from '@/components/Song/Header';
 import { SongSections } from '@/components/Song/Sections/SongSections';
-import { useAppStore } from '@/store/index';
+import { useShallowAppStore } from '@/store/index';
 import { Loading } from '@/ui/Loading';
 import { Box, Container } from '@chakra-ui/react';
 import { lazy, Suspense } from 'react';
@@ -33,7 +33,14 @@ type TSongProps = TSong & {
 };
 
 export const Song = (props: TSongProps) => {
-  const theme = useAppStore(state => state.appTheme.song);
+  const { theme, displayNotes, displayChordsList, displayResources } = useShallowAppStore(
+    state => ({
+      theme: state.appTheme.song,
+      displayNotes: state.songSettings.display.notes,
+      displayChordsList: state.songSettings.display.allChords,
+      displayResources: state.songSettings.display.resources,
+    }),
+  );
 
   const [showLyrics, setShowLyrics] = useSessionStorage(props.title + '-show-lyrics', false);
   const [lyrics, setLyrics] = useSessionStorage(props.title + '-lyrics', [] as string[][]);
@@ -55,7 +62,7 @@ export const Song = (props: TSongProps) => {
   return (
     <Container
       maxW={['100vw', '5xl']}
-      padding={['25px 0px', '2em 1em']}
+      padding={['0.5em 0em', '1em']}
       borderRadius={['0em', '0.5em']}
       height='100%'
       overflowY='scroll'
@@ -79,12 +86,18 @@ export const Song = (props: TSongProps) => {
       />
 
       <Box
-        padding={['1.5rem 10px', '1.5rem 1rem']}
-        borderRadius='1rem'
+        padding={['1em 5px', '1em 1em']}
+        borderRadius='1em'
         // [*] theme colors
         backgroundColor={theme.items.background}
       >
-        <SongChordsList chordIDs={props.chordIDs} />
+        {displayNotes && props.notes.length > 0 && (
+          <Suspense fallback={<Loading />}>
+            <SongNotes notes={props.notes} />
+          </Suspense>
+        )}
+
+        {displayChordsList && <SongChordsList chordIDs={props.chordIDs} />}
 
         <SongSections
           sections={props.sections}
@@ -95,19 +108,15 @@ export const Song = (props: TSongProps) => {
         />
       </Box>
 
-      {props.notes.length > 0 && (
-        <Suspense fallback={<Loading />}>
-          <SongNotes notes={props.notes} />
-        </Suspense>
+      {displayResources && (
+        <InView triggerOnce rootMargin='300px'>
+          {({ inView, ref }) => (
+            <Suspense fallback={<Loading />}>
+              <Box ref={ref}>{inView ? <SongResources res={props.res} /> : null}</Box>
+            </Suspense>
+          )}
+        </InView>
       )}
-
-      <InView triggerOnce rootMargin='300px'>
-        {({ inView, ref }) => (
-          <Suspense fallback={<Loading />}>
-            <Box ref={ref}>{inView ? <SongResources res={props.res} /> : null}</Box>
-          </Suspense>
-        )}
-      </InView>
     </Container>
   );
 };

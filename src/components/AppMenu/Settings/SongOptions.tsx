@@ -6,7 +6,7 @@
  *
  * @file Song.tsx
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Song display options.
  */
 
@@ -45,6 +45,9 @@ export const SongOptions = () => {
     setDisplayChordTimesOne,
     setDisplayStrummingPattern,
     setDisplayChordsFingers,
+    setDisplayAllChords,
+    setDisplayResources,
+    setDisplayNotes,
   } = useShallowAppStore(state => ({
     display: state.songSettings.display,
     setDisplaySectionTimes: state.setDisplaySectionTimes,
@@ -52,10 +55,34 @@ export const SongOptions = () => {
     setDisplayChordTimesOne: state.setDisplayChordTimesOne,
     setDisplayStrummingPattern: state.setDisplayStrummingPattern,
     setDisplayChordsFingers: state.setDisplayChordsFingers,
+    setDisplayAllChords: state.setDisplayAllChords,
+    setDisplayResources: state.setDisplayResources,
+    setDisplayNotes: state.setDisplayNotes,
   }));
 
   return (
     <VStack align='start' spacing={3}>
+      <ThemedCheckbox
+        isChecked={display.allChords}
+        onChange={() => setDisplayAllChords(!display.allChords)}
+      >
+        Song Chords List
+      </ThemedCheckbox>
+      <ThemedCheckbox
+        isChecked={display.chordsFingers}
+        onChange={() => setDisplayChordsFingers(!display.chordsFingers)}
+      >
+        Chords Fingers
+      </ThemedCheckbox>
+      <ThemedCheckbox
+        isChecked={display.resources}
+        onChange={() => setDisplayResources(!display.resources)}
+      >
+        Song Resources
+      </ThemedCheckbox>
+      <ThemedCheckbox isChecked={display.notes} onChange={() => setDisplayNotes(!display.notes)}>
+        Song Notes
+      </ThemedCheckbox>
       <ThemedCheckbox
         isChecked={display.sectionTimes}
         onChange={() => setDisplaySectionTimes(!display.sectionTimes)}
@@ -79,12 +106,6 @@ export const SongOptions = () => {
         onChange={() => setDisplayStrummingPattern(!display.strummingPattern)}
       >
         Strumming Pattern
-      </ThemedCheckbox>
-      <ThemedCheckbox
-        isChecked={display.chordsFingers}
-        onChange={() => setDisplayChordsFingers(!display.chordsFingers)}
-      >
-        Chords Fingers
       </ThemedCheckbox>
     </VStack>
   );

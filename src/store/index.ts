@@ -6,7 +6,7 @@
  *
  * @file index.ts
  * @author Alexandru Delegeanu
- * @version 1.0
+ * @version 1.1
  * @description Zustand global app store.
  */
 
@@ -25,6 +25,9 @@ type TAppStore = {
   appLogoURL: string;
   songSettings: {
     display: {
+      notes: boolean;
+      resources: boolean;
+      allChords: boolean;
       sectionTimes: boolean;
       chordTimes: boolean;
       chordTimesOne: boolean;
@@ -40,6 +43,9 @@ type TAppStore = {
   setDisplayChordTimesOne: (value: boolean) => void;
   setDisplayStrummingPattern: (value: boolean) => void;
   setDisplayChordsFingers: (value: boolean) => void;
+  setDisplayAllChords: (value: boolean) => void;
+  setDisplayResources: (value: boolean) => void;
+  setDisplayNotes: (value: boolean) => void;
 };
 
 export const useAppStore = create<TAppStore, [['zustand/persist', unknown]]>(
@@ -50,6 +56,9 @@ export const useAppStore = create<TAppStore, [['zustand/persist', unknown]]>(
       appLogoURL: `${import.meta.env.BASE_URL}logo.svg`,
       songSettings: {
         display: {
+          notes: true,
+          resources: true,
+          allChords: true,
           sectionTimes: true,
           chordTimes: true,
           chordTimesOne: true,
@@ -68,7 +77,7 @@ export const useAppStore = create<TAppStore, [['zustand/persist', unknown]]>(
             error => {
               console.error(error);
               set({ chordsIndex: {} });
-            }
+            },
           );
         } catch (error) {
           console.error(error);
@@ -113,12 +122,42 @@ export const useAppStore = create<TAppStore, [['zustand/persist', unknown]]>(
             display: { ...state.songSettings.display, chordsFingers: value },
           },
         })),
+      setDisplayAllChords: value =>
+        set(state => ({
+          songSettings: {
+            ...state.songSettings,
+            display: {
+              ...state.songSettings.display,
+              allChords: value,
+            },
+          },
+        })),
+      setDisplayResources: value =>
+        set(state => ({
+          songSettings: {
+            ...state.songSettings,
+            display: {
+              ...state.songSettings.display,
+              resources: value,
+            },
+          },
+        })),
+      setDisplayNotes: value =>
+        set(state => ({
+          songSettings: {
+            ...state.songSettings,
+            display: {
+              ...state.songSettings.display,
+              notes: value,
+            },
+          },
+        })),
     }),
     {
       name: LocalStorageKeys.appStorage,
       storage: createJSONStorage(() => localStorage),
-    }
-  )
+    },
+  ),
 );
 
 export const useShallowAppStore = <T>(cb: (state: TAppStore) => T) => useAppStore(useShallow(cb));

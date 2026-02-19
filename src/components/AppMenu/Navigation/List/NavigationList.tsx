@@ -6,7 +6,7 @@
  *
  * @file NavigationList.tsx
  * @author Alexandru Delegeanu
- * @version 1.2
+ * @version 1.3
  * @description Navigation links.
  */
 
@@ -31,7 +31,7 @@ export const NavigationList = (props: TNavigationListProps) => {
         as='h3'
         size='md'
         textAlign='center'
-        textDecoration='underline'
+        // textDecoration='underline'
         // [*] theme colors
         color={theme.items.navigation.routeLink}
       >

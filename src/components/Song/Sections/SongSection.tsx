@@ -6,7 +6,7 @@
  *
  * @file SongSection.tsx
  * @author Alexandru Delegeanu
- * @version 2.3
+ * @version 2.4
  * @description Render song section.
  */
 
@@ -44,14 +44,14 @@ export const SongSection = (props: TSongSectionProps) => {
       >
         <Heading
           as='h3'
-          size='md'
+          size='sm'
           textAlign='center'
-          textDecoration='underline'
+          // textDecoration='underline'
           textTransform='capitalize'
           // [*] theme colors
           color={theme.items.item.title}
         >
-          <Text as='span' position='relative' fontSize={['lg', 'xl']}>
+          <Text as='span' position='relative' fontSize='lg'>
             {props.name}
             {props.times > 1 && (
               <Tag

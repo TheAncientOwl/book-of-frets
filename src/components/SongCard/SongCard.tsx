@@ -6,7 +6,7 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 1.1
+ * @version 1.2
  * @description List all available songs.
  */
 
@@ -42,7 +42,7 @@ const typeToIcon = {
   electric: <GiGuitarBassHead />,
 };
 
-const AboveTheFoldSongsCount = 10;
+const AboveTheFoldSongsCount = 12;
 
 export const SongCard = (props: SongProps) => {
   const { theme, chordsIndex } = useShallowAppStore(state => ({
@@ -85,8 +85,8 @@ export const SongCard = (props: SongProps) => {
       <Box
         justifySelf='center'
         position='relative'
-        width={['70px', '80px']}
-        height={['70px', '80px']}
+        width={['70px', '70px']}
+        height={['70px', '70px']}
         borderRadius='10px'
         overflow='hidden'
         cursor='pointer'
@@ -156,7 +156,7 @@ export const SongCard = (props: SongProps) => {
         <Heading
           noOfLines={1}
           as='h1'
-          size={['sm', 'md']}
+          fontSize='lg'
           mb={['5px']}
           // [*] theme colors
           color={theme.text.title}
@@ -167,7 +167,7 @@ export const SongCard = (props: SongProps) => {
         <Heading
           noOfLines={1}
           as='h2'
-          size={['xs', 'sm']}
+          fontSize='md'
           mb={['5px']}
           fontStyle='italic'
           // [*] theme colors

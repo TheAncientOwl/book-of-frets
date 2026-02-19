@@ -6,14 +6,13 @@
  *
  * @file Settings.tsx
  * @author Alexandru Delegeanu
- * @version 1.1
+ * @version 1.2
  * @description App settings menu.
  */
 
 import { SongOptions } from '@/components/AppMenu/Settings/SongOptions';
-import { Loading } from '@/ui/Loading';
-import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
 import { useAppStore } from '@/store/index';
+import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
 import {
   Accordion,
   AccordionButton,
@@ -22,7 +21,7 @@ import {
   AccordionPanel,
   Heading,
 } from '@chakra-ui/react';
-import { lazy, Suspense, useLayoutEffect, type PropsWithChildren } from 'react';
+import { lazy, useLayoutEffect, type PropsWithChildren } from 'react';
 
 const Refresh = lazy(() => import('@/components/AppMenu/Settings/Refresh'));
 const ThemePicker = lazy(() => import('@/components/AppMenu/Settings/ThemePicker'));
@@ -70,15 +69,13 @@ export const Settings = () => {
         <SongOptions />
       </SettingsAccordionItem>
 
-      <Suspense fallback={<Loading />}>
-        <SettingsAccordionItem title='General'>
-          <Refresh />
-        </SettingsAccordionItem>
+      <SettingsAccordionItem title='General'>
+        <Refresh />
+      </SettingsAccordionItem>
 
-        <SettingsAccordionItem title='Theme'>
-          <ThemePicker />
-        </SettingsAccordionItem>
-      </Suspense>
+      <SettingsAccordionItem title='Theme'>
+        <ThemePicker />
+      </SettingsAccordionItem>
     </Accordion>
   );
 };
