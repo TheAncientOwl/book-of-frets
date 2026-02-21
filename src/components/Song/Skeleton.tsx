@@ -6,7 +6,7 @@
  *
  * @file SkeletonSong.tsx
  * @author Alexandru Delegeanu
- * @version 1.1
+ * @version 1.2
  * @description Display skeleton of song.
  */
 
@@ -58,6 +58,7 @@ const SkeletonHeader = ({ theme }: { theme: TSongTheme }) => {
           gap='10px'
           height='100%'
         >
+          <Skeleton width='32px' height='32px' borderRadius='md' />
           <Skeleton width='32px' height='32px' borderRadius='md' />
         </Flex>
 
