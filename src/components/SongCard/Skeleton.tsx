@@ -6,7 +6,7 @@
  *
  * @file SongsSkeletonList.tsx
  * @author Alexandru Delegeanu
- * @version 1.2
+ * @version 1.3
  * @description Render songs skeleton list.
  */
 
@@ -51,7 +51,8 @@ const SkeletonSongCard = () => {
         <Skeleton height='16px' width='14px' />
       </Box>
 
-      <Flex direction='column' justifyContent='center' alignItems='center' pr='15px'>
+      <Flex direction='row' justifyContent='center' alignItems='center' pr='15px'>
+        <Skeleton height='18px' width='18px' borderRadius='50%' mr='16px' />
         <Skeleton height='18px' width='18px' borderRadius='50%' />
       </Flex>
     </SimpleGrid>
