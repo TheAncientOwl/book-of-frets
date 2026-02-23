@@ -1,11 +1,22 @@
+"""
+---------------------------------------------------------------------------
+                    Copyright (c) by BookOfFrets 2025
+---------------------------------------------------------------------------
+ @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
+
+ @file _sort_and_update_songs.py
+ @author Alexandru Delegeanu
+ @version 1.1
+ @description Convert source image to jpeg
+"""
+
 import json
 import sys
 from pathlib import Path
 from typing import Any, Dict, List
 
-
-PRELOAD_START = "<!-- Begin Preload LCP SongsIndex images -->"
-PRELOAD_END = "<!-- End Preload LCP SongsIndex images -->"
+PRELOAD_START = "<!-- <preload-lcp> -->"
+PRELOAD_END = "<!-- </preload-lcp/> -->"
 
 
 def sort_key(entry: Dict[str, Any]):
@@ -85,10 +96,10 @@ def main():
         json.dump(data, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
-    update_index_html(index_html_path, sorted_index[:11])
+    update_index_html(index_html_path, sorted_index[:13])
 
     print(f"Sorted {len(sorted_index)} entries successfully.")
-    print("Updated index.html preload covers (first 10 entries).")
+    print("Updated index.html preload covers (first 12 entries).")
 
 
 if __name__ == "__main__":
