@@ -6,7 +6,7 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 1.2
+ * @version 1.3
  * @description List all available songs.
  */
 
@@ -32,6 +32,8 @@ import { Fragment, useState, type MouseEvent } from 'react';
 import { GiGuitarBassHead, GiGuitarHead } from 'react-icons/gi';
 import { TbGuitarPickFilled } from 'react-icons/tb';
 import { useNavigate } from 'react-router-dom';
+import { MdFavorite } from 'react-icons/md';
+import { MdFavoriteBorder } from 'react-icons/md';
 
 type SongProps = TSongsIndexEntry & {
   index: number;
@@ -45,9 +47,12 @@ const typeToIcon = {
 const AboveTheFoldSongsCount = 12;
 
 export const SongCard = (props: SongProps) => {
-  const { theme, chordsIndex } = useShallowAppStore(state => ({
+  const { theme, chordsIndex, isSongFavorite, toggleSongFavorite } = useShallowAppStore(state => ({
     theme: state.appTheme.songCard,
     chordsIndex: state.chordsIndex,
+    isSongFavorite: state.isSongFavorite,
+    toggleSongFavorite: state.toggleSongFavorite,
+    songFavorites: state.songFavorites, // subscribe in order to reflect toggle
   }));
 
   const [isImageLoaded, setIsImageLoaded] = useState(false);
@@ -192,7 +197,24 @@ export const SongCard = (props: SongProps) => {
         </Flex>
       </Box>
 
-      <Flex direction='column' justifyContent='center' alignItems='center'>
+      <Flex direction='row' justifyContent='center' alignItems='center'>
+        <Box
+          zIndex={2}
+          as='button'
+          aria-label='More about the song'
+          onClick={(e: MouseEvent<HTMLButtonElement>) => {
+            e.stopPropagation();
+            toggleSongFavorite(props);
+          }}
+          mr={['5px']}
+          fontSize='20px'
+          padding='5px'
+          // [*] theme colors
+          color={theme.chords.pick}
+        >
+          {isSongFavorite(props) ? <MdFavorite /> : <MdFavoriteBorder />}
+        </Box>
+
         <Popover isLazy>
           <PopoverTrigger>
             <Box

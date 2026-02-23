@@ -23,6 +23,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 const ChordsIndexPage = lazy(() => import('@/pages/ChordsIndexPage'));
 const AboutPage = lazy(() => import('@/pages/AboutPage'));
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'));
+const FavoritesPage = lazy(() => import('@/pages/FavoritesPage'));
 
 export const App = () => {
   const { chordsIndex, updateChordsIndex, appLogoURL, appTheme } = useShallowAppStore(state => ({
@@ -66,6 +67,15 @@ export const App = () => {
           <Route path='/' element={<Navigate to='/songs' replace />} />
           <Route path='/songs' element={<SongsIndexPage />} />
           <Route path='/songs/:directory' element={<SongPage />} />
+
+          <Route
+            path='/favorites'
+            element={
+              <Suspense fallback={<Loading />}>
+                <FavoritesPage />
+              </Suspense>
+            }
+          />
 
           <Route
             path='/chords'
