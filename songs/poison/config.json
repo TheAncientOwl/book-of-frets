@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.0.1",
   "contributors": ["TheAncientOwl"],
   "title": "Poison",
   "artists": ["Blake Roman", "Sam Haft", "Andrew Underberg"],
@@ -59,7 +59,7 @@
         },
         {
           "renderer": "gtab-v1",
-          "data": " - B6 - G8 - G5 - G5 - G5 - G5 - | - B6 - G8 - G7 - G7 - G7 - G5 - G7 - G5 - G7 - G7 - G5 - G7 - G8 - G7 - G5 -"
+          "data": "- B6 - G8 - G5 - G5 - G5 - G5 - | - B6 - G8 - G7 - G7 - G7 - G5 - G7 - G5 - G7 - G7 - G5 - G7 - G8 - G7 - G5 -"
         }
       ]
     }
