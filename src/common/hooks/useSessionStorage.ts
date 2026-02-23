@@ -1,8 +1,8 @@
 /**
  * -------------------------------------------------------------------------- *
- *                     Copyright (c) by OopsieLogsy 2025                      *
+ *                     Copyright (c) by BookOfFrets 2025                      *
  * -------------------------------------------------------------------------- *
- * @license https://github.com/TheAncientOwl/oopsie-logsy/blob/main/LICENSE
+ * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
  * @file useSessionStorage.ts
  * @author Alexandru Delegeanu
@@ -14,7 +14,7 @@ import { useState } from 'react';
 
 export const useSessionStorage = <T>(
   key: string,
-  initialValue: T
+  initialValue: T,
 ): [T, (value: T | ((val: T) => T)) => void] => {
   const getStoredValue = (): T => {
     if (typeof window === 'undefined') {
