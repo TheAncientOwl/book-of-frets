@@ -12,13 +12,14 @@
 
 set -euo pipefail
 
-if [ "$#" -ne 2 ]; then
-  echo "Usage: $0 <dir-name> <cover-image-src-path>"
+if [ "$#" -ne 3 ]; then
+  echo "Usage: $0 <dir-name> <cover-image-src-path> <index-json-path>"
   exit 1
 fi
 
 dir_name="$1"
 cover_image_src_path="$2"
+index_json_path="$3"
 
 echo "[Info] Directory name: ${dir_name}"
 echo "[Info] Cover image path: ${cover_image_src_path}"
@@ -47,4 +48,7 @@ rm $cover_dest_path
 $BOOK_OF_FRETS_ROOT/project/tools/song/resize-cover/run.sh $webp_cover_dest_path
 
 # Create song config boilerplate
-$BOOK_OF_FRETS_ROOT/project/tools/song/boilerplate/create.sh $dir_name
+$BOOK_OF_FRETS_ROOT/project/tools/song/boilerplate/create.sh "$dir_name" "$index_json_path"
+
+# Sort the songs/index.json and update index.html
+$BOOK_OF_FRETS_ROOT/project/tools/index/sort_and_update_songs.sh

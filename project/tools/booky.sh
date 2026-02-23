@@ -4,9 +4,9 @@
 # -----------------------------------------------------------------------------
 # @file booky.sh
 # @author Alexandru Delegeanu
-# @version 1.0
+# @version 1.1
 # @description Main CLI entrypoint for BookOfFrets tooling
-# -----------------------------------------------------------------------------
+#
 
 set -euo pipefail
 
@@ -106,7 +106,7 @@ case "$command" in
       echo "❌ Usage: ./booky.sh --song <dir-name> <cover-image-src-path>"
       exit 1
     fi
-    "$BOOK_OF_FRETS_ROOT/project/tools/song/create.sh" "$@"
+    "$BOOK_OF_FRETS_ROOT/project/tools/song/create.sh" "$@" "$BOOK_OF_FRETS_ROOT/public/songs/index.json"
     ;;
 
   --render-pdf)

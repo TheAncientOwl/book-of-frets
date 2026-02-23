@@ -1,8 +1,8 @@
 /**
  * -------------------------------------------------------------------------- *
- *                     Copyright (c) by OopsieLogsy 2025                      *
+ *                     Copyright (c) by BookOfFrets 2025                      *
  * -------------------------------------------------------------------------- *
- * @license https://github.com/TheAncientOwl/oopsie-logsy/blob/main/LICENSE
+ * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
  * @file fetchArchivedJSON.ts
  * @author Alexandru Delegeanu
@@ -17,7 +17,7 @@ export const fetchArchivedJSON = async (
   backupJsonURL: string,
   devJsonURL: string,
   onSuccess: (json: unknown) => void,
-  onError: (err: unknown) => void
+  onError: (err: unknown) => void,
 ) => {
   if (import.meta.env.DEV) {
     console.info(`[DevMode] - fetching ${devJsonURL}`);
@@ -26,7 +26,7 @@ export const fetchArchivedJSON = async (
       .then(response => {
         if (!response.ok) {
           throw new Error(
-            `::fetchArchivedJSON(): Failed to fetch config.json: ${response.statusText}`
+            `::fetchArchivedJSON(): Failed to fetch config.json: ${response.statusText}`,
           );
         }
         return response.json();

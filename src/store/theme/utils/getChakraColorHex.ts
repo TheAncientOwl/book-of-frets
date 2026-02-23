@@ -1,8 +1,8 @@
 /**
  * -------------------------------------------------------------------------- *
- *                     Copyright (c) by OopsieLogsy 2025                      *
+ *                     Copyright (c) by BookOfFrets 2025                      *
  * -------------------------------------------------------------------------- *
- * @license https://github.com/TheAncientOwl/oopsie-logsy/blob/main/LICENSE
+ * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
  * @file getChakraColorHex.ts
  * @author Alexandru Delegeanu

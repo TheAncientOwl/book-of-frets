@@ -1,8 +1,8 @@
 /**
  * -------------------------------------------------------------------------- *
- *                     Copyright (c) by OopsieLogsy 2025                      *
+ *                     Copyright (c) by BookOfFrets 2025                      *
  * -------------------------------------------------------------------------- *
- * @license https://github.com/TheAncientOwl/oopsie-logsy/blob/main/LICENSE
+ * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
  * @file patchLocalStorageTheme.ts
  * @author Alexandru Delegeanu
@@ -61,7 +61,7 @@ export const patchLocalStorageTheme = () => {
 
       localStorage.setItem(
         LocalStorageKeys.appStorage,
-        JSON.stringify({ ...state, appTheme: merged })
+        JSON.stringify({ ...state, appTheme: merged }),
       );
 
       console.info('Patched theme successfully');

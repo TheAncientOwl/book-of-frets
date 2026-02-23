@@ -6,21 +6,16 @@
  *
  * @file SongsIndexPage.tsx
  * @author Alexandru Delegeanu
- * @version 1.2
+ * @version 1.3
  * @description List all available songs.
  */
 
 import type { TSongsIndexEntry } from '@/common/types/song.types';
 import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
-import { SongCard } from '@/components/SongCard/SongCard';
-import { SongsSkeletonList } from '@/components/SongCard/Skeleton';
+import { SongsList } from '@/components/SongsList/SongsList';
 import { useAppStore } from '@/store/index';
 import { setDocumentThemeColor } from '@/store/theme/utils/setDocumentThemeColor';
-import { createSmartList } from '@/ui/SmartList/SmartList';
-import { Box, Container, Flex } from '@chakra-ui/react';
 import { useEffect, useLayoutEffect, useState } from 'react';
-
-const SongsList = createSmartList<TSongsIndexEntry>();
 
 export const SongsIndexPage = () => {
   const theme = useAppStore(state => state.appTheme.songsIndexPage);
@@ -58,58 +53,7 @@ export const SongsIndexPage = () => {
     );
   }, []);
 
-  return (
-    <Container
-      maxW={['100vw', 'xl']}
-      height='100%'
-      display='flex'
-      flexDirection='column'
-      padding={['1em 0em 0.2em 0em', '1em']}
-      borderRadius={['0em', '0.5em']}
-      // [*] theme colors
-      background={theme.background}
-    >
-      <SongsList.Wrapper
-        context={SongsList.context}
-        setup={{
-          data: songsIndex,
-          getKey: song =>
-            song.type.map(type => `@${type}`).join('') + song.title + ' ' + song.artists.join(' '),
-        }}
-      >
-        <Flex justifyContent='center' mx='auto' mb='20px' width={['250px', '300px', '400px']}>
-          <SongsList.SearchBar
-            useContext={SongsList.context.use}
-            // [*] theme colors
-            backgroundColor={theme.searchBar.background}
-            color={theme.searchBar.color}
-            borderColor={theme.searchBar.border}
-            _focus={{
-              borderColor: theme.searchBar.focusBorder,
-            }}
-          />
-        </Flex>
-
-        <Box
-          flex='1'
-          overflowY='scroll'
-          sx={{
-            '&::-webkit-scrollbar': { display: 'none' }, // Chrome, Safari
-            msOverflowStyle: 'none', // IE, Edge
-            scrollbarWidth: 'none', // Firefox
-          }}
-        >
-          <SongsList.Content
-            virtualizedFallback={<SongsSkeletonList items={11} />}
-            virtualized
-            virtualizedOverscanRowCount={3}
-            useContext={SongsList.context.use}
-            render={(song, index) => <SongCard key={index} index={index + 1} {...song} />}
-          />
-        </Box>
-      </SongsList.Wrapper>
-    </Container>
-  );
+  return <SongsList data={songsIndex} />;
 };
 
 export default SongsIndexPage;

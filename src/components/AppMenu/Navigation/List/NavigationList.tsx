@@ -1,12 +1,12 @@
 /**
  * -------------------------------------------------------------------------- *
- *                     Copyright (c) by OopsieLogsy 2025                      *
+ *                     Copyright (c) by BookOfFrets 2025                      *
  * -------------------------------------------------------------------------- *
- * @license https://github.com/TheAncientOwl/oopsie-logsy/blob/main/LICENSE
+ * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
  * @file NavigationList.tsx
  * @author Alexandru Delegeanu
- * @version 1.3
+ * @version 1.4
  * @description Navigation links.
  */
 
@@ -55,6 +55,14 @@ export const NavigationList = (props: TNavigationListProps) => {
           }}
         >
           <Link to={`/`}>Songs</Link>
+        </ListItem>
+        <ListItem
+          onClick={() => {
+            setScrollTop(0);
+            props.onItemClick();
+          }}
+        >
+          <Link to={`/favorites`}>Favorites</Link>
         </ListItem>
         <ListItem onClick={props.onItemClick}>
           <Link to={`/chords`}>Chords</Link>

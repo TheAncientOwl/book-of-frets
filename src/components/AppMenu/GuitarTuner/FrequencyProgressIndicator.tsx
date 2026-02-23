@@ -1,8 +1,8 @@
 /**
  * -------------------------------------------------------------------------- *
- *                     Copyright (c) by OopsieLogsy 2025                      *
+ *                     Copyright (c) by BookOfFrets 2025                      *
  * -------------------------------------------------------------------------- *
- * @license https://github.com/TheAncientOwl/oopsie-logsy/blob/main/LICENSE
+ * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
  * @file FrequencyProgressIndicator.tsx
  * @author Alexandru Delegeanu
@@ -34,8 +34,8 @@ export const FrequencyProgressIndicator = (props: TFrequencyProgressIndicatorPro
   const colors = matched
     ? theme.frequencyProgressIndicator.matched
     : tuneUp
-    ? theme.frequencyProgressIndicator.tuneUp
-    : theme.frequencyProgressIndicator.tuneDown;
+      ? theme.frequencyProgressIndicator.tuneUp
+      : theme.frequencyProgressIndicator.tuneDown;
 
   return (
     <Flex {...props.containerProps} justifyContent='center'>

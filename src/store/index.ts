@@ -6,11 +6,12 @@
  *
  * @file index.ts
  * @author Alexandru Delegeanu
- * @version 1.1
+ * @version 1.2
  * @description Zustand global app store.
  */
 
 import type { TChordsIndex } from '@/common/types/chord.types';
+import type { TSongsIndexEntry } from '@/common/types/song.types';
 import { fetchArchivedJSON } from '@/common/utils/fetchArchivedJSON';
 import { LocalStorageKeys } from '@/store/common/storageKeys';
 import DefaultAppTheme from '@/store/theme/default.min.json';
@@ -21,8 +22,14 @@ import { useShallow } from 'zustand/shallow';
 
 type TAppStore = {
   chordsIndex: TChordsIndex;
+  updateChordsIndex: () => Promise<void>;
+
   appTheme: TAppTheme;
+  setAppTheme: (theme: TAppTheme) => void;
+
   appLogoURL: string;
+  setAppLogoURL: (url: string) => void;
+
   songSettings: {
     display: {
       notes: boolean;
@@ -35,9 +42,6 @@ type TAppStore = {
       chordsFingers: boolean;
     };
   };
-  updateChordsIndex: () => Promise<void>;
-  setAppTheme: (theme: TAppTheme) => void;
-  setAppLogoURL: (url: string) => void;
   setDisplaySectionTimes: (value: boolean) => void;
   setDisplayChordTimes: (value: boolean) => void;
   setDisplayChordTimesOne: (value: boolean) => void;
@@ -46,11 +50,15 @@ type TAppStore = {
   setDisplayAllChords: (value: boolean) => void;
   setDisplayResources: (value: boolean) => void;
   setDisplayNotes: (value: boolean) => void;
+
+  songFavorites: TSongsIndexEntry[];
+  isSongFavorite: (song: TSongsIndexEntry) => boolean;
+  toggleSongFavorite: (song: TSongsIndexEntry) => void;
 };
 
 export const useAppStore = create<TAppStore, [['zustand/persist', unknown]]>(
   persist(
-    set => ({
+    (set, get) => ({
       chordsIndex: {},
       appTheme: DefaultAppTheme,
       appLogoURL: `${import.meta.env.BASE_URL}logo.svg`,
@@ -66,6 +74,7 @@ export const useAppStore = create<TAppStore, [['zustand/persist', unknown]]>(
           chordsFingers: true,
         },
       },
+      songFavorites: [],
 
       updateChordsIndex: async () => {
         try {
@@ -152,6 +161,21 @@ export const useAppStore = create<TAppStore, [['zustand/persist', unknown]]>(
             },
           },
         })),
+
+      isSongFavorite: (song: TSongsIndexEntry) => {
+        return get().songFavorites.some(fav => fav.directory === song.directory);
+      },
+
+      toggleSongFavorite: (song: TSongsIndexEntry) =>
+        set(state => {
+          const exists = state.songFavorites.some(fav => fav.directory === song.directory);
+
+          return {
+            songFavorites: exists
+              ? state.songFavorites.filter(fav => fav.directory !== song.directory)
+              : [song, ...state.songFavorites],
+          };
+        }),
     }),
     {
       name: LocalStorageKeys.appStorage,
