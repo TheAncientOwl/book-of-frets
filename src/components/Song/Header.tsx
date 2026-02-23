@@ -6,7 +6,7 @@
  *
  * @file SongHeader.tsx
  * @author Alexandru Delegeanu
- * @version 1.8
+ * @version 1.9
  * @description Render song header data.
  */
 
@@ -255,7 +255,8 @@ export const SongHeader = (props: TSongHeaderProps) => {
         noOfLines={1}
         as='h1'
         size={['sm', 'md']}
-        mb={['5px']}
+        mt={['0.5em']}
+        mb={['0.35em']}
         textAlign='center'
         // [*] theme colors
         color={theme.header.title}
