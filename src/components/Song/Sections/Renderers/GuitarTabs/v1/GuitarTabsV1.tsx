@@ -6,7 +6,7 @@
  *
  * @file GuitarTabsV1.tsx
  * @author Alexandru Delegeanu
- * @version 2.1
+ * @version 2.2
  * @description Render song strings pattern.
  */
 
@@ -137,7 +137,7 @@ const parseItems = (items: string): { stringsToFrets: TStringToFrets; chords: TD
           arr.push(fret);
           newStringSize = arr.length;
         } catch (err) {
-          console.log(`item-${index}+${idx}: "${item}" | "${chord}"`);
+          console.log(`item-${index}+${idx}: "${item}" + "${chord}"`);
           console.error(err);
         }
       });

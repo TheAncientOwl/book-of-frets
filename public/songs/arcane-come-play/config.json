@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.0.1",
   "contributors": ["TheAncientOwl"],
   "title": "Arcane ~ Come Play",
   "artists": ["Stray Kids", "Young Miko", "Tom Morello"],
@@ -57,7 +57,7 @@
         },
         {
           "renderer": "gtab-v1",
-          "data": "- - A5+G7 - - - - A5+G7 - - A5+G7 - - AX+GX - - A5+G7 - - - - A5+G7 - - A5+G7 - - AX+GX - - A5+G7 - - - - |  - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - -"
+          "data": "- - A5+G7 - - - - A5+G7 - - A5+G7 - - AX+GX - - A5+G7 - - - - A5+G7 - - A5+G7 - - AX+GX - - A5+G7 - - - - | - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - - E2+A4 - - E2+A4 - - EX+AX - - E2+A4 - - - -"
         }
       ]
     },
