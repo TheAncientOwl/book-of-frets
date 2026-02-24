@@ -6,7 +6,7 @@
  *
  * @file SongCard.tsx
  * @author Alexandru Delegeanu
- * @version 1.3
+ * @version 1.4
  * @description List all available songs.
  */
 
@@ -66,11 +66,13 @@ export const SongCard = (props: SongProps) => {
       cursor='pointer'
       borderStyle='solid'
       borderWidth='1px'
-      padding={['8px']}
+      padding={['5px', '8px']}
       position='relative'
       onClick={() => {
         navigate(`/songs/${props.directory}`);
       }}
+      justifyContent='center'
+      alignItems='center'
       // [*] theme colors
       backgroundColor={theme.background}
       borderColor={theme.border}
@@ -90,8 +92,8 @@ export const SongCard = (props: SongProps) => {
       <Box
         justifySelf='center'
         position='relative'
-        width={['70px', '70px']}
-        height={['70px', '70px']}
+        width={['60px', '70px']}
+        height={['60px', '70px']}
         borderRadius='10px'
         overflow='hidden'
         cursor='pointer'
@@ -161,8 +163,8 @@ export const SongCard = (props: SongProps) => {
         <Heading
           noOfLines={1}
           as='h1'
-          fontSize='lg'
-          mb={['5px']}
+          fontSize={['md', 'lg']}
+          mb={['3px', '5px']}
           // [*] theme colors
           color={theme.text.title}
         >
@@ -172,8 +174,8 @@ export const SongCard = (props: SongProps) => {
         <Heading
           noOfLines={1}
           as='h2'
-          fontSize='md'
-          mb={['5px']}
+          fontSize={['sm', 'md']}
+          mb={['3px', '5px']}
           fontStyle='italic'
           // [*] theme colors
           color={theme.text.authors}
@@ -188,6 +190,7 @@ export const SongCard = (props: SongProps) => {
         <Flex
           // [*] theme colors
           color={theme.text.typeTags}
+          fontSize={['sm', 'md']}
         >
           {props.type.map((item, index) => (
             <Fragment key={index}>

@@ -6,7 +6,7 @@
  *
  * @file SongsSkeletonList.tsx
  * @author Alexandru Delegeanu
- * @version 1.3
+ * @version 1.4
  * @description Render songs skeleton list.
  */
 
@@ -25,8 +25,10 @@ const SkeletonSongCard = () => {
       gridTemplateColumns={['27px 90px 1000fr 1fr', '27px 100px 1000fr 1fr']}
       borderStyle='solid'
       borderWidth='1px'
-      padding={['8px']}
+      padding={['5px', '8px']}
       position='relative'
+      justifyContent='center'
+      alignItems='center'
       // [*] theme colors
       backgroundColor={theme.background}
       borderColor={theme.border}
@@ -37,8 +39,8 @@ const SkeletonSongCard = () => {
       <Box
         justifySelf='center'
         position='relative'
-        width={['70px', '70px']}
-        height={['70px', '70px']}
+        width={['60px', '70px']}
+        height={['60px', '70px']}
         borderRadius='10px'
         overflow='hidden'
         cursor='pointer'
@@ -46,9 +48,9 @@ const SkeletonSongCard = () => {
         <Skeleton borderRadius='10px' width='100%' height='100%' />
       </Box>
       <Box pt='5px'>
-        <Skeleton height='20px' width={['70%', '60%']} mb='6px' />
-        <Skeleton height='16px' width={['45%', '40%']} mb='8px' />
-        <Skeleton height='16px' width='14px' />
+        <Skeleton height={['18px', '20px']} width={['70%', '60%']} mb='6px' />
+        <Skeleton height={['14px', '16px']} width={['45%', '40%']} mb='8px' />
+        <Skeleton height={['14px', '16px']} width='14px' />
       </Box>
 
       <Flex direction='row' justifyContent='center' alignItems='center' pr='15px'>
