@@ -6,7 +6,7 @@
  *
  * @file index.ts
  * @author Alexandru Delegeanu
- * @version 1.2
+ * @version 1.3
  * @description Zustand global app store.
  */
 
@@ -170,10 +170,15 @@ export const useAppStore = create<TAppStore, [['zustand/persist', unknown]]>(
         set(state => {
           const exists = state.songFavorites.some(fav => fav.directory === song.directory);
 
+          const updated = exists
+            ? state.songFavorites.filter(fav => fav.directory !== song.directory)
+            : [song, ...state.songFavorites];
+
           return {
-            songFavorites: exists
-              ? state.songFavorites.filter(fav => fav.directory !== song.directory)
-              : [song, ...state.songFavorites],
+            songFavorites: updated.map((item, idx) => ({
+              ...item,
+              index: idx + 1,
+            })),
           };
         }),
     }),

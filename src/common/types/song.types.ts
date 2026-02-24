@@ -6,7 +6,7 @@
  *
  * @file song.types.ts
  * @author Alexandru Delegeanu
- * @version 2.2
+ * @version 2.3
  * @description Song types for json mapping.
  */
 
@@ -80,6 +80,7 @@ export type TSongsIndexEntry = {
   directory: string;
   chordIDs: string[];
   type: string[];
+  index?: number;
 };
 
 export type TSongSectionLyrics = string[];
