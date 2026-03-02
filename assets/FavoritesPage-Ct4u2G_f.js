@@ -1,1 +1,0 @@
-import{j as o}from"./chakra-C2MH9Zna.js";import{a as r,S as t}from"./index-MYz8WOyu.js";import"./react-CJW-EmaV.js";import"./emotion-iIupM4Iv.js";import"./framer-motion-__5rMAfS.js";const s=()=>{const s=r(o=>o.songFavorites);return o.jsx(t,{data:s})};export{s as FavoritesPage,s as default};
