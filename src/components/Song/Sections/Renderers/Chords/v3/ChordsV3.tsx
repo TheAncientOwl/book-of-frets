@@ -6,7 +6,7 @@
  *
  * @file ChordsV2.tsx
  * @author Alexandru Delegeanu
- * @version 2.4
+ * @version 2.5
  * @description Render song chords section.
  */
 
@@ -15,12 +15,10 @@ import type {
   TSongSectionLyrics,
   TStrummingPattern,
 } from '@/common/types/song.types';
-import {
-  ChordsV2LineDelimiter,
-  ChordsV2LineRenderer,
-  ChordsV2LineTimes,
-  GAP_BETWEEN_CHORD_LINES,
-} from '@/components/Song/Sections/Renderers/Chords/v2/ChordsV2';
+import { ChordsV2LineDelimiter } from '@/components/Song/Sections/Renderers/Chords/v2/ChordsV2LineDelimiter';
+import { ChordsV2LineRenderer } from '@/components/Song/Sections/Renderers/Chords/v2/ChordsV2LineRenderer';
+import { ChordsV2LineTimes } from '@/components/Song/Sections/Renderers/Chords/v2/ChordsV2LineTimes';
+import { GAP_BETWEEN_CHORD_LINES } from '@/components/Song/Sections/SongSection';
 import { Loading } from '@/ui/Loading';
 import { Flex } from '@chakra-ui/react';
 import { lazy, Suspense } from 'react';
