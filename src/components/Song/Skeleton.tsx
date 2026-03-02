@@ -5,7 +5,7 @@
  * @license https://github.com/TheAncientOwl/book-of-frets/blob/main/LICENSE
  *
  * @file SkeletonSong.tsx
- * @author Alexandru Delegeanu
+ * @author Alexa4dru Delegeanu
  * @version 1.3
  * @description Display skeleton of song.
  */
@@ -141,7 +141,7 @@ const SkeletonSongChordsList = ({ theme }: { theme: TSongTheme }) => {
             <Skeleton
               key={index}
               width={['5.8em', '6.5em']}
-              height={['9.5em', '11.4em']}
+              height={['8.5em', '10.5em']}
               borderRadius='lg'
             />
           ))}
