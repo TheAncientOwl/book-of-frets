@@ -1,8 +1,10 @@
+# 🔀 Ported to [BookOfFrets-X](https://github.com/TheAncientOwl/book-of-frets-x), live at [book-of-frets.com](https://book-of-frets.com)
+
 # 🎸 BookOfFrets
 
 BookOfFrets is a web-based application designed to help guitar enthusiasts learn and explore songs through an interactive fretboard interface. It features a comprehensive collection of songs with detailed fret information, chords, a chord list, a song list, and customizable themes.
 
-#### 🌐 Check out the live application at [book-of-frets.com](https://book-of-frets.com).
+#### 🌐 Check out the live application at [ghpages.book-of-frets.com](https://theancientowl.github.io/book-of-frets/#/songs).
 
 ## ✨ Features
 
