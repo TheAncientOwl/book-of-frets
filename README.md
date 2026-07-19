@@ -4,8 +4,6 @@
 
 BookOfFrets is a web-based application designed to help guitar enthusiasts learn and explore songs through an interactive fretboard interface. It features a comprehensive collection of songs with detailed fret information, chords, a chord list, a song list, and customizable themes.
 
-#### 🌐 Check out the live application at [ghpages.book-of-frets.com](https://theancientowl.github.io/book-of-frets/#/songs).
-
 ## ✨ Features
 
 - **🎵 Songs with Frets:** Visualize songs with precise fret positions to help you learn finger placements.
